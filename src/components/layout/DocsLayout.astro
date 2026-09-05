@@ -45,4 +45,22 @@ const siblings = chapterIndex.filter((item) => item.part === part);
       {headings.filter((heading) => heading.depth <= 3).map((heading) => <a href={`#${heading.slug}`} data-depth={heading.depth}>{heading.text}</a>)}
     </nav>
   </div>
+  <script>
+    const tierColumnPattern = /\b(tier|priority|rank|rating)\b/i;
+    const tierValuePattern = /^\s*(S\+?|A\+?|B\+?|C\+?|D\+?|E|F|LOW)(?=\s|\/|\*|$)/i;
+
+    document.querySelectorAll<HTMLTableElement>('.prose table').forEach((table) => {
+      const headers = [...table.querySelectorAll<HTMLTableCellElement>('thead th')];
+      headers.forEach((header, index) => {
+        if (!tierColumnPattern.test(header.textContent ?? '')) return;
+        table.querySelectorAll<HTMLTableRowElement>('tbody tr').forEach((row) => {
+          const cell = row.cells.item(index);
+          const match = cell?.textContent?.match(tierValuePattern);
+          if (!cell || !match) return;
+          const leadingTier = match[1].toLowerCase().charAt(0);
+          cell.dataset.tier = ['e', 'f', 'l'].includes(leadingTier) ? 'd' : leadingTier;
+        });
+      });
+    });
+  </script>
 </BaseLayout>
