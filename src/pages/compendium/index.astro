@@ -40,7 +40,7 @@ const chapterRows = Array.from({ length: 21 }, (_, index) => [index + 1, index +
   .map((number) => chapterByNumber.get(number)));
 ---
 <BaseLayout title="Full Compendium" description="The complete 61-chapter Ultimate Wizard Compendium." active="compendium">
-  <header class="page-hero"><div class="site-shell"><p class="kicker">Complete deep reference</p><h1>Full Compendium</h1><p>All 61 chapters, organized exactly beneath the faster cockpit and tools.</p></div></header>
+  <header class="page-hero"><div class="site-shell"><p class="kicker">Contents</p><h1>Full Compendium</h1><p>Browse the complete chapter directory or jump to a frequently used reference.</p></div></header>
   <section class="section section--first">
     <div class="site-shell">
       <div class="section-head"><div><p class="kicker">Major sections and finders</p><h2>Quick navigation</h2></div><a class="section-link" href="/search/">Search everything →</a></div>
@@ -60,6 +60,12 @@ const chapterRows = Array.from({ length: 21 }, (_, index) => [index + 1, index +
           <tbody>{chapterRows.map((row) => <tr>{row.map((chapter) => chapter ? <><td class="chapter-number">{chapter.number}</td><td><a href={`/chapters/${chapter.slug}/`}><span>{chapter.part}</span>{chapter.title}</a></td></> : <><td></td><td></td></>)}</tr>)}</tbody>
         </table>
       </div>
+      <nav class="chapter-directory-mobile" aria-label="All Compendium chapters">
+        {[...new Set(chapters.map((chapter) => chapter.part))].map((part) => <section>
+          <h3>{part}</h3>
+          {chapters.filter((chapter) => chapter.part === part).map((chapter) => <a href={`/chapters/${chapter.slug}/`}><span>{chapter.number}</span><span>{chapter.title}</span></a>)}
+        </section>)}
+      </nav>
     </div>
   </section>
 </BaseLayout>

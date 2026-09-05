@@ -32,6 +32,7 @@ const nav = [
     <title>{pageTitle}</title>
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <div class="site-shell header-inner">
         <a class="brand" href="/" aria-label="Wizard Compendium home">
@@ -54,10 +55,10 @@ const nav = [
         </details>
       </div>
     </header>
-    <main class="site-main"><slot /></main>
+    <main class="site-main" id="main-content" tabindex="-1"><slot /></main>
     <footer class="site-footer">
       <div class="site-shell footer-inner">
-        <span>Ultimate Wizard Compendium · v1.14 migration</span>
+        <span>Ultimate Wizard Compendium · v1.14</span>
         <span>Rules text remains governed by the active source entry and campaign.</span>
       </div>
     </footer>

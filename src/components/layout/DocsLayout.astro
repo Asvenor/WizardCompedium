@@ -17,14 +17,36 @@ const hubLabels: Record<string, string> = {
   fundamentals: 'Fundamentals', builds: 'Builds', spells: 'Spells', combat: 'Combat & Tactics', gear: 'Gear & Operations', reference: 'Reference',
 };
 const siblings = chapterIndex.filter((item) => item.part === part);
+const currentIndex = chapterIndex.findIndex((item) => item.slug === slug);
+const previous = currentIndex > 0 ? chapterIndex[currentIndex - 1] : null;
+const next = currentIndex >= 0 ? chapterIndex[currentIndex + 1] : null;
+const sections = headings.filter((heading) => heading.depth <= 3);
 ---
 <BaseLayout title={title} description={description} active={hub}>
   <div class="site-shell docs-grid">
+    <aside class="docs-sidebar">
     <nav class="side-nav" aria-label={`${part} chapters`}>
       <h2>{part}</h2>
       {siblings.map((item) => <a href={`/chapters/${item.slug}/`} aria-current={item.slug === slug ? 'page' : undefined}>Ch. {item.number} · {item.title}</a>)}
     </nav>
+    <nav class="toc" aria-label="On this page">
+      <h2>On this page</h2>
+      {sections.map((heading) => <a href={`#${heading.slug}`} data-depth={heading.depth}>{heading.text}</a>)}
+    </nav>
+    </aside>
     <article class="article" data-pagefind-body>
+      <nav class="chapter-toolbar" aria-label="Chapter navigation" data-pagefind-ignore>
+        <label class="chapter-picker">Chapter
+          <select class="field" data-chapter-select>
+            {currentIndex < 0 && <option value="" disabled selected>Choose a chapter</option>}
+            {chapterIndex.map((item) => <option value={`/chapters/${item.slug}/`} selected={item.slug === slug}>{item.number}. {item.title}</option>)}
+          </select>
+        </label>
+        <div class="chapter-step">
+          {previous && <a class="button" href={`/chapters/${previous.slug}/`} rel="prev" title={previous.title}>← Previous</a>}
+          {next && <a class="button" href={`/chapters/${next.slug}/`} rel="next" title={next.title}>Next →</a>}
+        </div>
+      </nav>
       <div class="breadcrumbs">
         <a href="/">Home</a><span aria-hidden="true">/</span>
         <a href={`/${hub === 'fundamentals' ? 'reference' : hub}/`}>{hubLabels[hub]}</a><span aria-hidden="true">/</span>
@@ -38,20 +60,63 @@ const siblings = chapterIndex.filter((item) => item.part === part);
         <h1 data-pagefind-meta="title">{title}</h1>
         <p>{description}</p>
       </header>
+      {sections.length > 0 && <details class="mobile-toc" data-pagefind-ignore>
+        <summary>On this page</summary>
+        <nav aria-label="Jump to section">{sections.map((heading) => <a href={`#${heading.slug}`}>{heading.text}</a>)}</nav>
+      </details>}
       <div class="prose"><slot /></div>
     </article>
-    <nav class="toc" aria-label="On this page">
-      <h2>On this page</h2>
-      {headings.filter((heading) => heading.depth <= 3).map((heading) => <a href={`#${heading.slug}`} data-depth={heading.depth}>{heading.text}</a>)}
-    </nav>
   </div>
   <script>
+    document.querySelector<HTMLSelectElement>('[data-chapter-select]')?.addEventListener('change', (event) => {
+      window.location.assign((event.target as HTMLSelectElement).value);
+    });
     const tierColumnPattern = /\b(tier|priority|rank|rating)\b/i;
     const tierValuePattern = /^\s*([SABCDEF][+−-]?)(?=\s|\/|\*|$)/i;
     const conditionalRankPattern = /^(Niche|Campaign patch|Varies|Source check|Strategic|Mandatory)$/i;
 
-    document.querySelectorAll<HTMLTableElement>('.prose table').forEach((table) => {
+    document.querySelectorAll<HTMLTableElement>('.prose table').forEach((table, tableIndex) => {
       const headers = [...table.querySelectorAll<HTMLTableCellElement>('thead th')];
+      const rows = [...table.querySelectorAll<HTMLTableRowElement>('tbody tr')];
+      // Only offer a row view for rectangular tables. Merged source tables stay intact.
+      const regular = headers.length > 1 && headers.every((header) => header.colSpan === 1 && header.rowSpan === 1) && rows.length > 0 && rows.every((row) =>
+        row.cells.length === headers.length && [...row.cells].every((cell) => cell.colSpan === 1 && cell.rowSpan === 1));
+      if (regular) {
+        const nameIndex = headers.findIndex((header) => /^(spell|name|skill|feat|species|item|tool|epic boon|option|build)\b/i.test(header.textContent?.trim() ?? ''));
+        const identity = nameIndex >= 0 ? nameIndex : 0;
+        headers[identity].classList.add('table-identity');
+        rows.forEach((row) => [...row.cells].forEach((cell, index) => {
+          cell.dataset.label = headers[index].textContent?.trim() ?? '';
+          if (index === identity) cell.classList.add('table-identity');
+        }));
+        const wrap = table.closest<HTMLElement>('.table-wrap');
+        if (wrap) {
+          wrap.id ||= `reference-table-${tableIndex + 1}`;
+          wrap.tabIndex = 0;
+          wrap.setAttribute('role', 'region');
+          wrap.setAttribute('aria-label', 'Reference table. Scroll horizontally to see all columns.');
+          const controls = document.createElement('div');
+          controls.className = 'table-controls';
+          controls.dataset.pagefindIgnore = '';
+          const hint = document.createElement('span');
+          hint.textContent = 'Scroll for more columns, or read one row at a time.';
+          const toggle = document.createElement('button');
+          toggle.type = 'button';
+          toggle.className = 'button';
+          toggle.textContent = 'Read rows';
+          toggle.setAttribute('aria-pressed', 'false');
+          toggle.setAttribute('aria-controls', wrap.id);
+          toggle.addEventListener('click', () => {
+            const active = wrap.classList.toggle('table-row-view');
+            toggle.setAttribute('aria-pressed', String(active));
+            toggle.textContent = active ? 'Show table' : 'Read rows';
+            wrap.setAttribute('aria-label', active ? 'Reference table in row view. All columns included.' : 'Reference table. Scroll horizontally to see all columns.');
+            hint.textContent = active ? 'Row view · all columns included' : 'Scroll for more columns, or read one row at a time.';
+          });
+          controls.append(hint, toggle);
+          wrap.before(controls);
+        }
+      }
       headers.forEach((header, index) => {
         if (!tierColumnPattern.test(header.textContent ?? '')) return;
         table.querySelectorAll<HTMLTableRowElement>('tbody tr').forEach((row) => {
