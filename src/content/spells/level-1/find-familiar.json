@@ -13,10 +13,10 @@
     "components": {
       "verbal": null,
       "somatic": null,
-      "material": null,
-      "description": null,
+      "material": true,
+      "description": "Incense, charcoal, and herbs in a fireproof vessel; keep multiple replacement sets.",
       "gpCost": null,
-      "consumed": null
+      "consumed": true
     },
     "damageTypes": [],
     "save": {
@@ -42,12 +42,14 @@
     "summary": "Information, delivery and assistance within feature limits.",
     "buildRelevance": [],
     "warnings": [
-      "The Compendium index is an operating reference, not replacement spell text. Confirm the active D&D Beyond entry before casting."
+      "The Compendium index is an operating reference, not replacement spell text. Confirm the active D&D Beyond entry before casting.",
+      "Component planning: Wizard 1 and before scouting-heavy missions."
     ],
     "relatedChapters": [
       11,
       15,
       24,
+      25,
       47
     ]
   },

@@ -13,10 +13,10 @@
     "components": {
       "verbal": null,
       "somatic": null,
-      "material": null,
-      "description": null,
-      "gpCost": null,
-      "consumed": null
+      "material": true,
+      "description": "Gem, crystal, or reliquary worth 500+ GP",
+      "gpCost": 500,
+      "consumed": false
     },
     "damageTypes": [],
     "save": {
@@ -41,12 +41,18 @@
     "summary": "Possession engine with severe body, range and death risks.",
     "buildRelevance": [],
     "warnings": [
-      "The Compendium index is an operating reference, not replacement spell text. Confirm the active D&D Beyond entry before casting."
+      "The Compendium index is an operating reference, not replacement spell text. Confirm the active D&D Beyond entry before casting.",
+      "Component planning: Needed for body-theft tech. Also needs a table agreement and a safe container plan.",
+      "Pre-cast gate: Secure the original body and container; define distance, possession, and ending states.",
+      "Failure state: Container destruction, body death, forced return failure, or hostile control of the site.",
+      "Safe operating default: Use a guarded site, explicit abort conditions, and a recovery team. See Chapter 22."
     ],
     "relatedChapters": [
       11,
       15,
       22,
+      23,
+      25,
       47
     ]
   },

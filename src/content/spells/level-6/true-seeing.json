@@ -13,10 +13,10 @@
     "components": {
       "verbal": null,
       "somatic": null,
-      "material": null,
-      "description": null,
-      "gpCost": null,
-      "consumed": null
+      "material": true,
+      "description": "Mushroom powder worth 25+ GP",
+      "gpCost": 25,
+      "consumed": true
     },
     "damageTypes": [],
     "save": {
@@ -41,12 +41,14 @@
     "summary": "High-level perception against specified visual deceptions.",
     "buildRelevance": [],
     "warnings": [
-      "The Compendium index is an operating reference, not replacement spell text. Confirm the active D&D Beyond entry before casting."
+      "The Compendium index is an operating reference, not replacement spell text. Confirm the active D&D Beyond entry before casting.",
+      "Component planning: Useful against invisibility, illusions, and horror campaign trickery."
     ],
     "relatedChapters": [
       11,
       15,
       24,
+      25,
       47
     ]
   },

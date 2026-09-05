@@ -13,10 +13,10 @@
     "components": {
       "verbal": null,
       "somatic": null,
-      "material": null,
-      "description": null,
-      "gpCost": null,
-      "consumed": null
+      "material": true,
+      "description": "Jewel worth 1,000+ GP",
+      "gpCost": 1000,
+      "consumed": true
     },
     "damageTypes": [],
     "save": {
@@ -41,12 +41,18 @@
     "summary": "Long-duration service requiring setup, cost and a valid target.",
     "buildRelevance": [],
     "warnings": [
-      "The Compendium index is an operating reference, not replacement spell text. Confirm the active D&D Beyond entry before casting."
+      "The Compendium index is an operating reference, not replacement spell text. Confirm the active D&D Beyond entry before casting.",
+      "Component planning: Downtime service loop. Only worth it if creature access and setup are real.",
+      "Pre-cast gate: Keep an eligible creature present through the casting and write commands that can actually be followed.",
+      "Failure state: Containment fails, the save succeeds, duration assumptions are wrong, or commands backfire.",
+      "Safe operating default: Use negotiated service when possible; confirm the exact summon/binding interaction."
     ],
     "relatedChapters": [
       11,
       15,
       22,
+      23,
+      25,
       47
     ]
   },

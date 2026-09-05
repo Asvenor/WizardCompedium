@@ -298,7 +298,8 @@ for (const block of source.blocks) {
   const sourceColumn = header.findIndex((cell) => cell === 'Src');
   const summaryColumn = header.findIndex((cell) => /Fast role|burden|Purpose|Role/.test(cell));
   for (const row of block.rows.slice(1)) {
-    const level = Number(row[levelColumn]);
+    const rawLevel = String(row[levelColumn] ?? '').trim();
+    const level = /^cantrip$/i.test(rawLevel) ? 0 : Number(rawLevel);
     if (!Number.isInteger(level) || level < 0 || level > 9) continue;
     const spell = ensureSpell(row[spellColumn], level, block.loc);
     if (!spell) continue;
@@ -339,9 +340,86 @@ for (const block of source.blocks) {
   }
 }
 
+function spellForName(name) {
+  const canonical = canonicalSpellNames.get(normalizeName(name)) ?? name;
+  return spells.get(slugify(canonical.replace(/’/g, "'")));
+}
+
+function addRelatedChapter(spell, number) {
+  spell.compendium.relatedChapters = [...new Set([...spell.compendium.relatedChapters, number])].sort((a, b) => a - b);
+}
+
+// Chapter 16 is the authoritative Compendium layer for Dunamancy priority and cautions.
+for (const locator of ['B00200', 'B00202']) {
+  const table = source.blocks.find((block) => block.loc === locator);
+  if (!table) continue;
+  for (const row of table.rows.slice(1)) {
+    const rawLevel = String(row[0] ?? '').trim();
+    const level = /^cantrip$/i.test(rawLevel) ? 0 : Number(rawLevel);
+    if (!Number.isInteger(level)) continue;
+    const spell = ensureSpell(row[1], level, locator);
+    if (!spell) continue;
+    spell.source.book = "Explorer's Guide to Wildemount";
+    spell.source.rulesVersion = 'Expanded / active entry';
+    spell.source.category = 'Dunamancy';
+    spell.source.sourceSensitive = true;
+    if (locator === 'B00200') {
+      const tier = String(row[2] ?? '').match(/^[SABCDF](?:\+)?/i)?.[0]?.toUpperCase();
+      if (tier) spell.compendium.tier = tier;
+      if (row[3]) spell.compendium.summary = row[3];
+      if (row[4]) spell.compendium.warnings.unshift(row[4]);
+    } else {
+      if (row[2]) spell.compendium.summary = row[2];
+      if (row[3]) spell.compendium.warnings.unshift(row[3]);
+    }
+    addRelatedChapter(spell, 16);
+  }
+}
+
+// Chapter 25 component tables supply the material descriptions and consumption rules
+// that belong on the reusable spell record as well as in the long-form chapter.
+for (const locator of ['B00411', 'B00413', 'B00418']) {
+  const block = source.blocks.find((item) => item.loc === locator);
+  const rows = block?.nested_tables?.[0]?.rows ?? block?.rows;
+  if (!rows) continue;
+  for (const row of rows.slice(1)) {
+    const names = String(row[0] ?? '').split(/\s+\/\s+/).map((name) => name.trim());
+    for (const name of names) {
+      const spell = spellForName(name);
+      if (!spell) continue;
+      const description = String(row[1] ?? '').trim();
+      const consumedText = String(row[2] ?? '').trim();
+      const whyItMatters = String(row[3] ?? '').trim();
+      spell.rules.components.material = true;
+      spell.rules.components.description = description;
+      spell.rules.components.consumed = /^yes$/i.test(consumedText)
+        ? true
+        : /^(no|not consumed)/i.test(consumedText) ? false : null;
+      const cost = description.match(/([\d,]+)\+?\s*(?:gp|GP)/)?.[1];
+      if (cost) spell.rules.components.gpCost = Number(cost.replace(/,/g, ''));
+      if (whyItMatters) spell.compendium.warnings.push(`Component planning: ${whyItMatters}`);
+      addRelatedChapter(spell, 25);
+    }
+  }
+}
+
+// Chapter 23's safety matrix is spell-specific operational information.
+const safetyTable = source.blocks.find((block) => block.loc === 'B00371');
+for (const row of safetyTable?.rows.slice(1) ?? []) {
+  const names = String(row[0] ?? '').split(/\s+\/\s+/).map((name) => name.trim());
+  for (const name of names) {
+    const spell = spellForName(name);
+    if (!spell) continue;
+    if (row[1]) spell.compendium.warnings.push(`Pre-cast gate: ${row[1]}`);
+    if (row[2]) spell.compendium.warnings.push(`Failure state: ${row[2]}`);
+    if (row[3]) spell.compendium.warnings.push(`Safe operating default: ${row[3]}`);
+    addRelatedChapter(spell, 23);
+  }
+}
+
 for (const block of source.blocks.filter((item) => item.loc >= 'B00757' && item.loc <= 'B00765' && item.kind === 'table')) {
   for (const row of block.rows.slice(1)) {
-    const spell = spells.get(slugify(String(row[0]).replace(/’/g, "'")));
+    const spell = spellForName(String(row[0]));
     if (!spell) continue;
     const role = row[1] ?? '';
     const roleTags = role.split(/\s*\/\s*/).map(slugify).filter(Boolean);

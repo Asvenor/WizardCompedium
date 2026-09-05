@@ -13,10 +13,10 @@
     "components": {
       "verbal": null,
       "somatic": null,
-      "material": null,
-      "description": null,
-      "gpCost": null,
-      "consumed": null
+      "material": true,
+      "description": "Ruby dust worth 1,500+ gp",
+      "gpCost": 1500,
+      "consumed": true
     },
     "damageTypes": [],
     "save": {
@@ -42,12 +42,14 @@
     "summary": "High-level encounter separation under the current rules.",
     "buildRelevance": [],
     "warnings": [
-      "The Compendium index is an operating reference, not replacement spell text. Confirm the active D&D Beyond entry before casting."
+      "The Compendium index is an operating reference, not replacement spell text. Confirm the active D&D Beyond entry before casting.",
+      "Component planning: Powerful but no longer free: concentration + expensive consumed component."
     ],
     "relatedChapters": [
       11,
       15,
       22,
+      25,
       47
     ]
   },

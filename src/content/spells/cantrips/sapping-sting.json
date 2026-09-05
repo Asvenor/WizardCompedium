@@ -1,7 +1,7 @@
 {
-  "id": "wristpocket",
-  "name": "Wristpocket",
-  "level": 2,
+  "id": "sapping-sting",
+  "name": "Sapping Sting",
+  "level": 0,
   "school": null,
   "rules": {
     "castingTime": null,
@@ -32,18 +32,18 @@
     "sourceSensitive": true
   },
   "compendium": {
-    "tier": "C",
+    "tier": "B",
     "acquisitionRole": "unclassified",
     "preparedBaseline": false,
     "roles": [
       "dunamancy",
-      "concealment"
+      "cantrip-setup"
     ],
-    "summary": "Temporarily hide and retrieve a small object.",
+    "summary": "Low damage plus Prone setup.",
     "buildRelevance": [],
     "warnings": [
       "Source-sensitive: availability does not grant permission by itself; use the exact selectable entry and campaign rules.",
-      "Concentration and a one-hour duration make it poor combat preparation; verify weight and retrieval wording.",
+      "30-foot range, Constitution save, and weak raw damage. Best when an ally can exploit Prone.",
       "The Compendium index is an operating reference, not replacement spell text. Confirm the active D&D Beyond entry before casting."
     ],
     "relatedChapters": [

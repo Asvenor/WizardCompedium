@@ -11,7 +11,8 @@
     "generate:prototype": "node scripts/migrate-compendium.mjs --prototype",
     "generate:content": "node scripts/migrate-compendium.mjs",
     "validate:content": "node scripts/validate-migration.mjs",
-    "validate:build": "node scripts/validate-build.mjs"
+    "validate:build": "node scripts/validate-build.mjs",
+    "audit:fidelity": "node scripts/audit-content-fidelity.mjs"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.10",

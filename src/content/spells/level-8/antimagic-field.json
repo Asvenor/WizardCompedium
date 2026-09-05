@@ -42,11 +42,15 @@
     "summary": "High-level magical shutdown with severe self-limits.",
     "buildRelevance": [],
     "warnings": [
-      "The Compendium index is an operating reference, not replacement spell text. Confirm the active D&D Beyond entry before casting."
+      "The Compendium index is an operating reference, not replacement spell text. Confirm the active D&D Beyond entry before casting.",
+      "Pre-cast gate: List which personal spells, items, movement, communication, and escape tools it suppresses.",
+      "Failure state: The Wizard disables their own survival kit and cannot end the encounter.",
+      "Safe operating default: Enter only with mundane protection, ally coordination, and a route out."
     ],
     "relatedChapters": [
       11,
       15,
+      23,
       47
     ]
   },

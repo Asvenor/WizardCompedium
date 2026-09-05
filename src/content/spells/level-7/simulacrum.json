@@ -13,10 +13,10 @@
     "components": {
       "verbal": null,
       "somatic": null,
-      "material": null,
-      "description": null,
-      "gpCost": null,
-      "consumed": null
+      "material": true,
+      "description": "Powdered ruby worth 1,500+ GP; same-sized snow or ice pile",
+      "gpCost": 1500,
+      "consumed": true
     },
     "damageTypes": [],
     "save": {
@@ -41,12 +41,18 @@
     "summary": "Finite duplicate, second action set and separate concentration.",
     "buildRelevance": [],
     "warnings": [
-      "The Compendium index is an operating reference, not replacement spell text. Confirm the active D&D Beyond entry before casting."
+      "The Compendium index is an operating reference, not replacement spell text. Confirm the active D&D Beyond entry before casting.",
+      "Component planning: High-level action-economy tech. Needs money, time, and DM rules.",
+      "Pre-cast gate: Secure the casting window, component, template state, finite resource budget, and repair plan.",
+      "Failure state: The copy wastes nonrenewable resources, is destroyed, or relies on prohibited recursion.",
+      "Safe operating default: Assign a role and slot budget. The copy never creates another Simulacrum."
     ],
     "relatedChapters": [
       11,
       15,
       22,
+      23,
+      25,
       47
     ]
   },

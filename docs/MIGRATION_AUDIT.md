@@ -8,7 +8,7 @@ Primary source: `Ultimate_Wizard_Compendium_FINAL_v1.14_DDB_Verified_Corrected.d
 - 193 nested tables
 - 396 headings in the full outline
 - 1 source image, preserved in Chapter 20
-- 154 canonical Compendium spell records discovered from the Master Spellbook Pool and structured spell indexes
+- 155 canonical Compendium spell records discovered from the Master Spellbook Pool and structured spell indexes
 
 ## Chapters
 

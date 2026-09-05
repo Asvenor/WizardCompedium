@@ -43,6 +43,11 @@ const stats = [
         <p><strong>Acquisition:</strong> {spell.compendium.acquisitionRole}. {spell.compendium.preparedBaseline ? 'Marked in the prepared / known baseline.' : 'Not marked in the supplied prepared / known baseline.'}</p>
         {spell.compendium.roles.length > 0 && <p><strong>Roles:</strong> {spell.compendium.roles.join(', ')}.</p>}
         {spell.compendium.buildRelevance.length > 0 && <p><strong>Build relevance:</strong> {spell.compendium.buildRelevance.map((build) => <BuildBadge build={buildBadgeMap[build] ?? 'core'} label={build} />)}</p>}
+        {spell.rules.components.description && <>
+          <h2>Material component</h2>
+          <p>{spell.rules.components.description}</p>
+          <p><strong>Consumed:</strong> {spell.rules.components.consumed === true ? 'Yes' : spell.rules.components.consumed === false ? 'No' : 'Verify the active spell entry'}{spell.rules.components.gpCost ? ` · Recorded cost: ${spell.rules.components.gpCost.toLocaleString()}+ gp` : ''}.</p>
+        </>}
         <h2>Source status</h2>
         <p><strong>{spell.source.category}</strong> · {spell.source.book ?? 'Use the active source entry'} · {spell.source.rulesVersion}.</p>
         <h2>Warnings</h2>

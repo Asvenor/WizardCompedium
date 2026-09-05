@@ -13,10 +13,10 @@
     "components": {
       "verbal": null,
       "somatic": null,
-      "material": null,
-      "description": null,
+      "material": true,
+      "description": "Rare chalks and inks infused with gems; each cast consumes a set.",
       "gpCost": null,
-      "consumed": null
+      "consumed": true
     },
     "damageTypes": [],
     "save": {
@@ -39,11 +39,13 @@
     "summary": "The Compendium includes this spell in its maintained spellbook pool; consult the active spell entry for complete rules text.",
     "buildRelevance": [],
     "warnings": [
-      "The Compendium index is an operating reference, not replacement spell text. Confirm the active D&D Beyond entry before casting."
+      "The Compendium index is an operating reference, not replacement spell text. Confirm the active D&D Beyond entry before casting.",
+      "Component planning: Before route-building or repeated strategic travel."
     ],
     "relatedChapters": [
       11,
-      15
+      15,
+      25
     ]
   },
   "sourceLocator": "B00142"

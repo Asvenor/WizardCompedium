@@ -13,8 +13,8 @@
     "components": {
       "verbal": null,
       "somatic": null,
-      "material": null,
-      "description": null,
+      "material": true,
+      "description": "Target object and the active spell's symbolic materials.",
       "gpCost": null,
       "consumed": null
     },
@@ -39,11 +39,13 @@
     "summary": "Ten-day attraction/repulsion setup.",
     "buildRelevance": [],
     "warnings": [
-      "The Compendium index is an operating reference, not replacement spell text. Confirm the active D&D Beyond entry before casting."
+      "The Compendium index is an operating reference, not replacement spell text. Confirm the active D&D Beyond entry before casting.",
+      "Component planning: Only when defending a known place or manipulating a known route."
     ],
     "relatedChapters": [
       11,
-      15
+      15,
+      25
     ]
   },
   "sourceLocator": "B00193"

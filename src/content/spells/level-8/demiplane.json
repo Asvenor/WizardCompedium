@@ -41,12 +41,16 @@
     "summary": "Storage, secure staging and campaign infrastructure.",
     "buildRelevance": [],
     "warnings": [
-      "The Compendium index is an operating reference, not replacement spell text. Confirm the active D&D Beyond entry before casting."
+      "The Compendium index is an operating reference, not replacement spell text. Confirm the active D&D Beyond entry before casting.",
+      "Pre-cast gate: Know which existing door can be reopened and how occupants leave.",
+      "Failure state: Storage without retrieval, trapped allies, or dependence on one caster.",
+      "Safe operating default: Maintain an inventory, redundant access plan, breathable assumptions, and no unlabeled doors."
     ],
     "relatedChapters": [
       11,
       15,
       22,
+      23,
       47
     ]
   },
