@@ -1,0 +1,55 @@
+{
+  "id": "banishment",
+  "name": "Banishment",
+  "level": 4,
+  "school": null,
+  "rules": {
+    "castingTime": "Action",
+    "range": "30 ft",
+    "area": null,
+    "duration": null,
+    "concentration": true,
+    "ritual": false,
+    "components": {
+      "verbal": null,
+      "somatic": null,
+      "material": null,
+      "description": null,
+      "gpCost": null,
+      "consumed": null
+    },
+    "damageTypes": [],
+    "save": {
+      "ability": "CHA",
+      "type": "saving throw"
+    },
+    "attackRoll": false
+  },
+  "source": {
+    "book": "Player's Handbook (2024)",
+    "rulesVersion": "2024",
+    "category": "Core",
+    "sourceSensitive": false
+  },
+  "compendium": {
+    "tier": null,
+    "acquisitionRole": "optional",
+    "preparedBaseline": false,
+    "roles": [
+      "concentration",
+      "removal"
+    ],
+    "summary": "Temporary single-target removal.",
+    "buildRelevance": [],
+    "warnings": [
+      "The Compendium index is an operating reference, not replacement spell text. Confirm the active D&D Beyond entry before casting."
+    ],
+    "relatedChapters": [
+      11,
+      15,
+      18,
+      47
+    ]
+  },
+  "sourceLocator": "B00191"
+}

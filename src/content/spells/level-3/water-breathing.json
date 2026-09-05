@@ -1,0 +1,55 @@
+{
+  "id": "water-breathing",
+  "name": "Water Breathing",
+  "level": 3,
+  "school": null,
+  "rules": {
+    "castingTime": null,
+    "range": null,
+    "area": null,
+    "duration": null,
+    "concentration": false,
+    "ritual": true,
+    "components": {
+      "verbal": null,
+      "somatic": null,
+      "material": null,
+      "description": null,
+      "gpCost": null,
+      "consumed": null
+    },
+    "damageTypes": [],
+    "save": {
+      "ability": null,
+      "type": null
+    },
+    "attackRoll": false
+  },
+  "source": {
+    "book": null,
+    "rulesVersion": "2024 baseline unless active entry says otherwise",
+    "category": "Core / active entry",
+    "sourceSensitive": false
+  },
+  "compendium": {
+    "tier": null,
+    "acquisitionRole": "sleeper",
+    "preparedBaseline": false,
+    "roles": [
+      "ritual",
+      "exploration"
+    ],
+    "summary": "Long-duration underwater operation support.",
+    "buildRelevance": [],
+    "warnings": [
+      "The Compendium index is an operating reference, not replacement spell text. Confirm the active D&D Beyond entry before casting."
+    ],
+    "relatedChapters": [
+      11,
+      15,
+      38,
+      47
+    ]
+  },
+  "sourceLocator": "B00142"
+}

@@ -1,0 +1,26 @@
+---
+import BaseLayout from './layout/BaseLayout.astro';
+import chapterIndex from '@/data/chapters.json';
+
+interface Props { hub: string; title: string; eyebrow: string; description: string; chapterNumbers?: number[]; }
+const { hub, title, eyebrow, description, chapterNumbers } = Astro.props;
+const chapters = chapterIndex.filter((item) => chapterNumbers ? chapterNumbers.includes(item.number) : item.hub === hub);
+---
+<BaseLayout title={title} description={description} active={hub}>
+  <header class="page-hero">
+    <div class="site-shell">
+      <p class="kicker">{eyebrow}</p>
+      <h1>{title}</h1>
+      <p>{description}</p>
+    </div>
+  </header>
+  <div class="site-shell hub-layout">
+    {chapters.map((chapter) => (
+      <a class="chapter-card" href={`/chapters/${chapter.slug}/`}>
+        <small>Chapter {chapter.number} · {chapter.part}</small>
+        <h2>{chapter.title}</h2>
+        <p>{chapter.description}</p>
+      </a>
+    ))}
+  </div>
+</BaseLayout>

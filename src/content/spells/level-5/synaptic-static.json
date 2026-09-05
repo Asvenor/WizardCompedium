@@ -1,0 +1,51 @@
+{
+  "id": "synaptic-static",
+  "name": "Synaptic Static",
+  "level": 5,
+  "school": null,
+  "rules": {
+    "castingTime": "Action",
+    "range": "120 ft",
+    "area": "20-ft S",
+    "duration": null,
+    "concentration": false,
+    "ritual": false,
+    "components": {
+      "verbal": null,
+      "somatic": null,
+      "material": null,
+      "description": null,
+      "gpCost": null,
+      "consumed": null
+    },
+    "damageTypes": [],
+    "save": {
+      "ability": "INT",
+      "type": "saving throw"
+    },
+    "attackRoll": false
+  },
+  "source": {
+    "book": "Enabled 5e Expanded source",
+    "rulesVersion": "Expanded / active entry",
+    "category": "Expanded",
+    "sourceSensitive": true
+  },
+  "compendium": {
+    "tier": null,
+    "acquisitionRole": "mandatory",
+    "preparedBaseline": true,
+    "roles": [],
+    "summary": "Non-concentration damage plus d20 pressure.",
+    "buildRelevance": [],
+    "warnings": [
+      "Source-sensitive: availability does not grant permission by itself; use the exact selectable entry and campaign rules.",
+      "The Compendium index is an operating reference, not replacement spell text. Confirm the active D&D Beyond entry before casting."
+    ],
+    "relatedChapters": [
+      11,
+      15
+    ]
+  },
+  "sourceLocator": "B00191"
+}

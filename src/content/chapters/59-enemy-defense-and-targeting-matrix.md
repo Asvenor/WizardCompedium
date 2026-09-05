@@ -1,0 +1,24 @@
+---
+title: "Enemy Defense & Targeting Matrix"
+chapter: 59
+order: 59
+part: "Part VIII"
+partTitle: "SETUP + LIVE PLAY TOOLS"
+hub: "combat"
+sourceLocator: "B00938"
+description: "Reference material from Part VIII."
+---
+<!-- source:B00939 -->
+<aside class="callout" data-source-locator="B00939"><strong>PLAYER-KNOWLEDGE RULE</strong><p>This matrix predicts; it does not reveal statistics. Use visible form, behavior, equipment, and outcomes already observed at the table. When uncertain, choose an effect that still advances the objective on a successful defense. The math foundation remains in <a href="/chapters/03-optimization-mathematics-and-target-selection/">Chapter 3</a>.</p></aside>
+
+<!-- source:B00940 -->
+## Targeting ladder
+
+<!-- source:B00941 -->
+<div class="table-wrap" data-source-locator="B00941" tabindex="0"><table><thead><tr><th scope="col">ORDER</th><th scope="col">ROUTE</th><th scope="col">AT-TABLE QUESTION</th></tr></thead><tbody><tr><td>1</td><td>Objective denial</td><td>Can the spell win time, space, access, rescue, or information without defeating the creature?</td></tr><tr><td>2</td><td>No-save / map effect</td><td>Can terrain, a wall, cover, movement, or an ally buff solve the job?</td></tr><tr><td>3</td><td>Observed weakness</td><td>What failed for the enemy, or what behavior/equipment has already exposed a likely gap?</td></tr><tr><td>4</td><td>Different defense</td><td>If the first save/AC route looked strong, can you switch defense rather than repeat it?</td></tr><tr><td>5</td><td>Multiple targets</td><td>Would changing target create more expected value than forcing the boss line?</td></tr><tr><td>6</td><td>Exit / conserve</td><td>If none is favorable, preserve the slot and change position, action, or objective.</td></tr></tbody></table></div>
+
+<!-- source:B00942 -->
+## Archetype matrix — first test, then pivot
+
+<!-- source:B00943 -->
+<div class="table-wrap" data-source-locator="B00943" tabindex="0"><table><thead><tr><th scope="col">ARCHETYPE</th><th scope="col">VISIBLE CLUES</th><th scope="col">FIRST ROUTE</th><th scope="col">AVOID</th><th scope="col">PIVOT TRIGGER</th></tr></thead><tbody><tr><td>Heavy melee bruiser</td><td>Strong body, short reach, direct pursuit</td><td>Mental defense, movement, or map denial</td><td>Repeated STR/CON pressure without evidence</td><td>It ignores terrain or succeeds comfortably; split it from support or change target.</td></tr><tr><td>Armored soldier</td><td>High armor/shield, formation discipline</td><td>Save-based control, sight, movement, or ally enablement</td><td>Attack-roll spells aimed only at AC</td><td>The unit has strong saves/auras; break formation or affect the battlefield.</td></tr><tr><td>Skirmisher / archer</td><td>High mobility, distance, evasive movement</td><td>Sight, cover, movement denial, or a non-DEX route</td><td>Assuming DEX control will land</td><td>It escapes the zone; protect the objective and force a range/position trade.</td></tr><tr><td>Enemy caster</td><td>Components, focus, concentration, spell effects</td><td>Pressure concentration, line of sight, range, or countermagic</td><td>Treating every caster as mentally weak</td><td>It wins the Reaction duel; attack support, use cover, or force movement.</td></tr><tr><td>Huge solo creature</td><td>Large footprint, reach, few bodies</td><td>Map division, movement cost, rescue, or an observed weak save</td><td>Assuming size alone proves a saving-throw weakness</td><td>It crosses/ignores the map effect; change objective or create distance.</td></tr><tr><td>Mob / swarm of creatures</td><td>Many actions, shared approach lanes</td><td>Area denial, choke points, encounter splitting</td><td>Premium single-target control</td><td>The group disperses; use smaller zones or finish isolated pieces.</td></tr><tr><td>Unfamiliar supernatural foe</td><td>Unclear immunities, movement, senses, forms</td><td>Low-cost probe or effect valuable on success</td><td>Creature-type stereotypes</td><td>A trait is revealed; record it and immediately choose a different job.</td></tr><tr><td>Boss with layered defenses</td><td>Support pieces, reactions, phases, objective clock</td><td>No-save value, multiple threats, party enablement</td><td>One repeated save-or-nothing line</td><td>A phase changes; reset the objective and resource price before acting.</td></tr><tr><td>UNCERTAINTY DEFAULT</td><td></td><td></td><td></td><td></td></tr><tr><td>When two routes look equal, prefer the one with useful value on a successful save, the one that targets more enemies, or the one that preserves the emergency reserve. Pair this matrix with <a href="/chapters/15-master-spell-tag-index/">Chapter 15</a> spell tags and <a href="/chapters/18-combat-decision-engine/">Chapter 18</a> action selection.</td><td></td><td></td><td></td><td></td></tr></tbody></table></div>

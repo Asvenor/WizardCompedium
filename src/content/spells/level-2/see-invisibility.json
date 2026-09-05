@@ -1,0 +1,54 @@
+{
+  "id": "see-invisibility",
+  "name": "See Invisibility",
+  "level": 2,
+  "school": null,
+  "rules": {
+    "castingTime": null,
+    "range": null,
+    "area": null,
+    "duration": null,
+    "concentration": false,
+    "ritual": false,
+    "components": {
+      "verbal": null,
+      "somatic": null,
+      "material": null,
+      "description": null,
+      "gpCost": null,
+      "consumed": null
+    },
+    "damageTypes": [],
+    "save": {
+      "ability": null,
+      "type": null
+    },
+    "attackRoll": false
+  },
+  "source": {
+    "book": null,
+    "rulesVersion": "2024 baseline unless active entry says otherwise",
+    "category": "Core / active entry",
+    "sourceSensitive": false
+  },
+  "compendium": {
+    "tier": null,
+    "acquisitionRole": "optional",
+    "preparedBaseline": false,
+    "roles": [
+      "detection"
+    ],
+    "summary": "Perceive invisible creatures and objects within the spell's scope.",
+    "buildRelevance": [],
+    "warnings": [
+      "The Compendium index is an operating reference, not replacement spell text. Confirm the active D&D Beyond entry before casting."
+    ],
+    "relatedChapters": [
+      11,
+      15,
+      24,
+      47
+    ]
+  },
+  "sourceLocator": "B00142"
+}

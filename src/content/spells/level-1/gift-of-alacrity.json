@@ -1,0 +1,56 @@
+{
+  "id": "gift-of-alacrity",
+  "name": "Gift of Alacrity",
+  "level": 1,
+  "school": null,
+  "rules": {
+    "castingTime": "1 m",
+    "range": "Touch",
+    "area": null,
+    "duration": null,
+    "concentration": false,
+    "ritual": false,
+    "components": {
+      "verbal": null,
+      "somatic": null,
+      "material": null,
+      "description": null,
+      "gpCost": null,
+      "consumed": null
+    },
+    "damageTypes": [],
+    "save": {
+      "ability": null,
+      "type": null
+    },
+    "attackRoll": false
+  },
+  "source": {
+    "book": "Explorer's Guide to Wildemount",
+    "rulesVersion": "Expanded / active entry",
+    "category": "Dunamancy",
+    "sourceSensitive": true
+  },
+  "compendium": {
+    "tier": null,
+    "acquisitionRole": "optional",
+    "preparedBaseline": false,
+    "roles": [
+      "dunamancy",
+      "initiative"
+    ],
+    "summary": "Long-duration initiative improvement.",
+    "buildRelevance": [],
+    "warnings": [
+      "Source-sensitive: availability does not grant permission by itself; use the exact selectable entry and campaign rules.",
+      "The Compendium index is an operating reference, not replacement spell text. Confirm the active D&D Beyond entry before casting."
+    ],
+    "relatedChapters": [
+      11,
+      15,
+      16,
+      47
+    ]
+  },
+  "sourceLocator": "B00200"
+}

@@ -1,0 +1,27 @@
+---
+interface Props { spell: any; }
+const { spell } = Astro.props;
+const levelLabel = spell.level === 0 ? 'Cantrip' : `Level ${spell.level}`;
+---
+<a
+  class="spell-card"
+  href={`/spells/${spell.id}/`}
+  data-spell-card
+  data-search={`${spell.name} ${spell.compendium.summary} ${spell.compendium.roles.join(' ')}`.toLowerCase()}
+  data-level={spell.level}
+  data-role={spell.compendium.acquisitionRole}
+  data-concentration={String(spell.rules.concentration)}
+  data-source={spell.source.category}
+>
+  <div class="spell-card-head">
+    <h2>{spell.name}</h2>
+    <span class="badge">{levelLabel}</span>
+  </div>
+  <p>{spell.compendium.summary}</p>
+  <div class="spell-tags">
+    <span class={`badge badge--${spell.compendium.acquisitionRole}`}>{spell.compendium.acquisitionRole}</span>
+    {spell.rules.concentration && <span class="badge badge--concentration">Concentration</span>}
+    {spell.rules.ritual && <span class="badge badge--ritual">Ritual</span>}
+    {spell.source.sourceSensitive && <span class="badge">Source check</span>}
+  </div>
+</a>

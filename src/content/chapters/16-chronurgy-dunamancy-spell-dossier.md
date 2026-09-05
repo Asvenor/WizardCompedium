@@ -1,0 +1,38 @@
+---
+title: "Chronurgy Dunamancy Spell Dossier"
+chapter: 16
+order: 16
+part: "Part III"
+partTitle: "SPELLS & CHARACTER OPTIONS"
+hub: "spells"
+sourceLocator: "B00196"
+description: "This is an additive subclass reference. It does not replace the master progression, research bank, replacement ladders, or prepared packages. Chronurgy and Dunamancy are green-lit expanded-source content when the enabled D&D Beyond builder makes them selectable. The 2024 Wizard chassis supplies current subclass timing, while the active Wildemount and spell entries supply the subclass features, spell access, components, and spell operation."
+---
+<!-- source:B00197 -->
+This is an additive subclass reference. It does not replace the master progression, research bank, replacement ladders, or prepared packages. Chronurgy and Dunamancy are green-lit expanded-source content when the enabled D&D Beyond builder makes them selectable. The 2024 Wizard chassis supplies current subclass timing, while the active Wildemount and spell entries supply the subclass features, spell access, components, and spell operation.
+
+<!-- source:B00198 -->
+<aside class="callout" data-source-locator="B00198"><strong>ACCESS RULE — USE THE D&amp;D BEYOND SPELL ACCESS SHOWN FOR THE CHARACTER</strong><p>The tables below preserve Wildemount's Chronurgy-native, shared, and Graviturgy-native groupings for quick reference. They do not grant additional spells by themselves. A spell is legal for this character when the enabled D&amp;D Beyond builder or another selectable feature grants access; the active spell entry controls components and operation.</p></aside>
+
+<!-- source:B00199 -->
+## Chronurgy-native and shared Dunamancy map
+
+<!-- source:B00200 -->
+<div class="table-wrap" data-source-locator="B00200" tabindex="0"><table><thead><tr><th scope="col">Level</th><th scope="col">Spell</th><th scope="col">Priority</th><th scope="col">Primary job</th><th scope="col">Watch before choosing</th></tr></thead><tbody><tr><td>Cantrip</td><td>Sapping Sting</td><td>B / tactical</td><td>Low damage plus Prone setup; can punish non-hovering flight.</td><td>30-foot range, Constitution save, and weak raw damage. Best when an ally can exploit Prone.</td></tr><tr><td>1</td><td>Gift of Alacrity</td><td>S / core</td><td>Eight-hour, non-concentration initiative improvement for the controller or key ally.</td><td>The same effect does not stack. Cast before danger; do not waste the slot after initiative is rolled.</td></tr><tr><td>2</td><td>Fortune’s Favor</td><td>A if funded</td><td>One-hour, non-concentration reroll insurance for a decisive roll.</td><td>Normally consumes a 100 gp pearl per target. Power changes dramatically if costly components are waived.</td></tr><tr><td>2</td><td>Wristpocket</td><td>C / niche</td><td>Conceal or retrieve one small held object during infiltration or negotiation.</td><td>Concentration and a one-hour duration make it poor combat preparation; verify weight and retrieval wording.</td></tr><tr><td>5</td><td>Temporal Shunt</td><td>A / reactive</td><td>Attempt to waste an attack or spell and remove the creature briefly.</td><td>Wisdom save; competes for the Reaction with Counterspell, Shield, Absorb Elements, Chronal Shift, and later Convergent Future.</td></tr><tr><td>7</td><td>Tether Essence</td><td>B / specialist</td><td>Link two creatures so damage and healing can transfer between them.</td><td>Concentration, two-target setup, Constitution saves, costly consumed material, and substantial backfire/table-ruling risk.</td></tr><tr><td>8</td><td>Reality Break</td><td>B / volatile</td><td>Sustained single-target disruption with powerful random outcomes.</td><td>Concentration, initial saving throw, random result, and Legendary Resistance make it less dependable than premier level-8 control.</td></tr><tr><td>9</td><td>Time Ravage</td><td>C / narrative</td><td>Severe single-target damage plus supernatural aging pressure.</td><td>Very expensive consumed component and a rider that often does not solve the current encounter. Usually not the first level-9 acquisition.</td></tr></tbody></table></div>
+
+<!-- source:B00201 -->
+## Graviturgy-native Dunamancy — use only when separately selectable
+
+<!-- source:B00202 -->
+<div class="table-wrap" data-source-locator="B00202" tabindex="0"><table><thead><tr><th scope="col">Level</th><th scope="col">Spell</th><th scope="col">When selectable</th><th scope="col">Main caution</th></tr></thead><tbody><tr><td>1</td><td>Magnify Gravity</td><td>Useful early small-area damage and movement suppression.</td><td>Constitution save; modest area and scaling.</td></tr><tr><td>2</td><td>Immovable Object</td><td>High-ceiling anchors, security, engineering, and object control.</td><td>Normally consumes costly material; do not assume restraint or infinite-force exploits without a ruling.</td></tr><tr><td>3</td><td>Pulse Wave</td><td>Excellent non-concentration force damage with a push-or-pull choice.</td><td>Constitution save, cone geometry, and ally/hazard positioning.</td></tr><tr><td>4</td><td>Gravity Sinkhole</td><td>Non-concentration area damage plus central pull for setups.</td><td>Constitution save; can pull enemies toward vulnerable allies.</td></tr><tr><td>6</td><td>Gravity Fissure</td><td>Long-line damage and forced movement.</td><td>Line geometry is awkward and can disrupt ally positioning.</td></tr><tr><td>8</td><td>Dark Star</td><td>Severe concentration-based area denial and anti-caster pressure.</td><td>Large party-hostile zone can obstruct allies, sight, and friendly spellcasting.</td></tr><tr><td>9</td><td>Ravenous Void</td><td>Massive battlefield control and forced movement.</td><td>Concentration, enormous friendly-fire risk, and difficult safe placement.</td></tr></tbody></table></div>
+
+<!-- source:B00203 -->
+## Dunamancy conflict and ruling matrix
+
+<!-- source:B00204 -->
+<div class="table-wrap" data-source-locator="B00204" tabindex="0"><table><thead><tr><th scope="col">Check</th><th scope="col">Question</th><th scope="col">Operational rule</th></tr></thead><tbody><tr><td>Reaction</td><td>Will Temporal Shunt beat the Reaction you may need later?</td><td>Reserve it for a consequence worth giving up Counterspell, Shield, subclass rerolls, or emergency mitigation.</td></tr><tr><td>Concentration</td><td>Does this replace the spell already winning the encounter?</td><td>Wristpocket, Tether Essence, Reality Break, Dark Star, and Ravenous Void must justify occupying the one concentration slot.</td></tr><tr><td>Components</td><td>Are costly and consumed materials still enforced?</td><td>Ask once and record the answer. Ordinary focus substitution does not normally remove listed prices or consumed components.</td></tr><tr><td>Forced movement</td><td>Where does every creature end after the effect?</td><td>Trace allies, hazards, opportunity attacks, cover, elevation, and the objective before selecting push, pull, or center.</td></tr><tr><td>Boss defenses</td><td>Is the spell save-dependent or no-save pressure?</td><td>Do not feed premium slots into Legendary Resistance without a coordinated plan; use walls, positioning, buffs, and terrain when appropriate.</td></tr></tbody></table></div>
+
+<!-- source:B00205 -->
+
+<!-- source:B00206 -->
+<aside class="callout" data-source-locator="B00206"><strong>CHRONURGY ACQUISITION ORDER</strong><p>For the enabled Chronurgy spell access: Gift of Alacrity first. Add Temporal Shunt when 5th-level Wizard spells arrive, normally at Wizard 9, after reaction discipline is established. Fortune’s Favor rises sharply when its consumed component is affordable or explicitly waived. Sapping Sting and Wristpocket are tactical utilities; the level-7+ options remain campaign- and ruling-dependent.</p></aside>

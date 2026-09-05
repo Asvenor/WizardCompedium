@@ -1,0 +1,56 @@
+{
+  "id": "dark-star",
+  "name": "Dark Star",
+  "level": 8,
+  "school": null,
+  "rules": {
+    "castingTime": "Action",
+    "range": "150 ft",
+    "area": "40-ft S",
+    "duration": null,
+    "concentration": true,
+    "ritual": false,
+    "components": {
+      "verbal": null,
+      "somatic": null,
+      "material": null,
+      "description": null,
+      "gpCost": null,
+      "consumed": null
+    },
+    "damageTypes": [],
+    "save": {
+      "ability": "CON",
+      "type": "saving throw"
+    },
+    "attackRoll": false
+  },
+  "source": {
+    "book": "Explorer's Guide to Wildemount",
+    "rulesVersion": "Expanded / active entry",
+    "category": "Dunamancy",
+    "sourceSensitive": true
+  },
+  "compendium": {
+    "tier": null,
+    "acquisitionRole": "optional",
+    "preparedBaseline": false,
+    "roles": [
+      "dunamancy",
+      "area-denial"
+    ],
+    "summary": "Large hostile zone and anti-caster pressure.",
+    "buildRelevance": [],
+    "warnings": [
+      "Source-sensitive: availability does not grant permission by itself; use the exact selectable entry and campaign rules.",
+      "The Compendium index is an operating reference, not replacement spell text. Confirm the active D&D Beyond entry before casting."
+    ],
+    "relatedChapters": [
+      11,
+      15,
+      16,
+      47
+    ]
+  },
+  "sourceLocator": "B00202"
+}

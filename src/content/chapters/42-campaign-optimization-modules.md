@@ -1,0 +1,31 @@
+---
+title: "Campaign Optimization Modules"
+chapter: 42
+order: 42
+part: "Part VI"
+partTitle: "REFERENCE & FINDERS"
+hub: "reference"
+sourceLocator: "B00703"
+description: "Complete this once per campaign and again after a major source or table-policy change."
+---
+<!-- source:B00704 -->
+<div class="table-wrap" data-source-locator="B00704.T001" tabindex="0"><table><thead><tr><th scope="col">Campaign module</th><th scope="col">Raise priority</th><th scope="col">Lower priority / caution</th><th scope="col">Support choices</th></tr></thead><tbody><tr><td>Horror and undead</td><td>Protection, information, See Invisibility, Dispel Magic, Tiny Hut, control not dependent on charm/fear.</td><td>Charm, fear, poison, and careless long-rest assumptions.</td><td>Insight, Religion, Celestial/Infernal, holy water, silver, defensive items.</td></tr><tr><td>Fiends and planar threats</td><td>Banishment-style answers, Magic Circle, protection, planar information, True Seeing.</td><td>Assuming Charisma is always weak or every fiend fights the same way.</td><td>Arcana, Religion, Infernal/Abyssal/Celestial, component reserves.</td></tr><tr><td>Intrigue and heists</td><td>Illusions, Nystul’s Magic Aura, Invisibility, Suggestion, divination, communication, escape.</td><td>Visible spellcasting, witnesses, and social consequences.</td><td>Stealth, Insight, disguise/calligraphy, non-attunement utility.</td></tr><tr><td>Dungeon attrition</td><td>Rituals, familiar scouting, Rope Trick, Tiny Hut, Web, Sleet Storm, Phantom Steed, resource preservation.</td><td>Spending slots on cleanup or duplicating active concentration.</td><td>Arcana-based scroll scribing, Herbalism, mundane gear, backup escape.</td></tr><tr><td>Wilderness and travel</td><td>Phantom Steed, Fly, Water Breathing, Arcane Eye, Telepathic Bond, teleportation.</td><td>Preparing only room-control spells.</td><td>Woodcarver/Tinker utility, languages, navigation support.</td></tr><tr><td>Caster-heavy campaign</td><td>Counterspell discipline, Sleet Storm, Dispel Magic, Globe, line-of-sight denial, initiative.</td><td>Reaction waste and direct Counterspell wars without positioning.</td><td>Alert, Mage Slayer if justified, save items, True Seeing.</td></tr><tr><td>Small party / no frontline</td><td>Armor or Tank shell, rescue, mobility, encounter splitting, familiar information, healing consumables.</td><td>Greedy concentration and isolated melee.</td><td>Artificer dip, Herbalism, defensive items, summons only if table speed remains acceptable.</td></tr><tr><td>Low-rest campaign</td><td>Rituals, scrolls, items, cantrips, long-duration spells, Arcane Recovery timing.</td><td>Low-value damage and unnecessary reactions.</td><td>Scroll scribing, Tinker, slot recovery, efficient concentration.</td></tr></tbody></table></div>
+
+<!-- source:B00705 -->
+## Campaign intake card
+
+<!-- source:B00706 -->
+Complete this once per campaign and again after a major source or table-policy change.
+
+<!-- source:B00707 -->
+<div class="table-wrap" data-source-locator="B00707" tabindex="0"><table><thead><tr><th scope="col">Question</th><th scope="col">Recorded answer</th><th scope="col">Build consequence</th></tr></thead><tbody><tr><td>Which D&amp;D Beyond sources are enabled?</td><td>5.5 Core + Expanded; 5e Core + Expanded; purchased Partnered. Homebrew, Drops, Legacy/Noncore off.</td><td>Selectable options are green-lit; absent options are excluded.</td></tr><tr><td>Point buy, standard array, or rolls?</td><td>Record here.</td><td>Determines feat timing, armor math, and whether odd ability increases are valuable.</td></tr><tr><td>Multiclassing available?</td><td>Record here.</td><td>Selects flagship Artificer shell, Fighter alternative, or Pure Wizard fallback.</td></tr><tr><td>Starting gold/equipment method?</td><td>Record here; the 150 gp plan is one explicit scenario.</td><td>Changes tools, armor, focus, crossbow, and reserve timing.</td></tr><tr><td>Expected encounters and rests?</td><td>Record typical fights, Short Rests, Long Rests, and retreat access.</td><td>Changes nova, ritual, recovery, and concentration priorities.</td></tr><tr><td>Magic-item and crafting availability?</td><td>Record rarity access, shops, downtime, and formula/material procedure.</td><td>Changes attunement, gold, tool, and infrastructure plans.</td></tr><tr><td>Illusion and information procedures?</td><td>Record investigation, communication, and character-knowledge boundaries.</td><td>Changes Illusionist and divination reliability.</td></tr><tr><td>Summon/table-speed agreement?</td><td>Record creature limit and preferred turn procedure.</td><td>Determines whether many-body spells remain practical.</td></tr></tbody></table></div>
+
+<!-- source:B00708 -->
+
+<!-- source:B00709 -->
+## Encounter-pattern sensitivity
+
+<!-- source:B00710 -->
+<div class="table-wrap" data-source-locator="B00710" tabindex="0"><table><thead><tr><th scope="col">Campaign pattern</th><th scope="col">Options that rise</th><th scope="col">Options that fall</th></tr></thead><tbody><tr><td>One decisive encounter per Long Rest</td><td>High-slot nova, limited-use subclass features, expensive encounter-ending effects.</td><td>Small efficiency gains and long attrition planning.</td></tr><tr><td>Many encounters / uncertain rests</td><td>Rituals, Arcane Recovery discipline, Spell Mastery, long-duration effects, efficient concentration.</td><td>Repeated reaction spending and low-value blast cleanup.</td></tr><tr><td>Legendary Resistance common</td><td>Walls, terrain, no-save isolation, buffs, attack rolls, coordinated save pressure.</td><td>Single expensive save-or-nothing plans.</td></tr><tr><td>Small rooms / many allies</td><td>Selective control, Slow, single-target removal, careful geometry.</td><td>Large indiscriminate areas and crowded summons.</td></tr><tr><td>Open vertical maps</td><td>Flight, ranged control, forced movement, Feather Fall, mounts and scouting.</td><td>Ground-only zones without an anchoring plan.</td></tr><tr><td>Strict components and economy</td><td>Reusable foci, copying priorities, mundane gear, contracts and component reserves.</td><td>Casual glyph, binding, clone, and teleport assumptions.</td></tr></tbody></table></div>
+
+<!-- source:B00711 -->

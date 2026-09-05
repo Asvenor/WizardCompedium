@@ -1,0 +1,612 @@
+[
+  {
+    "number": 1,
+    "title": "How to Use the Compendium and Source Rules",
+    "slug": "01-how-to-use-the-compendium-and-source-rules",
+    "part": "Part I",
+    "partTitle": "FUNDAMENTALS",
+    "hub": "fundamentals",
+    "description": "Global color rule. Every optimization tier list uses this same palette: S/S+ pink, A baby blue, B green, C amber, and D/F red. The tier letter remains visible for grayscale. Named build-overlay colors and magic-item rarity are separate, non-ranking systems; rarity keeps its own labeled key in Chapter 26.",
+    "sourceLocator": "B00010"
+  },
+  {
+    "number": 2,
+    "title": "Core Wizard Engine",
+    "slug": "02-core-wizard-engine",
+    "part": "Part I",
+    "partTitle": "FUNDAMENTALS",
+    "hub": "fundamentals",
+    "description": "Spellbook: Level 1 = 6 Wizard spells; every Wizard level after 1 = +2 Wizard spells; extra spellbook spells come from scrolls, enemy books, shops, rewards, or downtime.",
+    "sourceLocator": "B00021"
+  },
+  {
+    "number": 3,
+    "title": "Optimization Mathematics and Target Selection",
+    "slug": "03-optimization-mathematics-and-target-selection",
+    "part": "Part I",
+    "partTitle": "FUNDAMENTALS",
+    "hub": "fundamentals",
+    "description": "The table shows the target’s chance to fail a saving throw. It is a decision aid, not permission to use hidden stat-block knowledge.",
+    "sourceLocator": "B00034"
+  },
+  {
+    "number": 4,
+    "title": "Build Selection and Priority Matrix",
+    "slug": "04-build-selection-and-priority-matrix",
+    "part": "Part II",
+    "partTitle": "BUILDS",
+    "hub": "builds",
+    "description": "These seven color-coded routes are the supported build families.",
+    "sourceLocator": "B00055"
+  },
+  {
+    "number": 5,
+    "title": "Flagship Artificer 1 / Wizard 19",
+    "slug": "05-flagship-artificer-1-wizard-19",
+    "part": "Part II",
+    "partTitle": "BUILDS",
+    "hub": "builds",
+    "description": "This is the compendium’s primary and most-used build. The Artificer level is infrastructure, not a second identity: begin durable enough to survive, acquire the hard-to-replace tools immediately, then take nineteen uninterrupted Wizard levels.",
+    "sourceLocator": "B00072"
+  },
+  {
+    "number": 6,
+    "title": "Chronurgy, Diviner, and Illusionist Wizard Variants",
+    "slug": "06-chronurgy-diviner-and-illusionist-wizard-variants",
+    "part": "Part II",
+    "partTitle": "BUILDS",
+    "hub": "builds",
+    "description": "These are three subclass packages, not three chassis. Apply one to the Artificer 1 / Wizard 19 flagship when multiclassing is allowed. Use Pure Wizard only when it is not. Chronurgy maximizes ceiling, Diviner maximizes predictable outcomes, and Illusionist maximizes creative information control.",
+    "sourceLocator": "B00081"
+  },
+  {
+    "number": 7,
+    "title": "Bladesinger Wizard",
+    "slug": "07-bladesinger-wizard",
+    "part": "Part II",
+    "partTitle": "BUILDS",
+    "hub": "builds",
+    "description": "Use the final Heroes of Faerûn entry in D&D Beyond as the rules authority. This compact table is an at-table reminder of the revised feature structure; if any exact wording differs, D&D Beyond wins.",
+    "sourceLocator": "B00098"
+  },
+  {
+    "number": 8,
+    "title": "Wizard Tank",
+    "slug": "08-wizard-tank",
+    "part": "Part II",
+    "partTitle": "BUILDS",
+    "hub": "builds",
+    "description": "Reference material from Part II.",
+    "sourceLocator": "B00108"
+  },
+  {
+    "number": 9,
+    "title": "Fighter 1 / Wizard 19 Alternative",
+    "slug": "09-fighter-1-wizard-19-alternative",
+    "part": "Part II",
+    "partTitle": "BUILDS",
+    "hub": "builds",
+    "description": "Use this only as the deliberate armored alternative to the Artificer flagship. It keeps the normal Wizard spell priorities, but starts Fighter for armor, shield, Defense Fighting Style, and CON-save durability while giving up the flagship’s tools, healing, and crafting utility.",
+    "sourceLocator": "B00113"
+  },
+  {
+    "number": 10,
+    "title": "Compact Spell Progression Roadmap",
+    "slug": "10-compact-spell-progression-roadmap",
+    "part": "Part III",
+    "partTitle": "SPELLS & CHARACTER OPTIONS",
+    "hub": "spells",
+    "description": "Read by Wizard level. The timing column shows the corresponding character level for a Pure Wizard and a one-level Artificer/Fighter dip. Take the orange CORE additions, then apply only your route's colored change. A colored change replaces a CORE pick or becomes a later copy target; it never grants an extra learned spell.",
+    "sourceLocator": "B00119"
+  },
+  {
+    "number": 11,
+    "title": "Wizard Spell Master Table & Research Bank",
+    "slug": "11-wizard-spell-master-table-and-research-bank",
+    "part": "Part III",
+    "partTitle": "SPELLS & CHARACTER OPTIONS",
+    "hub": "spells",
+    "description": "This is a spell-acquisition map, not a universal daily prepared list. Color shows the spell's ownership role under the stated optimization assumptions; underlining preserves the supplied Wizard 19 prepared baseline, and cantrips are known rather than prepared. Exact D&D Beyond selectability and the active entry always control legality and wording.",
+    "sourceLocator": "B00139"
+  },
+  {
+    "number": 12,
+    "title": "Spell Acquisition and Preparation Scorecard",
+    "slug": "12-spell-acquisition-and-preparation-scorecard",
+    "part": "Part III",
+    "partTitle": "SPELLS & CHARACTER OPTIONS",
+    "hub": "spells",
+    "description": "Use this scorecard only when two legal spells are close. The six value factors ask how often a spell matters, how reliably it works, how many actions it influences, what it returns for the slot and setup, whether it adds unique coverage, and whether it completes the prepared portfolio. The amber rows subtract conflicts and operating burden. A spell that uniquely solves the real mission still wins, even when its generic score is lower.",
+    "sourceLocator": "B00149"
+  },
+  {
+    "number": 13,
+    "title": "Prepared Spell Packages",
+    "slug": "13-prepared-spell-packages",
+    "part": "Part III",
+    "partTitle": "SPELLS & CHARACTER OPTIONS",
+    "hub": "spells",
+    "description": "Use these as pre-session reference lists, not fixed character-sheet prep. Start from the loadout that matches the day, then adjust for party plan, known enemy type, and DM rulings.",
+    "sourceLocator": "B00167"
+  },
+  {
+    "number": 14,
+    "title": "Spell Replacement Ladders",
+    "slug": "14-spell-replacement-ladders",
+    "part": "Part III",
+    "partTitle": "SPELLS & CHARACTER OPTIONS",
+    "hub": "spells",
+    "description": "A later spell does not automatically erase an earlier one. These ladders show how the function expands across tiers and when the lower-level option remains more efficient.",
+    "sourceLocator": "B00178"
+  },
+  {
+    "number": 15,
+    "title": "Master Spell Tag Index",
+    "slug": "15-master-spell-tag-index",
+    "part": "Part III",
+    "partTitle": "SPELLS & CHARACTER OPTIONS",
+    "hub": "spells",
+    "description": "This is a fast index for the compendium's priority spell pool, covering the maintained spellbook and preparation baselines, not replacement spell text. Rows marked 24 use the 2024 baseline. Expanded-source and Dunamancy rows are green-lit when D&D Beyond makes them selectable. Abbreviations: A = Magic action, BA = Bonus Action, R = Reaction, C = Concentration, Rit = Ritual, Atk = spell attack.",
+    "sourceLocator": "B00185"
+  },
+  {
+    "number": 16,
+    "title": "Chronurgy Dunamancy Spell Dossier",
+    "slug": "16-chronurgy-dunamancy-spell-dossier",
+    "part": "Part III",
+    "partTitle": "SPELLS & CHARACTER OPTIONS",
+    "hub": "spells",
+    "description": "This is an additive subclass reference. It does not replace the master progression, research bank, replacement ladders, or prepared packages. Chronurgy and Dunamancy are green-lit expanded-source content when the enabled D&D Beyond builder makes them selectable. The 2024 Wizard chassis supplies current subclass timing, while the active Wildemount and spell entries supply the subclass features, spell access, components, and spell operation.",
+    "sourceLocator": "B00196"
+  },
+  {
+    "number": 17,
+    "title": "Skills, Feats, Epic Boons, and Species",
+    "slug": "17-skills-feats-epic-boons-and-species",
+    "part": "Part III",
+    "partTitle": "SPELLS & CHARACTER OPTIONS",
+    "hub": "spells",
+    "description": "Use this after the build chapters. Skills are not locked by build; choose from the pool based on campaign, party, and background access.",
+    "sourceLocator": "B00207"
+  },
+  {
+    "number": 18,
+    "title": "Combat Decision Engine",
+    "slug": "18-combat-decision-engine",
+    "part": "Part IV",
+    "partTitle": "CASTING & TACTICS",
+    "hub": "combat",
+    "description": "Reference material from Part IV.",
+    "sourceLocator": "B00248"
+  },
+  {
+    "number": 19,
+    "title": "2024 Spellcasting Legality Reference",
+    "slug": "19-2024-spellcasting-legality-reference",
+    "part": "Part IV",
+    "partTitle": "CASTING & TACTICS",
+    "hub": "combat",
+    "description": "Use this page before resolving a disputed cast. It summarizes the 2024 SRD 5.2.1 spellcasting and glossary rules; the spell's own text remains the first specific authority.",
+    "sourceLocator": "B00270"
+  },
+  {
+    "number": 20,
+    "title": "Condition Interaction and Area Geometry",
+    "slug": "20-condition-interaction-and-area-geometry",
+    "part": "Part IV",
+    "partTitle": "CASTING & TACTICS",
+    "hub": "combat",
+    "description": "This is a Wizard-facing interaction map, not copied condition text. Use it to select a spell, identify what a condition shuts down, and avoid wasting concentration on a condition the target ignores.",
+    "sourceLocator": "B00277"
+  },
+  {
+    "number": 21,
+    "title": "Casting Interface Quick Reference",
+    "slug": "21-casting-interface-quick-reference",
+    "part": "Part IV",
+    "partTitle": "CASTING & TACTICS",
+    "hub": "combat",
+    "description": "Use this immediately before declaring a cast. It consolidates the physical and targeting gates that are easy to overlook; the exact spell and active rules text remain authoritative.",
+    "sourceLocator": "B00287"
+  },
+  {
+    "number": 22,
+    "title": "Optional Advanced Appendix: Campaign-Warping Wizard Engines",
+    "slug": "22-optional-advanced-appendix-campaign-warping-wizard-engines",
+    "part": "Part IV",
+    "partTitle": "CASTING & TACTICS",
+    "hub": "combat",
+    "description": "Purpose: Explain the actual engines used by high-optimization Wizards: why they work, how to set them up, what resources they consume, how they fail, and which rulings must be settled before play. This replaces the former reminder-style chapter. Rules-sensitive claims use the 2024 D&D Beyond Basic Rules as the baseline; enabled sourcebooks control option text, while table rulings control ruling-sensitive interactions.",
+    "sourceLocator": "B00295"
+  },
+  {
+    "number": 23,
+    "title": "High-Level Magic Safety Matrix",
+    "slug": "23-high-level-magic-safety-matrix",
+    "part": "Part IV",
+    "partTitle": "CASTING & TACTICS",
+    "hub": "combat",
+    "description": "High-level magic fails through logistics and wording more often than through raw power. Use this matrix before spending the slot, component, downtime, or political capital; it does not replace the spell entry.",
+    "sourceLocator": "B00369"
+  },
+  {
+    "number": 24,
+    "title": "Countermagic, Illusions, Familiars, and Fair Information",
+    "slug": "24-countermagic-illusions-familiars-and-fair-information",
+    "part": "Part IV",
+    "partTitle": "CASTING & TACTICS",
+    "hub": "combat",
+    "description": "Choose the permitted form from the current Find Familiar entry. Compare movement, senses, size, environment, and how suspicious the creature looks in the scene; do not choose a form only because an online guide calls it the universal best.",
+    "sourceLocator": "B00387"
+  },
+  {
+    "number": 25,
+    "title": "Spell Components and Resource Acquisition",
+    "slug": "25-spell-components-and-resource-acquisition",
+    "part": "Part V",
+    "partTitle": "EQUIPMENT, STRATEGY & OPERATIONS",
+    "hub": "gear",
+    "description": "Use this before sessions and shopping. Exact wording can differ by source version, so verify in D&D Beyond before buying or building a plan around a component.",
+    "sourceLocator": "B00409"
+  },
+  {
+    "number": 26,
+    "title": "Items, Loot, and Attunement Priorities",
+    "slug": "26-items-loot-and-attunement-priorities",
+    "part": "Part V",
+    "partTitle": "EQUIPMENT, STRATEGY & OPERATIONS",
+    "hub": "gear",
+    "description": "Rarity color is a retrieval aid, not a power rating: an Uncommon item can be more useful to this Wizard than a Legendary item. Rarities and wording use the 2024 SRD 5.2.1 where the item appears; Arcane Grimoire is an enabled Tasha's expanded-source item when selectable. Mundane gear stays neutral because the magic-item rarity ladder does not apply to it.",
+    "sourceLocator": "B00420"
+  },
+  {
+    "number": 27,
+    "title": "Magic-Item Use, Attunement, and Recharge Matrix",
+    "slug": "27-magic-item-use-attunement-and-recharge-matrix",
+    "part": "Part V",
+    "partTitle": "EQUIPMENT, STRATEGY & OPERATIONS",
+    "hub": "gear",
+    "description": "Use this matrix after an item passes the Chapter 26 priority test. It exposes attunement pressure, action economy, recharge, user restrictions, and source and version fit before the item enters a three-slot package.",
+    "sourceLocator": "B00443"
+  },
+  {
+    "number": 28,
+    "title": "Tool and Crafting Tier List",
+    "slug": "28-tool-and-crafting-tier-list",
+    "part": "Part V",
+    "partTitle": "EQUIPMENT, STRATEGY & OPERATIONS",
+    "hub": "gear",
+    "description": "This tier list evaluates each tool specifically for an optimized Wizard. Exact recipes, formulas, item restrictions, attunement, charges, and crafting assignments must match the active D&D Beyond rules.",
+    "sourceLocator": "B00448"
+  },
+  {
+    "number": 29,
+    "title": "Magic-Item Crafting Quick Guide",
+    "slug": "29-magic-item-crafting-quick-guide",
+    "part": "Part V",
+    "partTitle": "EQUIPMENT, STRATEGY & OPERATIONS",
+    "hub": "gear",
+    "description": "Reference material from Part V.",
+    "sourceLocator": "B00455"
+  },
+  {
+    "number": 30,
+    "title": "Rest, Camp, Town, and Downtime Optimization",
+    "slug": "30-rest-camp-town-and-downtime-optimization",
+    "part": "Part V",
+    "partTitle": "EQUIPMENT, STRATEGY & OPERATIONS",
+    "hub": "gear",
+    "description": "Reference material from Part V.",
+    "sourceLocator": "B00476"
+  },
+  {
+    "number": 31,
+    "title": "Spellbook Operations and Copy Priority",
+    "slug": "31-spellbook-operations-and-copy-priority",
+    "part": "Part V",
+    "partTitle": "EQUIPMENT, STRATEGY & OPERATIONS",
+    "hub": "spells",
+    "description": "The spellbook is a strategic resource, not a worksheet. Use this procedure whenever a level-up, scroll, captured spellbook, shop, reward, or downtime opportunity adds possible spells.",
+    "sourceLocator": "B00502"
+  },
+  {
+    "number": 32,
+    "title": "Scroll Use, Backup Books, and Security",
+    "slug": "32-scroll-use-backup-books-and-security",
+    "part": "Part V",
+    "partTitle": "EQUIPMENT, STRATEGY & OPERATIONS",
+    "hub": "spells",
+    "description": "A scroll is simultaneously an emergency cast, a possible spellbook acquisition, and a consumable asset. Use this section to choose deliberately; source versions can change who may cast, the check required, and how copying interacts with the scroll.",
+    "sourceLocator": "B00515"
+  },
+  {
+    "number": 33,
+    "title": "Wizard Economy, Income, Contracts, and Reputation",
+    "slug": "33-wizard-economy-income-contracts-and-reputation",
+    "part": "Part V",
+    "partTitle": "EQUIPMENT, STRATEGY & OPERATIONS",
+    "hub": "gear",
+    "description": "Gold is not only purchasing power. For a Wizard, it becomes spellbook breadth, costly components, scrolls, secure facilities, specialist labor, transport, and extra actions stored for later. This chapter explains how to earn wealth without assuming every campaign provides unlimited dungeon treasure or allowing Fabricate to become the only economic plan.",
+    "sourceLocator": "B00531"
+  },
+  {
+    "number": 34,
+    "title": "Failure, Capture, Death, and Recovery",
+    "slug": "34-failure-capture-death-and-recovery",
+    "part": "Part V",
+    "partTitle": "EQUIPMENT, STRATEGY & OPERATIONS",
+    "hub": "combat",
+    "description": "Optimization is incomplete if it only describes winning positions. This chapter handles the moment the first plan fails: an ally drops, concentration ends, the Wizard is restrained or silenced, the spellbook disappears, the party is captured, or death becomes possible.",
+    "sourceLocator": "B00553"
+  },
+  {
+    "number": 35,
+    "title": "Emergency Wizard Protocol",
+    "slug": "35-emergency-wizard-protocol",
+    "part": "Part V",
+    "partTitle": "EQUIPMENT, STRATEGY & OPERATIONS",
+    "hub": "combat",
+    "description": "This is the one-page recovery order for a Wizard already in a losing state. It gives priorities, not a scripted encounter solution: verify the objective, visible threats, legal actions, and ally positions before choosing the actual spell or item.",
+    "sourceLocator": "B00570"
+  },
+  {
+    "number": 36,
+    "title": "Objective-Based Mission Play",
+    "slug": "36-objective-based-mission-play",
+    "part": "Part V",
+    "partTitle": "EQUIPMENT, STRATEGY & OPERATIONS",
+    "hub": "combat",
+    "description": "Reference material from Part V.",
+    "sourceLocator": "B00578"
+  },
+  {
+    "number": 37,
+    "title": "Noncombat Wizard Operations",
+    "slug": "37-noncombat-wizard-operations",
+    "part": "Part V",
+    "partTitle": "EQUIPMENT, STRATEGY & OPERATIONS",
+    "hub": "combat",
+    "description": "Outside combat, the Wizard wins by converting information, preparation, and spell access into a situation where the request, identity, route, or evidence already favors the party. Use the operating loop first, then choose an engine that solves the actual obstacle.",
+    "sourceLocator": "B00592"
+  },
+  {
+    "number": 38,
+    "title": "Exploration and Environmental Operations",
+    "slug": "38-exploration-and-environmental-operations",
+    "part": "Part V",
+    "partTitle": "EQUIPMENT, STRATEGY & OPERATIONS",
+    "hub": "combat",
+    "description": "Reference material from Part V.",
+    "sourceLocator": "B00604"
+  },
+  {
+    "number": 39,
+    "title": "Pre-Adventure Loadout Matrix",
+    "slug": "39-pre-adventure-loadout-matrix",
+    "part": "Part V",
+    "partTitle": "EQUIPMENT, STRATEGY & OPERATIONS",
+    "hub": "gear",
+    "description": "This is a read-only selection reference. It does not require boxes, notes, or filled fields: choose the row matching the known environment, then preserve enough flexible capacity for the unexpected.",
+    "sourceLocator": "B00620"
+  },
+  {
+    "number": 40,
+    "title": "Minion, Summon, and Follower Management",
+    "slug": "40-minion-summon-and-follower-management",
+    "part": "Part V",
+    "partTitle": "EQUIPMENT, STRATEGY & OPERATIONS",
+    "hub": "combat",
+    "description": "Selectability decides legality; the active spell entry decides stat block, concentration, command timing, and scaling. Prefer one clearly managed body when it provides comparable value to many separate creatures.",
+    "sourceLocator": "B00632"
+  },
+  {
+    "number": 41,
+    "title": "Wizard Housing, Bastions, and Strongholds",
+    "slug": "41-wizard-housing-bastions-and-strongholds",
+    "part": "Part V",
+    "partTitle": "EQUIPMENT, STRATEGY & OPERATIONS",
+    "hub": "gear",
+    "description": "Purpose: turn housing from background flavor into a protected Wizard operating system. This chapter covers mundane property, Bastions, magical shelter, construction, security, staff, storage, laboratories, transport, income, and level-by-level upgrades without assuming the campaign grants free land or unrestricted downtime.",
+    "sourceLocator": "B00655"
+  },
+  {
+    "number": 42,
+    "title": "Campaign Optimization Modules",
+    "slug": "42-campaign-optimization-modules",
+    "part": "Part VI",
+    "partTitle": "REFERENCE & FINDERS",
+    "hub": "reference",
+    "description": "Complete this once per campaign and again after a major source or table-policy change.",
+    "sourceLocator": "B00703"
+  },
+  {
+    "number": 43,
+    "title": "German Table Conversion Cheat Sheet",
+    "slug": "43-german-table-conversion-cheat-sheet",
+    "part": "Part VI",
+    "partTitle": "REFERENCE & FINDERS",
+    "hub": "reference",
+    "description": "Reference material from Part VI.",
+    "sourceLocator": "B00712"
+  },
+  {
+    "number": 44,
+    "title": "Universal Level-Up Audit",
+    "slug": "44-universal-level-up-audit",
+    "part": "Part VI",
+    "partTitle": "REFERENCE & FINDERS",
+    "hub": "reference",
+    "description": "Use Chapter 4 for the actual level milestone. Use this audit after every level to ensure the character sheet, spellbook, equipment, and operating plan remain synchronized.",
+    "sourceLocator": "B00734"
+  },
+  {
+    "number": 45,
+    "title": "Concentration and Reaction Master Matrix",
+    "slug": "45-concentration-and-reaction-master-matrix",
+    "part": "Part VI",
+    "partTitle": "REFERENCE & FINDERS",
+    "hub": "combat",
+    "description": "Use these matrices to identify resource conflicts before committing. They organize options by function but do not decide which spell or Reaction is correct for the current scene.",
+    "sourceLocator": "B00738"
+  },
+  {
+    "number": 46,
+    "title": "Problem-to-Answer Finder",
+    "slug": "46-problem-to-answer-finder",
+    "part": "Part VI",
+    "partTitle": "REFERENCE & FINDERS",
+    "hub": "reference",
+    "description": "Identify the observable problem, then compare answer families. This index accelerates retrieval; it does not assume hidden statistics or replace scouting, table rulings or player judgment.",
+    "sourceLocator": "B00747"
+  },
+  {
+    "number": 47,
+    "title": "Alphabetical Spell and Feature Index",
+    "slug": "47-alphabetical-spell-and-feature-index",
+    "part": "Part VI",
+    "partTitle": "REFERENCE & FINDERS",
+    "hub": "reference",
+    "description": "This index covers the high-value spells, features, feats and systems used throughout the compendium. It summarizes function and links to analysis; it is not a replacement for the active rules text.",
+    "sourceLocator": "B00754"
+  },
+  {
+    "number": 48,
+    "title": "Sources and Verification",
+    "slug": "48-sources-and-verification",
+    "part": "Part VI",
+    "partTitle": "REFERENCE & FINDERS",
+    "hub": "reference",
+    "description": "The active D&D Beyond text and enabled character-builder sources are authoritative; a current selectable entry overrides this summary. Fact-check status (16.08.2026): signed-in sourcebook pages were checked for current Wizard and Artificer progression, the 2025 Bladesinger, Wildemount Chronurgy and Dunamancy access, 2024 Bastions and magic-item crafting, Spell Scroll copying, Circle Magic, relevant spell and item listings, and Heroes of Faerûn Epic Boons. The character builder remains the final legality gate for an exact character combination; unowned, builder-only, or unreleased entries remain SOURCE CHECK. Optimization tiers are recommendations, not rules claims.",
+    "sourceLocator": "B00766"
+  },
+  {
+    "number": 49,
+    "title": "How to Find Anything",
+    "slug": "49-how-to-find-anything",
+    "part": "Part VI",
+    "partTitle": "REFERENCE & FINDERS",
+    "hub": "reference",
+    "description": "Reference material from Part VI.",
+    "sourceLocator": "B00785"
+  },
+  {
+    "number": 50,
+    "title": "Complete Selectable Wizard Subclass Matrix",
+    "slug": "50-complete-selectable-wizard-subclass-matrix",
+    "part": "Part VII",
+    "partTitle": "EXPANSIONS & PLAY TOOLS",
+    "hub": "reference",
+    "description": "This part converts the compendium into a living table tool: complete option intake, exact source-version control, enemy counterplay, party ownership, build scripts, playtesting evidence, and release-day updates.",
+    "sourceLocator": "B00793"
+  },
+  {
+    "number": 51,
+    "title": "Source-Version Conflict Rules",
+    "slug": "51-source-version-conflict-rules",
+    "part": "Part VII",
+    "partTitle": "EXPANSIONS & PLAY TOOLS",
+    "hub": "reference",
+    "description": "These rules prevent a legal option from becoming an accidental hybrid. The exact entry selected on the campaign character sheet controls; similar names from another source do not donate text, scaling, or prerequisites. Builder selectability answers 'may I choose it?'; the selected version answers 'which exact rules am I using?' Both checks are required for reproducible builds.",
+    "sourceLocator": "B00800"
+  },
+  {
+    "number": 52,
+    "title": "Anti-Wizard Counterplay and Recovery",
+    "slug": "52-anti-wizard-counterplay-and-recovery",
+    "part": "Part VII",
+    "partTitle": "EXPANSIONS & PLAY TOOLS",
+    "hub": "combat",
+    "description": "A min-maxed Wizard is strongest when the player anticipates the tools that intelligent enemies use against concentration, sight, components, positioning, reactions, rest, and the spellbook. Use the matrix from left to right: tell, prevent, respond, recover.",
+    "sourceLocator": "B00807"
+  },
+  {
+    "number": 53,
+    "title": "Party Synergy and Spell Ownership",
+    "slug": "53-party-synergy-and-spell-ownership",
+    "part": "Part VII",
+    "partTitle": "EXPANSIONS & PLAY TOOLS",
+    "hub": "combat",
+    "description": "Optimization improves when each effect has one owner, one backup, and a declared handoff condition. The Wizard should solve the encounter's hardest problem, not duplicate an ally's reliable job.",
+    "sourceLocator": "B00816"
+  },
+  {
+    "number": 54,
+    "title": "One-Page Build Reference Sheets",
+    "slug": "54-one-page-build-reference-sheets",
+    "part": "Part VII",
+    "partTitle": "EXPANSIONS & PLAY TOOLS",
+    "hub": "builds",
+    "description": "Use the relevant fixed reference sheet on a tablet or laptop. Each page is a tactical overlay for the detailed build chapters; nothing is intended to be filled in, and the exact D&D Beyond character sheet remains authoritative for features, spell text, and source version.",
+    "sourceLocator": "B00825"
+  },
+  {
+    "number": 55,
+    "title": "Actual-Play Validation Standard",
+    "slug": "55-actual-play-validation-standard",
+    "part": "Part VII",
+    "partTitle": "EXPANSIONS & PLAY TOOLS",
+    "hub": "reference",
+    "description": "A build claim graduates from theory only when materially different sessions support its purpose, cost, failure mode, and repeatability. The standards below define the evidence required; they are reference rules, not forms to complete inside this compendium.",
+    "sourceLocator": "B00897"
+  },
+  {
+    "number": 56,
+    "title": "Arcana Unleashed Release Intake",
+    "slug": "56-arcana-unleashed-release-intake",
+    "part": "Part VII",
+    "partTitle": "EXPANSIONS & PLAY TOOLS",
+    "hub": "reference",
+    "description": "Preview status verified 15.08.2026. Arcana Unleashed is scheduled for 15.09.2026. Until final entries appear in the campaign's D&D Beyond builder, this chapter tracks impact and verification work; it does not assign final mechanics or tier rankings.",
+    "sourceLocator": "B00904"
+  },
+  {
+    "number": 57,
+    "title": "D&D Beyond Builder Setup Guide",
+    "slug": "57-d-and-d-beyond-builder-setup-guide",
+    "part": "Part VIII",
+    "partTitle": "SETUP + LIVE PLAY TOOLS",
+    "hub": "reference",
+    "description": "Interface verification: checked 15.08.2026 in the logged-in D&D Beyond builder. Labels can move after site updates, so follow the function as well as the label. This chapter translates Chapter 4 and the build chapters into a repeatable setup audit.",
+    "sourceLocator": "B00919"
+  },
+  {
+    "number": 58,
+    "title": "Worked Encounter Playbooks",
+    "slug": "58-worked-encounter-playbooks",
+    "part": "Part VIII",
+    "partTitle": "SETUP + LIVE PLAY TOOLS",
+    "hub": "combat",
+    "description": "Reference material from Part VIII.",
+    "sourceLocator": "B00931"
+  },
+  {
+    "number": 59,
+    "title": "Enemy Defense & Targeting Matrix",
+    "slug": "59-enemy-defense-and-targeting-matrix",
+    "part": "Part VIII",
+    "partTitle": "SETUP + LIVE PLAY TOOLS",
+    "hub": "combat",
+    "description": "Reference material from Part VIII.",
+    "sourceLocator": "B00938"
+  },
+  {
+    "number": 60,
+    "title": "Spell-Slot Budget Rules",
+    "slug": "60-spell-slot-budget-rules",
+    "part": "Part VIII",
+    "partTitle": "SETUP + LIVE PLAY TOOLS",
+    "hub": "combat",
+    "description": "Reference material from Part VIII.",
+    "sourceLocator": "B00944"
+  },
+  {
+    "number": 61,
+    "title": "Session-Zero Compatibility Rules",
+    "slug": "61-session-zero-compatibility-rules",
+    "part": "Part VIII",
+    "partTitle": "SETUP + LIVE PLAY TOOLS",
+    "hub": "reference",
+    "description": "Reference material from Part VIII.",
+    "sourceLocator": "B00953"
+  }
+]

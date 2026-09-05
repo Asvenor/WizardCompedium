@@ -1,0 +1,5 @@
+---
+interface Props { build: 'core' | 'chron' | 'div' | 'ill' | 'blade' | 'tank' | 'fighter'; label?: string; }
+const { build, label = build.toUpperCase() } = Astro.props;
+---
+<span class="badge" style={`color:var(--build-${build});border-color:currentColor;background:white`}>{label}</span>

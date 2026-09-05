@@ -1,0 +1,77 @@
+---
+import BaseLayout from '@/components/layout/BaseLayout.astro';
+import ProblemNavigator from '@/components/ProblemNavigator.astro';
+import chapters from '@/data/chapters.json';
+
+const featured = [
+  { label: 'Choose a Build', note: 'Compare routes', chapter: 4 },
+  { label: 'Level Up', note: 'Plan the next choice', chapter: 44 },
+  { label: 'Prepare Spells', note: 'Build today’s loadout', chapter: 13 },
+  { label: 'Find a Spell', note: 'Search the canonical index', href: '/spells/' },
+  { label: 'I’m in Combat', note: 'Run the decision engine', chapter: 18 },
+  { label: 'I Need an Escape', note: 'Open the emergency protocol', chapter: 35 },
+  { label: 'Prepare for an Adventure', note: 'Review the loadout', chapter: 39 },
+  { label: 'Rules Question', note: 'Check legality and sources', chapter: 19 },
+].map((item) => ({ ...item, href: item.href ?? `/chapters/${chapters.find((chapter) => chapter.number === item.chapter)?.slug}/` }));
+
+const hubs = [
+  { number: '01', title: 'Builds', href: '/builds/', text: 'Choose a chassis, compare variants, and follow the level-by-level roadmap.' },
+  { number: '02', title: 'Spells', href: '/spells/', text: 'Filter the canonical spell pool, then move into acquisition, preparation, and research.' },
+  { number: '03', title: 'Combat & Tactics', href: '/combat/', text: 'Open fast procedures for turns, reactions, targeting, recovery, and encounter play.' },
+  { number: '04', title: 'Gear & Operations', href: '/gear/', text: 'Handle components, items, crafting, spellbooks, downtime, missions, and infrastructure.' },
+  { number: '05', title: 'Reference', href: '/reference/', text: 'Resolve sources, versions, conversions, setup, indexes, and validation.' },
+];
+---
+<BaseLayout>
+  <section class="hero">
+    <div class="site-shell hero-grid">
+      <div>
+        <p class="kicker">Ultimate min-max reference</p>
+        <h1>Wizard <span>Compendium</span></h1>
+        <p class="hero-copy">A modern operating manual for choosing builds, preparing spells, solving encounters, and keeping every source-sensitive decision within reach.</p>
+      </div>
+      <aside class="hero-panel" aria-label="Compendium coverage">
+        <strong>Complete v1.14 command index</strong>
+        <div class="hero-stats">
+          <div class="hero-stat"><b>61</b><span>chapters</span></div>
+          <div class="hero-stat"><b>8</b><span>parts</span></div>
+          <div class="hero-stat"><b>1</b><span>source of truth</span></div>
+        </div>
+        <p class="hero-note">Navigate by the problem in front of you; chapter numbers remain visible for familiar reference.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="site-shell">
+      <div class="section-head">
+        <div><p class="kicker">Quick actions</p><h2>What do you need now?</h2></div>
+      </div>
+      <div class="quick-grid">
+        {featured.map((item) => <a class="action-card" href={item.href}><small>{item.note}</small><strong>{item.label} <span aria-hidden="true">→</span></strong></a>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="site-shell">
+      <div class="section-head">
+        <div><p class="kicker">Command hubs</p><h2>Browse the operating manual</h2></div>
+        <a class="section-link" href="/search/">Search everything →</a>
+      </div>
+      <div class="card-grid">
+        {hubs.map((hub) => <a class="nav-card" href={hub.href}><span class="number">{hub.number}</span><h3>{hub.title}</h3><p>{hub.text}</p><span class="card-arrow">Open hub →</span></a>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="site-shell">
+      <div class="section-head">
+        <div><p class="kicker">Problem navigator</p><h2>Start with the question</h2></div>
+        <a class="section-link" href="/problems/">Open the full navigator →</a>
+      </div>
+      <ProblemNavigator compact />
+    </div>
+  </section>
+</BaseLayout>

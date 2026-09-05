@@ -1,0 +1,6 @@
+---
+interface Props { tier: string; }
+const { tier } = Astro.props;
+const key = tier.toLowerCase().replace('+', '');
+---
+<span class="badge" style={`color:var(--tier-${key});background:var(--tier-${key}-bg);border-color:currentColor`}>{tier}</span>

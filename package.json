@@ -1,0 +1,22 @@
+{
+  "name": "ultimate-wizard-compendium",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "ASTRO_TELEMETRY_DISABLED=1 astro dev",
+    "build:astro": "ASTRO_TELEMETRY_DISABLED=1 astro build",
+    "build": "ASTRO_TELEMETRY_DISABLED=1 astro build && pagefind --site dist",
+    "check": "ASTRO_TELEMETRY_DISABLED=1 astro check",
+    "generate:prototype": "node scripts/migrate-compendium.mjs --prototype",
+    "generate:content": "node scripts/migrate-compendium.mjs",
+    "validate:content": "node scripts/validate-migration.mjs",
+    "validate:build": "node scripts/validate-build.mjs"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.10",
+    "astro": "^7.3.1",
+    "pagefind": "^1.5.2",
+    "typescript": "^6.0.3"
+  }
+}

@@ -1,0 +1,3724 @@
+{
+  "mode": "complete",
+  "source": "Ultimate_Wizard_Compendium_FINAL_v1.14_DDB_Verified_Corrected.docx",
+  "sourceBlocks": 1006,
+  "numberedChapters": 61,
+  "outputChapters": 62,
+  "canonicalSpellRecords": 154,
+  "discoveredSpellRecords": 154,
+  "migratedBlocks": 928,
+  "coverage": [
+    {
+      "locator": "B00011",
+      "output": "src/content/chapters/01-how-to-use-the-compendium-and-source-rules.md"
+    },
+    {
+      "locator": "B00012",
+      "output": "src/content/chapters/01-how-to-use-the-compendium-and-source-rules.md"
+    },
+    {
+      "locator": "B00013",
+      "output": "src/content/chapters/01-how-to-use-the-compendium-and-source-rules.md"
+    },
+    {
+      "locator": "B00014",
+      "output": "src/content/chapters/01-how-to-use-the-compendium-and-source-rules.md"
+    },
+    {
+      "locator": "B00015",
+      "output": "src/content/chapters/01-how-to-use-the-compendium-and-source-rules.md"
+    },
+    {
+      "locator": "B00016",
+      "output": "src/content/chapters/01-how-to-use-the-compendium-and-source-rules.md"
+    },
+    {
+      "locator": "B00017",
+      "output": "src/content/chapters/01-how-to-use-the-compendium-and-source-rules.md"
+    },
+    {
+      "locator": "B00018",
+      "output": "src/content/chapters/01-how-to-use-the-compendium-and-source-rules.md"
+    },
+    {
+      "locator": "B00019",
+      "output": "src/content/chapters/01-how-to-use-the-compendium-and-source-rules.md"
+    },
+    {
+      "locator": "B00020",
+      "output": "src/content/chapters/01-how-to-use-the-compendium-and-source-rules.md"
+    },
+    {
+      "locator": "B00022",
+      "output": "src/content/chapters/02-core-wizard-engine.md"
+    },
+    {
+      "locator": "B00023",
+      "output": "src/content/chapters/02-core-wizard-engine.md"
+    },
+    {
+      "locator": "B00024",
+      "output": "src/content/chapters/02-core-wizard-engine.md"
+    },
+    {
+      "locator": "B00025",
+      "output": "src/content/chapters/02-core-wizard-engine.md"
+    },
+    {
+      "locator": "B00026",
+      "output": "src/content/chapters/02-core-wizard-engine.md"
+    },
+    {
+      "locator": "B00027",
+      "output": "src/content/chapters/02-core-wizard-engine.md"
+    },
+    {
+      "locator": "B00028",
+      "output": "src/content/chapters/02-core-wizard-engine.md"
+    },
+    {
+      "locator": "B00029",
+      "output": "src/content/chapters/02-core-wizard-engine.md"
+    },
+    {
+      "locator": "B00030",
+      "output": "src/content/chapters/02-core-wizard-engine.md"
+    },
+    {
+      "locator": "B00031",
+      "output": "src/content/chapters/02-core-wizard-engine.md"
+    },
+    {
+      "locator": "B00032",
+      "output": "src/content/chapters/02-core-wizard-engine.md"
+    },
+    {
+      "locator": "B00033",
+      "output": "src/content/chapters/02-core-wizard-engine.md"
+    },
+    {
+      "locator": "B00035",
+      "output": "src/content/chapters/03-optimization-mathematics-and-target-selection.md"
+    },
+    {
+      "locator": "B00036",
+      "output": "src/content/chapters/03-optimization-mathematics-and-target-selection.md"
+    },
+    {
+      "locator": "B00037",
+      "output": "src/content/chapters/03-optimization-mathematics-and-target-selection.md"
+    },
+    {
+      "locator": "B00038",
+      "output": "src/content/chapters/03-optimization-mathematics-and-target-selection.md"
+    },
+    {
+      "locator": "B00039",
+      "output": "src/content/chapters/03-optimization-mathematics-and-target-selection.md"
+    },
+    {
+      "locator": "B00040",
+      "output": "src/content/chapters/03-optimization-mathematics-and-target-selection.md"
+    },
+    {
+      "locator": "B00041",
+      "output": "src/content/chapters/03-optimization-mathematics-and-target-selection.md"
+    },
+    {
+      "locator": "B00042",
+      "output": "src/content/chapters/03-optimization-mathematics-and-target-selection.md"
+    },
+    {
+      "locator": "B00043",
+      "output": "src/content/chapters/03-optimization-mathematics-and-target-selection.md"
+    },
+    {
+      "locator": "B00044",
+      "output": "src/content/chapters/03-optimization-mathematics-and-target-selection.md"
+    },
+    {
+      "locator": "B00045",
+      "output": "src/content/chapters/03-optimization-mathematics-and-target-selection.md"
+    },
+    {
+      "locator": "B00046",
+      "output": "src/content/chapters/03-optimization-mathematics-and-target-selection.md"
+    },
+    {
+      "locator": "B00047",
+      "output": "src/content/chapters/03-optimization-mathematics-and-target-selection.md"
+    },
+    {
+      "locator": "B00048",
+      "output": "src/content/chapters/03-optimization-mathematics-and-target-selection.md"
+    },
+    {
+      "locator": "B00049",
+      "output": "src/content/chapters/03-optimization-mathematics-and-target-selection.md"
+    },
+    {
+      "locator": "B00050",
+      "output": "src/content/chapters/03-optimization-mathematics-and-target-selection.md"
+    },
+    {
+      "locator": "B00051",
+      "output": "src/content/chapters/03-optimization-mathematics-and-target-selection.md"
+    },
+    {
+      "locator": "B00052",
+      "output": "src/content/chapters/03-optimization-mathematics-and-target-selection.md"
+    },
+    {
+      "locator": "B00053",
+      "output": "src/content/chapters/03-optimization-mathematics-and-target-selection.md"
+    },
+    {
+      "locator": "B00056",
+      "output": "src/content/chapters/04-build-selection-and-priority-matrix.md"
+    },
+    {
+      "locator": "B00057",
+      "output": "src/content/chapters/04-build-selection-and-priority-matrix.md"
+    },
+    {
+      "locator": "B00058",
+      "output": "src/content/chapters/04-build-selection-and-priority-matrix.md"
+    },
+    {
+      "locator": "B00059",
+      "output": "src/content/chapters/04-build-selection-and-priority-matrix.md"
+    },
+    {
+      "locator": "B00060",
+      "output": "src/content/chapters/04-build-selection-and-priority-matrix.md"
+    },
+    {
+      "locator": "B00061",
+      "output": "src/content/chapters/04-build-selection-and-priority-matrix.md"
+    },
+    {
+      "locator": "B00062",
+      "output": "src/content/chapters/04-build-selection-and-priority-matrix.md"
+    },
+    {
+      "locator": "B00063",
+      "output": "src/content/chapters/04-build-selection-and-priority-matrix.md"
+    },
+    {
+      "locator": "B00064",
+      "output": "src/content/chapters/04-build-selection-and-priority-matrix.md"
+    },
+    {
+      "locator": "B00065",
+      "output": "src/content/chapters/04-build-selection-and-priority-matrix.md"
+    },
+    {
+      "locator": "B00066",
+      "output": "src/content/chapters/04-build-selection-and-priority-matrix.md"
+    },
+    {
+      "locator": "B00067",
+      "output": "src/content/chapters/04-build-selection-and-priority-matrix.md"
+    },
+    {
+      "locator": "B00068",
+      "output": "src/content/chapters/04-build-selection-and-priority-matrix.md"
+    },
+    {
+      "locator": "B00069",
+      "output": "src/content/chapters/04-build-selection-and-priority-matrix.md"
+    },
+    {
+      "locator": "B00070",
+      "output": "src/content/chapters/04-build-selection-and-priority-matrix.md"
+    },
+    {
+      "locator": "B00071",
+      "output": "src/content/chapters/04-build-selection-and-priority-matrix.md"
+    },
+    {
+      "locator": "B00073",
+      "output": "src/content/chapters/05-flagship-artificer-1-wizard-19.md"
+    },
+    {
+      "locator": "B00074",
+      "output": "src/content/chapters/05-flagship-artificer-1-wizard-19.md"
+    },
+    {
+      "locator": "B00075",
+      "output": "src/content/chapters/05-flagship-artificer-1-wizard-19.md"
+    },
+    {
+      "locator": "B00076",
+      "output": "src/content/chapters/05-flagship-artificer-1-wizard-19.md"
+    },
+    {
+      "locator": "B00077",
+      "output": "src/content/chapters/05-flagship-artificer-1-wizard-19.md"
+    },
+    {
+      "locator": "B00078",
+      "output": "src/content/chapters/05-flagship-artificer-1-wizard-19.md"
+    },
+    {
+      "locator": "B00079",
+      "output": "src/content/chapters/05-flagship-artificer-1-wizard-19.md"
+    },
+    {
+      "locator": "B00080",
+      "output": "src/content/chapters/05-flagship-artificer-1-wizard-19.md"
+    },
+    {
+      "locator": "B00082",
+      "output": "src/content/chapters/06-chronurgy-diviner-and-illusionist-wizard-variants.md"
+    },
+    {
+      "locator": "B00083",
+      "output": "src/content/chapters/06-chronurgy-diviner-and-illusionist-wizard-variants.md"
+    },
+    {
+      "locator": "B00084",
+      "output": "src/content/chapters/06-chronurgy-diviner-and-illusionist-wizard-variants.md"
+    },
+    {
+      "locator": "B00085",
+      "output": "src/content/chapters/06-chronurgy-diviner-and-illusionist-wizard-variants.md"
+    },
+    {
+      "locator": "B00086",
+      "output": "src/content/chapters/06-chronurgy-diviner-and-illusionist-wizard-variants.md"
+    },
+    {
+      "locator": "B00087",
+      "output": "src/content/chapters/06-chronurgy-diviner-and-illusionist-wizard-variants.md"
+    },
+    {
+      "locator": "B00088",
+      "output": "src/content/chapters/06-chronurgy-diviner-and-illusionist-wizard-variants.md"
+    },
+    {
+      "locator": "B00089",
+      "output": "src/content/chapters/06-chronurgy-diviner-and-illusionist-wizard-variants.md"
+    },
+    {
+      "locator": "B00090",
+      "output": "src/content/chapters/06-chronurgy-diviner-and-illusionist-wizard-variants.md"
+    },
+    {
+      "locator": "B00091",
+      "output": "src/content/chapters/06-chronurgy-diviner-and-illusionist-wizard-variants.md"
+    },
+    {
+      "locator": "B00092",
+      "output": "src/content/chapters/06-chronurgy-diviner-and-illusionist-wizard-variants.md"
+    },
+    {
+      "locator": "B00093",
+      "output": "src/content/chapters/06-chronurgy-diviner-and-illusionist-wizard-variants.md"
+    },
+    {
+      "locator": "B00094",
+      "output": "src/content/chapters/06-chronurgy-diviner-and-illusionist-wizard-variants.md"
+    },
+    {
+      "locator": "B00095",
+      "output": "src/content/chapters/06-chronurgy-diviner-and-illusionist-wizard-variants.md"
+    },
+    {
+      "locator": "B00096",
+      "output": "src/content/chapters/06-chronurgy-diviner-and-illusionist-wizard-variants.md"
+    },
+    {
+      "locator": "B00097",
+      "output": "src/content/chapters/06-chronurgy-diviner-and-illusionist-wizard-variants.md"
+    },
+    {
+      "locator": "B00099",
+      "output": "src/content/chapters/07-bladesinger-wizard.md"
+    },
+    {
+      "locator": "B00100",
+      "output": "src/content/chapters/07-bladesinger-wizard.md"
+    },
+    {
+      "locator": "B00101",
+      "output": "src/content/chapters/07-bladesinger-wizard.md"
+    },
+    {
+      "locator": "B00102",
+      "output": "src/content/chapters/07-bladesinger-wizard.md"
+    },
+    {
+      "locator": "B00103",
+      "output": "src/content/chapters/07-bladesinger-wizard.md"
+    },
+    {
+      "locator": "B00104",
+      "output": "src/content/chapters/07-bladesinger-wizard.md"
+    },
+    {
+      "locator": "B00105",
+      "output": "src/content/chapters/07-bladesinger-wizard.md"
+    },
+    {
+      "locator": "B00106",
+      "output": "src/content/chapters/07-bladesinger-wizard.md"
+    },
+    {
+      "locator": "B00107",
+      "output": "src/content/chapters/07-bladesinger-wizard.md"
+    },
+    {
+      "locator": "B00109",
+      "output": "src/content/chapters/08-wizard-tank.md"
+    },
+    {
+      "locator": "B00110",
+      "output": "src/content/chapters/08-wizard-tank.md"
+    },
+    {
+      "locator": "B00111",
+      "output": "src/content/chapters/08-wizard-tank.md"
+    },
+    {
+      "locator": "B00112",
+      "output": "src/content/chapters/08-wizard-tank.md"
+    },
+    {
+      "locator": "B00114",
+      "output": "src/content/chapters/09-fighter-1-wizard-19-alternative.md"
+    },
+    {
+      "locator": "B00115",
+      "output": "src/content/chapters/09-fighter-1-wizard-19-alternative.md"
+    },
+    {
+      "locator": "B00116",
+      "output": "src/content/chapters/09-fighter-1-wizard-19-alternative.md"
+    },
+    {
+      "locator": "B00117",
+      "output": "src/content/chapters/09-fighter-1-wizard-19-alternative.md"
+    },
+    {
+      "locator": "B00120",
+      "output": "src/content/chapters/10-compact-spell-progression-roadmap.md"
+    },
+    {
+      "locator": "B00121",
+      "output": "src/content/chapters/10-compact-spell-progression-roadmap.md"
+    },
+    {
+      "locator": "B00122",
+      "output": "src/content/chapters/10-compact-spell-progression-roadmap.md"
+    },
+    {
+      "locator": "B00123",
+      "output": "src/content/chapters/10-compact-spell-progression-roadmap.md"
+    },
+    {
+      "locator": "B00124",
+      "output": "src/content/chapters/10-compact-spell-progression-roadmap.md"
+    },
+    {
+      "locator": "B00125",
+      "output": "src/content/chapters/10-compact-spell-progression-roadmap.md"
+    },
+    {
+      "locator": "B00126",
+      "output": "src/content/chapters/10-compact-spell-progression-roadmap.md"
+    },
+    {
+      "locator": "B00127",
+      "output": "src/content/chapters/10-compact-spell-progression-roadmap.md"
+    },
+    {
+      "locator": "B00128",
+      "output": "src/content/chapters/10-compact-spell-progression-roadmap.md"
+    },
+    {
+      "locator": "B00129",
+      "output": "src/content/chapters/10-compact-spell-progression-roadmap.md"
+    },
+    {
+      "locator": "B00130",
+      "output": "src/content/chapters/10-compact-spell-progression-roadmap.md"
+    },
+    {
+      "locator": "B00131",
+      "output": "src/content/chapters/10-compact-spell-progression-roadmap.md"
+    },
+    {
+      "locator": "B00132",
+      "output": "src/content/chapters/10-compact-spell-progression-roadmap.md"
+    },
+    {
+      "locator": "B00133",
+      "output": "src/content/chapters/10-compact-spell-progression-roadmap.md"
+    },
+    {
+      "locator": "B00134",
+      "output": "src/content/chapters/10-compact-spell-progression-roadmap.md"
+    },
+    {
+      "locator": "B00135",
+      "output": "src/content/chapters/10-compact-spell-progression-roadmap.md"
+    },
+    {
+      "locator": "B00136",
+      "output": "src/content/chapters/10-compact-spell-progression-roadmap.md"
+    },
+    {
+      "locator": "B00137",
+      "output": "src/content/chapters/10-compact-spell-progression-roadmap.md"
+    },
+    {
+      "locator": "B00138",
+      "output": "src/content/chapters/10-compact-spell-progression-roadmap.md"
+    },
+    {
+      "locator": "B00140",
+      "output": "src/content/chapters/11-wizard-spell-master-table-and-research-bank.md"
+    },
+    {
+      "locator": "B00141",
+      "output": "src/content/chapters/11-wizard-spell-master-table-and-research-bank.md"
+    },
+    {
+      "locator": "B00142",
+      "output": "src/content/chapters/11-wizard-spell-master-table-and-research-bank.md"
+    },
+    {
+      "locator": "B00143",
+      "output": "src/content/chapters/11-wizard-spell-master-table-and-research-bank.md"
+    },
+    {
+      "locator": "B00144",
+      "output": "src/content/chapters/11-wizard-spell-master-table-and-research-bank.md"
+    },
+    {
+      "locator": "B00145",
+      "output": "src/content/chapters/11-wizard-spell-master-table-and-research-bank.md"
+    },
+    {
+      "locator": "B00146",
+      "output": "src/content/chapters/11-wizard-spell-master-table-and-research-bank.md"
+    },
+    {
+      "locator": "B00147",
+      "output": "src/content/chapters/11-wizard-spell-master-table-and-research-bank.md"
+    },
+    {
+      "locator": "B00148",
+      "output": "src/content/chapters/11-wizard-spell-master-table-and-research-bank.md"
+    },
+    {
+      "locator": "B00150",
+      "output": "src/content/chapters/12-spell-acquisition-and-preparation-scorecard.md"
+    },
+    {
+      "locator": "B00151",
+      "output": "src/content/chapters/12-spell-acquisition-and-preparation-scorecard.md"
+    },
+    {
+      "locator": "B00152",
+      "output": "src/content/chapters/12-spell-acquisition-and-preparation-scorecard.md"
+    },
+    {
+      "locator": "B00153",
+      "output": "src/content/chapters/12-spell-acquisition-and-preparation-scorecard.md"
+    },
+    {
+      "locator": "B00154",
+      "output": "src/content/chapters/12-spell-acquisition-and-preparation-scorecard.md"
+    },
+    {
+      "locator": "B00155",
+      "output": "src/content/chapters/12-spell-acquisition-and-preparation-scorecard.md"
+    },
+    {
+      "locator": "B00156",
+      "output": "src/content/chapters/12-spell-acquisition-and-preparation-scorecard.md"
+    },
+    {
+      "locator": "B00157",
+      "output": "src/content/chapters/12-spell-acquisition-and-preparation-scorecard.md"
+    },
+    {
+      "locator": "B00158",
+      "output": "src/content/chapters/12-spell-acquisition-and-preparation-scorecard.md"
+    },
+    {
+      "locator": "B00159",
+      "output": "src/content/chapters/12-spell-acquisition-and-preparation-scorecard.md"
+    },
+    {
+      "locator": "B00160",
+      "output": "src/content/chapters/12-spell-acquisition-and-preparation-scorecard.md"
+    },
+    {
+      "locator": "B00161",
+      "output": "src/content/chapters/12-spell-acquisition-and-preparation-scorecard.md"
+    },
+    {
+      "locator": "B00162",
+      "output": "src/content/chapters/12-spell-acquisition-and-preparation-scorecard.md"
+    },
+    {
+      "locator": "B00163",
+      "output": "src/content/chapters/12-spell-acquisition-and-preparation-scorecard.md"
+    },
+    {
+      "locator": "B00164",
+      "output": "src/content/chapters/12-spell-acquisition-and-preparation-scorecard.md"
+    },
+    {
+      "locator": "B00165",
+      "output": "src/content/chapters/12-spell-acquisition-and-preparation-scorecard.md"
+    },
+    {
+      "locator": "B00166",
+      "output": "src/content/chapters/12-spell-acquisition-and-preparation-scorecard.md"
+    },
+    {
+      "locator": "B00168",
+      "output": "src/content/chapters/13-prepared-spell-packages.md"
+    },
+    {
+      "locator": "B00169",
+      "output": "src/content/chapters/13-prepared-spell-packages.md"
+    },
+    {
+      "locator": "B00170",
+      "output": "src/content/chapters/13-prepared-spell-packages.md"
+    },
+    {
+      "locator": "B00171",
+      "output": "src/content/chapters/13-prepared-spell-packages.md"
+    },
+    {
+      "locator": "B00172",
+      "output": "src/content/chapters/13-prepared-spell-packages.md"
+    },
+    {
+      "locator": "B00173",
+      "output": "src/content/chapters/13-prepared-spell-packages.md"
+    },
+    {
+      "locator": "B00174",
+      "output": "src/content/chapters/13-prepared-spell-packages.md"
+    },
+    {
+      "locator": "B00175",
+      "output": "src/content/chapters/13-prepared-spell-packages.md"
+    },
+    {
+      "locator": "B00176",
+      "output": "src/content/chapters/13-prepared-spell-packages.md"
+    },
+    {
+      "locator": "B00177",
+      "output": "src/content/chapters/13-prepared-spell-packages.md"
+    },
+    {
+      "locator": "B00179",
+      "output": "src/content/chapters/14-spell-replacement-ladders.md"
+    },
+    {
+      "locator": "B00180",
+      "output": "src/content/chapters/14-spell-replacement-ladders.md"
+    },
+    {
+      "locator": "B00181",
+      "output": "src/content/chapters/14-spell-replacement-ladders.md"
+    },
+    {
+      "locator": "B00182",
+      "output": "src/content/chapters/14-spell-replacement-ladders.md"
+    },
+    {
+      "locator": "B00183",
+      "output": "src/content/chapters/14-spell-replacement-ladders.md"
+    },
+    {
+      "locator": "B00184",
+      "output": "src/content/chapters/14-spell-replacement-ladders.md"
+    },
+    {
+      "locator": "B00186",
+      "output": "src/content/chapters/15-master-spell-tag-index.md"
+    },
+    {
+      "locator": "B00187",
+      "output": "src/content/chapters/15-master-spell-tag-index.md"
+    },
+    {
+      "locator": "B00188",
+      "output": "src/content/chapters/15-master-spell-tag-index.md"
+    },
+    {
+      "locator": "B00189",
+      "output": "src/content/chapters/15-master-spell-tag-index.md"
+    },
+    {
+      "locator": "B00190",
+      "output": "src/content/chapters/15-master-spell-tag-index.md"
+    },
+    {
+      "locator": "B00191",
+      "output": "src/content/chapters/15-master-spell-tag-index.md"
+    },
+    {
+      "locator": "B00192",
+      "output": "src/content/chapters/15-master-spell-tag-index.md"
+    },
+    {
+      "locator": "B00193",
+      "output": "src/content/chapters/15-master-spell-tag-index.md"
+    },
+    {
+      "locator": "B00194",
+      "output": "src/content/chapters/15-master-spell-tag-index.md"
+    },
+    {
+      "locator": "B00195",
+      "output": "src/content/chapters/15-master-spell-tag-index.md"
+    },
+    {
+      "locator": "B00197",
+      "output": "src/content/chapters/16-chronurgy-dunamancy-spell-dossier.md"
+    },
+    {
+      "locator": "B00198",
+      "output": "src/content/chapters/16-chronurgy-dunamancy-spell-dossier.md"
+    },
+    {
+      "locator": "B00199",
+      "output": "src/content/chapters/16-chronurgy-dunamancy-spell-dossier.md"
+    },
+    {
+      "locator": "B00200",
+      "output": "src/content/chapters/16-chronurgy-dunamancy-spell-dossier.md"
+    },
+    {
+      "locator": "B00201",
+      "output": "src/content/chapters/16-chronurgy-dunamancy-spell-dossier.md"
+    },
+    {
+      "locator": "B00202",
+      "output": "src/content/chapters/16-chronurgy-dunamancy-spell-dossier.md"
+    },
+    {
+      "locator": "B00203",
+      "output": "src/content/chapters/16-chronurgy-dunamancy-spell-dossier.md"
+    },
+    {
+      "locator": "B00204",
+      "output": "src/content/chapters/16-chronurgy-dunamancy-spell-dossier.md"
+    },
+    {
+      "locator": "B00205",
+      "output": "src/content/chapters/16-chronurgy-dunamancy-spell-dossier.md"
+    },
+    {
+      "locator": "B00206",
+      "output": "src/content/chapters/16-chronurgy-dunamancy-spell-dossier.md"
+    },
+    {
+      "locator": "B00208",
+      "output": "src/content/chapters/17-skills-feats-epic-boons-and-species.md"
+    },
+    {
+      "locator": "B00209",
+      "output": "src/content/chapters/17-skills-feats-epic-boons-and-species.md"
+    },
+    {
+      "locator": "B00210",
+      "output": "src/content/chapters/17-skills-feats-epic-boons-and-species.md"
+    },
+    {
+      "locator": "B00211",
+      "output": "src/content/chapters/17-skills-feats-epic-boons-and-species.md"
+    },
+    {
+      "locator": "B00212",
+      "output": "src/content/chapters/17-skills-feats-epic-boons-and-species.md"
+    },
+    {
+      "locator": "B00213",
+      "output": "src/content/chapters/17-skills-feats-epic-boons-and-species.md"
+    },
+    {
+      "locator": "B00214",
+      "output": "src/content/chapters/17-skills-feats-epic-boons-and-species.md"
+    },
+    {
+      "locator": "B00215",
+      "output": "src/content/chapters/17-skills-feats-epic-boons-and-species.md"
+    },
+    {
+      "locator": "B00216",
+      "output": "src/content/chapters/17-skills-feats-epic-boons-and-species.md"
+    },
+    {
+      "locator": "B00217",
+      "output": "src/content/chapters/17-skills-feats-epic-boons-and-species.md"
+    },
+    {
+      "locator": "B00218",
+      "output": "src/content/chapters/17-skills-feats-epic-boons-and-species.md"
+    },
+    {
+      "locator": "B00219",
+      "output": "src/content/chapters/17-skills-feats-epic-boons-and-species.md"
+    },
+    {
+      "locator": "B00220",
+      "output": "src/content/chapters/17-skills-feats-epic-boons-and-species.md"
+    },
+    {
+      "locator": "B00221",
+      "output": "src/content/chapters/17-skills-feats-epic-boons-and-species.md"
+    },
+    {
+      "locator": "B00222",
+      "output": "src/content/chapters/17-skills-feats-epic-boons-and-species.md"
+    },
+    {
+      "locator": "B00223",
+      "output": "src/content/chapters/17-skills-feats-epic-boons-and-species.md"
+    },
+    {
+      "locator": "B00224",
+      "output": "src/content/chapters/17-skills-feats-epic-boons-and-species.md"
+    },
+    {
+      "locator": "B00225",
+      "output": "src/content/chapters/17-skills-feats-epic-boons-and-species.md"
+    },
+    {
+      "locator": "B00226",
+      "output": "src/content/chapters/17-skills-feats-epic-boons-and-species.md"
+    },
+    {
+      "locator": "B00227",
+      "output": "src/content/chapters/17-skills-feats-epic-boons-and-species.md"
+    },
+    {
+      "locator": "B00228",
+      "output": "src/content/chapters/17-skills-feats-epic-boons-and-species.md"
+    },
+    {
+      "locator": "B00229",
+      "output": "src/content/chapters/17-skills-feats-epic-boons-and-species.md"
+    },
+    {
+      "locator": "B00230",
+      "output": "src/content/chapters/17-skills-feats-epic-boons-and-species.md"
+    },
+    {
+      "locator": "B00231",
+      "output": "src/content/chapters/17-skills-feats-epic-boons-and-species.md"
+    },
+    {
+      "locator": "B00232",
+      "output": "src/content/chapters/17-skills-feats-epic-boons-and-species.md"
+    },
+    {
+      "locator": "B00233",
+      "output": "src/content/chapters/17-skills-feats-epic-boons-and-species.md"
+    },
+    {
+      "locator": "B00234",
+      "output": "src/content/chapters/17-skills-feats-epic-boons-and-species.md"
+    },
+    {
+      "locator": "B00235",
+      "output": "src/content/chapters/17-skills-feats-epic-boons-and-species.md"
+    },
+    {
+      "locator": "B00236",
+      "output": "src/content/chapters/17-skills-feats-epic-boons-and-species.md"
+    },
+    {
+      "locator": "B00237",
+      "output": "src/content/chapters/17-skills-feats-epic-boons-and-species.md"
+    },
+    {
+      "locator": "B00238",
+      "output": "src/content/chapters/17-skills-feats-epic-boons-and-species.md"
+    },
+    {
+      "locator": "B00239",
+      "output": "src/content/chapters/17-skills-feats-epic-boons-and-species.md"
+    },
+    {
+      "locator": "B00240",
+      "output": "src/content/chapters/17-skills-feats-epic-boons-and-species.md"
+    },
+    {
+      "locator": "B00241",
+      "output": "src/content/chapters/17-skills-feats-epic-boons-and-species.md"
+    },
+    {
+      "locator": "B00242",
+      "output": "src/content/chapters/17-skills-feats-epic-boons-and-species.md"
+    },
+    {
+      "locator": "B00243",
+      "output": "src/content/chapters/17-skills-feats-epic-boons-and-species.md"
+    },
+    {
+      "locator": "B00244",
+      "output": "src/content/chapters/17-skills-feats-epic-boons-and-species.md"
+    },
+    {
+      "locator": "B00245",
+      "output": "src/content/chapters/17-skills-feats-epic-boons-and-species.md"
+    },
+    {
+      "locator": "B00246",
+      "output": "src/content/chapters/17-skills-feats-epic-boons-and-species.md"
+    },
+    {
+      "locator": "B00249",
+      "output": "src/content/chapters/18-combat-decision-engine.md"
+    },
+    {
+      "locator": "B00250",
+      "output": "src/content/chapters/18-combat-decision-engine.md"
+    },
+    {
+      "locator": "B00251",
+      "output": "src/content/chapters/18-combat-decision-engine.md"
+    },
+    {
+      "locator": "B00252",
+      "output": "src/content/chapters/18-combat-decision-engine.md"
+    },
+    {
+      "locator": "B00253",
+      "output": "src/content/chapters/18-combat-decision-engine.md"
+    },
+    {
+      "locator": "B00254",
+      "output": "src/content/chapters/18-combat-decision-engine.md"
+    },
+    {
+      "locator": "B00255",
+      "output": "src/content/chapters/18-combat-decision-engine.md"
+    },
+    {
+      "locator": "B00256",
+      "output": "src/content/chapters/18-combat-decision-engine.md"
+    },
+    {
+      "locator": "B00257",
+      "output": "src/content/chapters/18-combat-decision-engine.md"
+    },
+    {
+      "locator": "B00258",
+      "output": "src/content/chapters/18-combat-decision-engine.md"
+    },
+    {
+      "locator": "B00259",
+      "output": "src/content/chapters/18-combat-decision-engine.md"
+    },
+    {
+      "locator": "B00260",
+      "output": "src/content/chapters/18-combat-decision-engine.md"
+    },
+    {
+      "locator": "B00261",
+      "output": "src/content/chapters/18-combat-decision-engine.md"
+    },
+    {
+      "locator": "B00262",
+      "output": "src/content/chapters/18-combat-decision-engine.md"
+    },
+    {
+      "locator": "B00263",
+      "output": "src/content/chapters/18-combat-decision-engine.md"
+    },
+    {
+      "locator": "B00264",
+      "output": "src/content/chapters/18-combat-decision-engine.md"
+    },
+    {
+      "locator": "B00265",
+      "output": "src/content/chapters/18-combat-decision-engine.md"
+    },
+    {
+      "locator": "B00266",
+      "output": "src/content/chapters/18-combat-decision-engine.md"
+    },
+    {
+      "locator": "B00267",
+      "output": "src/content/chapters/18-combat-decision-engine.md"
+    },
+    {
+      "locator": "B00268",
+      "output": "src/content/chapters/18-combat-decision-engine.md"
+    },
+    {
+      "locator": "B00269",
+      "output": "src/content/chapters/18-combat-decision-engine.md"
+    },
+    {
+      "locator": "B00271",
+      "output": "src/content/chapters/19-2024-spellcasting-legality-reference.md"
+    },
+    {
+      "locator": "B00272",
+      "output": "src/content/chapters/19-2024-spellcasting-legality-reference.md"
+    },
+    {
+      "locator": "B00273",
+      "output": "src/content/chapters/19-2024-spellcasting-legality-reference.md"
+    },
+    {
+      "locator": "B00274",
+      "output": "src/content/chapters/19-2024-spellcasting-legality-reference.md"
+    },
+    {
+      "locator": "B00275",
+      "output": "src/content/chapters/19-2024-spellcasting-legality-reference.md"
+    },
+    {
+      "locator": "B00276",
+      "output": "src/content/chapters/19-2024-spellcasting-legality-reference.md"
+    },
+    {
+      "locator": "B00278",
+      "output": "src/content/chapters/20-condition-interaction-and-area-geometry.md"
+    },
+    {
+      "locator": "B00279",
+      "output": "src/content/chapters/20-condition-interaction-and-area-geometry.md"
+    },
+    {
+      "locator": "B00280",
+      "output": "src/content/chapters/20-condition-interaction-and-area-geometry.md"
+    },
+    {
+      "locator": "B00281",
+      "output": "src/content/chapters/20-condition-interaction-and-area-geometry.md"
+    },
+    {
+      "locator": "B00282",
+      "output": "src/content/chapters/20-condition-interaction-and-area-geometry.md"
+    },
+    {
+      "locator": "B00283",
+      "output": "src/content/chapters/20-condition-interaction-and-area-geometry.md"
+    },
+    {
+      "locator": "B00284",
+      "output": "src/content/chapters/20-condition-interaction-and-area-geometry.md"
+    },
+    {
+      "locator": "B00285",
+      "output": "src/content/chapters/20-condition-interaction-and-area-geometry.md"
+    },
+    {
+      "locator": "B00286",
+      "output": "src/content/chapters/20-condition-interaction-and-area-geometry.md"
+    },
+    {
+      "locator": "B00288",
+      "output": "src/content/chapters/21-casting-interface-quick-reference.md"
+    },
+    {
+      "locator": "B00289",
+      "output": "src/content/chapters/21-casting-interface-quick-reference.md"
+    },
+    {
+      "locator": "B00290",
+      "output": "src/content/chapters/21-casting-interface-quick-reference.md"
+    },
+    {
+      "locator": "B00291",
+      "output": "src/content/chapters/21-casting-interface-quick-reference.md"
+    },
+    {
+      "locator": "B00292",
+      "output": "src/content/chapters/21-casting-interface-quick-reference.md"
+    },
+    {
+      "locator": "B00293",
+      "output": "src/content/chapters/21-casting-interface-quick-reference.md"
+    },
+    {
+      "locator": "B00294",
+      "output": "src/content/chapters/21-casting-interface-quick-reference.md"
+    },
+    {
+      "locator": "B00296",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00297",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00298",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00299",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00300",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00301",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00302",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00303",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00304",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00305",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00306",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00307",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00308",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00309",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00310",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00311",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00312",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00313",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00314",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00315",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00316",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00317",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00318",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00319",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00320",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00321",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00322",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00323",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00324",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00325",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00326",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00327",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00328",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00329",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00330",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00331",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00332",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00333",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00334",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00335",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00336",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00337",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00338",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00339",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00340",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00341",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00342",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00343",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00344",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00345",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00346",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00347",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00348",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00349",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00350",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00351",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00352",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00353",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00354",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00355",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00356",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00357",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00358",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00359",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00360",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00361",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00362",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00363",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00364",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00365",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00366",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00367",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00368",
+      "output": "src/content/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines.md"
+    },
+    {
+      "locator": "B00370",
+      "output": "src/content/chapters/23-high-level-magic-safety-matrix.md"
+    },
+    {
+      "locator": "B00371",
+      "output": "src/content/chapters/23-high-level-magic-safety-matrix.md"
+    },
+    {
+      "locator": "B00372",
+      "output": "src/content/chapters/23-high-level-magic-safety-matrix.md"
+    },
+    {
+      "locator": "B00373",
+      "output": "src/content/chapters/23-high-level-magic-safety-matrix.md"
+    },
+    {
+      "locator": "B00374",
+      "output": "src/content/chapters/23-high-level-magic-safety-matrix.md"
+    },
+    {
+      "locator": "B00375",
+      "output": "src/content/chapters/23-high-level-magic-safety-matrix.md"
+    },
+    {
+      "locator": "B00376",
+      "output": "src/content/chapters/23-high-level-magic-safety-matrix.md"
+    },
+    {
+      "locator": "B00377",
+      "output": "src/content/chapters/23-high-level-magic-safety-matrix.md"
+    },
+    {
+      "locator": "B00378",
+      "output": "src/content/chapters/23-high-level-magic-safety-matrix.md"
+    },
+    {
+      "locator": "B00379",
+      "output": "src/content/chapters/23-high-level-magic-safety-matrix.md"
+    },
+    {
+      "locator": "B00380",
+      "output": "src/content/chapters/23-high-level-magic-safety-matrix.md"
+    },
+    {
+      "locator": "B00381",
+      "output": "src/content/chapters/23-high-level-magic-safety-matrix.md"
+    },
+    {
+      "locator": "B00382",
+      "output": "src/content/chapters/23-high-level-magic-safety-matrix.md"
+    },
+    {
+      "locator": "B00383",
+      "output": "src/content/chapters/23-high-level-magic-safety-matrix.md"
+    },
+    {
+      "locator": "B00384",
+      "output": "src/content/chapters/23-high-level-magic-safety-matrix.md"
+    },
+    {
+      "locator": "B00385",
+      "output": "src/content/chapters/23-high-level-magic-safety-matrix.md"
+    },
+    {
+      "locator": "B00386",
+      "output": "src/content/chapters/23-high-level-magic-safety-matrix.md"
+    },
+    {
+      "locator": "B00388",
+      "output": "src/content/chapters/24-countermagic-illusions-familiars-and-fair-information.md"
+    },
+    {
+      "locator": "B00389",
+      "output": "src/content/chapters/24-countermagic-illusions-familiars-and-fair-information.md"
+    },
+    {
+      "locator": "B00390",
+      "output": "src/content/chapters/24-countermagic-illusions-familiars-and-fair-information.md"
+    },
+    {
+      "locator": "B00391",
+      "output": "src/content/chapters/24-countermagic-illusions-familiars-and-fair-information.md"
+    },
+    {
+      "locator": "B00392",
+      "output": "src/content/chapters/24-countermagic-illusions-familiars-and-fair-information.md"
+    },
+    {
+      "locator": "B00393",
+      "output": "src/content/chapters/24-countermagic-illusions-familiars-and-fair-information.md"
+    },
+    {
+      "locator": "B00394",
+      "output": "src/content/chapters/24-countermagic-illusions-familiars-and-fair-information.md"
+    },
+    {
+      "locator": "B00395",
+      "output": "src/content/chapters/24-countermagic-illusions-familiars-and-fair-information.md"
+    },
+    {
+      "locator": "B00396",
+      "output": "src/content/chapters/24-countermagic-illusions-familiars-and-fair-information.md"
+    },
+    {
+      "locator": "B00397",
+      "output": "src/content/chapters/24-countermagic-illusions-familiars-and-fair-information.md"
+    },
+    {
+      "locator": "B00398",
+      "output": "src/content/chapters/24-countermagic-illusions-familiars-and-fair-information.md"
+    },
+    {
+      "locator": "B00399",
+      "output": "src/content/chapters/24-countermagic-illusions-familiars-and-fair-information.md"
+    },
+    {
+      "locator": "B00400",
+      "output": "src/content/chapters/24-countermagic-illusions-familiars-and-fair-information.md"
+    },
+    {
+      "locator": "B00401",
+      "output": "src/content/chapters/24-countermagic-illusions-familiars-and-fair-information.md"
+    },
+    {
+      "locator": "B00402",
+      "output": "src/content/chapters/24-countermagic-illusions-familiars-and-fair-information.md"
+    },
+    {
+      "locator": "B00403",
+      "output": "src/content/chapters/24-countermagic-illusions-familiars-and-fair-information.md"
+    },
+    {
+      "locator": "B00404",
+      "output": "src/content/chapters/24-countermagic-illusions-familiars-and-fair-information.md"
+    },
+    {
+      "locator": "B00405",
+      "output": "src/content/chapters/24-countermagic-illusions-familiars-and-fair-information.md"
+    },
+    {
+      "locator": "B00406",
+      "output": "src/content/chapters/24-countermagic-illusions-familiars-and-fair-information.md"
+    },
+    {
+      "locator": "B00407",
+      "output": "src/content/chapters/24-countermagic-illusions-familiars-and-fair-information.md"
+    },
+    {
+      "locator": "B00410",
+      "output": "src/content/chapters/25-spell-components-and-resource-acquisition.md"
+    },
+    {
+      "locator": "B00411",
+      "output": "src/content/chapters/25-spell-components-and-resource-acquisition.md"
+    },
+    {
+      "locator": "B00412",
+      "output": "src/content/chapters/25-spell-components-and-resource-acquisition.md"
+    },
+    {
+      "locator": "B00413",
+      "output": "src/content/chapters/25-spell-components-and-resource-acquisition.md"
+    },
+    {
+      "locator": "B00414",
+      "output": "src/content/chapters/25-spell-components-and-resource-acquisition.md"
+    },
+    {
+      "locator": "B00415",
+      "output": "src/content/chapters/25-spell-components-and-resource-acquisition.md"
+    },
+    {
+      "locator": "B00416",
+      "output": "src/content/chapters/25-spell-components-and-resource-acquisition.md"
+    },
+    {
+      "locator": "B00417",
+      "output": "src/content/chapters/25-spell-components-and-resource-acquisition.md"
+    },
+    {
+      "locator": "B00418",
+      "output": "src/content/chapters/25-spell-components-and-resource-acquisition.md"
+    },
+    {
+      "locator": "B00419",
+      "output": "src/content/chapters/25-spell-components-and-resource-acquisition.md"
+    },
+    {
+      "locator": "B00421",
+      "output": "src/content/chapters/26-items-loot-and-attunement-priorities.md"
+    },
+    {
+      "locator": "B00422",
+      "output": "src/content/chapters/26-items-loot-and-attunement-priorities.md"
+    },
+    {
+      "locator": "B00423",
+      "output": "src/content/chapters/26-items-loot-and-attunement-priorities.md"
+    },
+    {
+      "locator": "B00424",
+      "output": "src/content/chapters/26-items-loot-and-attunement-priorities.md"
+    },
+    {
+      "locator": "B00425",
+      "output": "src/content/chapters/26-items-loot-and-attunement-priorities.md"
+    },
+    {
+      "locator": "B00426",
+      "output": "src/content/chapters/26-items-loot-and-attunement-priorities.md"
+    },
+    {
+      "locator": "B00427",
+      "output": "src/content/chapters/26-items-loot-and-attunement-priorities.md"
+    },
+    {
+      "locator": "B00428",
+      "output": "src/content/chapters/26-items-loot-and-attunement-priorities.md"
+    },
+    {
+      "locator": "B00429",
+      "output": "src/content/chapters/26-items-loot-and-attunement-priorities.md"
+    },
+    {
+      "locator": "B00430",
+      "output": "src/content/chapters/26-items-loot-and-attunement-priorities.md"
+    },
+    {
+      "locator": "B00431",
+      "output": "src/content/chapters/26-items-loot-and-attunement-priorities.md"
+    },
+    {
+      "locator": "B00432",
+      "output": "src/content/chapters/26-items-loot-and-attunement-priorities.md"
+    },
+    {
+      "locator": "B00433",
+      "output": "src/content/chapters/26-items-loot-and-attunement-priorities.md"
+    },
+    {
+      "locator": "B00434",
+      "output": "src/content/chapters/26-items-loot-and-attunement-priorities.md"
+    },
+    {
+      "locator": "B00435",
+      "output": "src/content/chapters/26-items-loot-and-attunement-priorities.md"
+    },
+    {
+      "locator": "B00436",
+      "output": "src/content/chapters/26-items-loot-and-attunement-priorities.md"
+    },
+    {
+      "locator": "B00437",
+      "output": "src/content/chapters/26-items-loot-and-attunement-priorities.md"
+    },
+    {
+      "locator": "B00438",
+      "output": "src/content/chapters/26-items-loot-and-attunement-priorities.md"
+    },
+    {
+      "locator": "B00439",
+      "output": "src/content/chapters/26-items-loot-and-attunement-priorities.md"
+    },
+    {
+      "locator": "B00440",
+      "output": "src/content/chapters/26-items-loot-and-attunement-priorities.md"
+    },
+    {
+      "locator": "B00441",
+      "output": "src/content/chapters/26-items-loot-and-attunement-priorities.md"
+    },
+    {
+      "locator": "B00442",
+      "output": "src/content/chapters/26-items-loot-and-attunement-priorities.md"
+    },
+    {
+      "locator": "B00444",
+      "output": "src/content/chapters/27-magic-item-use-attunement-and-recharge-matrix.md"
+    },
+    {
+      "locator": "B00445",
+      "output": "src/content/chapters/27-magic-item-use-attunement-and-recharge-matrix.md"
+    },
+    {
+      "locator": "B00446",
+      "output": "src/content/chapters/27-magic-item-use-attunement-and-recharge-matrix.md"
+    },
+    {
+      "locator": "B00447",
+      "output": "src/content/chapters/27-magic-item-use-attunement-and-recharge-matrix.md"
+    },
+    {
+      "locator": "B00449",
+      "output": "src/content/chapters/28-tool-and-crafting-tier-list.md"
+    },
+    {
+      "locator": "B00450",
+      "output": "src/content/chapters/28-tool-and-crafting-tier-list.md"
+    },
+    {
+      "locator": "B00451",
+      "output": "src/content/chapters/28-tool-and-crafting-tier-list.md"
+    },
+    {
+      "locator": "B00452",
+      "output": "src/content/chapters/28-tool-and-crafting-tier-list.md"
+    },
+    {
+      "locator": "B00453",
+      "output": "src/content/chapters/28-tool-and-crafting-tier-list.md"
+    },
+    {
+      "locator": "B00454",
+      "output": "src/content/chapters/28-tool-and-crafting-tier-list.md"
+    },
+    {
+      "locator": "B00456",
+      "output": "src/content/chapters/29-magic-item-crafting-quick-guide.md"
+    },
+    {
+      "locator": "B00457",
+      "output": "src/content/chapters/29-magic-item-crafting-quick-guide.md"
+    },
+    {
+      "locator": "B00458",
+      "output": "src/content/chapters/29-magic-item-crafting-quick-guide.md"
+    },
+    {
+      "locator": "B00459",
+      "output": "src/content/chapters/29-magic-item-crafting-quick-guide.md"
+    },
+    {
+      "locator": "B00460",
+      "output": "src/content/chapters/29-magic-item-crafting-quick-guide.md"
+    },
+    {
+      "locator": "B00461",
+      "output": "src/content/chapters/29-magic-item-crafting-quick-guide.md"
+    },
+    {
+      "locator": "B00462",
+      "output": "src/content/chapters/29-magic-item-crafting-quick-guide.md"
+    },
+    {
+      "locator": "B00463",
+      "output": "src/content/chapters/29-magic-item-crafting-quick-guide.md"
+    },
+    {
+      "locator": "B00464",
+      "output": "src/content/chapters/29-magic-item-crafting-quick-guide.md"
+    },
+    {
+      "locator": "B00465",
+      "output": "src/content/chapters/29-magic-item-crafting-quick-guide.md"
+    },
+    {
+      "locator": "B00466",
+      "output": "src/content/chapters/29-magic-item-crafting-quick-guide.md"
+    },
+    {
+      "locator": "B00467",
+      "output": "src/content/chapters/29-magic-item-crafting-quick-guide.md"
+    },
+    {
+      "locator": "B00468",
+      "output": "src/content/chapters/29-magic-item-crafting-quick-guide.md"
+    },
+    {
+      "locator": "B00469",
+      "output": "src/content/chapters/29-magic-item-crafting-quick-guide.md"
+    },
+    {
+      "locator": "B00470",
+      "output": "src/content/chapters/29-magic-item-crafting-quick-guide.md"
+    },
+    {
+      "locator": "B00471",
+      "output": "src/content/chapters/29-magic-item-crafting-quick-guide.md"
+    },
+    {
+      "locator": "B00472",
+      "output": "src/content/chapters/29-magic-item-crafting-quick-guide.md"
+    },
+    {
+      "locator": "B00473",
+      "output": "src/content/chapters/29-magic-item-crafting-quick-guide.md"
+    },
+    {
+      "locator": "B00474",
+      "output": "src/content/chapters/29-magic-item-crafting-quick-guide.md"
+    },
+    {
+      "locator": "B00475",
+      "output": "src/content/chapters/29-magic-item-crafting-quick-guide.md"
+    },
+    {
+      "locator": "B00477",
+      "output": "src/content/chapters/30-rest-camp-town-and-downtime-optimization.md"
+    },
+    {
+      "locator": "B00478",
+      "output": "src/content/chapters/30-rest-camp-town-and-downtime-optimization.md"
+    },
+    {
+      "locator": "B00479",
+      "output": "src/content/chapters/30-rest-camp-town-and-downtime-optimization.md"
+    },
+    {
+      "locator": "B00480",
+      "output": "src/content/chapters/30-rest-camp-town-and-downtime-optimization.md"
+    },
+    {
+      "locator": "B00481",
+      "output": "src/content/chapters/30-rest-camp-town-and-downtime-optimization.md"
+    },
+    {
+      "locator": "B00482",
+      "output": "src/content/chapters/30-rest-camp-town-and-downtime-optimization.md"
+    },
+    {
+      "locator": "B00483",
+      "output": "src/content/chapters/30-rest-camp-town-and-downtime-optimization.md"
+    },
+    {
+      "locator": "B00484",
+      "output": "src/content/chapters/30-rest-camp-town-and-downtime-optimization.md"
+    },
+    {
+      "locator": "B00485",
+      "output": "src/content/chapters/30-rest-camp-town-and-downtime-optimization.md"
+    },
+    {
+      "locator": "B00486",
+      "output": "src/content/chapters/30-rest-camp-town-and-downtime-optimization.md"
+    },
+    {
+      "locator": "B00487",
+      "output": "src/content/chapters/30-rest-camp-town-and-downtime-optimization.md"
+    },
+    {
+      "locator": "B00488",
+      "output": "src/content/chapters/30-rest-camp-town-and-downtime-optimization.md"
+    },
+    {
+      "locator": "B00489",
+      "output": "src/content/chapters/30-rest-camp-town-and-downtime-optimization.md"
+    },
+    {
+      "locator": "B00490",
+      "output": "src/content/chapters/30-rest-camp-town-and-downtime-optimization.md"
+    },
+    {
+      "locator": "B00491",
+      "output": "src/content/chapters/30-rest-camp-town-and-downtime-optimization.md"
+    },
+    {
+      "locator": "B00492",
+      "output": "src/content/chapters/30-rest-camp-town-and-downtime-optimization.md"
+    },
+    {
+      "locator": "B00493",
+      "output": "src/content/chapters/30-rest-camp-town-and-downtime-optimization.md"
+    },
+    {
+      "locator": "B00494",
+      "output": "src/content/chapters/30-rest-camp-town-and-downtime-optimization.md"
+    },
+    {
+      "locator": "B00495",
+      "output": "src/content/chapters/30-rest-camp-town-and-downtime-optimization.md"
+    },
+    {
+      "locator": "B00496",
+      "output": "src/content/chapters/30-rest-camp-town-and-downtime-optimization.md"
+    },
+    {
+      "locator": "B00497",
+      "output": "src/content/chapters/30-rest-camp-town-and-downtime-optimization.md"
+    },
+    {
+      "locator": "B00498",
+      "output": "src/content/chapters/30-rest-camp-town-and-downtime-optimization.md"
+    },
+    {
+      "locator": "B00499",
+      "output": "src/content/chapters/30-rest-camp-town-and-downtime-optimization.md"
+    },
+    {
+      "locator": "B00500",
+      "output": "src/content/chapters/30-rest-camp-town-and-downtime-optimization.md"
+    },
+    {
+      "locator": "B00501",
+      "output": "src/content/chapters/30-rest-camp-town-and-downtime-optimization.md"
+    },
+    {
+      "locator": "B00503",
+      "output": "src/content/chapters/31-spellbook-operations-and-copy-priority.md"
+    },
+    {
+      "locator": "B00504",
+      "output": "src/content/chapters/31-spellbook-operations-and-copy-priority.md"
+    },
+    {
+      "locator": "B00505",
+      "output": "src/content/chapters/31-spellbook-operations-and-copy-priority.md"
+    },
+    {
+      "locator": "B00506",
+      "output": "src/content/chapters/31-spellbook-operations-and-copy-priority.md"
+    },
+    {
+      "locator": "B00507",
+      "output": "src/content/chapters/31-spellbook-operations-and-copy-priority.md"
+    },
+    {
+      "locator": "B00508",
+      "output": "src/content/chapters/31-spellbook-operations-and-copy-priority.md"
+    },
+    {
+      "locator": "B00509",
+      "output": "src/content/chapters/31-spellbook-operations-and-copy-priority.md"
+    },
+    {
+      "locator": "B00510",
+      "output": "src/content/chapters/31-spellbook-operations-and-copy-priority.md"
+    },
+    {
+      "locator": "B00511",
+      "output": "src/content/chapters/31-spellbook-operations-and-copy-priority.md"
+    },
+    {
+      "locator": "B00512",
+      "output": "src/content/chapters/31-spellbook-operations-and-copy-priority.md"
+    },
+    {
+      "locator": "B00513",
+      "output": "src/content/chapters/31-spellbook-operations-and-copy-priority.md"
+    },
+    {
+      "locator": "B00514",
+      "output": "src/content/chapters/31-spellbook-operations-and-copy-priority.md"
+    },
+    {
+      "locator": "B00516",
+      "output": "src/content/chapters/32-scroll-use-backup-books-and-security.md"
+    },
+    {
+      "locator": "B00517",
+      "output": "src/content/chapters/32-scroll-use-backup-books-and-security.md"
+    },
+    {
+      "locator": "B00518",
+      "output": "src/content/chapters/32-scroll-use-backup-books-and-security.md"
+    },
+    {
+      "locator": "B00519",
+      "output": "src/content/chapters/32-scroll-use-backup-books-and-security.md"
+    },
+    {
+      "locator": "B00520",
+      "output": "src/content/chapters/32-scroll-use-backup-books-and-security.md"
+    },
+    {
+      "locator": "B00521",
+      "output": "src/content/chapters/32-scroll-use-backup-books-and-security.md"
+    },
+    {
+      "locator": "B00522",
+      "output": "src/content/chapters/32-scroll-use-backup-books-and-security.md"
+    },
+    {
+      "locator": "B00523",
+      "output": "src/content/chapters/32-scroll-use-backup-books-and-security.md"
+    },
+    {
+      "locator": "B00524",
+      "output": "src/content/chapters/32-scroll-use-backup-books-and-security.md"
+    },
+    {
+      "locator": "B00525",
+      "output": "src/content/chapters/32-scroll-use-backup-books-and-security.md"
+    },
+    {
+      "locator": "B00526",
+      "output": "src/content/chapters/32-scroll-use-backup-books-and-security.md"
+    },
+    {
+      "locator": "B00527",
+      "output": "src/content/chapters/32-scroll-use-backup-books-and-security.md"
+    },
+    {
+      "locator": "B00528",
+      "output": "src/content/chapters/32-scroll-use-backup-books-and-security.md"
+    },
+    {
+      "locator": "B00529",
+      "output": "src/content/chapters/32-scroll-use-backup-books-and-security.md"
+    },
+    {
+      "locator": "B00530",
+      "output": "src/content/chapters/32-scroll-use-backup-books-and-security.md"
+    },
+    {
+      "locator": "B00532",
+      "output": "src/content/chapters/33-wizard-economy-income-contracts-and-reputation.md"
+    },
+    {
+      "locator": "B00533",
+      "output": "src/content/chapters/33-wizard-economy-income-contracts-and-reputation.md"
+    },
+    {
+      "locator": "B00534",
+      "output": "src/content/chapters/33-wizard-economy-income-contracts-and-reputation.md"
+    },
+    {
+      "locator": "B00535",
+      "output": "src/content/chapters/33-wizard-economy-income-contracts-and-reputation.md"
+    },
+    {
+      "locator": "B00536",
+      "output": "src/content/chapters/33-wizard-economy-income-contracts-and-reputation.md"
+    },
+    {
+      "locator": "B00537",
+      "output": "src/content/chapters/33-wizard-economy-income-contracts-and-reputation.md"
+    },
+    {
+      "locator": "B00538",
+      "output": "src/content/chapters/33-wizard-economy-income-contracts-and-reputation.md"
+    },
+    {
+      "locator": "B00539",
+      "output": "src/content/chapters/33-wizard-economy-income-contracts-and-reputation.md"
+    },
+    {
+      "locator": "B00540",
+      "output": "src/content/chapters/33-wizard-economy-income-contracts-and-reputation.md"
+    },
+    {
+      "locator": "B00541",
+      "output": "src/content/chapters/33-wizard-economy-income-contracts-and-reputation.md"
+    },
+    {
+      "locator": "B00542",
+      "output": "src/content/chapters/33-wizard-economy-income-contracts-and-reputation.md"
+    },
+    {
+      "locator": "B00543",
+      "output": "src/content/chapters/33-wizard-economy-income-contracts-and-reputation.md"
+    },
+    {
+      "locator": "B00544",
+      "output": "src/content/chapters/33-wizard-economy-income-contracts-and-reputation.md"
+    },
+    {
+      "locator": "B00545",
+      "output": "src/content/chapters/33-wizard-economy-income-contracts-and-reputation.md"
+    },
+    {
+      "locator": "B00546",
+      "output": "src/content/chapters/33-wizard-economy-income-contracts-and-reputation.md"
+    },
+    {
+      "locator": "B00547",
+      "output": "src/content/chapters/33-wizard-economy-income-contracts-and-reputation.md"
+    },
+    {
+      "locator": "B00548",
+      "output": "src/content/chapters/33-wizard-economy-income-contracts-and-reputation.md"
+    },
+    {
+      "locator": "B00549",
+      "output": "src/content/chapters/33-wizard-economy-income-contracts-and-reputation.md"
+    },
+    {
+      "locator": "B00550",
+      "output": "src/content/chapters/33-wizard-economy-income-contracts-and-reputation.md"
+    },
+    {
+      "locator": "B00551",
+      "output": "src/content/chapters/33-wizard-economy-income-contracts-and-reputation.md"
+    },
+    {
+      "locator": "B00552",
+      "output": "src/content/chapters/33-wizard-economy-income-contracts-and-reputation.md"
+    },
+    {
+      "locator": "B00554",
+      "output": "src/content/chapters/34-failure-capture-death-and-recovery.md"
+    },
+    {
+      "locator": "B00555",
+      "output": "src/content/chapters/34-failure-capture-death-and-recovery.md"
+    },
+    {
+      "locator": "B00556",
+      "output": "src/content/chapters/34-failure-capture-death-and-recovery.md"
+    },
+    {
+      "locator": "B00557",
+      "output": "src/content/chapters/34-failure-capture-death-and-recovery.md"
+    },
+    {
+      "locator": "B00558",
+      "output": "src/content/chapters/34-failure-capture-death-and-recovery.md"
+    },
+    {
+      "locator": "B00559",
+      "output": "src/content/chapters/34-failure-capture-death-and-recovery.md"
+    },
+    {
+      "locator": "B00560",
+      "output": "src/content/chapters/34-failure-capture-death-and-recovery.md"
+    },
+    {
+      "locator": "B00561",
+      "output": "src/content/chapters/34-failure-capture-death-and-recovery.md"
+    },
+    {
+      "locator": "B00562",
+      "output": "src/content/chapters/34-failure-capture-death-and-recovery.md"
+    },
+    {
+      "locator": "B00563",
+      "output": "src/content/chapters/34-failure-capture-death-and-recovery.md"
+    },
+    {
+      "locator": "B00564",
+      "output": "src/content/chapters/34-failure-capture-death-and-recovery.md"
+    },
+    {
+      "locator": "B00565",
+      "output": "src/content/chapters/34-failure-capture-death-and-recovery.md"
+    },
+    {
+      "locator": "B00566",
+      "output": "src/content/chapters/34-failure-capture-death-and-recovery.md"
+    },
+    {
+      "locator": "B00567",
+      "output": "src/content/chapters/34-failure-capture-death-and-recovery.md"
+    },
+    {
+      "locator": "B00568",
+      "output": "src/content/chapters/34-failure-capture-death-and-recovery.md"
+    },
+    {
+      "locator": "B00569",
+      "output": "src/content/chapters/34-failure-capture-death-and-recovery.md"
+    },
+    {
+      "locator": "B00571",
+      "output": "src/content/chapters/35-emergency-wizard-protocol.md"
+    },
+    {
+      "locator": "B00572",
+      "output": "src/content/chapters/35-emergency-wizard-protocol.md"
+    },
+    {
+      "locator": "B00573",
+      "output": "src/content/chapters/35-emergency-wizard-protocol.md"
+    },
+    {
+      "locator": "B00574",
+      "output": "src/content/chapters/35-emergency-wizard-protocol.md"
+    },
+    {
+      "locator": "B00575",
+      "output": "src/content/chapters/35-emergency-wizard-protocol.md"
+    },
+    {
+      "locator": "B00576",
+      "output": "src/content/chapters/35-emergency-wizard-protocol.md"
+    },
+    {
+      "locator": "B00577",
+      "output": "src/content/chapters/35-emergency-wizard-protocol.md"
+    },
+    {
+      "locator": "B00579",
+      "output": "src/content/chapters/36-objective-based-mission-play.md"
+    },
+    {
+      "locator": "B00580",
+      "output": "src/content/chapters/36-objective-based-mission-play.md"
+    },
+    {
+      "locator": "B00581",
+      "output": "src/content/chapters/36-objective-based-mission-play.md"
+    },
+    {
+      "locator": "B00582",
+      "output": "src/content/chapters/36-objective-based-mission-play.md"
+    },
+    {
+      "locator": "B00583",
+      "output": "src/content/chapters/36-objective-based-mission-play.md"
+    },
+    {
+      "locator": "B00584",
+      "output": "src/content/chapters/36-objective-based-mission-play.md"
+    },
+    {
+      "locator": "B00585",
+      "output": "src/content/chapters/36-objective-based-mission-play.md"
+    },
+    {
+      "locator": "B00586",
+      "output": "src/content/chapters/36-objective-based-mission-play.md"
+    },
+    {
+      "locator": "B00587",
+      "output": "src/content/chapters/36-objective-based-mission-play.md"
+    },
+    {
+      "locator": "B00588",
+      "output": "src/content/chapters/36-objective-based-mission-play.md"
+    },
+    {
+      "locator": "B00589",
+      "output": "src/content/chapters/36-objective-based-mission-play.md"
+    },
+    {
+      "locator": "B00590",
+      "output": "src/content/chapters/36-objective-based-mission-play.md"
+    },
+    {
+      "locator": "B00591",
+      "output": "src/content/chapters/36-objective-based-mission-play.md"
+    },
+    {
+      "locator": "B00593",
+      "output": "src/content/chapters/37-noncombat-wizard-operations.md"
+    },
+    {
+      "locator": "B00594",
+      "output": "src/content/chapters/37-noncombat-wizard-operations.md"
+    },
+    {
+      "locator": "B00595",
+      "output": "src/content/chapters/37-noncombat-wizard-operations.md"
+    },
+    {
+      "locator": "B00596",
+      "output": "src/content/chapters/37-noncombat-wizard-operations.md"
+    },
+    {
+      "locator": "B00597",
+      "output": "src/content/chapters/37-noncombat-wizard-operations.md"
+    },
+    {
+      "locator": "B00598",
+      "output": "src/content/chapters/37-noncombat-wizard-operations.md"
+    },
+    {
+      "locator": "B00599",
+      "output": "src/content/chapters/37-noncombat-wizard-operations.md"
+    },
+    {
+      "locator": "B00600",
+      "output": "src/content/chapters/37-noncombat-wizard-operations.md"
+    },
+    {
+      "locator": "B00601",
+      "output": "src/content/chapters/37-noncombat-wizard-operations.md"
+    },
+    {
+      "locator": "B00602",
+      "output": "src/content/chapters/37-noncombat-wizard-operations.md"
+    },
+    {
+      "locator": "B00603",
+      "output": "src/content/chapters/37-noncombat-wizard-operations.md"
+    },
+    {
+      "locator": "B00605",
+      "output": "src/content/chapters/38-exploration-and-environmental-operations.md"
+    },
+    {
+      "locator": "B00606",
+      "output": "src/content/chapters/38-exploration-and-environmental-operations.md"
+    },
+    {
+      "locator": "B00607",
+      "output": "src/content/chapters/38-exploration-and-environmental-operations.md"
+    },
+    {
+      "locator": "B00608",
+      "output": "src/content/chapters/38-exploration-and-environmental-operations.md"
+    },
+    {
+      "locator": "B00609",
+      "output": "src/content/chapters/38-exploration-and-environmental-operations.md"
+    },
+    {
+      "locator": "B00610",
+      "output": "src/content/chapters/38-exploration-and-environmental-operations.md"
+    },
+    {
+      "locator": "B00611",
+      "output": "src/content/chapters/38-exploration-and-environmental-operations.md"
+    },
+    {
+      "locator": "B00612",
+      "output": "src/content/chapters/38-exploration-and-environmental-operations.md"
+    },
+    {
+      "locator": "B00613",
+      "output": "src/content/chapters/38-exploration-and-environmental-operations.md"
+    },
+    {
+      "locator": "B00614",
+      "output": "src/content/chapters/38-exploration-and-environmental-operations.md"
+    },
+    {
+      "locator": "B00615",
+      "output": "src/content/chapters/38-exploration-and-environmental-operations.md"
+    },
+    {
+      "locator": "B00616",
+      "output": "src/content/chapters/38-exploration-and-environmental-operations.md"
+    },
+    {
+      "locator": "B00617",
+      "output": "src/content/chapters/38-exploration-and-environmental-operations.md"
+    },
+    {
+      "locator": "B00618",
+      "output": "src/content/chapters/38-exploration-and-environmental-operations.md"
+    },
+    {
+      "locator": "B00619",
+      "output": "src/content/chapters/38-exploration-and-environmental-operations.md"
+    },
+    {
+      "locator": "B00621",
+      "output": "src/content/chapters/39-pre-adventure-loadout-matrix.md"
+    },
+    {
+      "locator": "B00622",
+      "output": "src/content/chapters/39-pre-adventure-loadout-matrix.md"
+    },
+    {
+      "locator": "B00623",
+      "output": "src/content/chapters/39-pre-adventure-loadout-matrix.md"
+    },
+    {
+      "locator": "B00624",
+      "output": "src/content/chapters/39-pre-adventure-loadout-matrix.md"
+    },
+    {
+      "locator": "B00625",
+      "output": "src/content/chapters/39-pre-adventure-loadout-matrix.md"
+    },
+    {
+      "locator": "B00626",
+      "output": "src/content/chapters/39-pre-adventure-loadout-matrix.md"
+    },
+    {
+      "locator": "B00627",
+      "output": "src/content/chapters/39-pre-adventure-loadout-matrix.md"
+    },
+    {
+      "locator": "B00628",
+      "output": "src/content/chapters/39-pre-adventure-loadout-matrix.md"
+    },
+    {
+      "locator": "B00629",
+      "output": "src/content/chapters/39-pre-adventure-loadout-matrix.md"
+    },
+    {
+      "locator": "B00630",
+      "output": "src/content/chapters/39-pre-adventure-loadout-matrix.md"
+    },
+    {
+      "locator": "B00631",
+      "output": "src/content/chapters/39-pre-adventure-loadout-matrix.md"
+    },
+    {
+      "locator": "B00633",
+      "output": "src/content/chapters/40-minion-summon-and-follower-management.md"
+    },
+    {
+      "locator": "B00634",
+      "output": "src/content/chapters/40-minion-summon-and-follower-management.md"
+    },
+    {
+      "locator": "B00635",
+      "output": "src/content/chapters/40-minion-summon-and-follower-management.md"
+    },
+    {
+      "locator": "B00636",
+      "output": "src/content/chapters/40-minion-summon-and-follower-management.md"
+    },
+    {
+      "locator": "B00637",
+      "output": "src/content/chapters/40-minion-summon-and-follower-management.md"
+    },
+    {
+      "locator": "B00638",
+      "output": "src/content/chapters/40-minion-summon-and-follower-management.md"
+    },
+    {
+      "locator": "B00639",
+      "output": "src/content/chapters/40-minion-summon-and-follower-management.md"
+    },
+    {
+      "locator": "B00640",
+      "output": "src/content/chapters/40-minion-summon-and-follower-management.md"
+    },
+    {
+      "locator": "B00641",
+      "output": "src/content/chapters/40-minion-summon-and-follower-management.md"
+    },
+    {
+      "locator": "B00642",
+      "output": "src/content/chapters/40-minion-summon-and-follower-management.md"
+    },
+    {
+      "locator": "B00643",
+      "output": "src/content/chapters/40-minion-summon-and-follower-management.md"
+    },
+    {
+      "locator": "B00644",
+      "output": "src/content/chapters/40-minion-summon-and-follower-management.md"
+    },
+    {
+      "locator": "B00645",
+      "output": "src/content/chapters/40-minion-summon-and-follower-management.md"
+    },
+    {
+      "locator": "B00646",
+      "output": "src/content/chapters/40-minion-summon-and-follower-management.md"
+    },
+    {
+      "locator": "B00647",
+      "output": "src/content/chapters/40-minion-summon-and-follower-management.md"
+    },
+    {
+      "locator": "B00648",
+      "output": "src/content/chapters/40-minion-summon-and-follower-management.md"
+    },
+    {
+      "locator": "B00649",
+      "output": "src/content/chapters/40-minion-summon-and-follower-management.md"
+    },
+    {
+      "locator": "B00650",
+      "output": "src/content/chapters/40-minion-summon-and-follower-management.md"
+    },
+    {
+      "locator": "B00651",
+      "output": "src/content/chapters/40-minion-summon-and-follower-management.md"
+    },
+    {
+      "locator": "B00652",
+      "output": "src/content/chapters/40-minion-summon-and-follower-management.md"
+    },
+    {
+      "locator": "B00653",
+      "output": "src/content/chapters/40-minion-summon-and-follower-management.md"
+    },
+    {
+      "locator": "B00654",
+      "output": "src/content/chapters/40-minion-summon-and-follower-management.md"
+    },
+    {
+      "locator": "B00656",
+      "output": "src/content/chapters/41-wizard-housing-bastions-and-strongholds.md"
+    },
+    {
+      "locator": "B00657",
+      "output": "src/content/chapters/41-wizard-housing-bastions-and-strongholds.md"
+    },
+    {
+      "locator": "B00658",
+      "output": "src/content/chapters/41-wizard-housing-bastions-and-strongholds.md"
+    },
+    {
+      "locator": "B00659",
+      "output": "src/content/chapters/41-wizard-housing-bastions-and-strongholds.md"
+    },
+    {
+      "locator": "B00660",
+      "output": "src/content/chapters/41-wizard-housing-bastions-and-strongholds.md"
+    },
+    {
+      "locator": "B00661",
+      "output": "src/content/chapters/41-wizard-housing-bastions-and-strongholds.md"
+    },
+    {
+      "locator": "B00662",
+      "output": "src/content/chapters/41-wizard-housing-bastions-and-strongholds.md"
+    },
+    {
+      "locator": "B00663",
+      "output": "src/content/chapters/41-wizard-housing-bastions-and-strongholds.md"
+    },
+    {
+      "locator": "B00664",
+      "output": "src/content/chapters/41-wizard-housing-bastions-and-strongholds.md"
+    },
+    {
+      "locator": "B00665",
+      "output": "src/content/chapters/41-wizard-housing-bastions-and-strongholds.md"
+    },
+    {
+      "locator": "B00666",
+      "output": "src/content/chapters/41-wizard-housing-bastions-and-strongholds.md"
+    },
+    {
+      "locator": "B00667",
+      "output": "src/content/chapters/41-wizard-housing-bastions-and-strongholds.md"
+    },
+    {
+      "locator": "B00668",
+      "output": "src/content/chapters/41-wizard-housing-bastions-and-strongholds.md"
+    },
+    {
+      "locator": "B00669",
+      "output": "src/content/chapters/41-wizard-housing-bastions-and-strongholds.md"
+    },
+    {
+      "locator": "B00670",
+      "output": "src/content/chapters/41-wizard-housing-bastions-and-strongholds.md"
+    },
+    {
+      "locator": "B00671",
+      "output": "src/content/chapters/41-wizard-housing-bastions-and-strongholds.md"
+    },
+    {
+      "locator": "B00672",
+      "output": "src/content/chapters/41-wizard-housing-bastions-and-strongholds.md"
+    },
+    {
+      "locator": "B00673",
+      "output": "src/content/chapters/41-wizard-housing-bastions-and-strongholds.md"
+    },
+    {
+      "locator": "B00674",
+      "output": "src/content/chapters/41-wizard-housing-bastions-and-strongholds.md"
+    },
+    {
+      "locator": "B00675",
+      "output": "src/content/chapters/41-wizard-housing-bastions-and-strongholds.md"
+    },
+    {
+      "locator": "B00676",
+      "output": "src/content/chapters/41-wizard-housing-bastions-and-strongholds.md"
+    },
+    {
+      "locator": "B00677",
+      "output": "src/content/chapters/41-wizard-housing-bastions-and-strongholds.md"
+    },
+    {
+      "locator": "B00678",
+      "output": "src/content/chapters/41-wizard-housing-bastions-and-strongholds.md"
+    },
+    {
+      "locator": "B00679",
+      "output": "src/content/chapters/41-wizard-housing-bastions-and-strongholds.md"
+    },
+    {
+      "locator": "B00680",
+      "output": "src/content/chapters/41-wizard-housing-bastions-and-strongholds.md"
+    },
+    {
+      "locator": "B00681",
+      "output": "src/content/chapters/41-wizard-housing-bastions-and-strongholds.md"
+    },
+    {
+      "locator": "B00682",
+      "output": "src/content/chapters/41-wizard-housing-bastions-and-strongholds.md"
+    },
+    {
+      "locator": "B00683",
+      "output": "src/content/chapters/41-wizard-housing-bastions-and-strongholds.md"
+    },
+    {
+      "locator": "B00684",
+      "output": "src/content/chapters/41-wizard-housing-bastions-and-strongholds.md"
+    },
+    {
+      "locator": "B00685",
+      "output": "src/content/chapters/41-wizard-housing-bastions-and-strongholds.md"
+    },
+    {
+      "locator": "B00686",
+      "output": "src/content/chapters/41-wizard-housing-bastions-and-strongholds.md"
+    },
+    {
+      "locator": "B00687",
+      "output": "src/content/chapters/41-wizard-housing-bastions-and-strongholds.md"
+    },
+    {
+      "locator": "B00688",
+      "output": "src/content/chapters/41-wizard-housing-bastions-and-strongholds.md"
+    },
+    {
+      "locator": "B00689",
+      "output": "src/content/chapters/41-wizard-housing-bastions-and-strongholds.md"
+    },
+    {
+      "locator": "B00690",
+      "output": "src/content/chapters/41-wizard-housing-bastions-and-strongholds.md"
+    },
+    {
+      "locator": "B00691",
+      "output": "src/content/chapters/41-wizard-housing-bastions-and-strongholds.md"
+    },
+    {
+      "locator": "B00692",
+      "output": "src/content/chapters/41-wizard-housing-bastions-and-strongholds.md"
+    },
+    {
+      "locator": "B00693",
+      "output": "src/content/chapters/41-wizard-housing-bastions-and-strongholds.md"
+    },
+    {
+      "locator": "B00694",
+      "output": "src/content/chapters/41-wizard-housing-bastions-and-strongholds.md"
+    },
+    {
+      "locator": "B00695",
+      "output": "src/content/chapters/41-wizard-housing-bastions-and-strongholds.md"
+    },
+    {
+      "locator": "B00696",
+      "output": "src/content/chapters/41-wizard-housing-bastions-and-strongholds.md"
+    },
+    {
+      "locator": "B00697",
+      "output": "src/content/chapters/41-wizard-housing-bastions-and-strongholds.md"
+    },
+    {
+      "locator": "B00698",
+      "output": "src/content/chapters/41-wizard-housing-bastions-and-strongholds.md"
+    },
+    {
+      "locator": "B00699",
+      "output": "src/content/chapters/41-wizard-housing-bastions-and-strongholds.md"
+    },
+    {
+      "locator": "B00700",
+      "output": "src/content/chapters/41-wizard-housing-bastions-and-strongholds.md"
+    },
+    {
+      "locator": "B00701",
+      "output": "src/content/chapters/41-wizard-housing-bastions-and-strongholds.md"
+    },
+    {
+      "locator": "B00704",
+      "output": "src/content/chapters/42-campaign-optimization-modules.md"
+    },
+    {
+      "locator": "B00705",
+      "output": "src/content/chapters/42-campaign-optimization-modules.md"
+    },
+    {
+      "locator": "B00706",
+      "output": "src/content/chapters/42-campaign-optimization-modules.md"
+    },
+    {
+      "locator": "B00707",
+      "output": "src/content/chapters/42-campaign-optimization-modules.md"
+    },
+    {
+      "locator": "B00708",
+      "output": "src/content/chapters/42-campaign-optimization-modules.md"
+    },
+    {
+      "locator": "B00709",
+      "output": "src/content/chapters/42-campaign-optimization-modules.md"
+    },
+    {
+      "locator": "B00710",
+      "output": "src/content/chapters/42-campaign-optimization-modules.md"
+    },
+    {
+      "locator": "B00711",
+      "output": "src/content/chapters/42-campaign-optimization-modules.md"
+    },
+    {
+      "locator": "B00713",
+      "output": "src/content/chapters/43-german-table-conversion-cheat-sheet.md"
+    },
+    {
+      "locator": "B00714",
+      "output": "src/content/chapters/43-german-table-conversion-cheat-sheet.md"
+    },
+    {
+      "locator": "B00715",
+      "output": "src/content/chapters/43-german-table-conversion-cheat-sheet.md"
+    },
+    {
+      "locator": "B00716",
+      "output": "src/content/chapters/43-german-table-conversion-cheat-sheet.md"
+    },
+    {
+      "locator": "B00717",
+      "output": "src/content/chapters/43-german-table-conversion-cheat-sheet.md"
+    },
+    {
+      "locator": "B00718",
+      "output": "src/content/chapters/43-german-table-conversion-cheat-sheet.md"
+    },
+    {
+      "locator": "B00719",
+      "output": "src/content/chapters/43-german-table-conversion-cheat-sheet.md"
+    },
+    {
+      "locator": "B00720",
+      "output": "src/content/chapters/43-german-table-conversion-cheat-sheet.md"
+    },
+    {
+      "locator": "B00721",
+      "output": "src/content/chapters/43-german-table-conversion-cheat-sheet.md"
+    },
+    {
+      "locator": "B00722",
+      "output": "src/content/chapters/43-german-table-conversion-cheat-sheet.md"
+    },
+    {
+      "locator": "B00723",
+      "output": "src/content/chapters/43-german-table-conversion-cheat-sheet.md"
+    },
+    {
+      "locator": "B00724",
+      "output": "src/content/chapters/43-german-table-conversion-cheat-sheet.md"
+    },
+    {
+      "locator": "B00725",
+      "output": "src/content/chapters/43-german-table-conversion-cheat-sheet.md"
+    },
+    {
+      "locator": "B00726",
+      "output": "src/content/chapters/43-german-table-conversion-cheat-sheet.md"
+    },
+    {
+      "locator": "B00727",
+      "output": "src/content/chapters/43-german-table-conversion-cheat-sheet.md"
+    },
+    {
+      "locator": "B00728",
+      "output": "src/content/chapters/43-german-table-conversion-cheat-sheet.md"
+    },
+    {
+      "locator": "B00729",
+      "output": "src/content/chapters/43-german-table-conversion-cheat-sheet.md"
+    },
+    {
+      "locator": "B00730",
+      "output": "src/content/chapters/43-german-table-conversion-cheat-sheet.md"
+    },
+    {
+      "locator": "B00731",
+      "output": "src/content/chapters/43-german-table-conversion-cheat-sheet.md"
+    },
+    {
+      "locator": "B00732",
+      "output": "src/content/chapters/43-german-table-conversion-cheat-sheet.md"
+    },
+    {
+      "locator": "B00733",
+      "output": "src/content/chapters/43-german-table-conversion-cheat-sheet.md"
+    },
+    {
+      "locator": "B00735",
+      "output": "src/content/chapters/44-universal-level-up-audit.md"
+    },
+    {
+      "locator": "B00736",
+      "output": "src/content/chapters/44-universal-level-up-audit.md"
+    },
+    {
+      "locator": "B00737",
+      "output": "src/content/chapters/44-universal-level-up-audit.md"
+    },
+    {
+      "locator": "B00739",
+      "output": "src/content/chapters/45-concentration-and-reaction-master-matrix.md"
+    },
+    {
+      "locator": "B00740",
+      "output": "src/content/chapters/45-concentration-and-reaction-master-matrix.md"
+    },
+    {
+      "locator": "B00741",
+      "output": "src/content/chapters/45-concentration-and-reaction-master-matrix.md"
+    },
+    {
+      "locator": "B00742",
+      "output": "src/content/chapters/45-concentration-and-reaction-master-matrix.md"
+    },
+    {
+      "locator": "B00743",
+      "output": "src/content/chapters/45-concentration-and-reaction-master-matrix.md"
+    },
+    {
+      "locator": "B00744",
+      "output": "src/content/chapters/45-concentration-and-reaction-master-matrix.md"
+    },
+    {
+      "locator": "B00745",
+      "output": "src/content/chapters/45-concentration-and-reaction-master-matrix.md"
+    },
+    {
+      "locator": "B00746",
+      "output": "src/content/chapters/45-concentration-and-reaction-master-matrix.md"
+    },
+    {
+      "locator": "B00748",
+      "output": "src/content/chapters/46-problem-to-answer-finder.md"
+    },
+    {
+      "locator": "B00749",
+      "output": "src/content/chapters/46-problem-to-answer-finder.md"
+    },
+    {
+      "locator": "B00750",
+      "output": "src/content/chapters/46-problem-to-answer-finder.md"
+    },
+    {
+      "locator": "B00751",
+      "output": "src/content/chapters/46-problem-to-answer-finder.md"
+    },
+    {
+      "locator": "B00752",
+      "output": "src/content/chapters/46-problem-to-answer-finder.md"
+    },
+    {
+      "locator": "B00753",
+      "output": "src/content/chapters/46-problem-to-answer-finder.md"
+    },
+    {
+      "locator": "B00755",
+      "output": "src/content/chapters/47-alphabetical-spell-and-feature-index.md"
+    },
+    {
+      "locator": "B00756",
+      "output": "src/content/chapters/47-alphabetical-spell-and-feature-index.md"
+    },
+    {
+      "locator": "B00757",
+      "output": "src/content/chapters/47-alphabetical-spell-and-feature-index.md"
+    },
+    {
+      "locator": "B00758",
+      "output": "src/content/chapters/47-alphabetical-spell-and-feature-index.md"
+    },
+    {
+      "locator": "B00759",
+      "output": "src/content/chapters/47-alphabetical-spell-and-feature-index.md"
+    },
+    {
+      "locator": "B00760",
+      "output": "src/content/chapters/47-alphabetical-spell-and-feature-index.md"
+    },
+    {
+      "locator": "B00761",
+      "output": "src/content/chapters/47-alphabetical-spell-and-feature-index.md"
+    },
+    {
+      "locator": "B00762",
+      "output": "src/content/chapters/47-alphabetical-spell-and-feature-index.md"
+    },
+    {
+      "locator": "B00763",
+      "output": "src/content/chapters/47-alphabetical-spell-and-feature-index.md"
+    },
+    {
+      "locator": "B00764",
+      "output": "src/content/chapters/47-alphabetical-spell-and-feature-index.md"
+    },
+    {
+      "locator": "B00765",
+      "output": "src/content/chapters/47-alphabetical-spell-and-feature-index.md"
+    },
+    {
+      "locator": "B00767",
+      "output": "src/content/chapters/48-sources-and-verification.md"
+    },
+    {
+      "locator": "B00768",
+      "output": "src/content/chapters/48-sources-and-verification.md"
+    },
+    {
+      "locator": "B00769",
+      "output": "src/content/chapters/48-sources-and-verification.md"
+    },
+    {
+      "locator": "B00770",
+      "output": "src/content/chapters/48-sources-and-verification.md"
+    },
+    {
+      "locator": "B00771",
+      "output": "src/content/chapters/48-sources-and-verification.md"
+    },
+    {
+      "locator": "B00772",
+      "output": "src/content/chapters/48-sources-and-verification.md"
+    },
+    {
+      "locator": "B00773",
+      "output": "src/content/chapters/48-sources-and-verification.md"
+    },
+    {
+      "locator": "B00774",
+      "output": "src/content/chapters/48-sources-and-verification.md"
+    },
+    {
+      "locator": "B00775",
+      "output": "src/content/chapters/48-sources-and-verification.md"
+    },
+    {
+      "locator": "B00776",
+      "output": "src/content/chapters/48-sources-and-verification.md"
+    },
+    {
+      "locator": "B00777",
+      "output": "src/content/chapters/48-sources-and-verification.md"
+    },
+    {
+      "locator": "B00778",
+      "output": "src/content/chapters/48-sources-and-verification.md"
+    },
+    {
+      "locator": "B00779",
+      "output": "src/content/chapters/48-sources-and-verification.md"
+    },
+    {
+      "locator": "B00780",
+      "output": "src/content/chapters/48-sources-and-verification.md"
+    },
+    {
+      "locator": "B00781",
+      "output": "src/content/chapters/48-sources-and-verification.md"
+    },
+    {
+      "locator": "B00782",
+      "output": "src/content/chapters/48-sources-and-verification.md"
+    },
+    {
+      "locator": "B00783",
+      "output": "src/content/chapters/48-sources-and-verification.md"
+    },
+    {
+      "locator": "B00784",
+      "output": "src/content/chapters/48-sources-and-verification.md"
+    },
+    {
+      "locator": "B00786",
+      "output": "src/content/chapters/49-how-to-find-anything.md"
+    },
+    {
+      "locator": "B00787",
+      "output": "src/content/chapters/49-how-to-find-anything.md"
+    },
+    {
+      "locator": "B00788",
+      "output": "src/content/chapters/49-how-to-find-anything.md"
+    },
+    {
+      "locator": "B00789",
+      "output": "src/content/chapters/49-how-to-find-anything.md"
+    },
+    {
+      "locator": "B00791",
+      "output": "src/content/chapters/50-complete-selectable-wizard-subclass-matrix.md"
+    },
+    {
+      "locator": "B00792",
+      "output": "src/content/chapters/50-complete-selectable-wizard-subclass-matrix.md"
+    },
+    {
+      "locator": "B00794",
+      "output": "src/content/chapters/50-complete-selectable-wizard-subclass-matrix.md"
+    },
+    {
+      "locator": "B00795",
+      "output": "src/content/chapters/50-complete-selectable-wizard-subclass-matrix.md"
+    },
+    {
+      "locator": "B00796",
+      "output": "src/content/chapters/50-complete-selectable-wizard-subclass-matrix.md"
+    },
+    {
+      "locator": "B00797",
+      "output": "src/content/chapters/50-complete-selectable-wizard-subclass-matrix.md"
+    },
+    {
+      "locator": "B00798",
+      "output": "src/content/chapters/50-complete-selectable-wizard-subclass-matrix.md"
+    },
+    {
+      "locator": "B00799",
+      "output": "src/content/chapters/50-complete-selectable-wizard-subclass-matrix.md"
+    },
+    {
+      "locator": "B00801",
+      "output": "src/content/chapters/51-source-version-conflict-rules.md"
+    },
+    {
+      "locator": "B00802",
+      "output": "src/content/chapters/51-source-version-conflict-rules.md"
+    },
+    {
+      "locator": "B00803",
+      "output": "src/content/chapters/51-source-version-conflict-rules.md"
+    },
+    {
+      "locator": "B00804",
+      "output": "src/content/chapters/51-source-version-conflict-rules.md"
+    },
+    {
+      "locator": "B00805",
+      "output": "src/content/chapters/51-source-version-conflict-rules.md"
+    },
+    {
+      "locator": "B00806",
+      "output": "src/content/chapters/51-source-version-conflict-rules.md"
+    },
+    {
+      "locator": "B00808",
+      "output": "src/content/chapters/52-anti-wizard-counterplay-and-recovery.md"
+    },
+    {
+      "locator": "B00809",
+      "output": "src/content/chapters/52-anti-wizard-counterplay-and-recovery.md"
+    },
+    {
+      "locator": "B00810",
+      "output": "src/content/chapters/52-anti-wizard-counterplay-and-recovery.md"
+    },
+    {
+      "locator": "B00811",
+      "output": "src/content/chapters/52-anti-wizard-counterplay-and-recovery.md"
+    },
+    {
+      "locator": "B00812",
+      "output": "src/content/chapters/52-anti-wizard-counterplay-and-recovery.md"
+    },
+    {
+      "locator": "B00813",
+      "output": "src/content/chapters/52-anti-wizard-counterplay-and-recovery.md"
+    },
+    {
+      "locator": "B00814",
+      "output": "src/content/chapters/52-anti-wizard-counterplay-and-recovery.md"
+    },
+    {
+      "locator": "B00815",
+      "output": "src/content/chapters/52-anti-wizard-counterplay-and-recovery.md"
+    },
+    {
+      "locator": "B00817",
+      "output": "src/content/chapters/53-party-synergy-and-spell-ownership.md"
+    },
+    {
+      "locator": "B00818",
+      "output": "src/content/chapters/53-party-synergy-and-spell-ownership.md"
+    },
+    {
+      "locator": "B00819",
+      "output": "src/content/chapters/53-party-synergy-and-spell-ownership.md"
+    },
+    {
+      "locator": "B00820",
+      "output": "src/content/chapters/53-party-synergy-and-spell-ownership.md"
+    },
+    {
+      "locator": "B00821",
+      "output": "src/content/chapters/53-party-synergy-and-spell-ownership.md"
+    },
+    {
+      "locator": "B00822",
+      "output": "src/content/chapters/53-party-synergy-and-spell-ownership.md"
+    },
+    {
+      "locator": "B00823",
+      "output": "src/content/chapters/53-party-synergy-and-spell-ownership.md"
+    },
+    {
+      "locator": "B00824",
+      "output": "src/content/chapters/53-party-synergy-and-spell-ownership.md"
+    },
+    {
+      "locator": "B00826",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00827",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00828",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00829",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00830",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00831",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00832",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00833",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00834",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00835",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00836",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00837",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00838",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00839",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00840",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00841",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00842",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00843",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00844",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00845",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00846",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00847",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00848",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00849",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00850",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00851",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00852",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00853",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00854",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00855",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00856",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00857",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00858",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00859",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00860",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00861",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00862",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00863",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00864",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00865",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00866",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00867",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00868",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00869",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00870",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00871",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00872",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00873",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00874",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00875",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00876",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00877",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00878",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00879",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00880",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00881",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00882",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00883",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00884",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00885",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00886",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00887",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00888",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00889",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00890",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00891",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00892",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00893",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00894",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00895",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00896",
+      "output": "src/content/chapters/54-one-page-build-reference-sheets.md"
+    },
+    {
+      "locator": "B00898",
+      "output": "src/content/chapters/55-actual-play-validation-standard.md"
+    },
+    {
+      "locator": "B00899",
+      "output": "src/content/chapters/55-actual-play-validation-standard.md"
+    },
+    {
+      "locator": "B00900",
+      "output": "src/content/chapters/55-actual-play-validation-standard.md"
+    },
+    {
+      "locator": "B00901",
+      "output": "src/content/chapters/55-actual-play-validation-standard.md"
+    },
+    {
+      "locator": "B00902",
+      "output": "src/content/chapters/55-actual-play-validation-standard.md"
+    },
+    {
+      "locator": "B00903",
+      "output": "src/content/chapters/55-actual-play-validation-standard.md"
+    },
+    {
+      "locator": "B00905",
+      "output": "src/content/chapters/56-arcana-unleashed-release-intake.md"
+    },
+    {
+      "locator": "B00906",
+      "output": "src/content/chapters/56-arcana-unleashed-release-intake.md"
+    },
+    {
+      "locator": "B00907",
+      "output": "src/content/chapters/56-arcana-unleashed-release-intake.md"
+    },
+    {
+      "locator": "B00908",
+      "output": "src/content/chapters/56-arcana-unleashed-release-intake.md"
+    },
+    {
+      "locator": "B00909",
+      "output": "src/content/chapters/56-arcana-unleashed-release-intake.md"
+    },
+    {
+      "locator": "B00910",
+      "output": "src/content/chapters/56-arcana-unleashed-release-intake.md"
+    },
+    {
+      "locator": "B00911",
+      "output": "src/content/chapters/56-arcana-unleashed-release-intake.md"
+    },
+    {
+      "locator": "B00912",
+      "output": "src/content/chapters/56-arcana-unleashed-release-intake.md"
+    },
+    {
+      "locator": "B00913",
+      "output": "src/content/chapters/56-arcana-unleashed-release-intake.md"
+    },
+    {
+      "locator": "B00914",
+      "output": "src/content/chapters/56-arcana-unleashed-release-intake.md"
+    },
+    {
+      "locator": "B00915",
+      "output": "src/content/chapters/56-arcana-unleashed-release-intake.md"
+    },
+    {
+      "locator": "B00916",
+      "output": "src/content/chapters/56-arcana-unleashed-release-intake.md"
+    },
+    {
+      "locator": "B00917",
+      "output": "src/content/chapters/56-arcana-unleashed-release-intake.md"
+    },
+    {
+      "locator": "B00920",
+      "output": "src/content/chapters/57-d-and-d-beyond-builder-setup-guide.md"
+    },
+    {
+      "locator": "B00921",
+      "output": "src/content/chapters/57-d-and-d-beyond-builder-setup-guide.md"
+    },
+    {
+      "locator": "B00922",
+      "output": "src/content/chapters/57-d-and-d-beyond-builder-setup-guide.md"
+    },
+    {
+      "locator": "B00923",
+      "output": "src/content/chapters/57-d-and-d-beyond-builder-setup-guide.md"
+    },
+    {
+      "locator": "B00924",
+      "output": "src/content/chapters/57-d-and-d-beyond-builder-setup-guide.md"
+    },
+    {
+      "locator": "B00925",
+      "output": "src/content/chapters/57-d-and-d-beyond-builder-setup-guide.md"
+    },
+    {
+      "locator": "B00926",
+      "output": "src/content/chapters/57-d-and-d-beyond-builder-setup-guide.md"
+    },
+    {
+      "locator": "B00927",
+      "output": "src/content/chapters/57-d-and-d-beyond-builder-setup-guide.md"
+    },
+    {
+      "locator": "B00928",
+      "output": "src/content/chapters/57-d-and-d-beyond-builder-setup-guide.md"
+    },
+    {
+      "locator": "B00929",
+      "output": "src/content/chapters/57-d-and-d-beyond-builder-setup-guide.md"
+    },
+    {
+      "locator": "B00930",
+      "output": "src/content/chapters/57-d-and-d-beyond-builder-setup-guide.md"
+    },
+    {
+      "locator": "B00932",
+      "output": "src/content/chapters/58-worked-encounter-playbooks.md"
+    },
+    {
+      "locator": "B00933",
+      "output": "src/content/chapters/58-worked-encounter-playbooks.md"
+    },
+    {
+      "locator": "B00934",
+      "output": "src/content/chapters/58-worked-encounter-playbooks.md"
+    },
+    {
+      "locator": "B00935",
+      "output": "src/content/chapters/58-worked-encounter-playbooks.md"
+    },
+    {
+      "locator": "B00936",
+      "output": "src/content/chapters/58-worked-encounter-playbooks.md"
+    },
+    {
+      "locator": "B00937",
+      "output": "src/content/chapters/58-worked-encounter-playbooks.md"
+    },
+    {
+      "locator": "B00939",
+      "output": "src/content/chapters/59-enemy-defense-and-targeting-matrix.md"
+    },
+    {
+      "locator": "B00940",
+      "output": "src/content/chapters/59-enemy-defense-and-targeting-matrix.md"
+    },
+    {
+      "locator": "B00941",
+      "output": "src/content/chapters/59-enemy-defense-and-targeting-matrix.md"
+    },
+    {
+      "locator": "B00942",
+      "output": "src/content/chapters/59-enemy-defense-and-targeting-matrix.md"
+    },
+    {
+      "locator": "B00943",
+      "output": "src/content/chapters/59-enemy-defense-and-targeting-matrix.md"
+    },
+    {
+      "locator": "B00945",
+      "output": "src/content/chapters/60-spell-slot-budget-rules.md"
+    },
+    {
+      "locator": "B00946",
+      "output": "src/content/chapters/60-spell-slot-budget-rules.md"
+    },
+    {
+      "locator": "B00947",
+      "output": "src/content/chapters/60-spell-slot-budget-rules.md"
+    },
+    {
+      "locator": "B00948",
+      "output": "src/content/chapters/60-spell-slot-budget-rules.md"
+    },
+    {
+      "locator": "B00949",
+      "output": "src/content/chapters/60-spell-slot-budget-rules.md"
+    },
+    {
+      "locator": "B00950",
+      "output": "src/content/chapters/60-spell-slot-budget-rules.md"
+    },
+    {
+      "locator": "B00951",
+      "output": "src/content/chapters/60-spell-slot-budget-rules.md"
+    },
+    {
+      "locator": "B00952",
+      "output": "src/content/chapters/60-spell-slot-budget-rules.md"
+    },
+    {
+      "locator": "B00954",
+      "output": "src/content/chapters/61-session-zero-compatibility-rules.md"
+    },
+    {
+      "locator": "B00955",
+      "output": "src/content/chapters/61-session-zero-compatibility-rules.md"
+    },
+    {
+      "locator": "B00956",
+      "output": "src/content/chapters/61-session-zero-compatibility-rules.md"
+    },
+    {
+      "locator": "B00957",
+      "output": "src/content/chapters/61-session-zero-compatibility-rules.md"
+    },
+    {
+      "locator": "B00958",
+      "output": "src/content/chapters/61-session-zero-compatibility-rules.md"
+    },
+    {
+      "locator": "B00960",
+      "output": "src/content/chapters/changelog.md"
+    },
+    {
+      "locator": "B00961",
+      "output": "src/content/chapters/changelog.md"
+    },
+    {
+      "locator": "B00962",
+      "output": "src/content/chapters/changelog.md"
+    },
+    {
+      "locator": "B00963",
+      "output": "src/content/chapters/changelog.md"
+    },
+    {
+      "locator": "B00964",
+      "output": "src/content/chapters/changelog.md"
+    },
+    {
+      "locator": "B00965",
+      "output": "src/content/chapters/changelog.md"
+    },
+    {
+      "locator": "B00966",
+      "output": "src/content/chapters/changelog.md"
+    },
+    {
+      "locator": "B00967",
+      "output": "src/content/chapters/changelog.md"
+    },
+    {
+      "locator": "B00968",
+      "output": "src/content/chapters/changelog.md"
+    },
+    {
+      "locator": "B00969",
+      "output": "src/content/chapters/changelog.md"
+    },
+    {
+      "locator": "B00970",
+      "output": "src/content/chapters/changelog.md"
+    },
+    {
+      "locator": "B00971",
+      "output": "src/content/chapters/changelog.md"
+    },
+    {
+      "locator": "B00972",
+      "output": "src/content/chapters/changelog.md"
+    },
+    {
+      "locator": "B00973",
+      "output": "src/content/chapters/changelog.md"
+    },
+    {
+      "locator": "B00974",
+      "output": "src/content/chapters/changelog.md"
+    },
+    {
+      "locator": "B00975",
+      "output": "src/content/chapters/changelog.md"
+    },
+    {
+      "locator": "B00976",
+      "output": "src/content/chapters/changelog.md"
+    },
+    {
+      "locator": "B00977",
+      "output": "src/content/chapters/changelog.md"
+    },
+    {
+      "locator": "B00978",
+      "output": "src/content/chapters/changelog.md"
+    },
+    {
+      "locator": "B00979",
+      "output": "src/content/chapters/changelog.md"
+    },
+    {
+      "locator": "B00980",
+      "output": "src/content/chapters/changelog.md"
+    },
+    {
+      "locator": "B00981",
+      "output": "src/content/chapters/changelog.md"
+    },
+    {
+      "locator": "B00982",
+      "output": "src/content/chapters/changelog.md"
+    },
+    {
+      "locator": "B00983",
+      "output": "src/content/chapters/changelog.md"
+    },
+    {
+      "locator": "B00984",
+      "output": "src/content/chapters/changelog.md"
+    },
+    {
+      "locator": "B00985",
+      "output": "src/content/chapters/changelog.md"
+    },
+    {
+      "locator": "B00986",
+      "output": "src/content/chapters/changelog.md"
+    },
+    {
+      "locator": "B00987",
+      "output": "src/content/chapters/changelog.md"
+    },
+    {
+      "locator": "B00988",
+      "output": "src/content/chapters/changelog.md"
+    },
+    {
+      "locator": "B00989",
+      "output": "src/content/chapters/changelog.md"
+    },
+    {
+      "locator": "B00990",
+      "output": "src/content/chapters/changelog.md"
+    },
+    {
+      "locator": "B00991",
+      "output": "src/content/chapters/changelog.md"
+    },
+    {
+      "locator": "B00992",
+      "output": "src/content/chapters/changelog.md"
+    },
+    {
+      "locator": "B00993",
+      "output": "src/content/chapters/changelog.md"
+    },
+    {
+      "locator": "B00994",
+      "output": "src/content/chapters/changelog.md"
+    },
+    {
+      "locator": "B00995",
+      "output": "src/content/chapters/changelog.md"
+    },
+    {
+      "locator": "B00996",
+      "output": "src/content/chapters/changelog.md"
+    },
+    {
+      "locator": "B00997",
+      "output": "src/content/chapters/changelog.md"
+    },
+    {
+      "locator": "B00998",
+      "output": "src/content/chapters/changelog.md"
+    },
+    {
+      "locator": "B00999",
+      "output": "src/content/chapters/changelog.md"
+    },
+    {
+      "locator": "B01000",
+      "output": "src/content/chapters/changelog.md"
+    },
+    {
+      "locator": "B01001",
+      "output": "src/content/chapters/changelog.md"
+    },
+    {
+      "locator": "B01002",
+      "output": "src/content/chapters/changelog.md"
+    },
+    {
+      "locator": "B01003",
+      "output": "src/content/chapters/changelog.md"
+    },
+    {
+      "locator": "B01004",
+      "output": "src/content/chapters/changelog.md"
+    },
+    {
+      "locator": "B01005",
+      "output": "src/content/chapters/changelog.md"
+    },
+    {
+      "locator": "B01006",
+      "output": "src/content/chapters/changelog.md"
+    }
+  ]
+}

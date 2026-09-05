@@ -1,0 +1,48 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import type { MarkdownHeading } from 'astro';
+import chapterIndex from '@/data/chapters.json';
+
+interface Props {
+  title: string;
+  description: string;
+  chapter: number | null;
+  part: string;
+  hub: string;
+  slug: string;
+  headings?: MarkdownHeading[];
+}
+const { title, description, chapter, part, hub, slug, headings = [] } = Astro.props;
+const hubLabels: Record<string, string> = {
+  fundamentals: 'Fundamentals', builds: 'Builds', spells: 'Spells', combat: 'Combat & Tactics', gear: 'Gear & Operations', reference: 'Reference',
+};
+const siblings = chapterIndex.filter((item) => item.part === part);
+---
+<BaseLayout title={title} description={description} active={hub}>
+  <div class="site-shell docs-grid">
+    <nav class="side-nav" aria-label={`${part} chapters`}>
+      <h2>{part}</h2>
+      {siblings.map((item) => <a href={`/chapters/${item.slug}/`} aria-current={item.slug === slug ? 'page' : undefined}>Ch. {item.number} · {item.title}</a>)}
+    </nav>
+    <article class="article" data-pagefind-body>
+      <div class="breadcrumbs">
+        <a href="/">Home</a><span aria-hidden="true">/</span>
+        <a href={`/${hub === 'fundamentals' ? 'reference' : hub}/`}>{hubLabels[hub]}</a><span aria-hidden="true">/</span>
+        <span>{chapter == null ? title : `Chapter ${chapter}`}</span>
+      </div>
+      <header class="article-header">
+        <div class="page-meta">
+          {chapter != null && <span class="meta-pill">Chapter {chapter}</span>}
+          <span class="meta-pill">{part}</span>
+        </div>
+        <h1 data-pagefind-meta="title">{title}</h1>
+        <p>{description}</p>
+      </header>
+      <div class="prose"><slot /></div>
+    </article>
+    <nav class="toc" aria-label="On this page">
+      <h2>On this page</h2>
+      {headings.filter((heading) => heading.depth <= 3).map((heading) => <a href={`#${heading.slug}`} data-depth={heading.depth}>{heading.text}</a>)}
+    </nav>
+  </div>
+</BaseLayout>

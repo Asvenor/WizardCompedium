@@ -1,0 +1,54 @@
+{
+  "id": "detect-magic",
+  "name": "Detect Magic",
+  "level": 1,
+  "school": null,
+  "rules": {
+    "castingTime": "Action",
+    "range": "Self",
+    "area": "30-ft E",
+    "duration": null,
+    "concentration": true,
+    "ritual": true,
+    "components": {
+      "verbal": null,
+      "somatic": null,
+      "material": null,
+      "description": null,
+      "gpCost": null,
+      "consumed": null
+    },
+    "damageTypes": [],
+    "save": {
+      "ability": null,
+      "type": null
+    },
+    "attackRoll": false
+  },
+  "source": {
+    "book": "Player's Handbook (2024)",
+    "rulesVersion": "2024",
+    "category": "Core",
+    "sourceSensitive": false
+  },
+  "compendium": {
+    "tier": null,
+    "acquisitionRole": "mandatory",
+    "preparedBaseline": false,
+    "roles": [
+      "ritual",
+      "information"
+    ],
+    "summary": "Locate and classify magical presence.",
+    "buildRelevance": [],
+    "warnings": [
+      "The Compendium index is an operating reference, not replacement spell text. Confirm the active D&D Beyond entry before casting."
+    ],
+    "relatedChapters": [
+      11,
+      15,
+      47
+    ]
+  },
+  "sourceLocator": "B00189"
+}

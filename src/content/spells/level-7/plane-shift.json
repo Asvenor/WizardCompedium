@@ -1,0 +1,50 @@
+{
+  "id": "plane-shift",
+  "name": "Plane Shift",
+  "level": 7,
+  "school": null,
+  "rules": {
+    "castingTime": "Action",
+    "range": "Touch",
+    "area": null,
+    "duration": null,
+    "concentration": false,
+    "ritual": false,
+    "components": {
+      "verbal": null,
+      "somatic": null,
+      "material": null,
+      "description": null,
+      "gpCost": 250,
+      "consumed": null
+    },
+    "damageTypes": [],
+    "save": {
+      "ability": null,
+      "type": null
+    },
+    "attackRoll": false
+  },
+  "source": {
+    "book": "Player's Handbook (2024)",
+    "rulesVersion": "2024",
+    "category": "Core",
+    "sourceSensitive": false
+  },
+  "compendium": {
+    "tier": null,
+    "acquisitionRole": "optional",
+    "preparedBaseline": false,
+    "roles": [],
+    "summary": "Willing-group planar travel; requires a 250+ gp attuned fork.",
+    "buildRelevance": [],
+    "warnings": [
+      "The Compendium index is an operating reference, not replacement spell text. Confirm the active D&D Beyond entry before casting."
+    ],
+    "relatedChapters": [
+      11,
+      15
+    ]
+  },
+  "sourceLocator": "B00193"
+}

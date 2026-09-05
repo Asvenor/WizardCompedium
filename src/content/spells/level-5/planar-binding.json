@@ -1,0 +1,54 @@
+{
+  "id": "planar-binding",
+  "name": "Planar Binding",
+  "level": 5,
+  "school": null,
+  "rules": {
+    "castingTime": "1 h",
+    "range": "60 ft",
+    "area": null,
+    "duration": null,
+    "concentration": false,
+    "ritual": false,
+    "components": {
+      "verbal": null,
+      "somatic": null,
+      "material": null,
+      "description": null,
+      "gpCost": null,
+      "consumed": null
+    },
+    "damageTypes": [],
+    "save": {
+      "ability": "CHA",
+      "type": "saving throw"
+    },
+    "attackRoll": false
+  },
+  "source": {
+    "book": "Player's Handbook (2024)",
+    "rulesVersion": "2024",
+    "category": "Core",
+    "sourceSensitive": false
+  },
+  "compendium": {
+    "tier": null,
+    "acquisitionRole": "mandatory",
+    "preparedBaseline": false,
+    "roles": [
+      "strategic-service"
+    ],
+    "summary": "Long-duration service requiring setup, cost and a valid target.",
+    "buildRelevance": [],
+    "warnings": [
+      "The Compendium index is an operating reference, not replacement spell text. Confirm the active D&D Beyond entry before casting."
+    ],
+    "relatedChapters": [
+      11,
+      15,
+      22,
+      47
+    ]
+  },
+  "sourceLocator": "B00191"
+}

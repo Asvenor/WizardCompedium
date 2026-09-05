@@ -1,0 +1,50 @@
+{
+  "id": "grease",
+  "name": "Grease",
+  "level": 1,
+  "school": null,
+  "rules": {
+    "castingTime": "Action",
+    "range": "60 ft",
+    "area": "10-ft sq",
+    "duration": null,
+    "concentration": false,
+    "ritual": false,
+    "components": {
+      "verbal": null,
+      "somatic": null,
+      "material": null,
+      "description": null,
+      "gpCost": null,
+      "consumed": null
+    },
+    "damageTypes": [],
+    "save": {
+      "ability": "DEX",
+      "type": "saving throw"
+    },
+    "attackRoll": false
+  },
+  "source": {
+    "book": "Player's Handbook (2024)",
+    "rulesVersion": "2024",
+    "category": "Core",
+    "sourceSensitive": false
+  },
+  "compendium": {
+    "tier": null,
+    "acquisitionRole": "optional",
+    "preparedBaseline": false,
+    "roles": [],
+    "summary": "Non-concentration Prone/terrain pressure.",
+    "buildRelevance": [],
+    "warnings": [
+      "The Compendium index is an operating reference, not replacement spell text. Confirm the active D&D Beyond entry before casting."
+    ],
+    "relatedChapters": [
+      11,
+      15
+    ]
+  },
+  "sourceLocator": "B00189"
+}

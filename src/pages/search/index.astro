@@ -1,0 +1,23 @@
+---
+import BaseLayout from '@/components/layout/BaseLayout.astro';
+---
+<BaseLayout title="Search" description="Search every migrated chapter, heading, spell, build, German conversion, and reference page.">
+  <div class="site-shell search-shell">
+    <p class="kicker">Full Compendium index</p>
+    <h1>Search everything</h1>
+    <p>Search chapter titles, headings, tables, tactical guidance, spells, builds, German conversion, and source rules.</p>
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
+    <div id="pagefind-search"></div>
+    <script is:inline src="/pagefind/pagefind-ui.js"></script>
+    <script is:inline>
+      new window.PagefindUI({
+        element: '#pagefind-search',
+        showImages: false,
+        showSubResults: true,
+        autofocus: true,
+        excerptLength: 28,
+      });
+    </script>
+    <noscript>Search requires JavaScript. You can still browse all chapters from the Reference hub.</noscript>
+  </div>
+</BaseLayout>

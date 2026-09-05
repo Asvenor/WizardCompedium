@@ -1,0 +1,55 @@
+{
+  "id": "phantom-steed",
+  "name": "Phantom Steed",
+  "level": 3,
+  "school": null,
+  "rules": {
+    "castingTime": "1 m",
+    "range": "30 ft",
+    "area": null,
+    "duration": null,
+    "concentration": false,
+    "ritual": true,
+    "components": {
+      "verbal": null,
+      "somatic": null,
+      "material": null,
+      "description": null,
+      "gpCost": null,
+      "consumed": null
+    },
+    "damageTypes": [],
+    "save": {
+      "ability": null,
+      "type": null
+    },
+    "attackRoll": false
+  },
+  "source": {
+    "book": "Player's Handbook (2024)",
+    "rulesVersion": "2024",
+    "category": "Core",
+    "sourceSensitive": false
+  },
+  "compendium": {
+    "tier": null,
+    "acquisitionRole": "sleeper",
+    "preparedBaseline": false,
+    "roles": [
+      "ritual",
+      "travel"
+    ],
+    "summary": "Fast overland or tactical transport with fragility.",
+    "buildRelevance": [],
+    "warnings": [
+      "The Compendium index is an operating reference, not replacement spell text. Confirm the active D&D Beyond entry before casting."
+    ],
+    "relatedChapters": [
+      11,
+      15,
+      38,
+      47
+    ]
+  },
+  "sourceLocator": "B00191"
+}

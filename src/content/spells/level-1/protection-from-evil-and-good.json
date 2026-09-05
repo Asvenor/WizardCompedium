@@ -1,0 +1,55 @@
+{
+  "id": "protection-from-evil-and-good",
+  "name": "Protection from Evil and Good",
+  "level": 1,
+  "school": null,
+  "rules": {
+    "castingTime": null,
+    "range": null,
+    "area": null,
+    "duration": null,
+    "concentration": true,
+    "ritual": false,
+    "components": {
+      "verbal": null,
+      "somatic": null,
+      "material": null,
+      "description": null,
+      "gpCost": null,
+      "consumed": null
+    },
+    "damageTypes": [],
+    "save": {
+      "ability": null,
+      "type": null
+    },
+    "attackRoll": false
+  },
+  "source": {
+    "book": null,
+    "rulesVersion": "2024 baseline unless active entry says otherwise",
+    "category": "Core / active entry",
+    "sourceSensitive": false
+  },
+  "compendium": {
+    "tier": null,
+    "acquisitionRole": "optional",
+    "preparedBaseline": false,
+    "roles": [
+      "concentration",
+      "protection"
+    ],
+    "summary": "Defense against listed creature types and effects.",
+    "buildRelevance": [],
+    "warnings": [
+      "The Compendium index is an operating reference, not replacement spell text. Confirm the active D&D Beyond entry before casting."
+    ],
+    "relatedChapters": [
+      11,
+      13,
+      15,
+      47
+    ]
+  },
+  "sourceLocator": "B00142"
+}

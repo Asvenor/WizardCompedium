@@ -1,0 +1,33 @@
+---
+title: "Anti-Wizard Counterplay and Recovery"
+chapter: 52
+order: 52
+part: "Part VII"
+partTitle: "EXPANSIONS & PLAY TOOLS"
+hub: "combat"
+sourceLocator: "B00807"
+description: "A min-maxed Wizard is strongest when the player anticipates the tools that intelligent enemies use against concentration, sight, components, positioning, reactions, rest, and the spellbook. Use the matrix from left to right: tell, prevent, respond, recover."
+---
+<!-- source:B00808 -->
+A min-maxed Wizard is strongest when the player anticipates the tools that intelligent enemies use against concentration, sight, components, positioning, reactions, rest, and the spellbook. Use the matrix from left to right: tell, prevent, respond, recover.
+
+<!-- source:B00809 -->
+<div class="table-wrap" data-source-locator="B00809" tabindex="0"><table><thead><tr><th scope="col">Enemy plan</th><th scope="col">Early tell</th><th scope="col">Prevent</th><th scope="col">Immediate response</th><th scope="col">Recovery</th></tr></thead><tbody><tr><td>Concentration focus fire</td><td>Readied attacks, many small hits</td><td>Cover, distance, save support</td><td>Reposition; use a non-concentration answer</td><td>Restore defenses; change lane</td></tr><tr><td>Sight denial</td><td>Fog, darkness, blind effects, corners</td><td>Scout; spread sight-dependent duties</td><td>Choose a spell that does not require sight</td><td>Re-establish line of sight safely</td></tr><tr><td>Verbal-component denial</td><td>Silence, gag, underwater plan</td><td>Avoid clustering; carry a no-verbal fallback</td><td>Leave the area or use an eligible spell</td><td>Reset position and component access</td></tr><tr><td>Hands / component pressure</td><td>Restraints, confiscation, forced climbing</td><td>Know free-hand and focus plan</td><td>Use a legally castable fallback</td><td>Recover focus, pouch, gear</td></tr><tr><td>Counterspell pressure</td><td>Enemy caster holding reaction</td><td>Range, cover, bait, ally timing</td><td>Use the agreed counterplay protocol</td><td>Change angle; exhaust reactions</td></tr><tr><td>Dispel pressure</td><td>Enemy waits for a persistent effect</td><td>Do not hinge the entire plan on one effect</td><td>Protect the objective, not sunk cost</td><td>Recast only if outcome warrants</td></tr><tr><td>Forced movement / hazards</td><td>Ledges, zones, grapplers</td><td>Anchor position; leave escape squares</td><td>Escape the hazard before optimizing damage</td><td>Rebuild formation</td></tr><tr><td>Null-magic environment</td><td>Known ward, antimagic, dead zone</td><td>Carry mundane tools and ally plan</td><td>Exit the zone; support physically</td><td>Re-enter at a controlled edge</td></tr><tr><td>Ambush / rest denial</td><td>Tracking, alarms, unsafe camp</td><td>Watch plan, secure housing, reserve slots</td><td>Survive with low-cost actions</td><td>Relocate; audit resources</td></tr><tr><td>Spellbook / focus capture</td><td>Searches, prison, theft attempts</td><td>Backup book, dispersed components</td><td>Use prepared and component-legal options</td><td>Follow <a href="/chapters/34-failure-capture-death-and-recovery/">Chapter 34</a>/35 recovery</td></tr></tbody></table></div>
+
+<!-- source:B00810 -->
+## What Actually Stops What
+
+<!-- source:B00811 -->
+<div class="table-wrap" data-source-locator="B00811" tabindex="0"><table><thead><tr><th scope="col">Pressure</th><th scope="col">Does not automatically mean</th><th scope="col">Check instead</th></tr></thead><tbody><tr><td>Grappled or Restrained</td><td>A universal ban on spellcasting</td><td>Does the chosen spell require a hand, movement, sight, or a target/path you no longer have?</td></tr><tr><td>Blinded / heavily obscured</td><td>Every spell fails</td><td>Does the spell say you must see the target or point? Is the path blocked?</td></tr><tr><td>Silence</td><td>All magic stops</td><td>Does the spell have a verbal component, and can you leave the area?</td></tr><tr><td>Missing focus</td><td>All prepared spells are unusable</td><td>Which spells need a non-costly material component, a costly component, or no material component?</td></tr><tr><td>Total Cover</td><td>Only disadvantage</td><td>A clear path to the target is normally required; choose a legal target or move.</td></tr><tr><td>Incapacitated</td><td>Only lost actions</td><td>Concentration ends; execute the emergency branch immediately.</td></tr><tr><td>Dispel Magic</td><td>Every magical benefit disappears</td><td>Identify the qualifying spell effect and apply the exact selected rules text.</td></tr></tbody></table></div>
+
+<!-- source:B00812 -->
+## Recovery Ladder
+
+<!-- source:B00813 -->
+<div class="table-wrap" data-source-locator="B00813" tabindex="0"><table><thead><tr><th scope="col">Window</th><th scope="col">Priority</th><th scope="col">Audit</th></tr></thead><tbody><tr><td>Same turn</td><td>Live, break the lock, restore legal action</td><td>Position, sight, hands, components, reaction, concentration</td></tr><tr><td>Same encounter</td><td>Recover the objective without chasing sunk resources</td><td>Cantrip/ritual/gear/ally substitution; escape route</td></tr><tr><td>Short rest</td><td>Repair hit-point and limited-feature plan</td><td>Watch, attunement, charges, spellbook security</td></tr><tr><td>Long rest</td><td>Rebuild preparation and reserve structure</td><td>Threat-specific overlay; backup components; camp safety</td></tr><tr><td>Town / campaign</td><td>Replace books, favors, contacts, housing</td><td><a href="/chapters/31-spellbook-operations-and-copy-priority/">Chapter 31</a>-35 and 41 recovery assets</td></tr></tbody></table></div>
+
+<!-- source:B00814 -->
+## Enemy-AI Stress Test
+
+<!-- source:B00815 -->
+<div class="table-wrap" data-source-locator="B00815" tabindex="0"><table><thead><tr><th scope="col">Ask before the session</th><th scope="col">If yes</th><th scope="col">Wizard preparation</th></tr></thead><tbody><tr><td>Would enemies recognize the Wizard?</td><td>Focus fire and reaction pressure are plausible</td><td>Disguise role, use cover, vary opener</td></tr><tr><td>Can they attack sight, speech, hands, or focus?</td><td>A component-safe fallback is required</td><td>Tag prepared spells by component and sight</td></tr><tr><td>Can they force movement or isolate allies?</td><td>Formation is part of concentration defense</td><td>Declare anchor square and extraction</td></tr><tr><td>Can they deny rest or steal equipment?</td><td>Long-day and capture plans matter</td><td>Reserve resources; distribute backups</td></tr><tr><td>Can they ignore the default damage/control type?</td><td>The build needs a second tactical lane</td><td>Prepare geometry, utility, or ally enablement</td></tr></tbody></table></div>

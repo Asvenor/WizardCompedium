@@ -1,0 +1,75 @@
+# Migration content inventory
+
+Primary source: `Ultimate_Wizard_Compendium_FINAL_v1.14_DDB_Verified_Corrected.docx`
+
+- 61 numbered chapters across 8 parts
+- 631 direct paragraphs
+- 375 top-level tables
+- 193 nested tables
+- 396 headings in the full outline
+- 1 source image, preserved in Chapter 20
+- 154 canonical Compendium spell records discovered from the Master Spellbook Pool and structured spell indexes
+
+## Chapters
+
+- Chapter 1: How to Use the Compendium and Source Rules (Part I; B00010)
+- Chapter 2: Core Wizard Engine (Part I; B00021)
+- Chapter 3: Optimization Mathematics and Target Selection (Part I; B00034)
+- Chapter 4: Build Selection and Priority Matrix (Part II; B00055)
+- Chapter 5: Flagship Artificer 1 / Wizard 19 (Part II; B00072)
+- Chapter 6: Chronurgy, Diviner, and Illusionist Wizard Variants (Part II; B00081)
+- Chapter 7: Bladesinger Wizard (Part II; B00098)
+- Chapter 8: Wizard Tank (Part II; B00108)
+- Chapter 9: Fighter 1 / Wizard 19 Alternative (Part II; B00113)
+- Chapter 10: Compact Spell Progression Roadmap (Part III; B00119)
+- Chapter 11: Wizard Spell Master Table & Research Bank (Part III; B00139)
+- Chapter 12: Spell Acquisition and Preparation Scorecard (Part III; B00149)
+- Chapter 13: Prepared Spell Packages (Part III; B00167)
+- Chapter 14: Spell Replacement Ladders (Part III; B00178)
+- Chapter 15: Master Spell Tag Index (Part III; B00185)
+- Chapter 16: Chronurgy Dunamancy Spell Dossier (Part III; B00196)
+- Chapter 17: Skills, Feats, Epic Boons, and Species (Part III; B00207)
+- Chapter 18: Combat Decision Engine (Part IV; B00248)
+- Chapter 19: 2024 Spellcasting Legality Reference (Part IV; B00270)
+- Chapter 20: Condition Interaction and Area Geometry (Part IV; B00277)
+- Chapter 21: Casting Interface Quick Reference (Part IV; B00287)
+- Chapter 22: Optional Advanced Appendix: Campaign-Warping Wizard Engines (Part IV; B00295)
+- Chapter 23: High-Level Magic Safety Matrix (Part IV; B00369)
+- Chapter 24: Countermagic, Illusions, Familiars, and Fair Information (Part IV; B00387)
+- Chapter 25: Spell Components and Resource Acquisition (Part V; B00409)
+- Chapter 26: Items, Loot, and Attunement Priorities (Part V; B00420)
+- Chapter 27: Magic-Item Use, Attunement, and Recharge Matrix (Part V; B00443)
+- Chapter 28: Tool and Crafting Tier List (Part V; B00448)
+- Chapter 29: Magic-Item Crafting Quick Guide (Part V; B00455)
+- Chapter 30: Rest, Camp, Town, and Downtime Optimization (Part V; B00476)
+- Chapter 31: Spellbook Operations and Copy Priority (Part V; B00502)
+- Chapter 32: Scroll Use, Backup Books, and Security (Part V; B00515)
+- Chapter 33: Wizard Economy, Income, Contracts, and Reputation (Part V; B00531)
+- Chapter 34: Failure, Capture, Death, and Recovery (Part V; B00553)
+- Chapter 35: Emergency Wizard Protocol (Part V; B00570)
+- Chapter 36: Objective-Based Mission Play (Part V; B00578)
+- Chapter 37: Noncombat Wizard Operations (Part V; B00592)
+- Chapter 38: Exploration and Environmental Operations (Part V; B00604)
+- Chapter 39: Pre-Adventure Loadout Matrix (Part V; B00620)
+- Chapter 40: Minion, Summon, and Follower Management (Part V; B00632)
+- Chapter 41: Wizard Housing, Bastions, and Strongholds (Part V; B00655)
+- Chapter 42: Campaign Optimization Modules (Part VI; B00703)
+- Chapter 43: German Table Conversion Cheat Sheet (Part VI; B00712)
+- Chapter 44: Universal Level-Up Audit (Part VI; B00734)
+- Chapter 45: Concentration and Reaction Master Matrix (Part VI; B00738)
+- Chapter 46: Problem-to-Answer Finder (Part VI; B00747)
+- Chapter 47: Alphabetical Spell and Feature Index (Part VI; B00754)
+- Chapter 48: Sources and Verification (Part VI; B00766)
+- Chapter 49: How to Find Anything (Part VI; B00785)
+- Chapter 50: Complete Selectable Wizard Subclass Matrix (Part VII; B00793)
+- Chapter 51: Source-Version Conflict Rules (Part VII; B00800)
+- Chapter 52: Anti-Wizard Counterplay and Recovery (Part VII; B00807)
+- Chapter 53: Party Synergy and Spell Ownership (Part VII; B00816)
+- Chapter 54: One-Page Build Reference Sheets (Part VII; B00825)
+- Chapter 55: Actual-Play Validation Standard (Part VII; B00897)
+- Chapter 56: Arcana Unleashed Release Intake (Part VII; B00904)
+- Chapter 57: D&D Beyond Builder Setup Guide (Part VIII; B00919)
+- Chapter 58: Worked Encounter Playbooks (Part VIII; B00931)
+- Chapter 59: Enemy Defense & Targeting Matrix (Part VIII; B00938)
+- Chapter 60: Spell-Slot Budget Rules (Part VIII; B00944)
+- Chapter 61: Session-Zero Compatibility Rules (Part VIII; B00953)

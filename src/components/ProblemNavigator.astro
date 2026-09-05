@@ -1,0 +1,46 @@
+---
+import problems from '@/data/problem-navigator.json';
+interface Props { compact?: boolean; }
+const { compact = false } = Astro.props;
+const groups = compact ? problems.quick : [...problems.quick, ...problems.detailed];
+---
+<div class="problem-surface" data-problem-navigator>
+  <div class="problem-toolbar">
+    <input class="field" type="search" placeholder="Describe the problem…" aria-label="Filter problems" data-problem-search />
+    <select class="field" aria-label="Problem category" data-problem-category>
+      <option value="">All categories</option>
+      {groups.map((group) => <option value={group.title}>{group.title}</option>)}
+    </select>
+  </div>
+  <div class="problem-list">
+    {groups.flatMap((group) => group.items.map((item) => (
+      <article class="problem-card" data-category={group.title} data-search={`${item.problem} ${'answer' in item ? item.answer : ''} ${'check' in item ? item.check : ''}`}>
+        <h3>{item.problem}</h3>
+        {'answer' in item && <p>{item.answer}</p>}
+        {'check' in item && item.check && <p><strong>Check first:</strong> {item.check}</p>}
+        <div class="chapter-chips">
+          {item.chapters.map((chapter) => <a class="chapter-chip" href={`/chapters/${chapter.slug}/`}>Ch. {chapter.number}</a>)}
+        </div>
+      </article>
+    )))}
+  </div>
+</div>
+<script>
+  document.querySelectorAll<HTMLElement>('[data-problem-navigator]').forEach((navigator) => {
+    const search = navigator.querySelector<HTMLInputElement>('[data-problem-search]');
+    const category = navigator.querySelector<HTMLSelectElement>('[data-problem-category]');
+    const cards = [...navigator.querySelectorAll<HTMLElement>('[data-search]')];
+    if (!search || !category) return;
+    const update = () => {
+      const query = search.value.trim().toLowerCase();
+      const selected = category.value;
+      cards.forEach((card) => {
+        const matchesQuery = !query || (card.dataset.search ?? '').toLowerCase().includes(query);
+        const matchesCategory = !selected || card.dataset.category === selected;
+        card.hidden = !(matchesQuery && matchesCategory);
+      });
+    };
+    search.addEventListener('input', update);
+    category.addEventListener('change', update);
+  });
+</script>

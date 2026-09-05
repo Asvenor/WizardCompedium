@@ -1,0 +1,879 @@
+{
+  "quick": [
+    {
+      "title": "BUILD / RULES",
+      "items": [
+        {
+          "problem": "Choose a build",
+          "chapters": [
+            {
+              "number": 4,
+              "title": "Build Selection and Priority Matrix",
+              "slug": "04-build-selection-and-priority-matrix"
+            },
+            {
+              "number": 50,
+              "title": "Complete Selectable Wizard Subclass Matrix",
+              "slug": "50-complete-selectable-wizard-subclass-matrix"
+            }
+          ]
+        },
+        {
+          "problem": "Need a one-page build script",
+          "chapters": [
+            {
+              "number": 54,
+              "title": "One-Page Build Reference Sheets",
+              "slug": "54-one-page-build-reference-sheets"
+            }
+          ]
+        },
+        {
+          "problem": "Plan a level-up",
+          "chapters": [
+            {
+              "number": 10,
+              "title": "Compact Spell Progression Roadmap",
+              "slug": "10-compact-spell-progression-roadmap"
+            },
+            {
+              "number": 44,
+              "title": "Universal Level-Up Audit",
+              "slug": "44-universal-level-up-audit"
+            }
+          ]
+        },
+        {
+          "problem": "Learn or copy a spell",
+          "chapters": [
+            {
+              "number": 11,
+              "title": "Wizard Spell Master Table & Research Bank",
+              "slug": "11-wizard-spell-master-table-and-research-bank"
+            },
+            {
+              "number": 15,
+              "title": "Master Spell Tag Index",
+              "slug": "15-master-spell-tag-index"
+            },
+            {
+              "number": 31,
+              "title": "Spellbook Operations and Copy Priority",
+              "slug": "31-spellbook-operations-and-copy-priority"
+            }
+          ]
+        },
+        {
+          "problem": "Prepare spells today",
+          "chapters": [
+            {
+              "number": 13,
+              "title": "Prepared Spell Packages",
+              "slug": "13-prepared-spell-packages"
+            },
+            {
+              "number": 39,
+              "title": "Pre-Adventure Loadout Matrix",
+              "slug": "39-pre-adventure-loadout-matrix"
+            }
+          ]
+        },
+        {
+          "problem": "Find a spell or feature",
+          "chapters": [
+            {
+              "number": 47,
+              "title": "Alphabetical Spell and Feature Index",
+              "slug": "47-alphabetical-spell-and-feature-index"
+            },
+            {
+              "number": 49,
+              "title": "How to Find Anything",
+              "slug": "49-how-to-find-anything"
+            }
+          ]
+        },
+        {
+          "problem": "Casting legality or components",
+          "chapters": [
+            {
+              "number": 19,
+              "title": "2024 Spellcasting Legality Reference",
+              "slug": "19-2024-spellcasting-legality-reference"
+            },
+            {
+              "number": 21,
+              "title": "Casting Interface Quick Reference",
+              "slug": "21-casting-interface-quick-reference"
+            },
+            {
+              "number": 25,
+              "title": "Spell Components and Resource Acquisition",
+              "slug": "25-spell-components-and-resource-acquisition"
+            }
+          ]
+        },
+        {
+          "problem": "Condition or area question",
+          "chapters": [
+            {
+              "number": 20,
+              "title": "Condition Interaction and Area Geometry",
+              "slug": "20-condition-interaction-and-area-geometry"
+            },
+            {
+              "number": 24,
+              "title": "Countermagic, Illusions, Familiars, and Fair Information",
+              "slug": "24-countermagic-illusions-familiars-and-fair-information"
+            }
+          ]
+        },
+        {
+          "problem": "Source or version conflict",
+          "chapters": [
+            {
+              "number": 48,
+              "title": "Sources and Verification",
+              "slug": "48-sources-and-verification"
+            },
+            {
+              "number": 51,
+              "title": "Source-Version Conflict Rules",
+              "slug": "51-source-version-conflict-rules"
+            }
+          ]
+        },
+        {
+          "problem": "Set up in D&D Beyond",
+          "chapters": [
+            {
+              "number": 57,
+              "title": "D&D Beyond Builder Setup Guide",
+              "slug": "57-d-and-d-beyond-builder-setup-guide"
+            }
+          ]
+        },
+        {
+          "problem": "Session-zero rules/settings",
+          "chapters": [
+            {
+              "number": 61,
+              "title": "Session-Zero Compatibility Rules",
+              "slug": "61-session-zero-compatibility-rules"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "COMBAT / FAILURE",
+      "items": [
+        {
+          "problem": "Enemy counters my Wizard",
+          "chapters": [
+            {
+              "number": 52,
+              "title": "Anti-Wizard Counterplay and Recovery",
+              "slug": "52-anti-wizard-counterplay-and-recovery"
+            },
+            {
+              "number": 35,
+              "title": "Emergency Wizard Protocol",
+              "slug": "35-emergency-wizard-protocol"
+            }
+          ]
+        },
+        {
+          "problem": "Concentration keeps dropping",
+          "chapters": [
+            {
+              "number": 18,
+              "title": "Combat Decision Engine",
+              "slug": "18-combat-decision-engine"
+            },
+            {
+              "number": 45,
+              "title": "Concentration and Reaction Master Matrix",
+              "slug": "45-concentration-and-reaction-master-matrix"
+            },
+            {
+              "number": 52,
+              "title": "Anti-Wizard Counterplay and Recovery",
+              "slug": "52-anti-wizard-counterplay-and-recovery"
+            }
+          ]
+        },
+        {
+          "problem": "Reaction conflict",
+          "chapters": [
+            {
+              "number": 18,
+              "title": "Combat Decision Engine",
+              "slug": "18-combat-decision-engine"
+            },
+            {
+              "number": 24,
+              "title": "Countermagic, Illusions, Familiars, and Fair Information",
+              "slug": "24-countermagic-illusions-familiars-and-fair-information"
+            },
+            {
+              "number": 45,
+              "title": "Concentration and Reaction Master Matrix",
+              "slug": "45-concentration-and-reaction-master-matrix"
+            }
+          ]
+        },
+        {
+          "problem": "Need an emergency escape",
+          "chapters": [
+            {
+              "number": 34,
+              "title": "Failure, Capture, Death, and Recovery",
+              "slug": "34-failure-capture-death-and-recovery"
+            },
+            {
+              "number": 35,
+              "title": "Emergency Wizard Protocol",
+              "slug": "35-emergency-wizard-protocol"
+            }
+          ]
+        },
+        {
+          "problem": "Captured or lost spellbook",
+          "chapters": [
+            {
+              "number": 31,
+              "title": "Spellbook Operations and Copy Priority",
+              "slug": "31-spellbook-operations-and-copy-priority"
+            },
+            {
+              "number": 32,
+              "title": "Scroll Use, Backup Books, and Security",
+              "slug": "32-scroll-use-backup-books-and-security"
+            },
+            {
+              "number": 34,
+              "title": "Failure, Capture, Death, and Recovery",
+              "slug": "34-failure-capture-death-and-recovery"
+            }
+          ]
+        },
+        {
+          "problem": "Counterspell or Dispel problem",
+          "chapters": [
+            {
+              "number": 23,
+              "title": "High-Level Magic Safety Matrix",
+              "slug": "23-high-level-magic-safety-matrix"
+            },
+            {
+              "number": 24,
+              "title": "Countermagic, Illusions, Familiars, and Fair Information",
+              "slug": "24-countermagic-illusions-familiars-and-fair-information"
+            }
+          ]
+        },
+        {
+          "problem": "High-level magic risk",
+          "chapters": [
+            {
+              "number": 22,
+              "title": "Optional Advanced Appendix: Campaign-Warping Wizard Engines",
+              "slug": "22-optional-advanced-appendix-campaign-warping-wizard-engines"
+            },
+            {
+              "number": 23,
+              "title": "High-Level Magic Safety Matrix",
+              "slug": "23-high-level-magic-safety-matrix"
+            }
+          ]
+        },
+        {
+          "problem": "Illusion or familiar ruling",
+          "chapters": [
+            {
+              "number": 24,
+              "title": "Countermagic, Illusions, Familiars, and Fair Information",
+              "slug": "24-countermagic-illusions-familiars-and-fair-information"
+            }
+          ]
+        },
+        {
+          "problem": "Summons, minions, or followers",
+          "chapters": [
+            {
+              "number": 40,
+              "title": "Minion, Summon, and Follower Management",
+              "slug": "40-minion-summon-and-follower-management"
+            },
+            {
+              "number": 52,
+              "title": "Anti-Wizard Counterplay and Recovery",
+              "slug": "52-anti-wizard-counterplay-and-recovery"
+            }
+          ]
+        },
+        {
+          "problem": "Need a worked encounter plan",
+          "chapters": [
+            {
+              "number": 58,
+              "title": "Worked Encounter Playbooks",
+              "slug": "58-worked-encounter-playbooks"
+            }
+          ]
+        },
+        {
+          "problem": "Which defense should I target?",
+          "chapters": [
+            {
+              "number": 3,
+              "title": "Optimization Mathematics and Target Selection",
+              "slug": "03-optimization-mathematics-and-target-selection"
+            },
+            {
+              "number": 59,
+              "title": "Enemy Defense & Targeting Matrix",
+              "slug": "59-enemy-defense-and-targeting-matrix"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "CAMPAIGN / OPERATIONS",
+      "items": [
+        {
+          "problem": "Party roles overlap",
+          "chapters": [
+            {
+              "number": 13,
+              "title": "Prepared Spell Packages",
+              "slug": "13-prepared-spell-packages"
+            },
+            {
+              "number": 53,
+              "title": "Party Synergy and Spell Ownership",
+              "slug": "53-party-synergy-and-spell-ownership"
+            }
+          ]
+        },
+        {
+          "problem": "Objective or mission plan",
+          "chapters": [
+            {
+              "number": 36,
+              "title": "Objective-Based Mission Play",
+              "slug": "36-objective-based-mission-play"
+            },
+            {
+              "number": 39,
+              "title": "Pre-Adventure Loadout Matrix",
+              "slug": "39-pre-adventure-loadout-matrix"
+            }
+          ]
+        },
+        {
+          "problem": "Exploration or problem solving",
+          "chapters": [
+            {
+              "number": 37,
+              "title": "Noncombat Wizard Operations",
+              "slug": "37-noncombat-wizard-operations"
+            },
+            {
+              "number": 38,
+              "title": "Exploration and Environmental Operations",
+              "slug": "38-exploration-and-environmental-operations"
+            }
+          ]
+        },
+        {
+          "problem": "Rest, camp, or downtime",
+          "chapters": [
+            {
+              "number": 30,
+              "title": "Rest, Camp, Town, and Downtime Optimization",
+              "slug": "30-rest-camp-town-and-downtime-optimization"
+            },
+            {
+              "number": 41,
+              "title": "Wizard Housing, Bastions, and Strongholds",
+              "slug": "41-wizard-housing-bastions-and-strongholds"
+            }
+          ]
+        },
+        {
+          "problem": "Housing or Bastions",
+          "chapters": [
+            {
+              "number": 41,
+              "title": "Wizard Housing, Bastions, and Strongholds",
+              "slug": "41-wizard-housing-bastions-and-strongholds"
+            }
+          ]
+        },
+        {
+          "problem": "Items or attunement",
+          "chapters": [
+            {
+              "number": 26,
+              "title": "Items, Loot, and Attunement Priorities",
+              "slug": "26-items-loot-and-attunement-priorities"
+            },
+            {
+              "number": 27,
+              "title": "Magic-Item Use, Attunement, and Recharge Matrix",
+              "slug": "27-magic-item-use-attunement-and-recharge-matrix"
+            }
+          ]
+        },
+        {
+          "problem": "Crafting or tools",
+          "chapters": [
+            {
+              "number": 28,
+              "title": "Tool and Crafting Tier List",
+              "slug": "28-tool-and-crafting-tier-list"
+            },
+            {
+              "number": 29,
+              "title": "Magic-Item Crafting Quick Guide",
+              "slug": "29-magic-item-crafting-quick-guide"
+            }
+          ]
+        },
+        {
+          "problem": "Money or components",
+          "chapters": [
+            {
+              "number": 25,
+              "title": "Spell Components and Resource Acquisition",
+              "slug": "25-spell-components-and-resource-acquisition"
+            },
+            {
+              "number": 33,
+              "title": "Wizard Economy, Income, Contracts, and Reputation",
+              "slug": "33-wizard-economy-income-contracts-and-reputation"
+            }
+          ]
+        },
+        {
+          "problem": "Test or update new content",
+          "chapters": [
+            {
+              "number": 50,
+              "title": "Complete Selectable Wizard Subclass Matrix",
+              "slug": "50-complete-selectable-wizard-subclass-matrix"
+            },
+            {
+              "number": 55,
+              "title": "Actual-Play Validation Standard",
+              "slug": "55-actual-play-validation-standard"
+            },
+            {
+              "number": 56,
+              "title": "Arcana Unleashed Release Intake",
+              "slug": "56-arcana-unleashed-release-intake"
+            }
+          ]
+        },
+        {
+          "problem": "Budget spell slots",
+          "chapters": [
+            {
+              "number": 60,
+              "title": "Spell-Slot Budget Rules",
+              "slug": "60-spell-slot-budget-rules"
+            }
+          ]
+        },
+        {
+          "problem": "Validate after a rules update",
+          "chapters": [
+            {
+              "number": 51,
+              "title": "Source-Version Conflict Rules",
+              "slug": "51-source-version-conflict-rules"
+            },
+            {
+              "number": 56,
+              "title": "Arcana Unleashed Release Intake",
+              "slug": "56-arcana-unleashed-release-intake"
+            },
+            {
+              "number": 57,
+              "title": "D&D Beyond Builder Setup Guide",
+              "slug": "57-d-and-d-beyond-builder-setup-guide"
+            }
+          ]
+        },
+        {
+          "problem": "Copying Spells",
+          "chapters": [
+            {
+              "number": 31,
+              "title": "Spellbook Operations and Copy Priority",
+              "slug": "31-spellbook-operations-and-copy-priority"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "detailed": [
+    {
+      "title": "Combat problems",
+      "items": [
+        {
+          "problem": "Many weak enemies",
+          "answer": "Area control, sight denial, terrain, or area damage that removes actions quickly.",
+          "check": "Spacing, allies in the area, immunity and concentration cost.",
+          "chapters": [
+            {
+              "number": 18,
+              "title": "Combat Decision Engine",
+              "slug": "18-combat-decision-engine"
+            }
+          ]
+        },
+        {
+          "problem": "Narrow choke point",
+          "answer": "Web, difficult terrain, walls, persistent hazards and ranged pressure.",
+          "check": "Alternate routes, teleportation and line of sight.",
+          "chapters": [
+            {
+              "number": 18,
+              "title": "Combat Decision Engine",
+              "slug": "18-combat-decision-engine"
+            }
+          ]
+        },
+        {
+          "problem": "Single dangerous melee enemy",
+          "answer": "Distance, forced movement, removal, walls, mobility and no-save isolation.",
+          "check": "Reach, mobility, legendary traits and objective pressure.",
+          "chapters": [
+            {
+              "number": 18,
+              "title": "Combat Decision Engine",
+              "slug": "18-combat-decision-engine"
+            },
+            {
+              "number": 22,
+              "title": "Optional Advanced Appendix: Campaign-Warping Wizard Engines",
+              "slug": "22-optional-advanced-appendix-campaign-warping-wizard-engines"
+            }
+          ]
+        },
+        {
+          "problem": "High Armor Class",
+          "answer": "Saving throws, automatic effects, buffs, terrain and no-save control.",
+          "check": "Do not infer weak saves without evidence.",
+          "chapters": [
+            {
+              "number": 3,
+              "title": "Optimization Mathematics and Target Selection",
+              "slug": "03-optimization-mathematics-and-target-selection"
+            },
+            {
+              "number": 18,
+              "title": "Combat Decision Engine",
+              "slug": "18-combat-decision-engine"
+            }
+          ]
+        },
+        {
+          "problem": "Strong visible physical defenses",
+          "answer": "Mental saves, information, terrain and effects that do not ask that defense.",
+          "check": "Creature type and observed behavior are clues, not certainty.",
+          "chapters": [
+            {
+              "number": 3,
+              "title": "Optimization Mathematics and Target Selection",
+              "slug": "03-optimization-mathematics-and-target-selection"
+            }
+          ]
+        },
+        {
+          "problem": "Strong visible mental defenses",
+          "answer": "Physical saves, walls, movement control, buffs, summons or damage.",
+          "check": "Avoid stereotyping unknown creatures from appearance alone.",
+          "chapters": [
+            {
+              "number": 3,
+              "title": "Optimization Mathematics and Target Selection",
+              "slug": "03-optimization-mathematics-and-target-selection"
+            }
+          ]
+        },
+        {
+          "problem": "Legendary Resistance",
+          "answer": "Bypass with walls, terrain, buffs and no-save pressure; burn only with coordinated serious saves.",
+          "check": "Party ability to force enough valuable saves.",
+          "chapters": [
+            {
+              "number": 3,
+              "title": "Optimization Mathematics and Target Selection",
+              "slug": "03-optimization-mathematics-and-target-selection"
+            }
+          ]
+        },
+        {
+          "problem": "Magic Resistance",
+          "answer": "No-save effects, attack rolls, terrain, summons and repeated lower-cost tests.",
+          "check": "The exact feature and whether it applies.",
+          "chapters": [
+            {
+              "number": 18,
+              "title": "Combat Decision Engine",
+              "slug": "18-combat-decision-engine"
+            }
+          ]
+        },
+        {
+          "problem": "Enemy caster",
+          "answer": "Sight denial, Counterspell discipline, Dispel Magic, Sleet Storm and separation.",
+          "check": "Reaction range, visibility and what the spell would accomplish.",
+          "chapters": [
+            {
+              "number": 24,
+              "title": "Countermagic, Illusions, Familiars, and Fair Information",
+              "slug": "24-countermagic-illusions-familiars-and-fair-information"
+            }
+          ]
+        },
+        {
+          "problem": "Invisible or concealed enemy",
+          "answer": "See Invisibility, True Seeing, area effects, readied actions and movement denial.",
+          "check": "Whether the problem is invisibility, darkness, cover or concealment.",
+          "chapters": [
+            {
+              "number": 24,
+              "title": "Countermagic, Illusions, Familiars, and Fair Information",
+              "slug": "24-countermagic-illusions-familiars-and-fair-information"
+            }
+          ]
+        },
+        {
+          "problem": "Flying enemy",
+          "answer": "Ranged control, flight, forced landing, walls, summons and protected ranged allies.",
+          "check": "Height, range, falling consequences and concentration.",
+          "chapters": [
+            {
+              "number": 38,
+              "title": "Exploration and Environmental Operations",
+              "slug": "38-exploration-and-environmental-operations"
+            }
+          ]
+        },
+        {
+          "problem": "Teleporting enemy",
+          "answer": "Objective control, spread reactions, destination denial and effects that remain valuable after movement.",
+          "check": "Observed teleport type and restrictions.",
+          "chapters": [
+            {
+              "number": 18,
+              "title": "Combat Decision Engine",
+              "slug": "18-combat-decision-engine"
+            },
+            {
+              "number": 38,
+              "title": "Exploration and Environmental Operations",
+              "slug": "38-exploration-and-environmental-operations"
+            }
+          ]
+        },
+        {
+          "problem": "Ambush or poor formation",
+          "answer": "Fog, cover, immediate control, rescue movement and retreat routes.",
+          "check": "Who can act, visible exits and whether regrouping is possible.",
+          "chapters": [
+            {
+              "number": 18,
+              "title": "Combat Decision Engine",
+              "slug": "18-combat-decision-engine"
+            },
+            {
+              "number": 36,
+              "title": "Objective-Based Mission Play",
+              "slug": "36-objective-based-mission-play"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Exploration, objective and resource problems",
+      "items": [
+        {
+          "problem": "Party surrounded",
+          "answer": "Area control, walls, forced movement, mobility and selective damage.",
+          "check": "Avoid trapping allies or blocking the retreat.",
+          "chapters": [
+            {
+              "number": 18,
+              "title": "Combat Decision Engine",
+              "slug": "18-combat-decision-engine"
+            }
+          ]
+        },
+        {
+          "problem": "Ally down or isolated",
+          "answer": "Rescue movement, protective control, walls, sphere effects and retreat.",
+          "check": "Action order, range and whether healing alone solves the danger.",
+          "chapters": [
+            {
+              "number": 34,
+              "title": "Failure, Capture, Death, and Recovery",
+              "slug": "34-failure-capture-death-and-recovery"
+            },
+            {
+              "number": 36,
+              "title": "Objective-Based Mission Play",
+              "slug": "36-objective-based-mission-play"
+            }
+          ]
+        },
+        {
+          "problem": "Need to escape",
+          "answer": "Fog, walls, movement, teleportation, mounts and pursuit denial.",
+          "check": "Destination safety and who must be moved.",
+          "chapters": [
+            {
+              "number": 36,
+              "title": "Objective-Based Mission Play",
+              "slug": "36-objective-based-mission-play"
+            },
+            {
+              "number": 38,
+              "title": "Exploration and Environmental Operations",
+              "slug": "38-exploration-and-environmental-operations"
+            }
+          ]
+        },
+        {
+          "problem": "Protected objective",
+          "answer": "Zone control, walls, scouting, communication and delaying actions.",
+          "check": "Actual victory condition and failure timer.",
+          "chapters": [
+            {
+              "number": 36,
+              "title": "Objective-Based Mission Play",
+              "slug": "36-objective-based-mission-play"
+            }
+          ]
+        },
+        {
+          "problem": "Infiltration or heist",
+          "answer": "Disguise, invisibility, divination, remote manipulation, silence and exit preparation.",
+          "check": "Witnesses, concentration and physical evidence.",
+          "chapters": [
+            {
+              "number": 37,
+              "title": "Noncombat Wizard Operations",
+              "slug": "37-noncombat-wizard-operations"
+            }
+          ]
+        },
+        {
+          "problem": "Unknown location or route",
+          "answer": "Familiar scouting, Arcane Eye, maps, divinations, contacts and staged teleportation.",
+          "check": "Legality, destination knowledge and fallback route.",
+          "chapters": [
+            {
+              "number": 37,
+              "title": "Noncombat Wizard Operations",
+              "slug": "37-noncombat-wizard-operations"
+            },
+            {
+              "number": 38,
+              "title": "Exploration and Environmental Operations",
+              "slug": "38-exploration-and-environmental-operations"
+            }
+          ]
+        },
+        {
+          "problem": "Curse or ongoing magical effect",
+          "answer": "Identify the exact effect, then compare Dispel Magic, Remove Curse support and source-specific answers.",
+          "check": "Whether the effect is actually a spell and what ends it.",
+          "chapters": [
+            {
+              "number": 24,
+              "title": "Countermagic, Illusions, Familiars, and Fair Information",
+              "slug": "24-countermagic-illusions-familiars-and-fair-information"
+            },
+            {
+              "number": 34,
+              "title": "Failure, Capture, Death, and Recovery",
+              "slug": "34-failure-capture-death-and-recovery"
+            }
+          ]
+        },
+        {
+          "problem": "Hostile environment",
+          "answer": "Information, protection, movement, shelter, breathing, resistance and staged retreat.",
+          "check": "Duration, component cost and whether magic creates a new risk.",
+          "chapters": [
+            {
+              "number": 38,
+              "title": "Exploration and Environmental Operations",
+              "slug": "38-exploration-and-environmental-operations"
+            }
+          ]
+        },
+        {
+          "problem": "Limited rests or low resources",
+          "answer": "Rituals, cantrips, positioning, familiar, mundane gear, scrolls and lower-cost control.",
+          "check": "Resources required for escape and the next objective.",
+          "chapters": [
+            {
+              "number": 13,
+              "title": "Prepared Spell Packages",
+              "slug": "13-prepared-spell-packages"
+            },
+            {
+              "number": 30,
+              "title": "Rest, Camp, Town, and Downtime Optimization",
+              "slug": "30-rest-camp-town-and-downtime-optimization"
+            }
+          ]
+        },
+        {
+          "problem": "Need information without metagaming",
+          "answer": "Observe, research, question witnesses, use divinations and test safely.",
+          "check": "Separate known facts from assumptions.",
+          "chapters": [
+            {
+              "number": 30,
+              "title": "Rest, Camp, Town, and Downtime Optimization",
+              "slug": "30-rest-camp-town-and-downtime-optimization"
+            },
+            {
+              "number": 37,
+              "title": "Noncombat Wizard Operations",
+              "slug": "37-noncombat-wizard-operations"
+            }
+          ]
+        },
+        {
+          "problem": "Need crafting or reusable resources",
+          "answer": "Scrolls, consumables, wondrous projects, services and downtime conversion.",
+          "check": "Exact item rule, proficiencies, assigned tool, prepared spells, materials, complete workdays, and campaign availability.",
+          "chapters": [
+            {
+              "number": 28,
+              "title": "Tool and Crafting Tier List",
+              "slug": "28-tool-and-crafting-tier-list"
+            },
+            {
+              "number": 29,
+              "title": "Magic-Item Crafting Quick Guide",
+              "slug": "29-magic-item-crafting-quick-guide"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
