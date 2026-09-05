@@ -26,13 +26,13 @@
     "attackRoll": false
   },
   "source": {
-    "book": null,
-    "rulesVersion": "2024 baseline unless active entry says otherwise",
-    "category": "Core / active entry",
-    "sourceSensitive": false
+    "book": "Explorer's Guide to Wildemount",
+    "rulesVersion": "Expanded / active entry",
+    "category": "Dunamancy",
+    "sourceSensitive": true
   },
   "compendium": {
-    "tier": null,
+    "tier": "C",
     "acquisitionRole": "unclassified",
     "preparedBaseline": false,
     "roles": [
@@ -42,6 +42,8 @@
     "summary": "Damage plus supernatural aging pressure.",
     "buildRelevance": [],
     "warnings": [
+      "Source-sensitive: availability does not grant permission by itself; use the exact selectable entry and campaign rules.",
+      "Very expensive consumed component and a rider that often does not solve the current encounter. Usually not the first level-9 acquisition.",
       "The Compendium index is an operating reference, not replacement spell text. Confirm the active D&D Beyond entry before casting."
     ],
     "relatedChapters": [

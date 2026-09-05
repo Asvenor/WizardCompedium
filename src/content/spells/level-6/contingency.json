@@ -13,10 +13,10 @@
     "components": {
       "verbal": null,
       "somatic": null,
-      "material": null,
-      "description": null,
-      "gpCost": null,
-      "consumed": null
+      "material": true,
+      "description": "Gem-encrusted statuette of yourself worth 1,500+ GP",
+      "gpCost": 1500,
+      "consumed": false
     },
     "damageTypes": [],
     "save": {
@@ -41,12 +41,18 @@
     "summary": "Preloaded emergency spell with precise trigger planning.",
     "buildRelevance": [],
     "warnings": [
-      "The Compendium index is an operating reference, not replacement spell text. Confirm the active D&D Beyond entry before casting."
+      "The Compendium index is an operating reference, not replacement spell text. Confirm the active D&D Beyond entry before casting.",
+      "Component planning: Excellent safety tech. Buy/craft before high-level dangerous arcs.",
+      "Pre-cast gate: Write a perceivable, objective trigger and test the loaded spell's target and timing.",
+      "Failure state: Ambiguous trigger, premature activation, or concentration replacing the spell already winning the fight.",
+      "Safe operating default: Use a narrow emergency trigger and rehearse the consequence, not only the activation."
     ],
     "relatedChapters": [
       11,
       15,
       22,
+      23,
+      25,
       47
     ]
   },

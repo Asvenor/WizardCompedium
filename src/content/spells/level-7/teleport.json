@@ -41,11 +41,15 @@
     "summary": "High-level long-distance movement with destination risk.",
     "buildRelevance": [],
     "warnings": [
-      "The Compendium index is an operating reference, not replacement spell text. Confirm the active D&D Beyond entry before casting."
+      "The Compendium index is an operating reference, not replacement spell text. Confirm the active D&D Beyond entry before casting.",
+      "Pre-cast gate: Classify destination familiarity from evidence and prepare for every listed arrival outcome.",
+      "Failure state: Mishap, wrong destination, separation, or arrival into an unsecured scene.",
+      "Safe operating default: Carry recovery, communication, healing, and a second route; prefer prepared anchors."
     ],
     "relatedChapters": [
       11,
       15,
+      23,
       38,
       47
     ]

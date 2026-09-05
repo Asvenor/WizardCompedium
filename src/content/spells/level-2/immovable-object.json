@@ -26,10 +26,10 @@
     "attackRoll": false
   },
   "source": {
-    "book": null,
-    "rulesVersion": "2024 baseline unless active entry says otherwise",
-    "category": "Core / active entry",
-    "sourceSensitive": false
+    "book": "Explorer's Guide to Wildemount",
+    "rulesVersion": "Expanded / active entry",
+    "category": "Dunamancy",
+    "sourceSensitive": true
   },
   "compendium": {
     "tier": null,
@@ -42,6 +42,8 @@
     "summary": "Anchors, security, and object engineering.",
     "buildRelevance": [],
     "warnings": [
+      "Source-sensitive: availability does not grant permission by itself; use the exact selectable entry and campaign rules.",
+      "Normally consumes costly material; do not assume restraint or infinite-force exploits without a ruling.",
       "The Compendium index is an operating reference, not replacement spell text. Confirm the active D&D Beyond entry before casting."
     ],
     "relatedChapters": [

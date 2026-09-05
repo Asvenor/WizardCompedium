@@ -14,15 +14,16 @@ Validated against the full OneDrive copy of `Ultimate_Wizard_Compendium_FINAL_v1
 | Nested tables | 193 | Migrated cellwise | Pass |
 | Semantic content blocks | 928 | 928 | Pass |
 | Source images | 1 | 1, in Chapter 20 | Pass |
-| Canonical Compendium spell records | 154 | 154 | Pass |
+| Canonical Compendium spell records | 155 | 155 | Pass |
 
 Structural title and part-label blocks are represented by page metadata and navigation rather than duplicated in the chapter body. Every other semantic source block is traced to generated content by its stable source locator.
 
 ## Product verification
 
-- 225 static HTML pages generated successfully.
-- 216 content pages indexed by Pagefind.
-- 4,802 generated internal links and asset references resolved successfully.
+- 226 static HTML pages generated successfully.
+- 217 content pages indexed by Pagefind.
+- 4,938 generated internal links and asset references resolved successfully.
+- A token-level fidelity audit found all 66,005 substantive source tokens represented in the migrated chapter files.
 - Astro content schemas and type checks completed with zero errors, warnings, or hints.
 - Search was exercised with `Wall of Force`; the spell page was the first result and linked chapter passages were returned.
 - Spell filtering was exercised on the spell hub and returned the expected single record.

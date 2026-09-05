@@ -13,10 +13,10 @@
     "components": {
       "verbal": null,
       "somatic": null,
-      "material": null,
-      "description": null,
-      "gpCost": null,
-      "consumed": null
+      "material": true,
+      "description": "Jade circlet worth 1,500+ gp",
+      "gpCost": 1500,
+      "consumed": false
     },
     "damageTypes": [],
     "save": {
@@ -42,12 +42,18 @@
     "summary": "Endgame flexible form engine with retained class features as allowed.",
     "buildRelevance": [],
     "warnings": [
-      "The Compendium index is an operating reference, not replacement spell text. Confirm the active D&D Beyond entry before casting."
+      "The Compendium index is an operating reference, not replacement spell text. Confirm the active D&D Beyond entry before casting.",
+      "Component planning: Endgame form spell. Track it before assuming the spell is available.",
+      "Pre-cast gate: Use a legally known form and verify retained statistics, concentration, control, and ending state.",
+      "Failure state: Illegal form knowledge, lost concentration, misunderstood spellcasting, or uncontrolled created creature.",
+      "Safe operating default: Prepare a small verified form library and a safe reversion plan."
     ],
     "relatedChapters": [
       11,
       15,
       22,
+      23,
+      25,
       47
     ]
   },

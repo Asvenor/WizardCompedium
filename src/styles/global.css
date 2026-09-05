@@ -112,6 +112,29 @@ button, input, select { font: inherit; }
 .hero-stat span { color: var(--ink-faint); font-size: 0.72rem; }
 .hero-note { margin: 0.75rem 0 0; color: var(--ink-faint); font-size: 0.8rem; }
 
+.home-intro { padding: clamp(2.8rem, 6vw, 5.2rem) 0 1.2rem; }
+.home-intro h1 { margin: 0; font-size: clamp(3rem, 7vw, 6.2rem); line-height: 0.96; letter-spacing: -0.072em; }
+.home-intro > .site-shell > p:last-child { max-width: 46rem; margin: 1.2rem 0 0; color: var(--ink-soft); font-size: 1.08rem; }
+.section--first { padding-top: 1.5rem; }
+.quick-reference-wrap, .chapter-directory-wrap { width: 100%; overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius-lg); background: var(--surface); box-shadow: var(--shadow-sm); }
+.quick-reference-table, .chapter-directory-table { width: 100%; min-width: 68rem; border-collapse: separate; border-spacing: 0; font-size: 0.88rem; line-height: 1.35; }
+.quick-reference-table td { width: 16.666%; padding: 0.8rem; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.quick-reference-table tr:last-child td { border-bottom: 0; }
+.quick-reference-table td:last-child { border-right: 0; }
+.quick-reference-table a { display: block; color: var(--ink-soft); text-decoration: none; font-weight: 680; }
+.quick-reference-table a:hover { color: var(--accent-strong); }
+.quick-reference-table .quick-reference-part { background: #172039; }
+.quick-reference-table .quick-reference-part a { color: #fff; font-size: 0.76rem; font-weight: 800; letter-spacing: 0.045em; text-transform: uppercase; }
+.chapter-directory-table th, .chapter-directory-table td { padding: 0.7rem 0.75rem; text-align: left; vertical-align: top; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.chapter-directory-table th:last-child, .chapter-directory-table td:last-child { border-right: 0; }
+.chapter-directory-table tbody tr:last-child td { border-bottom: 0; }
+.chapter-directory-table th { position: sticky; top: 0; z-index: 1; background: #172039; color: #fff; font-size: 0.75rem; }
+.chapter-directory-table tbody tr:nth-child(even) td { background: #f8f9fc; }
+.chapter-directory-table .chapter-number { width: 3rem; color: var(--accent-strong); font-weight: 850; text-align: center; }
+.chapter-directory-table a { display: block; color: var(--ink); text-decoration: none; font-weight: 680; }
+.chapter-directory-table a:hover { color: var(--accent-strong); }
+.chapter-directory-table a span { display: block; margin-bottom: 0.14rem; color: var(--ink-faint); font-size: 0.69rem; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; }
+
 .section { padding: 2.5rem 0; }
 .section-head { display: flex; align-items: end; justify-content: space-between; gap: 2rem; margin-bottom: 1.2rem; }
 .section-head h2 { margin: 0; font-size: clamp(1.75rem, 3vw, 2.6rem); letter-spacing: -0.04em; }

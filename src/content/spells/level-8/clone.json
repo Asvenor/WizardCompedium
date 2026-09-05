@@ -13,9 +13,9 @@
     "components": {
       "verbal": null,
       "somatic": null,
-      "material": null,
-      "description": null,
-      "gpCost": null,
+      "material": true,
+      "description": "Touch the creature or provide at least 1 cubic inch of its flesh; secure a 1,000+ gp diamond and a 2,000+ gp sealable vessel.",
+      "gpCost": 1000,
       "consumed": null
     },
     "damageTypes": [],
@@ -41,12 +41,18 @@
     "summary": "Long-term death recovery infrastructure.",
     "buildRelevance": [],
     "warnings": [
-      "The Compendium index is an operating reference, not replacement spell text. Confirm the active D&D Beyond entry before casting."
+      "The Compendium index is an operating reference, not replacement spell text. Confirm the active D&D Beyond entry before casting.",
+      "Component planning: Before casting; maturation takes 120 days.",
+      "Pre-cast gate: Secure a 1,000+ gp diamond, a 2,000+ gp vessel, the creature or flesh sample, the 120-day maturation period, and a hidden location.",
+      "Failure state: The clone is found, destroyed, unavailable, or creates identity and equipment gaps.",
+      "Safe operating default: Treat it as long-term infrastructure, not immediate combat insurance."
     ],
     "relatedChapters": [
       11,
       15,
       22,
+      23,
+      25,
       47
     ]
   },

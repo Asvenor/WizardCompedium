@@ -13,10 +13,10 @@
     "components": {
       "verbal": null,
       "somatic": null,
-      "material": null,
-      "description": null,
+      "material": true,
+      "description": "A forked metal rod attuned to the destination plane; attunement is part of the problem.",
       "gpCost": 250,
-      "consumed": null
+      "consumed": false
     },
     "damageTypes": [],
     "save": {
@@ -39,11 +39,17 @@
     "summary": "Willing-group planar travel; requires a 250+ gp attuned fork.",
     "buildRelevance": [],
     "warnings": [
-      "The Compendium index is an operating reference, not replacement spell text. Confirm the active D&D Beyond entry before casting."
+      "The Compendium index is an operating reference, not replacement spell text. Confirm the active D&D Beyond entry before casting.",
+      "Component planning: Before planar travel becomes an objective.",
+      "Pre-cast gate: Obtain the correct tuned fork and agree on destination precision.",
+      "Failure state: No legal focus, hostile arrival area, or no route home.",
+      "Safe operating default: Research the plane, define the return plan, and keep the party physically coordinated."
     ],
     "relatedChapters": [
       11,
-      15
+      15,
+      23,
+      25
     ]
   },
   "sourceLocator": "B00193"
