@@ -85,6 +85,7 @@ const serializedData = JSON.stringify({ packages: missionPackages, spells: clien
         }
         if (warnings) {
           warnings.replaceChildren();
+          if (!selected.length) { warnings.textContent = 'Select spells to check your preparation coverage.'; return; }
           const concentration = selected.filter((spell) => spell.concentration);
           const messages: string[] = [];
           if (!hasRole(selected, ['defense', 'protection'])) messages.push('No immediate defense is represented in the selected canonical roles.');
@@ -101,6 +102,7 @@ const serializedData = JSON.stringify({ packages: missionPackages, spells: clien
 
       const loadMission = (id: string) => {
         const mission = missions.get(id);
+        if (!mission) { update(); return; }
         const ids = new Set(mission?.spellIds ?? []);
         checkboxes.forEach((checkbox) => { checkbox.checked = ids.has(checkbox.value); });
         const name = root.querySelector<HTMLElement>('[data-mission-name]');
@@ -109,10 +111,12 @@ const serializedData = JSON.stringify({ packages: missionPackages, spells: clien
         if (name) name.textContent = mission?.name ?? 'Custom prepared list';
         if (recommendation) recommendation.textContent = mission?.recommendation ?? 'Adjust the canonical spells for the mission in front of you.';
         if (note) note.textContent = mission?.note ?? '';
+        const status = root.querySelector<HTMLElement>('[data-prepared-status]');
+        if (status) status.textContent = 'Unsaved changes';
         update();
       };
 
-      if (profile?.preparedSpells.length) {
+      if (profile) {
         const ids = new Set(profile.preparedSpells);
         checkboxes.forEach((checkbox) => { checkbox.checked = ids.has(checkbox.value); });
         const name = root.querySelector<HTMLElement>('[data-mission-name]');
@@ -123,8 +127,25 @@ const serializedData = JSON.stringify({ packages: missionPackages, spells: clien
         if (missionSelect) missionSelect.value = parsed.packages[0].id;
         loadMission(parsed.packages[0].id);
       }
+      const addedId = new URLSearchParams(window.location.search).get('add');
+      const addedCheckbox = checkboxes.find(checkbox => checkbox.value === addedId);
+      if (addedCheckbox) {
+        addedCheckbox.checked = true;
+        if (missionSelect) missionSelect.value = '';
+        const status = root.querySelector<HTMLElement>('[data-prepared-status]');
+        if (status) status.textContent = `${spells.get(addedCheckbox.value)?.name} added · unsaved changes`;
+      }
       missionSelect?.addEventListener('change', () => loadMission(missionSelect.value));
-      checkboxes.forEach((checkbox) => checkbox.addEventListener('change', () => { if (missionSelect) missionSelect.value = ''; update(); }));
+      checkboxes.forEach((checkbox) => checkbox.addEventListener('change', () => {
+        if (missionSelect?.value) {
+          const name = root.querySelector<HTMLElement>('[data-mission-name]');
+          if (name) name.textContent = `${missions.get(missionSelect.value)?.name ?? 'Mission'} · adjusted`;
+        }
+        if (missionSelect) missionSelect.value = '';
+        const status = root.querySelector<HTMLElement>('[data-prepared-status]');
+        if (status) status.textContent = 'Unsaved changes';
+        update();
+      }));
       root.querySelector<HTMLInputElement>('[data-planner-search]')?.addEventListener('input', (event) => {
         const query = (event.currentTarget as HTMLInputElement).value.trim().toLowerCase();
         root.querySelectorAll<HTMLElement>('[data-spell-option]').forEach((option) => { option.hidden = Boolean(query) && !(option.dataset.search ?? '').includes(query); });
@@ -137,8 +158,8 @@ const serializedData = JSON.stringify({ packages: missionPackages, spells: clien
           return;
         }
         current.preparedSpells = selectedSpells().map((spell) => spell.id);
-        saveWizardProfile(current);
-        if (status) status.textContent = 'Prepared list saved locally.';
+        const saved = saveWizardProfile(current);
+        if (status) status.textContent = saved ? 'Prepared list saved locally.' : 'Your browser could not save the list. Check its storage settings and try again.';
       });
       update();
     }

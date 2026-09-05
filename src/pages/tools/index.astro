@@ -11,6 +11,8 @@ const componentSpells = (await getCollection('spells')).map((entry) => entry.dat
     description: spell.rules.components.description,
     gpCost: spell.rules.components.gpCost,
     consumed: spell.rules.components.consumed,
+    items: spell.rules.components.items,
+    note: spell.rules.components.note,
   }));
 const serializedComponents = JSON.stringify(componentSpells).replace(/</g, '\\u003c');
 ---
@@ -42,26 +44,27 @@ const serializedComponents = JSON.stringify(componentSpells).replace(/</g, '\\u0
 
       <article class="tool-panel tool-panel--wide" id="component-cost" data-component-calculator>
         <div class="tool-panel-head"><div><p class="eyebrow">Calculator C</p><h2>Component cost</h2></div><a href="/chapters/25-spell-components-and-resource-acquisition/">Chapter 25 ↗</a></div>
-        <p>Select the spells you are planning to cast. Unknown costs remain uncounted rather than being guessed.</p>
+        <p>Choose spells, then set how many component sets you need. Enter any missing prices from your active spell entry.</p>
+        <div class="form-actions"><a href="#save-probability">Save probability</a><a href="#concentration-calculator">Concentration</a><button class="button" type="button" data-clear-components>Clear selection</button></div>
         <div class="component-selector">
           {componentSpells.map((spell) => (
             <label><input type="checkbox" value={spell.id} data-component-spell /><span>{spell.name}</span></label>
           ))}
         </div>
-        <div class="component-table-wrap" tabindex="0" data-component-output hidden></div>
+        <div class="component-table-wrap" tabindex="0" role="region" aria-label="Component costs; scroll horizontally on small screens" data-component-output hidden></div>
         <div class="component-totals">
           <output><span>Total consumed cost</span><strong data-consumed-total>0 gp</strong></output>
           <output><span>Required non-consumed value</span><strong data-required-total>0 gp</strong></output>
         </div>
-        <p class="control-note" data-component-note>No spells selected.</p>
+        <p class="control-note" role="status" data-component-note>No spells selected.</p>
       </article>
     </div>
   </section>
   <script is:inline type="application/json" id="component-spells-data" set:html={serializedComponents}></script>
   <script>
     import { loadWizardProfile } from '@/features/my-wizard/profile';
-    const clamp = (value: number, min: number, max: number) => Math.min(max, Math.max(min, value));
-    const probabilityToMeet = (dc: number, bonus: number) => clamp((21 - (dc - bonus)) / 20, 0, 1);
+    import '@/features/calculators/components';
+    import { readNumber, probabilityToMeet, concentrationDc } from '@/features/calculators/math';
     const percent = (value: number) => `${Math.round(value * 100)}%`;
 
     const saveRoot = document.querySelector<HTMLElement>('[data-save-calculator]');
@@ -71,7 +74,12 @@ const serializedComponents = JSON.stringify(componentSpells).replace(/</g, '\\u0
       const output = saveRoot.querySelector<HTMLElement>('[data-save-result]');
       const profile = loadWizardProfile();
       if (profile?.spellSaveDc != null && dc) dc.value = String(profile.spellSaveDc);
-      const update = () => { if (dc && bonus && output) output.textContent = percent(1 - probabilityToMeet(Number(dc.value), Number(bonus.value))); };
+      const update = () => {
+        if (!dc || !bonus || !output) return;
+        const d = readNumber(dc.value, 1, 40), b = readNumber(bonus.value, -10, 30);
+        dc.setAttribute('aria-invalid', String(d == null)); bonus.setAttribute('aria-invalid', String(b == null));
+        output.textContent = d == null || b == null ? '—' : percent(1 - probabilityToMeet(d, b));
+      };
       dc?.addEventListener('input', update); bonus?.addEventListener('input', update); update();
     }
 
@@ -84,64 +92,19 @@ const serializedComponents = JSON.stringify(componentSpells).replace(/</g, '\\u0
       const output = conRoot.querySelector<HTMLElement>('[data-con-result]');
       const update = () => {
         if (!bonus || !dc || !damage || !advantage || !output) return;
-        const damageValue = damage.value === '' ? null : Number(damage.value);
-        const calculatedDc = damageValue == null ? Number(dc.value) : Math.min(30, Math.max(10, Math.floor(damageValue / 2)));
-        if (damageValue != null) dc.value = String(calculatedDc);
-        const base = probabilityToMeet(calculatedDc, Number(bonus.value));
+        const usesDamage = damage.value !== '';
+        const damageValue = readNumber(damage.value, 0, 999);
+        dc.readOnly = usesDamage;
+        const calculatedDc = usesDamage ? (damageValue == null ? null : concentrationDc(damageValue)) : readNumber(dc.value, 1, 30);
+        if (usesDamage && calculatedDc != null) dc.value = String(calculatedDc);
+        const b = readNumber(bonus.value, -10, 30);
+        bonus.setAttribute('aria-invalid', String(b == null)); dc.setAttribute('aria-invalid', String(calculatedDc == null)); damage.setAttribute('aria-invalid', String(usesDamage && damageValue == null));
+        if (calculatedDc == null || b == null) { output.textContent = '—'; return; }
+        const base = probabilityToMeet(calculatedDc, b);
         output.textContent = percent(advantage.checked ? 1 - ((1 - base) ** 2) : base);
       };
       [bonus, dc, damage, advantage].forEach((control) => control?.addEventListener('input', update)); update();
     }
 
-    interface ComponentSpell { id: string; name: string; description: string | null; gpCost: number | null; consumed: boolean | null; }
-    const componentRoot = document.querySelector<HTMLElement>('[data-component-calculator]');
-    const componentData = document.querySelector<HTMLScriptElement>('#component-spells-data');
-    if (componentRoot && componentData) {
-      const spells: ComponentSpell[] = JSON.parse(componentData.textContent ?? '[]');
-      const byId = new Map(spells.map((spell) => [spell.id, spell]));
-      const checks = [...componentRoot.querySelectorAll<HTMLInputElement>('[data-component-spell]')];
-      const tableWrap = componentRoot.querySelector<HTMLElement>('[data-component-output]');
-      const consumed = componentRoot.querySelector<HTMLElement>('[data-consumed-total]');
-      const required = componentRoot.querySelector<HTMLElement>('[data-required-total]');
-      const note = componentRoot.querySelector<HTMLElement>('[data-component-note]');
-      const update = () => {
-        if (!tableWrap || !consumed || !required || !note) return;
-        const selected = checks.filter((check) => check.checked).map((check) => byId.get(check.value)).filter((spell): spell is ComponentSpell => Boolean(spell));
-        tableWrap.replaceChildren();
-        if (!selected.length) {
-          tableWrap.hidden = true; consumed.textContent = '0 gp'; required.textContent = '0 gp'; note.textContent = 'No spells selected.'; return;
-        }
-        const table = document.createElement('table');
-        const head = document.createElement('thead');
-        const headRow = document.createElement('tr');
-        ['Spell', 'Component', 'GP cost', 'Consumed?', 'Quantity'].forEach((label) => { const th = document.createElement('th'); th.scope = 'col'; th.textContent = label; headRow.append(th); });
-        head.append(headRow); table.append(head);
-        const body = document.createElement('tbody');
-        selected.forEach((spell) => {
-          const row = document.createElement('tr');
-          const values = [spell.name, spell.description ?? '—', spell.gpCost == null ? '—' : `${spell.gpCost.toLocaleString()}+ gp`, spell.consumed == null ? 'Verify' : spell.consumed ? 'Yes' : 'No'];
-          values.forEach((value) => { const td = document.createElement('td'); td.textContent = value; row.append(td); });
-          const quantityCell = document.createElement('td');
-          const quantity = document.createElement('input'); quantity.className = 'quantity-field'; quantity.type = 'number'; quantity.min = '1'; quantity.max = '99'; quantity.value = '1'; quantity.dataset.quantityFor = spell.id;
-          quantityCell.append(quantity); row.append(quantityCell); body.append(row);
-        });
-        table.append(body); tableWrap.append(table); tableWrap.hidden = false;
-        const calculateTotals = () => {
-          let consumedTotal = 0; let requiredTotal = 0; let unknown = 0;
-          selected.forEach((spell) => {
-            const quantity = Number(tableWrap.querySelector<HTMLInputElement>(`[data-quantity-for="${spell.id}"]`)?.value ?? 1);
-            if (spell.gpCost == null || spell.consumed == null) { unknown += 1; return; }
-            if (spell.consumed) consumedTotal += spell.gpCost * quantity;
-            else requiredTotal += spell.gpCost * quantity;
-          });
-          consumed.textContent = `${consumedTotal.toLocaleString()} gp`;
-          required.textContent = `${requiredTotal.toLocaleString()} gp`;
-          note.textContent = unknown ? `${unknown} selected component record${unknown === 1 ? ' has' : 's have'} an unknown cost or consumption status and ${unknown === 1 ? 'is' : 'are'} not included in totals.` : 'All selected canonical costs are included.';
-        };
-        tableWrap.querySelectorAll('input').forEach((input) => input.addEventListener('input', calculateTotals));
-        calculateTotals();
-      };
-      checks.forEach((check) => check.addEventListener('change', update)); update();
-    }
   </script>
 </BaseLayout>

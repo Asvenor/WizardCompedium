@@ -37,6 +37,8 @@ const spells = defineCollection({
         description: z.string().nullable(),
         gpCost: z.number().nullable(),
         consumed: z.boolean().nullable(),
+        note: z.string().optional(),
+        items: z.array(z.object({ description: z.string(), gpCost: z.number().nullable(), consumed: z.boolean().nullable() })).optional(),
       }),
       damageTypes: z.array(z.string()),
       save: z.object({ ability: z.string().nullable(), type: z.string().nullable() }),

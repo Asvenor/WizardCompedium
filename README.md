@@ -33,6 +33,8 @@ The finished static site is written to `dist/`.
 
 `src/data/` contains small navigation and cockpit datasets. `src/features/my-wizard/profile.ts` owns the localStorage profile format. There is no database or account system.
 
+Calculator behavior lives in `src/features/calculators/`. Component costs come from spell records; `components.items` supports separate consumed and retained materials (see Clone). Missing prices can be entered for the current calculation, without changing the Compendium.
+
 ## Test before pushing
 
 Run all of these:
@@ -44,6 +46,8 @@ npm run audit:fidelity
 npm run build
 npm run validate:build
 ```
+
+With Node 22.18+ or Node 24, also run `node --test scripts/test-tools.mjs` for calculator and saved-profile regressions.
 
 Then check the homepage, Search, Play, Spells, Compare, My Wizard, Level Up, Prepare, Tools, Learn, and Full Compendium in the browser.
 

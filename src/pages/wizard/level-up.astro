@@ -36,6 +36,7 @@ const serializedProgression = JSON.stringify(progression).replace(/</g, '\\u003c
   <script is:inline type="application/json" id="level-up-progression" set:html={serializedProgression}></script>
   <script>
     import { loadWizardProfile } from '@/features/my-wizard/profile';
+    import { readNumber } from '@/features/calculators/math';
     interface ProgressionRow { wizardLevel: number; timing: string; core: string; routes: Record<string, string>; }
     const root = document.querySelector<HTMLElement>('[data-level-up-assistant]');
     const data = document.querySelector<HTMLScriptElement>('#level-up-progression');
@@ -59,16 +60,20 @@ const serializedProgression = JSON.stringify(progression).replace(/</g, '\\u003c
       const update = () => {
         if (!form || !result) return;
         const build = field('build').value;
-        const characterLevel = Number(field('characterLevel').value);
-        const wizardLevel = Number(field('wizardLevel').value);
-        const targetLevel = Number(field('targetLevel').value);
+        const characterLevel = readNumber(field('characterLevel').value, 1, 20);
+        const wizardLevel = readNumber(field('wizardLevel').value, 0, 20);
+        const targetLevel = readNumber(field('targetLevel').value, 2, 20);
+        if (characterLevel == null || wizardLevel == null || targetLevel == null || wizardLevel > characterLevel) {
+          result.textContent = 'Enter whole levels within the shown limits. Wizard level cannot exceed character level.';
+          return;
+        }
         const gainedLevels = Math.max(0, targetLevel - characterLevel);
         const targetWizardLevel = Math.min(20, wizardLevel + gainedLevels);
         const row = rows.find((item) => item.wizardLevel === targetWizardLevel);
         result.replaceChildren();
         if (!row || targetLevel <= characterLevel) {
           const message = document.createElement('p'); message.className = 'empty-state';
-          message.textContent = targetLevel <= characterLevel ? 'Choose a character level above the current level.' : 'No Wizard roadmap entry exists for that target.';
+          message.textContent = characterLevel === 20 ? 'You are at character level 20, the end of this roadmap.' : targetLevel <= characterLevel ? 'Choose a character level above the current level.' : 'No Wizard roadmap entry exists for that target.';
           result.append(message); return;
         }
         const eyebrow = document.createElement('p'); eyebrow.className = 'eyebrow'; eyebrow.textContent = `Character ${targetLevel} · Wizard ${targetWizardLevel}`;
@@ -93,6 +98,7 @@ const serializedProgression = JSON.stringify(progression).replace(/</g, '\\u003c
       };
       form?.addEventListener('input', update);
       form?.addEventListener('change', update);
+      form?.addEventListener('submit', event => event.preventDefault());
       update();
     }
   </script>

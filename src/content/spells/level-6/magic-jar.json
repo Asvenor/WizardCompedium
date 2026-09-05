@@ -16,7 +16,8 @@
       "material": true,
       "description": "Gem, crystal, or reliquary worth 500+ GP",
       "gpCost": 500,
-      "consumed": false
+      "consumed": false,
+      "note": "Not consumed on casting; the receptacle is destroyed when the spell ends."
     },
     "damageTypes": [],
     "save": {

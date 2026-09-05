@@ -16,7 +16,11 @@
       "material": true,
       "description": "Touch the creature or provide at least 1 cubic inch of its flesh; secure a 1,000+ gp diamond and a 2,000+ gp sealable vessel.",
       "gpCost": 1000,
-      "consumed": null
+      "consumed": null,
+      "items": [
+        { "description": "Diamond", "gpCost": 1000, "consumed": true },
+        { "description": "Sealable vessel", "gpCost": 2000, "consumed": false }
+      ]
     },
     "damageTypes": [],
     "save": {

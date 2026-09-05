@@ -35,7 +35,7 @@ const stats = [
         </div>
         <h1 data-pagefind-meta="title">{spell.name}</h1>
         <p>{spell.compendium.summary}</p>
-        <div class="hero-actions"><a class="button button--primary" href={`/spells/compare/?spells=${spell.id}`}>Compare this spell</a><a class="button" href="/prepare/">Add to a mission list</a></div>
+        <div class="hero-actions"><a class="button button--primary" href={`/spells/compare/?spells=${spell.id}`}>Compare this spell</a><a class="button" href={`/prepare/?add=${spell.id}`}>Add to a mission list</a></div>
       </header>
       {stats.length > 0 && <div class="spell-detail-grid">{stats.map((item) => <div class="spell-stat"><small>{item.label}</small><strong>{item.value}</strong></div>)}</div>}
       <div class="prose">
@@ -46,7 +46,9 @@ const stats = [
         {spell.rules.components.description && <>
           <h2>Material component</h2>
           <p>{spell.rules.components.description}</p>
-          <p><strong>Consumed:</strong> {spell.rules.components.consumed === true ? 'Yes' : spell.rules.components.consumed === false ? 'No' : 'Verify the active spell entry'}{spell.rules.components.gpCost ? ` · Recorded cost: ${spell.rules.components.gpCost.toLocaleString()}+ gp` : ''}.</p>
+          {spell.rules.components.items ? <ul>{spell.rules.components.items.map(item => <li>{item.description}: {item.gpCost?.toLocaleString()}+ gp · {item.consumed ? 'Consumed' : 'Retained'}.</li>)}</ul> : <p><strong>Consumed:</strong> {spell.rules.components.consumed === true ? 'Yes' : spell.rules.components.consumed === false ? 'No' : 'Verify the active spell entry'}{spell.rules.components.gpCost ? ` · Recorded cost: ${spell.rules.components.gpCost.toLocaleString()}+ gp` : ''}.</p>}
+          {spell.rules.components.note && <p>{spell.rules.components.note}</p>}
+          <p><a href="/tools/#component-cost">Plan component costs →</a></p>
         </>}
         <h2>Source status</h2>
         <p><strong>{spell.source.category}</strong>{spell.source.book && <> · {spell.source.book}</>} · {spell.source.rulesVersion}.</p>

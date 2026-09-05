@@ -5,6 +5,7 @@ import { corePrinciples } from '@/data/core-principles';
 import { getSpellRoleCategories } from '@/lib/spells';
 
 const spells = (await getCollection('spells')).map((entry) => entry.data)
+  .filter((spell) => spell.compendium.summary && !spell.compendium.summary.startsWith('The Compendium includes this spell in its maintained spellbook pool'))
   .sort((a, b) => a.level - b.level || a.name.localeCompare(b.name))
   .map((spell) => ({
     id: spell.id, name: spell.name, level: spell.level, source: spell.source.category,
@@ -63,8 +64,11 @@ const serializedSpells = JSON.stringify(spells).replace(/</g, '\\u003c');
       };
       const render = () => {
         const spell = cards[index];
-        if (!spell || !name || !summary || !roles || !link || !answer || !progress) return;
-        name.textContent = spell.name; summary.textContent = spell.summary; roles.textContent = spell.roles.join(', ') || 'No role tags indexed';
+        if (!name || !summary || !roles || !link || !answer || !progress) return;
+        root.querySelectorAll<HTMLButtonElement>('button').forEach(button => { button.disabled = !spell; });
+        if (!spell) { name.textContent = 'No flashcards in this deck yet'; answer.hidden = true; progress.textContent = '0 / 0'; return; }
+        name.textContent = spell.name; summary.textContent = spell.summary; roles.textContent = spell.roles.join(', ');
+        if (roles.parentElement) roles.parentElement.hidden = !spell.roles.length;
         link.href = `/spells/${spell.id}/`; answer.hidden = true; progress.textContent = `${index + 1} / ${cards.length}`;
       };
       root.querySelector('[data-reveal-card]')?.addEventListener('click', () => { if (answer) answer.hidden = false; });

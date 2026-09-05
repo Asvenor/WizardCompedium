@@ -47,7 +47,8 @@ const siblings = chapterIndex.filter((item) => item.part === part);
   </div>
   <script>
     const tierColumnPattern = /\b(tier|priority|rank|rating)\b/i;
-    const tierValuePattern = /^\s*(S\+?|A\+?|B\+?|C\+?|D\+?|E|F|LOW)(?=\s|\/|\*|$)/i;
+    const tierValuePattern = /^\s*([SABCDEF][+−-]?)(?=\s|\/|\*|$)/i;
+    const conditionalRankPattern = /^(Niche|Campaign patch|Varies|Source check|Strategic|Mandatory)$/i;
 
     document.querySelectorAll<HTMLTableElement>('.prose table').forEach((table) => {
       const headers = [...table.querySelectorAll<HTMLTableCellElement>('thead th')];
@@ -55,10 +56,19 @@ const siblings = chapterIndex.filter((item) => item.part === part);
         if (!tierColumnPattern.test(header.textContent ?? '')) return;
         table.querySelectorAll<HTMLTableRowElement>('tbody tr').forEach((row) => {
           const cell = row.cells.item(index);
-          const match = cell?.textContent?.match(tierValuePattern);
-          if (!cell || !match) return;
+          if (!cell || cell.colSpan > 1) return;
+          const value = cell.textContent?.trim() ?? '';
+          const match = value.match(tierValuePattern);
+          if (!match) {
+            if (/^LOW$/i.test(value)) cell.dataset.tier = 'd';
+            else if (conditionalRankPattern.test(value)) {
+              cell.dataset.tier = 'conditional';
+              cell.title = 'The Compendium gives this conditional label instead of a fixed letter rank.';
+            }
+            return;
+          }
           const leadingTier = match[1].toLowerCase().charAt(0);
-          cell.dataset.tier = ['e', 'f', 'l'].includes(leadingTier) ? 'd' : leadingTier;
+          cell.dataset.tier = ['e', 'f'].includes(leadingTier) ? 'd' : leadingTier;
         });
       });
     });
