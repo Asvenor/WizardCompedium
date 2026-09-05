@@ -1,0 +1,130 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@/components/layout/BaseLayout.astro';
+import { buildLabel } from '@/lib/spells';
+
+const spells = (await getCollection('spells')).map((entry) => entry.data)
+  .sort((a, b) => a.level - b.level || a.name.localeCompare(b.name));
+const clientSpells = spells.map((spell) => ({
+  id: spell.id,
+  name: spell.name,
+  level: spell.level,
+  tier: spell.compendium.tier,
+  save: spell.rules.attackRoll ? 'Spell attack' : spell.rules.save.ability ? `${spell.rules.save.ability} save` : null,
+  concentration: spell.rules.concentration,
+  ritual: spell.rules.ritual,
+  castingTime: spell.rules.castingTime,
+  range: spell.rules.range,
+  area: spell.rules.area,
+  duration: spell.rules.duration,
+  roles: spell.compendium.roles,
+  acquisitionRole: spell.compendium.acquisitionRole,
+  buildRelevance: spell.compendium.buildRelevance.map(buildLabel),
+  source: [spell.source.category, spell.source.book].filter(Boolean).join(' · '),
+  summary: spell.compendium.summary,
+}));
+const serializedSpells = JSON.stringify(clientSpells).replace(/</g, '\\u003c');
+---
+<BaseLayout title="Compare Spells" description="Compare two to four canonical Wizard Compendium spell records." active="spells">
+  <header class="page-hero"><div class="site-shell"><p class="kicker">Canonical side-by-side view</p><h1>Compare Spells</h1><p>Select two to four spells. Every value comes directly from the existing canonical records.</p></div></header>
+  <section class="section section--first">
+    <div class="site-shell comparison-shell" data-spell-comparison>
+      <div class="comparison-controls">
+        {[0, 1, 2, 3].map((index) => (
+          <label><span>Spell {index + 1}</span><select class="field" data-compare-select><option value="">Choose a spell</option>{spells.map((spell) => <option value={spell.id}>{spell.name}</option>)}</select></label>
+        ))}
+      </div>
+      <div class="comparison-actions"><button class="button" type="button" data-clear-comparison>Clear comparison</button><a class="button" href="/spells/">Back to Spell Database</a></div>
+      <p class="empty-state" data-comparison-empty>Select at least two spells to compare them.</p>
+      <div class="comparison-table-wrap" tabindex="0" data-comparison-output hidden></div>
+    </div>
+  </section>
+  <script is:inline type="application/json" id="comparison-spells" set:html={serializedSpells}></script>
+  <script>
+    interface ComparisonSpell {
+      id: string; name: string; level: number; tier: string | null; save: string | null;
+      concentration: boolean; ritual: boolean; castingTime: string | null; range: string | null;
+      area: string | null; duration: string | null; roles: string[]; acquisitionRole: string;
+      buildRelevance: string[]; source: string; summary: string;
+    }
+    const root = document.querySelector<HTMLElement>('[data-spell-comparison]');
+    const data = document.querySelector<HTMLScriptElement>('#comparison-spells');
+    if (root && data) {
+      const spells: ComparisonSpell[] = JSON.parse(data.textContent ?? '[]');
+      const byId = new Map(spells.map((spell) => [spell.id, spell]));
+      const selects = [...root.querySelectorAll<HTMLSelectElement>('[data-compare-select]')];
+      const output = root.querySelector<HTMLElement>('[data-comparison-output]');
+      const empty = root.querySelector<HTMLElement>('[data-comparison-empty]');
+      const formatLevel = (level: number) => level === 0 ? 'Cantrip' : `Level ${level}`;
+      const fields: Array<[string, (spell: ComparisonSpell) => string | null]> = [
+        ['Level', (spell) => formatLevel(spell.level)],
+        ['Tier', (spell) => spell.tier],
+        ['Save / attack', (spell) => spell.save],
+        ['Concentration', (spell) => spell.concentration ? 'Yes' : 'No'],
+        ['Ritual', (spell) => spell.ritual ? 'Yes' : 'No'],
+        ['Casting time', (spell) => spell.castingTime],
+        ['Range', (spell) => spell.range],
+        ['Area', (spell) => spell.area],
+        ['Duration', (spell) => spell.duration],
+        ['Optimization roles', (spell) => spell.roles.join(', ') || null],
+        ['Acquisition role', (spell) => spell.acquisitionRole],
+        ['Build relevance', (spell) => spell.buildRelevance.join(', ') || null],
+        ['Source', (spell) => spell.source],
+        ['Compendium summary', (spell) => spell.summary],
+      ];
+
+      const update = () => {
+        if (!output || !empty) return;
+        const selected = [...new Set(selects.map((select) => select.value).filter(Boolean))]
+          .map((id) => byId.get(id)).filter((spell): spell is ComparisonSpell => Boolean(spell));
+        const url = new URL(window.location.href);
+        selected.length ? url.searchParams.set('spells', selected.map((spell) => spell.id).join(',')) : url.searchParams.delete('spells');
+        window.history.replaceState({}, '', url);
+        if (selected.length < 2) {
+          output.hidden = true;
+          empty.hidden = false;
+          output.replaceChildren();
+          return;
+        }
+
+        const table = document.createElement('table');
+        const head = document.createElement('thead');
+        const headRow = document.createElement('tr');
+        const blank = document.createElement('th');
+        blank.scope = 'col'; blank.textContent = 'Field'; headRow.append(blank);
+        selected.forEach((spell) => {
+          const th = document.createElement('th'); th.scope = 'col';
+          const link = document.createElement('a'); link.href = `/spells/${spell.id}/`; link.textContent = spell.name;
+          th.append(link); headRow.append(th);
+        });
+        head.append(headRow); table.append(head);
+        const body = document.createElement('tbody');
+        fields.forEach(([label, read]) => {
+          const values = selected.map(read);
+          if (values.every((value) => !value)) return;
+          const row = document.createElement('tr');
+          const th = document.createElement('th'); th.scope = 'row'; th.textContent = label; row.append(th);
+          values.forEach((value) => {
+            const td = document.createElement('td'); td.textContent = value ?? '—';
+            if (label === 'Tier' && value) {
+              const tier = value.trim().charAt(0).toLowerCase();
+              td.dataset.tier = ['d', 'e', 'f'].includes(tier) ? 'd' : tier;
+            }
+            row.append(td);
+          });
+          body.append(row);
+        });
+        table.append(body);
+        output.replaceChildren(table);
+        output.hidden = false;
+        empty.hidden = true;
+      };
+
+      const initial = (new URLSearchParams(window.location.search).get('spells') ?? '').split(',').filter(Boolean).slice(0, 4);
+      initial.forEach((id, index) => { if (selects[index] && byId.has(id)) selects[index].value = id; });
+      selects.forEach((select) => select.addEventListener('change', update));
+      root.querySelector('[data-clear-comparison]')?.addEventListener('click', () => { selects.forEach((select) => { select.value = ''; }); update(); });
+      update();
+    }
+  </script>
+</BaseLayout>

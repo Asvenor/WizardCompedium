@@ -1,0 +1,75 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@/components/layout/BaseLayout.astro';
+import { corePrinciples } from '@/data/core-principles';
+import { getSpellRoleCategories } from '@/lib/spells';
+
+const spells = (await getCollection('spells')).map((entry) => entry.data)
+  .sort((a, b) => a.level - b.level || a.name.localeCompare(b.name))
+  .map((spell) => ({
+    id: spell.id, name: spell.name, level: spell.level, source: spell.source.category,
+    summary: spell.compendium.summary, roles: spell.compendium.roles, categories: getSpellRoleCategories(spell),
+  }));
+const serializedSpells = JSON.stringify(spells).replace(/</g, '\\u003c');
+---
+<BaseLayout title="Learning Mode" description="Learn canonical spell roles and core Wizard principles." active="learn">
+  <header class="page-hero"><div class="site-shell"><p class="kicker">Internalize the Compendium</p><h1>Learning Mode</h1><p>Short recall practice for canonical spell roles and the operating principles used at the table.</p></div></header>
+  <section class="section section--first">
+    <div class="site-shell learning-layout">
+      <article class="tool-panel flashcard-panel" data-flashcards>
+        <div class="tool-panel-head"><div><p class="eyebrow">Mode A</p><h2>Spell flashcards</h2></div><span data-card-progress></span></div>
+        <label class="field-label"><span>Deck</span><select class="field" data-deck-select><option value="all">All canonical spells</option><option value="core">Core spells</option>{Array.from({ length: 10 }, (_, level) => <option value={`level-${level}`}>{level === 0 ? 'Cantrips' : `Level ${level} spells`}</option>)}<option value="dunamancy">Chronurgy / Dunamancy spells</option><option value="control">Control spells</option><option value="defense">Defense spells</option></select></label>
+        <div class="flashcard" data-flashcard>
+          <p class="eyebrow">What is its primary optimization role?</p>
+          <h3 data-card-name>Loading…</h3>
+          <div class="flashcard-answer" data-card-answer hidden><p data-card-summary></p><p><strong>Indexed roles:</strong> <span data-card-roles></span></p><a data-card-link>Open spell record →</a></div>
+        </div>
+        <div class="form-actions"><button class="button button--primary" type="button" data-reveal-card>Reveal</button><button class="button" type="button" data-next-card>Next spell</button></div>
+      </article>
+      <article class="principle-list">
+        <div class="section-head"><div><p class="kicker">Mode B</p><h2>Core principle quiz</h2></div></div>
+        {corePrinciples.map((principle, index) => (
+          <details class="principle-card">
+            <summary><span>{String(index + 1).padStart(2, '0')}</span>{principle.question}</summary>
+            <div><p>{principle.answer}</p><a href={principle.href}>{principle.source} →</a></div>
+          </details>
+        ))}
+      </article>
+    </div>
+  </section>
+  <script is:inline type="application/json" id="flashcard-spells" set:html={serializedSpells}></script>
+  <script>
+    interface FlashcardSpell { id: string; name: string; level: number; source: string; summary: string; roles: string[]; categories: string[]; }
+    const root = document.querySelector<HTMLElement>('[data-flashcards]');
+    const data = document.querySelector<HTMLScriptElement>('#flashcard-spells');
+    if (root && data) {
+      const spells: FlashcardSpell[] = JSON.parse(data.textContent ?? '[]');
+      const deck = root.querySelector<HTMLSelectElement>('[data-deck-select]');
+      const name = root.querySelector<HTMLElement>('[data-card-name]');
+      const summary = root.querySelector<HTMLElement>('[data-card-summary]');
+      const roles = root.querySelector<HTMLElement>('[data-card-roles]');
+      const link = root.querySelector<HTMLAnchorElement>('[data-card-link]');
+      const answer = root.querySelector<HTMLElement>('[data-card-answer]');
+      const progress = root.querySelector<HTMLElement>('[data-card-progress]');
+      let cards: FlashcardSpell[] = []; let index = 0;
+      const chooseDeck = () => {
+        const value = deck?.value ?? 'all';
+        cards = spells.filter((spell) => value === 'all'
+          || value === `level-${spell.level}`
+          || (value === 'core' && spell.source.toLowerCase() === 'core')
+          || (value === 'dunamancy' && spell.source.toLowerCase().includes('dunamancy'))
+          || spell.categories.includes(value));
+        index = 0; render();
+      };
+      const render = () => {
+        const spell = cards[index];
+        if (!spell || !name || !summary || !roles || !link || !answer || !progress) return;
+        name.textContent = spell.name; summary.textContent = spell.summary; roles.textContent = spell.roles.join(', ') || 'No role tags indexed';
+        link.href = `/spells/${spell.id}/`; answer.hidden = true; progress.textContent = `${index + 1} / ${cards.length}`;
+      };
+      root.querySelector('[data-reveal-card]')?.addEventListener('click', () => { if (answer) answer.hidden = false; });
+      root.querySelector('[data-next-card]')?.addEventListener('click', () => { if (cards.length) index = (index + 1) % cards.length; render(); });
+      deck?.addEventListener('change', chooseDeck); chooseDeck();
+    }
+  </script>
+</BaseLayout>

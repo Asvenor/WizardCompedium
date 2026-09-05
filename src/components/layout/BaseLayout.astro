@@ -13,11 +13,12 @@ const {
 } = Astro.props;
 const pageTitle = title === 'Wizard Compendium' ? title : `${title} · Wizard Compendium`;
 const nav = [
+  ['Play', '/play/', 'play'],
   ['Builds', '/builds/', 'builds'],
   ['Spells', '/spells/', 'spells'],
-  ['Combat & Tactics', '/combat/', 'combat'],
-  ['Gear & Operations', '/gear/', 'gear'],
-  ['Reference', '/reference/', 'reference'],
+  ['Tools', '/tools/', 'tools'],
+  ['Learn', '/learn/', 'learn'],
+  ['Compendium', '/compendium/', 'compendium'],
 ];
 ---
 <!doctype html>
@@ -41,12 +42,14 @@ const nav = [
           {nav.map(([label, href, key]) => <a href={href} aria-current={active === key ? 'page' : undefined}>{label}</a>)}
           <a class="nav-search" href="/search/">Search <span aria-hidden="true">⌘K</span></a>
         </nav>
+        <a class="profile-link" href="/wizard/">My Wizard</a>
         <details class="mobile-nav">
           <summary>Menu</summary>
           <nav class="mobile-menu" aria-label="Mobile navigation">
             <a href="/">Home</a>
             {nav.map(([label, href]) => <a href={href}>{label}</a>)}
             <a href="/search/">Search</a>
+            <a href="/wizard/">My Wizard</a>
           </nav>
         </details>
       </div>

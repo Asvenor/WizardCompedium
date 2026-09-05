@@ -11,19 +11,18 @@ export async function getStaticPaths() {
 }
 const { spell } = Astro.props;
 const levelLabel = spell.level === 0 ? 'Cantrip' : `Level ${spell.level}`;
-const stat = (label: string, value: string | null) => ({ label, value: value ?? 'Not restated in Compendium index' });
 const buildBadgeMap: Record<string, 'core' | 'chron' | 'div' | 'ill' | 'blade' | 'tank' | 'fighter'> = { bladesinger: 'blade' };
 const stats = [
-  stat('Level / school', `${levelLabel}${spell.school ? ` · ${spell.school}` : ''}`),
-  stat('Casting time', spell.rules.castingTime),
-  stat('Range', spell.rules.range),
-  stat('Area', spell.rules.area),
-  stat('Duration', spell.rules.duration),
-  stat('Save / attack', spell.rules.attackRoll ? 'Spell attack' : spell.rules.save.ability ? `${spell.rules.save.ability} save` : spell.rules.save.type),
-];
+  { label: 'Level / school', value: `${levelLabel}${spell.school ? ` · ${spell.school}` : ''}` },
+  { label: 'Casting time', value: spell.rules.castingTime },
+  { label: 'Range', value: spell.rules.range },
+  { label: 'Area', value: spell.rules.area },
+  { label: 'Duration', value: spell.rules.duration },
+  { label: 'Save / attack', value: spell.rules.attackRoll ? 'Spell attack' : spell.rules.save.ability ? `${spell.rules.save.ability} save` : spell.rules.save.type },
+].filter((item) => item.value);
 ---
 <BaseLayout title={spell.name} description={spell.compendium.summary} active="spells">
-  <div class="site-shell docs-grid" style="grid-template-columns:minmax(0,var(--article)) 13rem;justify-content:center">
+  <div class="site-shell spell-page-layout">
     <article class="article" data-pagefind-body>
       <div class="breadcrumbs"><a href="/">Home</a><span>/</span><a href="/spells/">Spells</a><span>/</span><span>{spell.name}</span></div>
       <header class="article-header">
@@ -36,8 +35,9 @@ const stats = [
         </div>
         <h1 data-pagefind-meta="title">{spell.name}</h1>
         <p>{spell.compendium.summary}</p>
+        <div class="hero-actions"><a class="button button--primary" href={`/spells/compare/?spells=${spell.id}`}>Compare this spell</a><a class="button" href="/prepare/">Add to a mission list</a></div>
       </header>
-      <div class="spell-detail-grid">{stats.map((item) => <div class="spell-stat"><small>{item.label}</small><strong>{item.value}</strong></div>)}</div>
+      {stats.length > 0 && <div class="spell-detail-grid">{stats.map((item) => <div class="spell-stat"><small>{item.label}</small><strong>{item.value}</strong></div>)}</div>}
       <div class="prose">
         <h2>Compendium role</h2>
         <p><strong>Acquisition:</strong> {spell.compendium.acquisitionRole}. {spell.compendium.preparedBaseline ? 'Marked in the prepared / known baseline.' : 'Not marked in the supplied prepared / known baseline.'}</p>
@@ -49,13 +49,10 @@ const stats = [
           <p><strong>Consumed:</strong> {spell.rules.components.consumed === true ? 'Yes' : spell.rules.components.consumed === false ? 'No' : 'Verify the active spell entry'}{spell.rules.components.gpCost ? ` · Recorded cost: ${spell.rules.components.gpCost.toLocaleString()}+ gp` : ''}.</p>
         </>}
         <h2>Source status</h2>
-        <p><strong>{spell.source.category}</strong> · {spell.source.book ?? 'Use the active source entry'} · {spell.source.rulesVersion}.</p>
-        <h2>Warnings</h2>
-        <ul class="warning-list">{spell.compendium.warnings.map((warning) => <li>{warning}</li>)}</ul>
-        <h2>Related Compendium chapters</h2>
-        <div class="chapter-chips">{spell.compendium.relatedChapters.map((number) => { const chapter = chapters.find((item) => item.number === number); return chapter && <a class="chapter-chip" href={`/chapters/${chapter.slug}/`}>Ch. {number} · {chapter.title}</a>; })}</div>
+        <p><strong>{spell.source.category}</strong>{spell.source.book && <> · {spell.source.book}</>} · {spell.source.rulesVersion}.</p>
+        {spell.compendium.warnings.length > 0 && <><h2>Warnings</h2><ul class="warning-list">{spell.compendium.warnings.map((warning) => <li>{warning}</li>)}</ul></>}
+        {spell.compendium.relatedChapters.length > 0 && <><h2>Related Compendium chapters</h2><div class="chapter-chips">{spell.compendium.relatedChapters.map((number) => { const chapter = chapters.find((item) => item.number === number); return chapter && <a class="chapter-chip" href={`/chapters/${chapter.slug}/`}>Ch. {number} · {chapter.title}</a>; })}</div></>}
       </div>
     </article>
-    <aside class="toc"><h2>Record ownership</h2><p style="font-size:.8rem;color:var(--ink-faint)">This page is generated from <strong>{spell.id}.json</strong>. Change that one record to update reusable spell views.</p></aside>
   </div>
 </BaseLayout>

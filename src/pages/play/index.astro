@@ -1,0 +1,41 @@
+---
+import BaseLayout from '@/components/layout/BaseLayout.astro';
+import ProblemNavigator from '@/components/ProblemNavigator.astro';
+import { playCards } from '@/data/play-mode';
+---
+<BaseLayout title="Play Mode" description="Fast Wizard decisions during actual play, linked to the complete Compendium." active="play">
+  <header class="page-hero play-hero"><div class="site-shell"><p class="kicker">Level 1 · Fast answer</p><h1>Play Mode</h1><p>Choose the pressure in front of you. Open the quick reference only when needed, then follow the source link for the full rule or playbook.</p></div></header>
+  <section class="section section--first">
+    <div class="site-shell">
+      <div class="play-card-grid">
+        {playCards.map((card) => (
+          <article class="play-card" id={card.id}>
+            <p class="eyebrow">{card.label}</p>
+            <h2>{card.fast}</h2>
+            <details>
+              <summary>Quick reference</summary>
+              <ul>{card.quick.map((item) => <li>{item}</li>)}</ul>
+            </details>
+            <a href={card.href}>{card.linkLabel} →</a>
+          </article>
+        ))}
+        <article class="play-card play-card--lookup" id="spell-lookup">
+          <p class="eyebrow">Spell lookup</p>
+          <h2>Jump directly to a spell, role, rule, or tactical phrase.</h2>
+          <form action="/search/" method="get" role="search">
+            <label class="sr-only" for="play-search">Search the Compendium</label>
+            <input class="field" id="play-search" name="q" type="search" placeholder="Wall of Force, concentration…" />
+            <button class="button button--primary" type="submit">Search</button>
+          </form>
+          <a href="/spells/">Open Spell Database →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="site-shell">
+      <div class="section-head"><div><p class="kicker">Problem Navigator</p><h2>Need a different answer?</h2></div><a class="section-link" href="/problems/">Open full navigator →</a></div>
+      <ProblemNavigator compact />
+    </div>
+  </section>
+</BaseLayout>

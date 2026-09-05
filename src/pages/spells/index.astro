@@ -2,24 +2,49 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '@/components/layout/BaseLayout.astro';
 import SpellCard from '@/components/spells/SpellCard.astro';
+import { buildLabel, getSpellRoleCategories } from '@/lib/spells';
 
 const entries = await getCollection('spells');
 const spells = entries.map((entry) => entry.data).sort((a, b) => a.level - b.level || a.name.localeCompare(b.name));
 const levels = [...new Set(spells.map((spell) => spell.level))].sort((a, b) => a - b);
 const sources = [...new Set(spells.map((spell) => spell.source.category))].sort();
+const roleCategories = [...new Set(spells.flatMap(getSpellRoleCategories))].sort();
+const buildRelevance = [...new Set(spells.flatMap((spell) => spell.compendium.buildRelevance.map(buildLabel)))].sort();
+const damageTypes = [...new Set(spells.flatMap((spell) => spell.rules.damageTypes))].sort();
+const roleLabels: Record<string, string> = {
+  'anti-caster': 'Anti-Caster', control: 'Control', damage: 'Damage', defense: 'Defense', information: 'Information',
+  mobility: 'Mobility', summoning: 'Summoning', utility: 'Utility',
+};
 ---
 <BaseLayout title="Spell Database" description="Canonical structured spell records derived from the Compendium's maintained spell pool and spell indexes." active="spells">
-  <header class="page-hero"><div class="site-shell"><p class="kicker">Canonical spell records</p><h1>Spell Database</h1><p>Search the maintained Compendium pool by level, acquisition role, concentration, and source. Complete rules wording remains in the active spell entry.</p></div></header>
+  <header class="page-hero"><div class="site-shell"><p class="kicker">Level 1 → Level 3</p><h1>Spell Database</h1><p>Find the fast tactical answer, inspect canonical metadata, or open the deeper Compendium references.</p><div class="hero-actions"><a class="button button--primary" href="/spells/compare/">Compare spells</a><a class="button" href="/prepare/">Prepare a mission list</a></div></div></header>
   <section class="section">
     <div class="site-shell">
       <div class="spell-toolbar" data-spell-toolbar>
-        <input class="field" type="search" placeholder="Search spells, roles, or summaries…" aria-label="Search spells" data-spell-search />
-        <select class="field" aria-label="Spell level" data-spell-level><option value="">All levels</option>{levels.map((level) => <option value={level}>{level === 0 ? 'Cantrips' : `Level ${level}`}</option>)}</select>
-        <select class="field" aria-label="Acquisition role" data-spell-role><option value="">All roles</option><option value="mandatory">Mandatory</option><option value="optional">Optional</option><option value="sleeper">Sleeper</option><option value="unclassified">Unclassified</option></select>
-        <select class="field" aria-label="Source category" data-spell-source><option value="">All sources</option>{sources.map((source) => <option value={source}>{source}</option>)}</select>
-        <select class="field" aria-label="Concentration" data-spell-concentration><option value="">Any concentration</option><option value="true">Concentration</option><option value="false">No concentration</option></select>
+        <div class="spell-filter-primary">
+          <input class="field" type="search" placeholder="Search spells, roles, or summaries…" aria-label="Search spells" data-spell-search />
+          <select class="field" aria-label="Spell level" data-filter="level"><option value="">All levels</option>{levels.map((level) => <option value={level}>{level === 0 ? 'Cantrips' : `Level ${level}`}</option>)}</select>
+          <select class="field" aria-label="Tier" data-filter="tier"><option value="">All tiers</option><option value="s">S / S+</option><option value="a">A</option><option value="b">B</option><option value="c">C</option><option value="d-f">D / F</option></select>
+          <select class="field" aria-label="Optimization role" data-filter="role-category"><option value="">All optimization roles</option>{roleCategories.map((role) => <option value={role}>{roleLabels[role] ?? role}</option>)}</select>
+        </div>
+        <details class="spell-filter-panel">
+          <summary>More filters</summary>
+          <div class="spell-filter-more">
+            <select class="field" aria-label="Acquisition role" data-filter="role"><option value="">Any acquisition role</option><option value="mandatory">Mandatory</option><option value="optional">Optional</option><option value="sleeper">Sleeper</option><option value="unclassified">Unclassified</option></select>
+            <select class="field" aria-label="Concentration" data-filter="concentration"><option value="">Any concentration</option><option value="true">Concentration: Yes</option><option value="false">Concentration: No</option></select>
+            <select class="field" aria-label="Ritual" data-filter="ritual"><option value="">Any ritual status</option><option value="true">Ritual: Yes</option><option value="false">Ritual: No</option></select>
+            <select class="field" aria-label="Saving throw" data-filter="save"><option value="">Any save</option>{['STR','DEX','CON','INT','WIS','CHA'].map((save) => <option value={save.toLowerCase()}>{save} save</option>)}<option value="none">No save</option></select>
+            <select class="field" aria-label="Attack roll" data-filter="attack"><option value="">Any attack type</option><option value="spell-attack">Spell attack</option><option value="no-attack">No spell attack</option></select>
+            <select class="field" aria-label="Action type" data-filter="action"><option value="">Any casting time</option><option value="action">Action</option><option value="bonus-action">Bonus Action</option><option value="reaction">Reaction</option><option value="long-cast">Long Cast / Ritual</option></select>
+            <select class="field" aria-label="Source category" data-filter="source"><option value="">All sources</option>{sources.map((source) => <option value={source}>{source}</option>)}</select>
+            {buildRelevance.length > 0 && <select class="field" aria-label="Build relevance" data-filter="build"><option value="">Any indexed build relevance</option>{buildRelevance.map((build) => <option value={build.toLowerCase()}>{build}</option>)}</select>}
+            {damageTypes.length > 0 && <select class="field" aria-label="Damage type" data-filter="damage"><option value="">Any damage type</option>{damageTypes.map((type) => <option value={type.toLowerCase()}>{type}</option>)}</select>}
+            <button class="button" type="button" data-clear-filters>Clear filters</button>
+          </div>
+        </details>
       </div>
       <p class="spell-count" aria-live="polite"><span data-spell-count>{spells.length}</span> spells shown</p>
+      <p class="empty-state" data-spell-empty hidden>No canonical spell records match these filters.</p>
       <div class="spell-results" data-spell-results>{spells.map((spell) => <SpellCard spell={spell} />)}</div>
     </div>
   </section>
@@ -27,29 +52,37 @@ const sources = [...new Set(spells.map((spell) => spell.source.category))].sort(
     const toolbar = document.querySelector<HTMLElement>('[data-spell-toolbar]');
     const cards = [...document.querySelectorAll<HTMLElement>('[data-spell-card]')];
     const count = document.querySelector<HTMLElement>('[data-spell-count]');
+    const empty = document.querySelector<HTMLElement>('[data-spell-empty]');
     if (toolbar && count) {
-      const controls = {
-        search: toolbar.querySelector<HTMLInputElement>('[data-spell-search]'),
-        level: toolbar.querySelector<HTMLSelectElement>('[data-spell-level]'),
-        role: toolbar.querySelector<HTMLSelectElement>('[data-spell-role]'),
-        source: toolbar.querySelector<HTMLSelectElement>('[data-spell-source]'),
-        concentration: toolbar.querySelector<HTMLSelectElement>('[data-spell-concentration]'),
-      };
-      if (Object.values(controls).some((control) => !control)) throw new Error('Spell filter controls are incomplete.');
+      const search = toolbar.querySelector<HTMLInputElement>('[data-spell-search]');
+      const filters = [...toolbar.querySelectorAll<HTMLSelectElement>('[data-filter]')];
       const update = () => {
         let visible = 0;
         cards.forEach((card) => {
-          const matches = (!controls.search!.value || (card.dataset.search ?? '').includes(controls.search!.value.toLowerCase()))
-            && (!controls.level!.value || card.dataset.level === controls.level!.value)
-            && (!controls.role!.value || card.dataset.role === controls.role!.value)
-            && (!controls.source!.value || card.dataset.source === controls.source!.value)
-            && (!controls.concentration!.value || card.dataset.concentration === controls.concentration!.value);
+          const matchesSearch = !search?.value || (card.dataset.search ?? '').includes(search.value.trim().toLowerCase());
+          const matchesFilters = filters.every((filter) => {
+            if (!filter.value) return true;
+            const filterKey = filter.dataset.filter ?? '';
+            const datasetKey = filterKey.replace(/-([a-z])/g, (_, letter) => letter.toUpperCase());
+            const cardValue = card.dataset[datasetKey] ?? '';
+            return ['role-category', 'damage', 'build', 'action'].includes(filterKey)
+              ? cardValue.split(' ').includes(filter.value.toLowerCase())
+              : cardValue.toLowerCase() === filter.value.toLowerCase();
+          });
+          const matches = matchesSearch && matchesFilters;
           card.hidden = !matches;
           if (matches) visible += 1;
         });
         count.textContent = String(visible);
+        if (empty) empty.hidden = visible !== 0;
       };
-      Object.values(controls).forEach((control) => control!.addEventListener(control!.tagName === 'INPUT' ? 'input' : 'change', update));
+      search?.addEventListener('input', update);
+      filters.forEach((filter) => filter.addEventListener('change', update));
+      toolbar.querySelector('[data-clear-filters]')?.addEventListener('click', () => {
+        if (search) search.value = '';
+        filters.forEach((filter) => { filter.value = ''; });
+        update();
+      });
     }
   </script>
 </BaseLayout>

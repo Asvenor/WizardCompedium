@@ -1,0 +1,65 @@
+---
+import BaseLayout from '@/components/layout/BaseLayout.astro';
+import chapters from '@/data/chapters.json';
+
+const chapterByNumber = new Map(chapters.map((chapter) => [chapter.number, chapter]));
+const chapterLink = (number: number) => `/chapters/${chapterByNumber.get(number)?.slug}/`;
+const quickNavigation = [
+  [
+    { label: 'I Fundamentals', href: chapterLink(1) }, { label: 'II Builds', href: '/builds/' },
+    { label: 'III Spells + Options', href: '/spells/' }, { label: 'IV Casting + Tactics', href: '/combat/' },
+    { label: 'V Gear + Strategy', href: '/gear/' }, { label: 'VI–VIII Reference', href: '/reference/' },
+  ],
+  [
+    { label: 'Tier Color Key', href: chapterLink(1) }, { label: 'Spell Progression', href: chapterLink(10) },
+    { label: 'Dunamancy Dossier', href: chapterLink(16) }, { label: 'Spell Scorecard', href: chapterLink(12) },
+    { label: 'Spell Tag Index', href: chapterLink(15) }, { label: 'Skills + Boons', href: chapterLink(17) },
+  ],
+  [
+    { label: 'Spell Legality', href: chapterLink(19) }, { label: 'Conditions & Area', href: chapterLink(20) },
+    { label: 'Casting Interface', href: chapterLink(21) }, { label: 'High-Level Safety', href: chapterLink(23) },
+    { label: 'Emergency Protocol', href: chapterLink(35) }, { label: 'Problem Navigator', href: '/problems/' },
+  ],
+  [
+    { label: 'Item Operations', href: chapterLink(27) }, { label: 'Tools & Crafting', href: chapterLink(28) },
+    { label: 'Scroll & Books', href: chapterLink(32) }, { label: 'Adventure Loadout', href: chapterLink(39) },
+    { label: 'Source Status', href: chapterLink(48) }, { label: 'Quick Finder', href: chapterLink(49) },
+  ],
+  [
+    { label: 'Subclass Matrix', href: chapterLink(50) }, { label: 'Version Register', href: chapterLink(51) },
+    { label: 'Anti-Wizard', href: chapterLink(52) }, { label: 'Party Synergy', href: chapterLink(53) },
+    { label: 'Play Sheets', href: chapterLink(54) }, { label: 'Arcana Intake', href: chapterLink(56) },
+  ],
+  [
+    { label: 'Builder Setup', href: chapterLink(57) }, { label: 'Encounter Playbooks', href: chapterLink(58) },
+    { label: 'Targeting Matrix', href: chapterLink(59) }, { label: 'Slot Rules', href: chapterLink(60) },
+    { label: 'Session-Zero Rules', href: chapterLink(61) }, { label: 'Validation Standard', href: chapterLink(55) },
+  ],
+];
+const chapterRows = Array.from({ length: 21 }, (_, index) => [index + 1, index + 22, index + 42]
+  .map((number) => chapterByNumber.get(number)));
+---
+<BaseLayout title="Full Compendium" description="The complete 61-chapter Ultimate Wizard Compendium." active="compendium">
+  <header class="page-hero"><div class="site-shell"><p class="kicker">Complete deep reference</p><h1>Full Compendium</h1><p>All 61 chapters, organized exactly beneath the faster cockpit and tools.</p></div></header>
+  <section class="section section--first">
+    <div class="site-shell">
+      <div class="section-head"><div><p class="kicker">Major sections and finders</p><h2>Quick navigation</h2></div><a class="section-link" href="/search/">Search everything →</a></div>
+      <div class="quick-reference-wrap" tabindex="0" aria-label="Compendium quick navigation">
+        <table class="quick-reference-table"><tbody>
+          {quickNavigation.map((row, rowIndex) => <tr>{row.map((item) => <td class:list={{ 'quick-reference-part': rowIndex === 0 }}><a href={item.href}>{item.label}</a></td>)}</tr>)}
+        </tbody></table>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="site-shell">
+      <div class="section-head"><div><p class="kicker">Complete contents</p><h2>Chapter directory</h2></div></div>
+      <div class="chapter-directory-wrap" tabindex="0" aria-label="All Compendium chapters">
+        <table class="chapter-directory-table">
+          <thead><tr><th>Ch.</th><th>Section</th><th>Ch.</th><th>Section</th><th>Ch.</th><th>Section</th></tr></thead>
+          <tbody>{chapterRows.map((row) => <tr>{row.map((chapter) => chapter ? <><td class="chapter-number">{chapter.number}</td><td><a href={`/chapters/${chapter.slug}/`}><span>{chapter.part}</span>{chapter.title}</a></td></> : <><td></td><td></td></>)}</tr>)}</tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
