@@ -14,7 +14,10 @@ Purpose: Explain the actual engines used by high-optimization Wizards: why they 
 <!-- source:B00297 -->
 <div class="table-wrap" data-source-locator="B00297.T001" tabindex="0"><table><thead><tr><th scope="col">Label</th><th scope="col">Meaning</th><th scope="col">Default handling</th></tr></thead><tbody><tr><td>Advanced</td><td>Powerful normal play that rewards planning and execution.</td><td>Use freely when legal.</td></tr><tr><td>High-Op</td><td>Substantially stronger than ordinary character options.</td><td>Explain the plan to the table.</td></tr><tr><td>DM-Sensitive</td><td>Depends on wording, target access, creature data, or interpretation.</td><td>Confirm before investing resources.</td></tr><tr><td>Campaign-Warping</td><td>Can reshape encounters, downtime, economics, or the campaign world.</td><td>Use only at a table that wants this power level.</td></tr><tr><td>Commonly Restricted</td><td>Frequently limited even when a textual reading supports it.</td><td>Do not surprise the DM with it.</td></tr></tbody></table></div>
 
-<div class="table-wrap" data-source-locator="B00297.T002" tabindex="0"><table><thead><tr><th scope="col">OPERATING RULEA broken interaction is not a secret weapon against the DM. Present the exact sequence, identify the disputed step, and agree on the ruling before the campaign depends on it.</th></tr></thead><tbody></tbody></table></div>
+<aside class="callout" data-source-locator="B00297.T002">
+<strong>OPERATING RULE</strong>
+<p>A broken interaction is not a secret weapon against the DM. Present the exact sequence, identify the disputed step, and agree on the ruling before the campaign depends on it.</p>
+</aside>
 
 <!-- source:B00298 -->
 <aside class="callout callout--note"><p>OPTIONAL LAYER. Nothing in this chapter is required for the flagship build. Use it only after the normal combat, mission, and safety procedures are understood. Selectability establishes legality; RULING-SENSITIVE and TABLE-DANGER labels establish the need for a shared operating agreement.</p></aside>
@@ -80,7 +83,10 @@ Why it is broken: A Spell Glyph can release a stored spell when its trigger occu
 
 <div class="table-wrap" data-source-locator="B00318.T002" tabindex="0"><table><thead><tr><th scope="col">Stored-effect role</th><th scope="col">Examples to evaluate</th><th scope="col">Why it is valuable</th></tr></thead><tbody><tr><td>Mobility</td><td>Fly or another long-duration movement effect.</td><td>Reaches the encounter with concentration still free.</td></tr><tr><td>Stealth / defense</td><td>Greater Invisibility or an eligible protection effect.</td><td>Adds survival and positioning without consuming the controller's concentration.</td></tr><tr><td>Physical chassis</td><td>Polymorph or another eligible transformation.</td><td>Lets an ally enter with an extra Hit Point buffer while the Wizard controls the field.</td></tr><tr><td>Encounter trigger</td><td>A control, summon, alarm, or area effect tied to a room intrusion.</td><td>Moves an action and spell slot into pre-combat time.</td></tr></tbody></table></div>
 
-<div class="table-wrap" data-source-locator="B00318.T003" tabindex="0"><table><thead><tr><th scope="col">FAILURE STATESThe room can be discovered, dispelled one glyph at a time, bypassed, or made irrelevant by travel. The package also loses value when durations expire before contact. Build for one known objective, not an imaginary perfect battle.</th></tr></thead><tbody></tbody></table></div>
+<aside class="callout" data-source-locator="B00318.T003">
+<strong>FAILURE STATES</strong>
+<p>The room can be discovered, dispelled one glyph at a time, bypassed, or made irrelevant by travel. The package also loses value when durations expire before contact. Build for one known objective, not an imaginary perfect battle.</p>
+</aside>
 
 <!-- source:B00319 -->
 ## 3. Planar Binding Service Engine
@@ -99,7 +105,10 @@ Why it is broken: Planar Binding converts a failed Charisma save, 1,000+ gp, and
 
 <div class="table-wrap" data-source-locator="B00323.T002" tabindex="0"><table><thead><tr><th scope="col">Strong role</th><th scope="col">Command design</th><th scope="col">Avoid</th></tr></thead><tbody><tr><td>Transport</td><td>Specify passengers, destination, route limits, risk tolerance, and return point.</td><td>&quot;Take us there safely&quot; without defining what safely means.</td></tr><tr><td>Scout</td><td>Specify area, information required, contact schedule, and whether engagement is forbidden.</td><td>Open-ended spying with no reporting format.</td></tr><tr><td>Guard</td><td>Define location, recognized allies, escalation, pursuit distance, and when to wake or contact the party.</td><td>Commands that permit collateral damage or endless pursuit.</td></tr><tr><td>Combat support</td><td>Give a default turn, priority target type, retreat threshold, and prohibited abilities.</td><td>Running a second complex stat block without preparation.</td></tr><tr><td>Utility magic</td><td>List the exact services and who may request them.</td><td>Allowing a hostile servant to decide when assistance is &quot;necessary.&quot;</td></tr></tbody></table></div>
 
-<div class="table-wrap" data-source-locator="B00323.T003" tabindex="0"><table><thead><tr><th scope="col">RULES BOUNDARYIf the creature was created or summoned by another spell, Planar Binding extends that spell's duration to match the binding. The difficult part is keeping the creature present through the one-hour casting. Do not assume a concentration summon can be maintained by the same caster through every setup without checking the long-casting rules and concentration demands.</th></tr></thead><tbody></tbody></table></div>
+<aside class="callout" data-source-locator="B00323.T003">
+<strong>RULES BOUNDARY</strong>
+<p>If the creature was created or summoned by another spell, Planar Binding extends that spell's duration to match the binding. The difficult part is keeping the creature present through the one-hour casting. Do not assume a concentration summon can be maintained by the same caster through every setup without checking the long-casting rules and concentration demands.</p>
+</aside>
 
 <!-- source:B00324 -->
 ## 4. Magic Jar Physical-Body Replacement
@@ -124,7 +133,10 @@ Why it is broken: Possession replaces the Wizard's Hit Points, Hit Dice, Strengt
 
 <div class="table-wrap" data-source-locator="B00330.T002" tabindex="0"><table><thead><tr><th scope="col">Failure state</th><th scope="col">Result</th><th scope="col">Prevention</th></tr></thead><tbody><tr><td>Host dies and the return save fails, or the container is too far away.</td><td>The Wizard dies.</td><td>Keep the container inside the required range and avoid suicidal frontlining.</td></tr><tr><td>Container is destroyed while the original body is dead or too far away.</td><td>The Wizard dies.</td><td>Protect the container as seriously as the spellbook.</td></tr><tr><td>Original body is discovered and killed.</td><td>The Wizard loses the safe return body and may die when the spell ends.</td><td>Use a guarded, concealed, or extradimensional location supported by the active entry or an explicit table ruling.</td></tr><tr><td>Protection from Evil and Good or Magic Circle blocks possession.</td><td>The attempt is illegal or fails before the save.</td><td>Research magical defenses before committing.</td></tr></tbody></table></div>
 
-<div class="table-wrap" data-source-locator="B00330.T003" tabindex="0"><table><thead><tr><th scope="col">VERDICTThis is not casual immortality. It is a high-risk chassis upgrade whose safety depends on logistics, information, and exact spell wording.</th></tr></thead><tbody></tbody></table></div>
+<aside class="callout" data-source-locator="B00330.T003">
+<strong>VERDICT</strong>
+<p>This is not casual immortality. It is a high-risk chassis upgrade whose safety depends on logistics, information, and exact spell wording.</p>
+</aside>
 
 <!-- source:B00331 -->
 ## 5. Nystul's Magic Aura Exploit Tree
@@ -147,7 +159,10 @@ Why it is broken: The 2024 Mask effect makes spells and other magical effects tr
 <!-- source:B00337 -->
 <div class="table-wrap" data-source-locator="B00337.T001" tabindex="0"><table><thead><tr><th scope="col">Step</th><th scope="col">Execution</th></tr></thead><tbody><tr><td>1. Obtain a willing mask target</td><td>This is the hard gate. A hostile prisoner is not automatically willing.</td></tr><tr><td>2. Select a valid binding type</td><td>Choose Celestial, Elemental, Fey, or Fiend as the Mask type.</td></tr><tr><td>3. Contain for one hour</td><td>The masked creature must remain within 60 feet for the entire Planar Binding casting.</td></tr><tr><td>4. Resolve the Charisma save</td><td>The mask changes target classification; it does not remove the save or Legendary Resistance.</td></tr><tr><td>5. Command normally</td><td>A hostile bound creature still twists commands and the duration still expires.</td></tr></tbody></table></div>
 
-<div class="table-wrap" data-source-locator="B00337.T002" tabindex="0"><table><thead><tr><th scope="col">DISPUTED EXPLOITSuggestion does not explicitly make a creature willing for every later spell, does not force automatic saving-throw failures, and does not suppress Legendary Resistance. A DM may allow a narrow suggestion to cooperate with one harmless-looking spell, but the &quot;willing slave who fails everything&quot; interpretation is not a default rule.</th></tr></thead><tbody></tbody></table></div>
+<aside class="callout" data-source-locator="B00337.T002">
+<strong>DISPUTED EXPLOIT</strong>
+<p>Suggestion does not explicitly make a creature willing for every later spell, does not force automatic saving-throw failures, and does not suppress Legendary Resistance. A DM may allow a narrow suggestion to cooperate with one harmless-looking spell, but the &quot;willing slave who fails everything&quot; interpretation is not a default rule.</p>
+</aside>
 
 <!-- source:B00338 -->
 ## 6. Shapechange Spellcasting Chassis
@@ -160,7 +175,10 @@ Why it is broken: Shapechange grants Temporary Hit Points equal to the first for
 
 <div class="table-wrap" data-source-locator="B00340.T002" tabindex="0"><table><thead><tr><th scope="col">Combat mode</th><th scope="col">Wizard action</th><th scope="col">Form value</th></tr></thead><tbody><tr><td>Controller</td><td>Cast the encounter-winning concentration spell only if Shapechange is not already occupying concentration; otherwise use non-concentration spells and form actions.</td><td>Shapechange itself is the concentration commitment, so plan around that cost.</td></tr><tr><td>Durable caster</td><td>Use the form's movement and defenses to stay unassailable while casting non-concentration control, damage, and countermagic.</td><td>The form keeps the Wizard alive rather than replacing Wizard turns with basic attacks.</td></tr><tr><td>Emergency chassis</td><td>Transform when the party needs a body that can survive terrain, senses, or pressure the normal Wizard cannot.</td><td>Converts a failing position into a new tactical role.</td></tr><tr><td>Adaptive sequence</td><td>Use the Magic action on later turns to change into another eligible form as the problem changes; later forms do not refresh the Temporary Hit Points granted by the first form.</td><td>One spell can answer movement, defense, senses, and physical interaction across the hour.</td></tr></tbody></table></div>
 
-<div class="table-wrap" data-source-locator="B00340.T003" tabindex="0"><table><thead><tr><th scope="col">FORM LIBRARYDo not select forms the character has never seen. Build the legal form library through actual encounters, research, travel, and verified character knowledge. Exact monster traits must come from the sourcebooks available at the table.</th></tr></thead><tbody></tbody></table></div>
+<aside class="callout" data-source-locator="B00340.T003">
+<strong>FORM LIBRARY</strong>
+<p>Do not select forms the character has never seen. Build the legal form library through actual encounters, research, travel, and verified character knowledge. Exact monster traits must come from the sourcebooks available at the table.</p>
+</aside>
 
 <!-- source:B00341 -->
 ## 7. True Polymorph Creature Production
@@ -173,7 +191,10 @@ Why it is broken: A sufficiently large nonmagical object can become a creature o
 
 <div class="table-wrap" data-source-locator="B00343.T002" tabindex="0"><table><thead><tr><th scope="col">Strategic use</th><th scope="col">What the creature contributes</th><th scope="col">Why it can warp a campaign</th></tr></thead><tbody><tr><td>Mount / transport</td><td>Movement modes and carrying capacity.</td><td>Changes travel, supply, and access to terrain.</td></tr><tr><td>Guard / settlement defender</td><td>Presence, senses, and deterrence.</td><td>Lets a Wizard create defenders without recruiting ordinary soldiers.</td></tr><tr><td>Scout / specialist</td><td>Unusual movement, senses, languages, or environmental adaptation.</td><td>Creates capabilities the party may not otherwise possess.</td></tr><tr><td>Labour / infrastructure</td><td>Strength, mobility, and sustained work.</td><td>Changes construction and logistics when repeated.</td></tr><tr><td>Intelligent ally</td><td>Knowledge and independent action.</td><td>Can become a faction, not merely an item.</td></tr></tbody></table></div>
 
-<div class="table-wrap" data-source-locator="B00343.T003" tabindex="0"><table><thead><tr><th scope="col">LIMITThis is not a permanent slave factory. The first-hour command clause expires. The strongest use is creating allies whose interests genuinely align with the Wizard, not assuming endless obedience.</th></tr></thead><tbody></tbody></table></div>
+<aside class="callout" data-source-locator="B00343.T003">
+<strong>LIMIT</strong>
+<p>This is not a permanent slave factory. The first-hour command clause expires. The strongest use is creating allies whose interests genuinely align with the Wizard, not assuming endless obedience.</p>
+</aside>
 
 <!-- source:B00344 -->
 ## 8. Fabricate Economic and Infrastructure Domination
@@ -192,7 +213,10 @@ Why it is broken: Fabricate converts visible raw materials into a finished objec
 
 <div class="table-wrap" data-source-locator="B00348.T002" tabindex="0"><table><thead><tr><th scope="col">Constraint</th><th scope="col">Why it matters</th><th scope="col">Likely campaign response</th></tr></thead><tbody><tr><td>One object and size limits</td><td>Prevents unlimited batches in a single casting.</td><td>Assembly lines and multiple castings become necessary.</td></tr><tr><td>Same material and input quality</td><td>No transmutation of iron into gold and no automatic purification.</td><td>Raw-material suppliers gain leverage.</td></tr><tr><td>Finite buyers</td><td>A town cannot absorb endless plate armor or jewelry at full price.</td><td>Prices fall and markets saturate.</td></tr><tr><td>Guild and state power</td><td>The Wizard threatens livelihoods, taxes, military balance, and monopolies.</td><td>Recruitment offers, regulation, sabotage, coercion, or assassination.</td></tr><tr><td>Spell-slot opportunity cost</td><td>Every production casting is a premium adventuring resource until the day is safe.</td><td>Industrial play needs downtime and security.</td></tr></tbody></table></div>
 
-<div class="table-wrap" data-source-locator="B00348.T003" tabindex="0"><table><thead><tr><th scope="col">VERDICTFabricate does not create free money. It creates an industrial productivity advantage. The economy breaks when the Wizard repeatedly replaces labour, controls supply, and sells into large contracts faster than institutions can adapt.</th></tr></thead><tbody></tbody></table></div>
+<aside class="callout" data-source-locator="B00348.T003">
+<strong>VERDICT</strong>
+<p>Fabricate does not create free money. It creates an industrial productivity advantage. The economy breaks when the Wizard repeatedly replaces labour, controls supply, and sells into large contracts faster than institutions can adapt.</p>
+</aside>
 
 <!-- source:B00349 -->
 ## 22B. Advanced Combat Tactics
@@ -218,7 +242,10 @@ Why it is advanced: Wall of Force and Forcecage do not merely disable one target
 <!-- source:B00356 -->
 <div class="table-wrap" data-source-locator="B00356.T001" tabindex="0"><table><thead><tr><th scope="col">Step</th><th scope="col">Execution</th></tr></thead><tbody><tr><td>1. Place the hound</td><td>Conjure it in an unoccupied space where the target can be forced or lured within 5 feet. The hound is invisible to others, intangible, invulnerable, and lasts 8 hours.</td></tr><tr><td>2. Trap the target</td><td>Use a sufficiently tight Wall of Force globe or other legal geometry that keeps the target near the hound.</td></tr><tr><td>3. Protect concentration</td><td>The hound needs no concentration, but the force prison usually does. Move to cover and reserve defensive resources.</td></tr><tr><td>4. Tick damage</td><td>At the start of each of your turns, the hound forces a Dexterity save against 4d8 Force damage if an enemy remains within 5 feet.</td></tr><tr><td>5. Abort against counters</td><td>Teleportation, Disintegrate, concentration loss, or geometry that lets the target move away can end the engine.</td></tr></tbody></table></div>
 
-<div class="table-wrap" data-source-locator="B00356.T002" tabindex="0"><table><thead><tr><th scope="col">GEOMETRY WARNINGThe hound does not automatically damage every creature inside a 10-foot-radius globe. Build the prison small enough and place the hound carefully enough that the target cannot remain more than 5 feet away.</th></tr></thead><tbody></tbody></table></div>
+<aside class="callout" data-source-locator="B00356.T002">
+<strong>GEOMETRY WARNING</strong>
+<p>The hound does not automatically damage every creature inside a 10-foot-radius globe. Build the prison small enough and place the hound carefully enough that the target cannot remain more than 5 feet away.</p>
+</aside>
 
 <!-- source:B00357 -->
 ## 10. Contingency Defensive Package: Otiluke's Resilient Sphere
@@ -231,7 +258,10 @@ Why it is advanced: Contingency moves a defensive action into downtime and fires
 
 <div class="table-wrap" data-source-locator="B00359.T002" tabindex="0"><table><thead><tr><th scope="col">Example trigger</th><th scope="col">Result</th><th scope="col">When it is correct</th></tr></thead><tbody><tr><td>&quot;Immediately after damage leaves me below one-third of my Hit Point maximum.&quot;</td><td>Sphere encloses the Wizard after the damage resolves.</td><td>Prevents follow-up attacks and gives the party time to stabilize.</td></tr><tr><td>&quot;Immediately after I become Grappled or Restrained, provided I remain capable of Concentration.&quot;</td><td>Sphere isolates the Wizard but does not itself end the Grappled or Restrained condition.</td><td>Protects against follow-up pressure while Concentration remains possible; Incapacitated or Paralyzed is not a valid protective trigger for this concentration spell.</td></tr><tr><td>&quot;Immediately after I begin falling from a height that would be lethal.&quot;</td><td>Sphere encloses the Wizard but does not automatically negate all movement or impact consequences.</td><td>Only after the DM confirms how the mobile sphere interacts with that fall.</td></tr></tbody></table></div>
 
-<div class="table-wrap" data-source-locator="B00359.T003" tabindex="0"><table><thead><tr><th scope="col">TRADEOFFThe sphere protects you from outside effects, but it also prevents you from affecting creatures outside it. Use it as an emergency circuit breaker, not as a default trigger that removes the Wizard from every difficult fight.</th></tr></thead><tbody></tbody></table></div>
+<aside class="callout" data-source-locator="B00359.T003">
+<strong>TRADEOFF</strong>
+<p>The sphere protects you from outside effects, but it also prevents you from affecting creatures outside it. Use it as an emergency circuit breaker, not as a default trigger that removes the Wizard from every difficult fight.</p>
+</aside>
 
 <!-- source:B00360 -->
 ## 11. Maze No-Save Boss Removal
@@ -259,6 +289,9 @@ Why it is advanced: Sleet Storm combines long range, Heavy Obscurement, Difficul
 <!-- source:B00367 -->
 <div class="table-wrap" data-source-locator="B00367.T001" tabindex="0"><table><thead><tr><th scope="col">Step</th><th scope="col">Decision</th></tr></thead><tbody><tr><td>1. Map sight lines</td><td>Which enemy spells require sight, and where must the caster move to regain it?</td></tr><tr><td>2. Cover the exit</td><td>Place the cylinder so a normal move does not immediately escape both obscurity and difficult terrain.</td></tr><tr><td>3. Keep allies outside</td><td>Do not blind and slow the melee party unless the trade removes a much larger enemy threat.</td></tr><tr><td>4. Pressure the edge</td><td>Use ranged attacks, readied actions, forced movement, or a frontline to punish creatures leaving the storm.</td></tr><tr><td>5. Recast only when needed</td><td>Once the enemy concentration and formation are broken, another concentration spell may create more value.</td></tr></tbody></table></div>
 
-<div class="table-wrap" data-source-locator="B00367.T002" tabindex="0"><table><thead><tr><th scope="col">VERDICTSleet Storm is not an exploit; it is elite normal optimization. It belongs here because the correct placement can shut down a caster encounter more reliably than damage or a single-target save spell.</th></tr></thead><tbody></tbody></table></div>
+<aside class="callout" data-source-locator="B00367.T002">
+<strong>VERDICT</strong>
+<p>Sleet Storm is not an exploit; it is elite normal optimization. It belongs here because the correct placement can shut down a caster encounter more reliably than damage or a single-target save spell.</p>
+</aside>
 
 <!-- source:B00368 -->

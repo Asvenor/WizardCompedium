@@ -12,7 +12,10 @@ description: "Preview status verified 15.08.2026. Arcana Unleashed is scheduled 
 Preview status verified 15.08.2026. Arcana Unleashed is scheduled for 15.09.2026. Until final entries appear in the campaign's D&D Beyond builder, this chapter tracks impact and verification work; it does not assign final mechanics or tier rankings.
 
 <!-- source:B00906 -->
-<div class="table-wrap" data-source-locator="B00906" tabindex="0"><table><thead><tr><th scope="col">PREVIEW</th><th scope="col">Official preview scope can change before release. Builder selectability is the green light; the final owned source text is the authority for exact mechanics.</th></tr></thead><tbody></tbody></table></div>
+<aside class="callout" data-source-locator="B00906">
+<strong>PREVIEW</strong>
+<p>Official preview scope can change before release. Builder selectability is the green light; the final owned source text is the authority for exact mechanics.</p>
+</aside>
 
 <!-- source:B00907 -->
 ## Official Preview Snapshot

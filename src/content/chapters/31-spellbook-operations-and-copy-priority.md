@@ -27,7 +27,24 @@ The spellbook is a strategic resource, not a worksheet. Use this procedure whene
 The 2024 and 2014 Wizard entries use the same normal transcription baseline, while Spell Scrolls add their own risk. Use the exact active D&D Beyond Wizard, spell, source object, and Spell Scroll entries whenever versions differ.
 
 <!-- source:B00509 -->
-<div class="table-wrap" data-source-locator="B00509" tabindex="0"><table><thead><tr><th scope="col">D&amp;D BEYOND GREEN-LIGHT GATE</th><th scope="col"></th><th scope="col"></th><th scope="col"></th></tr></thead><tbody><tr><td>Proceed only when the exact spell is a selectable Wizard spell for the character and the active Wizard entry permits that spell level. A higher multiclass spell slot does not by itself unlock a higher-level Wizard spell. Normal transcription applies only to level 1+ spells; cantrips are not copied by this rule.</td><td></td><td></td><td></td></tr><tr><td>STEP</td><td>PASS GATE</td><td>ACTIVE RULE</td><td>STOP / FAILURE</td></tr><tr><td>1 · Spell</td><td>Legal Wizard entry</td><td>Confirm the exact source/version, spell level, and that the character can legally add it to this Wizard spellbook.</td><td>Wrong list, unavailable level, unresolved duplicate version</td></tr><tr><td>2 · Source</td><td>Readable external source</td><td>Identify whether the source is another spellbook/tome, a Spell Scroll, or the Wizard's own book. A 2024 spellbook is readable by its owner or someone casting Identify.</td><td>Unknown item, unreadable source, no permission/access</td></tr><tr><td>3 · Method</td><td>Apply source rule</td><td>External book: normal transcription. Spell Scroll: normal time/cost plus the scroll-specific Arcana check. Own book: cheaper backup procedure.</td><td>Do not import a check, discount, or destruction rule from another source</td></tr><tr><td>4 · Inputs</td><td>Secure time and gold</td><td>Normal copy costs 2 hours + 50 gp per spell level. Own-book copy costs 1 hour + 10 gp per spell level.</td><td>Insufficient uninterrupted time, funds, book, or materials</td></tr><tr><td>5 · Resolve</td><td>Roll only if required</td><td>Spell Scroll: Intelligence (Arcana), DC 10 + spell level. The scroll is destroyed on success or failure.</td><td>A failed scroll check spends the scroll and yields no spell</td></tr><tr><td>6 · Reconcile</td><td>Complete the spellbook record</td><td>After a successful copy, add the exact spell entry to the correct D&amp;D Beyond spellbook/source record; it can then be prepared normally.</td><td>Do not treat ownership, preparation, and a carried scroll as the same state</td></tr></tbody></table></div>
+<aside class="callout" data-source-locator="B00509.gate">
+<strong>D&amp;D BEYOND GREEN-LIGHT GATE</strong>
+<p>Proceed only when the exact spell is a selectable Wizard spell for the character and the active Wizard entry permits that spell level. A higher multiclass spell slot does not by itself unlock a higher-level Wizard spell. Normal transcription applies only to level 1+ spells; cantrips are not copied by this rule.</p>
+</aside>
+
+<div class="table-wrap" data-source-locator="B00509" tabindex="0">
+<table>
+<thead><tr><th scope="col">STEP</th><th scope="col">PASS GATE</th><th scope="col">ACTIVE RULE</th><th scope="col">STOP / FAILURE</th></tr></thead>
+<tbody>
+<tr><td>1 · Spell</td><td>Legal Wizard entry</td><td>Confirm the exact source/version, spell level, and that the character can legally add it to this Wizard spellbook.</td><td>Wrong list, unavailable level, unresolved duplicate version</td></tr>
+<tr><td>2 · Source</td><td>Readable external source</td><td>Identify whether the source is another spellbook/tome, a Spell Scroll, or the Wizard's own book. A 2024 spellbook is readable by its owner or someone casting Identify.</td><td>Unknown item, unreadable source, no permission/access</td></tr>
+<tr><td>3 · Method</td><td>Apply source rule</td><td>External book: normal transcription. Spell Scroll: normal time/cost plus the scroll-specific Arcana check. Own book: cheaper backup procedure.</td><td>Do not import a check, discount, or destruction rule from another source</td></tr>
+<tr><td>4 · Inputs</td><td>Secure time and gold</td><td>Normal copy costs 2 hours + 50 gp per spell level. Own-book copy costs 1 hour + 10 gp per spell level.</td><td>Insufficient uninterrupted time, funds, book, or materials</td></tr>
+<tr><td>5 · Resolve</td><td>Roll only if required</td><td>Spell Scroll: Intelligence (Arcana), DC 10 + spell level. The scroll is destroyed on success or failure.</td><td>A failed scroll check spends the scroll and yields no spell</td></tr>
+<tr><td>6 · Reconcile</td><td>Complete the spellbook record</td><td>After a successful copy, add the exact spell entry to the correct D&amp;D Beyond spellbook/source record; it can then be prepared normally.</td><td>Do not treat ownership, preparation, and a carried scroll as the same state</td></tr>
+</tbody>
+</table>
+</div>
 
 <!-- source:B00510 -->
 ## Copy Time, Cost, and Scroll Check

@@ -21,7 +21,10 @@ Choose the permitted form from the current Find Familiar entry. Compare movement
 ## 24A. Find Familiar Form Tier List
 
 <!-- source:B00392 -->
-<div class="table-wrap" data-source-locator="B00392" tabindex="0"><table><thead><tr><th scope="col">RANKING RULE</th><th scope="col">The active spell permits the listed forms or another selectable CR 0 Beast. A familiar cannot attack, acts on its own Initiative, uses a Reaction to deliver a touch spell, and shares telepathy/senses only within 100 feet. The form is a mission tool, not a disposable universal answer.</th></tr></thead><tbody></tbody></table></div>
+<aside class="callout" data-source-locator="B00392">
+<strong>RANKING RULE</strong>
+<p>The active spell permits the listed forms or another selectable CR 0 Beast. A familiar cannot attack, acts on its own Initiative, uses a Reaction to deliver a touch spell, and shares telepathy/senses only within 100 feet. The form is a mission tool, not a disposable universal answer.</p>
+</aside>
 
 <!-- source:B00393 -->
 The universal tier colors are relative to general Wizard use. An A* form is S-tier in its named environment but not a default outside it.

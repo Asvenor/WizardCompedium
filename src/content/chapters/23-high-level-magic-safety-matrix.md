@@ -20,7 +20,10 @@ High-level magic fails through logistics and wording more often than through raw
 ## 23A. Polymorph Form Selection — Ally, Self, and Hostile Targets
 
 <!-- source:B00374 -->
-<div class="table-wrap" data-source-locator="B00374" tabindex="0"><table><thead><tr><th scope="col">CURRENT ENTRY GATE</th><th scope="col">This section uses the active 2024 Polymorph text and current selectable Beast stat blocks. If D&amp;D Beyond exposes a different selectable version, use that entry and rerank the form by the same tests; selectability is the campaign's green light.</th></tr></thead><tbody></tbody></table></div>
+<aside class="callout" data-source-locator="B00374">
+<strong>CURRENT ENTRY GATE</strong>
+<p>This section uses the active 2024 Polymorph text and current selectable Beast stat blocks. If D&amp;D Beyond exposes a different selectable version, use that entry and rerank the form by the same tests; selectability is the campaign's green light.</p>
+</aside>
 
 <!-- source:B00375 -->
 Read the rules card first. The tier lists rank jobs, not flavor: a lower-tier form can be correct when terrain, target level, available space, or the objective makes its special movement decisive.

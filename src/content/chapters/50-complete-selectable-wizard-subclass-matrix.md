@@ -12,7 +12,10 @@ description: "This part converts the compendium into a living table tool: comple
 This part converts the compendium into a living table tool: complete option intake, exact source-version control, enemy counterplay, party ownership, build scripts, playtesting evidence, and release-day updates.
 
 <!-- source:B00792 -->
-<div class="table-wrap" data-source-locator="B00792" tabindex="0"><table><thead><tr><th scope="col">TABLE RULE</th><th scope="col">If an option can be selected on the campaign's D&amp;D Beyond character builder, it is permitted for this compendium. Record the exact selected entry and enabled source category; selectability permits the option but does not make every version interchangeable.</th></tr></thead><tbody></tbody></table></div>
+<aside class="callout" data-source-locator="B00792">
+<strong>TABLE RULE</strong>
+<p>If an option can be selected on the campaign's D&amp;D Beyond character builder, it is permitted for this compendium. Record the exact selected entry and enabled source category; selectability permits the option but does not make every version interchangeable.</p>
+</aside>
 
 <!-- source:B00794 -->
 Use this as the intake screen before opening a detailed build. It covers the official first-party Wizard identities represented in the enabled 5.5e/5e environment; partnered and homebrew subclasses enter through the same builder test but require their exact entry to be logged.

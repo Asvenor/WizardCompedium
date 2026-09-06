@@ -15,7 +15,21 @@ Use the relevant fixed reference sheet on a tablet or laptop. Each page is a tac
 ## Flagship Artificer 1 / Wizard 19
 
 <!-- source:B00828 -->
-<div class="table-wrap" data-source-locator="B00828" tabindex="0"><table><thead><tr><th scope="col">EXPANDED / SOURCE CHECK</th><th scope="col">Armored concentration controller with a delayed Wizard progression and a strong low-level survival floor.</th><th scope="col"></th><th scope="col"></th></tr></thead><tbody><tr><td>At a glance</td><td>Default</td><td>Switch when</td><td>Failure guard</td></tr><tr><td>Identity</td><td>Solve the encounter while remaining hard to dislodge</td><td>Enemy bypasses armor</td><td>Prioritize distance and extraction</td></tr><tr><td>Defense</td><td>Armor + shield mode</td><td>Switch to range/utility mode</td><td>Do not assume gear solves saves</td></tr><tr><td>Concentration</td><td>Control first</td><td>Defense or summon when geometry changes</td><td>Never overwrite a winning effect casually</td></tr><tr><td>Reaction</td><td>Protect concentration</td><td>Counter only outcome-changing magic</td><td>Track reactions visibly</td></tr></tbody></table></div>
+**EXPANDED / SOURCE CHECK**
+
+Armored concentration controller with a delayed Wizard progression and a strong low-level survival floor.
+
+<div class="table-wrap" data-source-locator="B00828" tabindex="0">
+<table>
+<thead><tr><th scope="col">At a glance</th><th scope="col">Default</th><th scope="col">Switch when</th><th scope="col">Failure guard</th></tr></thead>
+<tbody>
+<tr><td>Identity</td><td>Solve the encounter while remaining hard to dislodge</td><td>Enemy bypasses armor</td><td>Prioritize distance and extraction</td></tr>
+<tr><td>Defense</td><td>Armor + shield mode</td><td>Switch to range/utility mode</td><td>Do not assume gear solves saves</td></tr>
+<tr><td>Concentration</td><td>Control first</td><td>Defense or summon when geometry changes</td><td>Never overwrite a winning effect casually</td></tr>
+<tr><td>Reaction</td><td>Protect concentration</td><td>Counter only outcome-changing magic</td><td>Track reactions visibly</td></tr>
+</tbody>
+</table>
+</div>
 
 <!-- source:B00829 -->
 ### Turn Script
@@ -27,7 +41,22 @@ Use the relevant fixed reference sheet on a tablet or laptop. Each page is a tac
 ### Loadout Audit
 
 <!-- source:B00832 -->
-<div class="table-wrap" data-source-locator="B00832" tabindex="0"><table><thead><tr><th scope="col">Prepared overlay</th><th scope="col">Attunement / gear</th><th scope="col">Rest audit</th></tr></thead><tbody><tr><td>Control core + defense + extraction + no-concentration fallback.</td><td>Armor, shield, focus/tool access; three attunement jobs only.</td><td>Slots, limited features, components, charges, spellbook security.</td></tr><tr><td>TABLE CHECK</td><td>Confirm the exact Artificer/Wizard rules versions selected by the builder.</td><td></td></tr></tbody></table></div>
+#### Prepared overlay
+
+Control core + defense + extraction + no-concentration fallback.
+
+#### Attunement / gear
+
+Armor, shield, focus/tool access; three attunement jobs only.
+
+#### Rest audit
+
+Slots, limited features, components, charges, spellbook security.
+
+<aside class="callout" data-source-locator="B00832.check">
+<strong>TABLE CHECK</strong>
+<p>Confirm the exact Artificer/Wizard rules versions selected by the builder.</p>
+</aside>
 
 <!-- source:B00833 -->
 ### Encounter Branches
@@ -45,7 +74,21 @@ Use the relevant fixed reference sheet on a tablet or laptop. Each page is a tac
 ## Chronurgy Wizard
 
 <!-- source:B00838 -->
-<div class="table-wrap" data-source-locator="B00838" tabindex="0"><table><thead><tr><th scope="col">EXPANDED / SOURCE CHECK</th><th scope="col">Initiative and time-control specialist that converts scarce certainty into decisive turn-order swings.</th><th scope="col"></th><th scope="col"></th></tr></thead><tbody><tr><td>At a glance</td><td>Default</td><td>Switch when</td><td>Failure guard</td></tr><tr><td>Identity</td><td>Act before the problem and reserve certainty for pivotal outcomes</td><td>Threat does not care about initiative</td><td>Shift from tempo to information/control</td></tr><tr><td>Defense</td><td>Position + defensive routine</td><td>Spend resources only on decisive pressure</td><td>Do not confuse feature access with unlimited uses</td></tr><tr><td>Concentration</td><td>Highest-leverage control</td><td>Use defense when concentration is the win condition</td><td>Record the active effect</td></tr><tr><td>Reaction</td><td>Protect the winning roll/effect</td><td>Counter only when failure changes the encounter</td><td>Do not double-spend certainty</td></tr></tbody></table></div>
+**EXPANDED / SOURCE CHECK**
+
+Initiative and time-control specialist that converts scarce certainty into decisive turn-order swings.
+
+<div class="table-wrap" data-source-locator="B00838" tabindex="0">
+<table>
+<thead><tr><th scope="col">At a glance</th><th scope="col">Default</th><th scope="col">Switch when</th><th scope="col">Failure guard</th></tr></thead>
+<tbody>
+<tr><td>Identity</td><td>Act before the problem and reserve certainty for pivotal outcomes</td><td>Threat does not care about initiative</td><td>Shift from tempo to information/control</td></tr>
+<tr><td>Defense</td><td>Position + defensive routine</td><td>Spend resources only on decisive pressure</td><td>Do not confuse feature access with unlimited uses</td></tr>
+<tr><td>Concentration</td><td>Highest-leverage control</td><td>Use defense when concentration is the win condition</td><td>Record the active effect</td></tr>
+<tr><td>Reaction</td><td>Protect the winning roll/effect</td><td>Counter only when failure changes the encounter</td><td>Do not double-spend certainty</td></tr>
+</tbody>
+</table>
+</div>
 
 <!-- source:B00839 -->
 ### Turn Script
@@ -57,7 +100,22 @@ Use the relevant fixed reference sheet on a tablet or laptop. Each page is a tac
 ### Loadout Audit
 
 <!-- source:B00842 -->
-<div class="table-wrap" data-source-locator="B00842" tabindex="0"><table><thead><tr><th scope="col">Prepared overlay</th><th scope="col">Attunement / gear</th><th scope="col">Rest audit</th></tr></thead><tbody><tr><td>Control ladder + defense + mobility + ritual utility.</td><td>Initiative support, concentration defense, backup focus/book.</td><td>Feature uses, reactions, concentration, remaining decisive slots.</td></tr><tr><td>TABLE CHECK</td><td>Open the owned source for exact Chronurgy timing and use limits.</td><td></td></tr></tbody></table></div>
+#### Prepared overlay
+
+Control ladder + defense + mobility + ritual utility.
+
+#### Attunement / gear
+
+Initiative support, concentration defense, backup focus/book.
+
+#### Rest audit
+
+Feature uses, reactions, concentration, remaining decisive slots.
+
+<aside class="callout" data-source-locator="B00842.check">
+<strong>TABLE CHECK</strong>
+<p>Open the owned source for exact Chronurgy timing and use limits.</p>
+</aside>
 
 <!-- source:B00843 -->
 ### Encounter Branches
@@ -75,7 +133,21 @@ Use the relevant fixed reference sheet on a tablet or laptop. Each page is a tac
 ## Diviner Wizard
 
 <!-- source:B00848 -->
-<div class="table-wrap" data-source-locator="B00848" tabindex="0"><table><thead><tr><th scope="col">CORE CURRENT</th><th scope="col">Certainty controller that pre-assigns exceptional d20 results to the moments where certainty beats raw power.</th><th scope="col"></th><th scope="col"></th></tr></thead><tbody><tr><td>At a glance</td><td>Default</td><td>Switch when</td><td>Failure guard</td></tr><tr><td>Identity</td><td>Turn known numbers into encounter-defining success or failure</td><td>No decisive d20 window appears</td><td>Lean on normal Wizard control</td></tr><tr><td>Defense</td><td>Standard Wizard defense</td><td>Reserve certainty for objectives</td><td>Do not spend high/low results without a named payoff</td></tr><tr><td>Concentration</td><td>Save-based control when certainty applies</td><td>Use geometry when it does not</td><td>Do not force a poor spell-target match</td></tr><tr><td>Reaction</td><td>Protect concentration and certainty window</td><td>Counter catastrophic magic</td><td>Avoid reaction waste</td></tr></tbody></table></div>
+**CORE CURRENT**
+
+Certainty controller that pre-assigns exceptional d20 results to the moments where certainty beats raw power.
+
+<div class="table-wrap" data-source-locator="B00848" tabindex="0">
+<table>
+<thead><tr><th scope="col">At a glance</th><th scope="col">Default</th><th scope="col">Switch when</th><th scope="col">Failure guard</th></tr></thead>
+<tbody>
+<tr><td>Identity</td><td>Turn known numbers into encounter-defining success or failure</td><td>No decisive d20 window appears</td><td>Lean on normal Wizard control</td></tr>
+<tr><td>Defense</td><td>Standard Wizard defense</td><td>Reserve certainty for objectives</td><td>Do not spend high/low results without a named payoff</td></tr>
+<tr><td>Concentration</td><td>Save-based control when certainty applies</td><td>Use geometry when it does not</td><td>Do not force a poor spell-target match</td></tr>
+<tr><td>Reaction</td><td>Protect concentration and certainty window</td><td>Counter catastrophic magic</td><td>Avoid reaction waste</td></tr>
+</tbody>
+</table>
+</div>
 
 <!-- source:B00849 -->
 ### Turn Script
@@ -87,7 +159,22 @@ Use the relevant fixed reference sheet on a tablet or laptop. Each page is a tac
 ### Loadout Audit
 
 <!-- source:B00852 -->
-<div class="table-wrap" data-source-locator="B00852" tabindex="0"><table><thead><tr><th scope="col">Prepared overlay</th><th scope="col">Attunement / gear</th><th scope="col">Rest audit</th></tr></thead><tbody><tr><td>Save-based control + geometry alternative + defense + extraction.</td><td>Initiative, spellbook protection, concentration support.</td><td>Known results, slots, reactions, components, objective clock.</td></tr><tr><td>TABLE CHECK</td><td>Use the current selected Diviner text; do not import older same-name features.</td><td></td></tr></tbody></table></div>
+#### Prepared overlay
+
+Save-based control + geometry alternative + defense + extraction.
+
+#### Attunement / gear
+
+Initiative, spellbook protection, concentration support.
+
+#### Rest audit
+
+Known results, slots, reactions, components, objective clock.
+
+<aside class="callout" data-source-locator="B00852.check">
+<strong>TABLE CHECK</strong>
+<p>Use the current selected Diviner text; do not import older same-name features.</p>
+</aside>
 
 <!-- source:B00853 -->
 ### Encounter Branches
@@ -105,7 +192,21 @@ Use the relevant fixed reference sheet on a tablet or laptop. Each page is a tac
 ## Illusionist Wizard
 
 <!-- source:B00858 -->
-<div class="table-wrap" data-source-locator="B00858" tabindex="0"><table><thead><tr><th scope="col">CORE CURRENT</th><th scope="col">Information and terrain specialist whose power depends on shared facts, clear adjudication, and disciplined descriptions.</th><th scope="col"></th><th scope="col"></th></tr></thead><tbody><tr><td>At a glance</td><td>Default</td><td>Switch when</td><td>Failure guard</td></tr><tr><td>Identity</td><td>Make enemies spend actions on the wrong problem while allies exploit the real one</td><td>Creature ignores or bypasses illusion</td><td>Switch to tangible control or information</td></tr><tr><td>Defense</td><td>Range, cover, retreat path</td><td>Use real defenses behind the fiction</td><td>Do not treat creativity as automatic success</td></tr><tr><td>Concentration</td><td>Illusion when behavior changes</td><td>Tangible control when stakes demand certainty</td><td>State concentration clearly</td></tr><tr><td>Reaction</td><td>Protect the decisive illusion/control</td><td>Counter only when the scene collapses</td><td>Do not conceal reaction use</td></tr></tbody></table></div>
+**CORE CURRENT**
+
+Information and terrain specialist whose power depends on shared facts, clear adjudication, and disciplined descriptions.
+
+<div class="table-wrap" data-source-locator="B00858" tabindex="0">
+<table>
+<thead><tr><th scope="col">At a glance</th><th scope="col">Default</th><th scope="col">Switch when</th><th scope="col">Failure guard</th></tr></thead>
+<tbody>
+<tr><td>Identity</td><td>Make enemies spend actions on the wrong problem while allies exploit the real one</td><td>Creature ignores or bypasses illusion</td><td>Switch to tangible control or information</td></tr>
+<tr><td>Defense</td><td>Range, cover, retreat path</td><td>Use real defenses behind the fiction</td><td>Do not treat creativity as automatic success</td></tr>
+<tr><td>Concentration</td><td>Illusion when behavior changes</td><td>Tangible control when stakes demand certainty</td><td>State concentration clearly</td></tr>
+<tr><td>Reaction</td><td>Protect the decisive illusion/control</td><td>Counter only when the scene collapses</td><td>Do not conceal reaction use</td></tr>
+</tbody>
+</table>
+</div>
 
 <!-- source:B00859 -->
 ### Turn Script
@@ -117,7 +218,22 @@ Use the relevant fixed reference sheet on a tablet or laptop. Each page is a tac
 ### Loadout Audit
 
 <!-- source:B00862 -->
-<div class="table-wrap" data-source-locator="B00862" tabindex="0"><table><thead><tr><th scope="col">Prepared overlay</th><th scope="col">Attunement / gear</th><th scope="col">Rest audit</th></tr></thead><tbody><tr><td>Illusion package + tangible control + defense + information tools.</td><td>Props, maps, mundane disguises, spellbook backup.</td><td>Concentration, established facts, affected observers, DM rulings.</td></tr><tr><td>TABLE CHECK</td><td>Record recurring illusion rulings in the version/ruling register.</td><td></td></tr></tbody></table></div>
+#### Prepared overlay
+
+Illusion package + tangible control + defense + information tools.
+
+#### Attunement / gear
+
+Props, maps, mundane disguises, spellbook backup.
+
+#### Rest audit
+
+Concentration, established facts, affected observers, DM rulings.
+
+<aside class="callout" data-source-locator="B00862.check">
+<strong>TABLE CHECK</strong>
+<p>Record recurring illusion rulings in the version/ruling register.</p>
+</aside>
 
 <!-- source:B00863 -->
 ### Encounter Branches
@@ -135,7 +251,21 @@ Use the relevant fixed reference sheet on a tablet or laptop. Each page is a tac
 ## Bladesinger Wizard
 
 <!-- source:B00868 -->
-<div class="table-wrap" data-source-locator="B00868" tabindex="0"><table><thead><tr><th scope="col">EXPANDED / SOURCE CHECK</th><th scope="col">Mobile defensive Wizard that chooses between safe full-caster control and a deliberate skirmish window.</th><th scope="col"></th><th scope="col"></th></tr></thead><tbody><tr><td>At a glance</td><td>Default</td><td>Switch when</td><td>Failure guard</td></tr><tr><td>Identity</td><td>Use mobility and defense to preserve spell output, not to chase every melee attack</td><td>Melee cannot reach safely</td><td>Stay in full-caster mode</td></tr><tr><td>Defense</td><td>Mobile defense routine</td><td>Leave melee before defenses expire</td><td>Do not confuse high AC with immunity</td></tr><tr><td>Concentration</td><td>Control before skirmish</td><td>Defensive effect when focused</td><td>Protect concentration</td></tr><tr><td>Reaction</td><td>Use defense only when it prevents a real hit/outcome</td><td>Counter catastrophic magic</td><td>Track one reaction</td></tr></tbody></table></div>
+**EXPANDED / SOURCE CHECK**
+
+Mobile defensive Wizard that chooses between safe full-caster control and a deliberate skirmish window.
+
+<div class="table-wrap" data-source-locator="B00868" tabindex="0">
+<table>
+<thead><tr><th scope="col">At a glance</th><th scope="col">Default</th><th scope="col">Switch when</th><th scope="col">Failure guard</th></tr></thead>
+<tbody>
+<tr><td>Identity</td><td>Use mobility and defense to preserve spell output, not to chase every melee attack</td><td>Melee cannot reach safely</td><td>Stay in full-caster mode</td></tr>
+<tr><td>Defense</td><td>Mobile defense routine</td><td>Leave melee before defenses expire</td><td>Do not confuse high AC with immunity</td></tr>
+<tr><td>Concentration</td><td>Control before skirmish</td><td>Defensive effect when focused</td><td>Protect concentration</td></tr>
+<tr><td>Reaction</td><td>Use defense only when it prevents a real hit/outcome</td><td>Counter catastrophic magic</td><td>Track one reaction</td></tr>
+</tbody>
+</table>
+</div>
 
 <!-- source:B00869 -->
 ### Turn Script
@@ -147,7 +277,22 @@ Use the relevant fixed reference sheet on a tablet or laptop. Each page is a tac
 ### Loadout Audit
 
 <!-- source:B00872 -->
-<div class="table-wrap" data-source-locator="B00872" tabindex="0"><table><thead><tr><th scope="col">Prepared overlay</th><th scope="col">Attunement / gear</th><th scope="col">Rest audit</th></tr></thead><tbody><tr><td>Control core + mobile defense + ranged fallback + one melee package.</td><td>Weapon/focus legality, light gear, mobility, concentration support.</td><td>Defensive feature duration, reactions, slots, hit-point threshold.</td></tr><tr><td>TABLE CHECK</td><td>Verify exact Bladesinger feature text and parent class in D&amp;D Beyond.</td><td></td></tr></tbody></table></div>
+#### Prepared overlay
+
+Control core + mobile defense + ranged fallback + one melee package.
+
+#### Attunement / gear
+
+Weapon/focus legality, light gear, mobility, concentration support.
+
+#### Rest audit
+
+Defensive feature duration, reactions, slots, hit-point threshold.
+
+<aside class="callout" data-source-locator="B00872.check">
+<strong>TABLE CHECK</strong>
+<p>Verify exact Bladesinger feature text and parent class in D&amp;D Beyond.</p>
+</aside>
 
 <!-- source:B00873 -->
 ### Encounter Branches
@@ -165,7 +310,21 @@ Use the relevant fixed reference sheet on a tablet or laptop. Each page is a tac
 ## Wizard Tank
 
 <!-- source:B00878 -->
-<div class="table-wrap" data-source-locator="B00878" tabindex="0"><table><thead><tr><th scope="col">BUILD OVERLAY</th><th scope="col">Durability-focused controller that occupies dangerous space only when doing so protects concentration, allies, or the objective.</th><th scope="col"></th><th scope="col"></th></tr></thead><tbody><tr><td>At a glance</td><td>Default</td><td>Switch when</td><td>Failure guard</td></tr><tr><td>Identity</td><td>Be difficult to remove without becoming an expensive damage sponge</td><td>Enemies ignore you</td><td>Control lanes and protect vulnerable allies</td></tr><tr><td>Defense</td><td>Layered defense + cover</td><td>Retreat below agreed hit-point threshold</td><td>Do not count temporary defenses twice</td></tr><tr><td>Concentration</td><td>Control that rewards proximity</td><td>Safer ranged control when geometry fails</td><td>Do not stand in hazards for identity</td></tr><tr><td>Reaction</td><td>Defensive reaction first when concentration wins</td><td>Counter encounter-ending magic</td><td>Predeclare priority</td></tr></tbody></table></div>
+**BUILD OVERLAY**
+
+Durability-focused controller that occupies dangerous space only when doing so protects concentration, allies, or the objective.
+
+<div class="table-wrap" data-source-locator="B00878" tabindex="0">
+<table>
+<thead><tr><th scope="col">At a glance</th><th scope="col">Default</th><th scope="col">Switch when</th><th scope="col">Failure guard</th></tr></thead>
+<tbody>
+<tr><td>Identity</td><td>Be difficult to remove without becoming an expensive damage sponge</td><td>Enemies ignore you</td><td>Control lanes and protect vulnerable allies</td></tr>
+<tr><td>Defense</td><td>Layered defense + cover</td><td>Retreat below agreed hit-point threshold</td><td>Do not count temporary defenses twice</td></tr>
+<tr><td>Concentration</td><td>Control that rewards proximity</td><td>Safer ranged control when geometry fails</td><td>Do not stand in hazards for identity</td></tr>
+<tr><td>Reaction</td><td>Defensive reaction first when concentration wins</td><td>Counter encounter-ending magic</td><td>Predeclare priority</td></tr>
+</tbody>
+</table>
+</div>
 
 <!-- source:B00879 -->
 ### Turn Script
@@ -177,7 +336,22 @@ Use the relevant fixed reference sheet on a tablet or laptop. Each page is a tac
 ### Loadout Audit
 
 <!-- source:B00882 -->
-<div class="table-wrap" data-source-locator="B00882" tabindex="0"><table><thead><tr><th scope="col">Prepared overlay</th><th scope="col">Attunement / gear</th><th scope="col">Rest audit</th></tr></thead><tbody><tr><td>Proximity control + defense + extraction + ranged fallback.</td><td>Best non-overlapping defenses; escape and book security.</td><td>Concentration, defensive reactions, hit-point floor, ally positions.</td></tr><tr><td>TABLE CHECK</td><td>Treat 'tank' as a party job; record the exact chassis/subclass/feat sources.</td><td></td></tr></tbody></table></div>
+#### Prepared overlay
+
+Proximity control + defense + extraction + ranged fallback.
+
+#### Attunement / gear
+
+Best non-overlapping defenses; escape and book security.
+
+#### Rest audit
+
+Concentration, defensive reactions, hit-point floor, ally positions.
+
+<aside class="callout" data-source-locator="B00882.check">
+<strong>TABLE CHECK</strong>
+<p>Treat 'tank' as a party job; record the exact chassis/subclass/feat sources.</p>
+</aside>
 
 <!-- source:B00883 -->
 ### Encounter Branches
@@ -195,7 +369,21 @@ Use the relevant fixed reference sheet on a tablet or laptop. Each page is a tac
 ## Fighter 1 / Wizard 19 Alternative
 
 <!-- source:B00888 -->
-<div class="table-wrap" data-source-locator="B00888" tabindex="0"><table><thead><tr><th scope="col">EXPANDED / SOURCE CHECK</th><th scope="col">Martial-entry durability and proficiency trade-off that delays Wizard progression; chosen for a specific campaign need.</th><th scope="col"></th><th scope="col"></th></tr></thead><tbody><tr><td>At a glance</td><td>Default</td><td>Switch when</td><td>Failure guard</td></tr><tr><td>Identity</td><td>Buy the exact frontline interface the campaign needs without losing the Wizard plan</td><td>Dip benefits are not relevant</td><td>Play as a delayed full caster, not a mediocre fighter</td></tr><tr><td>Defense</td><td>Armor/gear mode from selected rules</td><td>Return to range when pressure bypasses AC</td><td>Check hands and components</td></tr><tr><td>Concentration</td><td>Wizard control first</td><td>Weapon fallback only when efficient</td><td>Do not let the dip dictate every turn</td></tr><tr><td>Reaction</td><td>Defense/concentration priority</td><td>Counter only decisive effects</td><td>Track source-specific features</td></tr></tbody></table></div>
+**EXPANDED / SOURCE CHECK**
+
+Martial-entry durability and proficiency trade-off that delays Wizard progression; chosen for a specific campaign need.
+
+<div class="table-wrap" data-source-locator="B00888" tabindex="0">
+<table>
+<thead><tr><th scope="col">At a glance</th><th scope="col">Default</th><th scope="col">Switch when</th><th scope="col">Failure guard</th></tr></thead>
+<tbody>
+<tr><td>Identity</td><td>Buy the exact frontline interface the campaign needs without losing the Wizard plan</td><td>Dip benefits are not relevant</td><td>Play as a delayed full caster, not a mediocre fighter</td></tr>
+<tr><td>Defense</td><td>Armor/gear mode from selected rules</td><td>Return to range when pressure bypasses AC</td><td>Check hands and components</td></tr>
+<tr><td>Concentration</td><td>Wizard control first</td><td>Weapon fallback only when efficient</td><td>Do not let the dip dictate every turn</td></tr>
+<tr><td>Reaction</td><td>Defense/concentration priority</td><td>Counter only decisive effects</td><td>Track source-specific features</td></tr>
+</tbody>
+</table>
+</div>
 
 <!-- source:B00889 -->
 ### Turn Script
@@ -207,7 +395,22 @@ Use the relevant fixed reference sheet on a tablet or laptop. Each page is a tac
 ### Loadout Audit
 
 <!-- source:B00892 -->
-<div class="table-wrap" data-source-locator="B00892" tabindex="0"><table><thead><tr><th scope="col">Prepared overlay</th><th scope="col">Attunement / gear</th><th scope="col">Rest audit</th></tr></thead><tbody><tr><td>Control core + defense + extraction + weapon/cantrip fallback.</td><td>Armor/shield/weapon/focus state; avoid redundant attunement.</td><td>Delayed spell level, slots, hands, reactions, class-feature uses.</td></tr><tr><td>TABLE CHECK</td><td>Confirm the exact Fighter and Wizard versions plus multiclass prerequisites.</td><td></td></tr></tbody></table></div>
+#### Prepared overlay
+
+Control core + defense + extraction + weapon/cantrip fallback.
+
+#### Attunement / gear
+
+Armor/shield/weapon/focus state; avoid redundant attunement.
+
+#### Rest audit
+
+Delayed spell level, slots, hands, reactions, class-feature uses.
+
+<aside class="callout" data-source-locator="B00892.check">
+<strong>TABLE CHECK</strong>
+<p>Confirm the exact Fighter and Wizard versions plus multiclass prerequisites.</p>
+</aside>
 
 <!-- source:B00893 -->
 ### Encounter Branches

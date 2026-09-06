@@ -8,7 +8,14 @@ const source = JSON.parse(await readFile(sourceFile, 'utf8'));
 
 function tokens(value) {
   return String(value ?? '').replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#39;|&apos;/g, "'")
-    .replace(/<[^>]*>/g, ' ').replace(/<!--[^>]*-->/g, ' ').normalize('NFKD').toLowerCase().match(/[a-z0-9]+/g) ?? [];
+    .replace(/<[^>]*>/g, ' ').replace(/<!--[^>]*-->/g, ' ')
+    // Word layout cells joined headings to prose (e.g. LIMITThis, JOBPrefer).
+    // Treat those boundaries identically to the headings now outside the table.
+    .replace(/([a-z])([A-Z])/g, '$1 $2')
+    .replace(/([A-Z])([A-Z][a-z])/g, '$1 $2')
+    .replace(/([0-9])([A-Z][a-z])/g, '$1 $2')
+    .replace(/([A-Z]{2,})(A) (?=[a-z])/g, '$1 $2 ')
+    .normalize('NFKD').toLowerCase().match(/[a-z0-9]+/g) ?? [];
 }
 
 function coverage(sourceTokens, outputTokens) {

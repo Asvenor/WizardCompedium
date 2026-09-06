@@ -90,7 +90,7 @@ const sections = headings.filter((heading) => heading.depth <= 3);
           if (index === identity) cell.classList.add('table-identity');
         }));
         const wrap = table.closest<HTMLElement>('.table-wrap');
-        if (wrap) {
+        if (wrap && !wrap.classList.contains('table-wrap--compact')) {
           wrap.id ||= `reference-table-${tableIndex + 1}`;
           wrap.tabIndex = 0;
           wrap.setAttribute('role', 'region');

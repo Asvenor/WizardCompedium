@@ -499,7 +499,15 @@ input[readonly] { background: var(--surface-muted); }
 .table-wrap td { background: var(--surface); }
 .table-wrap .table-identity { position: sticky; left: 0; z-index: 2; min-width: 9rem; max-width: 18rem; box-shadow: 1px 0 var(--line-strong); }
 .table-wrap thead .table-identity { z-index: 3; }
-.table-wrap td.table-identity { font-weight: 650; }
+.table-wrap td.table-identity { font-weight: inherit; }
+.table-wrap--compact table { min-width: 0; font-size: 0.95rem; }
+.table-wrap--compact th, .table-wrap--compact td { min-width: 0; overflow-wrap: anywhere; padding: 0.8rem; }
+.table-wrap--compact th:first-child, .table-wrap--compact td:first-child { width: 40%; }
+.table-wrap--compact .table-identity { position: static; min-width: 0; max-width: none; box-shadow: none; }
+.table-wrap--compact th { font-size: 0.85rem; }
+.table-entry-list { margin: 0; padding-left: 1.15rem; }
+.table-entry-list li + li { margin-top: 0.6rem; }
+.prose h4 { margin: 1.5rem 0 0.5rem; font-size: 1.05rem; }
 .table-row-view table { min-width: 0; }
 .table-row-view thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
 .table-row-view tbody { display: block; }
