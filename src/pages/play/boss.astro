@@ -1,0 +1,52 @@
+---
+import BaseLayout from '@/components/layout/BaseLayout.astro';
+---
+
+<BaseLayout title="Legendary Resistance" active="play"
+  ><header class="page-hero">
+    <div class="site-shell">
+      <p class="kicker">Boss fight</p><h1>Choose a resistance plan</h1><p>
+        One isolated premium save spell is not a plan. Choose how the party will
+        change the encounter even if the boss negates a failed save.
+      </p>
+    </div>
+  </header><section class="section section--first">
+    <div class="site-shell">
+      <div class="reference-card-grid">
+        <article class="tool-panel">
+          <h2>Bypass</h2><p>
+            Use no-save encounter splitting, terrain, buffs or map control when
+            the effect and geometry are legal. Check exact wording rather than
+            assuming that a famous spell bypasses every defense.
+          </p><a href="/spells/?save=none">Spells with no indexed save →</a>
+        </article>
+        <article class="tool-panel">
+          <h2>Burn intentionally</h2><p>
+            Coordinate save pressure with allies and preserve a follow-up.
+            Decide what the party gains if the boss spends resistance; avoid
+            spending alone without a second threat.
+          </p><a href="/quick/party/">Coordinate party roles →</a>
+        </article>
+        <article class="tool-panel">
+          <h2>Ignore temporarily</h2><p>
+            Isolate support, remove minion actions, deny escape or secure the
+            objective. The largest creature is not automatically the
+            highest-value target.
+          </p><a href="/quick/objectives/">Play the objective →</a>
+        </article>
+      </div><p>
+        Derived from the encounter responses in Chapter 18. The active monster
+        and spell entries control immunities, targeting and resolution.
+      </p><div class="form-actions">
+        <a class="button" href="/chapters/18-combat-decision-engine/"
+          >Combat Decision Engine</a
+        ><a class="button" href="/chapters/58-worked-encounter-playbooks/"
+          >Worked encounters</a
+        ><a class="button" href="/prepare/">Prepare the boss package</a><a
+          class="button"
+          href="/quick/targeting/">Targeting reference</a
+        >
+      </div>
+    </div>
+  </section></BaseLayout
+>

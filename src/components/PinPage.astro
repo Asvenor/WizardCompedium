@@ -1,0 +1,39 @@
+---
+const { title } = Astro.props;
+---
+
+<div class="site-shell page-utilities" data-pin-page data-title={title}>
+  <button class="button" type="button" data-pin-toggle aria-pressed="false"
+    >Pin this page</button
+  ><a href="/wizard/quick-reference/">My quick reference</a><span
+    role="status"
+    data-pin-status></span>
+</div>
+<script>
+  import { loadSession, changeSession } from '@/features/my-wizard/session';
+  const root = document.querySelector<HTMLElement>('[data-pin-page]');
+  if (root) {
+    const button = root.querySelector<HTMLButtonElement>('[data-pin-toggle]')!;
+    const status = root.querySelector('[data-pin-status]')!;
+    const url = location.pathname;
+    const render = () => {
+      const pinned = loadSession().pins.some((p) => p.url === url);
+      button.textContent = pinned ? 'Unpin this page' : 'Pin this page';
+      button.setAttribute('aria-pressed', String(pinned));
+    };
+    button.addEventListener('click', () => {
+      const saved = changeSession((s) => {
+        const i = s.pins.findIndex((p) => p.url === url);
+        if (i >= 0) s.pins.splice(i, 1);
+        else if (s.pins.length < 100)
+          s.pins.push({ url, title: root.dataset.title ?? document.title });
+      });
+      render();
+      status.textContent = saved
+        ? 'Quick reference updated.'
+        : 'Storage unavailable; pin was not saved.';
+    });
+    window.addEventListener('wizard-session-updated',render);
+    render();
+  }
+</script>

@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "ASTRO_TELEMETRY_DISABLED=1 astro dev",
     "build:astro": "ASTRO_TELEMETRY_DISABLED=1 astro build",
-    "build": "ASTRO_TELEMETRY_DISABLED=1 astro build && pagefind --site dist",
+    "build": "node scripts/validate-spells.mjs && ASTRO_TELEMETRY_DISABLED=1 astro build && pagefind --site dist",
+    "test": "node --test scripts/test-tools.mjs scripts/test-table-structure.mjs scripts/test-workflows.mjs",
     "check": "ASTRO_TELEMETRY_DISABLED=1 astro check",
     "generate:prototype": "node scripts/migrate-compendium.mjs --prototype",
     "generate:content": "node scripts/migrate-compendium.mjs",

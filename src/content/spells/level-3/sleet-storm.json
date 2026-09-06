@@ -37,6 +37,8 @@
     "preparedBaseline": true,
     "roles": [
       "concentration",
+      "control",
+      "terrain denial",
       "anti-caster"
     ],
     "summary": "Sight denial, difficult terrain and concentration disruption.",

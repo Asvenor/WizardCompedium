@@ -1,0 +1,107 @@
+---
+import { getCollection } from 'astro:content';
+import { getSpellRoleCategories } from '@/lib/spells';
+const spells = (await getCollection('spells')).map((e) => ({
+  id: e.data.id,
+  name: e.data.name,
+  roles: getSpellRoleCategories(e.data),
+  concentration: e.data.rules.concentration,
+}));
+---
+
+<section class="tool-panel" data-dashboard>
+  <h2>Your table dashboard</h2><div
+    class="workflow-summary"
+    data-dashboard-summary
+  >
+    <p>
+      No profile needed to browse or use the tools. Save a profile below to
+      personalize this dashboard.
+    </p>
+  </div><p data-dashboard-coverage></p><div class="form-actions">
+    <a class="button button--primary" href="/play/">Play now</a><a
+      class="button"
+      href="/wizard/level-up/">Next level</a
+    ><a class="button" href="/prepare/">Prepare</a><a
+      class="button"
+      href="/wizard/spellbook/">Spellbook</a
+    ><a class="button" href="/wizard/resources/">Slots & initiative</a><a
+      class="button"
+      href="/wizard/gear/">Gear & gold</a
+    ><a class="button" href="/wizard/checklist/">Adventure checklist</a><a
+      class="button"
+      href="/wizard/quick-reference/">Pinned reference</a
+    >
+  </div>
+</section>
+<script
+  is:inline
+  type="application/json"
+  id="dashboard-spells"
+  set:html={JSON.stringify(spells).replace(/</g, '\\u003c')}
+/>
+<script>
+  import { loadWizardProfile } from '@/features/my-wizard/profile';
+  import { loadSession } from '@/features/my-wizard/session';
+  const spells: {
+    id: string;
+    name: string;
+    roles: string[];
+    concentration: boolean;
+  }[] = JSON.parse(
+    document.querySelector('#dashboard-spells')?.textContent ?? '[]',
+  );
+  function render() {
+    const profile = loadWizardProfile();
+    const session = loadSession();
+    const summary = document.querySelector('[data-dashboard-summary]')!;
+    const coverage = document.querySelector('[data-dashboard-coverage]')!;
+    summary.replaceChildren();
+    coverage.textContent = '';
+    const lines = profile && profile.configured!==false
+      ? [
+          `${profile.name || 'My Wizard'} · ${profile.build} · Character ${profile.characterLevel} / Wizard ${profile.wizardLevel}`,
+          `Next character level: ${profile.characterLevel < 20 ? profile.characterLevel + 1 : 'Roadmap complete'} · Save DC: ${profile.spellSaveDc ?? 'not entered'}`,
+          `${profile.preparedSpells.length} spells on your prepared/cantrip list`,
+        ]
+      : [profile ? 'Lists are saved. Configure your character details below to personalize level and build guidance.' : 'No profile configured. All reference tools remain available.'];
+    lines.push(
+      'Concentration: ' +
+        (spells.find((s) => s.id === session.concentration)?.name ??
+          'none selected'),
+    );
+    const slots = Array.from(
+      { length: 9 },
+      (_, i) => session.numbers['slot-' + (i + 1)],
+    ).filter((n) => n != null);
+    lines.push(
+      slots.length
+        ? `Recorded slots remaining: ${slots.reduce((sum, n) => sum + n, 0)} across ${slots.length} entered levels`
+        : 'Slots: not recorded',
+    );
+    for (const text of lines) {
+      const p = document.createElement('p');
+      p.textContent = text;
+      summary.append(p);
+    }
+    if (profile) {
+      const selected = spells.filter((s) =>
+        profile.preparedSpells.includes(s.id),
+      );
+      const missing = [
+        'defense',
+        'mobility',
+        'anti-caster',
+        'information',
+      ].filter((role) => !selected.some((s) => s.roles.includes(role)));
+      coverage.textContent = missing.length
+        ? 'Preparation review — no indexed coverage for: ' +
+          missing.join(', ') +
+          '. Check actual effects and your party.'
+        : 'Indexed defense, mobility, antimagic and information roles are represented. Verify mission fit.';
+    }
+  }
+  window.addEventListener('wizard-profile-updated', render);
+  window.addEventListener('wizard-session-updated', render);
+  render();
+</script>

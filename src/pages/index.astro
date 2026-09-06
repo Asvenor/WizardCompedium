@@ -3,50 +3,98 @@ import BaseLayout from '@/components/layout/BaseLayout.astro';
 import ProblemNavigator from '@/components/ProblemNavigator.astro';
 
 const primaryActions = [
-  { label: 'Combat', detail: 'Choose the job, target, and fallback.', href: '/play/#combat-decision', tone: 'violet' },
-  { label: 'Prepare spells', detail: 'Build today’s mission package.', href: '/prepare/', tone: 'blue' },
-  { label: 'Level up', detail: 'See the next milestone and audit.', href: '/wizard/level-up/', tone: 'orange' },
-  { label: 'Find a spell', detail: 'Browse spells by level, role, and tier.', href: '/spells/', tone: 'green' },
-  { label: 'Boss fight', detail: 'Plan around layered defenses.', href: '/play/#boss-fight', tone: 'pink' },
-  { label: 'Emergency', detail: 'Stabilize, extract, and preserve the objective.', href: '/play/#escape', tone: 'red' },
+  {
+    label: 'Combat',
+    detail: 'Choose the job, target, and fallback.',
+    href: '/play/',
+    tone: 'violet',
+  },
+  {
+    label: 'Prepare spells',
+    detail: 'Build today’s mission package.',
+    href: '/prepare/',
+    tone: 'blue',
+  },
+  {
+    label: 'Level up',
+    detail: 'See the next milestone and audit.',
+    href: '/wizard/level-up/',
+    tone: 'orange',
+  },
+  {
+    label: 'Find a spell',
+    detail: 'Browse spells by level, role, and tier.',
+    href: '/spells/',
+    tone: 'green',
+  },
+  {
+    label: 'Boss fight',
+    detail: 'Plan around layered defenses.',
+    href: '/play/boss/',
+    tone: 'pink',
+  },
+  {
+    label: 'Emergency',
+    detail: 'Stabilize, extract, and preserve the objective.',
+    href: '/quick/emergency/',
+    tone: 'red',
+  },
 ];
 
 const secondaryActions = [
-  { label: 'Exploration', href: '/play/#exploration' },
+  { label: 'Exploration', href: '/quick/exploration/' },
   { label: 'Builds', href: '/builds/' },
   { label: 'Spell comparison', href: '/spells/compare/' },
   { label: 'Tools', href: '/tools/' },
   { label: 'Full Compendium', href: '/compendium/' },
-  { label: 'Search', href: '/search/' },
+  { label: 'Anti-caster', href: '/quick/anti-caster/' },
+  { label: 'Shop / craft', href: '/wizard/gear/' },
 ];
 ---
+
 <BaseLayout title="Wizard Compendium" description="Ultimate Min-Max Reference">
   <section class="workspace-home site-shell">
     <header class="workspace-heading">
       <div>
         <p class="kicker">Your table reference</p>
         <h1>Wizard Compendium</h1>
-        <p>Build, prepare, and find your next move.</p>
+        <p>What are you trying to do?</p>
       </div>
       <a class="button" href="/wizard/">My Wizard →</a>
     </header>
     <form class="home-search" action="/search/" role="search">
       <label class="sr-only" for="home-query">Search the Compendium</label>
-      <input class="field" id="home-query" name="q" type="search" placeholder="Search spells, builds, rules…" required />
+      <input
+        class="field"
+        id="home-query"
+        name="q"
+        type="search"
+        placeholder="Search spells, builds, rules…"
+        required
+      />
       <button class="button button--primary" type="submit">Search</button>
     </form>
     <nav aria-label="At the table">
       <div class="cockpit-action-grid">
-        {primaryActions.map((action) => (
-          <a class="cockpit-action" href={action.href}>
-            <h2>{action.label}</h2>
-            <p>{action.detail}</p>
-            <b aria-hidden="true">→</b>
-          </a>
-        ))}
+        {
+          primaryActions.map((action) => (
+            <a class="cockpit-action" href={action.href}>
+              <h2>{action.label}</h2>
+              <p>{action.detail}</p>
+              <b aria-hidden="true">→</b>
+            </a>
+          ))
+        }
       </div>
       <div class="cockpit-shortcuts" aria-label="More Compendium tools">
-        {secondaryActions.map((action) => <a href={action.href}>{action.label}<span aria-hidden="true">↗</span></a>)}
+        {
+          secondaryActions.map((action) => (
+            <a href={action.href}>
+              {action.label}
+              <span aria-hidden="true">↗</span>
+            </a>
+          ))
+        }
       </div>
     </nav>
   </section>
@@ -54,17 +102,27 @@ const secondaryActions = [
   <section class="section">
     <div class="site-shell">
       <div class="section-head">
-        <div><h2>Find an answer</h2><p>Jump to the guidance for your situation.</p></div>
+        <div>
+          <h2>Find an answer</h2><p>Jump to the guidance for your situation.</p>
+        </div>
         <a class="section-link" href="/problems/">All situations →</a>
       </div>
-      <ProblemNavigator compact />
+      <details>
+        <summary>Browse all situations</summary><ProblemNavigator compact />
+      </details>
     </div>
   </section>
 
   <section class="section full-compendium-strip">
     <div class="site-shell full-compendium-strip-inner">
-      <div><h2>The complete Compendium</h2><p>Chapter directory, reference tables, and German conversion.</p></div>
-      <a class="button button--primary" href="/compendium/">Open Full Compendium</a>
+      <div>
+        <h2>The complete Compendium</h2><p>
+          Chapter directory, reference tables, and German conversion.
+        </p>
+      </div>
+      <a class="button button--primary" href="/compendium/"
+        >Open Full Compendium</a
+      >
     </div>
   </section>
 </BaseLayout>

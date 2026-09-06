@@ -1,0 +1,270 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@/components/layout/BaseLayout.astro';
+import { quickTools } from '@/data/quick-tools';
+import { extractTableRows } from '@/lib/compendium-tables';
+export function getStaticPaths() {
+  return quickTools.map((tool) => ({
+    params: { mode: tool.id },
+    props: { tool },
+  }));
+}
+const { tool } = Astro.props;
+const chapter = (await getCollection('chapters')).find(
+  (c) => c.data.chapter === tool.chapter,
+)!;
+const reactionSpells = (await getCollection('spells'))
+  .map((e) => e.data)
+  .filter((s) => s.rules.castingTime?.toLowerCase() === 'reaction')
+  .map((s) => ({
+    id: s.id,
+    name: s.name,
+    level: s.level,
+    summary: s.compendium.summary,
+  }));
+const groups = tool.tables.map((index) =>
+  extractTableRows(chapter.body ?? '', index),
+);
+---
+
+<BaseLayout title={tool.title} active="play">
+  <header class="page-hero">
+    <div class="site-shell">
+      <p class="kicker">At-table reference</p><h1>{tool.title}</h1><p>
+        {tool.intro}
+      </p><div class="hero-actions">
+        <a class="button" href="/play/">Play mode</a><a
+          class="button"
+          href={`/chapters/${chapter.id}/`}>Full Chapter {tool.chapter} →</a
+        >
+      </div>
+    </div>
+  </header>
+  <section class="section section--first">
+    <div class="site-shell">
+      {
+        tool.id === 'targeting' && (
+          <div class="tool-panel">
+            <>
+              <h2>Which defense?</h2>
+              <p>
+                Use known numeric bonuses in the calculator. Use the guide below
+                for observed clues; do not infer a hidden number.
+              </p>
+              <div class="form-actions">
+                {['STR', 'DEX', 'CON', 'INT', 'WIS', 'CHA'].map((save) => (
+                  <a
+                    class="button"
+                    href={`/spells/?save=${save.toLowerCase()}`}
+                  >
+                    {save}
+                  </a>
+                ))}
+                <a class="button" href="/spells/?attack=spell-attack">
+                  AC
+                </a>
+                <>
+                  <a class="button" href="/spells/?save=none">
+                    No listed save
+                  </a>
+                  <a href="/tools/#defense-comparison">
+                    Compare known bonuses →
+                  </a>
+                </>
+              </div>
+            </>
+          </div>
+        )
+      }
+      {
+        tool.id === 'reactions' && (
+          <p class="callout" data-reaction-profile>
+            All source options are shown. Subclass features require the matching
+            active class entry; source permission and available uses still
+            matter.
+          </p>
+        )
+      }
+      {
+        tool.id === 'anti-caster' && (
+          <div class="form-actions">
+            <>
+              <a class="button" href="/spells/?role-category=anti-caster">
+                Anti-caster spells
+              </a>
+              <a class="button" href="/quick/reactions/">
+                Preserve a reaction
+              </a>
+            </>
+          </div>
+        )
+      }
+      <label class="field-label"
+        ><span>Find a situation or option</span><input
+          class="field"
+          type="search"
+          data-quick-search
+          placeholder="Filter this reference…"
+        /></label
+      >
+      <p role="status" data-quick-count></p>
+      <div class="reference-card-grid">
+        {
+          groups.flatMap((rows) =>
+            rows
+              .slice(1)
+              .filter((row) => row.length > 1)
+              .map((row) => (
+                <article
+                  class="tool-panel reference-card"
+                  data-quick-card
+                  data-name={row[0]}
+                  data-search={row.join(' ').toLowerCase()}
+                >
+                  <h2>{row[0]}</h2>
+                  {tool.id === 'reactions' && (
+                    <p class="badge" data-reaction-availability />
+                  )}
+                  <p>
+                    <strong>{rows[0][1]}:</strong> {row[1]}
+                  </p>
+                  {row.length > 2 && (
+                    <details>
+                      <summary>Guidance & cautions</summary>
+                      <dl>
+                        {row.slice(2).map((cell, i) => (
+                          <>
+                            <dt>{rows[0][i + 2]}</dt>
+                            <dd>{cell}</dd>
+                          </>
+                        ))}
+                      </dl>
+                    </details>
+                  )}
+                </article>
+              )),
+          )
+        }
+      </div>
+      {
+        tool.id === 'reactions' && (
+          <section class="tool-panel">
+            <>
+              <h2>My prepared reaction spells</h2>
+              <p data-personal-reactions>
+                Save a prepared list to see its indexed reactions here. This
+                does not track uses or remaining slots.
+              </p>
+              <ul class="quick-links" data-reaction-spell-links />
+              <a href="/spells/?action=reaction">
+                Browse every indexed reaction spell →
+              </a>
+            </>
+          </section>
+        )
+      }
+      <p data-quick-empty hidden>
+        No matching entries. Try a broader word or open the full chapter.
+      </p>
+    </div>
+  </section>
+  <script
+    is:inline
+    type="application/json"
+    id="reaction-spells"
+    set:html={JSON.stringify(reactionSpells).replace(/</g, '\\u003c')}
+  />
+  <script>
+    import { loadWizardProfile } from '@/features/my-wizard/profile';
+    const input = document.querySelector<HTMLInputElement>(
+      '[data-quick-search]',
+    );
+    const cards = [
+      ...document.querySelectorAll<HTMLElement>('[data-quick-card]'),
+    ];
+    const count = document.querySelector('[data-quick-count]');
+    const update = () => {
+      let n = 0;
+      const terms = (input?.value.toLowerCase() ?? '')
+        .split(/\s+/)
+        .filter(Boolean);
+      for (const card of cards) {
+        card.hidden = !terms.every((term) =>
+          card.dataset.search?.includes(term),
+        );
+        if (!card.hidden) n++;
+      }
+      if (count) count.textContent = `${n} entries`;
+      const empty = document.querySelector<HTMLElement>('[data-quick-empty]');
+      if (empty) empty.hidden = n !== 0;
+    };
+    input?.addEventListener('input', update);
+    update();
+    const profile = loadWizardProfile();
+    const note = document.querySelector('[data-reaction-profile]');
+    if (note) {
+      const spells: {
+        id: string;
+        name: string;
+        level: number;
+        summary: string;
+      }[] = JSON.parse(
+        document.querySelector('#reaction-spells')?.textContent ?? '[]',
+      );
+      const maxLevel = profile && profile.configured!==false
+        ? Math.min(9, Math.ceil(profile.wizardLevel / 2))
+        : 9;
+      const chron =
+        profile &&
+        (profile.subclass
+          ? profile.subclass.toLowerCase().includes('chronurgy')
+          : ['CORE', 'CHRON'].includes(profile.build));
+      for (const card of cards) {
+        const label = card.querySelector('[data-reaction-availability]');
+        if (!label) continue;
+        const name = card.dataset.name;
+        const spell = spells.find((s) => s.name === name);
+        let available = false;
+        if (profile && profile.configured!==false) {
+          if (spell)
+            available =
+              profile.preparedSpells.includes(spell.id) &&
+              spell.level <= maxLevel;
+          else if (name === 'Chronal Shift')
+            available = !!chron && profile.wizardLevel >= 3;
+          else if (name === 'Convergent Future')
+            available = !!chron && profile.wizardLevel >= 14;
+          else if (name === 'Song of Defense')
+            available = profile.build === 'BLADE' && profile.wizardLevel >= 10;
+          else if (name === 'War Caster opportunity spell')
+            available = profile.warCaster === true;
+        }
+        label.textContent = !profile || profile.configured===false
+          ? 'Source reference'
+          : available
+            ? 'Profile match · check trigger and remaining uses'
+            : 'Not confirmed by this profile';
+      }
+      if (profile) {
+        const matching = spells.filter(
+          (s) => profile.preparedSpells.includes(s.id) && s.level <= maxLevel,
+        );
+        document.querySelector('[data-personal-reactions]')!.textContent =
+          matching.length
+            ? profile.configured===false ? 'Prepared reactions in your local list. Character level and availability are not verified yet.' : 'Prepared reactions within your Wizard spell-level access. Check source permission, triggers and resources.'
+            : 'No indexed reactions in your saved prepared list. Other unindexed or subclass reactions may still exist.';
+        const list = document.querySelector('[data-reaction-spell-links]')!;
+        for (const spell of matching) {
+          const li = document.createElement('li');
+          const a = document.createElement('a');
+          a.href = '/spells/' + spell.id + '/';
+          a.textContent = spell.name;
+          li.append(a);
+          list.append(li);
+        }
+      }
+    }
+    if (profile && profile.configured!==false && note)
+      note.textContent = `${profile.build} · Wizard ${profile.wizardLevel}. Cross-check prepared reactions and remaining uses. Subclass features below are source references, not a claim that your character has them. Open your prepared reaction spells from Play mode.`;
+  </script>
+</BaseLayout>

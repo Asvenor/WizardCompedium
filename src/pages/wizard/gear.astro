@@ -1,0 +1,253 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@/components/layout/BaseLayout.astro';
+import NotebookSave from '@/components/NotebookSave.astro';
+import { extractTableRows } from '@/lib/compendium-tables';
+const chapter = (await getCollection('chapters')).find(
+  (c) => c.data.chapter === 27,
+)!;
+const items = extractTableRows(chapter.body ?? '', 0)
+  .slice(1)
+  .filter((row) => row[2] && !/^(no|—|none)$/i.test(row[2]));
+const budget = [
+  'Spell copying',
+  'Crafting',
+  'Components',
+  'Scrolls',
+  'Stronghold / Bastion',
+  'Emergency reserve',
+];
+const switches = [
+  ['day', 'Adventuring day', 'One-fight days', 'Long attrition'],
+  ['items', 'Magic item access', 'High access', 'Low access'],
+  ['downtime', 'Downtime', 'High downtime', 'Low downtime'],
+  [
+    'illusions',
+    'Illusion procedure',
+    'Permissive illusions',
+    'Strict illusions',
+  ],
+  ['multiclass', 'Multiclassing', 'Available', 'Unavailable'],
+];
+---
+
+<BaseLayout title="Gear & downtime planner" active="tools"
+  ><header class="page-hero">
+    <div class="site-shell">
+      <p class="kicker">Between sessions · local only</p><h1>
+        Gear & downtime
+      </h1><p>
+        Plan the missing job, not just the next purchase. Costs and project
+        requirements are your estimates until the table confirms them.
+      </p><div class="hero-actions">
+        <a class="button" href="/quick/items/">Item reference</a><a
+          class="button"
+          href="/quick/crafting/">Crafting gates</a
+        ><a class="button" href="/tools/#component-cost">Component manager</a><a
+          class="button"
+          href="/wizard/spellbook/">Spell research</a
+        >
+      </div>
+    </div>
+  </header>
+  <section class="section section--first">
+    <div class="site-shell workflow-stack">
+      <form class="tool-panel" data-notebook>
+        <h2>Three attunement slots</h2><p>
+          Choose from the source matrix. Selecting an item does not grant it or
+          verify that you qualify.
+        </p><div class="reference-card-grid">
+          {
+            [1, 2, 3].map((n) => (
+              <div>
+                <>
+                  <label class="field-label">
+                    <>
+                      <span>Attunement slot {n}</span>
+                      <select class="field" name={`attuned-${n}`} data-attuned>
+                        <option value="">Unassigned</option>
+                        {items.map((row) => (
+                          <option value={row[0]}>{row[0]}</option>
+                        ))}
+                      </select>
+                    </>
+                  </label>
+                  <p data-item-note />
+                </>
+              </div>
+            ))
+          }
+        </div><p role="status" data-attunement-status></p><p
+          class="control-note"
+        >
+          Audit spell power, broad defense and the campaign-specific third job.
+          Two defensive items may overlap; the exact effects determine whether
+          that overlap is useful.
+        </p><label class="field-label"
+          ><span>Known tools / proficiencies</span><input
+            class="field"
+            name="known-tools"
+          /></label
+        ><label class="field-label"
+          ><span>Important components held</span><textarea
+            class="field"
+            name="held-components"
+            rows="2"></textarea></label
+        ><NotebookSave />
+      </form>
+      <form class="tool-panel" data-notebook>
+        <h2>Crafting projects</h2><p>
+          Three project slots. Use the reference links to check your proposed
+          tool and budget before committing.
+        </p><div class="reference-card-grid">
+          {
+            [1, 2, 3].map((n) => (
+              <fieldset>
+                <legend>Project {n}</legend>
+                {[
+                  ['name', 'Project'],
+                  ['tool', 'Required tool'],
+                  ['reference', 'Required reference / chapter'],
+                ].map(([key, label]) => (
+                  <label class="field-label">
+                    <span>
+                      {label} {n}
+                    </span>
+                    <input class="field" name={`project-${n}-${key}`} />
+                  </label>
+                ))}
+                <label class="field-label">
+                  <>
+                    <span>Estimated GP {n}</span>
+                    <input
+                      class="field"
+                      type="number"
+                      min="0"
+                      step="0.01"
+                      name={`project-${n}-cost`}
+                    />
+                  </>
+                </label>
+                <label class="field-label">
+                  <>
+                    <span>Status {n}</span>
+                    <select class="field" name={`project-${n}-status`}>
+                      <>
+                        <option>Research</option>
+                        <option>Ready</option>
+                        <option>In progress</option>
+                        <option>Complete</option>
+                        <option>Paused</option>
+                      </>
+                    </select>
+                  </>
+                </label>
+              </fieldset>
+            ))
+          }
+        </div><p>
+          <a href="/chapters/28-tool-and-crafting-tier-list/">Tool priorities</a
+          > · <a href="/chapters/29-magic-item-crafting-quick-guide/"
+            >Magic item crafting</a
+          > · <a href="/chapters/32-scroll-use-backup-books-and-security/"
+            >Scroll crafting</a
+          >
+        </p><NotebookSave />
+      </form>
+      <form class="tool-panel" data-notebook>
+        <h2>Gold allocation</h2><div class="form-grid">
+          {
+            budget.map((label, i) => (
+              <label class="field-label">
+                <>
+                  <span>{label} · gp</span>
+                  <input
+                    class="field"
+                    type="number"
+                    min="0"
+                    step="0.01"
+                    name={`gold-${i}`}
+                    data-gold
+                  />
+                </>
+              </label>
+            ))
+          }
+        </div><p role="status" data-gold-total></p><p class="control-note">
+          Allocations are not expenditure and do not include project estimates
+          above automatically.
+        </p><NotebookSave />
+      </form>
+      <form class="tool-panel" data-notebook>
+        <h2>Campaign assumptions</h2><div class="form-grid">
+          {
+            switches.map(([key, label, a, b]) => (
+              <label class="field-label">
+                <>
+                  <span>{label}</span>
+                  <select class="field" name={`campaign-${key}`}>
+                    <>
+                      <option value="">Not agreed</option>
+                      <option>{a}</option>
+                      <option>{b}</option>
+                    </>
+                  </select>
+                </>
+              </label>
+            ))
+          }
+        </div><p>
+          These assumptions may change a recommendation. Long attrition and one
+          decisive fight reward different spending patterns; item access,
+          downtime and illusion procedure change what is practical. No tiers are
+          recomputed.
+        </p><p>
+          <a href="/quick/campaign/">Read the campaign comparisons</a> · <a
+            href="/chapters/61-session-zero-compatibility-rules/"
+            >Session-zero gates</a
+          >
+        </p><NotebookSave />
+      </form>
+    </div>
+  </section><script
+    is:inline
+    type="application/json"
+    id="gear-items"
+    set:html={JSON.stringify(items).replace(/</g, '\\u003c')}
+  />
+  <script>
+    import '@/features/my-wizard/notebook';
+    const items: string[][] = JSON.parse(
+      document.querySelector('#gear-items')?.textContent ?? '[]',
+    );
+    const selects = [
+      ...document.querySelectorAll<HTMLSelectElement>('[data-attuned]'),
+    ];
+    function update() {
+      for (const select of selects) {
+        const row = items.find((r) => r[0] === select.value);
+        select.parentElement!.parentElement!.querySelector(
+          '[data-item-note]',
+        )!.textContent = row
+          ? `Attunement: ${row[2]}. ${row[5]}. Operation: ${row[3]}. Recharge: ${row[4]}.`
+          : '';
+      }
+      const chosen = selects.map((s) => s.value).filter(Boolean);
+      document.querySelector('[data-attunement-status]')!.textContent =
+        new Set(chosen).size < chosen.length
+          ? 'Duplicate item selected. Check the active attunement and stacking rules.'
+          : `${chosen.length} of 3 slots planned.`;
+      const values = [
+        ...document.querySelectorAll<HTMLInputElement>('[data-gold]'),
+      ].filter((i) => i.value !== '');
+      document.querySelector('[data-gold-total]')!.textContent = values.length
+        ? `Allocated: ${values.reduce((sum, i) => sum + Number(i.value), 0).toLocaleString()} gp. Blank categories remain unbudgeted.`
+        : 'No allocations entered.';
+    }
+    selects.forEach((s) => s.addEventListener('change', update));
+    document
+      .querySelectorAll('[data-gold]')
+      .forEach((s) => s.addEventListener('input', update));
+    update();
+  </script>
+</BaseLayout>

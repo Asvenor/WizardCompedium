@@ -1,9 +1,15 @@
 ---
 import { getCollection } from 'astro:content';
+import { toolDirectory } from '@/data/quick-tools';
 import BaseLayout from '@/components/layout/BaseLayout.astro';
 
-const componentSpells = (await getCollection('spells')).map((entry) => entry.data)
-  .filter((spell) => spell.rules.components.description || spell.rules.components.gpCost != null)
+const componentSpells = (await getCollection('spells'))
+  .map((entry) => entry.data)
+  .filter(
+    (spell) =>
+      spell.rules.components.description ||
+      spell.rules.components.gpCost != null,
+  )
   .sort((a, b) => a.name.localeCompare(b.name))
   .map((spell) => ({
     id: spell.id,
@@ -14,97 +20,395 @@ const componentSpells = (await getCollection('spells')).map((entry) => entry.dat
     items: spell.rules.components.items,
     note: spell.rules.components.note,
   }));
-const serializedComponents = JSON.stringify(componentSpells).replace(/</g, '\\u003c');
+const serializedComponents = JSON.stringify(componentSpells).replace(
+  /</g,
+  '\\u003c',
+);
 ---
-<BaseLayout title="Wizard Tools" description="Three focused calculators for saving throws, concentration, and spell components." active="tools">
-  <header class="page-hero"><div class="site-shell"><p class="kicker">Fast table math</p><h1>Tools</h1><p>Three focused calculators, using the Compendium’s probability method and canonical component records.</p></div></header>
+
+<BaseLayout
+  title="Wizard Tools"
+  description="Three focused calculators for saving throws, concentration, and spell components."
+  active="tools"
+>
+  <header class="page-hero">
+    <div class="site-shell">
+      <p class="kicker">Fast table math</p><h1>Tools</h1><p>
+        Plan, calculate, and open the source guidance when the decision needs
+        more context.
+      </p>
+    </div>
+  </header>
   <section class="section section--first">
+    <div class="site-shell">
+      <nav class="form-actions" aria-label="Planning tools">
+        {
+          toolDirectory.slice(1, 11).map((tool) => (
+            <a class="button" href={tool.url}>
+              {tool.title}
+            </a>
+          ))
+        }
+      </nav>
+    </div>
+  </section>
+  <section class="section">
     <div class="site-shell tools-grid">
       <article class="tool-panel" id="save-probability" data-save-calculator>
-        <div class="tool-panel-head"><div><p class="eyebrow">Calculator A</p><h2>Save probability</h2></div><a href="/chapters/03-optimization-mathematics-and-target-selection/">Chapter 3 ↗</a></div>
-        <div class="calculator-inputs">
-          <label class="field-label"><span>Spell Save DC</span><input class="field" type="number" min="1" max="40" value="15" data-save-dc /></label>
-          <label class="field-label"><span>Target Save Bonus</span><input class="field" type="number" min="-10" max="30" value="3" data-target-bonus /></label>
+        <div class="tool-panel-head">
+          <div>
+            <p class="eyebrow">Calculator A</p><h2>Save probability</h2>
+          </div><a
+            href="/chapters/03-optimization-mathematics-and-target-selection/"
+            >Chapter 3 ↗</a
+          >
         </div>
-        <output class="calculator-output"><span>Target chance to fail</span><strong data-save-result>55%</strong></output>
-        <p class="control-note">Decision aid only. Use visible information and results already observed at the table.</p>
+        <div class="calculator-inputs">
+          <label class="field-label"
+            ><span>Spell Save DC</span><input
+              class="field"
+              type="number"
+              min="1"
+              max="40"
+              value="15"
+              data-save-dc
+            /></label
+          >
+          <label class="field-label"
+            ><span>Target Save Bonus</span><input
+              class="field"
+              type="number"
+              min="-10"
+              max="30"
+              value="3"
+              data-target-bonus
+            /></label
+          >
+        </div>
+        <output class="calculator-output"
+          ><span>Target chance to fail</span><strong data-save-result
+            >55%</strong
+          ></output
+        >
+        <p data-save-success></p><p class="control-note">
+          Decision aid only. Use visible information and results already
+          observed at the table.
+        </p>
       </article>
 
-      <article class="tool-panel" id="concentration-calculator" data-concentration-calculator>
-        <div class="tool-panel-head"><div><p class="eyebrow">Calculator B</p><h2>Concentration</h2></div><a href="/chapters/03-optimization-mathematics-and-target-selection/">Chapter 3 ↗</a></div>
-        <div class="calculator-inputs">
-          <label class="field-label"><span>Constitution Save Bonus</span><input class="field" type="number" min="-10" max="30" value="5" data-con-bonus /></label>
-          <label class="field-label"><span>Concentration DC</span><input class="field" type="number" min="1" max="30" value="10" data-con-dc /></label>
-          <label class="field-label"><span>Damage <small>optional</small></span><input class="field" type="number" min="0" max="999" placeholder="Calculates the DC" data-con-damage /></label>
-          <label class="check-control"><input type="checkbox" data-con-advantage /><span>Advantage</span></label>
+      <article
+        class="tool-panel"
+        id="concentration-calculator"
+        data-concentration-calculator
+      >
+        <div class="tool-panel-head">
+          <div><p class="eyebrow">Calculator B</p><h2>Concentration</h2></div><a
+            href="/chapters/03-optimization-mathematics-and-target-selection/"
+            >Chapter 3 ↗</a
+          >
         </div>
-        <output class="calculator-output"><span>Concentration success</span><strong data-con-result>80%</strong></output>
-        <p class="control-note">When damage is entered: DC 10 or half the damage rounded down, whichever is higher, to a maximum of 30.</p>
+        <div class="calculator-inputs">
+          <label class="field-label"
+            ><span>Constitution Save Bonus</span><input
+              class="field"
+              type="number"
+              min="-10"
+              max="30"
+              value="5"
+              data-con-bonus
+            /></label
+          >
+          <label class="field-label"
+            ><span>Concentration DC</span><input
+              class="field"
+              type="number"
+              min="1"
+              max="30"
+              value="10"
+              data-con-dc
+            /></label
+          >
+          <label class="field-label"
+            ><span>Damage <small>optional</small></span><input
+              class="field"
+              type="number"
+              min="0"
+              max="999"
+              placeholder="Calculates the DC"
+              data-con-damage
+            /></label
+          >
+          <label class="check-control"
+            ><input type="checkbox" data-con-advantage /><span>Advantage</span
+            ></label
+          >
+        </div>
+        <output class="calculator-output"
+          ><span>Concentration success</span><strong data-con-result>80%</strong
+          ></output
+        >
+        <p data-con-comparison></p><p class="control-note">
+          Advantage is applied once; the entered bonus must already include
+          proficiency and other verified bonuses. When damage is entered: DC 10
+          or half the damage rounded down, whichever is higher, to a maximum of
+          30.
+        </p>
       </article>
 
-      <article class="tool-panel tool-panel--wide" id="component-cost" data-component-calculator>
-        <div class="tool-panel-head"><div><p class="eyebrow">Calculator C</p><h2>Component cost</h2></div><a href="/chapters/25-spell-components-and-resource-acquisition/">Chapter 25 ↗</a></div>
-        <p>Choose spells, then set how many component sets you need. Enter any missing prices from your active spell entry.</p>
-        <div class="form-actions"><a href="#save-probability">Save probability</a><a href="#concentration-calculator">Concentration</a><button class="button" type="button" data-clear-components>Clear selection</button></div>
+      <article
+        class="tool-panel tool-panel--wide"
+        id="defense-comparison"
+        data-defense-comparison
+      >
+        <h2>Compare known target defenses</h2><p>
+          Enter bonuses you actually know. Leave unknown defenses blank; visual
+          clues belong in the <a href="/quick/targeting/">targeting guide</a>.
+        </p><label class="field-label"
+          ><span>Comparison Spell Save DC</span><input
+            class="field"
+            type="number"
+            min="1"
+            max="40"
+            value="18"
+            data-defense-dc
+          /></label
+        ><div class="reference-card-grid">
+          {
+            ['STR', 'DEX', 'CON', 'INT', 'WIS', 'CHA'].map((save) => (
+              <label class="field-label">
+                <>
+                  <span>{save} save bonus</span>
+                  <input
+                    class="field"
+                    type="number"
+                    min="-10"
+                    max="30"
+                    data-defense={save}
+                  />
+                  <output data-defense-result={save}>Unknown</output>
+                </>
+              </label>
+            ))
+          }
+        </div>
+      </article>
+      <article class="tool-panel tool-panel--wide" data-expected-damage>
+        <h2>Save-based expected damage</h2><p>
+          Generic arithmetic, not a spell rating. Enter damage after any
+          applicable adjustments; this does not model resistance, immunity, area
+          targets or lost actions.
+        </p><div class="form-grid">
+          <label class="field-label"
+            ><span>Damage on failed save</span><input
+              class="field"
+              type="number"
+              min="0"
+              step="any"
+              data-damage-fail
+            /></label
+          ><label class="field-label"
+            ><span>Damage on successful save</span><input
+              class="field"
+              type="number"
+              min="0"
+              step="any"
+              data-damage-success
+            /></label
+          ><label class="field-label"
+            ><span>Chance of failed save (%)</span><input
+              class="field"
+              type="number"
+              min="0"
+              max="100"
+              step="any"
+              data-damage-chance
+            /></label
+          >
+        </div><output class="calculator-output" data-expected-result
+          >Enter all three values.</output
+        >
+      </article>
+      <article
+        class="tool-panel tool-panel--wide"
+        id="component-cost"
+        data-component-calculator
+      >
+        <div class="tool-panel-head">
+          <div>
+            <p class="eyebrow">Calculator C</p><h2>Component cost</h2>
+          </div><a
+            href="/chapters/25-spell-components-and-resource-acquisition/"
+            >Chapter 25 ↗</a
+          >
+        </div>
+        <p>
+          Choose spells, then set how many component sets you need. Enter any
+          missing prices from your active spell entry.
+        </p>
+        <div class="form-actions">
+          <a href="#save-probability">Save probability</a><a
+            href="#concentration-calculator">Concentration</a
+          ><button class="button" type="button" data-clear-components
+            >Clear selection</button
+          >
+        </div>
+        <div class="form-actions">
+          {
+            ['prepared', 'owned', 'planned'].map((list) => (
+              <button class="button" type="button" data-component-import={list}>
+                Use {list} spells
+              </button>
+            ))
+          }
+        </div><p role="status" data-component-import-status></p>
         <div class="component-selector">
-          {componentSpells.map((spell) => (
-            <label><input type="checkbox" value={spell.id} data-component-spell /><span>{spell.name}</span></label>
-          ))}
+          {
+            componentSpells.map((spell) => (
+              <label>
+                <>
+                  <input
+                    type="checkbox"
+                    value={spell.id}
+                    data-component-spell
+                  />
+                  <span>{spell.name}</span>
+                </>
+              </label>
+            ))
+          }
         </div>
-        <div class="component-table-wrap" tabindex="0" role="region" aria-label="Component costs; scroll horizontally on small screens" data-component-output hidden></div>
+        <div
+          class="component-table-wrap"
+          tabindex="0"
+          role="region"
+          aria-label="Component costs; scroll horizontally on small screens"
+          data-component-output
+          hidden
+        >
+        </div>
         <div class="component-totals">
-          <output><span>Total consumed cost</span><strong data-consumed-total>0 gp</strong></output>
-          <output><span>Required non-consumed value</span><strong data-required-total>0 gp</strong></output>
+          <output
+            ><span>Total consumed cost</span><strong data-consumed-total
+              >0 gp</strong
+            ></output
+          >
+          <output
+            ><span>Required non-consumed value</span><strong data-required-total
+              >0 gp</strong
+            ></output
+          >
         </div>
-        <p class="control-note" role="status" data-component-note>No spells selected.</p>
+        <p class="control-note" role="status" data-component-note>
+          No spells selected.
+        </p>
       </article>
     </div>
   </section>
-  <script is:inline type="application/json" id="component-spells-data" set:html={serializedComponents}></script>
+  <script
+    is:inline
+    type="application/json"
+    id="component-spells-data"
+    set:html={serializedComponents}
+  />
   <script>
     import { loadWizardProfile } from '@/features/my-wizard/profile';
     import '@/features/calculators/components';
-    import { readNumber, probabilityToMeet, concentrationDc } from '@/features/calculators/math';
+    import '@/features/calculators/workflows';
+    import {
+      readNumber,
+      probabilityToMeet,
+      concentrationDc,
+    } from '@/features/calculators/math';
     const percent = (value: number) => `${Math.round(value * 100)}%`;
 
-    const saveRoot = document.querySelector<HTMLElement>('[data-save-calculator]');
+    const saveRoot = document.querySelector<HTMLElement>(
+      '[data-save-calculator]',
+    );
     if (saveRoot) {
       const dc = saveRoot.querySelector<HTMLInputElement>('[data-save-dc]');
-      const bonus = saveRoot.querySelector<HTMLInputElement>('[data-target-bonus]');
+      const bonus = saveRoot.querySelector<HTMLInputElement>(
+        '[data-target-bonus]',
+      );
       const output = saveRoot.querySelector<HTMLElement>('[data-save-result]');
       const profile = loadWizardProfile();
-      if (profile?.spellSaveDc != null && dc) dc.value = String(profile.spellSaveDc);
+      if (profile?.spellSaveDc != null && dc)
+        dc.value = String(profile.spellSaveDc);
       const update = () => {
         if (!dc || !bonus || !output) return;
-        const d = readNumber(dc.value, 1, 40), b = readNumber(bonus.value, -10, 30);
-        dc.setAttribute('aria-invalid', String(d == null)); bonus.setAttribute('aria-invalid', String(b == null));
-        output.textContent = d == null || b == null ? '—' : percent(1 - probabilityToMeet(d, b));
+        const d = readNumber(dc.value, 1, 40),
+          b = readNumber(bonus.value, -10, 30);
+        dc.setAttribute('aria-invalid', String(d == null));
+        bonus.setAttribute('aria-invalid', String(b == null));
+        output.textContent =
+          d == null || b == null ? '—' : percent(1 - probabilityToMeet(d, b));
+        const success = saveRoot.querySelector('[data-save-success]');
+        if (success)
+          success.textContent =
+            d == null || b == null
+              ? 'Enter a valid DC and whole-number bonus.'
+              : 'Target chance to succeed: ' + percent(probabilityToMeet(d, b));
       };
-      dc?.addEventListener('input', update); bonus?.addEventListener('input', update); update();
+      dc?.addEventListener('input', update);
+      bonus?.addEventListener('input', update);
+      update();
     }
 
-    const conRoot = document.querySelector<HTMLElement>('[data-concentration-calculator]');
+    const conRoot = document.querySelector<HTMLElement>(
+      '[data-concentration-calculator]',
+    );
     if (conRoot) {
       const bonus = conRoot.querySelector<HTMLInputElement>('[data-con-bonus]');
       const dc = conRoot.querySelector<HTMLInputElement>('[data-con-dc]');
-      const damage = conRoot.querySelector<HTMLInputElement>('[data-con-damage]');
-      const advantage = conRoot.querySelector<HTMLInputElement>('[data-con-advantage]');
+      const damage =
+        conRoot.querySelector<HTMLInputElement>('[data-con-damage]');
+      const advantage = conRoot.querySelector<HTMLInputElement>(
+        '[data-con-advantage]',
+      );
       const output = conRoot.querySelector<HTMLElement>('[data-con-result]');
+      const profile = loadWizardProfile();
+      if (profile?.constitutionSave != null && bonus)
+        bonus.value = String(profile.constitutionSave);
+      if (profile?.warCaster && advantage) advantage.checked = true;
       const update = () => {
         if (!bonus || !dc || !damage || !advantage || !output) return;
         const usesDamage = damage.value !== '';
         const damageValue = readNumber(damage.value, 0, 999);
         dc.readOnly = usesDamage;
-        const calculatedDc = usesDamage ? (damageValue == null ? null : concentrationDc(damageValue)) : readNumber(dc.value, 1, 30);
+        const calculatedDc = usesDamage
+          ? damageValue == null
+            ? null
+            : concentrationDc(damageValue)
+          : readNumber(dc.value, 1, 30);
         if (usesDamage && calculatedDc != null) dc.value = String(calculatedDc);
         const b = readNumber(bonus.value, -10, 30);
-        bonus.setAttribute('aria-invalid', String(b == null)); dc.setAttribute('aria-invalid', String(calculatedDc == null)); damage.setAttribute('aria-invalid', String(usesDamage && damageValue == null));
-        if (calculatedDc == null || b == null) { output.textContent = '—'; return; }
+        bonus.setAttribute('aria-invalid', String(b == null));
+        dc.setAttribute('aria-invalid', String(calculatedDc == null));
+        damage.setAttribute(
+          'aria-invalid',
+          String(usesDamage && damageValue == null),
+        );
+        if (calculatedDc == null || b == null) {
+          output.textContent = '—';
+          const compare = conRoot.querySelector('[data-con-comparison]');
+          if (compare) compare.textContent = 'Enter valid numbers.';
+          return;
+        }
         const base = probabilityToMeet(calculatedDc, b);
-        output.textContent = percent(advantage.checked ? 1 - ((1 - base) ** 2) : base);
+        const compare = conRoot.querySelector('[data-con-comparison]');
+        if (compare)
+          compare.textContent =
+            'Normal: ' +
+            percent(base) +
+            ' · Advantage: ' +
+            percent(1 - (1 - base) ** 2);
+        output.textContent = percent(
+          advantage.checked ? 1 - (1 - base) ** 2 : base,
+        );
       };
-      [bonus, dc, damage, advantage].forEach((control) => control?.addEventListener('input', update)); update();
+      [bonus, dc, damage, advantage].forEach((control) =>
+        control?.addEventListener('input', update),
+      );
+      update();
     }
-
   </script>
 </BaseLayout>

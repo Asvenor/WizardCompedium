@@ -1,4 +1,101 @@
 ---
-import HubPage from '@/components/HubPage.astro';
+import BaseLayout from '@/components/layout/BaseLayout.astro';
+import { getBuilds } from '@/lib/builds';
+const builds = await getBuilds();
 ---
-<HubPage hub="builds" eyebrow="Build command" title="Builds" description="Choose the route that matches the campaign, then use its setup, features, progression, operating rules, priorities, and warnings." />
+
+<BaseLayout title="Choose a Wizard" active="builds"
+  ><header class="page-hero">
+    <div class="site-shell">
+      <p class="kicker">Choose for your campaign</p><h1>Build a Wizard</h1><p>
+        Compare the job, spell emphasis and cost of each supported route. The
+        source's conditional advice matters more than a universal power score.
+      </p><div class="hero-actions">
+        <a class="button" href="/builds/compare/">Compare routes</a><a
+          class="button"
+          href="/quick/campaign/">Campaign assumptions</a
+        ><a
+          class="button"
+          href="/chapters/04-build-selection-and-priority-matrix/"
+          >Full selection matrix</a
+        >
+      </div>
+    </div>
+  </header><section class="section section--first">
+    <div class="site-shell">
+      <div class="reference-card-grid">
+        {
+          builds.map((build) => (
+            <article
+              class={`tool-panel build-accent build-accent--${build.id.toLowerCase()}`}
+            >
+              <>
+                <h2>{build.name}</h2>
+                <p>{build.fit}</p>
+                <dl class="workflow-dl">
+                  <>
+                    <dt>Spell emphasis</dt>
+                    <dd>{build.emphasis}</dd>
+                    <dt>Main tradeoff</dt>
+                    <dd>{build.caution}</dd>
+                    <dt>Progression</dt>
+                    <dd>{build.timing}</dd>
+                  </>
+                </dl>
+                <div class="form-actions">
+                  <>
+                    <a class="button" href={build.href}>
+                      Full build
+                    </a>
+                    <button
+                      class="button"
+                      type="button"
+                      data-select-build={build.id}
+                    >
+                      Select {build.id}
+                    </button>
+                  </>
+                </div>
+              </>
+            </article>
+          ))
+        }
+      </div><p role="status" data-build-status></p><p>
+        <a href="/chapters/50-complete-selectable-wizard-subclass-matrix/"
+          >All selectable subclasses</a
+        > · <a href="/chapters/54-one-page-build-reference-sheets/"
+          >One-page build scripts</a
+        > · <a href="/wizard/level-up/">Plan the next level</a>
+      </p>
+    </div>
+  </section><script>
+    import {
+      defaultWizardProfile,
+      loadWizardProfile,
+      saveWizardProfile,
+      type WizardProfile,
+    } from '@/features/my-wizard/profile';
+    document
+      .querySelectorAll<HTMLElement>('[data-select-build]')
+      .forEach((button) =>
+        button.addEventListener('click', () => {
+          const current = loadWizardProfile();
+          const profile = current ?? defaultWizardProfile();
+          profile.configured=true;
+            profile.build = button.dataset.selectBuild as WizardProfile['build'];
+          if (!current) {
+            profile.characterLevel = 1;
+            profile.wizardLevel = ['CORE', 'TANK', 'FIGHTER'].includes(
+              profile.build,
+            )
+              ? 0
+              : 1;
+          }
+          const saved = saveWizardProfile(profile);
+          document.querySelector('[data-build-status]')!.textContent = saved
+            ? `${profile.build} selected in My Wizard. Review your levels, subclass and equipment; existing levels were not changed.`
+            : 'Storage unavailable. The build could not be saved.';
+        }),
+      );
+  </script></BaseLayout
+>

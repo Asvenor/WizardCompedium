@@ -3,77 +3,152 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '@/components/layout/BaseLayout.astro';
 import { corePrinciples } from '@/data/core-principles';
 import { getSpellRoleCategories } from '@/lib/spells';
-
-const spells = (await getCollection('spells')).map((entry) => entry.data)
-  .filter((spell) => spell.compendium.summary && !spell.compendium.summary.startsWith('The Compendium includes this spell in its maintained spellbook pool'))
-  .sort((a, b) => a.level - b.level || a.name.localeCompare(b.name))
-  .map((spell) => ({
-    id: spell.id, name: spell.name, level: spell.level, source: spell.source.category,
-    summary: spell.compendium.summary, roles: spell.compendium.roles, categories: getSpellRoleCategories(spell),
-  }));
-const serializedSpells = JSON.stringify(spells).replace(/</g, '\\u003c');
+import { getBuilds } from '@/lib/builds';
+import { extractTableRows } from '@/lib/compendium-tables';
+const chapters = await getCollection('chapters');
+const spells = (await getCollection('spells'))
+  .map((e) => e.data)
+  .filter(
+    (s) =>
+      s.compendium.summary &&
+      !s.compendium.summary.startsWith(
+        'The Compendium includes this spell in its maintained spellbook pool',
+      ),
+  );
+const cards = [
+  ...corePrinciples.map((p, i) => ({
+    id: 'principle-' + i,
+    deck: 'Core principles',
+    question: p.question,
+    answer: p.answer,
+    href: p.href,
+  })),
+  ...spells.map((s) => ({
+    id: 'spell-' + s.id,
+    deck: 'Spell roles',
+    level: s.level,
+    source: s.source.category,
+    categories: getSpellRoleCategories(s),
+    question: s.name + ' — what job does it do?',
+    answer:
+      s.compendium.summary +
+      (s.compendium.roles.length
+        ? ' Roles: ' + s.compendium.roles.join(', ')
+        : ''),
+    href: `/spells/${s.id}/`,
+  })),
+  ...(await getBuilds()).map((b) => ({
+    id: 'build-' + b.id,
+    deck: 'Builds',
+    question: b.id + ' — when does this route fit, and what does it cost?',
+    answer: b.fit + ' ' + b.caution,
+    href: b.href,
+  })),
+  ...[
+    { chapter: 45, table: 2, deck: 'Reactions' },
+    { chapter: 59, table: 1, deck: 'Targeting' },
+    { chapter: 18, table: 0, deck: 'Tactics' },
+  ].flatMap((group) => {
+    const source = chapters.find((c) => c.data.chapter === group.chapter)!;
+    const rows = extractTableRows(source.body ?? '', group.table);
+    return rows.slice(1).map((row, i) => ({
+      id: `reference-${group.chapter}-${i}`,
+      deck: group.deck,
+      question: row[0] + ' — what is the Compendium guidance?',
+      answer: row
+        .slice(1)
+        .map((value, j) => rows[0][j + 1] + ': ' + value)
+        .join(' '),
+      href: `/chapters/${source.id}/`,
+    }));
+  }),
+];
 ---
-<BaseLayout title="Learning Mode" description="Learn canonical spell roles and core Wizard principles." active="learn">
-  <header class="page-hero"><div class="site-shell"><p class="kicker">Internalize the Compendium</p><h1>Learning Mode</h1><p>Short recall practice for canonical spell roles and the operating principles used at the table.</p></div></header>
-  <section class="section section--first">
+
+<BaseLayout title="Learning Mode" active="learn"
+  ><header class="page-hero">
+    <div class="site-shell">
+      <p class="kicker">Recall before lookup</p><h1>Learning Mode</h1><p>
+        Short source-derived questions for the decisions you make repeatedly.
+        Review history stays in this browser.
+      </p><a href="/learn/priorities/">What should I memorize? →</a>
+    </div>
+  </header><section class="section section--first">
     <div class="site-shell learning-layout">
-      <article class="tool-panel flashcard-panel" data-flashcards>
-        <div class="tool-panel-head"><div><p class="eyebrow">Mode A</p><h2>Spell flashcards</h2></div><span data-card-progress></span></div>
-        <label class="field-label"><span>Deck</span><select class="field" data-deck-select><option value="all">All canonical spells</option><option value="core">Core spells</option>{Array.from({ length: 10 }, (_, level) => <option value={`level-${level}`}>{level === 0 ? 'Cantrips' : `Level ${level} spells`}</option>)}<option value="dunamancy">Chronurgy / Dunamancy spells</option><option value="control">Control spells</option><option value="defense">Defense spells</option></select></label>
-        <div class="flashcard" data-flashcard>
-          <p class="eyebrow">What is its primary optimization role?</p>
-          <h3 data-card-name>Loading…</h3>
-          <div class="flashcard-answer" data-card-answer hidden><p data-card-summary></p><p><strong>Indexed roles:</strong> <span data-card-roles></span></p><a data-card-link>Open spell record →</a></div>
-        </div>
-        <div class="form-actions"><button class="button button--primary" type="button" data-reveal-card>Reveal</button><button class="button" type="button" data-next-card>Next spell</button></div>
-      </article>
-      <article class="principle-list">
-        <div class="section-head"><div><p class="kicker">Mode B</p><h2>Core principle quiz</h2></div></div>
-        {corePrinciples.map((principle, index) => (
-          <details class="principle-card">
-            <summary><span>{String(index + 1).padStart(2, '0')}</span>{principle.question}</summary>
-            <div><p>{principle.answer}</p><a href={principle.href}>{principle.source} →</a></div>
-          </details>
-        ))}
+      <article class="tool-panel" data-practice>
+        <h2>Practice</h2><label class="field-label"
+          ><span>Practice deck</span><select class="field" data-practice-deck
+            ><option value="">All topics</option>{
+              [...new Set(cards.map((c) => c.deck))].map((deck) => (
+                <option>{deck}</option>
+              ))
+            }<optgroup label="Spell decks"
+              ><option value="core-spells">Core spells</option><option
+                value="dunamancy-spells">Dunamancy spells</option
+              ><option value="control-spells">Control spells</option><option
+                value="defense-spells">Defense spells</option
+              >{
+                Array.from({ length: 10 }, (_, level) => (
+                  <option value={`level-${level}`}>
+                    {level === 0 ? 'Cantrips' : `Level ${level} spells`}
+                  </option>
+                ))
+              }</optgroup
+            ></select
+          ></label
+        ><p data-practice-progress role="status"></p><div class="flashcard">
+          <h3 data-practice-question>
+            Choose a deck and recall the answer before revealing it.
+          </h3><div data-practice-answer hidden>
+            <p data-practice-copy></p><a data-practice-source>Full source →</a>
+          </div>
+        </div><div class="form-actions">
+          <button
+            class="button button--primary"
+            type="button"
+            data-practice-reveal>Reveal answer</button
+          ><button
+            class="button"
+            type="button"
+            data-practice-grade="correct"
+            disabled>Got it</button
+          ><button
+            class="button"
+            type="button"
+            data-practice-grade="incorrect"
+            disabled>Review again</button
+          ><button class="button" type="button" data-practice-next>Skip</button>
+        </div><p data-practice-history></p><p class="control-note">
+          Unseen cards come first, then missed and least-recently reviewed
+          cards. Self-assessment is not a rules test.
+        </p>
+      </article><article>
+        <h2>Core principles · always available</h2>{
+          corePrinciples.map((p) => (
+            <details class="principle-card">
+              <>
+                <summary>{p.question}</summary>
+                <div>
+                  <>
+                    <p>{p.answer}</p>
+                    <a href={p.href}>{p.source} →</a>
+                  </>
+                </div>
+              </>
+            </details>
+          ))
+        }<noscript
+          >Interactive practice needs JavaScript; the source principles and full
+          Compendium remain available.</noscript
+        >
       </article>
     </div>
-  </section>
-  <script is:inline type="application/json" id="flashcard-spells" set:html={serializedSpells}></script>
-  <script>
-    interface FlashcardSpell { id: string; name: string; level: number; source: string; summary: string; roles: string[]; categories: string[]; }
-    const root = document.querySelector<HTMLElement>('[data-flashcards]');
-    const data = document.querySelector<HTMLScriptElement>('#flashcard-spells');
-    if (root && data) {
-      const spells: FlashcardSpell[] = JSON.parse(data.textContent ?? '[]');
-      const deck = root.querySelector<HTMLSelectElement>('[data-deck-select]');
-      const name = root.querySelector<HTMLElement>('[data-card-name]');
-      const summary = root.querySelector<HTMLElement>('[data-card-summary]');
-      const roles = root.querySelector<HTMLElement>('[data-card-roles]');
-      const link = root.querySelector<HTMLAnchorElement>('[data-card-link]');
-      const answer = root.querySelector<HTMLElement>('[data-card-answer]');
-      const progress = root.querySelector<HTMLElement>('[data-card-progress]');
-      let cards: FlashcardSpell[] = []; let index = 0;
-      const chooseDeck = () => {
-        const value = deck?.value ?? 'all';
-        cards = spells.filter((spell) => value === 'all'
-          || value === `level-${spell.level}`
-          || (value === 'core' && spell.source.toLowerCase() === 'core')
-          || (value === 'dunamancy' && spell.source.toLowerCase().includes('dunamancy'))
-          || spell.categories.includes(value));
-        index = 0; render();
-      };
-      const render = () => {
-        const spell = cards[index];
-        if (!name || !summary || !roles || !link || !answer || !progress) return;
-        root.querySelectorAll<HTMLButtonElement>('button').forEach(button => { button.disabled = !spell; });
-        if (!spell) { name.textContent = 'No flashcards in this deck yet'; answer.hidden = true; progress.textContent = '0 / 0'; return; }
-        name.textContent = spell.name; summary.textContent = spell.summary; roles.textContent = spell.roles.join(', ');
-        if (roles.parentElement) roles.parentElement.hidden = !spell.roles.length;
-        link.href = `/spells/${spell.id}/`; answer.hidden = true; progress.textContent = `${index + 1} / ${cards.length}`;
-      };
-      root.querySelector('[data-reveal-card]')?.addEventListener('click', () => { if (answer) answer.hidden = false; });
-      root.querySelector('[data-next-card]')?.addEventListener('click', () => { if (cards.length) index = (index + 1) % cards.length; render(); });
-      deck?.addEventListener('change', chooseDeck); chooseDeck();
-    }
-  </script>
-</BaseLayout>
+  </section><script
+    is:inline
+    type="application/json"
+    id="practice-cards"
+    set:html={JSON.stringify(cards).replace(/</g, '\\u003c')}
+  /><script>
+    import '@/features/learning/practice';
+  </script></BaseLayout
+>

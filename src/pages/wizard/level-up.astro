@@ -1,11 +1,16 @@
 ---
+import { getCollection } from 'astro:content';
+import NotebookSave from '@/components/NotebookSave.astro';
 import BaseLayout from '@/components/layout/BaseLayout.astro';
 import roadmapSource from '@/content/chapters/10-compact-spell-progression-roadmap.md?raw';
 import { extractTableRows } from '@/lib/compendium-tables';
 
 const routeCodes = ['CHRON', 'DIV', 'ILL', 'BLADE', 'TANK'];
 const routeRecommendation = (text: string, route: string) => {
-  const pattern = new RegExp(`${route}:\\s*(.*?)(?=;\\s*(?:${routeCodes.join('|')}):|$)`, 'i');
+  const pattern = new RegExp(
+    `${route}:\\s*(.*?)(?=;\\s*(?:${routeCodes.join('|')}):|$)`,
+    'i',
+  );
   return text.match(pattern)?.[1]?.trim() ?? '';
 };
 const progression = extractTableRows(roadmapSource, 2)
@@ -14,48 +19,166 @@ const progression = extractTableRows(roadmapSource, 2)
     wizardLevel: Number(row[0]),
     timing: row[1],
     core: row[2],
-    routes: Object.fromEntries(routeCodes.map((route) => [route, routeRecommendation(row[3], route)])),
+    routes: Object.fromEntries(
+      routeCodes.map((route) => [route, routeRecommendation(row[3], route)]),
+    ),
   }));
-const serializedProgression = JSON.stringify(progression).replace(/</g, '\\u003c');
+const allChapters = await getCollection('chapters');
+const gainRows = extractTableRows(
+  allChapters.find((c) => c.data.chapter === 4)?.body ?? '',
+  4,
+)
+  .slice(1)
+  .map((row) => ({ level: Number(row[0]), pure: row[1], dip: row[2] }));
+const serializedProgression = JSON.stringify(progression).replace(
+  /</g,
+  '\\u003c',
+);
 ---
-<BaseLayout title="Level-Up Assistant" description="Surface the next Wizard milestone from the Compendium roadmap and audit.">
-  <header class="page-hero"><div class="site-shell"><p class="kicker">Roadmap + audit</p><h1>Level-Up Assistant</h1><p>Choose the next character level. The result is pulled from the existing progression roadmap and links back to the complete build guidance.</p></div></header>
+
+<BaseLayout
+  title="Level-Up Assistant"
+  description="Surface the next Wizard milestone from the Compendium roadmap and audit."
+>
+  <header class="page-hero">
+    <div class="site-shell">
+      <p class="kicker">Roadmap + audit</p><h1>Level-Up Assistant</h1><p>
+        Choose the next character level. The result is pulled from the existing
+        progression roadmap and links back to the complete build guidance.
+      </p>
+    </div>
+  </header>
   <section class="section section--first">
     <div class="site-shell level-up-layout" data-level-up-assistant>
       <form class="tool-panel level-up-controls">
         <p class="eyebrow">Current character</p>
-        <label class="field-label"><span>Build</span><select class="field" name="build">{['CORE','CHRON','DIV','ILL','BLADE','TANK','FIGHTER'].map((build) => <option value={build}>{build}</option>)}</select></label>
-        <label class="field-label"><span>Character level</span><input class="field" name="characterLevel" type="number" min="1" max="20" value="2" /></label>
-        <label class="field-label"><span>Wizard level</span><input class="field" name="wizardLevel" type="number" min="0" max="20" value="1" /></label>
-        <label class="field-label"><span>Going to character level</span><input class="field" name="targetLevel" type="number" min="2" max="20" value="3" /></label>
-        <p class="control-note">My Wizard fills these values automatically when a local profile exists.</p>
+        <label class="field-label"
+          ><span>Build</span><select class="field" name="build"
+            >{
+              ['CORE', 'CHRON', 'DIV', 'ILL', 'BLADE', 'TANK', 'FIGHTER'].map(
+                (build) => <option value={build}>{build}</option>,
+              )
+            }</select
+          ></label
+        >
+        <label class="field-label"
+          ><span>Character level</span><input
+            class="field"
+            name="characterLevel"
+            type="number"
+            min="1"
+            max="20"
+            value="2"
+          /></label
+        >
+        <label class="field-label"
+          ><span>Wizard level</span><input
+            class="field"
+            name="wizardLevel"
+            type="number"
+            min="0"
+            max="20"
+            value="1"
+          /></label
+        >
+        <label class="field-label"
+          ><span>Going to character level</span><input
+            class="field"
+            name="targetLevel"
+            type="number"
+            min="2"
+            max="20"
+            value="3"
+          /></label
+        >
+        <p class="control-note">
+          My Wizard fills these values automatically when a local profile
+          exists.
+        </p>
       </form>
-      <div class="level-up-result" aria-live="polite" data-level-up-result></div>
+      <div class="level-up-result" aria-live="polite" data-level-up-result>
+      </div>
     </div>
   </section>
-  <script is:inline type="application/json" id="level-up-progression" set:html={serializedProgression}></script>
+  <section class="section">
+    <div class="site-shell">
+      <form class="tool-panel" data-notebook>
+        <h2>Level-up checklist</h2><p>
+          For this next level, verify the exact active class and build entries.
+          Saved checks persist—review them again each level.
+        </p>{
+          [
+            'Confirm class and Wizard level',
+            'Record feature / subclass gains',
+            'Audit spell level and legal acquisitions',
+            'Resolve feat / ASI in the build roadmap',
+            'Update prepared list, slots, DC and save bonuses',
+            'Check source permissions and components',
+          ].map((text, i) => (
+            <label class="check-control">
+              <>
+                <input type="checkbox" name={`level-up-check-${i}`} />
+                <span>{text}</span>
+              </>
+            </label>
+          ))
+        }<NotebookSave />
+      </form>
+    </div>
+  </section>
+  <script
+    is:inline
+    type="application/json"
+    id="level-up-gains"
+    set:html={JSON.stringify(gainRows).replace(/</g, '\\u003c')}
+  />
+  <script
+    is:inline
+    type="application/json"
+    id="level-up-progression"
+    set:html={serializedProgression}
+  />
   <script>
     import { loadWizardProfile } from '@/features/my-wizard/profile';
     import { readNumber } from '@/features/calculators/math';
-    interface ProgressionRow { wizardLevel: number; timing: string; core: string; routes: Record<string, string>; }
-    const root = document.querySelector<HTMLElement>('[data-level-up-assistant]');
-    const data = document.querySelector<HTMLScriptElement>('#level-up-progression');
+    interface ProgressionRow {
+      wizardLevel: number;
+      timing: string;
+      core: string;
+      routes: Record<string, string>;
+    }
+    const root = document.querySelector<HTMLElement>(
+      '[data-level-up-assistant]',
+    );
+    const data = document.querySelector<HTMLScriptElement>(
+      '#level-up-progression',
+    );
     if (root && data) {
+      const gains: { level: number; pure: string; dip: string }[] = JSON.parse(
+        document.querySelector('#level-up-gains')?.textContent ?? '[]',
+      );
       const rows: ProgressionRow[] = JSON.parse(data.textContent ?? '[]');
       const form = root.querySelector<HTMLFormElement>('form');
       const result = root.querySelector<HTMLElement>('[data-level-up-result]');
       const buildChapters: Record<string, [number, string]> = {
-        CORE: [5, '05-flagship-artificer-1-wizard-19'], CHRON: [6, '06-chronurgy-diviner-and-illusionist-wizard-variants'],
-        DIV: [6, '06-chronurgy-diviner-and-illusionist-wizard-variants'], ILL: [6, '06-chronurgy-diviner-and-illusionist-wizard-variants'],
-        BLADE: [7, '07-bladesinger-wizard'], TANK: [8, '08-wizard-tank'], FIGHTER: [9, '09-fighter-1-wizard-19-alternative'],
+        CORE: [5, '05-flagship-artificer-1-wizard-19'],
+        CHRON: [6, '06-chronurgy-diviner-and-illusionist-wizard-variants'],
+        DIV: [6, '06-chronurgy-diviner-and-illusionist-wizard-variants'],
+        ILL: [6, '06-chronurgy-diviner-and-illusionist-wizard-variants'],
+        BLADE: [7, '07-bladesinger-wizard'],
+        TANK: [8, '08-wizard-tank'],
+        FIGHTER: [9, '09-fighter-1-wizard-19-alternative'],
       };
-      const field = (name: string) => form?.elements.namedItem(name) as HTMLInputElement | HTMLSelectElement;
+      const field = (name: string) =>
+        form?.elements.namedItem(name) as HTMLInputElement | HTMLSelectElement;
       const profile = loadWizardProfile();
-      if (profile) {
+      if (profile && profile.configured!==false) {
         field('build').value = profile.build;
         field('characterLevel').value = String(profile.characterLevel);
         field('wizardLevel').value = String(profile.wizardLevel);
-        field('targetLevel').value = String(Math.min(20, profile.characterLevel + 1));
+        field('targetLevel').value = String(
+          Math.min(20, profile.characterLevel + 1),
+        );
       }
       const update = () => {
         if (!form || !result) return;
@@ -63,8 +186,22 @@ const serializedProgression = JSON.stringify(progression).replace(/</g, '\\u003c
         const characterLevel = readNumber(field('characterLevel').value, 1, 20);
         const wizardLevel = readNumber(field('wizardLevel').value, 0, 20);
         const targetLevel = readNumber(field('targetLevel').value, 2, 20);
-        if (characterLevel == null || wizardLevel == null || targetLevel == null || wizardLevel > characterLevel) {
-          result.textContent = 'Enter whole levels within the shown limits. Wizard level cannot exceed character level.';
+        if (
+          characterLevel == null ||
+          wizardLevel == null ||
+          targetLevel == null ||
+          wizardLevel > characterLevel
+        ) {
+          result.textContent =
+            'Enter whole levels within the shown limits. Wizard level cannot exceed character level.';
+          return;
+        }
+        const expectedWizard = ['CORE', 'TANK', 'FIGHTER'].includes(build)
+          ? characterLevel - 1
+          : characterLevel;
+        if (wizardLevel !== expectedWizard) {
+          result.textContent =
+            'The selected route and levels do not match its supported pure-Wizard or one-level-dip timing. Correct the levels or consult the full build for a custom multiclass route.';
           return;
         }
         const gainedLevels = Math.max(0, targetLevel - characterLevel);
@@ -72,33 +209,83 @@ const serializedProgression = JSON.stringify(progression).replace(/</g, '\\u003c
         const row = rows.find((item) => item.wizardLevel === targetWizardLevel);
         result.replaceChildren();
         if (!row || targetLevel <= characterLevel) {
-          const message = document.createElement('p'); message.className = 'empty-state';
-          message.textContent = characterLevel === 20 ? 'You are at character level 20, the end of this roadmap.' : targetLevel <= characterLevel ? 'Choose a character level above the current level.' : 'No Wizard roadmap entry exists for that target.';
-          result.append(message); return;
+          const message = document.createElement('p');
+          message.className = 'empty-state';
+          message.textContent =
+            characterLevel === 20
+              ? 'You are at character level 20, the end of this roadmap.'
+              : targetLevel <= characterLevel
+                ? 'Choose a character level above the current level.'
+                : 'No Wizard roadmap entry exists for that target.';
+          result.append(message);
+          return;
         }
-        const eyebrow = document.createElement('p'); eyebrow.className = 'eyebrow'; eyebrow.textContent = `Character ${targetLevel} · Wizard ${targetWizardLevel}`;
-        const title = document.createElement('h2'); title.textContent = `Next: Wizard level ${targetWizardLevel}`;
-        const timing = document.createElement('p'); timing.className = 'level-up-timing'; timing.textContent = row.timing;
-        const core = document.createElement('section'); core.className = 'level-up-card';
-        const coreTitle = document.createElement('h3'); coreTitle.textContent = 'CORE milestone';
-        const coreText = document.createElement('p'); coreText.textContent = row.core; core.append(coreTitle, coreText);
+        const eyebrow = document.createElement('p');
+        eyebrow.className = 'eyebrow';
+        eyebrow.textContent = `Character ${targetLevel} · Wizard ${targetWizardLevel}`;
+        const title = document.createElement('h2');
+        title.textContent = `Next: Wizard level ${targetWizardLevel}`;
+        const timing = document.createElement('p');
+        timing.className = 'level-up-timing';
+        timing.textContent = row.timing;
+        const core = document.createElement('section');
+        core.className = 'level-up-card';
+        const coreTitle = document.createElement('h3');
+        coreTitle.textContent = 'Acquisitions / core spell plan';
+        const coreText = document.createElement('p');
+        coreText.textContent = row.core;
+        core.append(coreTitle, coreText);
         result.append(eyebrow, title, timing, core);
+        const gain = gains.find((g) => g.level === targetLevel);
+        if (gain) {
+          const p = document.createElement('p');
+          p.textContent =
+            'What changes: ' +
+            (['CORE', 'TANK', 'FIGHTER'].includes(build)
+              ? gain.dip
+              : gain.pure);
+          result.append(p);
+        }
+        const maxSpell = Math.min(9, Math.ceil(targetWizardLevel / 2));
+        const acquired = document.createElement('a');
+        acquired.href = '/wizard/spellbook/?level=' + maxSpell;
+        acquired.textContent =
+          'Plan acquisitions up to Wizard spell level ' + maxSpell + ' →';
+        result.append(acquired);
+        const assumption = document.createElement('p');
+        assumption.className = 'control-note';
+        assumption.textContent =
+          'Assumes all gained levels are Wizard levels. For multi-level jumps, also check intervening roadmap rows.';
+        result.append(assumption);
         const routeText = row.routes[build];
         if (routeText) {
-          const route = document.createElement('section'); route.className = `level-up-card build-accent build-accent--${build.toLowerCase()}`;
-          const routeTitle = document.createElement('h3'); routeTitle.textContent = `${build} route change`;
-          const routeCopy = document.createElement('p'); routeCopy.textContent = routeText; route.append(routeTitle, routeCopy); result.append(route);
+          const route = document.createElement('section');
+          route.className = `level-up-card build-accent build-accent--${build.toLowerCase()}`;
+          const routeTitle = document.createElement('h3');
+          routeTitle.textContent = `${build} route change`;
+          const routeCopy = document.createElement('p');
+          routeCopy.textContent = routeText;
+          route.append(routeTitle, routeCopy);
+          result.append(route);
         }
-        const links = document.createElement('div'); links.className = 'level-up-links';
-        const roadmap = document.createElement('a'); roadmap.href = '/chapters/10-compact-spell-progression-roadmap/'; roadmap.textContent = 'Full progression roadmap';
-        const audit = document.createElement('a'); audit.href = '/chapters/44-universal-level-up-audit/'; audit.textContent = 'Run the level-up audit';
+        const links = document.createElement('div');
+        links.className = 'level-up-links';
+        const roadmap = document.createElement('a');
+        roadmap.href = '/chapters/10-compact-spell-progression-roadmap/';
+        roadmap.textContent = 'Full progression roadmap';
+        const audit = document.createElement('a');
+        audit.href = '/chapters/44-universal-level-up-audit/';
+        audit.textContent = 'Run the level-up audit';
         const [chapter, slug] = buildChapters[build];
-        const buildLink = document.createElement('a'); buildLink.href = `/chapters/${slug}/`; buildLink.textContent = `Chapter ${chapter} · ${build} build guidance`;
-        links.append(roadmap, buildLink, audit); result.append(links);
+        const buildLink = document.createElement('a');
+        buildLink.href = `/chapters/${slug}/`;
+        buildLink.textContent = `Chapter ${chapter} · ${build} build guidance`;
+        links.append(roadmap, buildLink, audit);
+        result.append(links);
       };
       form?.addEventListener('input', update);
       form?.addEventListener('change', update);
-      form?.addEventListener('submit', event => event.preventDefault());
+      form?.addEventListener('submit', (event) => event.preventDefault());
       update();
     }
   </script>

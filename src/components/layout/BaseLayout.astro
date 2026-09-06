@@ -1,5 +1,6 @@
 ---
 import '@/styles/global.css';
+import PinPage from '@/components/PinPage.astro';
 
 interface Props {
   title?: string;
@@ -11,7 +12,8 @@ const {
   description = 'Ultimate min-max reference for Wizard builds, spells, tactics, gear, and campaign operations.',
   active = '',
 } = Astro.props;
-const pageTitle = title === 'Wizard Compendium' ? title : `${title} · Wizard Compendium`;
+const pageTitle =
+  title === 'Wizard Compendium' ? title : `${title} · Wizard Compendium`;
 const nav = [
   ['Play', '/play/', 'play'],
   ['Builds', '/builds/', 'builds'],
@@ -21,6 +23,7 @@ const nav = [
   ['Compendium', '/compendium/', 'compendium'],
 ];
 ---
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -28,10 +31,26 @@ const nav = [
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✦</text></svg>" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✦</text></svg>"
+    />
     <title>{pageTitle}</title>
   </head>
   <body>
+    <noscript>
+      <style is:inline>
+        form[data-notebook],
+        form[data-wizard-profile-form],
+        .page-utilities {
+          display: none !important;
+        }
+      </style>
+      <p class="site-shell">
+        Interactive planners and calculators need JavaScript. All chapters,
+        spell records and source references remain available.
+      </p>
+    </noscript>
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <div class="site-shell header-inner">
@@ -40,8 +59,16 @@ const nav = [
           <span>Wizard Compendium</span>
         </a>
         <nav class="global-nav" aria-label="Primary navigation">
-          {nav.map(([label, href, key]) => <a href={href} aria-current={active === key ? 'page' : undefined}>{label}</a>)}
-          <a class="nav-search" href="/search/">Search <span aria-hidden="true">⌘K</span></a>
+          {
+            nav.map(([label, href, key]) => (
+              <a href={href} aria-current={active === key ? 'page' : undefined}>
+                {label}
+              </a>
+            ))
+          }
+          <a class="nav-search" href="/search/"
+            >Search <span aria-hidden="true">⌘K</span></a
+          >
         </nav>
         <a class="profile-link" href="/wizard/">My Wizard</a>
         <details class="mobile-nav">
@@ -56,15 +83,21 @@ const nav = [
       </div>
     </header>
     <main class="site-main" id="main-content" tabindex="-1"><slot /></main>
+    <PinPage title={title} />
     <footer class="site-footer">
       <div class="site-shell footer-inner">
         <span>Ultimate Wizard Compendium · v1.14</span>
-        <span>Rules text remains governed by the active source entry and campaign.</span>
+        <span
+          >Rules text remains governed by the active source entry and campaign.</span
+        >
       </div>
     </footer>
     <script is:inline>
       document.addEventListener('keydown', (event) => {
-        if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'k') {
+        if (
+          (event.metaKey || event.ctrlKey) &&
+          event.key.toLowerCase() === 'k'
+        ) {
           event.preventDefault();
           window.location.href = '/search/';
         }

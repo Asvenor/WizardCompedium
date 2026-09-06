@@ -1,0 +1,82 @@
+---
+import BaseLayout from '@/components/layout/BaseLayout.astro';
+import NotebookSave from '@/components/NotebookSave.astro';
+const items = [
+  [
+    'Spellbook',
+    'Protected primary book, independent backup, and current prepared list.',
+  ],
+  [
+    'Focus',
+    'Backup focus or component pouch; verify hand and equipment state.',
+  ],
+  [
+    'Components',
+    'Accessible costly and consumed components for the selected mission.',
+  ],
+  ['Tools', 'Required tools and proficiency for the actual planned job.'],
+  ['Scrolls', 'Useful backup answers; verify casting and copying gates.'],
+  ['Armor', 'Correctly worn gear, active AC, and casting interface.'],
+  [
+    'Emergency supplies',
+    'Accessible healing, extraction plan, and an agreed retreat trigger.',
+  ],
+  [
+    'Travel',
+    'Light, rope, food, water and containers appropriate to the route.',
+  ],
+  [
+    'Information',
+    'Destination, threats, scout role and a safe return location.',
+  ],
+  [
+    'Mission gear',
+    'Raise specialist preparation only after the basic survival package is covered.',
+  ],
+];
+---
+
+<BaseLayout title="Adventure checklist"
+  ><header class="page-hero">
+    <div class="site-shell">
+      <p class="kicker">Ready before contact</p><h1>Adventure checklist</h1><p>
+        Confirm the loadout, survival floor and escape plan. Saved checks
+        persist; review them again before the next adventure.
+      </p><a href="/chapters/39-pre-adventure-loadout-matrix/"
+        >Full loadout matrix →</a
+      >
+    </div>
+  </header><section class="section section--first">
+    <div class="site-shell">
+      <form class="tool-panel" data-notebook>
+        <ul class="workflow-list">
+          {
+            items.map(([name, note], i) => (
+              <li>
+                <label>
+                  <>
+                    <input type="checkbox" name={`adventure-${i}`} />
+                    <span>
+                      <strong>{name}</strong> — {note}
+                    </span>
+                  </>
+                </label>
+              </li>
+            ))
+          }
+        </ul><label class="field-label"
+          ><span>Mission-specific checks / date reviewed</span><textarea
+            class="field"
+            name="adventure-notes"
+            rows="3"></textarea></label
+        ><NotebookSave />
+      </form><div class="form-actions">
+        <a href="/prepare/">Prepare mission spells</a><a href="/quick/security/"
+          >Spellbook emergency</a
+        ><a href="/quick/objectives/">State the objective</a><a
+          href="/quick/anti-wizard/">Check enemy counterplay</a
+        >
+      </div>
+    </div>
+  </section></BaseLayout
+>

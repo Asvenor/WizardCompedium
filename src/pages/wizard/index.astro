@@ -1,41 +1,216 @@
 ---
 import { getCollection } from 'astro:content';
+import WizardDashboard from '@/components/WizardDashboard.astro';
 import BaseLayout from '@/components/layout/BaseLayout.astro';
 
-const spells = (await getCollection('spells')).map((entry) => entry.data)
+const spells = (await getCollection('spells'))
+  .map((entry) => entry.data)
   .sort((a, b) => a.level - b.level || a.name.localeCompare(b.name));
 ---
-<BaseLayout title="My Wizard" description="A local-only Wizard profile for Compendium tools.">
-  <header class="page-hero"><div class="site-shell"><p class="kicker">Stored only in this browser</p><h1>My Wizard</h1><p>Save the small amount of character information used by the level-up and prepared-spell tools. No account or cloud storage is involved.</p></div></header>
+
+<BaseLayout
+  title="My Wizard"
+  description="A local-only Wizard profile for Compendium tools."
+>
+  <header class="page-hero">
+    <div class="site-shell">
+      <p class="kicker">Stored only in this browser</p><h1>My Wizard</h1><p>
+        Save the small amount of character information used by the level-up and
+        prepared-spell tools. No account or cloud storage is involved.
+      </p>
+    </div>
+  </header>
   <section class="section section--first">
+    <div class="site-shell"><WizardDashboard /></div>
+  </section>
+  <section class="section">
     <div class="site-shell wizard-profile-layout">
       <form class="tool-panel wizard-profile-form" data-wizard-profile-form>
-        <div class="tool-panel-head"><div><p class="eyebrow">Local profile</p><h2>Edit Wizard</h2></div><span class="local-badge">Local only</span></div>
-        <div class="form-grid">
-          <label class="field-label field-span-2"><span>Character name <small>optional</small></span><input class="field" name="name" autocomplete="off" /></label>
-          <label class="field-label"><span>Build</span><select class="field" name="build">{['CORE','CHRON','DIV','ILL','BLADE','TANK','FIGHTER'].map((build) => <option value={build}>{build}</option>)}</select></label>
-          <label class="field-label"><span>Character level</span><input class="field" name="characterLevel" type="number" min="1" max="20" value="2" required /></label>
-          <label class="field-label"><span>Wizard level</span><input class="field" name="wizardLevel" type="number" min="0" max="20" value="1" required /></label>
-          <label class="field-label"><span>Intelligence</span><input class="field" name="intelligence" type="number" min="1" max="30" /></label>
-          <label class="field-label"><span>Spell Save DC</span><input class="field" name="spellSaveDc" type="number" min="1" max="40" /></label>
-          <label class="field-label"><span>Spell Attack Bonus</span><input class="field" name="spellAttackBonus" type="number" min="-5" max="30" /></label>
-          <label class="field-label field-span-2"><span>Known / owned spells <small>optional · use Command/Ctrl to select several</small></span><select class="field multi-select" name="ownedSpells" multiple size="10">{spells.map((spell) => <option value={spell.id}>{spell.level === 0 ? 'Cantrip' : `L${spell.level}`} · {spell.name}</option>)}</select></label>
-          <label class="field-label field-span-2"><span>Prepared spells <small>optional</small></span><select class="field multi-select" name="preparedSpells" multiple size="10">{spells.map((spell) => <option value={spell.id}>{spell.level === 0 ? 'Cantrip' : `L${spell.level}`} · {spell.name}</option>)}</select></label>
+        <div class="tool-panel-head">
+          <div>
+            <p class="eyebrow">Local profile</p><h2>Edit Wizard</h2>
+          </div><span class="local-badge">Local only</span>
         </div>
-        <div class="form-actions"><button class="button button--primary" type="submit">Save Wizard</button><button class="button button--danger" type="button" data-reset-wizard>Reset Wizard</button><span class="save-status" aria-live="polite" data-profile-status></span></div>
+        <div class="form-grid">
+          <label class="field-label field-span-2"
+            ><span>Character name <small>optional</small></span><input
+              class="field"
+              name="name"
+              autocomplete="off"
+            /></label
+          >
+          <label class="field-label"
+            ><span>Build</span><select class="field" name="build"
+              >{
+                ['CORE', 'CHRON', 'DIV', 'ILL', 'BLADE', 'TANK', 'FIGHTER'].map(
+                  (build) => <option value={build}>{build}</option>,
+                )
+              }</select
+            ></label
+          >
+          <label class="field-label"
+            ><span>Character level</span><input
+              class="field"
+              name="characterLevel"
+              type="number"
+              min="1"
+              max="20"
+              value="2"
+              required
+            /></label
+          >
+          <label class="field-label"
+            ><span>Wizard level</span><input
+              class="field"
+              name="wizardLevel"
+              type="number"
+              min="0"
+              max="20"
+              value="1"
+              required
+            /></label
+          >
+          <label class="field-label"
+            ><span>Intelligence</span><input
+              class="field"
+              name="intelligence"
+              type="number"
+              min="1"
+              max="30"
+            /></label
+          >
+          <label class="field-label"
+            ><span>Spell Save DC</span><input
+              class="field"
+              name="spellSaveDc"
+              type="number"
+              min="1"
+              max="40"
+            /></label
+          >
+          <label class="field-label"
+            ><span>Spell Attack Bonus</span><input
+              class="field"
+              name="spellAttackBonus"
+              type="number"
+              min="-5"
+              max="30"
+            /></label
+          >
+          <label class="field-label"
+            ><span>Subclass <small>optional, active entry</small></span><input
+              class="field"
+              name="subclass"
+            /></label
+          >
+          {
+            [
+              ['dexterity', 'DEX', 1, 30],
+              ['constitution', 'CON', 1, 30],
+              ['wisdom', 'WIS', 1, 30],
+              ['armorClass', 'Armor Class', 1, 40],
+              ['constitutionSave', 'CON save bonus', -10, 30],
+              ['initiativeBonus', 'Initiative bonus', -10, 30],
+            ].map(([key, label, min, max]) => (
+              <label class="field-label">
+                <>
+                  <span>
+                    {label} <small>optional</small>
+                  </span>
+                  <input
+                    class="field"
+                    name={String(key)}
+                    type="number"
+                    min={min}
+                    max={max}
+                  />
+                </>
+              </label>
+            ))
+          }
+          <label class="check-control"
+            ><input type="checkbox" name="warCaster" /><span
+              >War Caster concentration advantage</span
+            ></label
+          >
+          <label class="field-label field-span-2"
+            ><span
+              >Known / owned spells <small
+                >optional · use Command/Ctrl to select several</small
+              ></span
+            ><select
+              class="field multi-select"
+              name="ownedSpells"
+              multiple
+              size="10"
+              >{
+                spells.map((spell) => (
+                  <option value={spell.id}>
+                    {spell.level === 0 ? 'Cantrip' : `L${spell.level}`} ·{' '}
+                    {spell.name}
+                  </option>
+                ))
+              }</select
+            ></label
+          >
+          <label class="field-label field-span-2"
+            ><span>Prepared spells <small>optional</small></span><select
+              class="field multi-select"
+              name="preparedSpells"
+              multiple
+              size="10"
+              >{
+                spells.map((spell) => (
+                  <option value={spell.id}>
+                    {spell.level === 0 ? 'Cantrip' : `L${spell.level}`} ·{' '}
+                    {spell.name}
+                  </option>
+                ))
+              }</select
+            ></label
+          >
+        </div>
+        <div class="form-actions">
+          <button class="button button--primary" type="submit"
+            >Save Wizard</button
+          ><button class="button button--danger" type="button" data-reset-wizard
+            >Reset Wizard</button
+          ><span class="save-status" aria-live="polite" data-profile-status
+          ></span>
+        </div>
       </form>
       <aside class="wizard-tool-links">
         <p class="eyebrow">Use this profile</p>
-        <a href="/wizard/level-up/"><strong>Level-Up Assistant</strong><span>See the next roadmap milestone →</span></a>
-        <a href="/prepare/"><strong>Prepared Spell Planner</strong><span>Build a mission package →</span></a>
-        <a href="/tools/"><strong>Calculators</strong><span>Use your saved Spell Save DC →</span></a>
+        <a href="/wizard/level-up/"
+          ><strong>Level-Up Assistant</strong><span
+            >See the next roadmap milestone →</span
+          ></a
+        >
+        <a href="/prepare/"
+          ><strong>Prepared Spell Planner</strong><span
+            >Build a mission package →</span
+          ></a
+        >
+        <a href="/tools/"
+          ><strong>Calculators</strong><span
+            >Use your saved Spell Save DC →</span
+          ></a
+        >
         <p>The rest of the Compendium works normally when no profile exists.</p>
       </aside>
     </div>
   </section>
   <script>
-    import { defaultWizardProfile, loadWizardProfile, resetWizardProfile, saveWizardProfile, type WizardProfile } from '@/features/my-wizard/profile';
-    const form = document.querySelector<HTMLFormElement>('[data-wizard-profile-form]');
+    import {
+      defaultWizardProfile,
+      loadWizardProfile,
+      resetWizardProfile,
+      saveWizardProfile,
+      type WizardProfile,
+    } from '@/features/my-wizard/profile';
+    const form = document.querySelector<HTMLFormElement>(
+      '[data-wizard-profile-form]',
+    );
     const status = document.querySelector<HTMLElement>('[data-profile-status]');
     if (form) {
       const numberOrNull = (data: FormData, key: string) => {
@@ -43,23 +218,71 @@ const spells = (await getCollection('spells')).map((entry) => entry.data)
         return value === '' ? null : Number(value);
       };
       const setForm = (profile: WizardProfile) => {
-        (form.elements.namedItem('name') as HTMLInputElement).value = profile.name;
-        (form.elements.namedItem('build') as HTMLSelectElement).value = profile.build;
-        (form.elements.namedItem('characterLevel') as HTMLInputElement).value = String(profile.characterLevel);
-        (form.elements.namedItem('wizardLevel') as HTMLInputElement).value = String(profile.wizardLevel);
-        (form.elements.namedItem('intelligence') as HTMLInputElement).value = profile.intelligence == null ? '' : String(profile.intelligence);
-        (form.elements.namedItem('spellSaveDc') as HTMLInputElement).value = profile.spellSaveDc == null ? '' : String(profile.spellSaveDc);
-        (form.elements.namedItem('spellAttackBonus') as HTMLInputElement).value = profile.spellAttackBonus == null ? '' : String(profile.spellAttackBonus);
+        (form.elements.namedItem('name') as HTMLInputElement).value =
+          profile.name;
+        (form.elements.namedItem('build') as HTMLSelectElement).value =
+          profile.build;
+        (form.elements.namedItem('characterLevel') as HTMLInputElement).value =
+          String(profile.characterLevel);
+        (form.elements.namedItem('wizardLevel') as HTMLInputElement).value =
+          String(profile.wizardLevel);
+        (form.elements.namedItem('intelligence') as HTMLInputElement).value =
+          profile.intelligence == null ? '' : String(profile.intelligence);
+        (form.elements.namedItem('spellSaveDc') as HTMLInputElement).value =
+          profile.spellSaveDc == null ? '' : String(profile.spellSaveDc);
+        (
+          form.elements.namedItem('spellAttackBonus') as HTMLInputElement
+        ).value =
+          profile.spellAttackBonus == null
+            ? ''
+            : String(profile.spellAttackBonus);
         const owned = new Set(profile.ownedSpells);
         const prepared = new Set(profile.preparedSpells);
-        [...(form.elements.namedItem('ownedSpells') as HTMLSelectElement).options].forEach((option) => { option.selected = owned.has(option.value); });
-        [...(form.elements.namedItem('preparedSpells') as HTMLSelectElement).options].forEach((option) => { option.selected = prepared.has(option.value); });
+        [
+          ...(form.elements.namedItem('ownedSpells') as HTMLSelectElement)
+            .options,
+        ].forEach((option) => {
+          option.selected = owned.has(option.value);
+        });
+        [
+          ...(form.elements.namedItem('preparedSpells') as HTMLSelectElement)
+            .options,
+        ].forEach((option) => {
+          option.selected = prepared.has(option.value);
+        });
       };
+      const setExtras = (profile: WizardProfile) => {
+        for (const key of [
+          'subclass',
+          'dexterity',
+          'constitution',
+          'wisdom',
+          'armorClass',
+          'constitutionSave',
+          'initiativeBonus',
+        ] as const)
+          (form.elements.namedItem(key) as HTMLInputElement).value = String(
+            profile[key] ?? '',
+          );
+        (form.elements.namedItem('warCaster') as HTMLInputElement).checked =
+          profile.warCaster ?? false;
+      };
+      setExtras(loadWizardProfile() ?? defaultWizardProfile());
       setForm(loadWizardProfile() ?? defaultWizardProfile());
       form.addEventListener('submit', (event) => {
         event.preventDefault();
         const data = new FormData(form);
         const profile: WizardProfile = {
+          ...loadWizardProfile(),
+          configured:true,
+          subclass: String(data.get('subclass') ?? ''),
+          dexterity: numberOrNull(data, 'dexterity'),
+          constitution: numberOrNull(data, 'constitution'),
+          wisdom: numberOrNull(data, 'wisdom'),
+          armorClass: numberOrNull(data, 'armorClass'),
+          constitutionSave: numberOrNull(data, 'constitutionSave'),
+          initiativeBonus: numberOrNull(data, 'initiativeBonus'),
+          warCaster: data.has('warCaster'),
           name: String(data.get('name') ?? '').trim(),
           build: String(data.get('build') ?? 'CORE') as WizardProfile['build'],
           characterLevel: Number(data.get('characterLevel') ?? 1),
@@ -70,19 +293,39 @@ const spells = (await getCollection('spells')).map((entry) => entry.data)
           ownedSpells: data.getAll('ownedSpells').map(String),
           preparedSpells: data.getAll('preparedSpells').map(String),
         };
-        if (profile.wizardLevel > profile.characterLevel || profile.characterLevel < 1 || profile.wizardLevel < 0) {
-          if (status) status.textContent = 'Wizard level must be between 0 and your character level.';
+        if (
+          profile.wizardLevel > profile.characterLevel ||
+          profile.characterLevel < 1 ||
+          profile.wizardLevel < 0
+        ) {
+          if (status)
+            status.textContent =
+              'Wizard level must be between 0 and your character level.';
           return;
         }
         const saved = saveWizardProfile(profile);
-        if (status) status.textContent = saved ? 'Saved in this browser.' : 'Your browser could not save the profile. Check its storage settings and try again.';
+        if (status)
+          status.textContent = saved
+            ? 'Saved in this browser.'
+            : 'Your browser could not save the profile. Check its storage settings and try again.';
       });
-      form.querySelector('[data-reset-wizard]')?.addEventListener('click', () => {
-        if (!window.confirm('Reset the Wizard profile stored in this browser?')) return;
-        if (!resetWizardProfile()) { if (status) status.textContent = 'Your browser could not reset the profile. Please try again.'; return; }
-        setForm(defaultWizardProfile());
-        if (status) status.textContent = 'Local profile reset.';
-      });
+      form
+        .querySelector('[data-reset-wizard]')
+        ?.addEventListener('click', () => {
+          if (
+            !window.confirm('Reset the Wizard profile stored in this browser?')
+          )
+            return;
+          if (!resetWizardProfile()) {
+            if (status)
+              status.textContent =
+                'Your browser could not reset the profile. Please try again.';
+            return;
+          }
+          setForm(defaultWizardProfile());
+          setExtras(defaultWizardProfile());
+          if (status) status.textContent = 'Local profile reset.';
+        });
     }
   </script>
 </BaseLayout>

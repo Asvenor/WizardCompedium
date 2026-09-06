@@ -1,0 +1,71 @@
+---
+import BaseLayout from '@/components/layout/BaseLayout.astro';
+---
+
+<BaseLayout title="My quick reference"
+  ><header class="page-hero">
+    <div class="site-shell">
+      <p class="kicker">Your shortcuts · local only</p><h1>
+        My quick reference
+      </h1><p>
+        Pin spells, chapters, builds or tools using “Pin this page” at the
+        bottom of any page.
+      </p>
+    </div>
+  </header><section class="section section--first">
+    <div class="site-shell">
+      <ul class="quick-links" data-pin-list></ul><p data-pin-empty>
+        No pinned pages yet. Start with <a href="/play/">Play mode</a>, <a
+          href="/spells/">spells</a
+        > or the <a href="/compendium/">Compendium</a>.
+      </p><details class="tool-panel">
+        <summary>Local data controls</summary><p>
+          Reset removes the profile, prepared and owned lists, notebook, pins,
+          and practice history from this browser. It does not affect Compendium
+          content.
+        </p><button class="button button--danger" type="button" data-reset-all
+          >Reset all local Wizard data</button
+        ><p role="status" data-reset-status></p>
+      </details><p class="control-note">
+        Browser storage is not a backup. Clearing site data removes local
+        planning and pins.
+      </p>
+    </div>
+  </section><script>
+    import { resetWizardProfile } from '@/features/my-wizard/profile';
+    import { resetSession } from '@/features/my-wizard/session';
+    import { loadSession } from '@/features/my-wizard/session';
+    const list = document.querySelector('[data-pin-list]');
+    const pins = loadSession().pins;
+    for (const pin of pins) {
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.href = pin.url;
+      a.textContent = pin.title;
+      li.append(a);
+      list?.append(li);
+    }
+    const empty = document.querySelector<HTMLElement>('[data-pin-empty]');
+    if (empty) empty.hidden = pins.length > 0;
+    document
+      .querySelector('[data-reset-all]')
+      ?.addEventListener('click', () => {
+        if (
+          !confirm(
+            'Remove all Wizard profile, notebook, pins and learning history in this browser?',
+          )
+        )
+          return;
+        const profileOk = resetWizardProfile();
+        const sessionOk = resetSession();
+        document.querySelector('[data-reset-status]')!.textContent =
+          profileOk && sessionOk
+            ? 'All local Wizard data reset.'
+            : 'Storage could not be fully reset. Please check browser site-data settings.';
+        if (profileOk && sessionOk) {
+          list?.replaceChildren();
+          if (empty) empty.hidden = false;
+        }
+      });
+  </script></BaseLayout
+>

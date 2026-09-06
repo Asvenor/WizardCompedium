@@ -1,0 +1,112 @@
+---
+import BaseLayout from '@/components/layout/BaseLayout.astro';
+import { getBuilds } from '@/lib/builds';
+const builds = await getBuilds();
+---
+
+<BaseLayout title="Compare builds" active="builds"
+  ><header class="page-hero">
+    <div class="site-shell">
+      <p class="kicker">Conditional choices</p><h1>Compare build routes</h1><p>
+        Choose two to four routes. No numerical difficulty or power rating is
+        invented; unstructured mechanics remain in the source builds.
+      </p>
+    </div>
+  </header><section class="section section--first">
+    <div class="site-shell">
+      <div class="form-actions">
+        {
+          builds.map((b, i) => (
+            <label class="check-control">
+              <>
+                <input
+                  type="checkbox"
+                  value={b.id}
+                  data-build-compare
+                  checked={i < 2}
+                />
+                <span>{b.id}</span>
+              </>
+            </label>
+          ))
+        }
+      </div><p role="status" data-build-compare-status></p><div
+        class="reference-card-grid"
+      >
+        {
+          builds.map((b) => (
+            <article class="tool-panel" data-build-result={b.id}>
+              <>
+                <h2>{b.name}</h2>
+                <dl class="workflow-dl">
+                  <>
+                    <dt>Best fit / ceiling context</dt>
+                    <dd>{b.fit}</dd>
+                    <dt>Spell emphasis / reaction priorities</dt>
+                    <dd>{b.emphasis}</dd>
+                    <dt>Main cost</dt>
+                    <dd>{b.caution}</dd>
+                    <dt>Timing lane</dt>
+                    <dd>{b.timing}</dd>
+                  </>
+                </dl>
+                <p>
+                  <a href={b.href}>
+                    Armor, CON-save start, subclass, feats and level progression
+                    →
+                  </a>
+                </p>
+              </>
+            </article>
+          ))
+        }
+      </div><p>
+        For Spell Mastery, Signature Spells and exact milestones, use <a
+          href="/chapters/04-build-selection-and-priority-matrix/"
+          >the timing matrix</a
+        >. Campaign constraints can change the choice; <a href="/wizard/gear/"
+          >record assumptions</a
+        > without changing the source rankings.
+      </p>
+    </div>
+  </section><script>
+    const checks = [
+      ...document.querySelectorAll<HTMLInputElement>('[data-build-compare]'),
+    ];
+    const params = new URLSearchParams(location.search).get('builds');
+    if (params)
+      checks.forEach((c) => (c.checked = params.split(',').includes(c.value)));
+    function update() {
+      const selected = checks.filter((c) => c.checked);
+      document.querySelector('[data-build-compare-status]')!.textContent =
+        selected.length < 2
+          ? 'Choose at least two routes.'
+          : selected.length > 4
+            ? 'Choose at most four routes for a readable comparison.'
+            : `${selected.length} routes compared.`;
+      document
+        .querySelectorAll<HTMLElement>('[data-build-result]')
+        .forEach(
+          (card) =>
+            (card.hidden = !selected.some(
+              (c) => c.value === card.dataset.buildResult,
+            )),
+        );
+      const url = new URL(location.href);
+      url.searchParams.set('builds', selected.map((c) => c.value).join(','));
+      history.replaceState({}, '', url);
+    }
+    checks.forEach((c) =>
+      c.addEventListener('change', () => {
+        if (checks.filter((c) => c.checked).length > 4) {
+          c.checked = false;
+          document.querySelector('[data-build-compare-status]')!.textContent =
+            'Maximum four routes. Uncheck one to compare another.';
+          return;
+        }
+        update();
+      }),
+    );
+    update();
+  </script></BaseLayout
+>

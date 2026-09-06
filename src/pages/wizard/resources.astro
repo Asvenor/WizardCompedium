@@ -1,0 +1,167 @@
+---
+import BaseLayout from '@/components/layout/BaseLayout.astro';
+import NotebookSave from '@/components/NotebookSave.astro';
+---
+
+<BaseLayout title="Slots & first turn" active="tools"
+  ><header class="page-hero">
+    <div class="site-shell">
+      <p class="kicker">Manual session planner</p><h1>Slots & first turn</h1><p>
+        Protect an emergency defense, an exit, and the next hard-fight package.
+        Re-price the plan after every fight or meaningful reveal.
+      </p><a href="/chapters/60-spell-slot-budget-rules/"
+        >Full slot budget rules →</a
+      >
+    </div>
+  </header>
+  <section class="section section--first">
+    <div class="site-shell workflow-stack">
+      <form class="tool-panel" data-notebook>
+        <h2>Remaining spell slots</h2><p>
+          Enter current counts—not maximum slots. Leave unknown levels blank.
+          Reserves are a subset of remaining slots, not additional resources.
+        </p><div class="reference-card-grid">
+          {
+            Array.from({ length: 9 }, (_, i) => (
+              <fieldset>
+                <>
+                  <legend>Level {i + 1}</legend>
+                  <label class="field-label">
+                    <>
+                      <span>Remaining level {i + 1} slots</span>
+                      <input
+                        class="field"
+                        type="number"
+                        min="0"
+                        max="20"
+                        name={`slot-${i + 1}`}
+                        data-slot-remaining
+                      />
+                    </>
+                  </label>
+                  <label class="field-label">
+                    <>
+                      <span>Reserved level {i + 1} slots</span>
+                      <input
+                        class="field"
+                        type="number"
+                        min="0"
+                        max="20"
+                        name={`reserve-${i + 1}`}
+                        data-slot-reserve
+                      />
+                    </>
+                  </label>
+                </>
+              </fieldset>
+            ))
+          }
+        </div><p role="status" data-reserve-summary></p>
+        <div class="form-grid">
+          <label class="field-label"
+            ><span>Expected remaining encounters <small>estimate</small></span
+            ><input
+              class="field"
+              type="number"
+              min="0"
+              max="50"
+              name="encounters"
+            /></label
+          ><label class="field-label"
+            ><span>Emergency defense / reaction</span><input
+              class="field"
+              name="reserve-defense"
+            /></label
+          ><label class="field-label"
+            ><span>Exit / rescue reserve</span><input
+              class="field"
+              name="reserve-exit"
+            /></label
+          ><label class="field-label"
+            ><span>Next hard fight / strategic reserve</span><input
+              class="field"
+              name="reserve-strategic"
+            /></label
+          >
+        </div>
+        <label class="field-label"
+          ><span
+            >Arcane Recovery plan <small
+              >manual; check active entry, availability and rest opportunity</small
+            ></span
+          ><textarea class="field" name="recovery" rows="3"></textarea></label
+        ><p class="control-note">
+          Recovery is not added automatically. Restore counts manually after the
+          legal recovery actually happens. Reserves do not calculate a “best”
+          spend.
+        </p><NotebookSave />
+      </form>
+      <form class="tool-panel" data-notebook>
+        <h2>Initiative & first turn</h2><p data-initiative-profile>
+          Record your verified initiative bonus in My Wizard. Feature reminders
+          do not stack bonuses automatically.
+        </p><div class="form-actions">
+          {
+            ['Alert', 'Temporal Awareness', 'Gift of Alacrity'].map((name) => (
+              <label class="check-control">
+                <>
+                  <input type="checkbox" name={`initiative-${name}`} />
+                  <span>{name} — verify active entry / availability</span>
+                </>
+              </label>
+            ))
+          }
+        </div><label class="field-label"
+          ><span
+            >Before initiative: objective, cover, opening job, reaction reserve,
+            fallback</span
+          ><textarea class="field" rows="4" name="first-turn"></textarea></label
+        ><p>
+          <a
+            href="/chapters/24-countermagic-illusions-familiars-and-fair-information/#one-minute-pre-combat-check"
+            >One-minute pre-combat check →</a
+          >
+        </p><NotebookSave />
+      </form>
+    </div>
+  </section>
+  <script>
+    import '@/features/my-wizard/notebook';
+    import { loadWizardProfile } from '@/features/my-wizard/profile';
+    const profile = loadWizardProfile();
+    const note = document.querySelector('[data-initiative-profile]');
+    if (note && profile?.initiativeBonus != null)
+      note.textContent =
+        'Recorded initiative bonus: ' +
+        (profile.initiativeBonus >= 0 ? '+' : '') +
+        profile.initiativeBonus +
+        '. Confirm whether this already includes your feature bonuses; nothing is added again.';
+    const inputs = [
+      ...document.querySelectorAll<HTMLInputElement>('[data-slot-remaining]'),
+    ];
+    const reserves = [
+      ...document.querySelectorAll<HTMLInputElement>('[data-slot-reserve]'),
+    ];
+    const summary = document.querySelector('[data-reserve-summary]')!;
+    function update() {
+      const invalid = inputs.flatMap((input, i) =>
+        reserves[i].value !== '' &&
+        (input.value === '' || Number(reserves[i].value) > Number(input.value))
+          ? [i + 1]
+          : [],
+      );
+      const recorded = inputs.filter((i) => i.value !== '');
+      summary.textContent = invalid.length
+        ? 'Review reserves at level ' +
+          invalid.join(', ') +
+          ': a reserve exceeds remaining slots or the count is unknown.'
+        : recorded.length
+          ? `${recorded.reduce((sum, i) => sum + Number(i.value), 0)} recorded slots remaining. Unentered levels stay unknown.`
+          : 'No slot counts entered yet.';
+    }
+    [...inputs, ...reserves].forEach((i) =>
+      i.addEventListener('input', update),
+    );
+    update();
+  </script>
+</BaseLayout>

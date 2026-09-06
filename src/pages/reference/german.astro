@@ -1,0 +1,91 @@
+---
+import BaseLayout from '@/components/layout/BaseLayout.astro';
+import { getGermanTerms } from '@/lib/german';
+const terms = await getGermanTerms();
+---
+
+<BaseLayout title="English / German lookup"
+  ><header class="page-hero">
+    <div class="site-shell">
+      <p class="kicker">English ↔ Deutsch</p><h1>Table terminology</h1><p>
+        Search either language, units, or a category. This lookup preserves the
+        wording and practical conversions in Chapter 43.
+      </p><a href="/chapters/43-german-table-conversion-cheat-sheet/"
+        >Full German conversion reference →</a
+      >
+    </div>
+  </header><section class="section section--first">
+    <div class="site-shell">
+      <label class="field-label"
+        ><span>English or German term</span><input
+          class="field"
+          type="search"
+          data-german-search
+        /></label
+      ><label class="field-label"
+        ><span>Category</span><select class="field" data-german-category
+          ><option value="">All categories</option>{
+            [...new Set(terms.map((t) => t.category))].map((category) => (
+              <option>{category}</option>
+            ))
+          }</select
+        ></label
+      ><p role="status" data-german-count></p><div class="reference-card-grid">
+        {
+          terms.map((term) => (
+            <article
+              class="tool-panel reference-card"
+              id={term.id}
+              data-german-term
+              data-search={[term.english, term.german, term.note].join(' ')}
+              data-category={term.category}
+            >
+              <>
+                <p class="eyebrow">{term.category}</p>
+                <h2>{term.english}</h2>
+                <p lang="de">
+                  <strong>{term.german}</strong>
+                </p>
+                <p>{term.note}</p>
+              </>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section><script>
+    import { normalizeSearch } from '@/lib/spells';
+    const input = document.querySelector<HTMLInputElement>(
+      '[data-german-search]',
+    )!;
+    const category = document.querySelector<HTMLSelectElement>(
+      '[data-german-category]',
+    )!;
+    const rows = [
+      ...document.querySelectorAll<HTMLElement>('[data-german-term]'),
+    ];
+    const params = new URLSearchParams(location.search);
+    input.value = params.get('q') ?? '';
+    category.value = params.get('category') ?? '';
+    function update() {
+      let n = 0;
+      for (const row of rows) {
+        row.hidden =
+          !normalizeSearch(row.dataset.search!).includes(
+            normalizeSearch(input.value),
+          ) ||
+          (!!category.value && row.dataset.category !== category.value);
+        if (!row.hidden) n++;
+      }
+      document.querySelector('[data-german-count]')!.textContent = `${n} terms`;
+      const url = new URL(location.href);
+      url.search = '';
+      if (input.value) url.searchParams.set('q', input.value);
+      if (category.value) url.searchParams.set('category', category.value);
+      history.replaceState({}, '', url);
+    }
+    input.addEventListener('input', update);
+    category.addEventListener('change', update);
+    update();
+  </script></BaseLayout
+>

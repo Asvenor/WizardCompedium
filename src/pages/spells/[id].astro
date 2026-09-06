@@ -4,56 +4,283 @@ import BaseLayout from '@/components/layout/BaseLayout.astro';
 import TierBadge from '@/components/TierBadge.astro';
 import BuildBadge from '@/components/BuildBadge.astro';
 import chapters from '@/data/chapters.json';
+import { getAcquisitionLanes } from '@/lib/acquisition';
+import ConcentrationControl from '@/components/ConcentrationControl.astro';
+import { getSpellRelationships } from '@/lib/spell-relationships';
 
 export async function getStaticPaths() {
   const spells = await getCollection('spells');
-  return spells.map((entry) => ({ params: { id: entry.data.id }, props: { spell: entry.data } }));
+  return spells.map((entry) => ({
+    params: { id: entry.data.id },
+    props: { spell: entry.data },
+  }));
 }
 const { spell } = Astro.props;
+const acquisition = (await getAcquisitionLanes())[spell.id];
+const relationships = (await getSpellRelationships()).filter((g) =>
+  g.ids.includes(spell.id),
+);
+const relatedIds = [
+  ...new Set(
+    relationships.flatMap((g) => g.ids).filter((id) => id !== spell.id),
+  ),
+].slice(0, 8);
+const allSpells = (await getCollection('spells')).map((s) => s.data);
 const levelLabel = spell.level === 0 ? 'Cantrip' : `Level ${spell.level}`;
-const buildBadgeMap: Record<string, 'core' | 'chron' | 'div' | 'ill' | 'blade' | 'tank' | 'fighter'> = { bladesinger: 'blade' };
+const buildBadgeMap: Record<
+  string,
+  'core' | 'chron' | 'div' | 'ill' | 'blade' | 'tank' | 'fighter'
+> = { bladesinger: 'blade' };
 const stats = [
-  { label: 'Level / school', value: `${levelLabel}${spell.school ? ` · ${spell.school}` : ''}` },
+  {
+    label: 'Level / school',
+    value: `${levelLabel}${spell.school ? ` · ${spell.school}` : ''}`,
+  },
   { label: 'Casting time', value: spell.rules.castingTime },
   { label: 'Range', value: spell.rules.range },
   { label: 'Area', value: spell.rules.area },
   { label: 'Duration', value: spell.rules.duration },
-  { label: 'Save / attack', value: spell.rules.attackRoll ? 'Spell attack' : spell.rules.save.ability ? `${spell.rules.save.ability} save` : spell.rules.save.type },
+  {
+    label: 'Save / attack',
+    value: spell.rules.attackRoll
+      ? 'Spell attack'
+      : spell.rules.save.ability
+        ? `${spell.rules.save.ability} save`
+        : spell.rules.save.type,
+  },
 ].filter((item) => item.value);
 ---
-<BaseLayout title={spell.name} description={spell.compendium.summary} active="spells">
+
+<BaseLayout
+  title={spell.name}
+  description={spell.compendium.summary}
+  active="spells"
+>
   <div class="site-shell spell-page-layout">
     <article class="article" data-pagefind-body>
-      <div class="breadcrumbs"><a href="/">Home</a><span>/</span><a href="/spells/">Spells</a><span>/</span><span>{spell.name}</span></div>
+      <div class="breadcrumbs">
+        <a href="/">Home</a><span>/</span><a href="/spells/">Spells</a><span
+          >/</span
+        ><span>{spell.name}</span>
+      </div>
       <header class="article-header">
         <div class="page-meta">
           <span class="meta-pill">{levelLabel}</span>
           {spell.compendium.tier && <TierBadge tier={spell.compendium.tier} />}
-          <span class={`badge badge--${spell.compendium.acquisitionRole}`}>{spell.compendium.acquisitionRole}</span>
-          {spell.rules.concentration && <span class="badge badge--concentration">Concentration</span>}
-          {spell.rules.ritual && <span class="badge badge--ritual">Ritual</span>}
+          <span class={`badge badge--${spell.compendium.acquisitionRole}`}
+            >{spell.compendium.acquisitionRole}</span
+          >
+          {
+            spell.rules.concentration && (
+              <span class="badge badge--concentration">Concentration</span>
+            )
+          }
+          {
+            spell.rules.ritual && (
+              <span class="badge badge--ritual">Ritual</span>
+            )
+          }
         </div>
         <h1 data-pagefind-meta="title">{spell.name}</h1>
         <p>{spell.compendium.summary}</p>
-        <div class="hero-actions"><a class="button button--primary" href={`/spells/compare/?spells=${spell.id}`}>Compare this spell</a><a class="button" href={`/prepare/?add=${spell.id}`}>Add to a mission list</a></div>
+        <div class="hero-actions">
+          <a
+            class="button button--primary"
+            href={`/spells/compare/?spells=${spell.id}`}>Compare this spell</a
+          ><a class="button" href={`/prepare/?add=${spell.id}`}
+            >Add to a mission list</a
+          >
+        </div>
       </header>
-      {stats.length > 0 && <div class="spell-detail-grid">{stats.map((item) => <div class="spell-stat"><small>{item.label}</small><strong>{item.value}</strong></div>)}</div>}
+      {
+        stats.length > 0 && (
+          <div class="spell-detail-grid">
+            {stats.map((item) => (
+              <div class="spell-stat">
+                <small>{item.label}</small>
+                <strong>{item.value}</strong>
+              </div>
+            ))}
+          </div>
+        )
+      }
       <div class="prose">
-        <h2>Compendium role</h2>
-        <p><strong>Acquisition:</strong> {spell.compendium.acquisitionRole}. {spell.compendium.preparedBaseline ? 'Marked in the prepared / known baseline.' : 'Not marked in the supplied prepared / known baseline.'}</p>
-        {spell.compendium.roles.length > 0 && <p><strong>Roles:</strong> {spell.compendium.roles.join(', ')}.</p>}
-        {spell.compendium.buildRelevance.length > 0 && <p><strong>Build relevance:</strong> {spell.compendium.buildRelevance.map((build) => <BuildBadge build={buildBadgeMap[build] ?? 'core'} label={build} />)}</p>}
-        {spell.rules.components.description && <>
-          <h2>Material component</h2>
-          <p>{spell.rules.components.description}</p>
-          {spell.rules.components.items ? <ul>{spell.rules.components.items.map(item => <li>{item.description}: {item.gpCost?.toLocaleString()}+ gp · {item.consumed ? 'Consumed' : 'Retained'}.</li>)}</ul> : <p><strong>Consumed:</strong> {spell.rules.components.consumed === true ? 'Yes' : spell.rules.components.consumed === false ? 'No' : 'Verify the active spell entry'}{spell.rules.components.gpCost ? ` · Recorded cost: ${spell.rules.components.gpCost.toLocaleString()}+ gp` : ''}.</p>}
-          {spell.rules.components.note && <p>{spell.rules.components.note}</p>}
-          <p><a href="/tools/#component-cost">Plan component costs →</a></p>
-        </>}
+        <h2>Acquisition & preparation</h2>{
+          acquisition && (
+            <p>
+              <strong>{acquisition.label}</strong> · Chapter 11 spellbook
+              strategy.
+            </p>
+          )
+        }
+        <p>
+          <a href={`/wizard/spellbook/?q=${encodeURIComponent(spell.name)}`}
+            >Mark owned, wanted, copy target or skip →</a
+          >
+        </p>
+        <p>
+          <strong>Acquisition:</strong>
+          {spell.compendium.acquisitionRole}. {
+            spell.compendium.preparedBaseline
+              ? 'Marked in the prepared / known baseline.'
+              : 'Not marked in the supplied prepared / known baseline.'
+          }
+        </p>
+        {
+          spell.compendium.roles.length > 0 && (
+            <p>
+              <strong>Roles:</strong> {spell.compendium.roles.join(', ')}.
+            </p>
+          )
+        }
+        {
+          spell.compendium.buildRelevance.length > 0 && (
+            <p>
+              <strong>Build relevance:</strong>{' '}
+              {spell.compendium.buildRelevance.map((build) => (
+                <BuildBadge
+                  build={buildBadgeMap[build] ?? 'core'}
+                  label={build}
+                />
+              ))}
+            </p>
+          )
+        }
+        {
+          spell.rules.components.description && (
+            <>
+              <h2>Material component</h2>
+              <p>{spell.rules.components.description}</p>
+              {spell.rules.components.items ? (
+                <ul>
+                  {spell.rules.components.items.map((item) => (
+                    <li>
+                      {item.description}:{' '}
+                      {item.gpCost == null
+                        ? 'Cost not recorded'
+                        : `${item.gpCost.toLocaleString()}+ gp`}{' '}
+                      ·{' '}
+                      {item.consumed === true
+                        ? 'Consumed'
+                        : item.consumed === false
+                          ? 'Retained'
+                          : 'Consumption not recorded'}
+                      .
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p>
+                  <strong>Consumed:</strong>{' '}
+                  {spell.rules.components.consumed === true
+                    ? 'Yes'
+                    : spell.rules.components.consumed === false
+                      ? 'No'
+                      : 'Verify the active spell entry'}
+                  {spell.rules.components.gpCost
+                    ? ` · Recorded cost: ${spell.rules.components.gpCost.toLocaleString()}+ gp`
+                    : ''}
+                  .
+                </p>
+              )}
+              {spell.rules.components.note && (
+                <p>{spell.rules.components.note}</p>
+              )}
+              <p>
+                <a href="/tools/#component-cost">Plan component costs →</a>
+              </p>
+            </>
+          )
+        }
+        {
+          spell.rules.concentration && (
+            <ConcentrationControl spellId={spell.id} />
+          )
+        }
+        {
+          relatedIds.length > 0 && (
+            <>
+              <>
+                <h2>Related spells</h2>
+                <p>
+                  Source-linked alternatives and complements—not automatic
+                  upgrades.
+                </p>
+                <div class="chapter-chips">
+                  {relatedIds.map((id) => (
+                    <a class="chapter-chip" href={`/spells/${id}/`}>
+                      {allSpells.find((s) => s.id === id)?.name}
+                    </a>
+                  ))}
+                </div>
+              </>
+              {relationships.map((group) => (
+                <details>
+                  <summary>
+                    {group.kind}: {group.label}
+                  </summary>
+                  <p>{group.note}</p>
+                  <a
+                    href={`/spells/compare/?spells=${group.ids.slice(0, 4).join(',')}`}
+                  >
+                    Compare this group
+                  </a>
+                </details>
+              ))}
+              <p>
+                <a href="/quick/replacements/">
+                  Replacement ladders and overlap →
+                </a>
+              </p>
+            </>
+          )
+        }
         <h2>Source status</h2>
-        <p><strong>{spell.source.category}</strong>{spell.source.book && <> · {spell.source.book}</>} · {spell.source.rulesVersion}.</p>
-        {spell.compendium.warnings.length > 0 && <><h2>Warnings</h2><ul class="warning-list">{spell.compendium.warnings.map((warning) => <li>{warning}</li>)}</ul></>}
-        {spell.compendium.relatedChapters.length > 0 && <><h2>Related Compendium chapters</h2><div class="chapter-chips">{spell.compendium.relatedChapters.map((number) => { const chapter = chapters.find((item) => item.number === number); return chapter && <a class="chapter-chip" href={`/chapters/${chapter.slug}/`}>Ch. {number} · {chapter.title}</a>; })}</div></>}
+        <p>
+          <strong>{spell.source.category}</strong>{
+            spell.source.book && <> · {spell.source.book}</>
+          } · {spell.source.rulesVersion}.
+        </p>
+        {
+          spell.compendium.warnings.length > 0 && (
+            <>
+              <>
+                <h2>Warnings</h2>
+                <ul class="warning-list">
+                  {spell.compendium.warnings.map((warning) => (
+                    <li>{warning}</li>
+                  ))}
+                </ul>
+              </>
+            </>
+          )
+        }
+        {
+          spell.compendium.relatedChapters.length > 0 && (
+            <>
+              <>
+                <h2>Related Compendium chapters</h2>
+                <div class="chapter-chips">
+                  {spell.compendium.relatedChapters.map((number) => {
+                    const chapter = chapters.find(
+                      (item) => item.number === number,
+                    );
+                    return (
+                      chapter && (
+                        <a
+                          class="chapter-chip"
+                          href={`/chapters/${chapter.slug}/`}
+                        >
+                          Ch. {number} · {chapter.title}
+                        </a>
+                      )
+                    );
+                  })}
+                </div>
+              </>
+            </>
+          )
+        }
       </div>
     </article>
   </div>

@@ -1,0 +1,26 @@
+---
+import BaseLayout from '@/components/layout/BaseLayout.astro';
+import ConcentrationControl from '@/components/ConcentrationControl.astro';
+---
+
+<BaseLayout title="Concentration" active="play"
+  ><header class="page-hero">
+    <div class="site-shell">
+      <p class="kicker">Protect the winning effect</p><h1>Concentration</h1><p>
+        Keep a spell that is denying useful enemy actions. Replace it when the
+        target escapes, the enemy adapts, or the objective changes.
+      </p>
+    </div>
+  </header><section class="section section--first">
+    <div class="site-shell">
+      <ConcentrationControl /><div class="form-actions">
+        <a class="button" href="/spells/?concentration=true"
+          >Compare concentration options</a
+        ><a class="button" href="/quick/reactions/">Reaction conflicts</a><a
+          href="/chapters/45-concentration-and-reaction-master-matrix/"
+          >Full concentration matrix →</a
+        >
+      </div>
+    </div>
+  </section></BaseLayout
+>

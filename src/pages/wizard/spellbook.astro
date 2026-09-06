@@ -1,0 +1,229 @@
+---
+import { getCollection } from 'astro:content';
+import { getAcquisitionLanes } from '@/lib/acquisition';
+const lanes = await getAcquisitionLanes();
+import BaseLayout from '@/components/layout/BaseLayout.astro';
+const spells = (await getCollection('spells'))
+  .map((e) => e.data)
+  .sort((a, b) => a.level - b.level || a.name.localeCompare(b.name));
+---
+
+<BaseLayout title="Spellbook planner" active="spells"
+  ><header class="page-hero">
+    <div class="site-shell">
+      <p class="kicker">Learn · copy · research</p><h1>Spellbook planner</h1><p>
+        Guarantee essential gains on level-up. Copy missing defense, control,
+        rituals and campaign answers when a legal source becomes available.
+        Wanted and copy targets form your local research list.
+      </p><div class="hero-actions">
+        <a
+          class="button"
+          href="/chapters/12-spell-acquisition-and-preparation-scorecard/"
+          >Acquisition scorecard</a
+        ><a
+          class="button"
+          href="/chapters/31-spellbook-operations-and-copy-priority/"
+          >Copying gates & priority</a
+        ><a class="button" href="/quick/security/">Protect your book</a>
+      </div>
+    </div>
+  </header>
+  <section class="section section--first">
+    <div class="site-shell">
+      <div class="tool-panel">
+        <div class="form-grid">
+          <label class="field-label"
+            ><span>Find a spell</span><input
+              class="field"
+              type="search"
+              data-book-search
+            /></label
+          >
+          <label class="field-label"
+            ><span>Acquisition priority</span><select
+              class="field"
+              data-book-filter="priority"
+              ><option value="">Any priority</option>{
+                ['mandatory', 'optional', 'sleeper', 'unclassified'].map(
+                  (p) => <option>{p}</option>,
+                )
+              }</select
+            ></label
+          >
+          <label class="field-label"
+            ><span>Spell level</span><select
+              class="field"
+              data-book-filter="level"
+              ><option value="">All levels</option>{
+                Array.from({ length: 10 }, (_, i) => (
+                  <option value={i}>{i === 0 ? 'Cantrip' : i}</option>
+                ))
+              }</select
+            ></label
+          >
+          <label class="field-label"
+            ><span>Acquisition lane</span><select
+              class="field"
+              data-book-filter="lane"
+              ><option value="">All source lanes</option><option value="learn"
+                >Learn on level-up</option
+              ><option value="copy">Copy-first</option><option value="mission"
+                >Mission prep</option
+              ><option value="build">Build / table dependent</option></select
+            ></label
+          >
+          <label class="field-label"
+            ><span>Research status</span><select
+              class="field"
+              data-book-filter="status"
+              ><option value="">All statuses</option><option value="owned"
+                >Owned</option
+              ><option value="wanted">Wanted</option><option value="copy"
+                >Copy target</option
+              ><option value="skip">Skip</option></select
+            ></label
+          >
+          <label class="field-label"
+            ><span>Source / ritual</span><select
+              class="field"
+              data-book-filter="special"
+              ><option value="">Any</option><option value="ritual"
+                >Ritual</option
+              ><option value="sensitive">Source-sensitive</option></select
+            ></label
+          >
+        </div>
+        <p class="control-note">
+          Acquisition rank and copy priority are different. Ritual status alone
+          does not mean “copy first.” Use the scorecard and copying gates above.
+          Marking owned records your inventory; it does not establish legality.
+        </p><p role="status" data-book-status></p>
+      </div><ul class="workflow-list" data-book-list>
+        {
+          spells.map((spell) => (
+            <li
+              data-book-row
+              data-id={spell.id}
+              data-name={spell.name.toLowerCase()}
+              data-level={spell.level}
+              data-priority={spell.compendium.acquisitionRole}
+              data-lane={lanes[spell.id]?.id}
+              data-ritual={spell.rules.ritual}
+              data-sensitive={spell.source.sourceSensitive}
+            >
+              <a href={`/spells/${spell.id}/`}>
+                <strong>{spell.name}</strong>
+              </a>{' '}
+              · {spell.level === 0 ? 'Cantrip' : `Level ${spell.level}`} ·{' '}
+              {spell.compendium.acquisitionRole}
+              {lanes[spell.id] ? ' · ' + lanes[spell.id].label : ''}
+              {spell.rules.ritual ? ' · Ritual' : ''}
+              {spell.source.sourceSensitive ? ' · Source check' : ''}
+              <label class="field-label">
+                <>
+                  <span class="sr-only">Status for {spell.name}</span>
+                  <select class="field" data-book-state>
+                    <>
+                      <option value="">Unplanned</option>
+                      <option value="owned">Owned</option>
+                      <option value="wanted">Wanted</option>
+                      <option value="copy">Copy target</option>
+                      <option value="skip">Skip</option>
+                    </>
+                  </select>
+                </>
+              </label>
+            </li>
+          ))
+        }
+      </ul>
+      <div class="form-actions">
+        <a class="button" href="/tools/?components=planned#component-cost"
+          >Components for planned spells</a
+        ><a class="button" href="/wizard/gear/">Budget copying and research</a>
+      </div>
+    </div>
+  </section>
+  <script>
+    import {
+      loadSession,
+      changeSession,
+      type SpellStatus,
+    } from '@/features/my-wizard/session';
+    import {
+      defaultWizardProfile,
+      loadWizardProfile,
+      saveWizardProfile,
+    } from '@/features/my-wizard/profile';
+    const rows = [...document.querySelectorAll<HTMLElement>('[data-book-row]')];
+    const search =
+      document.querySelector<HTMLInputElement>('[data-book-search]')!;
+    const filters = [
+      ...document.querySelectorAll<HTMLSelectElement>('[data-book-filter]'),
+    ];
+    const status = document.querySelector('[data-book-status]')!;
+    const initial = new URLSearchParams(location.search);
+    search.value = initial.get('q') ?? '';
+    for (const f of filters) f.value = initial.get(f.dataset.bookFilter!) ?? '';
+    const refresh = () => {
+      const session = loadSession();
+      const profile = loadWizardProfile();
+      for (const row of rows)
+        (row.querySelector('select') as HTMLSelectElement).value =
+          profile?.ownedSpells.includes(row.dataset.id!)
+            ? 'owned'
+            : (session.spellStatus[row.dataset.id!] ?? '');
+    };
+    const filter = () => {
+      let n = 0;
+      for (const row of rows) {
+        const matches =
+          row.dataset.name!.includes(search.value.toLowerCase()) &&
+          filters.every(
+            (f) =>
+              !f.value ||
+              (f.dataset.bookFilter === 'status'
+                ? row.querySelector('select')!.value === f.value
+                : f.dataset.bookFilter === 'special'
+                  ? row.dataset[f.value] === 'true'
+                  : row.dataset[f.dataset.bookFilter!] === f.value),
+          );
+        row.hidden = !matches;
+        if (matches) n++;
+      }
+      const url = new URL(location.href);
+      url.search = '';
+      if (search.value) url.searchParams.set('q', search.value);
+      for (const f of filters)
+        if (f.value) url.searchParams.set(f.dataset.bookFilter!, f.value);
+      history.replaceState({}, '', url);
+      status.textContent = `${n} spells shown. Changes to status save automatically in this browser.`;
+    };
+    rows.forEach((row) =>
+      row.querySelector('select')!.addEventListener('change', (event) => {
+        const value = (event.target as HTMLSelectElement).value;
+        const id = row.dataset.id!;
+        const profile = loadWizardProfile() ?? defaultWizardProfile();
+        profile.ownedSpells = profile.ownedSpells.filter((s) => s !== id);
+        if (value === 'owned') profile.ownedSpells.push(id);
+        const ok = saveWizardProfile(profile);
+        const saved =
+          ok &&
+          changeSession((s) => {
+            delete s.spellStatus[id];
+            if (value && value !== 'owned')
+              s.spellStatus[id] = value as SpellStatus;
+          });
+        refresh();
+        filter();
+        if (!saved)
+          status.textContent =
+            'Storage unavailable. The change was not fully saved; please verify your list.';
+      }),
+    );
+    search.addEventListener('input', filter);
+    filters.forEach((f) => f.addEventListener('change', filter));
+    refresh();
+    filter();
+  </script></BaseLayout
+>

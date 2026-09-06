@@ -2,165 +2,425 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '@/components/layout/BaseLayout.astro';
 import packagesSource from '@/content/chapters/13-prepared-spell-packages.md?raw';
+import { mentionedSpells } from '@/lib/spells';
 import { extractTableRows } from '@/lib/compendium-tables';
 
-const spells = (await getCollection('spells')).map((entry) => entry.data)
+const spells = (await getCollection('spells'))
+  .map((entry) => entry.data)
   .sort((a, b) => a.level - b.level || a.name.localeCompare(b.name));
-const normalize = (value: string) => value.toLowerCase().replace(/[’']/g, '').replace(/[^a-z0-9]+/g, ' ').trim();
-const aliases: Record<string, string[]> = {
-  'leomunds-tiny-hut': ['tiny hut'],
-  'rarys-telepathic-bond': ['telepathic bond'],
-};
-const missionPackages = extractTableRows(packagesSource, 0).slice(1).map((row, index) => {
-  const recommendation = row[1] ?? '';
-  const normalizedRecommendation = normalize(recommendation);
-  const spellIds = spells.filter((spell) => {
-    const terms = [normalize(spell.name), ...(aliases[spell.id] ?? []).map(normalize)];
-    return terms.some((term) => term.length > 3 && normalizedRecommendation.includes(term));
-  }).map((spell) => spell.id);
-  return { id: `mission-${index}`, name: row[0], recommendation, note: row[2], spellIds };
-});
+const missionPackages = extractTableRows(packagesSource, 0)
+  .slice(1)
+  .map((row, index) => {
+    const recommendation = row[1] ?? '';
+    const spellIds = mentionedSpells(recommendation, spells).map(
+      (spell) => spell.id,
+    );
+    return {
+      id: `mission-${index}`,
+      name: row[0],
+      recommendation,
+      note: row[2],
+      spellIds,
+    };
+  });
 const clientSpells = spells.map((spell) => ({
-  id: spell.id, name: spell.name, level: spell.level, concentration: spell.rules.concentration,
+  id: spell.id,
+  name: spell.name,
+  level: spell.level,
+  concentration: spell.rules.concentration,
   roles: spell.compendium.roles,
 }));
-const serializedData = JSON.stringify({ packages: missionPackages, spells: clientSpells }).replace(/</g, '\\u003c');
+const serializedData = JSON.stringify({
+  packages: missionPackages,
+  spells: clientSpells,
+}).replace(/</g, '\\u003c');
 ---
-<BaseLayout title="Prepared Spell Planner" description="Adjust the Compendium's prepared spell packages for today's mission." active="spells">
-  <header class="page-hero"><div class="site-shell"><p class="kicker">Mission preparation</p><h1>Prepared Spell Planner</h1><p>Start with a Chapter 13 package, then adjust it. The package is guidance—not a mandatory list.</p></div></header>
+
+<BaseLayout
+  title="Prepared Spell Planner"
+  description="Adjust the Compendium's prepared spell packages for today's mission."
+  active="spells"
+>
+  <header class="page-hero">
+    <div class="site-shell">
+      <p class="kicker">Mission preparation</p><h1>Prepared Spell Planner</h1><p
+      >
+        Start with a Chapter 13 package, then adjust it. The package is
+        guidance—not a mandatory list.
+      </p>
+    </div>
+  </header>
   <section class="section section--first">
     <div class="site-shell planner-layout" data-prepared-planner>
       <aside class="tool-panel planner-controls">
-        <label class="field-label"><span>Mission preset</span><select class="field" data-mission-select><option value="">My current / custom list</option>{missionPackages.map((mission) => <option value={mission.id}>{mission.name}</option>)}</select></label>
+        <label class="field-label"
+          ><span>Mission preset</span><select class="field" data-mission-select
+            ><option value="">My current / custom list</option>{
+              missionPackages.map((mission) => (
+                <option value={mission.id}>{mission.name}</option>
+              ))
+            }</select
+          ></label
+        >
         <div class="mission-guidance" data-mission-guidance>
           <p class="eyebrow">Compendium package</p>
           <h2 data-mission-name>Choose a mission</h2>
-          <p data-mission-recommendation>Select a preset to load the canonical spells available in the structured database.</p>
+          <p data-mission-recommendation>
+            Select a preset to load the canonical spells available in the
+            structured database.
+          </p>
           <p class="control-note" data-mission-note></p>
         </div>
-        <div class="planner-warnings" aria-live="polite" data-planner-warnings></div>
-        <button class="button" type="button" data-save-prepared>Save as My Wizard’s prepared list</button>
-        <span class="save-status" aria-live="polite" data-prepared-status></span>
+        <div class="planner-warnings" aria-live="polite" data-planner-warnings>
+        </div>
+        <button class="button" type="button" data-save-prepared
+          >Save prepared list locally</button
+        >
+        <span class="save-status" aria-live="polite" data-prepared-status
+        ></span>
       </aside>
       <div class="tool-panel planner-spells">
-        <div class="tool-panel-head"><div><p class="eyebrow">Adjust the package</p><h2>Selected spells</h2></div><strong data-selected-count>0 selected</strong></div>
-        <label class="field-label"><span>Filter spells</span><input class="field" type="search" placeholder="Search spell names…" data-planner-search /></label>
+        <div class="tool-panel-head">
+          <div>
+            <p class="eyebrow">Adjust the package</p><h2>Selected spells</h2>
+          </div><strong data-selected-count>0 selected</strong>
+        </div>
+        <label class="field-label"
+          ><span>Filter spells</span><input
+            class="field"
+            type="search"
+            placeholder="Search spell names…"
+            data-planner-search
+          /></label
+        >
         <fieldset class="spell-checklist" data-spell-checklist>
           <legend class="sr-only">Available canonical spells</legend>
-          {spells.map((spell) => <label data-spell-option data-search={spell.name.toLowerCase()}><input type="checkbox" value={spell.id} /><span><b>{spell.name}</b><small>{spell.level === 0 ? 'Cantrip' : `Level ${spell.level}`}{spell.rules.concentration ? ' · Concentration' : ''}</small></span></label>)}
+          {
+            spells.map((spell) => (
+              <label data-spell-option data-search={spell.name.toLowerCase()}>
+                <>
+                  <input type="checkbox" value={spell.id} />
+                  <span>
+                    <>
+                      <b>{spell.name}</b>
+                      <small>
+                        {spell.level === 0 ? 'Cantrip' : `Level ${spell.level}`}
+                        {spell.rules.concentration ? ' · Concentration' : ''}
+                      </small>
+                    </>
+                  </span>
+                </>
+              </label>
+            ))
+          }
         </fieldset>
         <div class="selected-spell-links" data-selected-links></div>
       </div>
     </div>
   </section>
-  <section class="section source-strip"><div class="site-shell"><p><strong>Deep reference:</strong> preparation lanes, concentration portfolio rules, and build-specific priorities remain in <a href="/chapters/13-prepared-spell-packages/">Chapter 13 · Prepared Spell Packages</a>.</p></div></section>
-  <script is:inline type="application/json" id="prepared-planner-data" set:html={serializedData}></script>
+  <section class="section source-strip">
+    <div class="site-shell">
+      <p>
+        <strong>Deep reference:</strong> preparation lanes, concentration portfolio
+        rules, and build-specific priorities remain in <a
+          href="/chapters/13-prepared-spell-packages/"
+          >Chapter 13 · Prepared Spell Packages</a
+        >.
+      </p>
+    </div>
+  </section>
+  <script
+    is:inline
+    type="application/json"
+    id="prepared-planner-data"
+    set:html={serializedData}
+  />
   <script>
-    import { loadWizardProfile, saveWizardProfile } from '@/features/my-wizard/profile';
-    interface PlannerSpell { id: string; name: string; level: number; concentration: boolean; roles: string[]; }
-    interface MissionPackage { id: string; name: string; recommendation: string; note: string; spellIds: string[]; }
+    import {
+      defaultWizardProfile,
+      loadWizardProfile,
+      saveWizardProfile,
+    } from '@/features/my-wizard/profile';
+    interface PlannerSpell {
+      id: string;
+      name: string;
+      level: number;
+      concentration: boolean;
+      roles: string[];
+    }
+    interface MissionPackage {
+      id: string;
+      name: string;
+      recommendation: string;
+      note: string;
+      spellIds: string[];
+    }
     const root = document.querySelector<HTMLElement>('[data-prepared-planner]');
-    const data = document.querySelector<HTMLScriptElement>('#prepared-planner-data');
+    const data = document.querySelector<HTMLScriptElement>(
+      '#prepared-planner-data',
+    );
     if (root && data) {
-      const parsed: { packages: MissionPackage[]; spells: PlannerSpell[] } = JSON.parse(data.textContent ?? '{}');
+      const parsed: { packages: MissionPackage[]; spells: PlannerSpell[] } =
+        JSON.parse(data.textContent ?? '{}');
       const spells = new Map(parsed.spells.map((spell) => [spell.id, spell]));
-      const missions = new Map(parsed.packages.map((mission) => [mission.id, mission]));
-      const missionSelect = root.querySelector<HTMLSelectElement>('[data-mission-select]');
-      const checkboxes = [...root.querySelectorAll<HTMLInputElement>('[data-spell-checklist] input[type="checkbox"]')];
-      const warnings = root.querySelector<HTMLElement>('[data-planner-warnings]');
-      const selectedLinks = root.querySelector<HTMLElement>('[data-selected-links]');
-      const selectedCount = root.querySelector<HTMLElement>('[data-selected-count]');
+      const missions = new Map(
+        parsed.packages.map((mission) => [mission.id, mission]),
+      );
+      const missionSelect = root.querySelector<HTMLSelectElement>(
+        '[data-mission-select]',
+      );
+      const checkboxes = [
+        ...root.querySelectorAll<HTMLInputElement>(
+          '[data-spell-checklist] input[type="checkbox"]',
+        ),
+      ];
+      const warnings = root.querySelector<HTMLElement>(
+        '[data-planner-warnings]',
+      );
+      const selectedLinks = root.querySelector<HTMLElement>(
+        '[data-selected-links]',
+      );
+      const selectedCount = root.querySelector<HTMLElement>(
+        '[data-selected-count]',
+      );
       const profile = loadWizardProfile();
 
-      const selectedSpells = () => checkboxes.filter((checkbox) => checkbox.checked).map((checkbox) => spells.get(checkbox.value)).filter((spell): spell is PlannerSpell => Boolean(spell));
-      const hasRole = (selected: PlannerSpell[], fragments: string[]) => selected.some((spell) => spell.roles.some((role) => fragments.some((fragment) => role.includes(fragment))));
+      const selectedSpells = () =>
+        checkboxes
+          .filter((checkbox) => checkbox.checked)
+          .map((checkbox) => spells.get(checkbox.value))
+          .filter((spell): spell is PlannerSpell => Boolean(spell));
+      const hasRole = (selected: PlannerSpell[], fragments: string[]) =>
+        selected.some((spell) =>
+          spell.roles.some((role) =>
+            fragments.some((fragment) => role.includes(fragment)),
+          ),
+        );
       const update = () => {
         const selected = selectedSpells();
-        if (selectedCount) selectedCount.textContent = `${selected.length} selected`;
+        if (selectedCount)
+          selectedCount.textContent = `${selected.filter((s) => s.level > 0).length} spells + ${selected.filter((s) => s.level === 0).length} cantrips`;
         if (selectedLinks) {
           selectedLinks.replaceChildren();
           selected.forEach((spell) => {
-            const link = document.createElement('a'); link.className = 'chapter-chip'; link.href = `/spells/${spell.id}/`; link.textContent = spell.name; selectedLinks.append(link);
+            const link = document.createElement('a');
+            link.className = 'chapter-chip';
+            link.href = `/spells/${spell.id}/`;
+            link.textContent = spell.name;
+            selectedLinks.append(link);
           });
         }
         if (warnings) {
           warnings.replaceChildren();
-          if (!selected.length) { warnings.textContent = 'Select spells to check your preparation coverage.'; return; }
+          if (!selected.length) {
+            warnings.textContent =
+              'Select spells to check your preparation coverage.';
+            return;
+          }
           const concentration = selected.filter((spell) => spell.concentration);
           const messages: string[] = [];
-          if (!hasRole(selected, ['defense', 'protection'])) messages.push('No immediate defense is represented in the selected canonical roles.');
-          if (!hasRole(selected, ['mobility', 'positioning', 'rescue', 'travel'])) messages.push('No mobility or rescue role is represented.');
-          if (!hasRole(selected, ['anti-caster', 'anti-magic', 'suppression'])) messages.push('No anti-caster answer is represented.');
-          if (concentration.length === 0) messages.push('No main concentration option is selected.');
-          if (selected.length > 0 && selected.every((spell) => spell.concentration)) messages.push('No non-concentration follow-up is selected.');
-          if (concentration.length > 1) messages.unshift(`${concentration.map((spell) => spell.name).join(', ')} require concentration. Only one can normally be maintained.`);
+          const coverage = [
+            ['Defense', ['defense', 'protection']],
+            [
+              'Mobility / rescue',
+              ['mobility', 'positioning', 'rescue', 'travel'],
+            ],
+            ['Antimagic', ['anti-caster', 'anti-magic', 'suppression']],
+            [
+              'Information',
+              ['information', 'detection', 'scouting', 'divination'],
+            ],
+          ] as [string, string[]][];
+          const covered = coverage
+            .filter(([, roles]) => hasRole(selected, roles))
+            .map(([name]) => name);
+          messages.push(
+            'Indexed coverage: ' +
+              (covered.join(', ') || 'none') +
+              '. Confirm your campaign answer separately.',
+          );
+          if (
+            !hasRole(selected, [
+              'information',
+              'detection',
+              'scouting',
+              'divination',
+            ])
+          )
+            messages.push('No indexed information role selected.');
+          if (
+            concentration.length > selected.length / 2 &&
+            concentration.length > 2
+          )
+            messages.push(
+              'Concentration-heavy list: consider whether alternate defenses and non-concentration follow-ups justify each slot.',
+            );
+          const roleCounts = new Map<string, number>();
+          for (const spell of selected)
+            for (const role of spell.roles)
+              roleCounts.set(role, (roleCounts.get(role) ?? 0) + 1);
+          const overlaps = [...roleCounts]
+            .filter(([, count]) => count >= 3)
+            .map(([role]) => role);
+          if (overlaps.length)
+            messages.push(
+              'Review repeated roles: ' +
+                overlaps.join(', ') +
+                '. Redundancy can be useful when targeting and failure modes differ.',
+            );
+          const current = loadWizardProfile();
+          if (current && current.configured!==false) {
+            const tooHigh = selected.filter(
+              (s) => s.level > Math.min(9, Math.ceil(current.wizardLevel / 2)),
+            );
+            if (tooHigh.length)
+              messages.push(
+                'Review Wizard spell-level access: ' +
+                  tooHigh.map((s) => s.name).join(', ') +
+                  '. Slots from multiclassing do not grant higher Wizard spells.',
+              );
+          }
+          if (selected.some((s) => !s.roles.length))
+            messages.push(
+              'Some selected spells lack role metadata. Coverage is incomplete, not a rules verdict.',
+            );
+          if (!hasRole(selected, ['defense', 'protection']))
+            messages.push(
+              'No immediate defense is represented in the selected canonical roles.',
+            );
+          if (
+            !hasRole(selected, ['mobility', 'positioning', 'rescue', 'travel'])
+          )
+            messages.push('No mobility or rescue role is represented.');
+          if (!hasRole(selected, ['anti-caster', 'anti-magic', 'suppression']))
+            messages.push('No anti-caster answer is represented.');
+          if (concentration.length === 0)
+            messages.push('No main concentration option is selected.');
+          if (
+            selected.length > 0 &&
+            selected.every((spell) => spell.concentration)
+          )
+            messages.push('No non-concentration follow-up is selected.');
+          if (concentration.length > 1)
+            messages.unshift(
+              `${concentration.map((spell) => spell.name).join(', ')} require concentration. Only one can normally be maintained.`,
+            );
           messages.forEach((message, index) => {
-            const item = document.createElement('p'); item.className = index === 0 && concentration.length > 1 ? 'planner-warning planner-warning--strong' : 'planner-warning'; item.textContent = message; warnings.append(item);
+            const item = document.createElement('p');
+            item.className =
+              index === 0 && concentration.length > 1
+                ? 'planner-warning planner-warning--strong'
+                : 'planner-warning';
+            item.textContent = message;
+            warnings.append(item);
           });
         }
       };
 
       const loadMission = (id: string) => {
         const mission = missions.get(id);
-        if (!mission) { update(); return; }
+        if (!mission) {
+          update();
+          return;
+        }
         const ids = new Set(mission?.spellIds ?? []);
-        checkboxes.forEach((checkbox) => { checkbox.checked = ids.has(checkbox.value); });
+        checkboxes.forEach((checkbox) => {
+          checkbox.checked = ids.has(checkbox.value);
+        });
         const name = root.querySelector<HTMLElement>('[data-mission-name]');
-        const recommendation = root.querySelector<HTMLElement>('[data-mission-recommendation]');
+        const recommendation = root.querySelector<HTMLElement>(
+          '[data-mission-recommendation]',
+        );
         const note = root.querySelector<HTMLElement>('[data-mission-note]');
         if (name) name.textContent = mission?.name ?? 'Custom prepared list';
-        if (recommendation) recommendation.textContent = mission?.recommendation ?? 'Adjust the canonical spells for the mission in front of you.';
+        if (recommendation)
+          recommendation.textContent =
+            mission?.recommendation ??
+            'Adjust the canonical spells for the mission in front of you.';
         if (note) note.textContent = mission?.note ?? '';
-        const status = root.querySelector<HTMLElement>('[data-prepared-status]');
+        const status = root.querySelector<HTMLElement>(
+          '[data-prepared-status]',
+        );
         if (status) status.textContent = 'Unsaved changes';
         update();
       };
 
       if (profile) {
         const ids = new Set(profile.preparedSpells);
-        checkboxes.forEach((checkbox) => { checkbox.checked = ids.has(checkbox.value); });
+        checkboxes.forEach((checkbox) => {
+          checkbox.checked = ids.has(checkbox.value);
+        });
         const name = root.querySelector<HTMLElement>('[data-mission-name]');
-        const recommendation = root.querySelector<HTMLElement>('[data-mission-recommendation]');
+        const recommendation = root.querySelector<HTMLElement>(
+          '[data-mission-recommendation]',
+        );
         if (name) name.textContent = 'My current prepared list';
-        if (recommendation) recommendation.textContent = 'Loaded from the My Wizard profile stored in this browser.';
+        if (recommendation)
+          recommendation.textContent =
+            'Loaded from the My Wizard profile stored in this browser.';
       } else if (parsed.packages[0]) {
         if (missionSelect) missionSelect.value = parsed.packages[0].id;
         loadMission(parsed.packages[0].id);
       }
       const addedId = new URLSearchParams(window.location.search).get('add');
-      const addedCheckbox = checkboxes.find(checkbox => checkbox.value === addedId);
+      const addedCheckbox = checkboxes.find(
+        (checkbox) => checkbox.value === addedId,
+      );
       if (addedCheckbox) {
         addedCheckbox.checked = true;
         if (missionSelect) missionSelect.value = '';
-        const status = root.querySelector<HTMLElement>('[data-prepared-status]');
-        if (status) status.textContent = `${spells.get(addedCheckbox.value)?.name} added · unsaved changes`;
+        const status = root.querySelector<HTMLElement>(
+          '[data-prepared-status]',
+        );
+        if (status)
+          status.textContent = `${spells.get(addedCheckbox.value)?.name} added · unsaved changes`;
       }
-      missionSelect?.addEventListener('change', () => loadMission(missionSelect.value));
-      checkboxes.forEach((checkbox) => checkbox.addEventListener('change', () => {
-        if (missionSelect?.value) {
-          const name = root.querySelector<HTMLElement>('[data-mission-name]');
-          if (name) name.textContent = `${missions.get(missionSelect.value)?.name ?? 'Mission'} · adjusted`;
-        }
-        if (missionSelect) missionSelect.value = '';
-        const status = root.querySelector<HTMLElement>('[data-prepared-status]');
-        if (status) status.textContent = 'Unsaved changes';
-        update();
-      }));
-      root.querySelector<HTMLInputElement>('[data-planner-search]')?.addEventListener('input', (event) => {
-        const query = (event.currentTarget as HTMLInputElement).value.trim().toLowerCase();
-        root.querySelectorAll<HTMLElement>('[data-spell-option]').forEach((option) => { option.hidden = Boolean(query) && !(option.dataset.search ?? '').includes(query); });
-      });
-      root.querySelector('[data-save-prepared]')?.addEventListener('click', () => {
-        const current = loadWizardProfile();
-        const status = root.querySelector<HTMLElement>('[data-prepared-status]');
-        if (!current) {
-          if (status) status.innerHTML = 'Create <a href="/wizard/">My Wizard</a> first.';
-          return;
-        }
-        current.preparedSpells = selectedSpells().map((spell) => spell.id);
-        const saved = saveWizardProfile(current);
-        if (status) status.textContent = saved ? 'Prepared list saved locally.' : 'Your browser could not save the list. Check its storage settings and try again.';
-      });
+      missionSelect?.addEventListener('change', () =>
+        loadMission(missionSelect.value),
+      );
+      checkboxes.forEach((checkbox) =>
+        checkbox.addEventListener('change', () => {
+          if (missionSelect?.value) {
+            const name = root.querySelector<HTMLElement>('[data-mission-name]');
+            if (name)
+              name.textContent = `${missions.get(missionSelect.value)?.name ?? 'Mission'} · adjusted`;
+          }
+          if (missionSelect) missionSelect.value = '';
+          const status = root.querySelector<HTMLElement>(
+            '[data-prepared-status]',
+          );
+          if (status) status.textContent = 'Unsaved changes';
+          update();
+        }),
+      );
+      root
+        .querySelector<HTMLInputElement>('[data-planner-search]')
+        ?.addEventListener('input', (event) => {
+          const query = (event.currentTarget as HTMLInputElement).value
+            .trim()
+            .toLowerCase();
+          root
+            .querySelectorAll<HTMLElement>('[data-spell-option]')
+            .forEach((option) => {
+              option.hidden =
+                Boolean(query) &&
+                !(option.dataset.search ?? '').includes(query);
+            });
+        });
+      root
+        .querySelector('[data-save-prepared]')
+        ?.addEventListener('click', () => {
+          const current = loadWizardProfile() ?? defaultWizardProfile();
+          const status = root.querySelector<HTMLElement>(
+            '[data-prepared-status]',
+          );
+          current.preparedSpells = selectedSpells().map((spell) => spell.id);
+          const saved = saveWizardProfile(current);
+          if (status)
+            status.textContent = saved
+              ? 'Prepared list saved locally.'
+              : 'Your browser could not save the list. Check its storage settings and try again.';
+        });
       update();
     }
   </script>

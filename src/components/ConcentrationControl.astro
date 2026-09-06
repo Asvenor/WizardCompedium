@@ -1,0 +1,90 @@
+---
+import { getCollection } from 'astro:content';
+const { spellId = '' } = Astro.props;
+const spells = (await getCollection('spells'))
+  .map((s) => s.data)
+  .filter((s) => s.rules.concentration)
+  .sort((a, b) => a.name.localeCompare(b.name));
+---
+
+<section
+  class="tool-panel"
+  data-concentration-control
+  data-browsing-spell={spellId}
+>
+  <h2>Current concentration</h2><p data-current-concentration role="status">
+    No selection yet. This tracker is stored only in your browser.
+  </p>
+  <p class="callout callout--warning" data-concentration-warning hidden></p>
+  <label class="field-label"
+    ><span>Concentrating on</span><select class="field" data-current-spell
+      ><option value="">None</option>{
+        spells.map((spell) => <option value={spell.id}>{spell.name}</option>)
+      }</select
+    ></label
+  >
+  <div class="form-actions">
+    <button class="button" type="button" data-save-concentration
+      >Update concentration</button
+    ><a href="/spells/?concentration=false">Non-concentration follow-ups</a><a
+      href="/tools/#concentration-calculator">Check concentration odds</a
+    >
+  </div>
+  <p class="control-note">
+    Changing the tracker does not check casting legality or spend a slot. Keep
+    an effect that is still winning the encounter.
+  </p>
+</section>
+<script>
+  import { changeSession, loadSession } from '@/features/my-wizard/session';
+  document
+    .querySelectorAll<HTMLElement>('[data-concentration-control]')
+    .forEach((root) => {
+      const select = root.querySelector<HTMLSelectElement>(
+        '[data-current-spell]',
+      )!;
+      const status = root.querySelector('[data-current-concentration]')!;
+      const warning = root.querySelector<HTMLElement>(
+        '[data-concentration-warning]',
+      )!;
+      const render = () => {
+        const id = loadSession().concentration;
+        select.value = id;
+        const name = select.selectedOptions[0]?.textContent;
+        status.textContent =
+          id && select.value
+            ? `Current: ${name}`
+            : 'No current concentration selected.';
+        warning.hidden =
+          !id ||
+          !select.value ||
+          !root.dataset.browsingSpell ||
+          root.dataset.browsingSpell === id;
+        warning.textContent = `Casting this concentration spell would replace ${name ?? 'your current concentration'}. Check whether the existing effect is still winning.`;
+      };
+      root
+        .querySelector('[data-save-concentration]')
+        ?.addEventListener('click', () => {
+          const id = select.value;
+          const current = loadSession().concentration;
+          if (
+            current &&
+            id &&
+            id !== current &&
+            !window.confirm(
+              'Replace the current concentration in your tracker?',
+            )
+          )
+            return;
+          const saved = changeSession((s) => {
+            s.concentration = id;
+          });
+          render();
+          if (!saved)
+            status.textContent =
+              'Storage unavailable. This selection could not be saved.';
+        });
+      window.addEventListener('wizard-session-updated', render);
+      render();
+    });
+</script>

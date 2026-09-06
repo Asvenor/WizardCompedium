@@ -592,3 +592,35 @@ input[readonly] { background: var(--surface-muted); }
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: 0.001ms !important; animation-duration: 0.001ms !important; }
 }
+/* Shared workflow tools: intrinsic grids prevent viewport-wide overflow. */
+.reference-card-grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,22rem),1fr));gap:1rem;margin-block:1rem;align-items:start;}
+.reference-card {min-width:0;}
+.reference-card h2 {font-size:1.2rem;}
+.reference-card dl,.workflow-dl {margin:1rem 0 0;}
+.reference-card dt,.workflow-dl dt {font-weight:700;margin-top:.85rem;}
+.reference-card dd,.workflow-dl dd {margin:.25rem 0 0;overflow-wrap:anywhere;}
+.reference-card details {margin-top:1rem;}
+.page-utilities {display:flex;gap:1rem;align-items:center;flex-wrap:wrap;padding-block:1.5rem;border-top:1px solid var(--border,#dfe3df);font-size:.875rem;}
+.quick-links {display:grid;gap:.8rem;padding-left:1.2rem;}
+.workflow-stack {display:grid;gap:1.25rem;}
+.workflow-stack .tool-panel {min-width:0;}
+.workflow-list {list-style:none;padding:0;display:grid;gap:.75rem;}
+.workflow-list>li {padding:.8rem;border:1px solid #dfe3df;border-radius:.4rem;}
+.workflow-list label {display:flex;gap:.6rem;align-items:baseline;}
+.workflow-list select {margin-top:.65rem;}
+.workflow-summary {display:flex;gap:1rem;flex-wrap:wrap;padding:1rem;background:#edf3ef;border-radius:.4rem;}
+.workflow-summary p {margin:0;}
+@media print {
+  .site-header,.site-footer,.page-utilities,.mobile-nav,.docs-sidebar,.hero-actions,.form-actions,[data-spell-toolbar],button {display:none!important;}
+  body {background:white!important;color:black!important;font-size:11pt;}
+  .site-shell,.docs-layout,.docs-content {width:100%!important;max-width:none!important;display:block!important;margin:0!important;padding:0!important;}
+  .page-hero,.section {padding:1rem 0!important;}
+  .reference-card-grid,.tools-grid {display:block!important;}
+  .tool-panel,.reference-card {break-inside:avoid;border:1px solid #aaa!important;box-shadow:none!important;margin-bottom:1rem;}
+  details:not([open])>summary::after {content:' (expand before printing for details)';font-weight:400;}
+  .table-wrap,.component-table-wrap {overflow:visible!important;max-height:none!important;}
+  table {min-width:0!important;width:100%!important;font-size:9pt;}
+  th {position:static!important;}
+  a {color:inherit!important;text-decoration:underline;}
+  input,select,textarea {border:1px solid #aaa!important;color:black!important;}
+}
