@@ -7,7 +7,7 @@
     "castingTime": "Action",
     "range": "Self",
     "area": "1,000 ft",
-    "duration": null,
+    "duration": "Up to 10 minutes",
     "concentration": true,
     "ritual": false,
     "components": {
@@ -48,7 +48,31 @@
       15,
       37,
       47
-    ]
+    ],
+    "tactics": [
+      "Search for a familiar specific object you previously saw within 30 feet, or the nearest object of a stated kind. It gives direction within 1,000 feet; lead blocks the direct path.",
+      "A search grid plus Phantom Steed can cover a large area while this spell is active. Cast the transport ritual first: ritual casting itself requires concentration and would interrupt Locate Object.",
+      "Treat clothes, insignia or stolen gear as clues only when the spell's familiarity/category requirements are actually met. It locates objects, not an arbitrarily named creature.",
+      "At Wizard 18 it is eligible for Spell Mastery because its casting time is an action, but its concentration requirement remains."
+    ],
+    "relatedSpells": [
+      "phantom-steed",
+      "mind-spike",
+      "borrowed-knowledge"
+    ],
+    "research": {
+      "note": "Research-informed tactical supplement. Pack Tactics timestamps below are supplied-package attribution, not newly verified quotations. Existing Compendium tiers are preserved; rules and optimizer preference are distinct.",
+      "references": [
+        {
+          "title": "Pack Tactics · 09:59-10:54",
+          "url": "https://www.youtube.com/watch?v=Co1F7EVmNVQ&t=599s"
+        },
+        {
+          "title": "Pack Tactics · 14:41-15:28",
+          "url": "https://www.youtube.com/watch?v=TIchFqqkJKI&t=881s"
+        }
+      ]
+    }
   },
   "sourceLocator": "B00189"
 }

@@ -1,0 +1,87 @@
+{
+  "id": "summon-fey",
+  "name": "Summon Fey",
+  "level": 3,
+  "school": "Conjuration",
+  "rules": {
+    "castingTime": "Action",
+    "range": "90 ft",
+    "area": null,
+    "duration": "Up to 1 hour",
+    "concentration": true,
+    "ritual": false,
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": true,
+      "description": "A gilded flower worth 300+ GP (retained)",
+      "gpCost": 300,
+      "consumed": false
+    },
+    "damageTypes": [],
+    "save": {
+      "ability": null,
+      "type": null
+    },
+    "attackRoll": false
+  },
+  "source": {
+    "book": "Player's Handbook (2024)",
+    "rulesVersion": "2024",
+    "category": "Core",
+    "sourceSensitive": false,
+    "review": {
+      "date": "2026-09-07",
+      "access": "Normal 2024 Wizard spell-list access; learn and prepare through the Wizard's normal rules.",
+      "scope": "2024 Wizard access, casting metadata, material cost and command timing checked against the licensed spell entry. The linked creature stat block's feature-specific scaling is not independently rederived here.",
+      "references": [
+        {
+          "title": "Official spell entry",
+          "url": "https://www.dndbeyond.com/spells/2619115-summon-fey"
+        },
+        {
+          "title": "Official Wizard spell list — access and displayed metadata",
+          "url": "https://www.dndbeyond.com/spells/class/8-wizard"
+        },
+        {
+          "title": "Licensed 2024 spell entry: components and command timing",
+          "url": "https://app.roll20.net/compendium/dnd5e/Spells%3ASummon%20Fey?expansion=32231"
+        }
+      ]
+    }
+  },
+  "compendium": {
+    "tier": "B",
+    "acquisitionRole": "optional",
+    "preparedBaseline": false,
+    "roles": [
+      "summoning",
+      "damage"
+    ],
+    "summary": "A normal 2024 Wizard summon—not restricted to Illusionists. Consider a sustained extra combatant when concentration-based area control is a poor fit.",
+    "buildRelevance": [],
+    "warnings": [
+      "Tier is a situational Compendium assessment, not a letter grade quoted from Pack Tactics."
+    ],
+    "relatedChapters": [
+      6,
+      11,
+      22
+    ],
+    "tactics": [
+      "Compare the sustained contribution of one summon with Hypnotic Pattern or Sleet Storm. Cost, survivability, available targets and encounter length determine the better choice.",
+      "Illusionist 6 also grants a feature-specific version. Do not import the research's unverified assertion that a slotless Fey necessarily has zero attacks; use the active stat block and feature wording.",
+      "Buy the retained 300+ gp flower before preparing the spell. The ally takes its turn immediately after yours and follows verbal commands without your action; without commands it Dodges and avoids danger."
+    ],
+    "research": {
+      "note": "Prompted by the supplied Pack Tactics research package. Video timestamps are its attribution trail, not independently verified quotations; editorial advice is separated from official spell access.",
+      "references": [
+        {
+          "title": "Pack Tactics · 13:18-16:10",
+          "url": "https://www.youtube.com/watch?v=8DJ2HMdaSKQ&t=798s"
+        }
+      ]
+    }
+  },
+  "sourceLocator": "RESEARCH-20260907:PT-SP-SUMMON_FEY"
+}

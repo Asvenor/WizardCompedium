@@ -82,7 +82,7 @@ test('choice map has nine levels, 27 categories, and 76 separate spell rows with
   }
 });
 
-test('ownership pool has 144 individual spell entries and explicit source tags', () => {
+test('ownership pool preserves the source and includes 16 access-checked additions', () => {
   const pool = chapter.split('<!-- source:B00142 -->')[1].split('<!-- source:B00143 -->')[0];
   let count = 0;
   for (let index = 0; index < 10; index++) {
@@ -91,7 +91,7 @@ test('ownership pool has 144 individual spell entries and explicit source tags',
     assert.ok(rows.slice(1).every(row => row.length === 2 && !row[0].includes(', ')));
     count += rows.length - 1;
   }
-  assert.equal(count, 144);
+  assert.equal(count, 160);
   assert.ok(pool.includes('[X] and [D] never grant access by themselves'));
 });
 

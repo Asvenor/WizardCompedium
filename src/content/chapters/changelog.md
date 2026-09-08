@@ -9,6 +9,14 @@ sourceLocator: "B00959"
 description: "– Added Telekinetic to the feat tier list"
 ---
 <!-- source:B00960 -->
+<!-- research:PT-20260907-CHANGELOG -->
+### 07.09.2026 · Wizard-filtered optimizer research integration
+
+- Added 16 Wizard-list spell cards with editorial tiers, practical uses, access conditions and source-review scope; retained the existing spell and chapter content.
+- Expanded 14 existing spell cards and Chapters 6, 9, 11, 22, 30, 37 and 45 with subclass access, acquisition choices, a separate Diviner Savant allocation, worked search/containment tactics and concentration decisions.
+- Added a Wish menu with 21 core targets and five explicitly conditional expanded-source leads. Summon Beast remains Illusionist-gated; Giant Insect and Revivify are not normal Wizard spellbook choices.
+- Corrected research claims about ritual timing, two-caster concentration, Phantom Steed movement, rest casting, ninth-level Wish exclusions, Clone maturation and Illusory Reality. Unverified paid mechanics and disputed interactions remain labelled.
+
 ### V1.14 - 16.08.2026 · Rules and Layout Correction
 
 <!-- source:B00961 -->

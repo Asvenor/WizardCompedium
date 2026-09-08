@@ -1,0 +1,84 @@
+{
+  "id": "chromatic-orb",
+  "name": "Chromatic Orb",
+  "level": 1,
+  "school": "Evocation",
+  "rules": {
+    "castingTime": "Action",
+    "range": "90 ft",
+    "area": null,
+    "duration": "Instantaneous",
+    "concentration": false,
+    "ritual": false,
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": true,
+      "description": "A diamond worth 50+ gp; retained",
+      "gpCost": 50,
+      "consumed": false
+    },
+    "damageTypes": [
+      "Acid",
+      "Cold",
+      "Fire",
+      "Lightning",
+      "Poison",
+      "Thunder"
+    ],
+    "save": {
+      "ability": null,
+      "type": "Ranged spell attack"
+    },
+    "attackRoll": true
+  },
+  "source": {
+    "book": "Player's Handbook (2024)",
+    "rulesVersion": "2024",
+    "category": "Core",
+    "sourceSensitive": false,
+    "review": {
+      "date": "2026-09-07",
+      "access": "Normal 2024 Wizard spell-list access; learn and prepare through the Wizard's normal rules.",
+      "scope": "Listed mechanics checked against the official current entry or SRD 5.2.1. Tier and acquisition advice are Compendium editorial judgments, not official rules.",
+      "references": [
+        {
+          "title": "Official spell entry",
+          "url": "https://www.dndbeyond.com/spells/2618966-chromatic-orb"
+        }
+      ]
+    }
+  },
+  "compendium": {
+    "tier": "B",
+    "acquisitionRole": "optional",
+    "preparedBaseline": false,
+    "roles": [
+      "damage"
+    ],
+    "summary": "Flexible non-concentration damage with a 2024 bouncing effect. Useful when selecting a damage type matters; less dependable than guaranteed damage or control for a critical turn.",
+    "buildRelevance": [],
+    "warnings": [
+      "Tier is a situational Compendium assessment, not a letter grade quoted from Pack Tactics."
+    ],
+    "relatedChapters": [
+      11,
+      20,
+      25
+    ],
+    "tactics": [
+      "A ranged spell attack deals 3d8 of the selected type on a hit. Matching damage dice can cause a leap to a different target within 30 feet, requiring another attack.",
+      "Each higher slot adds 1d8 and raises the leap cap to the slot level. Do not budget every possible bounce as guaranteed damage; each creature can be targeted only once per casting."
+    ],
+    "research": {
+      "note": "Prompted by the supplied Pack Tactics research package. Video timestamps are its attribution trail, not independently verified quotations; editorial advice is separated from official spell access.",
+      "references": [
+        {
+          "title": "Pack Tactics · 08:31-09:10",
+          "url": "https://www.youtube.com/watch?v=LkMvHC-56Oc&t=511s"
+        }
+      ]
+    }
+  },
+  "sourceLocator": "RESEARCH-20260907:PT-SP-CHROMATIC_ORB"
+}

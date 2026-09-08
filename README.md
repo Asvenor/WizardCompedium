@@ -1,6 +1,12 @@
 # Wizard Compendium
 
-An Astro reference site with fast play tools over the complete 61-chapter Compendium. There is no app login, database, cloud synchronization, or AI service.
+An Astro reference site with fast play tools over the complete 61-chapter Compendium. There is no app login, server database, cloud synchronization, or AI service. Character imports use local browser storage.
+
+## Import your character
+
+Open **Play → Import D&D Beyond Character** to upload, review and save a versioned character snapshot. PDF extraction and scanned-page OCR run on your device. Original PDF retention is optional and off by default. Spellbook ownership, preparation, grants and scrolls remain separate. History and personalized current/future Play guidance use the confirmed snapshot.
+
+See [Character import implementation and privacy](docs/CHARACTER_IMPORT.md) for supported fields, storage, limits, tests and known PDF/validation boundaries. Use a separate browser profile on shared devices; local storage is not an account vault.
 
 ## Run locally
 
@@ -111,6 +117,12 @@ Use the browser's normal Print command on a quick reference. Expand the details 
 Tab moves between controls, Enter/Space activates buttons and disclosures, and the skip link moves to the main content. Chapter content, spell records and reference cards are generated as HTML and remain available without JavaScript. Interactive tools require JavaScript.
 
 ## Test before publishing
+
+The September 2026 research integration adds 16 access-checked Wizard spell records to the preserved 155-record migration baseline (171 total). Its dispositions, source limits and rejected claims are recorded in [the integration audit](docs/RESEARCH_INTEGRATION_20260907.md); the machine-readable inventory is `src/data/research-integration-20260907.json`. Keep the original migration counts unchanged and track later additions separately.
+
+Optional `source.review` metadata records access, review date, verification scope and primary references. `compendium.tactics` supplies practical guidance and search text; `compendium.research` retains supplied video attribution without treating it as independently checked rules or creator quotations. Paid details not inspected must retain their verification warnings.
+
+This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.
 
 ```sh
 npm run check

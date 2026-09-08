@@ -50,8 +50,26 @@
       11,
       15,
       16,
+      25,
       47
-    ]
+    ],
+    "tactics": [
+      "The existing 'A if funded' assessment assumes the consumed pearl is affordable for a genuinely decisive roll. With scarce gold, copying and repeat-use components may offer more lasting value.",
+      "The research's low priority and the compendium's conditional high tier are different budget assumptions, not conflicting rules. Never silently waive the consumed component."
+    ],
+    "research": {
+      "note": "Research-informed tactical supplement. Pack Tactics timestamps below are supplied-package attribution, not newly verified quotations. Existing Compendium tiers are preserved; rules and optimizer preference are distinct.",
+      "references": [
+        {
+          "title": "Pack Tactics · 09:23-09:46",
+          "url": "https://www.youtube.com/watch?v=Co1F7EVmNVQ&t=563s"
+        },
+        {
+          "title": "Pack Tactics · 05:18-05:31",
+          "url": "https://www.youtube.com/watch?v=libYCUn1zbo&t=318s"
+        }
+      ]
+    }
   },
   "sourceLocator": "B00200"
 }

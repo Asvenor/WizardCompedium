@@ -7,7 +7,7 @@
     "castingTime": "Action",
     "range": "Touch",
     "area": null,
-    "duration": null,
+    "duration": "1 hour",
     "concentration": false,
     "ritual": false,
     "components": {
@@ -48,8 +48,31 @@
       11,
       15,
       30,
+      37,
       47
-    ]
+    ],
+    "tactics": [
+      "Use it to regroup, hide equipment or create an escape destination with a climbable entry. Eight Medium-or-smaller creatures fit; plan the rope, entry route and time remaining.",
+      "Attacks, spells and other effects cannot cross the portal. To attack outside, leave the space and accept exposure, movement costs and hostile readied actions.",
+      "The space lasts one hour, so entry time and the rest schedule matter; do not promise an entire uninterrupted one-hour Short Rest inside it. Contents fall out when the spell ends.",
+      "Rope Trick plus Plane Shift is not a guaranteed same-plane teleport. That interpretation is legacy/ruling-sensitive and needs explicit DM agreement."
+    ],
+    "relatedSpells": [
+      "phantom-steed"
+    ],
+    "research": {
+      "note": "Research-informed tactical supplement. Pack Tactics timestamps below are supplied-package attribution, not newly verified quotations. Existing Compendium tiers are preserved; rules and optimizer preference are distinct.",
+      "references": [
+        {
+          "title": "Pack Tactics · 00:28-03:04",
+          "url": "https://www.youtube.com/watch?v=Ro9xq0uOg1c&t=28s"
+        },
+        {
+          "title": "Pack Tactics · 07:05-07:43",
+          "url": "https://www.youtube.com/watch?v=TIchFqqkJKI&t=425s"
+        }
+      ]
+    }
   },
   "sourceLocator": "B00189"
 }

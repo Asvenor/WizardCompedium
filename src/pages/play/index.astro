@@ -4,6 +4,7 @@ import { extractTableRows } from '@/lib/compendium-tables';
 import BaseLayout from '@/components/layout/BaseLayout.astro';
 import ProblemNavigator from '@/components/ProblemNavigator.astro';
 import { playCards } from '@/data/play-mode';
+import PersonalPlay from '@/components/PersonalPlay.astro';
 const chapter = (await getCollection('chapters')).find(
   (c) => c.data.chapter === 18,
 )!;
@@ -39,6 +40,7 @@ const modules = [
   </header>
   <section class="section section--first">
     <div class="site-shell">
+      <PersonalPlay />
       <nav class="form-actions" aria-label="Play modules">
         {
           modules.map(([title, url]) => (

@@ -43,8 +43,28 @@
     ],
     "relatedChapters": [
       11,
-      15
-    ]
+      15,
+      22,
+      30
+    ],
+    "tactics": [
+      "Persistent minions convert earlier resources into later actions, but control must be renewed. Track each group's control expiry and reserve the required maintenance slots.",
+      "Use shared orders and quick group resolution. Corpse availability, equipment, damage resistance and the campaign's social consequences are part of the cost.",
+      "Magic Stone is an optional party-synergy idea only with a legal supplier and a resolved command/attack sequence. Do not assume the Wizard learns that cantrip from Animate Dead."
+    ],
+    "relatedSpells": [
+      "tiny-servant",
+      "danse-macabre"
+    ],
+    "research": {
+      "note": "Research-informed tactical supplement. Pack Tactics timestamps below are supplied-package attribution, not newly verified quotations. Existing Compendium tiers are preserved; rules and optimizer preference are distinct.",
+      "references": [
+        {
+          "title": "Pack Tactics · 04:26-06:27",
+          "url": "https://www.youtube.com/watch?v=P6YGySiNSN8&t=266s"
+        }
+      ]
+    }
   },
   "sourceLocator": "B00191"
 }

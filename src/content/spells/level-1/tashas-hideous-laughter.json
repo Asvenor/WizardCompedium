@@ -1,0 +1,76 @@
+{
+  "id": "tashas-hideous-laughter",
+  "name": "Tasha's Hideous Laughter",
+  "level": 1,
+  "school": "Enchantment",
+  "rules": {
+    "castingTime": "Action",
+    "range": "30 ft",
+    "area": null,
+    "duration": "Up to 1 minute",
+    "concentration": true,
+    "ritual": false,
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": true,
+      "description": "A tart and a feather",
+      "gpCost": null,
+      "consumed": false
+    },
+    "damageTypes": [],
+    "save": {
+      "ability": "WIS",
+      "type": "See effect and repeat-save timing"
+    },
+    "attackRoll": false
+  },
+  "source": {
+    "book": "Player's Handbook (2024)",
+    "rulesVersion": "2024",
+    "category": "Core",
+    "sourceSensitive": false,
+    "review": {
+      "date": "2026-09-07",
+      "access": "Normal 2024 Wizard spell-list access; learn and prepare through the Wizard's normal rules.",
+      "scope": "Listed mechanics checked against the official current entry or SRD 5.2.1. Tier and acquisition advice are Compendium editorial judgments, not official rules.",
+      "references": [
+        {
+          "title": "Official spell entry",
+          "url": "https://www.dndbeyond.com/spells/2619132-tashas-hideous-laughter"
+        }
+      ]
+    }
+  },
+  "compendium": {
+    "tier": "A",
+    "acquisitionRole": "optional",
+    "preparedBaseline": false,
+    "roles": [
+      "control"
+    ],
+    "summary": "Efficient single-target shutdown when the party can leave the victim undamaged. A strong early control alternative, not an automatic replacement for Web against groups.",
+    "buildRelevance": [],
+    "warnings": [
+      "Tier is a situational Compendium assessment, not a letter grade quoted from Pack Tactics."
+    ],
+    "relatedChapters": [
+      11,
+      20
+    ],
+    "tactics": [
+      "Failure inflicts Prone and Incapacitated; the target repeats its Wisdom save at each turn end and whenever damaged. Damage-triggered saves have Advantage, so coordinate focus fire elsewhere.",
+      "2024 upcasting adds one target per slot level above 1. The old low-Intelligence exclusion is absent. Concentration, range and repeated saves still limit reliability."
+    ],
+    "research": {
+      "note": "Prompted by the supplied Pack Tactics research package. Video timestamps are its attribution trail, not independently verified quotations; editorial advice is separated from official spell access.",
+      "references": [
+        {
+          "title": "Pack Tactics · 05:23-05:28",
+          "url": "https://www.youtube.com/watch?v=LkMvHC-56Oc&t=323s"
+        }
+      ]
+    }
+  },
+  "sourceLocator": "RESEARCH-20260907:PT-SP-HIDEOUS_LAUGHTER"
+}

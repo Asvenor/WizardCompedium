@@ -51,8 +51,29 @@
       15,
       22,
       23,
+      30,
       47
-    ]
+    ],
+    "tactics": [
+      "Ordinary duplication reaches spells of level 8 or lower from other class lists, but does not teach those spells or add them to your spellbook. Foresight and True Resurrection are ninth level and excluded.",
+      "Use the Chapter 22 Wish menu for emergency recovery, wards, long casts and retained effects. Concentration and later conditions in the duplicated effect still matter.",
+      "Do not automatically calculate every duplicate as an eighth-level upcast. The compendium's examples use the target's base level unless a specific ruling supports otherwise.",
+      "Bypassing casting time does not erase a later waiting period: Clone maturation and consuming Heroes' Feast are separate from casting.",
+      "There is no consequence-free 2024 'last second of rest' cast: non-cantrip casting interrupts the rest and adds recovery time. See Chapter 30."
+    ],
+    "research": {
+      "note": "Research-informed tactical supplement. Pack Tactics timestamps below are supplied-package attribution, not newly verified quotations. Existing Compendium tiers are preserved; rules and optimizer preference are distinct.",
+      "references": [
+        {
+          "title": "Pack Tactics · 00:14-14:42",
+          "url": "https://www.youtube.com/watch?v=3_xXO1VaxOU&t=14s"
+        },
+        {
+          "title": "Pack Tactics · 18:50-19:31",
+          "url": "https://www.youtube.com/watch?v=idb8V9tz8XQ&t=1130s"
+        }
+      ]
+    }
   },
   "sourceLocator": "B00193"
 }

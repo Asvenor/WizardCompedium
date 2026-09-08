@@ -22,7 +22,8 @@ const relationships = (await getSpellRelationships()).filter((g) =>
 );
 const relatedIds = [
   ...new Set(
-    relationships.flatMap((g) => g.ids).filter((id) => id !== spell.id),
+    [...(spell.compendium.relatedSpells ?? []), ...relationships.flatMap((g) => g.ids)]
+      .filter((id) => id !== spell.id),
   ),
 ].slice(0, 8);
 const allSpells = (await getCollection('spells')).map((s) => s.data);
@@ -105,6 +106,11 @@ const stats = [
         )
       }
       <div class="prose">
+        {spell.source.review && <p><strong>Wizard access:</strong> {spell.source.review.access}</p>}
+        {(spell.compendium.tactics?.length ?? 0) > 0 && <>
+          <h2>Practical use</h2>
+          <ul>{spell.compendium.tactics?.map((note) => <li>{note}</li>)}</ul>
+        </>}
         <h2>Acquisition & preparation</h2>{
           acquisition && (
             <p>
@@ -236,6 +242,15 @@ const stats = [
           )
         }
         <h2>Source status</h2>
+        {spell.source.review && <>
+          <p>Reviewed {spell.source.review.date}. {spell.source.review.scope}</p>
+          <ul>{spell.source.review.references.map((reference) => <li><a href={reference.url}>{reference.title}</a></li>)}</ul>
+        </>}
+        {spell.compendium.research && <details>
+          <summary>Optimization research and attribution</summary>
+          <p>{spell.compendium.research.note}</p>
+          <ul>{spell.compendium.research.references.map((reference) => <li><a href={reference.url}>{reference.title}</a></li>)}</ul>
+        </details>}
         <p>
           <strong>{spell.source.category}</strong>{
             spell.source.book && <> · {spell.source.book}</>

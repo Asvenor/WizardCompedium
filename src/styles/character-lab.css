@@ -1,0 +1,250 @@
+.character-lab {
+  --lab-line: color-mix(in srgb, currentColor 20%, transparent);
+}
+.character-lab [hidden] {
+  display: none !important;
+}
+.character-lab h2:focus {
+  outline: none;
+}
+.import-steps {
+  display: flex;
+  list-style: none;
+  gap: 0.6rem;
+  padding: 0;
+  margin: 0 0 2rem;
+}
+.import-steps li {
+  flex: 1;
+  padding: 0.85rem;
+  border-bottom: 2px solid var(--lab-line);
+  color: var(--text-muted);
+}
+.import-steps [aria-current] {
+  border-color: #bd8d48;
+  color: inherit;
+  font-weight: 700;
+}
+.import-drop {
+  margin: 1.4rem 0;
+  border: 2px dashed var(--lab-line);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  background: rgba(159, 122, 72, 0.06);
+}
+.import-drop label {
+  display: block;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+.import-drop strong {
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+}
+.import-drop span {
+  display: block;
+  font-size: 0.9rem;
+}
+.import-drop.is-dragging {
+  border-color: #bd8d48;
+  background: rgba(159, 122, 72, 0.2);
+}
+.import-drop input {
+  max-width: 100%;
+}
+.lab-privacy {
+  font-size: 0.88rem;
+  max-width: 80ch;
+}
+.lab-warning {
+  border-left: 3px solid #bd8d48;
+  background: rgba(159, 122, 72, 0.08);
+  padding: 1rem 1.25rem;
+  margin: 1rem 0;
+  overflow-wrap: anywhere;
+}
+.lab-warning ul {
+  margin: 0;
+  padding-left: 1rem;
+}
+.lab-details {
+  border: 1px solid var(--lab-line);
+  border-radius: 8px;
+  padding: 1.1rem;
+  margin: 1rem 0;
+}
+.lab-details summary {
+  cursor: pointer;
+  font-weight: 700;
+  padding: 0.3rem 0;
+}
+.lab-field-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.1rem;
+  margin: 1rem 0;
+}
+.lab-field {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 0.7rem;
+  border: 1px solid var(--lab-line);
+  border-radius: 6px;
+}
+.lab-field label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: none;
+}
+.lab-field small {
+  font-size: 0.76rem;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+.lab-field .field {
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+}
+.lab-field textarea {
+  resize: vertical;
+  min-height: 6rem;
+}
+.lab-field.needs-review {
+  border-left: 3px solid #bd8d48;
+}
+.lab-field.is-unknown {
+  border-style: dashed;
+}
+.lab-spell {
+  border: 1px solid var(--lab-line);
+  padding: 1rem;
+  margin: 1rem 0;
+  min-width: 0;
+}
+.lab-spell legend {
+  font-weight: 700;
+  padding: 0 0.5rem;
+}
+.lab-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  padding: 0.75rem 0;
+  cursor: pointer;
+}
+.lab-check input {
+  margin-top: 0.3rem;
+  flex-shrink: 0;
+  width: 1.1rem;
+  height: 1.1rem;
+}
+.lab-diff-row {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1.5fr;
+  gap: 1rem;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--lab-line);
+  overflow-wrap: anywhere;
+}
+.character-lab pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  max-height: 28rem;
+  overflow: auto;
+}
+.lab-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.lab-overview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 0.8rem;
+  margin: 1.5rem 0;
+}
+.lab-overview div {
+  border: 1px solid var(--lab-line);
+  padding: 0.8rem;
+  border-radius: 6px;
+}
+.lab-overview dt {
+  font-size: 0.8rem;
+}
+.lab-overview dd {
+  margin: 0.3rem 0 0;
+  font-weight: 700;
+  font-size: 1.1rem;
+  overflow-wrap: anywhere;
+}
+.lab-play-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1rem 0 2rem;
+}
+.lab-play-card {
+  padding: 1.25rem;
+  border: 1px solid var(--lab-line);
+  border-radius: 8px;
+  min-width: 0;
+}
+.lab-play-card ul {
+  padding-left: 1.1rem;
+}
+.lab-play-card li {
+  margin: 0.6rem 0;
+}
+.character-lab button:focus-visible,
+.character-lab input:focus-visible,
+.character-lab select:focus-visible,
+.character-lab summary:focus-visible {
+  outline: 3px solid #bc8d48;
+  outline-offset: 3px;
+}
+.character-lab .form-actions {
+  margin: 1.25rem 0;
+}
+.character-lab .form-actions .field {
+  width: auto;
+  max-width: 100%;
+}
+.character-lab .button {
+  white-space: normal;
+  text-align: center;
+}
+@media (max-width: 900px) {
+  .lab-field-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 600px) {
+  .lab-field-grid,
+  .lab-play-grid,
+  .lab-diff-row {
+    grid-template-columns: 1fr;
+  }
+  .import-drop {
+    padding: 1.25rem 0.7rem;
+  }
+  .import-steps li {
+    padding: 0.6rem 0.25rem;
+    font-size: 0.9rem;
+  }
+  .lab-spell {
+    padding: 0.6rem;
+  }
+  .lab-details {
+    padding: 0.8rem;
+  }
+  .lab-heading .button {
+    width: 100%;
+  }
+}

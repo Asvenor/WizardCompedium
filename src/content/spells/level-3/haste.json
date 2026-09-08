@@ -36,15 +36,35 @@
     "acquisitionRole": "optional",
     "preparedBaseline": false,
     "roles": [],
-    "summary": "The Compendium includes this spell in its maintained spellbook pool; consult the active spell entry for complete rules text.",
+    "summary": "A situational single-ally speed, defense and restricted-action buff. Its concentration cost and ending penalty make it a poor default substitute for broad control.",
     "buildRelevance": [],
     "warnings": [
       "The Compendium index is an operating reference, not replacement spell text. Confirm the active D&D Beyond entry before casting."
     ],
     "relatedChapters": [
       11,
-      15
-    ]
+      15,
+      18
+    ],
+    "tactics": [
+      "Choose Haste for a concrete objective or ally interaction. The extra action is restricted; it is not a second unrestricted spellcasting action.",
+      "When it ends, the target is Incapacitated with Speed 0 until the end of its next turn. Voluntarily switching concentration can therefore endanger the ally.",
+      "Pack Tactics is strongly negative about its opportunity cost. That is optimization advice, not a prohibition: compare the particular ally's gain with enemy turns denied by Web, Hypnotic Pattern or Sleet Storm."
+    ],
+    "relatedSpells": [
+      "hypnotic-pattern",
+      "sleet-storm",
+      "web"
+    ],
+    "research": {
+      "note": "Research-informed tactical supplement. Pack Tactics timestamps below are supplied-package attribution, not newly verified quotations. Existing Compendium tiers are preserved; rules and optimizer preference are distinct.",
+      "references": [
+        {
+          "title": "Pack Tactics · 12:38-12:55",
+          "url": "https://www.youtube.com/watch?v=P6YGySiNSN8&t=758s"
+        }
+      ]
+    }
   },
   "sourceLocator": "B00142"
 }

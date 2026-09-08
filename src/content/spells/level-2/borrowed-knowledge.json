@@ -1,0 +1,83 @@
+{
+  "id": "borrowed-knowledge",
+  "name": "Borrowed Knowledge",
+  "level": 2,
+  "school": "Divination",
+  "rules": {
+    "castingTime": "Action",
+    "range": "Self",
+    "area": null,
+    "duration": "1 hour",
+    "concentration": false,
+    "ritual": false,
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": true,
+      "description": null,
+      "gpCost": null,
+      "consumed": null
+    },
+    "damageTypes": [],
+    "save": {
+      "ability": null,
+      "type": null
+    },
+    "attackRoll": false
+  },
+  "source": {
+    "book": "Strixhaven: A Curriculum of Chaos",
+    "rulesVersion": "Expanded legacy supplement with 2024 campaign permission",
+    "category": "Expanded",
+    "sourceSensitive": true,
+    "review": {
+      "date": "2026-09-07",
+      "access": "Wizard spell; requires the campaign to permit this expanded source.",
+      "scope": "Wizard-list access and displayed metadata checked. Full paid spell text was unavailable in this review; detailed stat blocks and unverified numerical claims are not reproduced.",
+      "references": [
+        {
+          "title": "Official spell entry",
+          "url": "https://www.dndbeyond.com/spells/1239802-borrowed-knowledge"
+        },
+        {
+          "title": "Official Wizard spell list — access and displayed metadata",
+          "url": "https://www.dndbeyond.com/spells/class/8-wizard"
+        }
+      ]
+    }
+  },
+  "compendium": {
+    "tier": "C",
+    "acquisitionRole": "optional",
+    "preparedBaseline": false,
+    "roles": [
+      "utility",
+      "information"
+    ],
+    "summary": "A source-dependent utility option for a temporary skill-proficiency gap. Prefer party expertise and mundane preparation before spending a second-level slot.",
+    "buildRelevance": [],
+    "warnings": [
+      "Expanded-source permission is required; owning the book or seeing a spell in a builder is not campaign approval.",
+      "Tier is a situational Compendium assessment, not a letter grade quoted from Pack Tactics.",
+      "Full paid spell mechanics were not independently rechecked; consult the linked active entry before using detailed interactions."
+    ],
+    "relatedChapters": [
+      11,
+      37
+    ],
+    "tactics": [
+      "Consider it before a consequential check that nobody already covers well; it is a copying or mission-preparation candidate, not an automatic combat pick.",
+      "It is on the Wizard list, but requires the campaign to allow its Strixhaven source. It does not grant another class's spell list or make an unknown spell learnable."
+    ],
+    "research": {
+      "note": "Prompted by the supplied Pack Tactics research package. Video timestamps are its attribution trail, not independently verified quotations; editorial advice is separated from official spell access.",
+      "references": [
+        {
+          "title": "Pack Tactics · 09:23-09:46",
+          "url": "https://www.youtube.com/watch?v=Co1F7EVmNVQ&t=563s"
+        }
+      ]
+    }
+  },
+  "sourceLocator": "RESEARCH-20260907:PT-SP-BORROWED_KNOWLEDGE"
+}

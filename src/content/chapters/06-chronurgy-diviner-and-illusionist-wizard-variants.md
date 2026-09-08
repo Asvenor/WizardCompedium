@@ -53,3 +53,19 @@ Use Explorer's Guide to Wildemount and the active D&D Beyond entry as the rules 
 
 <!-- source:B00097 -->
 <aside class="callout callout--note"><p>Subclass progression: use the red, yellow, or violet route in <a href="/chapters/04-build-selection-and-priority-matrix/">Chapter 4</a>. Feature-use tables above remain the operational reference.</p></aside>
+
+<!-- research:PT-20260907-ILLUSIONIST -->
+## Phantasmal Creatures: Wizard access
+
+**Wizard 6 / one-level-dip character 7.** The 2024 Illusionist gains Summon Beast and Summon Fey as always-prepared spells. Summon Fey is also on the normal Wizard list; Summon Beast is not. Feature access to the latter does not make it a free choice for every Wizard or let another subclass copy it into its ordinary spellbook.
+
+The feature can change these castings to Illusion, with a spectral-looking creature, and provides a slotless casting of each per Long Rest. Follow its modified-hit-point rule rather than assuming a normal full-strength summon. A slotless casting does not, by itself, mean that the spell has become a cantrip or that every spell-level value is zero. The research's "zero Fey Blade attacks" assertion is not adopted as a settled rule.
+
+<div class="table-wrap" tabindex="0"><table><thead><tr><th scope="col">Option</th><th scope="col">Wizard access</th><th scope="col">Practical decision</th></tr></thead><tbody>
+<tr><td>Summon Beast</td><td>2024 Illusionist 6 through Phantasmal Creatures; not normal Wizard-list access.</td><td>A body for a specific job without spending a slot can be useful. It still competes for concentration and uses the feature's modified creature.</td></tr>
+<tr><td><a href="/spells/summon-fey/">Summon Fey</a></td><td>Ordinary Wizard learning at Wizard 5; additionally always prepared for Illusionist 6.</td><td>Compare sustained summon value with area shutdown. Feature access avoids a spellbook-choice cost, not every resource cost.</td></tr>
+</tbody></table></div>
+
+Budget the retained 200+ gp Summon Beast component and 300+ gp Summon Fey component unless an applicable rule explicitly waives them. Merely removing a spell-slot expenditure does not remove material requirements. Creature attack scaling and any disputed interaction must use the selected spell and subclass text; no unverified damage calculator is supplied.
+
+Source basis: <a href="https://www.dndbeyond.com/posts/1753-2024-wizard-vs-2014-wizard-whats-new">official 2024 Wizard overview</a>, the <a href="https://roll20.net/compendium/dnd5e/Subclasses%3AIllusionist?expansion=32231&iframe=true">licensed 2024 Illusionist text</a>, and the licensed <a href="https://roll20.net/compendium/dnd5e/Spells%3ASummon%20Beast?expansion=32231&iframe=true">Summon Beast</a> / <a href="https://app.roll20.net/compendium/dnd5e/Spells%3ASummon%20Fey?expansion=32231">Summon Fey</a> entries. Optimization lead: <a href="https://www.youtube.com/watch?v=8DJ2HMdaSKQ&t=798s">Pack Tactics, 13:18–16:10</a>; supplied-package paraphrase, not a newly checked quotation.

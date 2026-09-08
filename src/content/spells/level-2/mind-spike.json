@@ -1,0 +1,80 @@
+{
+  "id": "mind-spike",
+  "name": "Mind Spike",
+  "level": 2,
+  "school": "Divination",
+  "rules": {
+    "castingTime": "Action",
+    "range": "120 ft",
+    "area": null,
+    "duration": "Up to 1 hour",
+    "concentration": true,
+    "ritual": false,
+    "components": {
+      "verbal": false,
+      "somatic": true,
+      "material": false,
+      "description": null,
+      "gpCost": 0,
+      "consumed": false
+    },
+    "damageTypes": [
+      "Psychic"
+    ],
+    "save": {
+      "ability": "WIS",
+      "type": "Half damage on success; tracking on failure"
+    },
+    "attackRoll": false
+  },
+  "source": {
+    "book": "Player's Handbook (2024)",
+    "rulesVersion": "2024",
+    "category": "Core",
+    "sourceSensitive": false,
+    "review": {
+      "date": "2026-09-07",
+      "access": "Normal 2024 Wizard spell-list access; learn and prepare through the Wizard's normal rules.",
+      "scope": "Listed mechanics checked against the official current entry or SRD 5.2.1. Tier and acquisition advice are Compendium editorial judgments, not official rules.",
+      "references": [
+        {
+          "title": "Official spell entry",
+          "url": "https://www.dndbeyond.com/spells/2619038-mind-spike"
+        }
+      ]
+    }
+  },
+  "compendium": {
+    "tier": "C",
+    "acquisitionRole": "optional",
+    "preparedBaseline": false,
+    "roles": [
+      "damage",
+      "information"
+    ],
+    "summary": "Damage with tracking on a failed save. Use it when maintaining contact with a fleeing or invisible target is more valuable than concentrating on battlefield control.",
+    "buildRelevance": [],
+    "warnings": [
+      "Tier is a situational Compendium assessment, not a letter grade quoted from Pack Tactics."
+    ],
+    "relatedChapters": [
+      6,
+      11,
+      37
+    ],
+    "tactics": [
+      "The 2024 version deals 3d8 Psychic damage, half on a successful Wisdom save. A failed save also establishes same-plane location tracking while concentration lasts; higher slots add 1d8.",
+      "Diviner's Expert Divination can recover a lower-level slot, but that does not refund the original slot, the action, or the concentration you replaced. This is not an infinite resource engine."
+    ],
+    "research": {
+      "note": "Prompted by the supplied Pack Tactics research package. Video timestamps are its attribution trail, not independently verified quotations; editorial advice is separated from official spell access.",
+      "references": [
+        {
+          "title": "Pack Tactics · 16:51-17:35",
+          "url": "https://www.youtube.com/watch?v=Co1F7EVmNVQ&t=1011s"
+        }
+      ]
+    }
+  },
+  "sourceLocator": "RESEARCH-20260907:PT-SP-MIND_SPIKE"
+}

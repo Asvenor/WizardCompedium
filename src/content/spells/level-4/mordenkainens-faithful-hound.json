@@ -1,0 +1,81 @@
+{
+  "id": "mordenkainens-faithful-hound",
+  "name": "Mordenkainen's Faithful Hound",
+  "level": 4,
+  "school": "Conjuration",
+  "rules": {
+    "castingTime": "Action",
+    "range": "30 ft",
+    "area": null,
+    "duration": "8 hours",
+    "concentration": false,
+    "ritual": false,
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": true,
+      "description": "A silver whistle",
+      "gpCost": null,
+      "consumed": false
+    },
+    "damageTypes": [
+      "Force"
+    ],
+    "save": {
+      "ability": "DEX",
+      "type": "No bite damage on success"
+    },
+    "attackRoll": false
+  },
+  "source": {
+    "book": "Player's Handbook (2024)",
+    "rulesVersion": "2024",
+    "category": "Core",
+    "sourceSensitive": false,
+    "review": {
+      "date": "2026-09-07",
+      "access": "Normal 2024 Wizard spell-list access; learn and prepare through the Wizard's normal rules.",
+      "scope": "Listed mechanics checked against the official current entry or SRD 5.2.1. Tier and acquisition advice are Compendium editorial judgments, not official rules.",
+      "references": [
+        {
+          "title": "Official spell entry",
+          "url": "https://www.dndbeyond.com/spells/2619110-mordenkainens-faithful-hound"
+        }
+      ]
+    }
+  },
+  "compendium": {
+    "tier": "B",
+    "acquisitionRole": "optional",
+    "preparedBaseline": false,
+    "roles": [
+      "defense",
+      "damage",
+      "detection"
+    ],
+    "summary": "An invisible watchdog and non-concentration close-range hazard. Its main advantages are duration and guarding; a kill-box plan needs a separate containment method.",
+    "buildRelevance": [],
+    "warnings": [
+      "Tier is a situational Compendium assessment, not a letter grade quoted from Pack Tactics."
+    ],
+    "relatedChapters": [
+      11,
+      22,
+      30
+    ],
+    "tactics": [
+      "A bite attempts 4d8 Force damage against an enemy within 5 feet at the start of your turn, with a Dexterity save. The hound is invulnerable but cannot pursue freely; moving it uses your Magic action.",
+      "Keep within 300 feet, choose a password and account for its audible alarm. In a force-prison plan, place the hound before sealing the target and agree on barrier geometry."
+    ],
+    "research": {
+      "note": "Prompted by the supplied Pack Tactics research package. Video timestamps are its attribution trail, not independently verified quotations; editorial advice is separated from official spell access.",
+      "references": [
+        {
+          "title": "Pack Tactics · 23:09-23:38",
+          "url": "https://www.youtube.com/watch?v=LkMvHC-56Oc&t=1389s"
+        }
+      ]
+    }
+  },
+  "sourceLocator": "RESEARCH-20260907:PT-SP-FAITHFUL_HOUND"
+}

@@ -75,6 +75,8 @@ MANDATORY means “own it in an optimized spellbook,” not “always prepare it
 <tr><td><a href="/spells/comprehend-languages/">Comprehend Languages</a></td><td>[R]</td></tr>
 <tr><td><a href="/spells/thunderwave/">Thunderwave</a></td><td>—</td></tr>
 <tr><td><a href="/spells/witch-bolt/">Witch Bolt</a></td><td>[C]</td></tr>
+<tr><td><a href="/spells/tashas-hideous-laughter/">Tasha's Hideous Laughter</a></td><td>[C]</td></tr>
+<tr><td><a href="/spells/chromatic-orb/">Chromatic Orb</a></td><td>—</td></tr>
 </tbody>
 </table>
 </div>
@@ -104,6 +106,9 @@ MANDATORY means “own it in an optimized spellbook,” not “always prepare it
 <tr><td><a href="/spells/nystuls-magic-aura/">Nystul's Magic Aura</a></td><td>—</td></tr>
 <tr><td><a href="/spells/phantasmal-force/">Phantasmal Force</a></td><td>[C]</td></tr>
 <tr><td><a href="/spells/shadow-blade/">Shadow Blade</a></td><td>[X] [C] [B]</td></tr>
+<tr><td><a href="/spells/darkvision/">Darkvision</a></td><td>—</td></tr>
+<tr><td><a href="/spells/borrowed-knowledge/">Borrowed Knowledge</a></td><td>[X]</td></tr>
+<tr><td><a href="/spells/mind-spike/">Mind Spike</a></td><td>[C]</td></tr>
 </tbody>
 </table>
 </div>
@@ -133,6 +138,10 @@ MANDATORY means “own it in an optimized spellbook,” not “always prepare it
 <tr><td><a href="/spells/remove-curse/">Remove Curse</a></td><td>—</td></tr>
 <tr><td><a href="/spells/clairvoyance/">Clairvoyance</a></td><td>[C]</td></tr>
 <tr><td><a href="/spells/water-breathing/">Water Breathing</a></td><td>[R]</td></tr>
+<tr><td><a href="/spells/major-image/">Major Image</a></td><td>[C]</td></tr>
+<tr><td><a href="/spells/tiny-servant/">Tiny Servant</a></td><td>[X]</td></tr>
+<tr><td><a href="/spells/tongues/">Tongues</a></td><td>—</td></tr>
+<tr><td><a href="/spells/summon-fey/">Summon Fey</a></td><td>[C]</td></tr>
 </tbody>
 </table>
 </div>
@@ -158,6 +167,9 @@ MANDATORY means “own it in an optimized spellbook,” not “always prepare it
 <tr><td><a href="/spells/fabricate/">Fabricate</a></td><td>—</td></tr>
 <tr><td><a href="/spells/locate-creature/">Locate Creature</a></td><td>[C]</td></tr>
 <tr><td><a href="/spells/stone-shape/">Stone Shape</a></td><td>—</td></tr>
+<tr><td><a href="/spells/wall-of-fire/">Wall of Fire</a></td><td>[C]</td></tr>
+<tr><td><a href="/spells/summon-greater-demon/">Summon Greater Demon</a></td><td>[X] [C]</td></tr>
+<tr><td><a href="/spells/mordenkainens-faithful-hound/">Mordenkainen's Faithful Hound</a></td><td>—</td></tr>
 </tbody>
 </table>
 </div>
@@ -187,6 +199,8 @@ MANDATORY means “own it in an optimized spellbook,” not “always prepare it
 <tr><td><a href="/spells/modify-memory/">Modify Memory</a></td><td>[C]</td></tr>
 <tr><td><a href="/spells/teleportation-circle/">Teleportation Circle</a></td><td>—</td></tr>
 <tr><td><a href="/spells/creation/">Creation</a></td><td>—</td></tr>
+<tr><td><a href="/spells/circle-of-power/">Circle of Power</a></td><td>[C]</td></tr>
+<tr><td><a href="/spells/danse-macabre/">Danse Macabre</a></td><td>[X] [C]</td></tr>
 </tbody>
 </table>
 </div>
@@ -229,6 +243,7 @@ MANDATORY means “own it in an optimized spellbook,” not “always prepare it
 <tr><td><a href="/spells/etherealness/">Etherealness</a></td><td>—</td></tr>
 <tr><td><a href="/spells/project-image/">Project Image</a></td><td>[C]</td></tr>
 <tr><td><a href="/spells/prismatic-spray/">Prismatic Spray</a></td><td>—</td></tr>
+<tr><td><a href="/spells/mordenkainens-sword/">Mordenkainen's Sword</a></td><td>[C]</td></tr>
 </tbody>
 </table>
 </div>
@@ -269,6 +284,7 @@ MANDATORY means “own it in an optimized spellbook,” not “always prepare it
 <tr><td><a href="/spells/meteor-swarm/">Meteor Swarm</a></td><td>—</td></tr>
 <tr><td><a href="/spells/ravenous-void/">Ravenous Void</a></td><td>[D] [C]</td></tr>
 <tr><td><a href="/spells/time-stop/">Time Stop</a></td><td>—</td></tr>
+<tr><td><a href="/spells/weird/">Weird</a></td><td>[C]</td></tr>
 </tbody>
 </table>
 </div>
@@ -752,3 +768,43 @@ Power depends on route, downtime, party, or rulings.
 ### ACQUISITION RULE
 
 Guarantee the spells that create the build's next mandatory job; copy rituals, infrastructure, narrow mission tools, and redundancy when real access exists. Use <a href="/chapters/31-spellbook-operations-and-copy-priority/">Chapter 31</a> for the legal copying procedure, <a href="/chapters/13-prepared-spell-packages/">Chapter 13</a> for preparation packages, and the exact active D&amp;D Beyond entry for every source/version decision.
+
+
+<!-- research:PT-20260907-ACQUISITION -->
+## Research-informed acquisition decisions
+
+These are alternatives within the existing spellbook plan, not extra free spells. The expanded ownership tables above now include the researched Wizard-list additions. **[X] requires the named source to be permitted.** A spell being legal to learn does not make it an efficient pick in every campaign.
+
+<div class="table-wrap" tabindex="0"><table><thead><tr><th scope="col">Wizard option</th><th scope="col">When to acquire it</th><th scope="col">What changes the decision</th></tr></thead><tbody>
+<tr><td><a href="/spells/tashas-hideous-laughter/">Tasha's Hideous Laughter</a></td><td>Early alternative for single-target shutdown.</td><td>Leave the target undamaged; repeated saves and concentration prevent guaranteed lockdown.</td></tr>
+<tr><td><a href="/spells/phantom-steed/">Phantom Steed</a></td><td>Guarantee at Wizard 5 if mounted travel and open maps are a major part of play and no real copying opportunity exists.</td><td>Ritual ownership has recurring value, but cramped maps and a fragile mount reduce it.</td></tr>
+<tr><td><a href="/spells/rope-trick/">Rope Trick</a></td><td>Secure early when the party lacks a protected regrouping space.</td><td>The portal is not a firing slit. Entering, exiting, duration and waiting enemies matter.</td></tr>
+<tr><td><a href="/spells/locate-object/">Locate Object</a></td><td>High-priority copying, or a Diviner Savant choice, when searches decide missions.</td><td>Information must refer to an eligible familiar object or object category, not an unknown creature's arbitrary possessions.</td></tr>
+<tr><td><a href="/spells/chromatic-orb/">Chromatic Orb</a></td><td>Optional flexible damage; first secure defense and control.</td><td>The retained 50+ gp diamond is an early purchase, and bouncing damage is not guaranteed.</td></tr>
+<tr><td><a href="/spells/major-image/">Major Image</a></td><td>Early for an illusion-focused campaign; otherwise copy for prepared operations.</td><td>The slot-4+ version is persistent without concentration, but ordinary illusions are not physical barriers.</td></tr>
+<tr><td><a href="/spells/wall-of-fire/">Wall of Fire</a></td><td>Take when chokepoints and allied forced movement are dependable.</td><td>Compare repeated positional damage with immediate control; do not invent extra trigger damage.</td></tr>
+<tr><td><a href="/spells/summon-fey/">Summon Fey</a></td><td>Optional sustained summon, with separate Illusionist feature access.</td><td>One extra creature competes with third-level area control for concentration.</td></tr>
+<tr><td><a href="/spells/summon-greater-demon/">Summon Greater Demon</a> [X]</td><td>Build/table choice, not a universal level-four pick.</td><td>Allowed monster version, loss of control, containment and party positioning must be settled first.</td></tr>
+<tr><td><a href="/spells/tiny-servant/">Tiny Servant</a> [X]</td><td>Copy for recurring minion or utility work.</td><td>Commands, equipment and any Magic Stone supplier need their own legal action sequence.</td></tr>
+<tr><td><a href="/spells/danse-macabre/">Danse Macabre</a> [X]</td><td>Specialist combat choice when suitable corpses and manageable minion turns are realistic.</td><td>It uses concentration; it is not Animate Dead's persistent upkeep system.</td></tr>
+<tr><td><a href="/spells/circle-of-power/">Circle of Power</a></td><td>Prepare against a known spell-heavy threat at Wizard 9+.</td><td>Party protection can beat another control zone, but proximity and concentration have costs.</td></tr>
+<tr><td><a href="/spells/mordenkainens-faithful-hound/">Mordenkainen's Faithful Hound</a></td><td>Copy for guard duty or a permitted containment plan.</td><td>Its non-concentration duration is useful; the tiny bite area still needs a target kept nearby.</td></tr>
+<tr><td><a href="/spells/darkvision/">Darkvision</a></td><td>Copy when a party member's sight limits unlit operations.</td><td>Do not pay a preparation slot to duplicate an adequate existing sense.</td></tr>
+<tr><td><a href="/spells/tongues/">Tongues</a></td><td>Copy before diplomacy across unfamiliar languages.</td><td>Communication does not create trust, truthfulness or charm.</td></tr>
+<tr><td><a href="/spells/borrowed-knowledge/">Borrowed Knowledge</a> [X]</td><td>Copy when a permitted skill-proficiency tool covers a real party gap.</td><td>It does not grant a class feature or turn a skill into automatic success; check the source's limits.</td></tr>
+<tr><td><a href="/spells/mind-spike/">Mind Spike</a></td><td>Tracking specialist, not a Diviner damage-loop default.</td><td>Expert Divination does not repay the lost concentration or combat action.</td></tr>
+<tr><td><a href="/spells/mordenkainens-sword/">Mordenkainen's Sword</a></td><td>Low-priority damage option after major seventh-level jobs are covered.</td><td>Concentration and repeated Bonus Actions compete with stronger control and utility.</td></tr>
+<tr><td><a href="/spells/weird/">Weird</a></td><td>Late specialist area fear/damage after Wish and transformation options.</td><td>Repeated saves, fear immunity and ninth-level opportunity cost limit its default value.</td></tr>
+</tbody></table></div>
+
+### Access boundaries
+
+- **Summon Beast:** not an ordinary Wizard spellbook choice. The 2024 Illusionist gains access through Phantasmal Creatures at Wizard 6; see <a href="/chapters/06-chronurgy-diviner-and-illusionist-wizard-variants/#phantasmal-creatures-wizard-access">the subclass procedure</a>.
+- **Giant Insect and Revivify:** not normal Wizard-list choices. Their Wizard route here is level-9 <a href="/chapters/22-optional-advanced-appendix-campaign-warping-wizard-engines/#wish-target-menu">Wish duplication</a>, normally reached at Wizard 17, not their printed spell-level unlock.
+- **Foresight:** a genuine ninth-level Wizard spell, but not a legal target for ordinary Wish duplication.
+
+### How to read the research
+
+The supplied Pack Tactics package is a source of optimization leads, not a replacement rules source. Its S/A/B conversions of numbered lists are not all the creator's stated letter grades. New spell-card tiers are this Compendium's editorial assessments under the conditions above; they do not overwrite the original route ratings. The Fighter/Diviner variant is an alternative allocation, not proof that every other chassis is inferior.
+
+Access was checked against the <a href="https://www.dndbeyond.com/spells/class/8-wizard">official Wizard spell list</a>, current individual entries and SRD 5.2.1. Each new spell card states the scope of verification; paid details that could not be inspected are not presented as independently verified. Research trail: <a href="https://www.youtube.com/watch?v=TIchFqqkJKI">Pack Tactics Wizard build</a> and the timestamped references on individual cards.

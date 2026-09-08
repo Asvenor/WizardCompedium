@@ -1,0 +1,87 @@
+{
+  "id": "circle-of-power",
+  "name": "Circle of Power",
+  "level": 5,
+  "school": "Abjuration",
+  "rules": {
+    "castingTime": "Action",
+    "range": "Self",
+    "area": "30-foot emanation",
+    "duration": "Up to 10 minutes",
+    "concentration": true,
+    "ritual": false,
+    "components": {
+      "verbal": true,
+      "somatic": false,
+      "material": false,
+      "description": null,
+      "gpCost": 0,
+      "consumed": false
+    },
+    "damageTypes": [],
+    "save": {
+      "ability": null,
+      "type": null
+    },
+    "attackRoll": false
+  },
+  "source": {
+    "book": "Player's Handbook (2024)",
+    "rulesVersion": "2024",
+    "category": "Core",
+    "sourceSensitive": false,
+    "review": {
+      "date": "2026-09-07",
+      "access": "Normal 2024 Wizard spell-list access; learn and prepare through the Wizard's normal rules.",
+      "scope": "2024 Wizard access, casting metadata, aura and saving-throw protection checked against the licensed current spell entry.",
+      "references": [
+        {
+          "title": "Official spell entry",
+          "url": "https://www.dndbeyond.com/spells/2618970-circle-of-power"
+        },
+        {
+          "title": "Official Wizard spell list — access and displayed metadata",
+          "url": "https://www.dndbeyond.com/spells/class/8-wizard"
+        },
+        {
+          "title": "Licensed 2024 Circle of Power entry",
+          "url": "https://roll20.net/compendium/dnd5e/Spells%3ACircle%20of%20Power?expansion=32231&iframe=true"
+        }
+      ]
+    }
+  },
+  "compendium": {
+    "tier": "A",
+    "acquisitionRole": "optional",
+    "preparedBaseline": false,
+    "roles": [
+      "defense",
+      "anti-caster"
+    ],
+    "summary": "A normal 2024 Wizard option for party protection against hostile magic. Prepare it for spell-heavy opposition when defending nearby allies is worth your concentration.",
+    "buildRelevance": [],
+    "warnings": [
+      "Tier is a situational Compendium assessment, not a letter grade quoted from Pack Tactics."
+    ],
+    "relatedChapters": [
+      11,
+      13,
+      24
+    ],
+    "tactics": [
+      "Available with fifth-level Wizard spells: Wizard 9, or character 10 after a one-level dip. Do not use the old Paladin-only access assumption for a 2024 Wizard.",
+      "Compare protecting the group with separating enemy casters using Wall of Force. The aura requires proximity; avoid unnecessary clustering and preserve an escape route.",
+      "Within the 30-foot Emanation, you and allies have Advantage on saves against spells and other magical effects. When such an effect permits a save for half damage, a successful save instead means no damage; a failed save does not gain blanket resistance."
+    ],
+    "research": {
+      "note": "Prompted by the supplied Pack Tactics research package. Video timestamps are its attribution trail, not independently verified quotations; editorial advice is separated from official spell access.",
+      "references": [
+        {
+          "title": "Pack Tactics · 00:37-01:13",
+          "url": "https://www.youtube.com/watch?v=idb8V9tz8XQ&t=37s"
+        }
+      ]
+    }
+  },
+  "sourceLocator": "RESEARCH-20260907:PT-SP-CIRCLE_OF_POWER"
+}

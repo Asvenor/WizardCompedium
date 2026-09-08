@@ -36,7 +36,7 @@
     "acquisitionRole": "optional",
     "preparedBaseline": false,
     "roles": [],
-    "summary": "The Compendium includes this spell in its maintained spellbook pool; consult the active spell entry for complete rules text.",
+    "summary": "An expanded-source concentration hazard whose strongest researched use is coordinated containment. The spell and its partner require separate concentration holders.",
     "buildRelevance": [],
     "warnings": [
       "Source-sensitive: availability does not grant permission by itself; use the exact selectable entry and campaign rules.",
@@ -44,8 +44,27 @@
     ],
     "relatedChapters": [
       11,
-      15
-    ]
+      15,
+      22
+    ],
+    "tactics": [
+      "Agree on the active Xanathar's spell and how its exhaustion effects interact with the campaign's 2024 rules. Do not import an old exhaustion penalty table into a revised game.",
+      "In the Wall of Force pairing, cast the hazard first, then have another caster contain the targets. Placing a spell through an already sealed barrier is not a safe assumption.",
+      "Keep both casters protected and plan for teleportation, Disintegrate, concentration loss, immunity and successful saves. This is a conditional setup, not a guaranteed boss kill."
+    ],
+    "relatedSpells": [
+      "wall-of-force",
+      "mordenkainens-faithful-hound"
+    ],
+    "research": {
+      "note": "Research-informed tactical supplement. Pack Tactics timestamps below are supplied-package attribution, not newly verified quotations. Existing Compendium tiers are preserved; rules and optimizer preference are distinct.",
+      "references": [
+        {
+          "title": "Pack Tactics · 06:18-07:16",
+          "url": "https://www.youtube.com/watch?v=jseWFC9gwc8&t=378s"
+        }
+      ]
+    }
   },
   "sourceLocator": "B00142"
 }

@@ -2,3 +2,7 @@ node_modules/
 dist/
 .astro/
 .DS_Store
+public/character-import/
+test-results/
+playwright-report/
+tmp/

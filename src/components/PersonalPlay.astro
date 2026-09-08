@@ -1,0 +1,12 @@
+---
+import CharacterCatalog from './CharacterCatalog.astro';
+import '@/styles/character-lab.css';
+---
+<section class="tool-panel character-lab" id="my-character" aria-labelledby="my-character-title">
+  <div class="lab-heading"><div><p class="kicker">Your character · Your next move</p><h2 id="my-character-title">A place for your wizard.</h2></div><a class="button button--primary" href="/play/import/">Import D&D Beyond Character</a></div>
+  <p id="character-status" role="status">Import a sheet to see confirmed spells and character-specific suggestions. Stored privately in this browser profile.</p>
+  <div id="character-content" hidden></div>
+  <noscript><p>Character snapshots need JavaScript. The reference tools below remain available.</p></noscript>
+</section>
+<CharacterCatalog />
+<script>import '@/features/character-lab/play-ui.mjs';</script>

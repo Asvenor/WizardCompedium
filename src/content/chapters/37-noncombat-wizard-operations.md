@@ -39,3 +39,35 @@ Outside combat, the Wizard wins by converting information, preparation, and spel
 <div class="table-wrap" data-source-locator="B00602.T001" tabindex="0"><table><thead><tr><th scope="col">Check</th><th scope="col">Static procedure</th></tr></thead><tbody><tr><td>Concentration sequence</td><td>Mark every concentration spell before the scene. Detect Thoughts -&gt; Suggestion is sequential; Alter Self prevents simultaneous concentration on another effect; Major Image becomes easier to combine only when cast with a level-4+ slot.</td></tr><tr><td>Visible casting</td><td>Verbal and Somatic components can expose the operation. Cast before entering, use cover/noise/permission, or create a mundane explanation. Do not assume observers ignore obvious spellcasting.</td></tr><tr><td>Physical inspection</td><td>Disguise Self, Minor Illusion, and Major Image all have physical or investigative failure points. Use real props, controlled distance, barriers, urgency, and an identity that does not invite touching.</td></tr><tr><td>Witness and evidence control</td><td>Know who saw the caster, what changed, which records remain, and what the target remembers after a charm ends. A successful spell can still create a later investigation.</td></tr><tr><td>Exit threshold</td><td>Leave when the objective is complete. Do not spend extra rounds proving the disguise, searching optional rooms, or improvising a second crime after the original plan has already succeeded.</td></tr><tr><td>Two-player role split</td><td>Wizard: information, bypass, misdirection, remote interaction, and exit magic. Partner: visible speaker, bodyguard, carrier, lookout, and mundane confirmation. Each should know the abort signal and meeting point.</td></tr></tbody></table></div>
 
 <!-- source:B00603 -->
+
+<!-- research:PT-20260907-INFORMATION -->
+## Contact Other Plane: five-question search
+
+**Access:** Wizard 9, or character 10 after a one-level dip. Read the spell from your spellbook for an **11-minute ritual**, or spend a slot for the normal one-minute casting. The effect itself lasts one minute. Long casting requires concentration even though the completed spell has no ongoing concentration requirement.
+
+Prepare a question tree around one decision the party can act on. For example, divide a known region into 32 non-overlapping numbered sectors, ensure the entity can understand that division, and ask whether a known target is in the selected half. Each reliable yes/no answer halves the remaining possibilities; five such answers can identify one of 32 sectors. This is an information-theory ceiling, not a guarantee that the spell knows the answer.
+
+<div class="table-wrap" tabindex="0"><table><thead><tr><th scope="col">Step</th><th scope="col">Procedure</th><th scope="col">Failure check</th></tr></thead><tbody>
+<tr><td>Define</td><td>Use mutually exclusive possibilities with a clearly defined time and subject.</td><td>Overlapping sectors or a moving target make the result ambiguous.</td></tr>
+<tr><td>Contact</td><td>Cast somewhere safe and resolve the DC 15 Intelligence saving throw.</td><td>Failure deals 6d6 Psychic damage and causes Incapacitated until a Long Rest ends; Greater Restoration can end the effect.</td></tr>
+<tr><td>Ask</td><td>Ask no more than five questions during the one-minute effect.</td><td>The entity can answer "unclear" or lack the knowledge. Do not silently turn uncertainty into "no."</td></tr>
+<tr><td>Act</td><td>Choose the route, countermeasure or investigation the answer supports.</td><td>Divination is not permission to use adventure text or assume facts outside the answer.</td></tr>
+</tbody></table></div>
+
+## Locate Object and Phantom Steed: search before danger
+
+Create the mount first. Then cast Locate Object and move through a planned search grid, recording directions and your position. The 1,000-foot detection range is useful for searching, but a specific object must have been seen up close and lead blocks detection. Searching for a category finds the nearest qualifying object, which may be an innocent match.
+
+Do not ritual-cast a fresh mount while expecting to maintain Locate Object: the long casting needs concentration. Schedule the mounts' separate expiry times. A controlled Phantom Steed can Dash for 200 feet or Disengage while retaining its normal 100-foot movement; Disengage does not double its movement.
+
+## Rope Trick: refuge, not a shooting window
+
+Plan a reachable rope and an exit route. The extradimensional space holds up to eight Medium-or-smaller creatures, and the rope can be pulled inside. Attacks, spells and other effects cannot cross the portal. Leaving to act exposes you to enemies and readied actions; returning costs movement and requires a usable route.
+
+The spell lasts one hour, so do not assume entry time plus a complete one-hour Short Rest fits safely inside it. Enemies can wait at the exit, and occupants drop out when it ends. The research's Rope Trick/Plane Shift shortcut is not used as a guaranteed same-plane travel rule.
+
+## Language and skill gaps
+
+Use <a href="/spells/tongues/">Tongues</a> for two-way spoken or signed communication, <a href="/spells/darkvision/">Darkvision</a> for a missing sensory capability, and source-permitted <a href="/spells/borrowed-knowledge/">Borrowed Knowledge</a> only when temporary skill coverage justifies the slot. These complement the party; none supplies truth, cooperation, unknown facts or additional class spell access.
+
+Rules basis: SRD 5.2.1, Contact Other Plane (p. 119), Locate Object (p. 145), Phantom Steed (p. 152), Rope Trick (p. 159), Tongues (pp. 169–170), and the <a href="https://www.dndbeyond.com/sources/dnd/br-2024/spells">spellcasting rules</a>. Research leads: <a href="https://www.youtube.com/watch?v=Co1F7EVmNVQ&t=783s">information spells, 13:03–15:50</a> and <a href="https://www.youtube.com/watch?v=Ro9xq0uOg1c">Rope Trick</a>, from the supplied package.

@@ -73,6 +73,12 @@ const spells = defineCollection({
         'Legacy core',
       ]),
       sourceSensitive: z.boolean(),
+      review: z.object({
+        date: z.string(),
+        access: z.string(),
+        scope: z.string(),
+        references: z.array(z.object({ title: z.string(), url: z.url() })).min(1),
+      }).optional(),
     }),
     compendium: z.object({
       tier: z.enum(['S+', 'S', 'A', 'B', 'C', 'D', 'E', 'F']).nullable(),
@@ -100,6 +106,11 @@ const spells = defineCollection({
       warnings: z.array(z.string()),
       relatedChapters: z.array(z.number().int().min(1).max(61)),
       relatedSpells: z.array(z.string()).optional(),
+      tactics: z.array(z.string()).optional(),
+      research: z.object({
+        note: z.string(),
+        references: z.array(z.object({ title: z.string(), url: z.url() })),
+      }).optional(),
     }),
     sourceLocator: z.string(),
   }),

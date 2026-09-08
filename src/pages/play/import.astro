@@ -1,0 +1,40 @@
+---
+import BaseLayout from '@/components/layout/BaseLayout.astro';
+import CharacterCatalog from '@/components/CharacterCatalog.astro';
+import '@/styles/character-lab.css';
+---
+<BaseLayout title="Import your character" active="play">
+  <header class="page-hero"><div class="site-shell"><p class="kicker">Character Lab · Private on this device</p><h1>Bring your wizard to the table.</h1><p>Import a D&D Beyond PDF, review the readings, then make Play Mode yours.</p><a href="/play/">← Back to Play Mode</a></div></header>
+  <section class="section section--first"><div class="site-shell character-lab" id="character-import">
+    <ol class="import-steps" aria-label="Import progress"><li aria-current="step">1 · Upload</li><li>2 · Review</li><li>3 · Confirm</li></ol>
+    <p id="import-status" role="status" aria-live="polite"></p><p id="import-error" role="alert" class="lab-warning" hidden></p>
+    <section id="upload-step" class="tool-panel">
+      <h2 tabindex="-1">Choose your character sheet</h2>
+      <p>No D&D Beyond login needed. The PDF and extracted text stay in this browser. OCR, when needed, also runs on your device.</p>
+      <label class="field-label" for="import-character">Save as</label><select class="field" id="import-character"><option value="">A new character</option></select>
+      <div class="import-drop" id="import-drop"><label for="character-pdf"><strong>Drop a PDF here, or choose a file</strong><span>PDF only · up to 15 MB · 20 pages · English exports</span></label><input id="character-pdf" type="file" accept="application/pdf,.pdf" aria-describedby="upload-help" /></div>
+      <p id="upload-help">Include the spell pages. A spell appearing on the sheet does not prove it is in your spellbook or prepared.</p>
+      <div class="form-actions"><button class="button" id="manual-entry" type="button">Enter character manually</button><button class="button" id="cancel-import" type="button" hidden>Cancel extraction</button></div>
+      <p class="lab-privacy">Local to this browser profile, not an account vault. Anyone using the same browser profile can open saved characters. Use a private profile on shared devices. No cross-device sync; clearing site data removes your saved snapshots.</p>
+    </section>
+    <form id="review-step" hidden>
+      <h2 tabindex="-1">Review your character</h2><p>Blank means unknown. Correct any reading; each field keeps its original evidence. Spell classifications are independent, and uncertain checkboxes are never treated as prepared.</p>
+      <div id="extraction-warnings" class="lab-warning"></div>
+      <div id="review-fields"></div>
+      <section class="tool-panel"><h3>Wizard spell reconciliation</h3><p>Classify each spell explicitly. “Not confirmed” is not “No”. Cantrips, grants and spells from other classes should use their own access flags. Set a spell name blank to exclude a mistaken reading.</p><div id="spell-review"></div><button type="button" class="button" id="add-spell">Add a spell or cantrip</button></section>
+      <details class="lab-details"><summary>Original extracted page text (not retained after saving)</summary><div id="extracted-pages"></div></details>
+      <div class="form-actions"><button type="button" class="button" id="back-upload">Back to upload</button><button type="submit" class="button button--primary">Review comparison →</button></div>
+    </form>
+    <section id="confirm-step" hidden>
+      <h2 tabindex="-1">Confirm a new snapshot</h2><p>Earlier snapshots remain unchanged. This saves your reviewed observations, not a certification that the character is rules-legal.</p>
+      <div id="final-warnings" class="lab-warning"></div><div id="snapshot-diff"></div>
+      <label class="lab-check"><input type="checkbox" id="confirm-readings" />I reviewed the populated fields and spell classifications. Blank fields remain unknown.</label>
+      <label class="lab-check"><input type="checkbox" id="retain-pdf" />Also keep the original PDF in this browser (optional)</label>
+      <label class="lab-check" id="duplicate-choice" hidden><input type="checkbox" id="allow-duplicate" />This is the same PDF. Save an intentional corrected revision.</label>
+      <div class="form-actions"><button type="button" class="button" id="back-review">Back to review</button><button type="button" class="button button--primary" id="save-character">Save snapshot & open Play Mode</button></div>
+    </section>
+    <noscript><p>The private importer needs JavaScript to process your PDF on this device.</p></noscript>
+  </div></section>
+  <CharacterCatalog />
+  <script>import '@/features/character-lab/import-ui.mjs';</script>
+</BaseLayout>

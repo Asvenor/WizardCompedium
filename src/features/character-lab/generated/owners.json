@@ -1,0 +1,1318 @@
+{
+  "class.wizard.core2024": {
+    "schema_version": "1.0.0",
+    "id": "class.wizard.core2024",
+    "concept_id": "concept.class.wizard",
+    "official_name": "Wizard",
+    "name_kind": "official",
+    "category": "class",
+    "revision": 1,
+    "lifecycle": "approved",
+    "rules_identity": {
+      "generation": "2024",
+      "release_class": "core",
+      "variant_key": "core2024",
+      "lineage_refs": [],
+      "supersedes_refs": []
+    },
+    "source_refs": [
+      {
+        "target_id": "source_revision.srd521.20260905",
+        "relation": "supported_by"
+      }
+    ],
+    "verification": {
+      "status": "verified_primary",
+      "last_verified_at": "2026-09-05",
+      "scope": "Genannte Felder direkt in der Primärquelle geprüft.",
+      "open_claim_refs": []
+    },
+    "compatibility": [
+      {
+        "profile_id": "ruleset.core2024.v1",
+        "status": "native",
+        "conditions": [],
+        "evidence_claim_refs": [],
+        "ruling_refs": [],
+        "checked_at": "2026-09-05"
+      }
+    ],
+    "tags": [],
+    "dependencies": [
+      {
+        "target_id": "rule.multiclass_slots.core2024",
+        "relation": "uses"
+      },
+      {
+        "target_id": "feature.wizard_spellcasting.core2024",
+        "relation": "uses"
+      },
+      {
+        "target_id": "feature.wizard_ritual_adept.core2024",
+        "relation": "uses"
+      },
+      {
+        "target_id": "feature.wizard_arcane_recovery.core2024",
+        "relation": "uses"
+      },
+      {
+        "target_id": "feature.wizard_scholar.core2024",
+        "relation": "uses"
+      },
+      {
+        "target_id": "feature.wizard_subclass.core2024",
+        "relation": "uses"
+      },
+      {
+        "target_id": "feature.wizard_asi.core2024",
+        "relation": "uses"
+      },
+      {
+        "target_id": "feature.wizard_memorize_spell.core2024",
+        "relation": "uses"
+      },
+      {
+        "target_id": "feature.wizard_spell_mastery.core2024",
+        "relation": "uses"
+      },
+      {
+        "target_id": "feature.wizard_epic_boon.core2024",
+        "relation": "uses"
+      },
+      {
+        "target_id": "feature.wizard_signature_spells.core2024",
+        "relation": "uses"
+      }
+    ],
+    "cross_references": [],
+    "claim_refs": [
+      "claim.class.wizard.core2024.658ce36ce992",
+      "claim.class.wizard.core2024.c63e56ff7523"
+    ],
+    "provenance": {
+      "migration_refs": [],
+      "source_locators": [],
+      "created_at": "2026-09-05T09:01:51.002107+00:00",
+      "change_event_refs": []
+    },
+    "aliases": [],
+    "unknowns": [],
+    "traits": {
+      "primary_ability": "Intelligence",
+      "hit_die": "d6",
+      "starting_saves": [
+        "Intelligence",
+        "Wisdom"
+      ],
+      "skill_choice_count": 2,
+      "skill_choices": [
+        "Arcana",
+        "History",
+        "Insight",
+        "Investigation",
+        "Medicine",
+        "Nature",
+        "Religion"
+      ],
+      "weapons": [
+        "Simple weapons"
+      ],
+      "armor_training": [],
+      "multiclass_entry_gains": [
+        "Hit Point Die",
+        "level_1_features"
+      ],
+      "starting_equipment_options": [
+        {
+          "items": {
+            "Dagger": 2,
+            "Arcane Focus (Quarterstaff)": 1,
+            "Robe": 1,
+            "Spellbook": 1,
+            "Scholar’s Pack": 1
+          },
+          "gp": 5
+        },
+        {
+          "items": {},
+          "gp": 55
+        }
+      ]
+    },
+    "progression": [
+      {
+        "wizard_level": 1,
+        "cantrips": 3,
+        "prepared": 4,
+        "slot_row_ref": {
+          "target_id": "rule.multiclass_slots.core2024",
+          "relation": "uses",
+          "pointer": "/mechanics/slots_by_caster_level/1"
+        },
+        "feature_refs": [
+          "feature.wizard_spellcasting.core2024",
+          "feature.wizard_ritual_adept.core2024",
+          "feature.wizard_arcane_recovery.core2024"
+        ],
+        "subclass_feature_milestone": false
+      },
+      {
+        "wizard_level": 2,
+        "cantrips": 3,
+        "prepared": 5,
+        "slot_row_ref": {
+          "target_id": "rule.multiclass_slots.core2024",
+          "relation": "uses",
+          "pointer": "/mechanics/slots_by_caster_level/2"
+        },
+        "feature_refs": [
+          "feature.wizard_scholar.core2024"
+        ],
+        "subclass_feature_milestone": false
+      },
+      {
+        "wizard_level": 3,
+        "cantrips": 3,
+        "prepared": 6,
+        "slot_row_ref": {
+          "target_id": "rule.multiclass_slots.core2024",
+          "relation": "uses",
+          "pointer": "/mechanics/slots_by_caster_level/3"
+        },
+        "feature_refs": [
+          "feature.wizard_subclass.core2024"
+        ],
+        "subclass_feature_milestone": true
+      },
+      {
+        "wizard_level": 4,
+        "cantrips": 4,
+        "prepared": 7,
+        "slot_row_ref": {
+          "target_id": "rule.multiclass_slots.core2024",
+          "relation": "uses",
+          "pointer": "/mechanics/slots_by_caster_level/4"
+        },
+        "feature_refs": [
+          "feature.wizard_asi.core2024"
+        ],
+        "subclass_feature_milestone": false
+      },
+      {
+        "wizard_level": 5,
+        "cantrips": 4,
+        "prepared": 9,
+        "slot_row_ref": {
+          "target_id": "rule.multiclass_slots.core2024",
+          "relation": "uses",
+          "pointer": "/mechanics/slots_by_caster_level/5"
+        },
+        "feature_refs": [
+          "feature.wizard_memorize_spell.core2024"
+        ],
+        "subclass_feature_milestone": false
+      },
+      {
+        "wizard_level": 6,
+        "cantrips": 4,
+        "prepared": 10,
+        "slot_row_ref": {
+          "target_id": "rule.multiclass_slots.core2024",
+          "relation": "uses",
+          "pointer": "/mechanics/slots_by_caster_level/6"
+        },
+        "feature_refs": [],
+        "subclass_feature_milestone": true
+      },
+      {
+        "wizard_level": 7,
+        "cantrips": 4,
+        "prepared": 11,
+        "slot_row_ref": {
+          "target_id": "rule.multiclass_slots.core2024",
+          "relation": "uses",
+          "pointer": "/mechanics/slots_by_caster_level/7"
+        },
+        "feature_refs": [],
+        "subclass_feature_milestone": false
+      },
+      {
+        "wizard_level": 8,
+        "cantrips": 4,
+        "prepared": 12,
+        "slot_row_ref": {
+          "target_id": "rule.multiclass_slots.core2024",
+          "relation": "uses",
+          "pointer": "/mechanics/slots_by_caster_level/8"
+        },
+        "feature_refs": [
+          "feature.wizard_asi.core2024"
+        ],
+        "subclass_feature_milestone": false
+      },
+      {
+        "wizard_level": 9,
+        "cantrips": 4,
+        "prepared": 14,
+        "slot_row_ref": {
+          "target_id": "rule.multiclass_slots.core2024",
+          "relation": "uses",
+          "pointer": "/mechanics/slots_by_caster_level/9"
+        },
+        "feature_refs": [],
+        "subclass_feature_milestone": false
+      },
+      {
+        "wizard_level": 10,
+        "cantrips": 5,
+        "prepared": 15,
+        "slot_row_ref": {
+          "target_id": "rule.multiclass_slots.core2024",
+          "relation": "uses",
+          "pointer": "/mechanics/slots_by_caster_level/10"
+        },
+        "feature_refs": [],
+        "subclass_feature_milestone": true
+      },
+      {
+        "wizard_level": 11,
+        "cantrips": 5,
+        "prepared": 16,
+        "slot_row_ref": {
+          "target_id": "rule.multiclass_slots.core2024",
+          "relation": "uses",
+          "pointer": "/mechanics/slots_by_caster_level/11"
+        },
+        "feature_refs": [],
+        "subclass_feature_milestone": false
+      },
+      {
+        "wizard_level": 12,
+        "cantrips": 5,
+        "prepared": 16,
+        "slot_row_ref": {
+          "target_id": "rule.multiclass_slots.core2024",
+          "relation": "uses",
+          "pointer": "/mechanics/slots_by_caster_level/12"
+        },
+        "feature_refs": [
+          "feature.wizard_asi.core2024"
+        ],
+        "subclass_feature_milestone": false
+      },
+      {
+        "wizard_level": 13,
+        "cantrips": 5,
+        "prepared": 17,
+        "slot_row_ref": {
+          "target_id": "rule.multiclass_slots.core2024",
+          "relation": "uses",
+          "pointer": "/mechanics/slots_by_caster_level/13"
+        },
+        "feature_refs": [],
+        "subclass_feature_milestone": false
+      },
+      {
+        "wizard_level": 14,
+        "cantrips": 5,
+        "prepared": 18,
+        "slot_row_ref": {
+          "target_id": "rule.multiclass_slots.core2024",
+          "relation": "uses",
+          "pointer": "/mechanics/slots_by_caster_level/14"
+        },
+        "feature_refs": [],
+        "subclass_feature_milestone": true
+      },
+      {
+        "wizard_level": 15,
+        "cantrips": 5,
+        "prepared": 19,
+        "slot_row_ref": {
+          "target_id": "rule.multiclass_slots.core2024",
+          "relation": "uses",
+          "pointer": "/mechanics/slots_by_caster_level/15"
+        },
+        "feature_refs": [],
+        "subclass_feature_milestone": false
+      },
+      {
+        "wizard_level": 16,
+        "cantrips": 5,
+        "prepared": 21,
+        "slot_row_ref": {
+          "target_id": "rule.multiclass_slots.core2024",
+          "relation": "uses",
+          "pointer": "/mechanics/slots_by_caster_level/16"
+        },
+        "feature_refs": [
+          "feature.wizard_asi.core2024"
+        ],
+        "subclass_feature_milestone": false
+      },
+      {
+        "wizard_level": 17,
+        "cantrips": 5,
+        "prepared": 22,
+        "slot_row_ref": {
+          "target_id": "rule.multiclass_slots.core2024",
+          "relation": "uses",
+          "pointer": "/mechanics/slots_by_caster_level/17"
+        },
+        "feature_refs": [],
+        "subclass_feature_milestone": false
+      },
+      {
+        "wizard_level": 18,
+        "cantrips": 5,
+        "prepared": 23,
+        "slot_row_ref": {
+          "target_id": "rule.multiclass_slots.core2024",
+          "relation": "uses",
+          "pointer": "/mechanics/slots_by_caster_level/18"
+        },
+        "feature_refs": [
+          "feature.wizard_spell_mastery.core2024"
+        ],
+        "subclass_feature_milestone": false
+      },
+      {
+        "wizard_level": 19,
+        "cantrips": 5,
+        "prepared": 24,
+        "slot_row_ref": {
+          "target_id": "rule.multiclass_slots.core2024",
+          "relation": "uses",
+          "pointer": "/mechanics/slots_by_caster_level/19"
+        },
+        "feature_refs": [
+          "feature.wizard_epic_boon.core2024"
+        ],
+        "subclass_feature_milestone": false
+      },
+      {
+        "wizard_level": 20,
+        "cantrips": 5,
+        "prepared": 25,
+        "slot_row_ref": {
+          "target_id": "rule.multiclass_slots.core2024",
+          "relation": "uses",
+          "pointer": "/mechanics/slots_by_caster_level/20"
+        },
+        "feature_refs": [
+          "feature.wizard_signature_spells.core2024"
+        ],
+        "subclass_feature_milestone": false
+      }
+    ]
+  },
+  "rule.character_advancement.core2024": {
+    "schema_version": "1.0.0",
+    "id": "rule.character_advancement.core2024",
+    "concept_id": "concept.rule.character_advancement",
+    "official_name": "Level Advancement",
+    "name_kind": "official",
+    "category": "rule",
+    "revision": 1,
+    "lifecycle": "review",
+    "rules_identity": {
+      "generation": "2024",
+      "release_class": "core",
+      "variant_key": "core2024",
+      "lineage_refs": [],
+      "supersedes_refs": []
+    },
+    "source_refs": [
+      {
+        "target_id": "source_revision.srd521.build_foundations_20260905",
+        "relation": "supported_by"
+      }
+    ],
+    "verification": {
+      "status": "verified_primary",
+      "last_verified_at": "2026-09-05",
+      "scope": "Bezeichnete Mechanik direkt aus SRD 5.2.1; Build-Optimierung ist separat.",
+      "open_claim_refs": []
+    },
+    "compatibility": [
+      {
+        "profile_id": "ruleset.core2024.build05",
+        "status": "native",
+        "conditions": [],
+        "evidence_claim_refs": [],
+        "ruling_refs": [],
+        "checked_at": "2026-09-05"
+      }
+    ],
+    "tags": [],
+    "dependencies": [
+      {
+        "target_id": "rule.multiclass_preparation.core2024",
+        "relation": "uses"
+      }
+    ],
+    "cross_references": [],
+    "claim_refs": [
+      "claim.rule.character_advancement.core2024.edde4154aa25",
+      "claim.rule.character_advancement.core2024.92aaeb4c3fb7"
+    ],
+    "provenance": {
+      "migration_refs": [],
+      "source_locators": [
+        {
+          "source_revision_id": "source_revision.srd521.build_foundations_20260905",
+          "locator": "SRD 5.2.1, S. 22–23: Level Advancement"
+        }
+      ],
+      "created_at": "2026-09-05T11:38:52.339418+00:00",
+      "change_event_refs": []
+    },
+    "aliases": [],
+    "unknowns": [],
+    "mechanics": {
+      "proficiency_by_character_level": {
+        "1": 2,
+        "2": 2,
+        "3": 2,
+        "4": 2,
+        "5": 3,
+        "6": 3,
+        "7": 3,
+        "8": 3,
+        "9": 4,
+        "10": 4,
+        "11": 4,
+        "12": 4,
+        "13": 5,
+        "14": 5,
+        "15": 5,
+        "16": 5,
+        "17": 6,
+        "18": 6,
+        "19": 6,
+        "20": 6
+      },
+      "hit_points": {
+        "level_1_base": {
+          "Wizard": 6,
+          "Fighter": 10
+        },
+        "later_fixed_base": {
+          "Wizard": 4,
+          "Fighter": 6
+        },
+        "add_constitution_modifier": true,
+        "minimum_gain_later_level": 1,
+        "constitution_modifier_increase_retroactive_per_character_level": true
+      }
+    }
+  },
+  "rule.multiclass_slots.core2024": {
+    "schema_version": "1.0.0",
+    "id": "rule.multiclass_slots.core2024",
+    "concept_id": "concept.rule.multiclass_slots",
+    "official_name": "Multiclass Spellcaster",
+    "name_kind": "official",
+    "category": "rule",
+    "revision": 1,
+    "lifecycle": "approved",
+    "rules_identity": {
+      "generation": "2024",
+      "release_class": "core",
+      "variant_key": "core2024",
+      "lineage_refs": [],
+      "supersedes_refs": []
+    },
+    "source_refs": [
+      {
+        "target_id": "source_revision.srd521.20260905",
+        "relation": "supported_by"
+      }
+    ],
+    "verification": {
+      "status": "verified_primary",
+      "last_verified_at": "2026-09-05",
+      "scope": "Genannte Felder direkt in der Primärquelle geprüft.",
+      "open_claim_refs": []
+    },
+    "compatibility": [
+      {
+        "profile_id": "ruleset.core2024.v1",
+        "status": "native",
+        "conditions": [],
+        "evidence_claim_refs": [],
+        "ruling_refs": [],
+        "checked_at": "2026-09-05"
+      }
+    ],
+    "tags": [],
+    "dependencies": [],
+    "cross_references": [],
+    "claim_refs": [
+      "claim.rule.multiclass_slots.core2024.d8d32f376639"
+    ],
+    "provenance": {
+      "migration_refs": [],
+      "source_locators": [],
+      "created_at": "2026-09-05T09:01:51.002107+00:00",
+      "change_event_refs": []
+    },
+    "aliases": [],
+    "unknowns": [],
+    "mechanics": {
+      "slots_by_caster_level": {
+        "1": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "2": [
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "3": [
+          4,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "4": [
+          4,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "5": [
+          4,
+          3,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "6": [
+          4,
+          3,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "7": [
+          4,
+          3,
+          3,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "8": [
+          4,
+          3,
+          3,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "9": [
+          4,
+          3,
+          3,
+          3,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "10": [
+          4,
+          3,
+          3,
+          3,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "11": [
+          4,
+          3,
+          3,
+          3,
+          2,
+          1,
+          0,
+          0,
+          0
+        ],
+        "12": [
+          4,
+          3,
+          3,
+          3,
+          2,
+          1,
+          0,
+          0,
+          0
+        ],
+        "13": [
+          4,
+          3,
+          3,
+          3,
+          2,
+          1,
+          1,
+          0,
+          0
+        ],
+        "14": [
+          4,
+          3,
+          3,
+          3,
+          2,
+          1,
+          1,
+          0,
+          0
+        ],
+        "15": [
+          4,
+          3,
+          3,
+          3,
+          2,
+          1,
+          1,
+          1,
+          0
+        ],
+        "16": [
+          4,
+          3,
+          3,
+          3,
+          2,
+          1,
+          1,
+          1,
+          0
+        ],
+        "17": [
+          4,
+          3,
+          3,
+          3,
+          2,
+          1,
+          1,
+          1,
+          1
+        ],
+        "18": [
+          4,
+          3,
+          3,
+          3,
+          3,
+          1,
+          1,
+          1,
+          1
+        ],
+        "19": [
+          4,
+          3,
+          3,
+          3,
+          3,
+          2,
+          1,
+          1,
+          1
+        ],
+        "20": [
+          4,
+          3,
+          3,
+          3,
+          3,
+          2,
+          2,
+          1,
+          1
+        ]
+      }
+    }
+  },
+  "rule.multiclass_preparation.core2024": {
+    "schema_version": "1.0.0",
+    "id": "rule.multiclass_preparation.core2024",
+    "concept_id": "concept.rule.multiclass_preparation",
+    "official_name": "Multiclassing: Spellcasting",
+    "name_kind": "official",
+    "category": "rule",
+    "revision": 1,
+    "lifecycle": "approved",
+    "rules_identity": {
+      "generation": "2024",
+      "release_class": "core",
+      "variant_key": "core2024",
+      "lineage_refs": [],
+      "supersedes_refs": []
+    },
+    "source_refs": [
+      {
+        "target_id": "source_revision.srd521.20260905",
+        "relation": "supported_by"
+      }
+    ],
+    "verification": {
+      "status": "verified_primary",
+      "last_verified_at": "2026-09-05",
+      "scope": "Genannte Felder direkt in der Primärquelle geprüft.",
+      "open_claim_refs": []
+    },
+    "compatibility": [
+      {
+        "profile_id": "ruleset.core2024.v1",
+        "status": "native",
+        "conditions": [],
+        "evidence_claim_refs": [],
+        "ruling_refs": [],
+        "checked_at": "2026-09-05"
+      }
+    ],
+    "tags": [],
+    "dependencies": [],
+    "cross_references": [],
+    "claim_refs": [
+      "claim.rule.multiclass_preparation.core2024.b8904890771b",
+      "claim.rule.multiclass_preparation.core2024.26bcbc7267c4",
+      "claim.rule.multiclass_preparation.core2024.9177ae7521cc",
+      "claim.rule.multiclass_preparation.core2024.26e272d7231a",
+      "claim.rule.multiclass_preparation.core2024.9cb16af8c4cd",
+      "claim.rule.multiclass_preparation.core2024.9769c5a48a1c",
+      "claim.rule.multiclass_preparation.core2024.0e5765b6418e",
+      "claim.rule.multiclass_preparation.core2024.e5aad6b75f35"
+    ],
+    "provenance": {
+      "migration_refs": [],
+      "source_locators": [],
+      "created_at": "2026-09-05T09:01:51.002107+00:00",
+      "change_event_refs": []
+    },
+    "aliases": [],
+    "unknowns": [],
+    "mechanics": {
+      "preparation_scope": "class_individually_as_single_class",
+      "spell_ability_scope": "originating_class",
+      "higher_slots_unlock_higher_preparations": false,
+      "combined_slots_require_multiple_spellcasting_classes": true,
+      "slot_contribution": {
+        "Bard": {
+          "divisor": 1,
+          "rounding": "none"
+        },
+        "Cleric": {
+          "divisor": 1,
+          "rounding": "none"
+        },
+        "Druid": {
+          "divisor": 1,
+          "rounding": "none"
+        },
+        "Sorcerer": {
+          "divisor": 1,
+          "rounding": "none"
+        },
+        "Wizard": {
+          "divisor": 1,
+          "rounding": "none"
+        },
+        "Paladin": {
+          "divisor": 2,
+          "rounding": "up"
+        },
+        "Ranger": {
+          "divisor": 2,
+          "rounding": "up"
+        }
+      },
+      "proficiency_scope": "total_character_level",
+      "multiclass_primary_ability_minimum": 13,
+      "third_casters": {
+        "Fighter:Eldritch Knight": {
+          "divisor": 3,
+          "rounding": "down"
+        },
+        "Rogue:Arcane Trickster": {
+          "divisor": 3,
+          "rounding": "down"
+        }
+      }
+    }
+  },
+  "rule.spellbook_copying.core2024": {
+    "schema_version": "1.0.0",
+    "id": "rule.spellbook_copying.core2024",
+    "concept_id": "concept.rule.spellbook_copying",
+    "official_name": "Expanding and Replacing a Spellbook",
+    "name_kind": "official",
+    "category": "rule",
+    "revision": 1,
+    "lifecycle": "approved",
+    "rules_identity": {
+      "generation": "2024",
+      "release_class": "core",
+      "variant_key": "core2024",
+      "lineage_refs": [],
+      "supersedes_refs": []
+    },
+    "source_refs": [
+      {
+        "target_id": "source_revision.srd521.20260905",
+        "relation": "supported_by"
+      }
+    ],
+    "verification": {
+      "status": "verified_conditional",
+      "last_verified_at": "2026-09-05",
+      "scope": "Copying-Grundverfahren geprüft; Scroll-Zusatzverfahren offen.",
+      "open_claim_refs": []
+    },
+    "compatibility": [
+      {
+        "profile_id": "ruleset.core2024.v1",
+        "status": "native",
+        "conditions": [],
+        "evidence_claim_refs": [],
+        "ruling_refs": [],
+        "checked_at": "2026-09-05"
+      }
+    ],
+    "tags": [],
+    "dependencies": [],
+    "cross_references": [],
+    "claim_refs": [
+      "claim.rule.spellbook_copying.core2024.b120a3c62030",
+      "claim.rule.spellbook_copying.core2024.1e614f8308c0",
+      "claim.rule.spellbook_copying.core2024.97cf83c957fa"
+    ],
+    "provenance": {
+      "migration_refs": [],
+      "source_locators": [],
+      "created_at": "2026-09-05T09:01:51.002107+00:00",
+      "change_event_refs": []
+    },
+    "aliases": [],
+    "unknowns": [
+      "Spell Scroll: zusätzlicher Copying-Check wird im Scroll-Modul verifiziert."
+    ],
+    "mechanics": {
+      "external_copy": {
+        "hours_per_spell_level": 2,
+        "gp_per_spell_level": 50,
+        "minimum_spell_level": 1,
+        "requires_wizard_spell": true,
+        "requires_preparable_spell_level": true
+      },
+      "own_backup_or_prepared_reconstruction": {
+        "hours_per_spell_level": 1,
+        "gp_per_spell_level": 10
+      },
+      "lost_book_reconstruction_scope": "currently_prepared_wizard_spells",
+      "scroll_specific_check_is_additional": null
+    }
+  },
+  "rule.scroll_copying.core2024": {
+    "schema_version": "1.0.0",
+    "id": "rule.scroll_copying.core2024",
+    "concept_id": "concept.rule.scroll_copying",
+    "official_name": "Copying a Scroll into a Spellbook",
+    "name_kind": "official",
+    "category": "rule",
+    "revision": 1,
+    "lifecycle": "review",
+    "rules_identity": {
+      "generation": "2024",
+      "release_class": "core",
+      "variant_key": "core2024",
+      "lineage_refs": [],
+      "supersedes_refs": []
+    },
+    "source_refs": [
+      {
+        "target_id": "source_revision.srd521.operations_20260905",
+        "relation": "supported_by"
+      }
+    ],
+    "verification": {
+      "status": "verified_primary",
+      "last_verified_at": "2026-09-05",
+      "scope": "Nur die belegten Mechanikfelder; Aufnahmeprüfung, keine globale Build-Freigabe.",
+      "open_claim_refs": []
+    },
+    "compatibility": [
+      {
+        "profile_id": "ruleset.core2024.ops04",
+        "status": "native",
+        "conditions": [],
+        "evidence_claim_refs": [],
+        "ruling_refs": [],
+        "checked_at": "2026-09-05"
+      }
+    ],
+    "tags": [],
+    "dependencies": [
+      {
+        "target_id": "rule.spellbook_copying.core2024",
+        "relation": "uses"
+      }
+    ],
+    "cross_references": [],
+    "claim_refs": [
+      "claim.rule.scroll_copying.core2024.56b0e8761ce8",
+      "claim.rule.scroll_copying.core2024.7e78a9c08f69"
+    ],
+    "provenance": {
+      "migration_refs": [],
+      "source_locators": [
+        {
+          "source_revision_id": "source_revision.srd521.operations_20260905",
+          "locator": "SRD 5.2.1, S. 244: Copying a Scroll into a Spellbook"
+        }
+      ],
+      "created_at": "2026-09-05T10:47:38.835073+00:00",
+      "change_event_refs": []
+    },
+    "aliases": [],
+    "unknowns": [
+      "Die Grundvoraussetzungen, Zeit und Kosten bleiben beim Spellbook-Copying-Owner."
+    ],
+    "mechanics": {
+      "check": {
+        "ability": "Intelligence",
+        "skill": "Arcana",
+        "dc_base": 10,
+        "dc_add": "spell_level"
+      },
+      "outcome": {
+        "success": "spell_copied_into_spellbook",
+        "failure": "spell_not_copied",
+        "scroll_destroyed_on_success": true,
+        "scroll_destroyed_on_failure": true
+      }
+    }
+  },
+  "rule.magic_item_crafting.core2024": {
+    "schema_version": "1.0.0",
+    "id": "rule.magic_item_crafting.core2024",
+    "concept_id": "concept.rule.magic_item_crafting",
+    "official_name": "Crafting Magic Items",
+    "name_kind": "official",
+    "category": "rule",
+    "revision": 1,
+    "lifecycle": "review",
+    "rules_identity": {
+      "generation": "2024",
+      "release_class": "core",
+      "variant_key": "core2024",
+      "lineage_refs": [],
+      "supersedes_refs": []
+    },
+    "source_refs": [
+      {
+        "target_id": "source_revision.srd521.operations_20260905",
+        "relation": "supported_by"
+      }
+    ],
+    "verification": {
+      "status": "verified_primary",
+      "last_verified_at": "2026-09-05",
+      "scope": "Nur die belegten Mechanikfelder; Aufnahmeprüfung, keine globale Build-Freigabe.",
+      "open_claim_refs": []
+    },
+    "compatibility": [
+      {
+        "profile_id": "ruleset.core2024.ops04",
+        "status": "native",
+        "conditions": [],
+        "evidence_claim_refs": [],
+        "ruling_refs": [],
+        "checked_at": "2026-09-05"
+      }
+    ],
+    "tags": [],
+    "dependencies": [
+      {
+        "target_id": "rule.scroll_scribing.core2024",
+        "relation": "uses"
+      },
+      {
+        "target_id": "rule.healing_potion_brewing.core2024",
+        "relation": "uses"
+      }
+    ],
+    "cross_references": [],
+    "claim_refs": [
+      "claim.rule.magic_item_crafting.core2024.099a9e3ccc81",
+      "claim.rule.magic_item_crafting.core2024.10069c34c576",
+      "claim.rule.magic_item_crafting.core2024.898d07cb6f81",
+      "claim.rule.magic_item_crafting.core2024.e272052a1f13",
+      "claim.rule.magic_item_crafting.core2024.5991879f57f3",
+      "claim.rule.magic_item_crafting.core2024.61ec76930db2",
+      "claim.rule.magic_item_crafting.core2024.c3d9d1e71a66"
+    ],
+    "provenance": {
+      "migration_refs": [],
+      "source_locators": [
+        {
+          "source_revision_id": "source_revision.srd521.operations_20260905",
+          "locator": "SRD 5.2.1, S. 206–207: Crafting Magic Items"
+        }
+      ],
+      "created_at": "2026-09-05T10:47:38.835073+00:00",
+      "change_event_refs": []
+    },
+    "aliases": [],
+    "unknowns": [],
+    "mechanics": {
+      "prerequisites": {
+        "crafter_and_helpers_arcana": true,
+        "crafter_and_helpers_required_tool_proficiency": true,
+        "required_tool_used": true,
+        "all_item_castable_spells_prepared_each_day": true
+      },
+      "costs_by_rarity": {
+        "Common": {
+          "days": 5,
+          "gp": 50
+        },
+        "Uncommon": {
+          "days": 10,
+          "gp": 200
+        },
+        "Rare": {
+          "days": 50,
+          "gp": 2000
+        },
+        "Very Rare": {
+          "days": 125,
+          "gp": 20000
+        },
+        "Legendary": {
+          "days": 250,
+          "gp": 100000
+        }
+      },
+      "time": {
+        "hours_per_day": 8,
+        "consecutive_days_required": false,
+        "divide_by_qualified_workers": true,
+        "normal_max_workers": 2,
+        "more_workers_requires_dm": true
+      },
+      "exceptions": {
+        "standard_potion_of_healing": "separate_brewing_procedure",
+        "spell_scroll": "separate_scribing_procedure",
+        "other_consumables_time_and_cost_factor": 0.5
+      },
+      "materials": {
+        "availability_decision": "DM",
+        "city_chance": 0.75,
+        "other_settlement_chance": 0.25,
+        "minimum_days_before_unavailable_recheck": 7,
+        "base_nonmagical_item": "full_purchase_cost_additional_or_craft_separately"
+      },
+      "tools_by_category": {
+        "Armor": [
+          "Leatherworker’s Tools",
+          "Smith’s Tools",
+          "Weaver’s Tools"
+        ],
+        "Potion": [
+          "Alchemist’s Supplies",
+          "Herbalism Kit"
+        ],
+        "Ring": [
+          "Jeweler’s Tools"
+        ],
+        "Rod": [
+          "Woodcarver’s Tools"
+        ],
+        "Scroll": [
+          "Calligrapher’s Supplies"
+        ],
+        "Staff": [
+          "Woodcarver’s Tools"
+        ],
+        "Wand": [
+          "Woodcarver’s Tools"
+        ],
+        "Weapon": [
+          "Leatherworker’s Tools",
+          "Smith’s Tools",
+          "Woodcarver’s Tools"
+        ],
+        "Wondrous Item": [
+          "Tinker’s Tools",
+          "tool_required_for_base_nonmagical_item"
+        ]
+      },
+      "tool_selection": "Armor und Weapon verlangen die zum konkreten Grundgegenstand passende Werkzeugart."
+    }
+  },
+  "decision_rule.opening.pilot_v1": {
+    "schema_type": "decision_rule",
+    "schema_version": "1.0.0",
+    "id": "decision_rule.opening.pilot_v1",
+    "revision": 1,
+    "title": "Opening Turn",
+    "recommendation_de": "Mehrere Gegner am Engpass: Web prüfen, sofern Verbündete sicher bleiben und kein besserer Concentration-Effekt läuft.",
+    "statement_kind": "Optimization Judgment",
+    "assumption_refs": [
+      "assumption.pilot_tier1_2.v1"
+    ],
+    "all_true": [
+      "multiple_targets",
+      "anchored",
+      "allies_clear",
+      "concentration_replacement_worthwhile"
+    ],
+    "option_ref": "spell.web.core2024",
+    "analysis_ref": "analysis.web.pilot_v1",
+    "on_unknown": "show_checks_no_cast_recommendation",
+    "on_unavailable": "no_recommendation",
+    "scope": "three_spell_pilot"
+  },
+  "decision_rule.reaction.pilot_v1": {
+    "schema_type": "decision_rule",
+    "schema_version": "1.0.0",
+    "id": "decision_rule.reaction.pilot_v1",
+    "revision": 1,
+    "title": "Reaction Priority",
+    "recommendation_de": "Bei einem gefährlichen Treffer: Shield prüfen. Trigger, Reaction, Components und Slot-pro-Turn-Grenze müssen passen.",
+    "statement_kind": "Optimization Judgment",
+    "assumption_refs": [
+      "assumption.pilot_tier1_2.v1"
+    ],
+    "all_true": [
+      "hit_trigger",
+      "reaction_available",
+      "protection_useful"
+    ],
+    "option_ref": "spell.shield.core2024",
+    "analysis_ref": "analysis.shield.pilot_v1",
+    "on_unknown": "show_checks_no_cast_recommendation",
+    "on_unavailable": "no_recommendation",
+    "scope": "three_spell_pilot"
+  },
+  "decision_rule.escape.pilot_v1": {
+    "schema_type": "decision_rule",
+    "schema_version": "1.0.0",
+    "id": "decision_rule.escape.pilot_v1",
+    "revision": 1,
+    "title": "Emergency Escape",
+    "recommendation_de": "Bei akuter Positionsgefahr: Misty Step prüfen, wenn ein sichtbarer freier Zielort erreichbar ist.",
+    "statement_kind": "Optimization Judgment",
+    "assumption_refs": [
+      "assumption.pilot_tier1_2.v1"
+    ],
+    "all_true": [
+      "escape_needed",
+      "destination_visible",
+      "destination_unoccupied"
+    ],
+    "option_ref": "spell.misty_step.core2024",
+    "analysis_ref": "analysis.misty_step.pilot_v1",
+    "on_unknown": "show_checks_no_cast_recommendation",
+    "on_unavailable": "no_recommendation",
+    "scope": "three_spell_pilot"
+  },
+  "sequence.pure_wizard.v1": {
+    "schema_type": "policy",
+    "schema_version": "1.0.0",
+    "id": "sequence.pure_wizard.v1",
+    "revision": 1,
+    "authority_kind": "analysis_assumption",
+    "title": "Pure Wizard",
+    "payload": {
+      "class_sequence": [
+        "Wizard",
+        "Wizard",
+        "Wizard",
+        "Wizard",
+        "Wizard",
+        "Wizard",
+        "Wizard",
+        "Wizard",
+        "Wizard",
+        "Wizard",
+        "Wizard",
+        "Wizard",
+        "Wizard",
+        "Wizard",
+        "Wizard",
+        "Wizard",
+        "Wizard",
+        "Wizard",
+        "Wizard",
+        "Wizard"
+      ],
+      "assumption_refs": [
+        "assumption.build_foundations.v1"
+      ],
+      "verification": "class_order_hypothesis_not_complete_build",
+      "dependencies": [
+        {
+          "target_id": "class.wizard.core2024",
+          "relation": "uses"
+        },
+        {
+          "target_id": "rule.multiclass_preparation.core2024",
+          "relation": "uses"
+        }
+      ]
+    }
+  }
+}

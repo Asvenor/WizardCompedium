@@ -42,9 +42,33 @@
       "The Compendium index is an operating reference, not replacement spell text. Confirm the active D&D Beyond entry before casting."
     ],
     "relatedChapters": [
+      6,
       11,
-      15
-    ]
+      15,
+      22,
+      37
+    ],
+    "tactics": [
+      "Use a static visual aid for routes, a remembered object or a plan, or a sound to support a plausible distraction. It does not reveal information the caster never had.",
+      "An image is not a physical barrier and ordinary Minor Illusion cannot impose conditions or manufacture real equipment.",
+      "Minor Illusion is not physical cover and cannot activate the 2024 Illusory Reality feature: that feature requires an eligible Illusion cast with a spell slot, not this cantrip."
+    ],
+    "relatedSpells": [
+      "major-image"
+    ],
+    "research": {
+      "note": "Research-informed tactical supplement. Pack Tactics timestamps below are supplied-package attribution, not newly verified quotations. Existing Compendium tiers are preserved; rules and optimizer preference are distinct.",
+      "references": [
+        {
+          "title": "Pack Tactics · 05:48-12:55",
+          "url": "https://www.youtube.com/watch?v=8DJ2HMdaSKQ&t=348s"
+        },
+        {
+          "title": "Pack Tactics · 05:51-06:10",
+          "url": "https://www.youtube.com/watch?v=Co1F7EVmNVQ&t=351s"
+        }
+      ]
+    }
   },
   "sourceLocator": "B00189"
 }

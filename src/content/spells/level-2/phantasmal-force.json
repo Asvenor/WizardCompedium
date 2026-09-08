@@ -36,15 +36,40 @@
     "acquisitionRole": "sleeper",
     "preparedBaseline": false,
     "roles": [],
-    "summary": "The Compendium includes this spell in its maintained spellbook pool; consult the active spell entry for complete rules text.",
+    "summary": "Concentration-based, target-specific deception for a Wizard who can present a believable threat. Its outcome depends on the active spell text and illusion adjudication, not unlimited narrative control.",
     "buildRelevance": [],
     "warnings": [
       "The Compendium index is an operating reference, not replacement spell text. Confirm the active D&D Beyond entry before casting."
     ],
     "relatedChapters": [
+      6,
       11,
-      15
-    ]
+      15,
+      24
+    ],
+    "tactics": [
+      "Agree on what the target perceives and how it can investigate the illusion before treating this as an encounter plan. Different tables give the same image very different practical value.",
+      "The research highlights it as a stronger single-target option than its terse existing index entry suggested. Compare its save, follow-up actions and concentration demand with Web or Suggestion.",
+      "Do not turn the illusion into automatic blindness, a physical cage, forced movement or any other condition the spell does not actually impose."
+    ],
+    "relatedSpells": [
+      "suggestion",
+      "web",
+      "major-image"
+    ],
+    "research": {
+      "note": "Research-informed tactical supplement. Pack Tactics timestamps below are supplied-package attribution, not newly verified quotations. Existing Compendium tiers are preserved; rules and optimizer preference are distinct.",
+      "references": [
+        {
+          "title": "Pack Tactics · 14:27-15:07",
+          "url": "https://www.youtube.com/watch?v=LkMvHC-56Oc&t=867s"
+        },
+        {
+          "title": "Pack Tactics · 02:31-02:47",
+          "url": "https://www.youtube.com/watch?v=8DJ2HMdaSKQ&t=151s"
+        }
+      ]
+    }
   },
   "sourceLocator": "B00142"
 }

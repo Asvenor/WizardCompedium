@@ -1,0 +1,782 @@
+{
+  "reviewDate": "2026-09-07",
+  "scope": "Integration into the existing website. Inventory disposition is not a blanket independent verification of every optimizer claim.",
+  "researchBundle": "pack_tactics_wizard_research_20260907 2",
+  "baselineSpellCount": 155,
+  "newSpellIds": [
+    "tashas-hideous-laughter",
+    "chromatic-orb",
+    "darkvision",
+    "borrowed-knowledge",
+    "mind-spike",
+    "major-image",
+    "tiny-servant",
+    "tongues",
+    "summon-fey",
+    "wall-of-fire",
+    "summon-greater-demon",
+    "mordenkainens-faithful-hound",
+    "circle-of-power",
+    "danse-macabre",
+    "mordenkainens-sword",
+    "weird"
+  ],
+  "enhancedSpellIds": [
+    "phantom-steed",
+    "rope-trick",
+    "locate-object",
+    "contact-other-plane",
+    "sickening-radiance",
+    "wish",
+    "haste",
+    "animate-dead",
+    "fortunes-favor",
+    "minor-illusion",
+    "planar-binding",
+    "glyph-of-warding",
+    "wall-of-force",
+    "phantasmal-force"
+  ],
+  "chapterNumbers": [
+    6,
+    9,
+    11,
+    22,
+    30,
+    37,
+    45
+  ],
+  "spellInventory": [
+    {
+      "researchId": "PT-SP-CHILL_TOUCH",
+      "name": "Chill Touch",
+      "status": "existing-retained",
+      "spellId": "chill-touch",
+      "path": "src/content/spells/cantrips/chill-touch.json"
+    },
+    {
+      "researchId": "PT-SP-TRUE_STRIKE",
+      "name": "True Strike",
+      "status": "existing-retained",
+      "spellId": "true-strike",
+      "path": "src/content/spells/cantrips/true-strike.json"
+    },
+    {
+      "researchId": "PT-SP-BLADE_WARD",
+      "name": "Blade Ward",
+      "status": "existing-retained",
+      "spellId": "blade-ward",
+      "path": "src/content/spells/cantrips/blade-ward.json"
+    },
+    {
+      "researchId": "PT-SP-MINOR_ILLUSION",
+      "name": "Minor Illusion",
+      "status": "existing-expanded",
+      "spellId": "minor-illusion",
+      "path": "src/content/spells/cantrips/minor-illusion.json"
+    },
+    {
+      "researchId": "PT-SP-SLEEP",
+      "name": "Sleep",
+      "status": "existing-retained",
+      "spellId": "sleep",
+      "path": "src/content/spells/level-1/sleep.json"
+    },
+    {
+      "researchId": "PT-SP-HIDEOUS_LAUGHTER",
+      "name": "Tasha's Hideous Laughter",
+      "status": "added-wizard-list",
+      "spellId": "tashas-hideous-laughter",
+      "path": "src/content/spells/level-1/tashas-hideous-laughter.json"
+    },
+    {
+      "researchId": "PT-SP-FIND_FAMILIAR",
+      "name": "Find Familiar",
+      "status": "existing-retained",
+      "spellId": "find-familiar",
+      "path": "src/content/spells/level-1/find-familiar.json"
+    },
+    {
+      "researchId": "PT-SP-CHROMATIC_ORB",
+      "name": "Chromatic Orb",
+      "status": "added-wizard-list",
+      "spellId": "chromatic-orb",
+      "path": "src/content/spells/level-1/chromatic-orb.json"
+    },
+    {
+      "researchId": "PT-SP-WITCH_BOLT",
+      "name": "Witch Bolt",
+      "status": "existing-retained",
+      "spellId": "witch-bolt",
+      "path": "src/content/spells/level-1/witch-bolt.json"
+    },
+    {
+      "researchId": "PT-SP-SHIELD",
+      "name": "Shield",
+      "status": "existing-retained",
+      "spellId": "shield",
+      "path": "src/content/spells/level-1/shield.json"
+    },
+    {
+      "researchId": "PT-SP-MIRROR_IMAGE",
+      "name": "Mirror Image",
+      "status": "existing-retained",
+      "spellId": "mirror-image",
+      "path": "src/content/spells/level-2/mirror-image.json"
+    },
+    {
+      "researchId": "PT-SP-PHANTASMAL_FORCE",
+      "name": "Phantasmal Force",
+      "status": "existing-expanded",
+      "spellId": "phantasmal-force",
+      "path": "src/content/spells/level-2/phantasmal-force.json"
+    },
+    {
+      "researchId": "PT-SP-WEB",
+      "name": "Web",
+      "status": "existing-retained",
+      "spellId": "web",
+      "path": "src/content/spells/level-2/web.json"
+    },
+    {
+      "researchId": "PT-SP-SUGGESTION",
+      "name": "Suggestion",
+      "status": "existing-retained",
+      "spellId": "suggestion",
+      "path": "src/content/spells/level-2/suggestion.json"
+    },
+    {
+      "researchId": "PT-SP-NYSTULS_MAGIC_AURA",
+      "name": "Nystul's Magic Aura",
+      "status": "existing-retained",
+      "spellId": "nystuls-magic-aura",
+      "path": "src/content/spells/level-2/nystuls-magic-aura.json"
+    },
+    {
+      "researchId": "PT-SP-LOCATE_OBJECT",
+      "name": "Locate Object",
+      "status": "existing-expanded",
+      "spellId": "locate-object",
+      "path": "src/content/spells/level-2/locate-object.json"
+    },
+    {
+      "researchId": "PT-SP-ROPE_TRICK",
+      "name": "Rope Trick",
+      "status": "existing-expanded",
+      "spellId": "rope-trick",
+      "path": "src/content/spells/level-2/rope-trick.json"
+    },
+    {
+      "researchId": "PT-SP-COUNTERSPELL",
+      "name": "Counterspell",
+      "status": "existing-retained",
+      "spellId": "counterspell",
+      "path": "src/content/spells/level-3/counterspell.json"
+    },
+    {
+      "researchId": "PT-SP-TINY_HUT",
+      "name": "Leomund's Tiny Hut",
+      "status": "existing-retained",
+      "spellId": "leomunds-tiny-hut",
+      "path": "src/content/spells/level-3/leomunds-tiny-hut.json"
+    },
+    {
+      "researchId": "PT-SP-ANIMATE_DEAD",
+      "name": "Animate Dead",
+      "status": "existing-expanded",
+      "spellId": "animate-dead",
+      "path": "src/content/spells/level-3/animate-dead.json"
+    },
+    {
+      "researchId": "PT-SP-SLEET_STORM",
+      "name": "Sleet Storm",
+      "status": "existing-retained",
+      "spellId": "sleet-storm",
+      "path": "src/content/spells/level-3/sleet-storm.json"
+    },
+    {
+      "researchId": "PT-SP-FIREBALL",
+      "name": "Fireball",
+      "status": "existing-retained",
+      "spellId": "fireball",
+      "path": "src/content/spells/level-3/fireball.json"
+    },
+    {
+      "researchId": "PT-SP-HYPNOTIC_PATTERN",
+      "name": "Hypnotic Pattern",
+      "status": "existing-retained",
+      "spellId": "hypnotic-pattern",
+      "path": "src/content/spells/level-3/hypnotic-pattern.json"
+    },
+    {
+      "researchId": "PT-SP-PHANTOM_STEED",
+      "name": "Phantom Steed",
+      "status": "existing-expanded",
+      "spellId": "phantom-steed",
+      "path": "src/content/spells/level-3/phantom-steed.json"
+    },
+    {
+      "researchId": "PT-SP-HASTE",
+      "name": "Haste",
+      "status": "existing-expanded",
+      "spellId": "haste",
+      "path": "src/content/spells/level-3/haste.json"
+    },
+    {
+      "researchId": "PT-SP-MAJOR_IMAGE",
+      "name": "Major Image",
+      "status": "added-wizard-list",
+      "spellId": "major-image",
+      "path": "src/content/spells/level-3/major-image.json"
+    },
+    {
+      "researchId": "PT-SP-BANISHMENT",
+      "name": "Banishment",
+      "status": "existing-retained",
+      "spellId": "banishment",
+      "path": "src/content/spells/level-4/banishment.json"
+    },
+    {
+      "researchId": "PT-SP-WALL_OF_FIRE",
+      "name": "Wall of Fire",
+      "status": "added-wizard-list",
+      "spellId": "wall-of-fire",
+      "path": "src/content/spells/level-4/wall-of-fire.json"
+    },
+    {
+      "researchId": "PT-SP-CONTROL_WATER",
+      "name": "Control Water",
+      "status": "existing-retained",
+      "spellId": "control-water",
+      "path": "src/content/spells/level-4/control-water.json"
+    },
+    {
+      "researchId": "PT-SP-SICKENING_RADIANCE",
+      "name": "Sickening Radiance",
+      "status": "existing-expanded",
+      "spellId": "sickening-radiance",
+      "path": "src/content/spells/level-4/sickening-radiance.json"
+    },
+    {
+      "researchId": "PT-SP-POLYMORPH",
+      "name": "Polymorph",
+      "status": "existing-retained",
+      "spellId": "polymorph",
+      "path": "src/content/spells/level-4/polymorph.json"
+    },
+    {
+      "researchId": "PT-SP-SUMMON_GREATER_DEMON",
+      "name": "Summon Greater Demon",
+      "status": "added-wizard-list",
+      "spellId": "summon-greater-demon",
+      "path": "src/content/spells/level-4/summon-greater-demon.json"
+    },
+    {
+      "researchId": "PT-SP-FABRICATE",
+      "name": "Fabricate",
+      "status": "existing-retained",
+      "spellId": "fabricate",
+      "path": "src/content/spells/level-4/fabricate.json"
+    },
+    {
+      "researchId": "PT-SP-ARCANE_EYE",
+      "name": "Arcane Eye",
+      "status": "existing-retained",
+      "spellId": "arcane-eye",
+      "path": "src/content/spells/level-4/arcane-eye.json"
+    },
+    {
+      "researchId": "PT-SP-CONTACT_OTHER_PLANE",
+      "name": "Contact Other Plane",
+      "status": "existing-expanded",
+      "spellId": "contact-other-plane",
+      "path": "src/content/spells/level-5/contact-other-plane.json"
+    },
+    {
+      "researchId": "PT-SP-TELEKINESIS",
+      "name": "Telekinesis",
+      "status": "existing-retained",
+      "spellId": "telekinesis",
+      "path": "src/content/spells/level-5/telekinesis.json"
+    },
+    {
+      "researchId": "PT-SP-ANIMATE_OBJECTS",
+      "name": "Animate Objects",
+      "status": "existing-retained",
+      "spellId": "animate-objects",
+      "path": "src/content/spells/level-5/animate-objects.json"
+    },
+    {
+      "researchId": "PT-SP-BIGBYS_HAND",
+      "name": "Bigby's Hand",
+      "status": "existing-retained",
+      "spellId": "bigbys-hand",
+      "path": "src/content/spells/level-5/bigbys-hand.json"
+    },
+    {
+      "researchId": "PT-SP-PLANAR_BINDING",
+      "name": "Planar Binding",
+      "status": "existing-expanded",
+      "spellId": "planar-binding",
+      "path": "src/content/spells/level-5/planar-binding.json"
+    },
+    {
+      "researchId": "PT-SP-WALL_OF_FORCE",
+      "name": "Wall of Force",
+      "status": "existing-expanded",
+      "spellId": "wall-of-force",
+      "path": "src/content/spells/level-5/wall-of-force.json"
+    },
+    {
+      "researchId": "PT-SP-TRANSMUTE_ROCK",
+      "name": "Transmute Rock",
+      "status": "existing-retained",
+      "spellId": "transmute-rock",
+      "path": "src/content/spells/level-5/transmute-rock.json"
+    },
+    {
+      "researchId": "PT-SP-SYNAPTIC_STATIC",
+      "name": "Synaptic Static",
+      "status": "existing-retained",
+      "spellId": "synaptic-static",
+      "path": "src/content/spells/level-5/synaptic-static.json"
+    },
+    {
+      "researchId": "PT-SP-TELEPATHIC_BOND",
+      "name": "Rary's Telepathic Bond",
+      "status": "existing-retained",
+      "spellId": "rarys-telepathic-bond",
+      "path": "src/content/spells/level-5/rarys-telepathic-bond.json"
+    },
+    {
+      "researchId": "PT-SP-SCRYING",
+      "name": "Scrying",
+      "status": "existing-retained",
+      "spellId": "scrying",
+      "path": "src/content/spells/level-5/scrying.json"
+    },
+    {
+      "researchId": "PT-SP-MASS_SUGGESTION",
+      "name": "Mass Suggestion",
+      "status": "existing-retained",
+      "spellId": "mass-suggestion",
+      "path": "src/content/spells/level-6/mass-suggestion.json"
+    },
+    {
+      "researchId": "PT-SP-MAGIC_JAR",
+      "name": "Magic Jar",
+      "status": "existing-retained",
+      "spellId": "magic-jar",
+      "path": "src/content/spells/level-6/magic-jar.json"
+    },
+    {
+      "researchId": "PT-SP-DISINTEGRATE",
+      "name": "Disintegrate",
+      "status": "existing-retained",
+      "spellId": "disintegrate",
+      "path": "src/content/spells/level-6/disintegrate.json"
+    },
+    {
+      "researchId": "PT-SP-CONTINGENCY",
+      "name": "Contingency",
+      "status": "existing-retained",
+      "spellId": "contingency",
+      "path": "src/content/spells/level-6/contingency.json"
+    },
+    {
+      "researchId": "PT-SP-MIRAGE_ARCANE",
+      "name": "Mirage Arcane",
+      "status": "existing-retained",
+      "spellId": "mirage-arcane",
+      "path": "src/content/spells/level-7/mirage-arcane.json"
+    },
+    {
+      "researchId": "PT-SP-SIMULACRUM",
+      "name": "Simulacrum",
+      "status": "existing-retained",
+      "spellId": "simulacrum",
+      "path": "src/content/spells/level-7/simulacrum.json"
+    },
+    {
+      "researchId": "PT-SP-FORCECAGE",
+      "name": "Forcecage",
+      "status": "existing-retained",
+      "spellId": "forcecage",
+      "path": "src/content/spells/level-7/forcecage.json"
+    },
+    {
+      "researchId": "PT-SP-MORDENKAINENS_SWORD",
+      "name": "Mordenkainen's Sword",
+      "status": "added-wizard-list",
+      "spellId": "mordenkainens-sword",
+      "path": "src/content/spells/level-7/mordenkainens-sword.json"
+    },
+    {
+      "researchId": "PT-SP-MAZE",
+      "name": "Maze",
+      "status": "existing-retained",
+      "spellId": "maze",
+      "path": "src/content/spells/level-8/maze.json"
+    },
+    {
+      "researchId": "PT-SP-MIND_BLANK",
+      "name": "Mind Blank",
+      "status": "existing-retained",
+      "spellId": "mind-blank",
+      "path": "src/content/spells/level-8/mind-blank.json"
+    },
+    {
+      "researchId": "PT-SP-ANTIPATHY_SYMPATHY",
+      "name": "Antipathy/Sympathy",
+      "status": "existing-retained",
+      "spellId": "antipathy-sympathy",
+      "path": "src/content/spells/level-8/antipathy-sympathy.json"
+    },
+    {
+      "researchId": "PT-SP-WISH",
+      "name": "Wish",
+      "status": "existing-expanded",
+      "spellId": "wish",
+      "path": "src/content/spells/level-9/wish.json"
+    },
+    {
+      "researchId": "PT-SP-FORESIGHT",
+      "name": "Foresight",
+      "status": "existing-retained",
+      "spellId": "foresight",
+      "path": "src/content/spells/level-9/foresight.json"
+    },
+    {
+      "researchId": "PT-SP-TRUE_POLYMORPH",
+      "name": "True Polymorph",
+      "status": "existing-retained",
+      "spellId": "true-polymorph",
+      "path": "src/content/spells/level-9/true-polymorph.json"
+    },
+    {
+      "researchId": "PT-SP-SHAPECHANGE",
+      "name": "Shapechange",
+      "status": "existing-retained",
+      "spellId": "shapechange",
+      "path": "src/content/spells/level-9/shapechange.json"
+    },
+    {
+      "researchId": "PT-SP-WEIRD",
+      "name": "Weird",
+      "status": "added-wizard-list",
+      "spellId": "weird",
+      "path": "src/content/spells/level-9/weird.json"
+    },
+    {
+      "researchId": "PT-SP-ARCANE_LOCK",
+      "name": "Arcane Lock",
+      "status": "existing-retained",
+      "spellId": "arcane-lock",
+      "path": "src/content/spells/level-2/arcane-lock.json"
+    },
+    {
+      "researchId": "PT-SP-DARKVISION",
+      "name": "Darkvision",
+      "status": "added-wizard-list",
+      "spellId": "darkvision",
+      "path": "src/content/spells/level-2/darkvision.json"
+    },
+    {
+      "researchId": "PT-SP-FAITHFUL_HOUND",
+      "name": "Mordenkainen's Faithful Hound",
+      "status": "added-wizard-list",
+      "spellId": "mordenkainens-faithful-hound",
+      "path": "src/content/spells/level-4/mordenkainens-faithful-hound.json"
+    },
+    {
+      "researchId": "PT-SP-GIANT_INSECT",
+      "name": "Giant Insect",
+      "status": "wish-only",
+      "chapter": 22
+    },
+    {
+      "researchId": "PT-SP-CIRCLE_OF_POWER",
+      "name": "Circle of Power",
+      "status": "added-wizard-list",
+      "spellId": "circle-of-power",
+      "path": "src/content/spells/level-5/circle-of-power.json"
+    },
+    {
+      "researchId": "PT-SP-TINY_SERVANT",
+      "name": "Tiny Servant",
+      "status": "added-wizard-list",
+      "spellId": "tiny-servant",
+      "path": "src/content/spells/level-3/tiny-servant.json"
+    },
+    {
+      "researchId": "PT-SP-DIMENSION_DOOR",
+      "name": "Dimension Door",
+      "status": "existing-retained",
+      "spellId": "dimension-door",
+      "path": "src/content/spells/level-4/dimension-door.json"
+    },
+    {
+      "researchId": "PT-SP-DISPEL_MAGIC",
+      "name": "Dispel Magic",
+      "status": "existing-retained",
+      "spellId": "dispel-magic",
+      "path": "src/content/spells/level-3/dispel-magic.json"
+    },
+    {
+      "researchId": "PT-SP-GLYPH_OF_WARDING",
+      "name": "Glyph of Warding",
+      "status": "existing-expanded",
+      "spellId": "glyph-of-warding",
+      "path": "src/content/spells/level-3/glyph-of-warding.json"
+    },
+    {
+      "researchId": "PT-SP-REVIVIFY",
+      "name": "Revivify",
+      "status": "wish-only",
+      "chapter": 22
+    },
+    {
+      "researchId": "PT-SP-SEE_INVISIBILITY",
+      "name": "See Invisibility",
+      "status": "existing-retained",
+      "spellId": "see-invisibility",
+      "path": "src/content/spells/level-2/see-invisibility.json"
+    },
+    {
+      "researchId": "PT-SP-TRUE_SEEING",
+      "name": "True Seeing",
+      "status": "existing-retained",
+      "spellId": "true-seeing",
+      "path": "src/content/spells/level-6/true-seeing.json"
+    },
+    {
+      "researchId": "PT-SP-DETECT_THOUGHTS",
+      "name": "Detect Thoughts",
+      "status": "existing-retained",
+      "spellId": "detect-thoughts",
+      "path": "src/content/spells/level-2/detect-thoughts.json"
+    },
+    {
+      "researchId": "PT-SP-CLAIRVOYANCE",
+      "name": "Clairvoyance",
+      "status": "existing-retained",
+      "spellId": "clairvoyance",
+      "path": "src/content/spells/level-3/clairvoyance.json"
+    },
+    {
+      "researchId": "PT-SP-COMPREHEND_LANGUAGES",
+      "name": "Comprehend Languages",
+      "status": "existing-retained",
+      "spellId": "comprehend-languages",
+      "path": "src/content/spells/level-1/comprehend-languages.json"
+    },
+    {
+      "researchId": "PT-SP-TONGUES",
+      "name": "Tongues",
+      "status": "added-wizard-list",
+      "spellId": "tongues",
+      "path": "src/content/spells/level-3/tongues.json"
+    },
+    {
+      "researchId": "PT-SP-SENDING",
+      "name": "Sending",
+      "status": "existing-retained",
+      "spellId": "sending",
+      "path": "src/content/spells/level-3/sending.json"
+    },
+    {
+      "researchId": "PT-SP-GIFT_OF_ALACRITY",
+      "name": "Gift of Alacrity",
+      "status": "existing-retained",
+      "spellId": "gift-of-alacrity",
+      "path": "src/content/spells/level-1/gift-of-alacrity.json"
+    },
+    {
+      "researchId": "PT-SP-FORTUNES_FAVOR",
+      "name": "Fortune's Favor",
+      "status": "existing-expanded",
+      "spellId": "fortunes-favor",
+      "path": "src/content/spells/level-2/fortunes-favor.json"
+    },
+    {
+      "researchId": "PT-SP-BORROWED_KNOWLEDGE",
+      "name": "Borrowed Knowledge",
+      "status": "added-wizard-list",
+      "spellId": "borrowed-knowledge",
+      "path": "src/content/spells/level-2/borrowed-knowledge.json"
+    },
+    {
+      "researchId": "PT-SP-LOCATE_CREATURE",
+      "name": "Locate Creature",
+      "status": "existing-retained",
+      "spellId": "locate-creature",
+      "path": "src/content/spells/level-4/locate-creature.json"
+    },
+    {
+      "researchId": "PT-SP-AUGURY",
+      "name": "Augury",
+      "status": "existing-retained",
+      "spellId": "augury",
+      "path": "src/content/spells/level-2/augury.json"
+    },
+    {
+      "researchId": "PT-SP-DIVINATION",
+      "name": "Divination",
+      "status": "existing-retained",
+      "spellId": "divination",
+      "path": "src/content/spells/level-4/divination.json"
+    },
+    {
+      "researchId": "PT-SP-MIND_SPIKE",
+      "name": "Mind Spike",
+      "status": "added-wizard-list",
+      "spellId": "mind-spike",
+      "path": "src/content/spells/level-2/mind-spike.json"
+    },
+    {
+      "researchId": "PT-SP-DANSE_MACABRE",
+      "name": "Danse Macabre",
+      "status": "added-wizard-list",
+      "spellId": "danse-macabre",
+      "path": "src/content/spells/level-5/danse-macabre.json"
+    },
+    {
+      "researchId": "PT-SP-SUMMON_BEAST",
+      "name": "Summon Beast",
+      "status": "subclass-only",
+      "chapter": 6
+    },
+    {
+      "researchId": "PT-SP-SUMMON_FEY",
+      "name": "Summon Fey",
+      "status": "added-wizard-list",
+      "spellId": "summon-fey",
+      "path": "src/content/spells/level-3/summon-fey.json"
+    }
+  ],
+  "comboInventory": [
+    {
+      "id": "PT-COMBO-WEB_PUSH",
+      "chapter": 45,
+      "status": "supported-with-allied-access",
+      "note": "Web, forced movement and ally spell access are separated."
+    },
+    {
+      "id": "PT-COMBO-SLEET_LOCK",
+      "chapter": 22,
+      "status": "existing-expanded",
+      "note": "Existing Sleet Storm procedure retained; concentration comparison expanded in Chapter 45."
+    },
+    {
+      "id": "PT-COMBO-MICROWAVE",
+      "chapter": 22,
+      "status": "added-with-limits",
+      "note": "Two-caster hazard-first sequence, escape and concentration limits."
+    },
+    {
+      "id": "PT-COMBO-DEMON_BIND",
+      "chapter": 22,
+      "status": "existing-corrected",
+      "note": "Existing binding procedure plus long-cast concentration and summon-duration caveats."
+    },
+    {
+      "id": "PT-COMBO-NYSTUL_JAR",
+      "chapter": 22,
+      "status": "existing-disputed",
+      "note": "Existing consent and possession gates retained; no forced-consent guarantee imported."
+    },
+    {
+      "id": "PT-COMBO-NYSTUL_BIND",
+      "chapter": 22,
+      "status": "existing-disputed",
+      "note": "Existing willingness, target and renewal gates retained."
+    },
+    {
+      "id": "PT-COMBO-ROPE_BUNKER",
+      "chapter": 37,
+      "status": "added-with-limits",
+      "note": "Portal, climbing, one-hour expiry and enemy response."
+    },
+    {
+      "id": "PT-COMBO-ROPE_SHIFT",
+      "chapter": 22,
+      "status": "disputed-not-baseline",
+      "note": "Legacy plane-classification claim needs adjudication."
+    },
+    {
+      "id": "PT-COMBO-ABEYANCE_DOUBLE_CONC",
+      "chapter": 22,
+      "status": "subclass-gated",
+      "note": "Legacy Chronurgy 10, eligible release creature and concentration holder."
+    },
+    {
+      "id": "PT-COMBO-ABEYANCE_HUT",
+      "chapter": 22,
+      "status": "disputed-not-baseline",
+      "note": "Legacy stored long-cast interaction explicitly gated."
+    },
+    {
+      "id": "PT-COMBO-ILLUSORY_CAGE",
+      "chapter": 22,
+      "status": "disputed-corrected",
+      "note": "Illusionist 14 requires an Illusion cast with a slot; no cantrip or imposed conditions."
+    },
+    {
+      "id": "PT-COMBO-STEED_KITE",
+      "chapter": 37,
+      "status": "added-corrected",
+      "note": "Dash versus Disengage, fragility and ritual scheduling corrected."
+    },
+    {
+      "id": "PT-COMBO-DIVINATION_CANVAS",
+      "chapter": 37,
+      "status": "spell-card-expanded",
+      "note": "Minor Illusion card covers static intelligence aids, not magically learned information."
+    },
+    {
+      "id": "PT-COMBO-COP_SEARCH",
+      "chapter": 37,
+      "status": "added-corrected",
+      "note": "Five-question/32-sector procedure; 11-minute ritual and failure costs."
+    },
+    {
+      "id": "PT-COMBO-TELEKINESIS_COVER",
+      "chapter": 45,
+      "status": "added-with-limits",
+      "note": "Targeting, ongoing actions and cover restrictions."
+    },
+    {
+      "id": "PT-COMBO-WISH_SIM",
+      "chapter": 22,
+      "status": "existing-expanded",
+      "note": "Existing restrictions plus menu; no recursive army."
+    },
+    {
+      "id": "PT-COMBO-WISH_GLYPH",
+      "chapter": 22,
+      "status": "disputed-corrected",
+      "note": "Fixed-site baseline, movement and additional stored-spell cost."
+    },
+    {
+      "id": "PT-COMBO-WISH_REST",
+      "chapter": 30,
+      "status": "added-corrected",
+      "note": "2024 Long Rest interruption adds time; no instant recharge."
+    }
+  ],
+  "partialMechanics": [
+    "borrowed-knowledge",
+    "tiny-servant",
+    "summon-greater-demon",
+    "danse-macabre"
+  ],
+  "expandedWishLeads": [
+    "Temple of the Gods",
+    "Find Greater Steed",
+    "Create Homunculus",
+    "Dark Star",
+    "Druid Grove"
+  ],
+  "provenance": "Supplied video timestamp links retained as research attribution. No new full-transcript or verbatim creator-attribution claim.",
+  "sourcesUnchanged": true
+}

@@ -81,3 +81,23 @@ description: "Reference material from Part V."
 <div class="table-wrap" data-source-locator="B00500.T001" tabindex="0"><table><thead><tr><th scope="col">Trap</th><th scope="col">Correct rule</th></tr></thead><tbody><tr><td>“Use every slot before resting.”</td><td>Do not manufacture risk to avoid theoretical waste. Unused resources are acceptable when the objective is already secure.</td></tr><tr><td>“Copy every spell I find.”</td><td>Copy real gaps first. Gold and time are strategic resources.</td></tr><tr><td>“Crafting always works during travel or rests.”</td><td>Only when the active rules, workspace, safety, and DM allow the activity.</td></tr><tr><td>“Start the strongest item.”</td><td>Start the strongest item that will actually finish and beat its opportunity cost.</td></tr><tr><td>“The familiar can handle watch alone.”</td><td>Use it as one layer of information, not the entire security plan.</td></tr><tr><td>“Yesterday’s prepared list is still fine.”</td><td>Review the objective, terrain, party plan, and known threats whenever preparation can change.</td></tr><tr><td>“Downtime is my solo minigame.”</td><td>Choose projects that advance shared goals and keep table time moving.</td></tr></tbody></table></div>
 
 <!-- source:B00501 -->
+
+<!-- research:PT-20260907-REST -->
+## Rest casting: use the 2024 clock
+
+A non-cantrip spell interrupts a 2024 Long Rest. The rest can resume, but finishing it requires **one additional hour per interruption**. Initiative, damage and other listed interruptions also matter. A spell cast immediately before the original finishing time does not give both its effect and an instantly recovered slot.
+
+Example: a rest planned to finish at 08:00 is interrupted by a qualifying casting at 07:59. Even if it resumes immediately and nothing else intervenes, it cannot finish on the original schedule; the interruption adds an hour. Count the cast's elapsed time and the buff duration before deciding how much remains after recovery. Do not mix a permissive legacy rest interpretation with 2024 recovery.
+
+<div class="table-wrap" tabindex="0"><table><thead><tr><th scope="col">Option</th><th scope="col">Wizard use</th><th scope="col">Timing boundary</th></tr></thead><tbody>
+<tr><td>Mind Blank</td><td>Long-duration protection that can span a later rest.</td><td>Track the real expiry; a new casting during a rest still interrupts it.</td></tr>
+<tr><td>Foresight</td><td>Cast directly as a ninth-level Wizard spell.</td><td>It is not an ordinary Wish duplicate and competes for the same high-level resource.</td></tr>
+<tr><td>Heroes' Feast through Wish</td><td>Create the feast without the normal casting time or bowl cost.</td><td>The later hour spent eating is part of the effect. Benefits do not begin immediately.</td></tr>
+<tr><td>Clone through Wish</td><td>Reduce casting setup and component requirements.</td><td>Maturation remains 120 days; resolve the retained vessel before relying on the insurance.</td></tr>
+<tr><td>Contact Other Plane</td><td>Ask useful questions before beginning the rest, in a safe location.</td><td>Failure is still dangerous. A planned Long Rest is recovery planning, not protection from the initial damage.</td></tr>
+<tr><td>Animate Dead / Tiny Servant</td><td>Prepare a small, useful minion group before an operation.</td><td>Track control or spell expiry; do not call their next day's actions resource-free.</td></tr>
+</tbody></table></div>
+
+For a purchased spellbook addition, a reusable component and a consumed component, record three separate expenditures. A retained summon focus is an up-front investment; a consumed Fortune's Favor pearl is a recurring cost. Compare those costs with copying a spell that adds a new job.
+
+Source: <a href="https://www.dndbeyond.com/sources/dnd/br-2024/rules-glossary#LongRest">2024 Long Rest</a>; SRD 5.2.1 p. 185 and the named spell entries. This replaces the research's ambiguous rest-boundary assumption, not the campaign's explicitly agreed house rules.

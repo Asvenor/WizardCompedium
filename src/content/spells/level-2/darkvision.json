@@ -1,0 +1,77 @@
+{
+  "id": "darkvision",
+  "name": "Darkvision",
+  "level": 2,
+  "school": "Transmutation",
+  "rules": {
+    "castingTime": "Action",
+    "range": "Touch",
+    "area": null,
+    "duration": "8 hours",
+    "concentration": false,
+    "ritual": false,
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": true,
+      "description": "A dried carrot",
+      "gpCost": null,
+      "consumed": false
+    },
+    "damageTypes": [],
+    "save": {
+      "ability": null,
+      "type": null
+    },
+    "attackRoll": false
+  },
+  "source": {
+    "book": "Player's Handbook (2024)",
+    "rulesVersion": "2024",
+    "category": "Core",
+    "sourceSensitive": false,
+    "review": {
+      "date": "2026-09-07",
+      "access": "Normal 2024 Wizard spell-list access; learn and prepare through the Wizard's normal rules.",
+      "scope": "Listed mechanics checked against the official current entry or SRD 5.2.1. Tier and acquisition advice are Compendium editorial judgments, not official rules.",
+      "references": [
+        {
+          "title": "SRD 5.2.1, page 122",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2.1/SRD_CC_v5.2.1.pdf#page=122"
+        }
+      ]
+    }
+  },
+  "compendium": {
+    "tier": "C",
+    "acquisitionRole": "optional",
+    "preparedBaseline": false,
+    "roles": [
+      "utility",
+      "exploration"
+    ],
+    "summary": "A mission-preparation tool for a willing ally who needs long-range Darkvision without concentration. Usually copy it when this solves a real party gap.",
+    "buildRelevance": [],
+    "warnings": [
+      "Tier is a situational Compendium assessment, not a letter grade quoted from Pack Tactics."
+    ],
+    "relatedChapters": [
+      11,
+      37
+    ],
+    "tactics": [
+      "The 2024 spell grants 150-foot Darkvision for eight hours. Check existing species, equipment and subclass senses before spending a preparation or slot.",
+      "Darkvision does not grant sight through opaque cover, universal detection, or permission to see through every magical darkness effect."
+    ],
+    "research": {
+      "note": "Prompted by the supplied Pack Tactics research package. Video timestamps are its attribution trail, not independently verified quotations; editorial advice is separated from official spell access.",
+      "references": [
+        {
+          "title": "Pack Tactics · 11:35-11:52",
+          "url": "https://www.youtube.com/watch?v=LkMvHC-56Oc&t=695s"
+        }
+      ]
+    }
+  },
+  "sourceLocator": "RESEARCH-20260907:PT-SP-DARKVISION"
+}

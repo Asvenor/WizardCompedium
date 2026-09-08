@@ -1,0 +1,160 @@
+[
+  {
+    "page": 1,
+    "method": "text",
+    "lines": [
+      { "text": "CHARACTER NAME", "x": 40, "y": 690 },
+      { "text": "Total", "x": 430, "y": 580 },
+      { "text": "HIT DICE", "x": 430, "y": 560 },
+      { "text": "NOTES", "x": 530, "y": 155 },
+      { "text": "ACTIONS", "x": 330, "y": 170 }
+    ],
+    "widgets": [
+      { "name": "CharacterName", "value": "Rowan Fixture" },
+      { "name": "CLASS  LEVEL", "value": "Artificer 1 / Wizard 5" },
+      { "name": "MaxHP", "value": "42" },
+      { "name": "CurrentHP", "value": "" },
+      { "name": "TempHP", "value": "--" },
+      { "name": "Total", "value": "1d8 + 5d6" },
+      { "name": "ST Strength", "value": "-1" },
+      { "name": "ST Dexterity", "value": "+2" },
+      { "name": "ST Constitution", "value": "+5" },
+      { "name": "ST Intelligence", "value": "+6" },
+      { "name": "ST Wisdom", "value": "+1" },
+      { "name": "ST Charisma", "value": "+0" },
+      { "name": "Animal", "value": "+1" },
+      { "name": "Passive1", "value": "14" },
+      { "name": "Passive2", "value": "12" },
+      { "name": "Passive3", "value": "16" },
+      {
+        "name": "ProficienciesLang",
+        "value": "=== ARMOR ===\nLight Armor\n=== TOOLS ===\nWoodcarver's Tools\n=== LANGUAGES ===\nCommon, Elvish"
+      },
+      { "name": "Actions1", "value": "A fictional action description." },
+      { "name": "SaveModifiers", "value": "A fictional concentration note." },
+      { "name": "Wpn Name", "value": "Training Staff" },
+      { "name": "Wpn1 AtkBonus", "value": "+2" },
+      { "name": "Wpn1 Damage", "value": "1d6" }
+    ]
+  },
+  {
+    "page": 2,
+    "method": "text",
+    "lines": [
+      { "text": "FEATURES & TRAITS", "x": 180, "y": 540 },
+      { "text": "NAME QTY WEIGHT NAME QTY WEIGHT", "x": 240, "y": 530 },
+      { "text": "EQUIPMENT", "x": 310, "y": 45 },
+      {
+        "text": "TM & © 2018 Wizards of the Coast LLC. All Rights Reserved.",
+        "x": 80,
+        "y": 25
+      }
+    ],
+    "widgets": [
+      { "name": "CharacterName2", "value": "Rowan Fixture" },
+      {
+        "name": "FeaturesTraits1",
+        "value": "=== WIZARD FEATURES ===\n* Wizard Subclass • Test source\n\n | Diviner\n\nA feature that continues"
+      },
+      {
+        "name": "FeaturesTraits2",
+        "value": "into the next column.\n=== HUMAN SPECIES TRAITS ===\n* Fictional trait\n=== FEATS ===\n* Fictional focus feat"
+      },
+      { "name": "Eq Name0", "value": "Travel Cloak" },
+      { "name": "Eq Qty0", "value": "2" },
+      { "name": "Eq Weight0", "value": "4 lb." },
+      { "name": "Eq Name1", "value": "Notebook" },
+      { "name": "Eq Qty1", "value": "1" },
+      { "name": "Eq Weight1", "value": "--" },
+      { "name": "GP", "value": "18" },
+      { "name": "CP", "value": "0" },
+      {
+        "name": "AdditionalNotes1",
+        "value": "A private fictional journal entry."
+      }
+    ]
+  },
+  {
+    "page": 3,
+    "method": "text",
+    "lines": [
+      { "text": "SPELL NAME", "x": 40, "y": 680 },
+      { "text": "Web", "x": 40, "y": 200 }
+    ],
+    "widgets": [
+      { "name": "spellCastingClass0", "value": "Artificer / Wizard" },
+      { "name": "spellCastingAbility0", "value": "INT / INT" },
+      { "name": "spellSaveDC0", "value": "14 / 14" },
+      { "name": "spellAtkBonus0", "value": "+6 / +6" },
+      {
+        "name": "spellHeader0",
+        "value": "=== CANTRIPS ===",
+        "rect": [40, 640, 148, 650]
+      },
+      {
+        "name": "spellName0",
+        "value": "Mage Hand",
+        "rect": [40, 620, 148, 630]
+      },
+      {
+        "name": "spellSource0",
+        "value": "Wizard",
+        "rect": [150, 620, 230, 630]
+      },
+      { "name": "spellPrepared0", "value": "O" },
+      {
+        "name": "spellHeader1",
+        "value": "=== 1st LEVEL ===",
+        "rect": [40, 500, 148, 510]
+      },
+      { "name": "spellSlotHeader1", "value": "4 Slots OOOO" },
+      {
+        "name": "spellName1",
+        "value": "Detect Magic [R]",
+        "rect": [40, 480, 148, 490]
+      },
+      {
+        "name": "spellSource1",
+        "value": "Wizard",
+        "rect": [150, 480, 230, 490]
+      },
+      { "name": "spellPrepared1", "value": "O" },
+      {
+        "name": "spellName2",
+        "value": "Detect Magic [R]",
+        "rect": [40, 460, 148, 470]
+      },
+      {
+        "name": "spellSource2",
+        "value": "Artificer",
+        "rect": [150, 460, 230, 470]
+      },
+      { "name": "spellPrepared2", "value": "P" },
+      {
+        "name": "spellName3",
+        "value": "Copper Comet",
+        "rect": [40, 440, 148, 450]
+      },
+      { "name": "spellSource3", "value": "Clockwork Gift (Always Prepared)" },
+      { "name": "spellPrepared3", "value": "P" },
+      { "name": "SpellSource1", "value": "", "rect": [150, 90, 230, 100] },
+      { "name": "SpellSource2", "value": "", "rect": [150, 70, 230, 80] }
+    ]
+  },
+  {
+    "page": 4,
+    "method": "text",
+    "lines": [],
+    "widgets": [
+      {
+        "name": "spellHeader2",
+        "value": "=== 2nd LEVEL ===",
+        "rect": [40, 650, 148, 640]
+      },
+      { "name": "spellSlotHeader2", "value": "3 Slots OOO" },
+      { "name": "spellName4", "value": "Web", "rect": [40, 630, 148, 620] },
+      { "name": "spellSource4", "value": "Wizard" },
+      { "name": "spellPrepared4", "value": "O" }
+    ]
+  }
+]

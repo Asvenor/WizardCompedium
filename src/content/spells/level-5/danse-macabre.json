@@ -1,0 +1,84 @@
+{
+  "id": "danse-macabre",
+  "name": "Danse Macabre",
+  "level": 5,
+  "school": "Necromancy",
+  "rules": {
+    "castingTime": "Action",
+    "range": "60 ft",
+    "area": null,
+    "duration": "Up to 1 hour",
+    "concentration": true,
+    "ritual": false,
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": false,
+      "description": null,
+      "gpCost": 0,
+      "consumed": false
+    },
+    "damageTypes": [],
+    "save": {
+      "ability": null,
+      "type": null
+    },
+    "attackRoll": false
+  },
+  "source": {
+    "book": "Xanathar's Guide to Everything",
+    "rulesVersion": "Expanded legacy supplement with 2024 campaign permission",
+    "category": "Expanded",
+    "sourceSensitive": true,
+    "review": {
+      "date": "2026-09-07",
+      "access": "Wizard spell; requires the campaign to permit this expanded source.",
+      "scope": "Wizard-list access and displayed metadata checked. Full paid spell text was unavailable in this review; detailed stat blocks and unverified numerical claims are not reproduced.",
+      "references": [
+        {
+          "title": "Official spell entry",
+          "url": "https://www.dndbeyond.com/spells/14830-danse-macabre"
+        },
+        {
+          "title": "Official Wizard spell list — access and displayed metadata",
+          "url": "https://www.dndbeyond.com/spells/class/8-wizard"
+        }
+      ]
+    }
+  },
+  "compendium": {
+    "tier": "B",
+    "acquisitionRole": "optional",
+    "preparedBaseline": false,
+    "roles": [
+      "minion",
+      "damage"
+    ],
+    "summary": "A concentration-based undead combat group for campaigns allowing Xanathar's material. Treat corpse access, commands and encounter pace as real costs.",
+    "buildRelevance": [],
+    "warnings": [
+      "Expanded-source permission is required; owning the book or seeing a spell in a builder is not campaign approval.",
+      "Tier is a situational Compendium assessment, not a letter grade quoted from Pack Tactics.",
+      "Full paid spell mechanics were not independently rechecked; consult the linked active entry before using detailed interactions."
+    ],
+    "relatedChapters": [
+      11,
+      22
+    ],
+    "tactics": [
+      "This fills a different role from Animate Dead's persistent, upkeep-based minions. Do not transfer duration, control or concentration rules between them.",
+      "The research compares it favorably with legacy Animate Objects. That is not evidence that its old damage comparison applies unchanged to 2024 spells or revised monster statistics.",
+      "Use a compact initiative and command procedure agreed with the DM. Extra bodies should not turn every round into an extended bookkeeping exercise."
+    ],
+    "research": {
+      "note": "Prompted by the supplied Pack Tactics research package. Video timestamps are its attribution trail, not independently verified quotations; editorial advice is separated from official spell access.",
+      "references": [
+        {
+          "title": "Pack Tactics · 06:36-07:17",
+          "url": "https://www.youtube.com/watch?v=5dMhYNTqUFY&t=396s"
+        }
+      ]
+    }
+  },
+  "sourceLocator": "RESEARCH-20260907:PT-SP-DANSE_MACABRE"
+}

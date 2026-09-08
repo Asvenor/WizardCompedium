@@ -7,18 +7,36 @@
     "dev": "ASTRO_TELEMETRY_DISABLED=1 astro dev",
     "build:astro": "ASTRO_TELEMETRY_DISABLED=1 astro build",
     "build": "node scripts/validate-spells.mjs && ASTRO_TELEMETRY_DISABLED=1 astro build && pagefind --site dist",
-    "test": "node --test scripts/test-tools.mjs scripts/test-table-structure.mjs scripts/test-workflows.mjs",
+    "test": "node --test scripts/test-tools.mjs scripts/test-table-structure.mjs scripts/test-workflows.mjs scripts/test-research-integration.mjs scripts/test-character-import.mjs",
     "check": "ASTRO_TELEMETRY_DISABLED=1 astro check",
     "generate:prototype": "node scripts/migrate-compendium.mjs --prototype",
     "generate:content": "node scripts/migrate-compendium.mjs",
     "validate:content": "node scripts/validate-migration.mjs",
     "validate:build": "node scripts/validate-build.mjs",
-    "audit:fidelity": "node scripts/audit-content-fidelity.mjs"
+    "audit:fidelity": "node scripts/audit-content-fidelity.mjs",
+    "prepare:import": "node scripts/prepare-character-import.mjs",
+    "predev": "npm run prepare:import",
+    "prebuild": "npm run prepare:import",
+    "prebuild:astro": "npm run prepare:import",
+    "precheck": "npm run prepare:import",
+    "test:import": "node --test scripts/test-character-import.mjs",
+    "test:import:browser": "playwright test",
+    "fixtures:import": "python3 scripts/create-character-fixtures.py",
+    "validate:import": "node scripts/prepare-character-import.mjs --check"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.10",
+    "@tesseract.js-data/eng": "^1.0.0",
+    "ajv": "^8.20.0",
+    "ajv-formats": "^3.0.1",
     "astro": "^7.3.1",
     "pagefind": "^1.5.2",
+    "pdfjs-dist": "^6.3.289",
+    "tesseract.js": "^7.0.0",
     "typescript": "^6.0.3"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
+    "@playwright/test": "^1.63.0"
   }
 }

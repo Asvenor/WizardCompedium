@@ -295,3 +295,80 @@ Why it is advanced: Sleet Storm combines long range, Heavy Obscurement, Difficul
 </aside>
 
 <!-- source:B00368 -->
+<!-- research:PT-20260907-ENGINES -->
+## Sickening Radiance and Wall of Force: two-caster sequence
+
+**Wizard use:** Wall of Force requires Wizard 9; the other caster must have legal access to the expanded-source Sickening Radiance and a fourth-level slot. A one-level dip delays the Wizard's unlock to character level 10. This is a coordinated containment tactic, not a solo double-concentration trick or a guaranteed kill.
+
+<div class="table-wrap" tabindex="0"><table><thead><tr><th scope="col">Phase</th><th scope="col">Execution</th><th scope="col">Failure to plan for</th></tr></thead><tbody>
+<tr><td>Agree before combat</td><td>Choose two concentration holders, compatible ranges, and a wall shape that actually encloses the targets within the hazard.</td><td>One Wizard cannot maintain both spells. A second caster does not remove positioning or initiative problems.</td></tr>
+<tr><td>Hazard first</td><td>Cast Sickening Radiance while the intended area is still accessible.</td><td>Do not plan to cast it through a completed sealed force enclosure. Enemies may move before the second caster acts.</td></tr>
+<tr><td>Contain second</td><td>The other caster places Wall of Force around the remaining eligible targets.</td><td>A readied spell itself uses concentration; holding it has a cost and its trigger must occur.</td></tr>
+<tr><td>Maintain and adapt</td><td>Protect both casters with distance and cover; resolve the hazard only at its actual trigger times.</td><td>Teleportation, Disintegrate, immunity, successful saves, imperfect geometry or either caster losing concentration can defeat the plan.</td></tr>
+</tbody></table></div>
+
+Use the campaign's chosen exhaustion rules with the permitted spell version. Do not promise a fixed number of rounds to death, automatic failed saves, or extra damage merely because the wall appeared. This mixed-source combination belongs in the table-approved advanced tier. The existing Planar Binding procedure above remains the home for demon-binding logistics: a one-hour binding cast itself requires concentration, and an exactly one-hour summon leaves a separate timing problem even with two casters.
+
+## Wish target menu
+
+**Access:** normally Wizard 17, or character level 18 with a one-level dip. Every row below spends your ninth-level Wish slot; a target's printed level is not the level at which a Wizard gains this off-list access. Wish does not permanently add another class's spells to your spellbook.
+
+Ordinary duplication can reproduce a spell of level 8 or lower without its normal casting requirements, including costly components and long casting time. The target spell's effect still governs saves, concentration, duration and subsequent steps. Ordinary duplication does not incur Wish's non-duplication stress. That is not a promise that a dangerous target spell has no risks of its own.
+
+**Conservative baseline:** use the target's base-level effect unless the table has explicitly settled duplication at a higher effective level. Do not silently calculate eighth-level Aid, a flying fourth-level Find Steed, or a year-long Planar Binding from a base-level duplicate. **Foresight and True Resurrection are ninth-level spells and are excluded from this menu.**
+
+### Core 2024 targets
+
+"Wizard list" means the spell can also be learned normally. "Wish-only here" means this guide does not grant ordinary Wizard spellbook access; another feature or allied caster is a separate route.
+
+<div class="table-wrap" data-research-table="wish-core" tabindex="0"><table><thead><tr><th scope="col">Target</th><th scope="col">Level / access</th><th scope="col">Useful Wizard job</th><th scope="col">Boundary that still matters</th></tr></thead><tbody>
+<tr><td>Simulacrum</td><td>7 · Wizard list</td><td>Create a duplicate without a twelve-hour cast or the usual ruby.</td><td>Respect the 2024 duplicate's resource, rest and Simulacrum restrictions. This is not approval for recursive Wish armies.</td></tr>
+<tr><td>Clone</td><td>8 · Wizard list</td><td>Prepare long-term return-from-death insurance.</td><td>Maturation still takes 120 days; the soul must be free and willing. Resolve the effect's continuing vessel requirement before casting, not after losing a body.</td></tr>
+<tr><td>Find Familiar</td><td>1 · Wizard list</td><td>Replace a crucial scout immediately.</td><td>Usually much cheaper as a normal Wizard ritual. One familiar, its action limits and form eligibility still apply.</td></tr>
+<tr><td>Magic Jar</td><td>6 · Wizard list</td><td>Accelerate an explicitly approved possession operation.</td><td>Target eligibility, saving throws and soul/body/container hazards remain. Clarify the continuing container requirement.</td></tr>
+<tr><td>Planar Binding</td><td>5 · Wizard list</td><td>Bind an eligible creature without the hour-long cast or consumed jewel.</td><td>Charisma save, eligible creature type and command limitations remain; base duration is 24 hours.</td></tr>
+<tr><td>Plane Shift</td><td>7 · Wizard list</td><td>Planar extraction without acquiring the destination's tuning fork.</td><td>Passenger eligibility and destination limitations remain; it is not precise same-plane Teleport.</td></tr>
+<tr><td>Glyph of Warding</td><td>3 · Wizard list</td><td>Prepare a fixed defense quickly and without the usual material expense.</td><td>The movement limit remains. A stored-spell glyph still needs its additional spell; Wish is not automatically both spells.</td></tr>
+<tr><td>Symbol</td><td>7 · Wizard list</td><td>Prepare a powerful fixed-site trigger.</td><td>Resolve its own movement, trigger, target and effect rules. Do not treat a trapped portable object as an unrestricted combat grenade.</td></tr>
+<tr><td>Antipathy/Sympathy</td><td>8 · Wizard list</td><td>Shape access to a site against a known creature kind.</td><td>Choice of targets, saves and the selected attraction or repulsion effect matter; this is not universal mind control.</td></tr>
+<tr><td>Mirage Arcane</td><td>7 · Wizard list</td><td>Change terrain without the normal ten-minute setup.</td><td>Agree on physical interaction and terrain limits. The 2024 Illusionist does not inherit the legacy Malleable Illusions feature.</td></tr>
+<tr><td>Mordenkainen's Private Sanctum</td><td>4 · Wizard list</td><td>Block selected surveillance or travel routes into a base.</td><td>Select the protection options; the normal area, duration and repeated-casting permanence requirements remain.</td></tr>
+<tr><td>Hallow</td><td>5 · Wish-only here</td><td>Create a lasting ward without a 24-hour cast.</td><td>It cannot overlap another Hallow. Preventing specified creatures from willingly entering is not automatic banishment of creatures already inside.</td></tr>
+<tr><td>Forbiddance</td><td>6 · Wish-only here</td><td>Ward a large site against specified travel and intruders.</td><td>Its area, selected creature types, password and permanence rules differ from Hallow and Private Sanctum.</td></tr>
+<tr><td>Resurrection</td><td>7 · Wish-only here</td><td>Recover a dead ally beyond Revivify's one-minute window.</td><td>No old-age or Undead revival; the death must be within a century. The returned creature's recovery penalty remains. Resolve the caster-tax clause for a death 365+ days ago; do not assume Wish removes it.</td></tr>
+<tr><td>Revivify</td><td>3 · Wish-only here</td><td>Immediate emergency revival without a diamond on hand.</td><td>Touch; death within the last minute; returns with 1 HP. No missing-body-part restoration or old-age reversal.</td></tr>
+<tr><td>Prayer of Healing</td><td>2 · Wish-only here</td><td>Action-speed Short Rest benefits plus healing when recovery changes the fight.</td><td>Up to five eligible creatures; base healing 2d8 each; each can benefit only once per Long Rest. Keep targets in range and resolve feature-specific rest choices.</td></tr>
+<tr><td>Aid</td><td>2 · Wish-only here</td><td>Non-concentration current and maximum HP for up to three allies.</td><td>Base increase is 5 HP for eight hours, not an assumed 35 HP. Spending Wish for that baseline is rarely efficient.</td></tr>
+<tr><td>Heroes' Feast</td><td>6 · Wish-only here</td><td>Party preparation without the consumed 1,000+ gp bowl.</td><td>Up to twelve creatures must still eat for one hour. The 24-hour benefits include Poison resistance, immunity to Poisoned and Frightened, and increased maximum/current HP; do not import legacy Poison-damage immunity.</td></tr>
+<tr><td>Animal Shapes</td><td>8 · Wish-only here</td><td>Long-duration Beast forms for willing allies without concentration.</td><td>Large or smaller, CR 4 or lower. Targets retain their own HP and receive Temporary HP from the first form only; repeated forms do not refill that buffer. They cannot cast spells while transformed.</td></tr>
+<tr><td>Giant Insect</td><td>4 · Wish-only here</td><td>A concentration summon when Spider Web Bolt's movement denial addresses the encounter.</td><td>Web Bolt must hit before Speed becomes 0. Use the corrected base 30 HP, not a pre-errata inflated total; this is not a normal Wizard fourth-level selection.</td></tr>
+<tr><td>Find Steed</td><td>2 · Wish-only here</td><td>A persistent travel mount using the current Otherworldly Steed.</td><td>The base second-level form cannot fly; flight requires a level-4+ spell. Observe controlled-mount actions and the spell's replacement rule.</td></tr>
+</tbody></table></div>
+
+### Expanded-source targets: permission and text check first
+
+These research leads can be relevant through Wish if their named source and spell are allowed. They are **not fully verified tactical packages**: the full paid target text was not independently available for this pass. Do not build a guaranteed combat sequence, permanent base or monster-stat calculation on these rows until the exact entry is checked. The levels below identify the supplied source version, not a new 2024 reprint.
+
+<div class="table-wrap" data-research-table="wish-expanded" tabindex="0"><table><thead><tr><th scope="col">Target</th><th scope="col">Source / level</th><th scope="col">Wizard relevance</th><th scope="col">Check before use</th></tr></thead><tbody>
+<tr><td>Temple of the Gods</td><td>Xanathar's · 7</td><td>Wish access to a temporary fortified sanctuary.</td><td>Placement, duration, ward choices and repeated-casting permanence; not a general Wizard learnable spell.</td></tr>
+<tr><td>Find Greater Steed</td><td>Xanathar's · 4</td><td>Wish access to the older greater-mount spell.</td><td>Permitted forms, current monster versions, mount count and campaign compatibility. Do not assume the research's Dragonel option is universally available.</td></tr>
+<tr><td>Create Homunculus</td><td>Xanathar's · 6</td><td>Expanded Wizard spell or Wish for a persistent scouting asset.</td><td>Creature statistics, continuing costs and binding limits. Keep separate from Find Familiar's first-level ritual.</td></tr>
+<tr><td>Dark Star</td><td>Wildemount · 8</td><td>Wish or specifically permitted Dunamancy access for an area hazard.</td><td>Source permission, exact targeting and concentration; containment needs its own legal caster or effect.</td></tr>
+<tr><td>Druid Grove</td><td>Xanathar's · 6</td><td>Wish access to a defended outdoor site.</td><td>Eligible terrain, selected defenses, duration and permanence. No ordinary Wizard-list grant.</td></tr>
+</tbody></table></div>
+
+### Disputed subclass and storage interactions
+
+<div class="table-wrap" tabindex="0"><table><thead><tr><th scope="col">Research proposal</th><th scope="col">Actual Wizard gate</th><th scope="col">Compendium treatment</th></tr></thead><tbody>
+<tr><td>Arcane Abeyance: separate concentration</td><td>Legacy Chronurgy, Wizard 10; a permitted eligible stored spell and a creature able to release it.</td><td>Use the feature's release rules to identify the caster and concentration holder. Do not assume every familiar or object can operate it, or that the Wizard gains a second personal concentration slot.</td></tr>
+<tr><td>Arcane Abeyance: action-speed Tiny Hut</td><td>The same legacy subclass feature, plus an eligible hut spell stored in advance.</td><td>RULING-SENSITIVE. Resolve stored long-cast spells and release timing with the DM; ordinary Tiny Hut is not an action-speed combat bunker.</td></tr>
+<tr><td>Illusory Reality: physical cage</td><td>2024 Illusionist, Wizard 14; an Illusion cast with a spell slot and an eligible inanimate nonmagical object.</td><td>The real object lasts one minute and cannot deal damage or impose conditions. Physical confinement, escape and object durability need adjudication; it is not Forcecage. Minor Illusion cannot activate this feature.</td></tr>
+<tr><td>Rope Trick into Plane Shift</td><td>Wizard 13 for Plane Shift; required components unless legitimately bypassed.</td><td>Legacy extradimensional-space interpretation is not a guaranteed precise Material Plane travel route. Agree on plane classification and destination handling first.</td></tr>
+<tr><td>Portable Wish glyph cache</td><td>Wizard 17 for Wish; otherwise ordinary Glyph setup rules.</td><td>Fixed-site glyphs are the supported baseline. Extradimensional storage does not automatically cancel the movement limit.</td></tr>
+</tbody></table></div>
+
+Rules basis: <a href="https://www.dndbeyond.com/spells/2619213-wish">2024 Wish</a>, <a href="https://media.dndbeyond.com/compendium-images/srd/5.2.1/SRD_CC_v5.2.1.pdf">SRD 5.2.1 spell entries and casting rules</a>, and <a href="https://www.dndbeyond.com/sources/dnd/sae/players-handbook">official Player's Handbook errata</a>. Expanded-source details require their own source; the research package is not a substitute. Research trail: <a href="https://www.youtube.com/watch?v=3_xXO1VaxOU">Wish menu video</a>, <a href="https://www.youtube.com/watch?v=jseWFC9gwc8&t=378s">containment discussion, 06:18</a>, and <a href="https://www.youtube.com/watch?v=8DJ2HMdaSKQ">Illusionist discussion</a>. These links preserve the supplied attribution trail, not newly verified creator quotations.
+
+### SRD attribution
+
+This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at <a href="https://www.dndbeyond.com/srd">https://www.dndbeyond.com/srd</a>. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at <a href="https://creativecommons.org/licenses/by/4.0/legalcode">https://creativecommons.org/licenses/by/4.0/legalcode</a>.

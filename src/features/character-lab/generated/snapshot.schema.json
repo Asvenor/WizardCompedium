@@ -1,0 +1,290 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Character Lab immutable import snapshot 1.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_type",
+    "schema_version",
+    "id",
+    "character_id",
+    "revision",
+    "name",
+    "observed_at",
+    "recorded_at",
+    "source",
+    "ruleset_profile_ref",
+    "facts",
+    "observations",
+    "corrections",
+    "unknowns",
+    "scope_restrictions",
+    "previous_snapshot_ref"
+  ],
+  "properties": {
+    "schema_type": {
+      "const": "character"
+    },
+    "schema_version": {
+      "const": "1.1.0"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^snapshot\\.[a-f0-9_]+$"
+    },
+    "character_id": {
+      "type": "string",
+      "pattern": "^character\\.[a-f0-9_]+$"
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "observed_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "recorded_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "filename",
+        "sha256",
+        "page_count",
+        "methods",
+        "retained"
+      ],
+      "properties": {
+        "type": {
+          "enum": [
+            "ddb_pdf",
+            "manual"
+          ]
+        },
+        "filename": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 200
+        },
+        "sha256": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "page_count": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 20
+        },
+        "methods": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "text",
+              "acroform",
+              "ocr",
+              "manual"
+            ]
+          }
+        },
+        "retained": {
+          "type": "boolean"
+        }
+      }
+    },
+    "ruleset_profile_ref": {
+      "enum": [
+        "ruleset.core2024.v1",
+        null
+      ]
+    },
+    "facts": {
+      "$ref": "#/$defs/facts"
+    },
+    "observations": {
+      "$ref": "#/$defs/facts"
+    },
+    "corrections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "path",
+          "before",
+          "after",
+          "recorded_at"
+        ],
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "before": {
+            "$ref": "#/$defs/value"
+          },
+          "after": {
+            "$ref": "#/$defs/value"
+          },
+          "recorded_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      }
+    },
+    "unknowns": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      }
+    },
+    "scope_restrictions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "previous_snapshot_ref": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^snapshot\\.[a-f0-9_]+$"
+    }
+  },
+  "$defs": {
+    "value": {
+      "type": [
+        "string",
+        "number",
+        "boolean",
+        "null"
+      ],
+      "maxLength": 12000
+    },
+    "facts": {
+      "type": "object",
+      "maxProperties": 2500,
+      "propertyNames": {
+        "pattern": "^[a-z][a-z0-9_.]*$"
+      },
+      "additionalProperties": {
+        "$ref": "#/$defs/fact"
+      }
+    },
+    "fact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "value",
+        "provenance",
+        "confidence",
+        "verification",
+        "source",
+        "alternatives"
+      ],
+      "properties": {
+        "value": {
+          "$ref": "#/$defs/value"
+        },
+        "provenance": {
+          "enum": [
+            "sheet_observed",
+            "user_reported",
+            "derived"
+          ]
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "verification": {
+          "enum": [
+            "unknown",
+            "needs_confirmation",
+            "user_confirmed"
+          ]
+        },
+        "source": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "page",
+            "label",
+            "method"
+          ],
+          "properties": {
+            "page": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 1,
+              "maximum": 20
+            },
+            "label": {
+              "type": "string",
+              "maxLength": 300
+            },
+            "method": {
+              "enum": [
+                "text",
+                "acroform",
+                "ocr",
+                "manual",
+                "calculation"
+              ]
+            }
+          }
+        },
+        "alternatives": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "value",
+              "page",
+              "label"
+            ],
+            "properties": {
+              "value": {
+                "$ref": "#/$defs/value"
+              },
+              "page": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "label": {
+                "type": "string",
+                "maxLength": 300
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

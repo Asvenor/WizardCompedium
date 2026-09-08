@@ -25,6 +25,8 @@ export const getSpellSearchText = (spell: SpellData) =>
     [
       spell.name,
       spell.compendium.summary,
+      ...(spell.compendium.tactics ?? []),
+      spell.source.review?.access,
       ...spell.compendium.roles,
       ...getSpellRoleCategories(spell),
       spell.source.category,

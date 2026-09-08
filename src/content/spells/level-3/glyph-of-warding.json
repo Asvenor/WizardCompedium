@@ -54,7 +54,29 @@
       23,
       25,
       47
-    ]
+    ],
+    "tactics": [
+      "Use a fixed, defended location with deliberate triggers and an inventory of stored effects. The 10-foot movement restriction is not removed by calling the container a backpack or extradimensional cache.",
+      "Wish bypassing Glyph's casting requirements does not automatically supply every separate spell stored in a spell glyph. Resolve the stored spell's additional casting/resource requirement explicitly.",
+      "Portable glyph batteries and unbounded stacking remain disputed optional engines, not default adventuring assumptions."
+    ],
+    "relatedSpells": [
+      "demiplane",
+      "wish"
+    ],
+    "research": {
+      "note": "Research-informed tactical supplement. Pack Tactics timestamps below are supplied-package attribution, not newly verified quotations. Existing Compendium tiers are preserved; rules and optimizer preference are distinct.",
+      "references": [
+        {
+          "title": "Pack Tactics · 12:15-12:38",
+          "url": "https://www.youtube.com/watch?v=P6YGySiNSN8&t=735s"
+        },
+        {
+          "title": "Pack Tactics · 06:17-07:08",
+          "url": "https://www.youtube.com/watch?v=3_xXO1VaxOU&t=377s"
+        }
+      ]
+    }
   },
   "sourceLocator": "B00142"
 }

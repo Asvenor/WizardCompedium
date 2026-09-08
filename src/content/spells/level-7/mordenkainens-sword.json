@@ -1,0 +1,79 @@
+{
+  "id": "mordenkainens-sword",
+  "name": "Mordenkainen's Sword",
+  "level": 7,
+  "school": "Evocation",
+  "rules": {
+    "castingTime": "Action",
+    "range": "90 ft",
+    "area": null,
+    "duration": "Up to 1 minute",
+    "concentration": true,
+    "ritual": false,
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": true,
+      "description": "A miniature sword worth 250+ gp; retained",
+      "gpCost": 250,
+      "consumed": false
+    },
+    "damageTypes": [
+      "Force"
+    ],
+    "save": {
+      "ability": null,
+      "type": "Melee spell attack"
+    },
+    "attackRoll": true
+  },
+  "source": {
+    "book": "Player's Handbook (2024)",
+    "rulesVersion": "2024",
+    "category": "Core",
+    "sourceSensitive": false,
+    "review": {
+      "date": "2026-09-07",
+      "access": "Normal 2024 Wizard spell-list access; learn and prepare through the Wizard's normal rules.",
+      "scope": "Listed mechanics checked against the official current entry or SRD 5.2.1. Tier and acquisition advice are Compendium editorial judgments, not official rules.",
+      "references": [
+        {
+          "title": "SRD 5.2.1, page 110",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2.1/SRD_CC_v5.2.1.pdf#page=110"
+        }
+      ]
+    }
+  },
+  "compendium": {
+    "tier": "D",
+    "acquisitionRole": "optional",
+    "preparedBaseline": false,
+    "roles": [
+      "damage"
+    ],
+    "summary": "A legal Wizard spell with a high opportunity cost: seventh-level concentration and repeated Bonus Actions for a single attacking effect. Usually a low-priority acquisition.",
+    "buildRelevance": [],
+    "warnings": [
+      "Tier is a situational Compendium assessment, not a letter grade quoted from Pack Tactics."
+    ],
+    "relatedChapters": [
+      11,
+      14
+    ],
+    "tactics": [
+      "The revised spell's initial melee spell attack deals 4d12 plus your spellcasting ability modifier on a hit. Later Bonus Actions move the sword up to 30 feet and repeat the attack.",
+      "Compare this with a spell that removes several enemy turns or solves a new strategic problem. 'Usually skip' is an optimization judgment, not a statement that the spell is unavailable.",
+      "The SRD uses the name Arcane Sword for this spell. Do not use the legacy damage profile when evaluating the 2024 version."
+    ],
+    "research": {
+      "note": "Prompted by the supplied Pack Tactics research package. Video timestamps are its attribution trail, not independently verified quotations; editorial advice is separated from official spell access.",
+      "references": [
+        {
+          "title": "Pack Tactics · 14:14-14:25",
+          "url": "https://www.youtube.com/watch?v=idb8V9tz8XQ&t=854s"
+        }
+      ]
+    }
+  },
+  "sourceLocator": "RESEARCH-20260907:PT-SP-MORDENKAINENS_SWORD"
+}

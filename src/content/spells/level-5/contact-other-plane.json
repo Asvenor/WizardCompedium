@@ -4,10 +4,10 @@
   "level": 5,
   "school": null,
   "rules": {
-    "castingTime": "1 m",
+    "castingTime": "1 minute; 11 minutes as a ritual",
     "range": "Self",
     "area": null,
-    "duration": null,
+    "duration": "1 minute",
     "concentration": false,
     "ritual": true,
     "components": {
@@ -43,8 +43,33 @@
     ],
     "relatedChapters": [
       11,
-      15
-    ]
+      15,
+      37
+    ],
+    "tactics": [
+      "Write five questions before casting. With reliable binary answers, five questions can distinguish up to 32 mutually exclusive possibilities; unknown or ambiguous answers break that calculation.",
+      "Allow one minute for normal casting or 11 minutes as a ritual. Ritual Adept permits a Wizard to read it from the spellbook without preparing it.",
+      "The caster makes a DC 15 Intelligence save. Failure deals 6d6 Psychic damage and leaves the caster Incapacitated until a Long Rest ends, unless Greater Restoration removes the effect.",
+      "Ask about facts the contacted entity could know. Do not treat a sequence of leading questions as an omniscient search engine. Use the worked example in Chapter 37."
+    ],
+    "relatedSpells": [
+      "locate-object",
+      "divination",
+      "rarys-telepathic-bond"
+    ],
+    "research": {
+      "note": "Research-informed tactical supplement. Pack Tactics timestamps below are supplied-package attribution, not newly verified quotations. Existing Compendium tiers are preserved; rules and optimizer preference are distinct.",
+      "references": [
+        {
+          "title": "Pack Tactics · 00:29-01:23",
+          "url": "https://www.youtube.com/watch?v=5dMhYNTqUFY&t=29s"
+        },
+        {
+          "title": "Pack Tactics · 13:03-15:50",
+          "url": "https://www.youtube.com/watch?v=Co1F7EVmNVQ&t=783s"
+        }
+      ]
+    }
   },
   "sourceLocator": "B00191"
 }

@@ -4,10 +4,10 @@
   "level": 3,
   "school": null,
   "rules": {
-    "castingTime": "1 m",
+    "castingTime": "1 minute; 11 minutes as a ritual",
     "range": "30 ft",
     "area": null,
-    "duration": null,
+    "duration": "1 hour",
     "concentration": false,
     "ritual": true,
     "components": {
@@ -39,7 +39,7 @@
       "ritual",
       "travel"
     ],
-    "summary": "Fast overland or tactical transport with fragility.",
+    "summary": "Reusable ritual mobility for open-map travel and tactical repositioning. Guarantee access early when the campaign can exploit a mount; copying later is sensible only if access is real.",
     "buildRelevance": [],
     "warnings": [
       "The Compendium index is an operating reference, not replacement spell text. Confirm the active D&D Beyond entry before casting."
@@ -47,9 +47,32 @@
     "relatedChapters": [
       11,
       15,
+      37,
       38,
       47
-    ]
+    ],
+    "tactics": [
+      "Plan 11 minutes per ritual, not one minute. Multiple steeds have staggered one-hour expiries; casting another ritual requires concentration during that casting.",
+      "The steed has Speed 100 feet. A controlled mount can Dash for up to 200 feet of movement, or Disengage and retain its normal 100 feet—not both from the same action.",
+      "Any damage ends the spell. The fading minute gives time to dismount; do not assume it is a guaranteed extra minute of full-strength combat transport. Map size, mounts and enemy ranged attacks determine the payoff."
+    ],
+    "relatedSpells": [
+      "rope-trick",
+      "locate-object"
+    ],
+    "research": {
+      "note": "Research-informed tactical supplement. Pack Tactics timestamps below are supplied-package attribution, not newly verified quotations. Existing Compendium tiers are preserved; rules and optimizer preference are distinct.",
+      "references": [
+        {
+          "title": "Pack Tactics · 13:31-14:11",
+          "url": "https://www.youtube.com/watch?v=P6YGySiNSN8&t=811s"
+        },
+        {
+          "title": "Pack Tactics · 02:49-02:56",
+          "url": "https://www.youtube.com/watch?v=8DJ2HMdaSKQ&t=169s"
+        }
+      ]
+    }
   },
   "sourceLocator": "B00191"
 }

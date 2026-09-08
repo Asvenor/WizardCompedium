@@ -5,6 +5,7 @@ const root = resolve(import.meta.dirname, '..');
 const sourcePath = resolve(root, '../Wizard_Compendium_V2/01_Audit/extracted/Ultimate_Wizard_Compendium_FINAL_v1.14_DDB_Verified_Corrected__OneDrive.json');
 const source = JSON.parse(readFileSync(sourcePath, 'utf8'));
 const coverage = JSON.parse(readFileSync(join(root, 'src/data/migration-coverage.json'), 'utf8'));
+const research = JSON.parse(readFileSync(join(root, 'src/data/research-integration-20260907.json'), 'utf8'));
 const chapters = JSON.parse(readFileSync(join(root, 'src/data/chapters.json'), 'utf8'));
 
 function walk(path) {
@@ -23,7 +24,16 @@ const chapterFiles = walk(join(root, 'src/content/chapters')).filter((path) => p
 const spellFiles = walk(join(root, 'src/content/spells')).filter((path) => path.endsWith('.json'));
 if (coverage.mode === 'complete') {
   if (chapterFiles.length !== 62) errors.push(`Expected 61 chapters plus changelog, found ${chapterFiles.length} Markdown files.`);
-  if (spellFiles.length !== coverage.discoveredSpellRecords) errors.push(`Expected ${coverage.discoveredSpellRecords} spell files, found ${spellFiles.length}.`);
+  const expectedSpellCount = coverage.discoveredSpellRecords + research.newSpellIds.length;
+  if (spellFiles.length !== expectedSpellCount) errors.push(`Expected ${coverage.discoveredSpellRecords} migrated plus ${research.newSpellIds.length} research spell files, found ${spellFiles.length}.`);
+  const records = spellFiles.map((file) => JSON.parse(readFileSync(file, 'utf8')));
+  const added = new Set(research.newSpellIds);
+  for (const id of added) {
+    const record = records.find((spell) => spell.id === id);
+    if (!record?.sourceLocator?.startsWith('RESEARCH-20260907:')) errors.push(`Missing or untraceable research addition: ${id}`);
+  }
+  const migrated = records.filter((spell) => !added.has(spell.id));
+  if (migrated.length !== coverage.discoveredSpellRecords || migrated.some((spell) => !/^B\d+/.test(spell.sourceLocator))) errors.push('Original migrated spell coverage changed.');
   const expectedLocators = [];
   let started = false;
   for (const block of source.blocks) {

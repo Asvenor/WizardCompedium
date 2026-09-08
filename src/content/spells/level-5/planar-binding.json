@@ -54,7 +54,35 @@
       23,
       25,
       47
-    ]
+    ],
+    "tactics": [
+      "Its completed effect does not require concentration, but the hour spent casting does. A single caster normally cannot maintain a concentration summon and cast Binding at the same time.",
+      "A second caster solves the competing-concentration problem, not every duration problem: the target must still exist and stay in range throughout the whole binding cast.",
+      "Wish can remove the long casting and costly-component requirements at Wizard 17. The target's eligibility, saving throw and hostile interpretation of commands still matter.",
+      "Nystul's Magic Aura does not make a prisoner willing or remove Legendary Resistance. The more permissive universal-binding loop remains disputed."
+    ],
+    "relatedSpells": [
+      "summon-greater-demon",
+      "wish",
+      "nystuls-magic-aura"
+    ],
+    "research": {
+      "note": "Research-informed tactical supplement. Pack Tactics timestamps below are supplied-package attribution, not newly verified quotations. Existing Compendium tiers are preserved; rules and optimizer preference are distinct.",
+      "references": [
+        {
+          "title": "Pack Tactics · 08:15-09:21",
+          "url": "https://www.youtube.com/watch?v=5dMhYNTqUFY&t=495s"
+        },
+        {
+          "title": "Pack Tactics · 10:59-12:55",
+          "url": "https://www.youtube.com/watch?v=U2ji8QNfsPw&t=659s"
+        },
+        {
+          "title": "Pack Tactics · 08:59-09:16",
+          "url": "https://www.youtube.com/watch?v=idb8V9tz8XQ&t=539s"
+        }
+      ]
+    }
   },
   "sourceLocator": "B00191"
 }

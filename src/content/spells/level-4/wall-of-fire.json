@@ -1,0 +1,82 @@
+{
+  "id": "wall-of-fire",
+  "name": "Wall of Fire",
+  "level": 4,
+  "school": "Evocation",
+  "rules": {
+    "castingTime": "Action",
+    "range": "120 ft",
+    "area": "60-foot wall or 20-foot-diameter ring",
+    "duration": "Up to 1 minute",
+    "concentration": true,
+    "ritual": false,
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": true,
+      "description": "A piece of charcoal",
+      "gpCost": null,
+      "consumed": false
+    },
+    "damageTypes": [
+      "Fire"
+    ],
+    "save": {
+      "ability": "DEX",
+      "type": "Half damage on initial save; later triggers differ"
+    },
+    "attackRoll": false
+  },
+  "source": {
+    "book": "Player's Handbook (2024)",
+    "rulesVersion": "2024",
+    "category": "Core",
+    "sourceSensitive": false,
+    "review": {
+      "date": "2026-09-07",
+      "access": "Normal 2024 Wizard spell-list access; learn and prepare through the Wizard's normal rules.",
+      "scope": "Listed mechanics checked against the official current entry or SRD 5.2.1. Tier and acquisition advice are Compendium editorial judgments, not official rules.",
+      "references": [
+        {
+          "title": "SRD 5.2.1, page 172",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2.1/SRD_CC_v5.2.1.pdf#page=172"
+        }
+      ]
+    }
+  },
+  "compendium": {
+    "tier": "A",
+    "acquisitionRole": "optional",
+    "preparedBaseline": false,
+    "roles": [
+      "damage",
+      "control",
+      "terrain"
+    ],
+    "summary": "An opaque damaging boundary for chokepoints and coordinated forced movement. Strong when positioning produces repeated damage, weaker when enemies can simply leave.",
+    "buildRelevance": [],
+    "warnings": [
+      "Tier is a situational Compendium assessment, not a letter grade quoted from Pack Tactics."
+    ],
+    "relatedChapters": [
+      11,
+      18,
+      22
+    ],
+    "tactics": [
+      "Choose the damaging side before placing it. Appearance allows a Dexterity save; the spell's later entry/end-position damage follows different triggers and does not inherit that initial save.",
+      "Coordinate pushes with the first-entry-per-turn limit and the end-of-turn wording. Do not count every square crossed or combine overlapping triggers into invented extra ticks.",
+      "The wall needs a solid surface. Friendly routes, fire resistance and your concentration budget matter; higher slots add 1d8 damage per slot level."
+    ],
+    "research": {
+      "note": "Prompted by the supplied Pack Tactics research package. Video timestamps are its attribution trail, not independently verified quotations; editorial advice is separated from official spell access.",
+      "references": [
+        {
+          "title": "Pack Tactics · 04:45-05:33",
+          "url": "https://www.youtube.com/watch?v=jseWFC9gwc8&t=285s"
+        }
+      ]
+    }
+  },
+  "sourceLocator": "RESEARCH-20260907:PT-SP-WALL_OF_FIRE"
+}

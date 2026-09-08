@@ -1,0 +1,88 @@
+{
+  "id": "summon-greater-demon",
+  "name": "Summon Greater Demon",
+  "level": 4,
+  "school": "Conjuration",
+  "rules": {
+    "castingTime": "Action",
+    "range": "60 ft",
+    "area": null,
+    "duration": "Up to 1 hour",
+    "concentration": true,
+    "ritual": false,
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": true,
+      "description": null,
+      "gpCost": null,
+      "consumed": null
+    },
+    "damageTypes": [],
+    "save": {
+      "ability": null,
+      "type": null
+    },
+    "attackRoll": false
+  },
+  "source": {
+    "book": "Xanathar's Guide to Everything",
+    "rulesVersion": "Expanded legacy supplement with 2024 campaign permission",
+    "category": "Expanded",
+    "sourceSensitive": true,
+    "review": {
+      "date": "2026-09-07",
+      "access": "Wizard spell; requires the campaign to permit this expanded source.",
+      "scope": "Wizard-list access and displayed metadata checked. Full paid spell text was unavailable in this review; detailed stat blocks and unverified numerical claims are not reproduced.",
+      "references": [
+        {
+          "title": "Official spell entry",
+          "url": "https://www.dndbeyond.com/spells/14603-summon-greater-demon"
+        },
+        {
+          "title": "Official Wizard spell list — access and displayed metadata",
+          "url": "https://www.dndbeyond.com/spells/class/8-wizard"
+        }
+      ]
+    }
+  },
+  "compendium": {
+    "tier": "A",
+    "acquisitionRole": "optional",
+    "preparedBaseline": false,
+    "roles": [
+      "summoning",
+      "damage"
+    ],
+    "summary": "A high-ceiling, source-dependent summon with genuine loss-of-control risk. Place it where a hostile outcome is containable; it is not a safe default pet.",
+    "buildRelevance": [],
+    "warnings": [
+      "Expanded-source permission is required; owning the book or seeing a spell in a builder is not campaign approval.",
+      "Tier is a situational Compendium assessment, not a letter grade quoted from Pack Tactics.",
+      "Full paid spell mechanics were not independently rechecked; consult the linked active entry before using detailed interactions."
+    ],
+    "relatedChapters": [
+      11,
+      22
+    ],
+    "tactics": [
+      "Agree on the allowed demon entry, its commands and control-loss procedure before play. Do not assume a historical monster stat block is the campaign's active one.",
+      "Containment and retreat routes are part of the spell choice. Keeping allies away from a potential uncontrolled demon is more important than maximizing a theoretical damage chart.",
+      "Planar Binding is a separate setup problem: its hour-long casting requires concentration. One Wizard cannot normally sustain this summon while casting Binding; use a valid second caster or an explicitly approved alternative."
+    ],
+    "research": {
+      "note": "Prompted by the supplied Pack Tactics research package. Video timestamps are its attribution trail, not independently verified quotations; editorial advice is separated from official spell access.",
+      "references": [
+        {
+          "title": "Pack Tactics · 10:17-11:35",
+          "url": "https://www.youtube.com/watch?v=jseWFC9gwc8&t=617s"
+        },
+        {
+          "title": "Pack Tactics · 14:29-14:46",
+          "url": "https://www.youtube.com/watch?v=8DJ2HMdaSKQ&t=869s"
+        }
+      ]
+    }
+  },
+  "sourceLocator": "RESEARCH-20260907:PT-SP-SUMMON_GREATER_DEMON"
+}

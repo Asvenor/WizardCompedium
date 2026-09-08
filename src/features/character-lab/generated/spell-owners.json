@@ -1,0 +1,97 @@
+[
+  {
+    "id": "spell.alarm.core2024",
+    "name": "Alarm",
+    "generation": "2024"
+  },
+  {
+    "id": "spell.comprehend_languages.core2024",
+    "name": "Comprehend Languages",
+    "generation": "2024"
+  },
+  {
+    "id": "spell.counterspell.core2024",
+    "name": "Counterspell",
+    "generation": "2024"
+  },
+  {
+    "id": "spell.detect_magic.core2024",
+    "name": "Detect Magic",
+    "generation": "2024"
+  },
+  {
+    "id": "spell.dispel_magic.core2024",
+    "name": "Dispel Magic",
+    "generation": "2024"
+  },
+  {
+    "id": "spell.feather_fall.core2024",
+    "name": "Feather Fall",
+    "generation": "2024"
+  },
+  {
+    "id": "spell.find_familiar.core2024",
+    "name": "Find Familiar",
+    "generation": "2024"
+  },
+  {
+    "id": "spell.fireball.core2024",
+    "name": "Fireball",
+    "generation": "2024"
+  },
+  {
+    "id": "spell.grease.core2024",
+    "name": "Grease",
+    "generation": "2024"
+  },
+  {
+    "id": "spell.hypnotic_pattern.core2024",
+    "name": "Hypnotic Pattern",
+    "generation": "2024"
+  },
+  {
+    "id": "spell.identify.core2024",
+    "name": "Identify",
+    "generation": "2024"
+  },
+  {
+    "id": "spell.mage_armor.core2024",
+    "name": "Mage Armor",
+    "generation": "2024"
+  },
+  {
+    "id": "spell.mirror_image.core2024",
+    "name": "Mirror Image",
+    "generation": "2024"
+  },
+  {
+    "id": "spell.misty_step.core2024",
+    "name": "Misty Step",
+    "generation": "2024"
+  },
+  {
+    "id": "spell.shield.core2024",
+    "name": "Shield",
+    "generation": "2024"
+  },
+  {
+    "id": "spell.sleet_storm.core2024",
+    "name": "Sleet Storm",
+    "generation": "2024"
+  },
+  {
+    "id": "spell.slow.core2024",
+    "name": "Slow",
+    "generation": "2024"
+  },
+  {
+    "id": "spell.unseen_servant.core2024",
+    "name": "Unseen Servant",
+    "generation": "2024"
+  },
+  {
+    "id": "spell.web.core2024",
+    "name": "Web",
+    "generation": "2024"
+  }
+]

@@ -1,0 +1,79 @@
+{
+  "id": "weird",
+  "name": "Weird",
+  "level": 9,
+  "school": "Illusion",
+  "rules": {
+    "castingTime": "Action",
+    "range": "120 ft",
+    "area": "30-foot-radius sphere",
+    "duration": "Up to 1 minute",
+    "concentration": true,
+    "ritual": false,
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": false,
+      "description": null,
+      "gpCost": 0,
+      "consumed": false
+    },
+    "damageTypes": [
+      "Psychic"
+    ],
+    "save": {
+      "ability": "WIS",
+      "type": "See effect and repeat-save timing"
+    },
+    "attackRoll": false
+  },
+  "source": {
+    "book": "Player's Handbook (2024)",
+    "rulesVersion": "2024",
+    "category": "Core",
+    "sourceSensitive": false,
+    "review": {
+      "date": "2026-09-07",
+      "access": "Normal 2024 Wizard spell-list access; learn and prepare through the Wizard's normal rules.",
+      "scope": "Listed mechanics checked against the official current entry or SRD 5.2.1. Tier and acquisition advice are Compendium editorial judgments, not official rules.",
+      "references": [
+        {
+          "title": "SRD 5.2.1, page 174",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2.1/SRD_CC_v5.2.1.pdf#page=174"
+        }
+      ]
+    }
+  },
+  "compendium": {
+    "tier": "C",
+    "acquisitionRole": "optional",
+    "preparedBaseline": false,
+    "roles": [
+      "damage",
+      "control"
+    ],
+    "summary": "Selective area damage and fear for a ninth-level Wizard slot. Improved in 2024, but usually acquired after Wish and the high-impact transformation options.",
+    "buildRelevance": [],
+    "warnings": [
+      "Tier is a situational Compendium assessment, not a letter grade quoted from Pack Tactics."
+    ],
+    "relatedChapters": [
+      11,
+      14
+    ],
+    "tactics": [
+      "Targets of your choice make a Wisdom save: 10d10 Psychic damage and Frightened on failure, half damage on success. Affected targets repeat the save at turn end; further failure deals 5d10.",
+      "Check fear immunity, save reliability, enemy count and concentration risk. A strong-looking damage total does not automatically beat Wish's flexibility or an encounter-solving transformation."
+    ],
+    "research": {
+      "note": "Prompted by the supplied Pack Tactics research package. Video timestamps are its attribution trail, not independently verified quotations; editorial advice is separated from official spell access.",
+      "references": [
+        {
+          "title": "Pack Tactics · 18:18-18:46",
+          "url": "https://www.youtube.com/watch?v=idb8V9tz8XQ&t=1098s"
+        }
+      ]
+    }
+  },
+  "sourceLocator": "RESEARCH-20260907:PT-SP-WEIRD"
+}

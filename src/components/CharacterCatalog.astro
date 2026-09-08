@@ -1,0 +1,7 @@
+---
+import {getCollection} from 'astro:content';
+import {getSpellRoleCategories,getSpellDefense,getSpellActionType} from '@/lib/spells';
+import owners from '@/features/character-lab/generated/spell-owners.json';
+const catalog=(await getCollection('spells')).map(({data:s})=>({id:s.id,name:s.name,level:s.level,href:`/spells/${s.id}/`,owner:`src/content/spells/${s.level===0?'cantrips':`level-${s.level}`}/${s.id}.json`,canonicalRefs:owners.filter(o=>o.name.toLowerCase()===s.name.toLowerCase()&&o.generation===s.source.rulesVersion).map(o=>o.id),generation:s.source.rulesVersion,sourceSensitive:s.source.sourceSensitive,roles:getSpellRoleCategories(s),action:getSpellActionType(s),defense:getSpellDefense(s),concentration:s.rules.concentration,ritual:s.rules.ritual,acquisition:s.compendium.acquisitionRole,summary:s.compendium.summary}));
+---
+<script is:inline type="application/json" id="character-catalog" set:html={JSON.stringify(catalog).replace(/</g,'\\u003c')}/>

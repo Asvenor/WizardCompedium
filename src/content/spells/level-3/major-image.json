@@ -1,0 +1,80 @@
+{
+  "id": "major-image",
+  "name": "Major Image",
+  "level": 3,
+  "school": "Illusion",
+  "rules": {
+    "castingTime": "Action",
+    "range": "120 ft",
+    "area": "Up to a 20-foot cube",
+    "duration": "Up to 10 minutes; until dispelled at slot 4+",
+    "concentration": true,
+    "ritual": false,
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": true,
+      "description": "A bit of fleece",
+      "gpCost": null,
+      "consumed": false
+    },
+    "damageTypes": [],
+    "save": {
+      "ability": null,
+      "type": null
+    },
+    "attackRoll": false
+  },
+  "source": {
+    "book": "Player's Handbook (2024)",
+    "rulesVersion": "2024",
+    "category": "Core",
+    "sourceSensitive": false,
+    "review": {
+      "date": "2026-09-07",
+      "access": "Normal 2024 Wizard spell-list access; learn and prepare through the Wizard's normal rules.",
+      "scope": "Listed mechanics checked against the official current entry or SRD 5.2.1. Tier and acquisition advice are Compendium editorial judgments, not official rules.",
+      "references": [
+        {
+          "title": "Official spell entry",
+          "url": "https://www.dndbeyond.com/spells/2619025-major-image"
+        }
+      ]
+    }
+  },
+  "compendium": {
+    "tier": "A",
+    "acquisitionRole": "optional",
+    "preparedBaseline": false,
+    "roles": [
+      "utility",
+      "control",
+      "deception"
+    ],
+    "summary": "Multisensory deception for infiltration, diversion and prepared environments. Its 2024 fourth-level-slot breakpoint makes persistent, non-concentration illusions practical much earlier.",
+    "buildRelevance": [],
+    "warnings": [
+      "Tier is a situational Compendium assessment, not a letter grade quoted from Pack Tactics."
+    ],
+    "relatedChapters": [
+      6,
+      11,
+      37
+    ],
+    "tactics": [
+      "At slot 4 or higher it lasts until dispelled without concentration; the concentration badge describes the base third-level casting.",
+      "The image cannot itself damage or impose conditions. Physical interaction reveals it, and a successful Study/Investigation check can expose it. Deception is not a physical wall.",
+      "Coordinate believable context and the consequence of an enemy believing the image. Illusory Reality is a separate, subclass-gated feature—not a property of ordinary Major Image."
+    ],
+    "research": {
+      "note": "Prompted by the supplied Pack Tactics research package. Video timestamps are its attribution trail, not independently verified quotations; editorial advice is separated from official spell access.",
+      "references": [
+        {
+          "title": "Pack Tactics · 02:53-04:31",
+          "url": "https://www.youtube.com/watch?v=8DJ2HMdaSKQ&t=173s"
+        }
+      ]
+    }
+  },
+  "sourceLocator": "RESEARCH-20260907:PT-SP-MAJOR_IMAGE"
+}

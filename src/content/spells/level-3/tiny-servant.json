@@ -1,0 +1,88 @@
+{
+  "id": "tiny-servant",
+  "name": "Tiny Servant",
+  "level": 3,
+  "school": "Transmutation",
+  "rules": {
+    "castingTime": "1 minute",
+    "range": "Touch",
+    "area": null,
+    "duration": "8 hours",
+    "concentration": false,
+    "ritual": false,
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": false,
+      "description": null,
+      "gpCost": 0,
+      "consumed": false
+    },
+    "damageTypes": [],
+    "save": {
+      "ability": null,
+      "type": null
+    },
+    "attackRoll": false
+  },
+  "source": {
+    "book": "Xanathar's Guide to Everything",
+    "rulesVersion": "Expanded legacy supplement with 2024 campaign permission",
+    "category": "Expanded",
+    "sourceSensitive": true,
+    "review": {
+      "date": "2026-09-07",
+      "access": "Wizard spell; requires the campaign to permit this expanded source.",
+      "scope": "Wizard-list access and displayed metadata checked. Full paid spell text was unavailable in this review; detailed stat blocks and unverified numerical claims are not reproduced.",
+      "references": [
+        {
+          "title": "Official spell entry",
+          "url": "https://www.dndbeyond.com/spells/14614-tiny-servant"
+        },
+        {
+          "title": "Official Wizard spell list — access and displayed metadata",
+          "url": "https://www.dndbeyond.com/spells/class/8-wizard"
+        }
+      ]
+    }
+  },
+  "compendium": {
+    "tier": "B",
+    "acquisitionRole": "optional",
+    "preparedBaseline": false,
+    "roles": [
+      "minion",
+      "utility"
+    ],
+    "summary": "A non-concentration animated helper for an expanded-source Wizard. Useful when independent simple tasks or additional bodies matter more than another immediate combat spell.",
+    "buildRelevance": [],
+    "warnings": [
+      "Expanded-source permission is required; owning the book or seeing a spell in a builder is not campaign approval.",
+      "Tier is a situational Compendium assessment, not a letter grade quoted from Pack Tactics.",
+      "Full paid spell mechanics were not independently rechecked; consult the linked active entry before using detailed interactions."
+    ],
+    "relatedChapters": [
+      11,
+      22,
+      37
+    ],
+    "tactics": [
+      "Prepare servants before the operation and agree on commands, equipment and the current creature statistics. Keep the group small enough to resolve quickly.",
+      "The research's Magic Stone pairing needs a separate legal source of that cantrip and a workable command/action sequence. Tiny Servant does not itself grant Magic Stone or free attacks."
+    ],
+    "research": {
+      "note": "Prompted by the supplied Pack Tactics research package. Video timestamps are its attribution trail, not independently verified quotations; editorial advice is separated from official spell access.",
+      "references": [
+        {
+          "title": "Pack Tactics · 05:39-06:27",
+          "url": "https://www.youtube.com/watch?v=P6YGySiNSN8&t=339s"
+        },
+        {
+          "title": "Pack Tactics · 14:59-15:21",
+          "url": "https://www.youtube.com/watch?v=8DJ2HMdaSKQ&t=899s"
+        }
+      ]
+    }
+  },
+  "sourceLocator": "RESEARCH-20260907:PT-SP-TINY_SERVANT"
+}

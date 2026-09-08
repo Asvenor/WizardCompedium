@@ -49,7 +49,33 @@
       15,
       22,
       47
-    ]
+    ],
+    "tactics": [
+      "The Sickening Radiance pairing needs a separate concentration holder for each spell. Put the hazard in place before sealing the area; do not assume you can target freely through an invisible barrier.",
+      "A Faithful Hound can supply a non-concentration hazard, but its bite only threatens enemies within 5 feet. Geometry must actually keep the target there.",
+      "Plan escape routes and counters before committing both spells. Teleportation, applicable spell effects, Disintegrate and concentration attacks can defeat the setup."
+    ],
+    "relatedSpells": [
+      "sickening-radiance",
+      "mordenkainens-faithful-hound"
+    ],
+    "research": {
+      "note": "Research-informed tactical supplement. Pack Tactics timestamps below are supplied-package attribution, not newly verified quotations. Existing Compendium tiers are preserved; rules and optimizer preference are distinct.",
+      "references": [
+        {
+          "title": "Pack Tactics · 07:17-07:44",
+          "url": "https://www.youtube.com/watch?v=5dMhYNTqUFY&t=437s"
+        },
+        {
+          "title": "Pack Tactics · 09:17-10:09",
+          "url": "https://www.youtube.com/watch?v=idb8V9tz8XQ&t=557s"
+        },
+        {
+          "title": "Pack Tactics · 10:27-10:32",
+          "url": "https://www.youtube.com/watch?v=libYCUn1zbo&t=627s"
+        }
+      ]
+    }
   },
   "sourceLocator": "B00191"
 }
