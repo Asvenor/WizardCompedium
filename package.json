@@ -7,7 +7,7 @@
     "dev": "ASTRO_TELEMETRY_DISABLED=1 astro dev",
     "build:astro": "ASTRO_TELEMETRY_DISABLED=1 astro build",
     "build": "node scripts/validate-spells.mjs && ASTRO_TELEMETRY_DISABLED=1 astro build && pagefind --site dist",
-    "test": "node --test scripts/test-tools.mjs scripts/test-table-structure.mjs scripts/test-workflows.mjs scripts/test-research-integration.mjs scripts/test-character-import.mjs",
+    "test": "node --test scripts/test-tools.mjs scripts/test-table-structure.mjs scripts/test-workflows.mjs scripts/test-research-integration.mjs scripts/test-character-import.mjs scripts/test-pdf-pipeline.mjs scripts/test-character-state.mjs scripts/test-core-spell-metadata.mjs scripts/test-cloudflare-config.mjs scripts/test-search.mjs scripts/test-pdf-sheet-document.mjs",
     "check": "ASTRO_TELEMETRY_DISABLED=1 astro check",
     "generate:prototype": "node scripts/migrate-compendium.mjs --prototype",
     "generate:content": "node scripts/migrate-compendium.mjs",
@@ -19,10 +19,14 @@
     "prebuild": "npm run prepare:import",
     "prebuild:astro": "npm run prepare:import",
     "precheck": "npm run prepare:import",
-    "test:import": "node --test scripts/test-character-import.mjs",
+    "test:import": "node --test scripts/test-character-import.mjs scripts/test-pdf-pipeline.mjs scripts/test-character-state.mjs",
     "test:import:browser": "playwright test",
+    "test:audit": "playwright test site-audit.spec.mjs site-interactions.spec.mjs",
     "fixtures:import": "python3 scripts/create-character-fixtures.py",
-    "validate:import": "node scripts/prepare-character-import.mjs --check"
+    "validate:import": "node scripts/prepare-character-import.mjs --check",
+    "test:pdf": "node --test scripts/test-pdf-sheet-document.mjs",
+    "test:pdf:storage": "node --test scripts/test-pdf-sheet-storage.mjs",
+    "test:pdf:browser": "playwright test pdf-sheet.spec.mjs"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.10",
@@ -31,12 +35,14 @@
     "ajv-formats": "^3.0.1",
     "astro": "^7.3.1",
     "pagefind": "^1.5.2",
+    "pdf-lib": "1.17.1",
     "pdfjs-dist": "^6.3.289",
     "tesseract.js": "^7.0.0",
     "typescript": "^6.0.3"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.13.0",
-    "@playwright/test": "^1.63.0"
+    "@playwright/test": "^1.63.0",
+    "wrangler": "4.129.1"
   }
 }

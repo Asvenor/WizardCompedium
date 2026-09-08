@@ -7,6 +7,7 @@ import chapters from '@/data/chapters.json';
 import { getAcquisitionLanes } from '@/lib/acquisition';
 import ConcentrationControl from '@/components/ConcentrationControl.astro';
 import { getSpellRelationships } from '@/lib/spell-relationships';
+import { buildBadgeKey, buildLabel } from '@/lib/spells';
 
 export async function getStaticPaths() {
   const spells = await getCollection('spells');
@@ -28,10 +29,6 @@ const relatedIds = [
 ].slice(0, 8);
 const allSpells = (await getCollection('spells')).map((s) => s.data);
 const levelLabel = spell.level === 0 ? 'Cantrip' : `Level ${spell.level}`;
-const buildBadgeMap: Record<
-  string,
-  'core' | 'chron' | 'div' | 'ill' | 'blade' | 'tank' | 'fighter'
-> = { bladesinger: 'blade' };
 const stats = [
   {
     label: 'Level / school',
@@ -41,6 +38,18 @@ const stats = [
   { label: 'Range', value: spell.rules.range },
   { label: 'Area', value: spell.rules.area },
   { label: 'Duration', value: spell.rules.duration },
+  {
+    label: 'Components',
+    value: (['verbal', 'somatic', 'material'] as const).every(
+      (key) => typeof spell.rules.components[key] === 'boolean',
+    )
+      ? [
+          spell.rules.components.verbal ? 'V' : null,
+          spell.rules.components.somatic ? 'S' : null,
+          spell.rules.components.material ? 'M' : null,
+        ].filter(Boolean).join(' · ') || 'None'
+      : null,
+  },
   {
     label: 'Save / attack',
     value: spell.rules.attackRoll
@@ -145,8 +154,8 @@ const stats = [
               <strong>Build relevance:</strong>{' '}
               {spell.compendium.buildRelevance.map((build) => (
                 <BuildBadge
-                  build={buildBadgeMap[build] ?? 'core'}
-                  label={build}
+                  build={buildBadgeKey(build)}
+                  label={buildLabel(build)}
                 />
               ))}
             </p>

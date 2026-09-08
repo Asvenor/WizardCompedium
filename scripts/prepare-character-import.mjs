@@ -6,6 +6,7 @@ import {
   readdir,
   copyFile,
   access,
+  unlink,
 } from "node:fs/promises";
 import { createHash } from "node:crypto";
 import { fileURLToPath } from "node:url";
@@ -101,21 +102,15 @@ if (hasOwners) {
 if (!check) {
   const assets = path.join(root, "public/character-import");
   await mkdir(assets, { recursive: true });
-  await copyFile(
-    path.join(root, "node_modules/tesseract.js/dist/worker.min.js"),
-    path.join(assets, "worker.min.js"),
-  );
-  const core = path.join(root, "node_modules/tesseract.js-core");
-  for (const name of await readdir(core))
-    if (/^tesseract-core.*\.(wasm|js)$/.test(name))
-      await copyFile(path.join(core, name), path.join(assets, name));
-  await copyFile(
-    path.join(
-      root,
-      "node_modules/@tesseract.js-data/eng/4.0.0_best_int/eng.traineddata.gz",
-    ),
-    path.join(assets, "eng.traineddata.gz"),
-  );
+  // The PDF editor has no OCR. Remove only obsolete generated OCR assets from
+  // earlier builds; retained PDFs, sources and Character Lab data are untouched.
+  for (const name of await readdir(assets))
+    if (
+      /^(worker\.min\.js|eng\.traineddata\.gz|tesseract-core.*\.(wasm|js))$/.test(
+        name,
+      )
+    )
+      await unlink(path.join(assets, name));
   // Fonts/CMaps are also same-origin: no PDF document URLs or CDN fallbacks.
   for (const folder of ["standard_fonts", "cmaps", "wasm"]) {
     const src = path.join(root, "node_modules/pdfjs-dist", folder);

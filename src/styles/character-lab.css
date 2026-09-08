@@ -120,6 +120,42 @@
 .lab-field.is-unknown {
   border-style: dashed;
 }
+.lab-field.is-required-missing {
+  border: 2px solid #92333c;
+  background: #fff5f5;
+}
+.lab-review-guide {
+  padding: 1rem;
+  border: 1px solid var(--lab-line);
+  border-radius: 8px;
+  background: var(--surface, #fff);
+  overflow-wrap: anywhere;
+}
+.lab-review-guide p {
+  margin: 0 0 0.75rem;
+}
+#review-summary {
+  font-size: 0.875rem;
+}
+#review-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+#review-navigation a {
+  padding: 0.5rem 0.7rem;
+  border: 1px solid var(--lab-line);
+  border-radius: 6px;
+  font-size: 0.8rem;
+}
+.character-lab details[id],
+#wizard-reconciliation {
+  scroll-margin-top: 6rem;
+}
+#extraction-progress {
+  width: 100%;
+  accent-color: var(--accent, #36584c);
+}
 .lab-spell {
   border: 1px solid var(--lab-line);
   padding: 1rem;
@@ -142,6 +178,17 @@
   flex-shrink: 0;
   width: 1.1rem;
   height: 1.1rem;
+}
+.lab-field .lab-field-confirm {
+  margin-top: auto;
+  padding: 0.35rem 0;
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.lab-field-confirm:has(input:disabled) {
+  cursor: default;
+  color: var(--text-muted);
 }
 .lab-diff-row {
   display: grid;
@@ -184,6 +231,13 @@
   font-size: 1.1rem;
   overflow-wrap: anywhere;
 }
+.lab-overview dd small {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.76rem;
+  font-weight: 400;
+  color: var(--text-muted);
+}
 .lab-play-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -204,6 +258,7 @@
 }
 .character-lab button:focus-visible,
 .character-lab input:focus-visible,
+.character-lab textarea:focus-visible,
 .character-lab select:focus-visible,
 .character-lab summary:focus-visible {
   outline: 3px solid #bc8d48;

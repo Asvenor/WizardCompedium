@@ -36,36 +36,63 @@ const quickNavigation = [
     { label: 'Session-Zero Rules', href: chapterLink(61) }, { label: 'Validation Standard', href: chapterLink(55) },
   ],
 ];
-const chapterRows = Array.from({ length: 21 }, (_, index) => [index + 1, index + 22, index + 42]
-  .map((number) => chapterByNumber.get(number)));
+const searchable = (chapter: typeof chapters[number]) => `${chapter.number} ${chapter.title} ${chapter.part}`.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
 ---
 <BaseLayout title="Full Compendium" description="The complete 61-chapter Ultimate Wizard Compendium." active="compendium">
   <header class="page-hero"><div class="site-shell"><p class="kicker">Contents</p><h1>Full Compendium</h1><p>Browse the complete chapter directory or jump to a frequently used reference.</p></div></header>
   <section class="section section--first">
     <div class="site-shell">
-      <div class="section-head"><div><p class="kicker">Major sections and finders</p><h2>Quick navigation</h2></div><a class="section-link" href="/search/">Search everything →</a></div>
+      <details class="directory-shortcuts" open>
+      <summary>Quick navigation <span>Sections and frequently used references</span></summary>
       <div class="quick-reference-wrap" tabindex="0" aria-label="Compendium quick navigation">
         <table class="quick-reference-table"><tbody>
           {quickNavigation.map((row, rowIndex) => <tr>{row.map((item) => <td class:list={{ 'quick-reference-part': rowIndex === 0 }}><a href={item.href}>{item.label}</a></td>)}</tr>)}
         </tbody></table>
       </div>
+      </details>
     </div>
   </section>
   <section class="section">
     <div class="site-shell">
-      <div class="section-head"><div><p class="kicker">Complete contents</p><h2>Chapter directory</h2></div></div>
+      <div class="section-head"><div><p class="kicker">Complete contents</p><h2>Chapter directory</h2></div><a class="section-link" href="/search/">Search everything →</a></div>
+      <div class="directory-filter" data-directory-filter hidden>
+        <label class="field-label" for="chapter-filter">Find a chapter<input class="field" id="chapter-filter" type="search" placeholder="Chapter number, title or section…" /></label>
+        <button class="button" type="button" data-directory-clear>Clear</button>
+        <p class="control-note" role="status" data-directory-count>{chapters.length} chapters</p>
+      </div>
       <div class="chapter-directory-wrap" tabindex="0" aria-label="All Compendium chapters">
         <table class="chapter-directory-table">
-          <thead><tr><th>Ch.</th><th>Section</th><th>Ch.</th><th>Section</th><th>Ch.</th><th>Section</th></tr></thead>
-          <tbody>{chapterRows.map((row) => <tr>{row.map((chapter) => chapter ? <><td class="chapter-number">{chapter.number}</td><td><a href={`/chapters/${chapter.slug}/`}><span>{chapter.part}</span>{chapter.title}</a></td></> : <><td></td><td></td></>)}</tr>)}</tbody>
+          <caption class="sr-only">All {chapters.length} chapters, in reading order</caption>
+          <thead><tr><th scope="col">Ch.</th><th scope="col">Chapter</th><th scope="col">Section</th></tr></thead>
+          <tbody>{chapters.map((chapter) => <tr data-chapter-search={searchable(chapter)}><td class="chapter-number">{chapter.number}</td><td><a href={`/chapters/${chapter.slug}/`}>{chapter.title}</a></td><td class="directory-part">{chapter.part}</td></tr>)}</tbody>
         </table>
       </div>
       <nav class="chapter-directory-mobile" aria-label="All Compendium chapters">
         {[...new Set(chapters.map((chapter) => chapter.part))].map((part) => <section>
           <h3>{part}</h3>
-          {chapters.filter((chapter) => chapter.part === part).map((chapter) => <a href={`/chapters/${chapter.slug}/`}><span>{chapter.number}</span><span>{chapter.title}</span></a>)}
+          {chapters.filter((chapter) => chapter.part === part).map((chapter) => <a data-chapter-search={searchable(chapter)} href={`/chapters/${chapter.slug}/`}><span>{chapter.number}</span><span>{chapter.title}</span></a>)}
         </section>)}
       </nav>
+      <p class="empty-state" data-directory-empty hidden>No chapters match. Clear the filter or <a href="/search/">search the full text</a>.</p>
     </div>
   </section>
+  <script>
+    if (window.matchMedia('(max-width: 54rem)').matches) {
+      document.querySelector<HTMLDetailsElement>('.directory-shortcuts')!.open = false;
+    }
+    const input = document.querySelector<HTMLInputElement>('#chapter-filter')!;
+    const entries = [...document.querySelectorAll<HTMLElement>('[data-chapter-search]')];
+    const update = () => {
+      const query = input.value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
+      const terms = query.split(/\s+/).filter(Boolean);
+      entries.forEach(entry => entry.hidden = !terms.every(term => entry.dataset.chapterSearch?.includes(term)));
+      const count = entries.filter(entry => entry.tagName === 'TR' && !entry.hidden).length;
+      document.querySelector('[data-directory-count]')!.textContent = `${count} chapter${count === 1 ? '' : 's'}`;
+      document.querySelector<HTMLElement>('[data-directory-empty]')!.hidden = count !== 0;
+      document.querySelectorAll<HTMLElement>('.chapter-directory-mobile section').forEach(section => section.hidden = !section.querySelector('[data-chapter-search]:not([hidden])'));
+    };
+    document.querySelector<HTMLElement>('[data-directory-filter]')!.hidden = false;
+    input.addEventListener('input', update);
+    document.querySelector('[data-directory-clear]')?.addEventListener('click', () => {input.value = '';update();input.focus();});
+  </script>
 </BaseLayout>

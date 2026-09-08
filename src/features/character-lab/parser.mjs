@@ -6,6 +6,7 @@ import {
   unknown,
   addSpell,
   spellRows,
+  refreshDerivedLevel,
 } from "./model.mjs";
 import { parseDDBForms } from "./ddb-forms.mjs";
 const labels = new Map(
@@ -14,13 +15,23 @@ const labels = new Map(
 function put(draft, key, val, source, confidence = 0.9) {
   if (val === null || val === "") return;
   const old = draft.facts[key] ?? unknown();
-  if (old.value !== null) {
-    if (old.value !== val) {
+  if (old.value === null && old.alternatives.length) {
+    if (!old.alternatives.some((a) => a.value === val))
       old.alternatives.push({
         value: val,
         page: source.page,
         label: source.label,
       });
+    return;
+  }
+  if (old.value !== null) {
+    if (old.value !== val) {
+      old.alternatives = [
+        { value: old.value, page: old.source.page, label: old.source.label },
+        ...old.alternatives,
+        { value: val, page: source.page, label: source.label },
+      ];
+      old.value = null;
       old.confidence = Math.min(old.confidence, 0.4);
       old.verification = "needs_confirmation";
     }
@@ -67,12 +78,18 @@ const templateText = (s) =>
   );
 export function parsePages(pages, catalog = []) {
   const draft = blankDraft();
+  const orderedCatalog = [...catalog].sort(
+    (a, b) => b.name.length - a.name.length,
+  );
   draft.source.type = "ddb_pdf";
   draft.source.page_count = pages.length;
   draft.source.methods = [
     ...new Set(
       pages.flatMap((p) => [
         p.method,
+        ...p.lines
+          .map((line) => (typeof line === "object" ? line.method : null))
+          .filter(Boolean),
         ...(p.widgets?.length ? ["acroform"] : []),
       ]),
     ),
@@ -80,6 +97,7 @@ export function parsePages(pages, catalog = []) {
   // Forms are read across all pages before lower-confidence text fallback.
   const formKeys = parseDDBForms(pages, draft, put, convert);
   for (const page of pages) {
+    draft.warnings.push(...(page.warnings ?? []));
     const lines = page.lines
       .map((l) =>
         typeof l === "string"
@@ -93,6 +111,12 @@ export function parsePages(pages, catalog = []) {
     const formSpellPage = (page.widgets ?? []).some(
       (w) => /^spellName\d+$/i.test(w.name) && clean(w.value),
     );
+    const spellPage = lines.some((l) =>
+      /spellcasting|spell name|prepared spells|spellbook|cantrips/i.test(
+        l.text,
+      ),
+    );
+    const spellHeaders = lines.filter((l) => /^spell name$/i.test(l.text));
     for (const w of page.widgets ?? []) {
       if (
         /^spells?[\s_]*\d+$/i.test(w.name) &&
@@ -111,7 +135,7 @@ export function parsePages(pages, catalog = []) {
         source = {
           page: page.page,
           label: s.slice(0, 300),
-          method: page.method,
+          method: line.method ?? page.method,
         };
       // Explicit labels are safest. Ordinary headings are never read as values.
       const pair = s.match(/^([^:]{2,70})\s*:\s*(.*)$/);
@@ -138,6 +162,7 @@ export function parsePages(pages, catalog = []) {
           !raw &&
           line.x === undefined &&
           i > 0 &&
+          (lines[i - 1].method ?? page.method) === source.method &&
           !labels.has(norm(lines[i - 1].text)) &&
           !templateText(lines[i - 1].text) &&
           field.type !== "long"
@@ -168,24 +193,17 @@ export function parsePages(pages, catalog = []) {
       }
       // Retain unknown/custom spell rows rather than matching only our catalogue.
       const explicit = s.match(/^(?:Spell|Cantrip)\s*:\s*(.+)$/i);
-      const spellPage = lines.some((l) =>
-        /spellcasting|spell name|prepared spells|spellbook|cantrips/i.test(
-          l.text,
-        ),
-      );
       const stripped = s.replace(/^[*○●✓\s]+/, "");
       const match =
         !explicit && spellPage && !formSpellPage
-          ? [...catalog]
-              .sort((a, b) => b.name.length - a.name.length)
-              .find(
-                (c) =>
-                  norm(stripped) === norm(c.name) ||
-                  stripped.toLowerCase().startsWith(c.name.toLowerCase() + " "),
-              )
+          ? orderedCatalog.find(
+              (c) =>
+                norm(stripped) === norm(c.name) ||
+                stripped.toLowerCase().startsWith(c.name.toLowerCase() + " "),
+            )
           : null;
       // Column-aligned names absent from the catalogue (including homebrew) remain reviewable.
-      const header = lines.find(
+      const header = spellHeaders.find(
         (l) =>
           /^spell name$/i.test(l.text) &&
           l.x !== undefined &&
@@ -255,10 +273,17 @@ export function parsePages(pages, catalog = []) {
         }
         // An unlabelled checkbox/bullet is ambiguous; never converts to prepared.
       }
-      if (/homebrew|custom (?:spell|feat|feature)/i.test(s))
+      if (
+        field?.key !== "rules.homebrew" &&
+        /homebrew|custom (?:spell|feat|feature)/i.test(s) &&
+        !/\b(?:no|without|not|none)\b[^.!?\n]{0,30}\b(?:homebrew|custom (?:spell|feat|feature))\b|\bhomebrew\b\s*(?:(?:present|allowed)\s*)?[:=-]?\s*(?:no|false|none)\b/i.test(
+          s,
+        )
+      )
         put(draft, "rules.homebrew", true, source, 0.65);
     }
   }
+  refreshDerivedLevel(draft);
   if (Object.values(draft.facts).filter((f) => f.value !== null).length < 3)
     draft.warnings.push(
       "Unsupported or partial layout: few fields were recognized. Review the page text below or continue with manual entry.",
@@ -270,7 +295,16 @@ export function parsePages(pages, catalog = []) {
 export function textLines(items) {
   const rows = [];
   for (const item of items) {
-    if (!("str" in item) || !clean(item.str)) continue;
+    if (
+      !item ||
+      typeof item.str !== "string" ||
+      !clean(item.str) ||
+      !Array.isArray(item.transform) ||
+      item.transform.length < 6 ||
+      !Number.isFinite(item.transform[4]) ||
+      !Number.isFinite(item.transform[5])
+    )
+      continue;
     const x = item.transform[4],
       y = item.transform[5];
     let row = rows.find((r) => Math.abs(r.y - y) < 3);
@@ -278,7 +312,11 @@ export function textLines(items) {
       row = { y, items: [] };
       rows.push(row);
     }
-    row.items.push({ text: clean(item.str), x, width: item.width });
+    row.items.push({
+      text: clean(item.str),
+      x,
+      width: Number.isFinite(item.width) ? item.width : 0,
+    });
   }
   const lines = [];
   for (const row of rows.sort((a, b) => b.y - a.y)) {

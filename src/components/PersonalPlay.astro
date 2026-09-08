@@ -2,11 +2,14 @@
 import CharacterCatalog from './CharacterCatalog.astro';
 import '@/styles/character-lab.css';
 ---
+<section class="tool-panel" aria-labelledby="pdf-sheet-launch"><p class="kicker">Your character sheet</p><h2 id="pdf-sheet-launch">Your PDF, ready for the next session.</h2><p>Update levels, HP, spells and notes directly on your PDF. Export the updated file, or save a local copy to reopen later.</p><a class="button button--primary" href="/play/import/">Open PDF sheet editor</a><p class="muted">No automatic reader. PDF edits do not change your existing character snapshots.</p></section>
+<details class="lab-details"><summary>Previously saved character snapshots</summary>
 <section class="tool-panel character-lab" id="my-character" aria-labelledby="my-character-title">
-  <div class="lab-heading"><div><p class="kicker">Your character · Your next move</p><h2 id="my-character-title">A place for your wizard.</h2></div><a class="button button--primary" href="/play/import/">Import D&D Beyond Character</a></div>
-  <p id="character-status" role="status">Import a sheet to see confirmed spells and character-specific suggestions. Stored privately in this browser profile.</p>
+  <div class="lab-heading"><div><p class="kicker">Previous Character Lab data</p><h2 id="my-character-title">Your saved character snapshots.</h2></div></div>
+  <p id="character-status" role="status">Existing snapshots remain in this browser profile. They are not updated by the PDF editor.</p>
   <div id="character-content" hidden></div>
   <noscript><p>Character snapshots need JavaScript. The reference tools below remain available.</p></noscript>
 </section>
+</details>
 <CharacterCatalog />
 <script>import '@/features/character-lab/play-ui.mjs';</script>

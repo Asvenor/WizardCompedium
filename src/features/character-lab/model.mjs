@@ -233,12 +233,61 @@ export function blankDraft() {
   };
 }
 export const value = (record, key) => record?.facts?.[key]?.value ?? null;
+export const reviewStatus = (fact) =>
+  fact?.value == null
+    ? "Unknown"
+    : fact.verification === "user_confirmed"
+      ? "Player confirmed"
+      : "Needs confirmation";
 export function classes(record) {
   return [
     ...String(value(record, "identity.classes") ?? "").matchAll(
-      /(Artificer|Barbarian|Bard|Cleric|Druid|Fighter|Monk|Paladin|Ranger|Rogue|Sorcerer|Warlock|Wizard)\s*(\d{1,2})\b/gi,
+      /\b(Artificer|Barbarian|Bard|Cleric|Druid|Fighter|Monk|Paladin|Ranger|Rogue|Sorcerer|Warlock|Wizard)\s*(\d{1,2})\b/gi,
     ),
   ].map((m) => ({ name: m[1].toLowerCase(), level: Number(m[2]) }));
+}
+export function knownClassLevels(record) {
+  const fact = record?.facts?.["identity.classes"],
+    parts = classes(record);
+  const remainder = String(fact?.value ?? "")
+    .replace(
+      /\b(Artificer|Barbarian|Bard|Cleric|Druid|Fighter|Monk|Paladin|Ranger|Rogue|Sorcerer|Warlock|Wizard)\s*\d{1,2}\b/gi,
+      "",
+    )
+    .replace(/[\s/,+&]/g, "");
+  return parts.length &&
+    !remainder &&
+    (!fact.alternatives.length || fact.provenance === "user_reported") &&
+    new Set(parts.map((c) => c.name)).size === parts.length &&
+    parts.every((c) => c.level > 0) &&
+    parts.reduce((n, c) => n + c.level, 0) <= 20
+    ? parts
+    : null;
+}
+export function refreshDerivedLevel(draft) {
+  const level = draft.facts["identity.level"];
+  // Printed or explicitly corrected totals remain evidence, even if inconsistent.
+  if (level.value !== null && level.provenance !== "derived") return;
+  if (level.provenance === "user_reported") return;
+  const parts = knownClassLevels(draft),
+    classFact = draft.facts["identity.classes"];
+  if (!parts && level.provenance !== "derived") return;
+  draft.facts["identity.level"] = {
+    ...unknown(),
+    value: parts ? parts.reduce((n, c) => n + c.level, 0) : null,
+    provenance: "derived",
+    confidence: parts
+      ? classFact.provenance === "user_reported"
+        ? 1
+        : classFact.confidence
+      : 0,
+    verification: parts ? "needs_confirmation" : "unknown",
+    source: {
+      page: classFact.source.page,
+      label: "Sum of recorded class levels",
+      method: "calculation",
+    },
+  };
 }
 export function spellRows(record) {
   return Object.keys(record?.facts ?? {})
@@ -287,15 +336,17 @@ export function addSpell(draft, name = "", source = null) {
 }
 export function correct(draft, key, next) {
   const before = draft.facts[key] ?? unknown();
+  const normalized = typeof next === "string" ? clean(next) || null : next;
   draft.facts[key] = {
     ...before,
-    value: typeof next === "string" ? clean(next) : next,
+    value: normalized,
     provenance: "user_reported",
-    verification: next === null ? "unknown" : "user_confirmed",
+    verification: normalized === null ? "unknown" : "user_confirmed",
     source: before.source.page
       ? before.source
       : { page: null, label: "Player review", method: "manual" },
   };
+  if (key === "identity.classes") refreshDerivedLevel(draft);
 }
 export function checks(record) {
   const warnings = [];
@@ -308,6 +359,10 @@ export function checks(record) {
   if (!v("rules.generation"))
     warnings.push(
       "Rules generation is unknown. Version-dependent advice is withheld.",
+    );
+  else if (record.facts["rules.generation"].verification !== "user_confirmed")
+    warnings.push(
+      "The rules generation is a sheet reading awaiting confirmation, not a selected rules profile.",
     );
   if (cs.length > 1)
     warnings.push(
@@ -324,6 +379,10 @@ export function checks(record) {
   if (!cs.length)
     warnings.push(
       "Class levels are unknown or unsupported. Use “Wizard 5 / Fighter 1” to enable level checks.",
+    );
+  else if (!knownClassLevels(record))
+    warnings.push(
+      "Class progression is incomplete, conflicting or outside supported levels. Automatic Wizard progression advice is withheld until the class summary is corrected.",
     );
   if (
     cs.length &&
@@ -398,7 +457,7 @@ export function checks(record) {
       );
       if (row && counted.length > row.prepared)
         warnings.push(
-          `Confirmed Wizard preparations exceed the base ${row.prepared} from the 2024 class table. Check grants and DM exceptions.`,
+          `Recorded Wizard preparations exceed the base ${row.prepared} from the 2024 class table. Check readings, grants and DM exceptions.`,
         );
     }
   }
@@ -410,11 +469,17 @@ export function checks(record) {
     warnings.push(
       "Mixed/legacy permission is campaign-dependent. A displayed D&D Beyond option does not establish compatibility.",
     );
-  if (v("book.complete") !== true)
+  if (
+    v("book.complete") !== true ||
+    record.facts["book.complete"]?.verification !== "user_confirmed"
+  )
     warnings.push(
       "Spellbook completeness is unconfirmed; an absent spell is not proven missing.",
     );
-  if (v("book.preparation_complete") !== true)
+  if (
+    v("book.preparation_complete") !== true ||
+    record.facts["book.preparation_complete"]?.verification !== "user_confirmed"
+  )
     warnings.push(
       "Preparation completeness is unconfirmed; only individually confirmed options are shown as available.",
     );
@@ -461,7 +526,8 @@ export function makeSnapshot(
     recorded_at: now,
     source: { ...draft.source, retained },
     ruleset_profile_ref:
-      value(draft, "rules.generation") === "2024"
+      value(draft, "rules.generation") === "2024" &&
+      facts["rules.generation"].verification === "user_confirmed"
         ? "ruleset.core2024.v1"
         : null,
     facts,
@@ -492,30 +558,48 @@ export function comparison(previous, next) {
       b = value(next, f.key);
     if (JSON.stringify(a) !== JSON.stringify(b))
       changes.push({ label: f.label, before: a, after: b });
+    else if (
+      reviewStatus(previous?.facts?.[f.key]) !==
+      reviewStatus(next?.facts?.[f.key])
+    )
+      changes.push({
+        label: `${f.label} review status`,
+        before: reviewStatus(previous?.facts?.[f.key]),
+        after: reviewStatus(next?.facts?.[f.key]),
+      });
   }
   const a = spellRows(previous),
     b = spellRows(next);
   for (const name of new Set([...a, ...b].map((s) => norm(s.name)))) {
     const left = a.filter((s) => norm(s.name) === name),
       right = b.filter((s) => norm(s.name) === name);
-    const summarize = (rows) =>
+    const summarize = (rows, record) =>
       rows
         .map(
           (s) =>
             `${s.name} [${
               Object.entries(statuses)
-                .filter(([k]) => s[k] === true)
-                .map(([, l]) => l)
+                .filter(([k]) => s[k] !== null)
+                .map(([k, l]) => `${l}: ${s[k] ? "yes" : "no"}`)
                 .join(", ") || "unconfirmed"
-            }]; level ${s.level ?? "?"}; source ${s.className ?? "?"}; ritual ${s.ritual ?? "?"}`,
+            }]; level ${s.level ?? "?"}; source ${s.className ?? "?"}; ritual ${s.ritual ?? "?"}; review: ${[
+              "name",
+              "level",
+              "class",
+              "ritual",
+              ...Object.keys(statuses),
+            ]
+              .filter((k) => value(record, `${s.key}.${k}`) !== null)
+              .map((k) => `${k} ${reviewStatus(record.facts[`${s.key}.${k}`])}`)
+              .join(", ")}`,
         )
         .sort()
         .join(" / ") || null;
-    if (summarize(left) !== summarize(right))
+    if (summarize(left, previous) !== summarize(right, next))
       changes.push({
         label: "Spell state",
-        before: summarize(left),
-        after: summarize(right),
+        before: summarize(left, previous),
+        after: summarize(right, next),
       });
   }
   return changes;

@@ -1,0 +1,11 @@
+# Only fingerprinted files get a long browser lifetime. HTML, search indexes
+# and unversioned PDF/OCR resources keep Cloudflare's revalidation default.
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Content-Security-Policy: object-src 'none'; base-uri 'self'; frame-ancestors 'self'

@@ -108,6 +108,18 @@ export const quickTools = [
 ] as const;
 export const toolDirectory = [
   {
+    title: 'Edit your D&D Beyond PDF character sheet',
+    url: '/play/import/',
+    description:
+      'Open a PDF, edit its fields, cover and replace printed text, add notes and export an updated editable sheet. Save and reopen copies locally in this browser. No OCR or automatic character extraction.',
+  },
+  {
+    title: 'Previously saved character snapshots',
+    url: '/play/#my-character',
+    description:
+      'Review earlier saved character snapshots, confirmed spells and history in this browser. These records are preserved separately and are not updated by PDF edits.',
+  },
+  {
     title: 'Calculators: saves, concentration & components',
     url: '/tools/',
     description:

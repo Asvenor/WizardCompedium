@@ -1,40 +1,38 @@
 ---
 import BaseLayout from '@/components/layout/BaseLayout.astro';
-import CharacterCatalog from '@/components/CharacterCatalog.astro';
-import '@/styles/character-lab.css';
+import '@/styles/pdf-sheet.css';
 ---
-<BaseLayout title="Import your character" active="play">
-  <header class="page-hero"><div class="site-shell"><p class="kicker">Character Lab · Private on this device</p><h1>Bring your wizard to the table.</h1><p>Import a D&D Beyond PDF, review the readings, then make Play Mode yours.</p><a href="/play/">← Back to Play Mode</a></div></header>
-  <section class="section section--first"><div class="site-shell character-lab" id="character-import">
-    <ol class="import-steps" aria-label="Import progress"><li aria-current="step">1 · Upload</li><li>2 · Review</li><li>3 · Confirm</li></ol>
-    <p id="import-status" role="status" aria-live="polite"></p><p id="import-error" role="alert" class="lab-warning" hidden></p>
-    <section id="upload-step" class="tool-panel">
-      <h2 tabindex="-1">Choose your character sheet</h2>
-      <p>No D&D Beyond login needed. The PDF and extracted text stay in this browser. OCR, when needed, also runs on your device.</p>
-      <label class="field-label" for="import-character">Save as</label><select class="field" id="import-character"><option value="">A new character</option></select>
-      <div class="import-drop" id="import-drop"><label for="character-pdf"><strong>Drop a PDF here, or choose a file</strong><span>PDF only · up to 15 MB · 20 pages · English exports</span></label><input id="character-pdf" type="file" accept="application/pdf,.pdf" aria-describedby="upload-help" /></div>
-      <p id="upload-help">Include the spell pages. A spell appearing on the sheet does not prove it is in your spellbook or prepared.</p>
-      <div class="form-actions"><button class="button" id="manual-entry" type="button">Enter character manually</button><button class="button" id="cancel-import" type="button" hidden>Cancel extraction</button></div>
-      <p class="lab-privacy">Local to this browser profile, not an account vault. Anyone using the same browser profile can open saved characters. Use a private profile on shared devices. No cross-device sync; clearing site data removes your saved snapshots.</p>
+<BaseLayout title="Your PDF character sheet" active="play">
+  <header class="page-hero"><div class="site-shell"><p class="kicker">Your sheet · Your session</p><h1>Keep your character up to date.</h1><p>Open your PDF, change your sheet, and export it for the next session. No automatic character extraction.</p><a href="/play/">← Back to Play Mode</a></div></header>
+  <section class="section section--first pdf-sheet" id="pdf-sheet"><div class="site-shell">
+    <p id="sheet-status" role="status" aria-live="polite">Your PDF stays on this device. Nothing is saved until you choose Save to browser or Export PDF.</p>
+    <p id="sheet-error" role="alert" tabindex="-1" hidden></p>
+    <div id="sheet-loading" hidden><progress aria-label="Opening your PDF"></progress><button class="button" id="sheet-cancel" type="button">Cancel opening</button></div>
+    <section id="sheet-upload" class="tool-panel" aria-labelledby="upload-title">
+      <h2 id="upload-title">Open your character sheet</h2>
+      <div class="sheet-drop" id="sheet-drop"><label for="pdf-file"><strong>Drop a PDF here, or choose a file</strong><span>Up to 15 MB · 20 pages · no D&D Beyond login needed</span></label><input id="pdf-file" type="file" accept="application/pdf,.pdf" /></div>
+      <p>Edit fillable fields directly on the page. For printed text, add an editable text box with an optional white cover.</p>
+      <p class="sheet-note">No OCR, automatic character reader, or upload to a server. PDFs do not update your old character snapshots or personalized suggestions.</p>
     </section>
-    <form id="review-step" hidden>
-      <h2 tabindex="-1">Review your character</h2><p>Blank means unknown. Correct any reading; each field keeps its original evidence. Spell classifications are independent, and uncertain checkboxes are never treated as prepared.</p>
-      <div id="extraction-warnings" class="lab-warning"></div>
-      <div id="review-fields"></div>
-      <section class="tool-panel"><h3>Wizard spell reconciliation</h3><p>Classify each spell explicitly. “Not confirmed” is not “No”. Cantrips, grants and spells from other classes should use their own access flags. Set a spell name blank to exclude a mistaken reading.</p><div id="spell-review"></div><button type="button" class="button" id="add-spell">Add a spell or cantrip</button></section>
-      <details class="lab-details"><summary>Original extracted page text (not retained after saving)</summary><div id="extracted-pages"></div></details>
-      <div class="form-actions"><button type="button" class="button" id="back-upload">Back to upload</button><button type="submit" class="button button--primary">Review comparison →</button></div>
-    </form>
-    <section id="confirm-step" hidden>
-      <h2 tabindex="-1">Confirm a new snapshot</h2><p>Earlier snapshots remain unchanged. This saves your reviewed observations, not a certification that the character is rules-legal.</p>
-      <div id="final-warnings" class="lab-warning"></div><div id="snapshot-diff"></div>
-      <label class="lab-check"><input type="checkbox" id="confirm-readings" />I reviewed the populated fields and spell classifications. Blank fields remain unknown.</label>
-      <label class="lab-check"><input type="checkbox" id="retain-pdf" />Also keep the original PDF in this browser (optional)</label>
-      <label class="lab-check" id="duplicate-choice" hidden><input type="checkbox" id="allow-duplicate" />This is the same PDF. Save an intentional corrected revision.</label>
-      <div class="form-actions"><button type="button" class="button" id="back-review">Back to review</button><button type="button" class="button button--primary" id="save-character">Save snapshot & open Play Mode</button></div>
+    <section id="pdf-editor" hidden aria-labelledby="editor-title">
+      <div class="sheet-editor-heading"><div><h2 id="editor-title" tabindex="-1">Your editable sheet</h2><p id="sheet-info"></p></div><button class="button" type="button" id="sheet-close">Close sheet</button></div>
+      <label for="sheet-title" class="field-label">Sheet name</label><input id="sheet-title" class="field" type="text" maxlength="150" />
+      <div class="sheet-actions"><button class="button button--primary" id="sheet-export" type="button">Export PDF</button><button class="button" id="sheet-save" type="button">Save to browser</button><button class="button" id="sheet-original" type="button">Download original</button><span id="sheet-save-state">Not saved in this browser</span></div>
+      <p class="sheet-note">Export after your session for a portable backup. Save to browser keeps the original and your latest editable PDF in this browser profile. Clearing site data removes local copies; shared profiles share access.</p>
+      <div class="sheet-toolbar" aria-label="PDF controls">
+        <button class="button" id="page-prev" type="button" aria-label="Previous PDF page">←</button><label for="page-select">Page</label><select class="field" id="page-select"></select><button class="button" id="page-next" type="button" aria-label="Next PDF page">→</button>
+        <label for="zoom-select">Zoom</label><select class="field" id="zoom-select"><option value="fit">Fit width</option><option value="1">100%</option><option value="1.5">150%</option><option value="2">200%</option></select>
+        <button class="button" id="text-add" type="button" aria-pressed="false">Add text</button><button class="button" id="text-replace" type="button" aria-pressed="false">Cover &amp; replace text</button>
+      </div>
+      <p id="sheet-tool-help">Click a highlighted field to change its value. Page controls and all fields also work with a keyboard.</p>
+      <div class="sheet-workspace">
+        <div class="sheet-viewport" id="sheet-viewport" tabindex="0" aria-label="Scrollable PDF page"><div id="pdf-page"><canvas id="pdf-canvas" role="img" aria-label="Character sheet PDF page"></canvas><div id="pdf-fields"></div><div id="pdf-additions"></div><div id="text-placement" tabindex="0" role="button" aria-label="Place text on PDF page. Click a position, or press Enter to place a box near the top." hidden></div></div></div>
+        <aside id="text-properties" class="sheet-properties" hidden aria-labelledby="text-properties-title"><h3 id="text-properties-title">Added text</h3><label for="text-value">Text</label><textarea id="text-value" class="field" rows="3" maxlength="4000"></textarea><label for="text-size">Text size</label><input class="field" id="text-size" type="number" min="6" max="48" step="1" value="12" /><div class="sheet-geometry"><label>Left<input class="field" id="text-x" type="number" min="0" step="1" /></label><label>Top<input class="field" id="text-y" type="number" min="0" step="1" /></label><label>Width<input class="field" id="text-width" type="number" min="12" step="1" /></label><label>Height<input class="field" id="text-height" type="number" min="12" step="1" /></label></div><label class="sheet-check"><input type="checkbox" id="text-cover" />White cover behind text</label><p class="sheet-note">A white cover visually hides printed text underneath; it does not securely delete it. This is not a redaction tool.</p><button class="button" id="text-remove" type="button">Remove added text</button></aside>
+      </div>
+      <details class="sheet-help"><summary>How to update your sheet</summary><ol><li>Click a highlighted field, select its old value, and type the new value. Delete the value to clear it.</li><li>If the page has no editable field, select <strong>Cover &amp; replace text</strong> and click over the printed value. Adjust the text box in the side panel. Use <strong>Add text</strong> for notes.</li><li>Choose <strong>Export PDF</strong>. Reopen the exported file here next session; its fields and added text remain editable.</li></ol><p>This edits your copy of the PDF, not your D&D Beyond account. Printed text covered with a box is still present underneath. Signed, locked, or unsupported forms may need an unlocked, unsigned export.</p></details>
     </section>
-    <noscript><p>The private importer needs JavaScript to process your PDF on this device.</p></noscript>
+    <section class="sheet-library tool-panel" aria-labelledby="saved-title"><h2 id="saved-title">Saved in this browser</h2><p class="sheet-note">Local copies, not cloud storage. Your existing character snapshots remain separate and unchanged.</p><div id="saved-sheets"><p>Loading saved sheets…</p></div></section>
+    <noscript><p>The private PDF editor needs JavaScript to display and save your sheet on this device.</p></noscript>
   </div></section>
-  <CharacterCatalog />
-  <script>import '@/features/character-lab/import-ui.mjs';</script>
+  <script>import '@/features/pdf-sheet/editor.mjs';</script>
 </BaseLayout>

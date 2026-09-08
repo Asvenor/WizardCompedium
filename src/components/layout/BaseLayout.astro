@@ -78,7 +78,7 @@ const nav = [
           <summary>Menu</summary>
           <nav class="mobile-menu" aria-label="Mobile navigation">
             <a href="/">Home</a>
-            {nav.map(([label, href]) => <a href={href}>{label}</a>)}
+            {nav.map(([label, href, key]) => <a href={href} aria-current={active === key ? 'page' : undefined}>{label}</a>)}
             <a href="/search/">Search</a>
             <a href="/wizard/">My Wizard</a>
           </nav>
@@ -102,7 +102,21 @@ const nav = [
           event.key.toLowerCase() === 'k'
         ) {
           event.preventDefault();
+          const searchInput = document.querySelector('[data-search-input]');
+          if (searchInput instanceof HTMLInputElement) {
+            document.querySelector('.mobile-nav')?.removeAttribute('open');
+            searchInput.focus();
+            searchInput.select();
+            return;
+          }
           window.location.href = '/search/';
+        }
+        if (event.key === 'Escape') {
+          const menu = document.querySelector('.mobile-nav');
+          if (menu?.hasAttribute('open')) {
+            menu.removeAttribute('open');
+            menu.querySelector('summary')?.focus();
+          }
         }
       });
     </script>

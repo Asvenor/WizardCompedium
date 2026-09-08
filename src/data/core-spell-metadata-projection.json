@@ -1,0 +1,683 @@
+{
+  "version": 1,
+  "projectedAt": "2026-09-08",
+  "scope": "Seven existing 2024 spell cards enriched from previously verified V2 claims. This is not a new full-rule verification or a blanket certification of other website fields.",
+  "source": {
+    "title": "System Reference Document 5.2.1",
+    "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf",
+    "edition": "5.2.1",
+    "verifiedAt": "2026-09-05",
+    "availabilityCheckedAt": "2026-09-08",
+    "availabilityScope": "Official PDF URL and exact edition confirmed reachable; no new full-rule verification.",
+    "cachedPdfSha256": "8974902d109d6e63672d7c490bde9ccf052410503d9cfa768237154fbc5e3d87"
+  },
+  "records": [
+    {
+      "spellId": "shield",
+      "websitePath": "src/content/spells/level-1/shield.json",
+      "ownerId": "spell.shield.core2024",
+      "ownerPath": "canonical/spells/spell.shield.core2024.json",
+      "fields": [
+        {
+          "pointer": "/school",
+          "value": "Abjuration",
+          "previousValue": null,
+          "sourcePointer": "/school",
+          "claimId": "claim.spell.shield.core2024.8da95445a80b"
+        },
+        {
+          "pointer": "/rules/duration",
+          "value": "Until the start of your next turn",
+          "previousValue": null,
+          "sourcePointer": "/duration",
+          "claimId": "claim.spell.shield.core2024.5a17d69f033d"
+        },
+        {
+          "pointer": "/rules/components/verbal",
+          "value": true,
+          "previousValue": null,
+          "sourcePointer": "/components/verbal",
+          "claimId": "claim.spell.shield.core2024.e49bf947a6cc"
+        },
+        {
+          "pointer": "/rules/components/somatic",
+          "value": true,
+          "previousValue": null,
+          "sourcePointer": "/components/somatic",
+          "claimId": "claim.spell.shield.core2024.e49bf947a6cc"
+        },
+        {
+          "pointer": "/rules/components/material",
+          "value": false,
+          "previousValue": null,
+          "sourcePointer": "/components/material",
+          "claimId": "claim.spell.shield.core2024.e49bf947a6cc"
+        }
+      ],
+      "claims": [
+        {
+          "id": "claim.spell.shield.core2024.8da95445a80b",
+          "pointer": "/school",
+          "status": "verified_primary",
+          "verifiedAt": "2026-09-05",
+          "ownerValueSha256": "daaa0a0958bcfa2cc42d562b08640dfd37079b7acee00b6a7f5a7c87c47d4fb8",
+          "evidence": [
+            {
+              "sourceRevisionId": "source_revision.srd521.20260905",
+              "locator": "SRD 5.2.1, S. 161–162: Shield",
+              "revisionSha256": "e88cc7671b9f421e74f155cd9df3df10e93cef60a2dec5133fa17380a728beed"
+            }
+          ]
+        },
+        {
+          "id": "claim.spell.shield.core2024.5a17d69f033d",
+          "pointer": "/duration",
+          "status": "verified_primary",
+          "verifiedAt": "2026-09-05",
+          "ownerValueSha256": "c4a529bb8f700c99e330fdc0bb47de4afdff16f893014ad02c7df4dd80291c9e",
+          "evidence": [
+            {
+              "sourceRevisionId": "source_revision.srd521.20260905",
+              "locator": "SRD 5.2.1, S. 161–162: Shield",
+              "revisionSha256": "e88cc7671b9f421e74f155cd9df3df10e93cef60a2dec5133fa17380a728beed"
+            }
+          ]
+        },
+        {
+          "id": "claim.spell.shield.core2024.e49bf947a6cc",
+          "pointer": "/components",
+          "status": "verified_primary",
+          "verifiedAt": "2026-09-05",
+          "ownerValueSha256": "9cd88db2179269243c3a1623e4006d88a79c1bb7655234da325946a228230ec9",
+          "evidence": [
+            {
+              "sourceRevisionId": "source_revision.srd521.20260905",
+              "locator": "SRD 5.2.1, S. 161–162: Shield",
+              "revisionSha256": "e88cc7671b9f421e74f155cd9df3df10e93cef60a2dec5133fa17380a728beed"
+            }
+          ]
+        }
+      ],
+      "ownerLifecycle": "approved"
+    },
+    {
+      "spellId": "web",
+      "websitePath": "src/content/spells/level-2/web.json",
+      "ownerId": "spell.web.core2024",
+      "ownerPath": "canonical/spells/spell.web.core2024.json",
+      "fields": [
+        {
+          "pointer": "/school",
+          "value": "Conjuration",
+          "previousValue": null,
+          "sourcePointer": "/school",
+          "claimId": "claim.spell.web.core2024.8da95445a80b"
+        },
+        {
+          "pointer": "/rules/duration",
+          "value": "Up to 1 hour",
+          "previousValue": null,
+          "sourcePointer": "/duration",
+          "claimId": "claim.spell.web.core2024.5a17d69f033d"
+        },
+        {
+          "pointer": "/rules/components/verbal",
+          "value": true,
+          "previousValue": null,
+          "sourcePointer": "/components/verbal",
+          "claimId": "claim.spell.web.core2024.e49bf947a6cc"
+        },
+        {
+          "pointer": "/rules/components/somatic",
+          "value": true,
+          "previousValue": null,
+          "sourcePointer": "/components/somatic",
+          "claimId": "claim.spell.web.core2024.e49bf947a6cc"
+        },
+        {
+          "pointer": "/rules/components/material",
+          "value": true,
+          "previousValue": null,
+          "sourcePointer": "/components/material",
+          "claimId": "claim.spell.web.core2024.e49bf947a6cc"
+        }
+      ],
+      "claims": [
+        {
+          "id": "claim.spell.web.core2024.8da95445a80b",
+          "pointer": "/school",
+          "status": "verified_primary",
+          "verifiedAt": "2026-09-05",
+          "ownerValueSha256": "87dc5b3b35426fa0094ec423b0a47ec5d7a0e35ec2f5fc4f136192e7ca771d96",
+          "evidence": [
+            {
+              "sourceRevisionId": "source_revision.srd521.20260905",
+              "locator": "SRD 5.2.1, S. 174: Web",
+              "revisionSha256": "e88cc7671b9f421e74f155cd9df3df10e93cef60a2dec5133fa17380a728beed"
+            }
+          ]
+        },
+        {
+          "id": "claim.spell.web.core2024.5a17d69f033d",
+          "pointer": "/duration",
+          "status": "verified_primary",
+          "verifiedAt": "2026-09-05",
+          "ownerValueSha256": "bc5f6acba92981f723f1fa1926dc0706b2081f5e7b28f04fa4b46547acf86257",
+          "evidence": [
+            {
+              "sourceRevisionId": "source_revision.srd521.20260905",
+              "locator": "SRD 5.2.1, S. 174: Web",
+              "revisionSha256": "e88cc7671b9f421e74f155cd9df3df10e93cef60a2dec5133fa17380a728beed"
+            }
+          ]
+        },
+        {
+          "id": "claim.spell.web.core2024.e49bf947a6cc",
+          "pointer": "/components",
+          "status": "verified_primary",
+          "verifiedAt": "2026-09-05",
+          "ownerValueSha256": "8046663b233b84f9770d253db84be30a759d005522f9e32882e00a16a4ed4356",
+          "evidence": [
+            {
+              "sourceRevisionId": "source_revision.srd521.20260905",
+              "locator": "SRD 5.2.1, S. 174: Web",
+              "revisionSha256": "e88cc7671b9f421e74f155cd9df3df10e93cef60a2dec5133fa17380a728beed"
+            }
+          ]
+        }
+      ],
+      "ownerLifecycle": "approved"
+    },
+    {
+      "spellId": "misty-step",
+      "websitePath": "src/content/spells/level-2/misty-step.json",
+      "ownerId": "spell.misty_step.core2024",
+      "ownerPath": "canonical/spells/spell.misty_step.core2024.json",
+      "fields": [
+        {
+          "pointer": "/school",
+          "value": "Conjuration",
+          "previousValue": null,
+          "sourcePointer": "/school",
+          "claimId": "claim.spell.misty_step.core2024.8da95445a80b"
+        },
+        {
+          "pointer": "/rules/duration",
+          "value": "Instantaneous",
+          "previousValue": null,
+          "sourcePointer": "/duration",
+          "claimId": "claim.spell.misty_step.core2024.5a17d69f033d"
+        },
+        {
+          "pointer": "/rules/components/verbal",
+          "value": true,
+          "previousValue": null,
+          "sourcePointer": "/components/verbal",
+          "claimId": "claim.spell.misty_step.core2024.e49bf947a6cc"
+        },
+        {
+          "pointer": "/rules/components/somatic",
+          "value": false,
+          "previousValue": null,
+          "sourcePointer": "/components/somatic",
+          "claimId": "claim.spell.misty_step.core2024.e49bf947a6cc"
+        },
+        {
+          "pointer": "/rules/components/material",
+          "value": false,
+          "previousValue": null,
+          "sourcePointer": "/components/material",
+          "claimId": "claim.spell.misty_step.core2024.e49bf947a6cc"
+        }
+      ],
+      "claims": [
+        {
+          "id": "claim.spell.misty_step.core2024.8da95445a80b",
+          "pointer": "/school",
+          "status": "verified_primary",
+          "verifiedAt": "2026-09-05",
+          "ownerValueSha256": "87dc5b3b35426fa0094ec423b0a47ec5d7a0e35ec2f5fc4f136192e7ca771d96",
+          "evidence": [
+            {
+              "sourceRevisionId": "source_revision.srd521.20260905",
+              "locator": "SRD 5.2.1, S. 150: Misty Step",
+              "revisionSha256": "e88cc7671b9f421e74f155cd9df3df10e93cef60a2dec5133fa17380a728beed"
+            }
+          ]
+        },
+        {
+          "id": "claim.spell.misty_step.core2024.5a17d69f033d",
+          "pointer": "/duration",
+          "status": "verified_primary",
+          "verifiedAt": "2026-09-05",
+          "ownerValueSha256": "63e2a1212fa765d505fef06f788f7adf549d12068fe1f7c1bc5cec3d67bd8746",
+          "evidence": [
+            {
+              "sourceRevisionId": "source_revision.srd521.20260905",
+              "locator": "SRD 5.2.1, S. 150: Misty Step",
+              "revisionSha256": "e88cc7671b9f421e74f155cd9df3df10e93cef60a2dec5133fa17380a728beed"
+            }
+          ]
+        },
+        {
+          "id": "claim.spell.misty_step.core2024.e49bf947a6cc",
+          "pointer": "/components",
+          "status": "verified_primary",
+          "verifiedAt": "2026-09-05",
+          "ownerValueSha256": "ea2d26f74eaa211cdbbf3e0b7e502863db2524036ca283c20eab350e4975f892",
+          "evidence": [
+            {
+              "sourceRevisionId": "source_revision.srd521.20260905",
+              "locator": "SRD 5.2.1, S. 150: Misty Step",
+              "revisionSha256": "e88cc7671b9f421e74f155cd9df3df10e93cef60a2dec5133fa17380a728beed"
+            }
+          ]
+        }
+      ],
+      "ownerLifecycle": "approved"
+    },
+    {
+      "spellId": "counterspell",
+      "websitePath": "src/content/spells/level-3/counterspell.json",
+      "ownerId": "spell.counterspell.core2024",
+      "ownerPath": "canonical/spells/spell.counterspell.core2024.json",
+      "fields": [
+        {
+          "pointer": "/school",
+          "value": "Abjuration",
+          "previousValue": null,
+          "sourcePointer": "/school",
+          "claimId": "claim.spell.counterspell.core2024.8da95445a80b"
+        },
+        {
+          "pointer": "/rules/duration",
+          "value": "Instantaneous",
+          "previousValue": null,
+          "sourcePointer": "/duration",
+          "claimId": "claim.spell.counterspell.core2024.5a17d69f033d"
+        },
+        {
+          "pointer": "/rules/components/verbal",
+          "value": false,
+          "previousValue": null,
+          "sourcePointer": "/components/verbal",
+          "claimId": "claim.spell.counterspell.core2024.e49bf947a6cc"
+        },
+        {
+          "pointer": "/rules/components/somatic",
+          "value": true,
+          "previousValue": null,
+          "sourcePointer": "/components/somatic",
+          "claimId": "claim.spell.counterspell.core2024.e49bf947a6cc"
+        },
+        {
+          "pointer": "/rules/components/material",
+          "value": false,
+          "previousValue": null,
+          "sourcePointer": "/components/material",
+          "claimId": "claim.spell.counterspell.core2024.e49bf947a6cc"
+        }
+      ],
+      "claims": [
+        {
+          "id": "claim.spell.counterspell.core2024.8da95445a80b",
+          "pointer": "/school",
+          "status": "verified_primary",
+          "verifiedAt": "2026-09-05",
+          "ownerValueSha256": "daaa0a0958bcfa2cc42d562b08640dfd37079b7acee00b6a7f5a7c87c47d4fb8",
+          "evidence": [
+            {
+              "sourceRevisionId": "source_revision.srd521.combat_spells_20260905",
+              "locator": "SRD 5.2.1, S. 120",
+              "revisionSha256": "31c1eae8708155b284b950e2d4067af0d7232117cd969fe057bde5fc3534c5a7"
+            },
+            {
+              "sourceRevisionId": "source_revision.ddb_basic_spells.combat_20260905",
+              "locator": "Spell Descriptions: Counterspell",
+              "revisionSha256": "edad2b377c862f3fc01385e408d9806fa55d34faa506aed0a3af82ceedca6762"
+            }
+          ]
+        },
+        {
+          "id": "claim.spell.counterspell.core2024.5a17d69f033d",
+          "pointer": "/duration",
+          "status": "verified_primary",
+          "verifiedAt": "2026-09-05",
+          "ownerValueSha256": "63e2a1212fa765d505fef06f788f7adf549d12068fe1f7c1bc5cec3d67bd8746",
+          "evidence": [
+            {
+              "sourceRevisionId": "source_revision.srd521.combat_spells_20260905",
+              "locator": "SRD 5.2.1, S. 120",
+              "revisionSha256": "31c1eae8708155b284b950e2d4067af0d7232117cd969fe057bde5fc3534c5a7"
+            },
+            {
+              "sourceRevisionId": "source_revision.ddb_basic_spells.combat_20260905",
+              "locator": "Spell Descriptions: Counterspell",
+              "revisionSha256": "edad2b377c862f3fc01385e408d9806fa55d34faa506aed0a3af82ceedca6762"
+            }
+          ]
+        },
+        {
+          "id": "claim.spell.counterspell.core2024.e49bf947a6cc",
+          "pointer": "/components",
+          "status": "verified_primary",
+          "verifiedAt": "2026-09-05",
+          "ownerValueSha256": "b093d68740065e9e748e0db936aa7454b5224aedcf976aac7d30714cab71c21d",
+          "evidence": [
+            {
+              "sourceRevisionId": "source_revision.srd521.combat_spells_20260905",
+              "locator": "SRD 5.2.1, S. 120",
+              "revisionSha256": "31c1eae8708155b284b950e2d4067af0d7232117cd969fe057bde5fc3534c5a7"
+            },
+            {
+              "sourceRevisionId": "source_revision.ddb_basic_spells.combat_20260905",
+              "locator": "Spell Descriptions: Counterspell",
+              "revisionSha256": "edad2b377c862f3fc01385e408d9806fa55d34faa506aed0a3af82ceedca6762"
+            }
+          ]
+        }
+      ],
+      "ownerLifecycle": "review"
+    },
+    {
+      "spellId": "fireball",
+      "websitePath": "src/content/spells/level-3/fireball.json",
+      "ownerId": "spell.fireball.core2024",
+      "ownerPath": "canonical/spells/spell.fireball.core2024.json",
+      "fields": [
+        {
+          "pointer": "/school",
+          "value": "Evocation",
+          "previousValue": null,
+          "sourcePointer": "/school",
+          "claimId": "claim.spell.fireball.core2024.8da95445a80b"
+        },
+        {
+          "pointer": "/rules/duration",
+          "value": "Instantaneous",
+          "previousValue": null,
+          "sourcePointer": "/duration",
+          "claimId": "claim.spell.fireball.core2024.5a17d69f033d"
+        },
+        {
+          "pointer": "/rules/components/verbal",
+          "value": true,
+          "previousValue": null,
+          "sourcePointer": "/components/verbal",
+          "claimId": "claim.spell.fireball.core2024.e49bf947a6cc"
+        },
+        {
+          "pointer": "/rules/components/somatic",
+          "value": true,
+          "previousValue": null,
+          "sourcePointer": "/components/somatic",
+          "claimId": "claim.spell.fireball.core2024.e49bf947a6cc"
+        },
+        {
+          "pointer": "/rules/components/material",
+          "value": true,
+          "previousValue": null,
+          "sourcePointer": "/components/material",
+          "claimId": "claim.spell.fireball.core2024.e49bf947a6cc"
+        }
+      ],
+      "claims": [
+        {
+          "id": "claim.spell.fireball.core2024.8da95445a80b",
+          "pointer": "/school",
+          "status": "verified_primary",
+          "verifiedAt": "2026-09-05",
+          "ownerValueSha256": "38cef702ebe89a9eec0df659eb8ee93c024532e77976617c10ceadfc0701d4ab",
+          "evidence": [
+            {
+              "sourceRevisionId": "source_revision.srd521.combat_spells_20260905",
+              "locator": "SRD 5.2.1, S. 131",
+              "revisionSha256": "31c1eae8708155b284b950e2d4067af0d7232117cd969fe057bde5fc3534c5a7"
+            },
+            {
+              "sourceRevisionId": "source_revision.ddb_basic_spells.combat_20260905",
+              "locator": "Spell Descriptions: Fireball",
+              "revisionSha256": "edad2b377c862f3fc01385e408d9806fa55d34faa506aed0a3af82ceedca6762"
+            }
+          ]
+        },
+        {
+          "id": "claim.spell.fireball.core2024.5a17d69f033d",
+          "pointer": "/duration",
+          "status": "verified_primary",
+          "verifiedAt": "2026-09-05",
+          "ownerValueSha256": "63e2a1212fa765d505fef06f788f7adf549d12068fe1f7c1bc5cec3d67bd8746",
+          "evidence": [
+            {
+              "sourceRevisionId": "source_revision.srd521.combat_spells_20260905",
+              "locator": "SRD 5.2.1, S. 131",
+              "revisionSha256": "31c1eae8708155b284b950e2d4067af0d7232117cd969fe057bde5fc3534c5a7"
+            },
+            {
+              "sourceRevisionId": "source_revision.ddb_basic_spells.combat_20260905",
+              "locator": "Spell Descriptions: Fireball",
+              "revisionSha256": "edad2b377c862f3fc01385e408d9806fa55d34faa506aed0a3af82ceedca6762"
+            }
+          ]
+        },
+        {
+          "id": "claim.spell.fireball.core2024.e49bf947a6cc",
+          "pointer": "/components",
+          "status": "verified_primary",
+          "verifiedAt": "2026-09-05",
+          "ownerValueSha256": "7998f13aadcf82414014239becb55c04eb3f650e4e95105d6c8afafc400ef7cf",
+          "evidence": [
+            {
+              "sourceRevisionId": "source_revision.srd521.combat_spells_20260905",
+              "locator": "SRD 5.2.1, S. 131",
+              "revisionSha256": "31c1eae8708155b284b950e2d4067af0d7232117cd969fe057bde5fc3534c5a7"
+            },
+            {
+              "sourceRevisionId": "source_revision.ddb_basic_spells.combat_20260905",
+              "locator": "Spell Descriptions: Fireball",
+              "revisionSha256": "edad2b377c862f3fc01385e408d9806fa55d34faa506aed0a3af82ceedca6762"
+            }
+          ]
+        }
+      ],
+      "ownerLifecycle": "review"
+    },
+    {
+      "spellId": "detect-magic",
+      "websitePath": "src/content/spells/level-1/detect-magic.json",
+      "ownerId": "spell.detect_magic.core2024",
+      "ownerPath": "canonical/spells/spell.detect_magic.core2024.json",
+      "fields": [
+        {
+          "pointer": "/school",
+          "value": "Divination",
+          "previousValue": null,
+          "sourcePointer": "/school",
+          "claimId": "claim.spell.detect_magic.core2024.8da95445a80b"
+        },
+        {
+          "pointer": "/rules/duration",
+          "value": "Up to 10 minutes",
+          "previousValue": null,
+          "sourcePointer": "/duration",
+          "claimId": "claim.spell.detect_magic.core2024.5a17d69f033d"
+        },
+        {
+          "pointer": "/rules/components/verbal",
+          "value": true,
+          "previousValue": null,
+          "sourcePointer": "/components/verbal",
+          "claimId": "claim.spell.detect_magic.core2024.e49bf947a6cc"
+        },
+        {
+          "pointer": "/rules/components/somatic",
+          "value": true,
+          "previousValue": null,
+          "sourcePointer": "/components/somatic",
+          "claimId": "claim.spell.detect_magic.core2024.e49bf947a6cc"
+        },
+        {
+          "pointer": "/rules/components/material",
+          "value": false,
+          "previousValue": null,
+          "sourcePointer": "/components/material",
+          "claimId": "claim.spell.detect_magic.core2024.e49bf947a6cc"
+        }
+      ],
+      "claims": [
+        {
+          "id": "claim.spell.detect_magic.core2024.8da95445a80b",
+          "pointer": "/school",
+          "status": "verified_primary",
+          "verifiedAt": "2026-09-05",
+          "ownerValueSha256": "b195e556719f31084adfcee9110daa4be9b6e2a463cf489d507f15eef661219d",
+          "evidence": [
+            {
+              "sourceRevisionId": "source_revision.srd521.operations_20260905",
+              "locator": "SRD 5.2.1, S. 123",
+              "revisionSha256": "de9265959f33c8d24f6b6909067c2fb39a8b76feca341416bfa4c000f750e981"
+            }
+          ]
+        },
+        {
+          "id": "claim.spell.detect_magic.core2024.5a17d69f033d",
+          "pointer": "/duration",
+          "status": "verified_primary",
+          "verifiedAt": "2026-09-05",
+          "ownerValueSha256": "72af198bc040c7a272070a4fdedc652124eed919ab2d6a504f7c810eafa9b533",
+          "evidence": [
+            {
+              "sourceRevisionId": "source_revision.srd521.operations_20260905",
+              "locator": "SRD 5.2.1, S. 123",
+              "revisionSha256": "de9265959f33c8d24f6b6909067c2fb39a8b76feca341416bfa4c000f750e981"
+            }
+          ]
+        },
+        {
+          "id": "claim.spell.detect_magic.core2024.e49bf947a6cc",
+          "pointer": "/components",
+          "status": "verified_primary",
+          "verifiedAt": "2026-09-05",
+          "ownerValueSha256": "b2a0f9d37b8b5113ac7b2c5cf0c31ae58ba7da8331a81cb2dc49bcd422a3b7b8",
+          "evidence": [
+            {
+              "sourceRevisionId": "source_revision.srd521.operations_20260905",
+              "locator": "SRD 5.2.1, S. 123",
+              "revisionSha256": "de9265959f33c8d24f6b6909067c2fb39a8b76feca341416bfa4c000f750e981"
+            }
+          ]
+        }
+      ],
+      "ownerLifecycle": "review"
+    },
+    {
+      "spellId": "find-familiar",
+      "websitePath": "src/content/spells/level-1/find-familiar.json",
+      "ownerId": "spell.find_familiar.core2024",
+      "ownerPath": "canonical/spells/spell.find_familiar.core2024.json",
+      "fields": [
+        {
+          "pointer": "/school",
+          "value": "Conjuration",
+          "previousValue": null,
+          "sourcePointer": "/school",
+          "claimId": "claim.spell.find_familiar.core2024.8da95445a80b"
+        },
+        {
+          "pointer": "/rules/duration",
+          "value": "Instantaneous",
+          "previousValue": null,
+          "sourcePointer": "/duration",
+          "claimId": "claim.spell.find_familiar.core2024.5a17d69f033d"
+        },
+        {
+          "pointer": "/rules/components/verbal",
+          "value": true,
+          "previousValue": null,
+          "sourcePointer": "/components/verbal",
+          "claimId": "claim.spell.find_familiar.core2024.e49bf947a6cc"
+        },
+        {
+          "pointer": "/rules/components/somatic",
+          "value": true,
+          "previousValue": null,
+          "sourcePointer": "/components/somatic",
+          "claimId": "claim.spell.find_familiar.core2024.e49bf947a6cc"
+        },
+        {
+          "pointer": "/rules/components/gpCost",
+          "value": 10,
+          "previousValue": null,
+          "sourcePointer": "/material_costs/0/value",
+          "claimId": "claim.spell.find_familiar.core2024.463f8c37d968"
+        },
+        {
+          "pointer": "/rules/components/description",
+          "value": "Burning incense worth at least 10 gp, consumed when the spell is cast.",
+          "previousValue": "Incense, charcoal, and herbs in a fireproof vessel; keep multiple replacement sets.",
+          "sourcePointer": "/components/material_description_de",
+          "claimId": "claim.spell.find_familiar.core2024.e49bf947a6cc"
+        }
+      ],
+      "claims": [
+        {
+          "id": "claim.spell.find_familiar.core2024.8da95445a80b",
+          "pointer": "/school",
+          "status": "verified_primary",
+          "verifiedAt": "2026-09-05",
+          "ownerValueSha256": "87dc5b3b35426fa0094ec423b0a47ec5d7a0e35ec2f5fc4f136192e7ca771d96",
+          "evidence": [
+            {
+              "sourceRevisionId": "source_revision.srd521.operations_20260905",
+              "locator": "SRD 5.2.1, S. 130",
+              "revisionSha256": "de9265959f33c8d24f6b6909067c2fb39a8b76feca341416bfa4c000f750e981"
+            }
+          ]
+        },
+        {
+          "id": "claim.spell.find_familiar.core2024.5a17d69f033d",
+          "pointer": "/duration",
+          "status": "verified_primary",
+          "verifiedAt": "2026-09-05",
+          "ownerValueSha256": "63e2a1212fa765d505fef06f788f7adf549d12068fe1f7c1bc5cec3d67bd8746",
+          "evidence": [
+            {
+              "sourceRevisionId": "source_revision.srd521.operations_20260905",
+              "locator": "SRD 5.2.1, S. 130",
+              "revisionSha256": "de9265959f33c8d24f6b6909067c2fb39a8b76feca341416bfa4c000f750e981"
+            }
+          ]
+        },
+        {
+          "id": "claim.spell.find_familiar.core2024.e49bf947a6cc",
+          "pointer": "/components",
+          "status": "verified_primary",
+          "verifiedAt": "2026-09-05",
+          "ownerValueSha256": "83b2b056167d2d7187a63c551866c950e753c5842b99a47d646a797fe7214c38",
+          "evidence": [
+            {
+              "sourceRevisionId": "source_revision.srd521.operations_20260905",
+              "locator": "SRD 5.2.1, S. 130",
+              "revisionSha256": "de9265959f33c8d24f6b6909067c2fb39a8b76feca341416bfa4c000f750e981"
+            }
+          ]
+        },
+        {
+          "id": "claim.spell.find_familiar.core2024.463f8c37d968",
+          "pointer": "/material_costs",
+          "status": "verified_primary",
+          "verifiedAt": "2026-09-05",
+          "ownerValueSha256": "e4e58c02daafc1680662290ee11f78758f5691fbb657fff115291f2ec7dba492",
+          "evidence": [
+            {
+              "sourceRevisionId": "source_revision.srd521.operations_20260905",
+              "locator": "SRD 5.2.1, S. 130",
+              "revisionSha256": "de9265959f33c8d24f6b6909067c2fb39a8b76feca341416bfa4c000f750e981"
+            }
+          ]
+        }
+      ],
+      "ownerLifecycle": "review"
+    }
+  ]
+}

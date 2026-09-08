@@ -30,7 +30,7 @@ const buildRelevance = spell.compendium.buildRelevance.map(buildLabel);
   data-level={spell.level}
   data-role={spell.compendium.acquisitionRole}
   data-role-category={roleCategories.join(' ')}
-  data-tier={getTierGroup(spell.compendium.tier)}
+  data-tier={getTierGroup(spell.compendium.tier) || 'unranked'}
   data-concentration={String(spell.rules.concentration)}
   data-ritual={String(spell.rules.ritual)}
   data-save={getSpellDefense(spell)}
@@ -51,14 +51,14 @@ const buildRelevance = spell.compendium.buildRelevance.map(buildLabel);
   <p>{spell.compendium.summary}</p>
   <div class="spell-tags">
     {
-      spell.compendium.tier && (
+      spell.compendium.tier ? (
         <span
           class="badge"
           data-tier={getTierGroup(spell.compendium.tier).replace('-f', '')}
         >
           {spell.compendium.tier}
         </span>
-      )
+      ) : <span class="badge" data-tier="conditional" title="The Compendium gives an acquisition role, but no fixed power tier for this spell.">No fixed tier</span>
     }
     <span class={`badge badge--${spell.compendium.acquisitionRole}`}
       >{spell.compendium.acquisitionRole}</span

@@ -1,6 +1,97 @@
-import { filename } from "./model.mjs";
+import { clean, filename } from "./model.mjs";
 import { textLines } from "./parser.mjs";
 export const MAX_BYTES = 15 * 1024 * 1024;
+export const MAX_TEXT = 200000;
+const processingLimit = () =>
+  Error(
+    "The extracted text exceeds the safe processing limit. Use a character-only export.",
+  );
+
+export function readableWidgets(annotations) {
+  if (annotations.length > 10000) throw processingLimit();
+  let total = 0;
+  return annotations.flatMap((a) => {
+    // Only values of text/choice widgets are data. Links, actions, attachments
+    // and ambiguous checkbox export values are never activated or interpreted.
+    if (a?.subtype !== "Widget" || !["Tx", "Ch"].includes(a.fieldType))
+      return [];
+    const value =
+      typeof a.fieldValue === "string"
+        ? a.fieldValue
+        : a.fieldType === "Ch" &&
+            Array.isArray(a.fieldValue) &&
+            a.fieldValue.every((v) => typeof v === "string")
+          ? a.fieldValue.join("\n")
+          : null;
+    if (value === null) return [];
+    const name = typeof a.fieldName === "string" ? clean(a.fieldName, 300) : "";
+    if (!name) return [];
+    if (value.length > MAX_TEXT) throw processingLimit();
+    total += name.length + value.length;
+    if (total > MAX_TEXT) throw processingLimit();
+    return [{ name, value: clean(value, MAX_TEXT), rect: a.rect }];
+  });
+}
+
+export async function readPageContent(page, pageNumber) {
+  const [text, annotations] = await Promise.allSettled([
+    Promise.resolve().then(() => page.getTextContent()),
+    Promise.resolve().then(() => page.getAnnotations({ intent: "display" })),
+  ]);
+  const warnings = [];
+  const items =
+    text.status === "fulfilled" && Array.isArray(text.value?.items)
+      ? text.value.items
+      : [];
+  const textFailed =
+    text.status === "rejected" || !Array.isArray(text.value?.items);
+  if (textFailed)
+    warnings.push(
+      `Page ${pageNumber}: selectable text could not be read. Local OCR was requested; review this page carefully.`,
+    );
+  if (annotations.status === "rejected")
+    warnings.push(
+      `Page ${pageNumber}: form fields could not be read. Text/OCR readings remain available; check the original form values.`,
+    );
+  // Apply bounds before grouping text geometry, not only after allocating and
+  // processing an arbitrarily large decoded content stream.
+  if (items.length > 10000) throw processingLimit();
+  const rawLength = items.reduce(
+    (n, item) => n + (typeof item?.str === "string" ? item.str.length : 0),
+    0,
+  );
+  if (rawLength > MAX_TEXT) throw processingLimit();
+  const widgets = readableWidgets(
+    annotations.status === "fulfilled" && Array.isArray(annotations.value)
+      ? annotations.value
+      : [],
+  );
+  if (
+    rawLength +
+      widgets.reduce((n, w) => n + w.name.length + w.value.length, 0) >
+    MAX_TEXT
+  )
+    throw processingLimit();
+  return {
+    lines: textLines(items).map((line) => ({ ...line, method: "text" })),
+    widgets,
+    warnings,
+    textFailed,
+  };
+}
+
+export function mergeOCRLines(embedded, recognized) {
+  if (recognized.length > MAX_TEXT) throw processingLimit();
+  const seen = new Set(embedded.map((line) => clean(line.text)));
+  return [
+    ...embedded,
+    ...recognized
+      .split("\n")
+      .map((text) => clean(text))
+      .filter((text) => text && !seen.has(text))
+      .map((text) => ({ text, method: "ocr" })),
+  ];
+}
 export async function validateFile(file) {
   if (!file || file.size === 0 || file.size > MAX_BYTES)
     throw Error("Choose a non-empty PDF smaller than 15 MB.");
@@ -102,26 +193,14 @@ export async function extractPDF(
           cancelled();
           onProgress(`Reading page ${n} of ${pdf.numPages}…`);
           const page = await pdf.getPage(n);
-          const text = await page.getTextContent();
-          const annotations = await page.getAnnotations({ intent: "display" });
-          // Read text widgets only. Never render annotation links, JavaScript, XFA or attachments.
-          const widgets = annotations
-            .filter(
-              (a) =>
-                a.subtype === "Widget" &&
-                ["Tx", "Ch"].includes(a.fieldType) &&
-                typeof a.fieldValue === "string",
-            )
-            .map((a) => ({
-              name: a.fieldName,
-              value: a.fieldValue,
-              rect: a.rect,
-            }));
-          let lines = textLines(text.items),
+          const content = await readPageContent(page, n);
+          const { widgets, warnings } = content;
+          let lines = content.lines,
             method = "text";
           if (
-            lines.reduce((n, l) => n + l.text.length, 0) < 100 &&
-            widgets.reduce((n, w) => n + w.value.length, 0) < 80
+            content.textFailed ||
+            (lines.reduce((n, l) => n + l.text.length, 0) < 100 &&
+              widgets.reduce((n, w) => n + w.value.length, 0) < 80)
           ) {
             onProgress(
               `Reading scanned page ${n} of ${pdf.numPages} on this device…`,
@@ -163,8 +242,9 @@ export async function extractPDF(
                 viewport,
               });
               await render.promise;
+              cancelled();
               const result = await ocr.recognize(canvas);
-              lines = result.data.text.split("\n").map((text) => ({ text }));
+              lines = mergeOCRLines(lines, result.data.text);
               method = "ocr";
             } finally {
               canvas.width = 0;
@@ -176,11 +256,8 @@ export async function extractPDF(
           total +=
             lines.reduce((n, l) => n + l.text.length, 0) +
             widgets.reduce((n, w) => n + w.name.length + w.value.length, 0);
-          if (total > 200000)
-            throw Error(
-              "The extracted text exceeds the safe processing limit. Use a character-only export.",
-            );
-          pages.push({ page: n, lines, widgets, method });
+          if (total > MAX_TEXT) throw processingLimit();
+          pages.push({ page: n, lines, widgets, method, warnings });
           page.cleanup();
         }
         return {
@@ -194,6 +271,7 @@ export async function extractPDF(
               ...new Set(
                 pages.flatMap((p) => [
                   p.method,
+                  ...p.lines.map((line) => line.method),
                   ...(p.widgets.length ? ["acroform"] : []),
                 ]),
               ),

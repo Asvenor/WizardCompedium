@@ -44,8 +44,21 @@ export const getSpellSearchText = (spell: SpellData) =>
       .join(' '),
   );
 
+// These names are already used by the maintained chapter text. Keep aliases
+// explicit: dropping every possessive would invent ambiguous names like Hand.
+const spellAliases: Record<string, string[]> = {
+  'leomunds-tiny-hut': ['Tiny Hut'],
+  'otilukes-resilient-sphere': ['Resilient Sphere'],
+  'rarys-telepathic-bond': ['Telepathic Bond'],
+  'tashas-hideous-laughter': ['Hideous Laughter'],
+};
+
 // Match longest spell names first to avoid Shield inside Fire Shield.
-export function mentionedSpells(text: string, spells: SpellData[]) {
+export function mentionedSpells(
+  text: string,
+  spells: SpellData[],
+  { includeSourceShorthand = false } = {},
+) {
   let remaining = ` ${normalizeSearch(text)} `;
   const found: SpellData[] = [];
   for (const spell of [...spells].sort(
@@ -53,8 +66,12 @@ export function mentionedSpells(text: string, spells: SpellData[]) {
   )) {
     const aliases = [
       spell.name,
-      ...(spell.id === 'leomunds-tiny-hut' ? ['Tiny Hut'] : []),
-      ...(spell.id === 'rarys-telepathic-bond' ? ['Telepathic Bond'] : []),
+      ...(spellAliases[spell.id] ?? []),
+      // Chapter 14 abbreviates this spell to Globe inside a named spell
+      // ladder. Never interpret a generic globe in other prose as a spell.
+      ...(includeSourceShorthand && spell.id === 'globe-of-invulnerability'
+        ? ['Globe']
+        : []),
     ];
     for (const alias of aliases) {
       const phrase = ` ${normalizeSearch(alias)} `;
@@ -126,3 +143,7 @@ export const buildLabel = (build: string) =>
     tank: 'TANK',
     fighter: 'FIGHTER',
   })[build.toLowerCase()] ?? build.toUpperCase();
+
+export const buildBadgeKey = (
+  build: SpellData['compendium']['buildRelevance'][number],
+) => (build === 'bladesinger' ? 'blade' : build);

@@ -68,6 +68,12 @@ const upload = async (page, name) => {
   await expect(page.locator("#review-step")).toBeVisible({ timeout: 150000 });
 };
 const confirm = async (page) => {
+  await page
+    .getByRole("button", {
+      name: "Confirm high-confidence readings",
+      exact: true,
+    })
+    .click();
   await page.getByRole("button", { name: "Review comparison" }).click();
   await page.locator("#confirm-readings").check();
 };
@@ -205,6 +211,104 @@ test("text import, corrections, local save, Play advice, history, duplicates and
   expect(remote).toEqual([]);
   expect(errors).toEqual([]);
 });
+test("confirmed PDF spell readings drive Play without conflating scrolls or unknown preparation", async ({
+  page,
+}) => {
+  await page.goto("/play/import/");
+  await upload(page, "wizard-text.pdf");
+  await page
+    .getByRole("button", {
+      name: "Confirm high-confidence readings",
+      exact: true,
+    })
+    .click();
+  for (const name of ["Web", "Shield", "Detect Magic", "Fireball"]) {
+    const row = page.locator("#spell-review fieldset").filter({
+      has: page
+        .locator("legend")
+        .filter({ hasText: new RegExp(`^Spell \\d+: ${name}$`) }),
+    });
+    await row
+      .getByRole("checkbox", { name: "Confirm Spell name", exact: true })
+      .check();
+  }
+  await page.getByRole("button", { name: "Review comparison" }).click();
+  await page.locator("#confirm-readings").check();
+  await save(page);
+  const card = (name) =>
+    page
+      .locator(".lab-play-card")
+      .filter({ has: page.getByRole("heading", { name, exact: true }) });
+  await expect(
+    card("Opening turn").getByRole("link", { name: "Web", exact: true }),
+  ).toBeVisible();
+  await expect(
+    card("Reaction priority").getByRole("link", {
+      name: "Shield",
+      exact: true,
+    }),
+  ).toBeVisible();
+  await expect(
+    card("Spellbook rituals").getByRole("link", {
+      name: "Detect Magic",
+      exact: true,
+    }),
+  ).toBeVisible();
+  await expect(
+    card("Owned scrolls to consider copying").getByRole("link", {
+      name: "Fireball",
+      exact: true,
+    }),
+  ).toBeVisible();
+  await expect(card("Opening turn")).not.toContainText("Fireball");
+  await expect(card("Defense & emergency exits")).not.toContainText(
+    "Misty Step",
+  );
+  await page
+    .getByText("Spellbook, preparation & scrolls · 6 recorded entries", {
+      exact: true,
+    })
+    .click();
+  const ledger = page.locator("#character-content details").filter({
+    has: page.getByText(
+      "Spellbook, preparation & scrolls · 6 recorded entries",
+      { exact: true },
+    ),
+  });
+  const unknown = ledger.locator("section").filter({
+    has: page.getByRole("heading", { name: "Misty Step", exact: true }),
+  });
+  await expect(unknown).toContainText("Currently prepared: Unknown");
+  await expect(unknown).toContainText("Name: Misty Step · Needs confirmation");
+  await page
+    .getByText("Spellbook, preparation & scrolls · 6 recorded entries", {
+      exact: true,
+    })
+    .click();
+  await page.locator("#my-character-title").scrollIntoViewIfNeeded();
+  await page.screenshot({
+    path: "test-results/personal-play-confirmed-desktop.png",
+  });
+  await card("Opening turn").scrollIntoViewIfNeeded();
+  await page.screenshot({
+    path: "test-results/personal-play-suggestions-desktop.png",
+  });
+  await page.setViewportSize({ width: 390, height: 844 });
+  await card("Reaction priority").scrollIntoViewIfNeeded();
+  await page.screenshot({
+    path: "test-results/personal-play-suggestions-mobile.png",
+  });
+  const axe = await new AxeBuilder({ page })
+    .include("#my-character")
+    .withTags(["wcag2a", "wcag2aa", "wcag21aa"])
+    .analyze();
+  expect(axe.violations).toEqual([]);
+  expect(
+    await page.evaluate(
+      () => document.documentElement.scrollWidth <= innerWidth,
+    ),
+  ).toBe(true);
+});
 test("actual image-only PDF uses local OCR and retains low confidence", async ({
   page,
 }) => {
@@ -272,11 +376,13 @@ test("multiclass, missing pages and homebrew/version handling", async ({
     page.getByLabel("Rules generation", { exact: true }),
   ).toHaveValue("mixed");
   await page.getByRole("button", { name: "Back to upload" }).click();
+  page.once("dialog", (dialog) => dialog.accept());
   await upload(page, "missing-spells.pdf");
   await expect(page.locator("#extraction-warnings")).toContainText(
     "Spell pages may be missing",
   );
   await page.getByRole("button", { name: "Back to upload" }).click();
+  page.once("dialog", (dialog) => dialog.accept());
   await upload(page, "homebrew-2014.pdf");
   await expect(
     page.getByLabel("Homebrew present", { exact: true }),

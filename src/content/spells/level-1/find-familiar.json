@@ -2,20 +2,20 @@
   "id": "find-familiar",
   "name": "Find Familiar",
   "level": 1,
-  "school": null,
+  "school": "Conjuration",
   "rules": {
     "castingTime": "1 h",
     "range": "10 ft",
     "area": null,
-    "duration": null,
+    "duration": "Instantaneous",
     "concentration": false,
     "ritual": true,
     "components": {
-      "verbal": null,
-      "somatic": null,
+      "verbal": true,
+      "somatic": true,
       "material": true,
-      "description": "Incense, charcoal, and herbs in a fireproof vessel; keep multiple replacement sets.",
-      "gpCost": null,
+      "description": "Burning incense worth at least 10 gp, consumed when the spell is cast.",
+      "gpCost": 10,
       "consumed": true
     },
     "damageTypes": [],
@@ -29,7 +29,18 @@
     "book": "Player's Handbook (2024)",
     "rulesVersion": "2024",
     "category": "Core",
-    "sourceSensitive": false
+    "sourceSensitive": false,
+    "review": {
+      "date": "2026-09-05",
+      "access": "2024 Wizard spell.",
+      "scope": "School, duration and component flags projected from V2 primary-source claims verified on 5 September 2026. The material description and 10 gp consumed cost are also supported by those claims. The 8 September pass confirmed source availability and projection integrity, not a new full-rule verification.",
+      "references": [
+        {
+          "title": "SRD 5.2.1 · p. 130",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf#page=130"
+        }
+      ]
+    }
   },
   "compendium": {
     "tier": null,

@@ -2,18 +2,18 @@
   "id": "misty-step",
   "name": "Misty Step",
   "level": 2,
-  "school": null,
+  "school": "Conjuration",
   "rules": {
     "castingTime": "Bonus Action",
     "range": "Self",
     "area": "30 ft",
-    "duration": null,
+    "duration": "Instantaneous",
     "concentration": false,
     "ritual": false,
     "components": {
-      "verbal": null,
-      "somatic": null,
-      "material": null,
+      "verbal": true,
+      "somatic": false,
+      "material": false,
       "description": null,
       "gpCost": null,
       "consumed": null
@@ -29,7 +29,18 @@
     "book": "Player's Handbook (2024)",
     "rulesVersion": "2024",
     "category": "Core",
-    "sourceSensitive": false
+    "sourceSensitive": false,
+    "review": {
+      "date": "2026-09-05",
+      "access": "2024 Wizard spell.",
+      "scope": "School, duration and component flags projected from V2 primary-source claims verified on 5 September 2026. The 8 September pass confirmed source availability and projection integrity, not a new full-rule verification.",
+      "references": [
+        {
+          "title": "SRD 5.2.1 · p. 150",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf#page=150"
+        }
+      ]
+    }
   },
   "compendium": {
     "tier": null,

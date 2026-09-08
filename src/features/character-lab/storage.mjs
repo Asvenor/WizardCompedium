@@ -22,14 +22,14 @@ export async function openLab() {
       );
   });
 }
-async function read(store, key) {
+async function read(store, key, index = null) {
   const db = await openLab();
   return new Promise((resolve, reject) => {
     const tx = db.transaction(store);
-    const r =
-      key === undefined
-        ? tx.objectStore(store).getAll()
-        : tx.objectStore(store).get(key);
+    const source = index
+      ? tx.objectStore(store).index(index)
+      : tx.objectStore(store);
+    const r = index || key === undefined ? source.getAll(key) : source.get(key);
     r.onsuccess = () => resolve(r.result);
     r.onerror = () => reject(Error("Could not read local Character Lab data."));
     tx.oncomplete = () => db.close();
@@ -40,9 +40,9 @@ export const listCharacters = () => read("characters");
 export const getSnapshot = (id) => read("snapshots", id);
 export const getDocument = (id) => read("documents", id);
 export async function history(id) {
-  return (await read("snapshots"))
-    .filter((s) => s.character_id === id)
-    .sort((a, b) => b.revision - a.revision);
+  return (await read("snapshots", id, "character_id")).sort(
+    (a, b) => b.revision - a.revision,
+  );
 }
 export async function activeSnapshot() {
   const active = await read("settings", "active");

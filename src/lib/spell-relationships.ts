@@ -14,9 +14,9 @@ export async function getSpellRelationships() {
         .slice(1)
         .map((row) => ({
           label: row[0],
-          ids: mentionedSpells(table === 0 ? row[1] : row[0], spells).map(
-            (s) => s.id,
-          ),
+          ids: mentionedSpells(table === 0 ? row[1] : row[0], spells, {
+            includeSourceShorthand: true,
+          }).map((s) => s.id),
           note:
             table === 1
               ? `First option: ${row[1]} Second option: ${row[2]}`

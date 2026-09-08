@@ -6,3 +6,9 @@ public/character-import/
 test-results/
 playwright-report/
 tmp/
+.wrangler/
+.dev.vars
+.dev.vars.*
+.env
+.env.*
+!.env.example

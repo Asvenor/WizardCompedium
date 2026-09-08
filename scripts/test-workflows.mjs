@@ -17,7 +17,11 @@ import {
   getSpellDefense,
   mentionedSpells,
   normalizeSearch,
+  buildBadgeKey,
+  buildLabel,
 } from '../src/lib/spells.ts';
+import { extractTableRows } from '../src/lib/compendium-tables.ts';
+import { quickTools, toolDirectory } from '../src/data/quick-tools.ts';
 import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 test('session input validation rejects unsafe pins and malformed values', () => {
@@ -121,6 +125,95 @@ test('spell names are matched without nested-name false positives', () => {
     ['fire-shield'],
   );
   assert.equal(normalizeSearch('ANTI-caster'), 'anti caster');
+});
+test('maintained spell aliases resolve once without guessing generic spell names', () => {
+  assert.deepEqual(
+    mentionedSpells(
+      'Tiny Hut / Telepathic Bond / Resilient Sphere / Hideous Laughter',
+      spells,
+    )
+      .map((spell) => spell.id)
+      .sort(),
+    [
+      'leomunds-tiny-hut',
+      'rarys-telepathic-bond',
+      'otilukes-resilient-sphere',
+      'tashas-hideous-laughter',
+    ].sort(),
+  );
+  assert.deepEqual(
+    mentionedSpells(
+      "Otiluke's Resilient Sphere / Resilient Sphere",
+      spells,
+    ).map((spell) => spell.id),
+    ['otilukes-resilient-sphere'],
+  );
+  assert.deepEqual(
+    mentionedSpells('A globe on a table and a hand on the door.', spells),
+    [],
+  );
+});
+test('the source defense ladder retains Resilient Sphere and the abbreviated Globe', () => {
+  const chapter = readFileSync(
+    'src/content/chapters/14-spell-replacement-ladders.md',
+    'utf8',
+  );
+  const ladder = extractTableRows(chapter, 0).find(
+    (row) => row[0] === 'Defense and escape',
+  );
+  const ids = mentionedSpells(ladder[1], spells, {
+    includeSourceShorthand: true,
+  }).map((spell) => spell.id);
+  assert.equal(ids.length, 9);
+  assert.ok(ids.includes('otilukes-resilient-sphere'));
+  assert.ok(ids.includes('globe-of-invulnerability'));
+});
+test('every build relevance badge keeps its own identity and readable label', () => {
+  for (const build of [
+    'core',
+    'chron',
+    'div',
+    'ill',
+    'blade',
+    'tank',
+    'fighter',
+  ]) {
+    assert.equal(buildBadgeKey(build), build);
+    assert.equal(buildLabel(build), build.toUpperCase());
+  }
+  assert.equal(buildBadgeKey('bladesinger'), 'blade');
+  assert.equal(buildLabel('bladesinger'), 'BLADE');
+});
+test('character import and saved snapshots are discoverable through the tool search directory', () => {
+  const urls = toolDirectory.map((tool) => tool.url);
+  assert.equal(new Set(urls).size, urls.length);
+  for (const url of ['/play/import/', '/play/#my-character']) {
+    const tool = toolDirectory.find((tool) => tool.url === url);
+    assert.ok(tool, url);
+    assert.match(tool.description, /browser/);
+  }
+});
+test('all quick-reference routes still have populated maintained source tables', () => {
+  const files = readdirSync('src/content/chapters');
+  for (const tool of quickTools) {
+    const file = files.find((file) =>
+      file.startsWith(`${String(tool.chapter).padStart(2, '0')}-`),
+    );
+    assert.ok(file, `${tool.id}: chapter ${tool.chapter} exists`);
+    const content = readFileSync(join('src/content/chapters', file), 'utf8');
+    for (const index of tool.tables) {
+      const rows = extractTableRows(content, index);
+      assert.ok(rows.length > 1, `${tool.id}: table ${index} has content`);
+      assert.ok(
+        rows[0].every(Boolean),
+        `${tool.id}: table ${index} has labels`,
+      );
+      assert.ok(
+        rows.slice(1).every((row) => row.length === rows[0].length),
+        `${tool.id}: table ${index} retains every labeled column`,
+      );
+    }
+  }
 });
 test('unknown defenses are not treated as no-save spells', () => {
   const spell = structuredClone(spells[0]);

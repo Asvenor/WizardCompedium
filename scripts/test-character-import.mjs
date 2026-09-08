@@ -194,8 +194,11 @@ test("conflicting form and text readings are retained", () => {
       lines: ["Armor Class: 15"],
     },
   ]);
-  assert.equal(value(d, "defenses.ac"), 18);
-  assert.equal(d.facts["defenses.ac"].alternatives[0].value, 15);
+  assert.equal(value(d, "defenses.ac"), null);
+  assert.deepEqual(
+    d.facts["defenses.ac"].alternatives.map((a) => a.value),
+    [18, 15],
+  );
   assert.ok(d.facts["defenses.ac"].confidence < 0.5);
 });
 test("value-above-label geometry and columns are supported", () => {
@@ -413,4 +416,180 @@ test("unknown or conflicting class levels are not summed into a false total", ()
     ]);
     assert.equal(value(d, "identity.level"), null);
   }
+});
+
+test("text-derived totals follow class corrections without replacing explicit totals", () => {
+  const d = parsePages([
+    {
+      page: 1,
+      method: "text",
+      lines: [
+        "Character name: Test Wizard",
+        "Class & Level: Wizard 5 / Artificer 1",
+      ],
+    },
+  ]);
+  assert.equal(value(d, "identity.level"), 6);
+  assert.equal(d.facts["identity.level"].provenance, "derived");
+  correct(d, "identity.classes", "Wizard 6 / Artificer 1");
+  assert.equal(value(d, "identity.level"), 7);
+  correct(d, "identity.classes", "Wizard 6 / Custom class 2");
+  assert.equal(value(d, "identity.level"), null);
+  correct(d, "identity.classes", "Wizard 6");
+  correct(d, "identity.level", 8);
+  correct(d, "identity.classes", "Wizard 7");
+  assert.equal(value(d, "identity.level"), 8);
+  assert.ok(checks(d).some((w) => w.includes("do not add up")));
+  const printed = parsePages([
+    {
+      page: 1,
+      method: "text",
+      lines: ["Class & Level: Wizard 5", "Character level: 9"],
+    },
+  ]);
+  assert.equal(value(printed, "identity.level"), 9);
+  assert.equal(printed.facts["identity.level"].provenance, "sheet_observed");
+});
+
+test("duplicate, incomplete and substring class summaries cannot unlock Wizard progression", () => {
+  const catalog = [
+    {
+      name: "Web",
+      level: 2,
+      generation: "2024",
+      canonicalRefs: [],
+      acquisition: "mandatory",
+    },
+  ];
+  for (const summary of [
+    "Wizard 5 / Custom 2",
+    "Wizard 5 / Wizard 5",
+    "Wizard 20 / Fighter 1",
+    "NotWizard 5",
+  ]) {
+    const d = confirm(parse());
+    correct(d, "identity.classes", summary);
+    const advice = personalize(d, catalog);
+    assert.equal(advice.available.length, 0, summary);
+    assert.equal(advice.levelup.length, 0, summary);
+  }
+});
+
+test("personalized plans require reviewed progression and respect spell level and ritual conflicts", () => {
+  const d = confirm(parse());
+  const catalog = [
+    {
+      name: "Web",
+      level: 2,
+      generation: "2024",
+      canonicalRefs: [],
+      ritual: false,
+    },
+  ];
+  const web = spellRows(d).find((s) => s.name === "Web");
+  correct(d, `${web.key}.book`, true);
+  correct(d, `${web.key}.ritual`, true);
+  assert.equal(personalize(d, catalog).ritual.length, 0);
+  assert.ok(
+    personalize(d, catalog).warnings.some((w) =>
+      w.includes("ritual flag conflicts"),
+    ),
+  );
+  correct(d, `${web.key}.level`, 3);
+  assert.equal(personalize(d, catalog).available.length, 0);
+  assert.equal(personalize(d, catalog).preparation.length, 0);
+  correct(d, `${web.key}.level`, 2);
+  d.facts["rules.generation"].verification = "needs_confirmation";
+  assert.equal(personalize(d, catalog).available.length, 0);
+  assert.equal(personalize(d, catalog).ceiling, null);
+});
+
+test("preparation is Wizard-source specific and repeated spell rows do not duplicate advice", () => {
+  const d = confirm(
+    parsePages([
+      {
+        page: 1,
+        method: "text",
+        lines: [
+          "Character name: Test Wizard",
+          "Class & Level: Wizard 5 / Artificer 1",
+          "Ruleset: 2024",
+          "Spell: Web | level=2 | class=Wizard | book=yes",
+          "Spell: Web | level=2 | class=Wizard | book=yes",
+          "Spell: Web | level=2 | class=Artificer | prepared=yes",
+          "Spell: Shield | level=1 | book=yes",
+        ],
+      },
+    ]),
+  );
+  const catalog = [
+    {
+      name: "Web",
+      level: 2,
+      generation: "2024",
+      canonicalRefs: [],
+      ritual: false,
+    },
+    {
+      name: "Shield",
+      level: 1,
+      generation: "2024",
+      canonicalRefs: [],
+      ritual: false,
+    },
+  ];
+  assert.deepEqual(
+    personalize(d, catalog).preparation.map((s) => s.name),
+    ["Web"],
+  );
+  for (const web of spellRows(d).filter((s) => s.className === "Wizard"))
+    correct(d, `${web.key}.prepared`, true);
+  assert.equal(personalize(d, catalog).available.length, 1);
+  assert.equal(personalize(d, catalog).current.length, 3);
+});
+
+test("spell history distinguishes an explicit no from an unconfirmed flag", () => {
+  const d = parse(),
+    web = spellRows(d).find((s) => s.name === "Web");
+  correct(d, `${web.key}.scroll`, false);
+  const before = structuredClone(d);
+  correct(d, `${web.key}.scroll`, null);
+  const changes = comparison(before, d);
+  assert.equal(changes.length, 1);
+  assert.match(changes[0].before, /Owned scroll: no/);
+  assert.doesNotMatch(changes[0].after, /Owned scroll: no/);
+});
+
+test("casting statistics from separate class pages stay ambiguous, including repeated text", () => {
+  const pages = [
+    {
+      page: 1,
+      method: "text",
+      lines: [],
+      widgets: [
+        { name: "spellSaveDC0", value: "13" },
+        { name: "spellCastingClass0", value: "Artificer" },
+      ],
+    },
+    {
+      page: 2,
+      method: "text",
+      lines: ["Spell save DC: 14"],
+      widgets: [
+        { name: "spellSaveDC0", value: "14" },
+        { name: "spellCastingClass0", value: "Wizard" },
+      ],
+    },
+  ];
+  const d = parsePages(pages);
+  assert.equal(value(d, "casting.dc"), null);
+  assert.deepEqual(
+    d.facts["casting.dc"].alternatives.map((a) => a.value),
+    [13, 14],
+  );
+  assert.match(value(d, "notes.custom"), /Artificer — DC: 13/);
+  assert.match(value(d, "notes.custom"), /Wizard — DC: 14/);
+  assert.ok(
+    d.warnings.some((w) => w.includes("Different spellcasting readings")),
+  );
 });

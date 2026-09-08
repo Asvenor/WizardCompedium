@@ -8,7 +8,15 @@ import {
   forgetCharacter,
 } from "./storage.mjs";
 import { personalize } from "./personalize.mjs";
-import { fields, value, comparison, filename } from "./model.mjs";
+import {
+  fields,
+  value,
+  comparison,
+  filename,
+  reviewStatus,
+  spellRows,
+  statuses,
+} from "./model.mjs";
 import { el, list, display, changesView, download } from "./dom.mjs";
 const $ = (id) => document.getElementById(id);
 const catalog = JSON.parse($("character-catalog").textContent);
@@ -39,26 +47,41 @@ function panel(title, body, entries, href) {
   if (href) section.append(el("a", "Open full guidance →", { href }));
   return section;
 }
+let renderVersion = 0;
 async function render() {
+  const version = ++renderVersion;
   const snapshot = await activeSnapshot();
+  const [characters, versions, before] = snapshot
+    ? await Promise.all([
+        listCharacters(),
+        history(snapshot.character_id),
+        snapshot.previous_snapshot_ref
+          ? getSnapshot(snapshot.previous_snapshot_ref)
+          : null,
+      ])
+    : [[], [], null];
+  if (version !== renderVersion) return;
   const target = $("character-content");
   target.replaceChildren();
   target.hidden = !snapshot;
-  if (!snapshot) return;
+  if (!snapshot) {
+    $("my-character-title").textContent = "No earlier character snapshots.";
+    $("character-status").textContent =
+      "The PDF editor keeps your sheet as a PDF. Earlier character snapshots, if present in this browser profile, remain separate.";
+    return;
+  }
   $("my-character-title").textContent = snapshot.name;
   $("character-status").textContent =
-    `${new URLSearchParams(location.search).has("imported") ? "Snapshot saved. " : ""}Snapshot ${snapshot.revision} · ${new Date(snapshot.recorded_at).toLocaleString()} · local to this browser. Recommendations below are not saved character facts.`;
+    `${new URLSearchParams(location.search).has("imported") ? "Snapshot saved. " : ""}Snapshot ${snapshot.revision} · ${new Date(snapshot.recorded_at).toLocaleString()} · local to this browser. Unconfirmed readings remain observations; recommendations are not saved character facts.`;
   const control = el("div", "", { class: "form-actions" });
   const character = el("select", "", {
     id: "active-character",
     class: "field",
     "aria-label": "Active character",
   });
-  for (const c of await listCharacters())
+  for (const c of characters)
     character.append(el("option", c.name, { value: c.latest }));
-  const currentChar = (await listCharacters()).find(
-    (c) => c.id === snapshot.character_id,
-  );
+  const currentChar = characters.find((c) => c.id === snapshot.character_id);
   character.value = currentChar?.latest ?? "";
   character.addEventListener("change", async () => {
     try {
@@ -68,7 +91,6 @@ async function render() {
       $("character-status").textContent = e.message;
     }
   });
-  const versions = await history(snapshot.character_id);
   const select = el("select", "", {
     id: "snapshot-history",
     class: "field",
@@ -106,8 +128,8 @@ async function render() {
   control.append(
     character,
     select,
-    el("a", "Import a newer sheet", {
-      href: `/play/import/?character=${snapshot.character_id}`,
+    el("a", "Open PDF sheet editor", {
+      href: "/play/import/",
       class: "button",
     }),
     exportButton,
@@ -124,7 +146,9 @@ async function render() {
     ["rules.generation", "Rules"],
   ]) {
     const item = el("div");
-    item.append(el("dt", label), el("dd", display(value(snapshot, key))));
+    const detail = el("dd", display(value(snapshot, key)));
+    detail.append(el("small", reviewStatus(snapshot.facts[key])));
+    item.append(el("dt", label), detail);
     overview.append(item);
   }
   target.append(overview);
@@ -137,10 +161,10 @@ async function render() {
   target.append(warning);
   const spells = el("section");
   spells.append(
-    el("h3", "Confirmed preparation & other current access"),
+    el("h3", "Confirmed preparation & other spell classifications"),
     el(
       "p",
-      "Access flags are player-confirmed. Slots, components, current concentration and encounter conditions still need checking.",
+      "These classifications are player-confirmed. Knowing a spell from another class is not proof of current preparation. Slots, components, current concentration and encounter conditions still need checking.",
     ),
   );
   const spellList = el("ul");
@@ -151,7 +175,7 @@ async function render() {
         ? el("a", s.sheet.name, { href: s.entry.href })
         : el("span", s.sheet.name),
       document.createTextNode(
-        ` · ${s.sheet.prepared ? "prepared" : s.sheet.granted ? "granted / always prepared" : "other class / feature"} · ${s.sheet.className ?? "class source unknown"}`,
+        ` · ${s.access.map((k) => ({ prepared: "prepared", granted: "granted / always prepared", other: "other class / feature" })[k]).join("; ")} · ${s.sheet.className ?? "class source unknown"}`,
       ),
     );
     spellList.append(li);
@@ -165,6 +189,52 @@ async function render() {
     );
   spells.append(spellList);
   target.append(spells);
+  const ledger = el("details", "", { class: "lab-details" });
+  const allSpells = spellRows(snapshot);
+  ledger.append(
+    el(
+      "summary",
+      `Spellbook, preparation & scrolls · ${allSpells.length} recorded entries`,
+    ),
+    el(
+      "p",
+      "Every PDF/manual entry is retained separately. Unknown or unconfirmed classifications do not grant current access. This list does not change your earlier My Wizard planner.",
+    ),
+  );
+  for (const spell of allSpells) {
+    const entry = el("section");
+    entry.append(el("h4", spell.name || "Unnamed spell"));
+    const evidence = el("ul");
+    for (const [key, label] of [
+      ["name", "Name"],
+      ["level", "Spell level"],
+      ["class", "Class / feature source"],
+      ["ritual", "Ritual"],
+      ...Object.entries(statuses),
+    ]) {
+      const fact = snapshot.facts[`${spell.key}.${key}`];
+      evidence.append(
+        el("li", `${label}: ${display(fact?.value)} · ${reviewStatus(fact)}`),
+      );
+    }
+    const source = snapshot.facts[`${spell.key}.name`]?.source;
+    entry.append(
+      evidence,
+      el(
+        "small",
+        `Source: page ${source?.page ?? "unknown"} · ${source?.label || "Not found"}`,
+      ),
+    );
+    ledger.append(entry);
+  }
+  if (!allSpells.length)
+    ledger.append(
+      el(
+        "p",
+        "No spell entries recorded. An empty list does not prove an empty spellbook.",
+      ),
+    );
+  target.append(ledger);
   const grid = el("div", "", { class: "lab-play-grid" });
   const current = advice.available;
   grid.append(
@@ -281,7 +351,7 @@ async function render() {
   future.append(
     panel(
       "Next Wizard level",
-      "Conditional on taking another Wizard level under 2024 rules; not a committed build. Reference: sequence.pure_wizard.v1 and class.wizard.core2024. Unknown, mixed or 2014 progression is withheld.",
+      "Conditional on taking another Wizard level within the supported character-level table under 2024 rules; not a committed build. Reference: sequence.pure_wizard.v1 and class.wizard.core2024. Unknown, conflicting, mixed or 2014 progression is withheld.",
       advice.levelup,
       "/builds/",
     ),
@@ -307,13 +377,12 @@ async function render() {
       el("p", display(fact.value)),
       el(
         "small",
-        `${fact.provenance} · ${fact.verification} · ${fact.confidence >= 0.85 ? "high extraction confidence" : "needs confirmation / not found"} · page ${fact.source.page ?? "—"} · ${fact.source.label}`,
+        `${fact.provenance} · ${reviewStatus(fact)} · ${fact.confidence >= 0.85 ? "high extraction confidence" : "low extraction confidence / not found"} · page ${fact.source.page ?? "—"} · ${fact.source.label}`,
       ),
     );
   }
   target.append(inventory);
   if (snapshot.previous_snapshot_ref) {
-    const before = await getSnapshot(snapshot.previous_snapshot_ref);
     const diff = el("details", "", { class: "lab-details" });
     diff.append(
       el("summary", "Changes from previous snapshot"),

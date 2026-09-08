@@ -48,11 +48,16 @@ import BaseLayout from '@/components/layout/BaseLayout.astro';
     <p class="search-status" aria-live="polite" data-search-status>
       Loading the Compendium index…
     </p>
+    <div class="search-recovery" data-search-recovery hidden>
+      <button class="button" type="button" data-search-retry>Retry search</button>
+      <a href="/compendium/">Browse chapters instead</a>
+    </div>
     <p class="control-note">
       Showing the best 50 matches. Choose a category to narrow broad searches.
     </p>
     <div class="compendium-search-results" data-search-results></div>
     <script>
+      import { indexDocuments, searchDocuments, normalizeQuery } from '@/features/search/index.mjs';
       interface SearchDocument {
         title: string;
         description: string;
@@ -74,14 +79,13 @@ import BaseLayout from '@/components/layout/BaseLayout.astro';
         '[data-search-results]',
       );
       let documents: SearchDocument[] = [];
-
-      const normalize = (value: string) =>
-        value
-          .normalize('NFD')
-          .replace(/[\u0300-\u036f]/g, '')
-          .toLocaleLowerCase()
-          .replace(/[^a-z0-9+]+/g, ' ')
-          .trim();
+      let index: ReturnType<typeof indexDocuments> = [];
+      let ready = false;
+      let loading = false;
+      const recovery = document.querySelector<HTMLElement>('[data-search-recovery]');
+      const initial = new URLSearchParams(location.search);
+      if (input) input.value = initial.get('q') ?? '';
+      if (kind) kind.value = initial.get('kind') ?? '';
 
       const makeExcerpt = (document: SearchDocument, query: string) => {
         const source = document.content || document.description;
@@ -97,8 +101,8 @@ import BaseLayout from '@/components/layout/BaseLayout.astro';
       };
 
       const renderResults = (query: string) => {
-        if (!input || !status || !results) return;
-        const normalizedQuery = normalize(query);
+        if (!input || !status || !results || !ready) return;
+        const normalizedQuery = normalizeQuery(query);
         results.replaceChildren();
 
         if (!normalizedQuery) {
@@ -106,41 +110,13 @@ import BaseLayout from '@/components/layout/BaseLayout.astro';
           return;
         }
 
-        const terms = normalizedQuery.split(' ').filter(Boolean);
-        const matches = documents
-          .filter((d) => !kind?.value || d.kind === kind.value)
-          .map((document) => {
-            const title = normalize(document.title);
-            const description = normalize(document.description);
-            const content = normalize(document.content);
-            const haystack = `${title} ${description} ${content}`;
-            if (!terms.every((term) => haystack.includes(term))) return null;
-
-            let score = 0;
-            if (title === normalizedQuery) score += 300;
-            else if (title.includes(normalizedQuery)) score += 180;
-            score += terms.filter((term) => title.includes(term)).length * 45;
-            score +=
-              terms.filter((term) => description.includes(term)).length * 18;
-            score += terms.filter((term) => content.includes(term)).length * 4;
-            if (document.kind === 'Spell') score += 3;
-            return { document, score };
-          })
-          .filter(
-            (match): match is { document: SearchDocument; score: number } =>
-              Boolean(match),
-          )
-          .sort(
-            (a, b) =>
-              b.score - a.score ||
-              a.document.title.localeCompare(b.document.title),
-          );
+        const matches = searchDocuments(index, query, kind?.value ?? '');
 
         status.textContent = matches.length
           ? `${matches.length} result${matches.length === 1 ? '' : 's'} for “${query.trim()}”.`
           : `No results for “${query.trim()}”. Try a shorter term or a different spelling.`;
 
-        matches.slice(0, 50).forEach(({ document: entry }) => {
+        matches.slice(0, 50).forEach(({ document: entry }: { document: SearchDocument }) => {
           const article = document.createElement('article');
           article.className = 'search-result';
 
@@ -164,24 +140,32 @@ import BaseLayout from '@/components/layout/BaseLayout.astro';
       };
 
       const loadIndex = async () => {
-        if (!input || !status || !results) return;
+        if (!input || !status || !results || loading) return;
+        loading = true;
+        status.textContent = 'Loading the Compendium index…';
+        if (recovery) recovery.hidden = true;
+        const controller = new AbortController();
+        const timeout = window.setTimeout(() => controller.abort(), 15000);
         try {
-          const response = await fetch('/search-index.json');
+          const response = await fetch('/search-index.json', {signal: controller.signal});
           if (!response.ok)
             throw new Error(`Search index returned ${response.status}`);
           documents = await response.json();
-          const query =
-            new URLSearchParams(window.location.search).get('q') ?? '';
-          input.value = query;
-          if (kind)
-            kind.value = new URLSearchParams(location.search).get('kind') ?? '';
-          renderResults(query);
+          if (!Array.isArray(documents)) throw new Error('Invalid search index');
+          index = indexDocuments(documents);
+          ready = true;
+          renderResults(input.value);
         } catch (error) {
           console.error(error);
           status.textContent =
-            'Search could not load. Please refresh the page or browse the chapter directory.';
+            'Search could not load. Retry or browse the chapter directory; your query is kept.';
+          if (recovery) recovery.hidden = false;
+        } finally {
+          window.clearTimeout(timeout);
+          loading = false;
         }
       };
+      document.querySelector('[data-search-retry]')?.addEventListener('click', loadIndex);
 
       input?.addEventListener('input', () => {
         const query = input.value;

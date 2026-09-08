@@ -29,9 +29,19 @@ let draft = blankDraft(),
   controller = null,
   busy = false,
   dirty = false,
-  saving = false;
+  saving = false,
+  reviewVersion = 0;
 const stages = ["upload-step", "review-step", "confirm-step"];
+const resumeReview = el("button", "Return to unsaved review", {
+  type: "button",
+  class: "button",
+  hidden: "",
+});
+$("manual-entry").parentElement.append(resumeReview);
+resumeReview.addEventListener("click", () => stage(1));
 function stage(n) {
+  if (saving) return;
+  reviewVersion++;
   for (const [i, id] of stages.entries()) $(id).hidden = i !== n;
   document.querySelectorAll(".import-steps li").forEach((li, i) => {
     if (i === n) li.setAttribute("aria-current", "step");
@@ -39,10 +49,12 @@ function stage(n) {
   });
   $(stages[n]).querySelector("h2").focus();
   $("import-error").hidden = true;
+  resumeReview.hidden = !dirty;
 }
 function error(message) {
   $("import-error").textContent = message;
   $("import-error").hidden = false;
+  $("import-error").focus();
 }
 function loading(on) {
   busy = on;
@@ -51,20 +63,68 @@ function loading(on) {
   $("import-character").disabled = on;
   $("cancel-import").hidden = !on;
   $("upload-step").setAttribute("aria-busy", String(on));
+  $("extraction-progress").hidden = !on;
+  resumeReview.disabled = on;
+  resumeReview.hidden = !dirty;
 }
 function sourceHint(f) {
   const confidence =
-    f.value === null
-      ? "Not found"
-      : f.confidence >= 0.85
-        ? "High confidence"
-        : "Needs confirmation";
-  return `${confidence} · ${f.provenance === "user_reported" ? "Player correction" : f.source.method} · ${f.source.page ? `page ${f.source.page}, ` : ""}${f.source.label}${f.alternatives.length ? " · Conflicting readings: " + f.alternatives.map((a) => `${display(a.value)} (page ${a.page ?? "?"})`).join("; ") : ""}`;
+    f.verification === "user_confirmed"
+      ? "Player confirmed"
+      : f.alternatives.length
+        ? "Conflicting readings — needs confirmation"
+        : f.value === null
+          ? "Not found"
+          : f.confidence >= 0.85 && f.provenance !== "derived"
+            ? "High confidence — not yet confirmed"
+            : "Needs confirmation";
+  return `${confidence} · ${f.provenance === "user_reported" ? "Player correction" : f.source.method} · ${f.source.page ? `page ${f.source.page}, ` : ""}${f.source.label}${f.alternatives.length ? " · Original alternatives: " + f.alternatives.map((a) => `${display(a.value)} (page ${a.page ?? "?"})`).join("; ") : ""}`;
+}
+function refreshField(key) {
+  const fact = draft.facts[key];
+  const input = $(`field-${key}`);
+  if (!fact || !input) return;
+  const wrapper = input.closest(".lab-field");
+  const missingRequired = key === "identity.name" && !fact.value;
+  wrapper.classList.toggle("is-unknown", fact.value === null);
+  wrapper.classList.toggle("is-required-missing", missingRequired);
+  wrapper.classList.toggle(
+    "needs-review",
+    fact.verification !== "user_confirmed" &&
+      (fact.alternatives.length > 0 ||
+        (fact.value !== null &&
+          (fact.confidence < 0.85 || fact.provenance === "derived"))),
+  );
+  input.setAttribute("aria-invalid", String(missingRequired));
+  $(`hint-${key}`).textContent =
+    `${missingRequired ? "Required before saving · " : ""}${sourceHint(fact)}`;
+  const confirm = $(`confirm-${key}`);
+  if (confirm) {
+    confirm.disabled = fact.value === null;
+    confirm.checked =
+      fact.value !== null && fact.verification === "user_confirmed";
+  }
+}
+function refreshReviewSummary() {
+  reviewVersion++;
+  const facts = Object.values(draft.facts);
+  const missing = facts.filter((f) => f.value === null).length;
+  const unconfirmed = facts.filter(
+    (f) => f.value !== null && f.verification !== "user_confirmed",
+  ).length;
+  const conflicting = facts.filter(
+    (f) => f.alternatives.length && f.verification !== "user_confirmed",
+  ).length;
+  $("review-summary").textContent =
+    `${facts.length - missing} recorded fields · ${missing} unknown · ${unconfirmed} awaiting confirmation · ${conflicting} unresolved conflicts. Only the character name is required.`;
+  $("extraction-warnings").replaceChildren(
+    list([...new Set([...draft.warnings, ...checks(draft)])]),
+  );
 }
 function fieldControl(def) {
   const fact = draft.facts[def.key];
   const wrapper = el("div", "", {
-    class: `lab-field ${fact.value === null ? "is-unknown" : fact.confidence < 0.85 || fact.alternatives.length ? "needs-review" : ""}`,
+    class: `lab-field ${fact.value === null ? "is-unknown" : ""} ${fact.verification !== "user_confirmed" && (fact.alternatives.length || (fact.value !== null && (fact.confidence < 0.85 || fact.provenance === "derived"))) ? "needs-review" : ""}`,
   });
   const id = `field-${def.key}`;
   const label = el("label", def.label, { for: id });
@@ -114,18 +174,85 @@ function fieldControl(def) {
     correct(draft, def.key, next);
     dirty = true;
     hint.textContent = sourceHint(draft.facts[def.key]);
+    refreshField(def.key);
+    if (def.key === "identity.classes") {
+      const total = draft.facts["identity.level"];
+      $("field-identity.level").value = total.value ?? "";
+      refreshField("identity.level");
+    }
+    if (def.key.startsWith("spells.") && def.key.endsWith(".name")) {
+      const card = input.closest("fieldset");
+      const index = [...$("spell-review").children].indexOf(card) + 1;
+      const name = draft.facts[def.key].value || "Unnamed entry";
+      card.querySelector("legend").textContent = `Spell ${index}: ${name}`;
+      card
+        .querySelector("button")
+        .setAttribute("aria-label", `Exclude spell ${index}: ${name}`);
+    }
+    refreshReviewSummary();
   };
   input.addEventListener("input", change);
   input.addEventListener("change", change);
   wrapper.append(label, input, hint);
+  const confirm = el("input", "", {
+    type: "checkbox",
+    id: `confirm-${def.key}`,
+  });
+  confirm.disabled = fact.value === null;
+  confirm.checked =
+    fact.value !== null && fact.verification === "user_confirmed";
+  const confirmLabel = el("label", "", {
+    for: confirm.id,
+    class: "lab-check lab-field-confirm",
+  });
+  confirmLabel.append(confirm, el("span", `Confirm ${def.label}`));
+  confirm.addEventListener("change", () => {
+    const current = draft.facts[def.key];
+    current.verification =
+      current.value === null
+        ? "unknown"
+        : confirm.checked
+          ? "user_confirmed"
+          : "needs_confirmation";
+    dirty = true;
+    refreshField(def.key);
+    refreshReviewSummary();
+  });
+  wrapper.append(confirmLabel);
+  if (def.key === "identity.name" && !fact.value) {
+    wrapper.classList.add("is-required-missing");
+    input.setAttribute("aria-invalid", "true");
+    hint.textContent = `Required before saving · ${sourceHint(fact)}`;
+  }
   return wrapper;
 }
 function renderReview() {
   const groups = $("review-fields");
   groups.replaceChildren();
+  const navigation = $("review-navigation");
+  navigation.replaceChildren();
+  $("review-source").textContent = draft.source.filename
+    ? `${draft.source.filename} · ${draft.source.page_count} pages · Local extraction`
+    : "Manual character entry · Nothing is saved until confirmation";
+  function jumpLink(label, section, focusTarget) {
+    const link = el("a", label, { href: `#${section.id}` });
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      if (section.tagName === "DETAILS") section.open = true;
+      focusTarget.focus();
+      section.scrollIntoView({ block: "start" });
+    });
+    navigation.append(link);
+  }
   for (const group of new Set(fields.map((f) => f.group))) {
-    const section = el("details", "", { class: "lab-details", open: "" });
-    section.append(el("summary", group));
+    const section = el("details", "", {
+      class: "lab-details",
+      open: "",
+      id: `review-${group.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`,
+    });
+    const summary = el("summary", group);
+    section.append(summary);
+    jumpLink(group, section, summary);
     const grid = el("div", "", { class: "lab-field-grid" });
     for (const def of fields.filter((f) => f.group === group))
       grid.append(fieldControl(def));
@@ -133,9 +260,12 @@ function renderReview() {
     groups.append(section);
   }
   renderSpells();
-  $("extraction-warnings").replaceChildren(
-    list([...draft.warnings, ...checks(draft)]),
+  jumpLink(
+    "Wizard spell reconciliation",
+    $("wizard-reconciliation"),
+    $("wizard-reconciliation").querySelector("h3"),
   );
+  refreshReviewSummary();
 }
 function renderSpells() {
   const target = $("spell-review");
@@ -153,6 +283,22 @@ function renderSpells() {
     ])
       grid.append(fieldControl({ key: `${spell.key}.${suffix}`, label, type }));
     card.append(grid);
+    const exclude = el("button", "Exclude this spell entry", {
+      type: "button",
+      class: "button",
+      "aria-label": `Exclude spell ${i + 1}: ${spell.name || "New entry"}`,
+    });
+    exclude.addEventListener("click", () => {
+      for (const key of Object.keys(draft.facts))
+        if (key.startsWith(`${spell.key}.`)) delete draft.facts[key];
+      dirty = true;
+      renderSpells();
+      refreshReviewSummary();
+      const next =
+        $("spell-review").children[i] ?? $("spell-review").lastElementChild;
+      (next?.querySelector("input") ?? $("add-spell")).focus();
+    });
+    card.append(exclude);
     target.append(card);
   }
   if (!spellRows(draft).length)
@@ -167,14 +313,31 @@ async function targetCharacter() {
   const id = $("import-character").value;
   const characters = await listCharacters();
   const found = characters.find((c) => c.id === id);
-  previous = found ? await getSnapshot(found.latest) : null;
+  if (id && !found)
+    throw Error(
+      "This character is no longer available. Choose a different character or explicitly select a new character.",
+    );
+  const snapshot = found ? await getSnapshot(found.latest) : null;
+  if (found && !snapshot)
+    throw Error(
+      "The latest snapshot is unavailable. Nothing was replaced; export or review your existing character before continuing.",
+    );
+  return snapshot;
+}
+function replaceReview() {
+  return (
+    !dirty ||
+    window.confirm(
+      "Replace your unsaved character review? Changes on this page will be discarded. Saved snapshots are not affected.",
+    )
+  );
 }
 async function load(file) {
-  if (busy) return;
+  if (busy || !replaceReview()) return;
+  loading(true);
+  controller = new AbortController();
   try {
-    await targetCharacter();
-    loading(true);
-    controller = new AbortController();
+    const target = await targetCharacter();
     $("import-error").hidden = true;
     const result = await extractPDF(file, {
       signal: controller.signal,
@@ -184,6 +347,7 @@ async function load(file) {
     draft.source = result.source;
     observations = structuredClone(draft.facts);
     original = file;
+    previous = target;
     dirty = true;
     $("extracted-pages").replaceChildren();
     for (const p of result.pages) {
@@ -220,9 +384,13 @@ async function load(file) {
     controller = null;
   }
 }
+function chooseFiles(files) {
+  if (busy || !files?.length) return;
+  if (files.length !== 1) error("Choose one character PDF at a time.");
+  else load(files[0]);
+}
 $("character-pdf").addEventListener("change", (e) => {
-  const file = e.target.files?.[0];
-  if (file) load(file);
+  chooseFiles(e.target.files);
   e.target.value = "";
 });
 for (const type of ["dragenter", "dragover"])
@@ -235,15 +403,15 @@ for (const type of ["dragleave", "drop"])
     e.preventDefault();
     $("import-drop").classList.remove("is-dragging");
     if (type === "drop" && !busy) {
-      if (e.dataTransfer.files.length !== 1)
-        error("Choose one character PDF at a time.");
-      else load(e.dataTransfer.files[0]);
+      chooseFiles(e.dataTransfer.files);
     }
   });
 $("cancel-import").addEventListener("click", () => controller?.abort());
 $("manual-entry").addEventListener("click", async () => {
+  if (busy || !replaceReview()) return;
+  loading(true);
   try {
-    await targetCharacter();
+    previous = await targetCharacter();
     original = null;
     draft = blankDraft();
     observations = structuredClone(draft.facts);
@@ -255,36 +423,61 @@ $("manual-entry").addEventListener("click", async () => {
       "Manual entry: optional fields can stay unknown.";
   } catch (e) {
     error(e.message);
+  } finally {
+    loading(false);
   }
 });
 $("back-upload").addEventListener("click", () => stage(0));
 $("add-spell").addEventListener("click", () => {
   try {
     addSpell(draft);
+    dirty = true;
     renderSpells();
+    refreshReviewSummary();
     $("spell-review").lastElementChild.querySelector("input").focus();
   } catch (e) {
     error(e.message);
   }
 });
 $("back-review").addEventListener("click", () => stage(1));
+$("confirm-high-confidence").addEventListener("click", () => {
+  let count = 0;
+  for (const [key, fact] of Object.entries(draft.facts)) {
+    if (
+      fact.value !== null &&
+      fact.verification !== "user_confirmed" &&
+      fact.provenance === "sheet_observed" &&
+      fact.confidence >= 0.85 &&
+      fact.source.method !== "ocr" &&
+      !fact.alternatives.length
+    ) {
+      fact.verification = "user_confirmed";
+      refreshField(key);
+      count++;
+    }
+  }
+  dirty = true;
+  refreshReviewSummary();
+  $("import-status").textContent =
+    `${count} high-confidence readings confirmed. Uncertain, conflicting and calculated readings still need individual review.`;
+});
 $("review-step").addEventListener("submit", async (e) => {
   e.preventDefault();
   if (!value(draft, "identity.name")) {
     error("Enter a character name.");
+    const name = $("field-identity.name");
+    name.closest("details").open = true;
+    name.focus();
     return;
   }
-  for (const s of spellRows(draft))
-    if (!s.name)
-      for (const key of Object.keys(draft.facts))
-        if (key.startsWith(s.key + ".")) delete draft.facts[key];
+  const submittedVersion = reviewVersion;
   $("final-warnings").replaceChildren(list(checks(draft)));
   $("snapshot-diff").replaceChildren(
     el("h3", previous ? "Changes since the latest snapshot" : "First snapshot"),
     changesView(comparison(previous, draft)),
     el(
       "p",
-      `${Object.values(draft.facts).filter((f) => f.value === null).length} fields remain explicitly unknown. Fields left unknown in a newer PDF are not copied from the previous snapshot.`,
+      `${Object.values(draft.facts).filter((f) => f.value === null).length} fields remain explicitly unknown; ${Object.values(draft.facts).filter((f) => f.value !== null && f.verification !== "user_confirmed").length} populated readings still await confirmation. Fields left unknown in a newer PDF are not copied from the previous snapshot.`,
     ),
   );
   $("retain-pdf").disabled = !original;
@@ -298,10 +491,12 @@ $("review-step").addEventListener("submit", async (e) => {
       (await history(previous.character_id)).some(
         (s) => s.source.sha256 === draft.source.sha256,
       );
+    // Navigation or another correction invalidates this pending comparison.
+    if (submittedVersion !== reviewVersion) return;
     $("duplicate-choice").hidden = !duplicate;
     stage(2);
   } catch (e) {
-    error(e.message);
+    if (submittedVersion === reviewVersion) error(e.message);
   }
 });
 $("save-character").addEventListener("click", async () => {
@@ -317,11 +512,19 @@ $("save-character").addEventListener("click", async () => {
     return;
   }
   saving = true;
-  $("save-character").disabled = true;
+  const saveControls = [
+    "save-character",
+    "back-review",
+    "confirm-readings",
+    "retain-pdf",
+    "allow-duplicate",
+  ];
+  for (const id of saveControls) $(id).disabled = true;
+  $("confirm-step").setAttribute("aria-busy", "true");
+  $("import-status").textContent =
+    "Saving your reviewed snapshot in this browser…";
   try {
     const reviewed = structuredClone(draft);
-    for (const fact of Object.values(reviewed.facts))
-      if (fact.value !== null) fact.verification = "user_confirmed";
     const retain = Boolean(original && $("retain-pdf").checked);
     const snapshot = makeSnapshot(
       reviewed,
@@ -339,9 +542,13 @@ $("save-character").addEventListener("click", async () => {
     window.location.assign("/play/?imported=1#my-character");
   } catch (e) {
     error(e.message);
+    $("import-status").textContent =
+      "Could not save. Your review remains available; earlier snapshots were not replaced.";
   } finally {
     saving = false;
-    $("save-character").disabled = false;
+    for (const id of saveControls) $(id).disabled = false;
+    $("retain-pdf").disabled = !original;
+    $("confirm-step").setAttribute("aria-busy", "false");
   }
 });
 window.addEventListener("beforeunload", (e) => {
@@ -357,7 +564,16 @@ try {
       el("option", `${c.name} · snapshot ${c.revision}`, { value: c.id }),
     );
   const id = new URLSearchParams(location.search).get("character");
-  if (id) $("import-character").value = id;
+  if (id) {
+    if (
+      [...$("import-character").options].some((option) => option.value === id)
+    )
+      $("import-character").value = id;
+    else
+      error(
+        "That character is not saved in this browser. Choose a saved character or import as a new character. Localhost and the live website keep separate local data.",
+      );
+  }
 } catch (e) {
   error(e.message);
 }

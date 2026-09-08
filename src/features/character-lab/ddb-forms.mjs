@@ -1,4 +1,4 @@
-import { clean, norm, fields, classes, addSpell, spellRows } from "./model.mjs";
+import { clean, norm, fields, unknown, addSpell, spellRows } from "./model.mjs";
 
 const aliases = new Map(
   fields.flatMap((f) => f.aliases.map((a) => [norm(a), f.key])),
@@ -160,7 +160,8 @@ export function parseDDBForms(pages, draft, put, convert) {
   const inventory = [],
     attacks = [],
     currency = [],
-    castingNotes = [];
+    castingNotes = [],
+    castingAmbiguities = new Set();
   for (const page of pages) {
     const ws = widgets.filter((w) => w.page === page.page);
     // DDB continuation templates can contain empty duplicate names with different
@@ -243,6 +244,7 @@ export function parseDDBForms(pages, draft, put, convert) {
             0.96,
           );
         } else {
+          castingAmbiguities.add(key);
           const warning = `Different or unreadable spellcasting ${kind.toLowerCase()} values (${sourceClasses || "class not specified"}: ${clean(w.value, 200)}). No single value was selected; check the class-specific values in notes.`;
           if (!draft.warnings.includes(warning)) draft.warnings.push(warning);
         }
@@ -331,40 +333,36 @@ export function parseDDBForms(pages, draft, put, convert) {
         put(draft, `${prefix}.prepared`, true, evidence(prepWidget), 0.96);
     }
   }
+  // Separate spell pages can print different class-specific values even when
+  // each individual widget contains a single number. Never promote the first
+  // class's value into the global casting box in that case.
+  for (const key of ["casting.ability", "casting.dc", "casting.attack"]) {
+    const fact = draft.facts[key];
+    if (!castingAmbiguities.has(key) && !fact.alternatives.length) continue;
+    if (fact.alternatives.length)
+      draft.warnings.push(
+        `Different spellcasting readings across the sheet for ${fields.find((f) => f.key === key).label}. No single value was selected; check the class-specific values in notes.`,
+      );
+    draft.facts[key] = {
+      ...unknown(),
+      source: fact.source,
+      alternatives: [
+        ...(fact.value === null
+          ? []
+          : [
+              {
+                value: fact.value,
+                page: fact.source.page,
+                label: fact.source.label,
+              },
+            ]),
+        ...fact.alternatives,
+      ],
+    };
+  }
   bundle("equipment.equipment", inventory);
   bundle("equipment.attacks", attacks);
   bundle("equipment.currency", currency);
   bundle("notes.custom", [...notes, ...castingNotes], true);
-  if (draft.facts["identity.level"].value === null) {
-    const classFact = draft.facts["identity.classes"],
-      parts = classes(draft);
-    const summary = String(classFact.value ?? "")
-      .replace(
-        /(Artificer|Barbarian|Bard|Cleric|Druid|Fighter|Monk|Paladin|Ranger|Rogue|Sorcerer|Warlock|Wizard)\s*\d{1,2}\b/gi,
-        "",
-      )
-      .replace(/[\s/,+&]/g, "");
-    const total = parts.reduce((n, c) => n + c.level, 0);
-    if (
-      parts.length &&
-      !summary &&
-      !classFact.alternatives.length &&
-      parts.every((c) => c.level > 0) &&
-      total <= 20
-    ) {
-      put(
-        draft,
-        "identity.level",
-        total,
-        {
-          page: classFact.source.page,
-          label: "Sum of recorded class levels",
-          method: "calculation",
-        },
-        classFact.confidence,
-      );
-      draft.facts["identity.level"].provenance = "derived";
-    }
-  }
   return recognized;
 }

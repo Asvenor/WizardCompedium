@@ -1,0 +1,2 @@
+# PDF byte offsets and fixture hashes must not be changed by text normalization.
+*.pdf binary
