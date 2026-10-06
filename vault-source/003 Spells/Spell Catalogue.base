@@ -1,0 +1,164 @@
+filters:
+  and:
+    - file.inFolder("003 Spells/Spell Cards")
+    - type == "spell"
+properties:
+  file.name:
+    displayName: Spell
+  note.source_group:
+    displayName: Source
+views:
+  - type: table
+    name: All spells
+    order:
+      - file.name
+      - level
+      - school
+      - casting_time
+      - concentration
+      - ritual
+      - save
+      - roles
+      - source_group
+    sort:
+      - property: school
+        direction: DESC
+      - property: casting_time
+        direction: ASC
+      - property: ritual
+        direction: DESC
+  - type: table
+    name: Rituals
+    filters:
+      and:
+        - ritual == true
+    order:
+      - file.name
+      - level
+      - school
+      - casting_time
+      - concentration
+      - ritual
+      - save
+      - roles
+      - source_group
+  - type: table
+    name: Reactions
+    filters:
+      and:
+        - casting_time.startsWith("Reaction")
+    order:
+      - file.name
+      - level
+      - school
+      - casting_time
+      - concentration
+      - ritual
+      - save
+      - roles
+      - source_group
+  - type: table
+    name: Bonus actions
+    filters:
+      and:
+        - casting_time.startsWith("Bonus Action")
+    order:
+      - file.name
+      - level
+      - school
+      - casting_time
+      - concentration
+      - ritual
+      - save
+      - roles
+      - source_group
+  - type: table
+    name: No-concentration control
+    filters:
+      and:
+        - concentration == false && roles.contains("control")
+    order:
+      - file.name
+      - level
+      - school
+      - casting_time
+      - concentration
+      - ritual
+      - save
+      - roles
+      - source_group
+  - type: table
+    name: Enemy Intelligence saves
+    filters:
+      and:
+        - save.contains("INT")
+    order:
+      - file.name
+      - level
+      - school
+      - casting_time
+      - concentration
+      - ritual
+      - save
+      - roles
+      - source_group
+  - type: table
+    name: Anti-caster
+    filters:
+      and:
+        - roles.contains("anti-caster")
+    order:
+      - file.name
+      - level
+      - school
+      - casting_time
+      - concentration
+      - ritual
+      - save
+      - roles
+      - source_group
+  - type: table
+    name: Infrastructure
+    filters:
+      and:
+        - roles.contains("infrastructure")
+    order:
+      - file.name
+      - level
+      - school
+      - casting_time
+      - concentration
+      - ritual
+      - save
+      - roles
+      - source_group
+  - type: table
+    name: Long range
+    filters:
+      and:
+        - range_feet >= 120 || range_kind == "unlimited" || range_kind == "sight"
+    order:
+      - file.name
+      - level
+      - school
+      - casting_time
+      - concentration
+      - ritual
+      - save
+      - roles
+      - source_group
+  - type: table
+    name: Expanded access
+    filters:
+      and:
+        - source_group != "2024 core"
+    order:
+      - file.name
+      - level
+      - school
+      - casting_time
+      - concentration
+      - ritual
+      - save
+      - roles
+      - source_group

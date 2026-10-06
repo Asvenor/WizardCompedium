@@ -1,128 +1,73 @@
 ---
 import BaseLayout from '@/components/layout/BaseLayout.astro';
-import ProblemNavigator from '@/components/ProblemNavigator.astro';
+import { findNote, hrefFor, noteHref, sectionsForNavigation } from '@/lib/vault';
 
-const primaryActions = [
-  {
-    label: 'Combat',
-    detail: 'Choose the job, target, and fallback.',
-    href: '/play/',
-    tone: 'violet',
-  },
-  {
-    label: 'Prepare spells',
-    detail: 'Build today’s mission package.',
-    href: '/prepare/',
-    tone: 'blue',
-  },
-  {
-    label: 'Level up',
-    detail: 'See the next milestone and audit.',
-    href: '/wizard/level-up/',
-    tone: 'orange',
-  },
-  {
-    label: 'Find a spell',
-    detail: 'Browse spells by level, role, and tier.',
-    href: '/spells/',
-    tone: 'green',
-  },
-  {
-    label: 'Boss fight',
-    detail: 'Plan around layered defenses.',
-    href: '/play/boss/',
-    tone: 'pink',
-  },
-  {
-    label: 'Emergency',
-    detail: 'Stabilize, extract, and preserve the objective.',
-    href: '/quick/emergency/',
-    tone: 'red',
-  },
+const tasks = [
+  { intent: 'Choose my exact spells at every level', detail: 'Without scrolls or found spellbooks.', links: ['Spell Progression Hub'] },
+  { intent: 'Compare subclasses and class plans', detail: 'Pure Wizard and multiclass progressions.', links: ['Subclasses', 'Build Decision Engine', 'Worked Wizard Builds', 'Level Progression Planner'] },
+  { intent: 'Explore Arcana Unleashed', detail: 'Builds and combinations.', links: ['Arcana Unleashed Builds', 'Arcana Unleashed Combinations'] },
+  { intent: 'Compare spell choices', detail: 'Prepare a focused spell list.', links: ['Prepared Loadouts', 'Spell Finder'] },
+  { intent: 'Choose magic items', detail: 'Value, attunement, and Wizard synergy.', links: ['Item Finder', 'Magic Item Attunement', 'Magic Item Tier List'] },
+  { intent: 'Win this combat', detail: 'Initiative, first turns, and tactical decisions.', links: ['Combat Dashboard', 'Initiative & First-Turn Strategy'] },
+  { intent: 'Solve a problem', detail: 'Find the spell, tactic, or form for the job.', links: ['Problem Navigator', 'Form Finder'] },
+  { intent: 'Develop long-term power', detail: 'Downtime, research, and progression.', links: ['Wizard Operations Roadmap', 'Intelligence above 20', 'Downtime'] },
+  { intent: 'Check a rule', detail: 'Resolve a rules question before committing.', links: ['Rules Desk'] },
 ];
-
-const secondaryActions = [
-  { label: 'Exploration', href: '/quick/exploration/' },
-  { label: 'Builds', href: '/builds/' },
-  { label: 'Spell comparison', href: '/spells/compare/' },
-  { label: 'Tools', href: '/tools/' },
-  { label: 'Full Compendium', href: '/compendium/' },
-  { label: 'Anti-caster', href: '/quick/anti-caster/' },
-  { label: 'Shop / craft', href: '/wizard/gear/' },
-];
+const sectionRoutes: Record<string, string> = {
+  character: '/builds/', spells: '/spells/', items: '/items/', creatures: '/forms/',
+  tiers: '/tiers/',
+};
+const sectionNotes: Record<string, string> = {
+  character: 'Character', spells: 'Spells', items: 'Items', creatures: 'Creatures',
+  bastions: 'Bastion', tactics: 'Tactics', advanced: 'Advanced Wizardry', reference: 'Reference', tiers: 'Tier-Lists',
+};
+const sections = sectionsForNavigation();
+const interactiveRoutes: Record<string, string> = {
+  'Spell Finder': '/spells/', 'Item Finder': '/items/', 'Form Finder': '/forms/',
+};
+const taskHref = (name: string) => interactiveRoutes[name] || hrefFor(name);
+const sectionHref = (section: {id: string}) => {
+  if (sectionRoutes[section.id]) return sectionRoutes[section.id];
+  const note = findNote(sectionNotes[section.id] || '');
+  return note ? noteHref(note) : `/library/?section=${encodeURIComponent(section.id)}`;
+};
 ---
-
-<BaseLayout title="Wizard Compendium" description="Ultimate Min-Max Reference">
-  <section class="workspace-home site-shell">
-    <header class="workspace-heading">
-      <div>
-        <p class="kicker">Your table reference</p>
-        <h1>Wizard Compendium</h1>
-        <p>What are you trying to do?</p>
+<BaseLayout title="Wizard Compendium" active="home">
+  <header class="home-hero">
+    <div class="site-shell home-hero-grid">
+      <div class="home-introduction">
+        <p class="eyebrow"><span aria-hidden="true">✦</span> A wizard’s working reference</p>
+        <h1>Wizard<br /><em>Compendium</em></h1>
+        <p class="home-lead">Build with intention. Prepare the right spells. Keep the answer close when it’s your turn.</p>
+        <div class="home-quick-links"><a class="button button--primary" href="/spells/">Find a spell <span aria-hidden="true">↗</span></a><a class="button" href="/builds/">Compare builds <span aria-hidden="true">→</span></a></div>
       </div>
-      <a class="button" href="/wizard/">My Wizard →</a>
-    </header>
-    <form class="home-search" action="/search/" role="search">
-      <label class="sr-only" for="home-query">Search the Compendium</label>
-      <input
-        class="field"
-        id="home-query"
-        name="q"
-        type="search"
-        placeholder="Search spells, builds, rules…"
-        required
-      />
-      <button class="button button--primary" type="submit">Search</button>
-    </form>
-    <nav aria-label="At the table">
-      <div class="cockpit-action-grid">
-        {
-          primaryActions.map((action) => (
-            <a class="cockpit-action" href={action.href}>
-              <h2>{action.label}</h2>
-              <p>{action.detail}</p>
-              <b aria-hidden="true">→</b>
-            </a>
-          ))
-        }
+      <div class="home-desk" aria-labelledby="desk-title">
+        <p class="eyebrow" id="desk-title">Ready at the table</p>
+        <a href={hrefFor('Combat Dashboard')}><span class="desk-symbol" aria-hidden="true">01</span><span><strong>Combat Dashboard</strong><small>Make your next turn count.</small></span><span aria-hidden="true">↗</span></a>
+        <a href={hrefFor('Problem Navigator')}><span class="desk-symbol" aria-hidden="true">02</span><span><strong>Problem Navigator</strong><small>Start with the problem you need to solve.</small></span><span aria-hidden="true">↗</span></a>
+        <a href={hrefFor('Rules Desk')}><span class="desk-symbol" aria-hidden="true">03</span><span><strong>Rules Desk</strong><small>Check the rule, then make the call.</small></span><span aria-hidden="true">↗</span></a>
+        <div class="desk-footer"><span class="desk-star" aria-hidden="true">✧</span><a href="/play/">Open your session reference <span aria-hidden="true">→</span></a></div>
       </div>
-      <div class="cockpit-shortcuts" aria-label="More Compendium tools">
-        {
-          secondaryActions.map((action) => (
-            <a href={action.href}>
-              {action.label}
-              <span aria-hidden="true">↗</span>
-            </a>
-          ))
-        }
-      </div>
-    </nav>
-  </section>
-
-  <section class="section">
-    <div class="site-shell">
-      <div class="section-head">
-        <div>
-          <h2>Find an answer</h2><p>Jump to the guidance for your situation.</p>
-        </div>
-        <a class="section-link" href="/problems/">All situations →</a>
-      </div>
-      <details>
-        <summary>Browse all situations</summary><ProblemNavigator compact />
-      </details>
     </div>
-  </section>
+  </header>
 
-  <section class="section full-compendium-strip">
-    <div class="site-shell full-compendium-strip-inner">
-      <div>
-        <h2>The complete Compendium</h2><p>
-          Chapter directory, reference tables, and German conversion.
-        </p>
+  <div class="site-shell home-content">
+    <section class="home-section" aria-labelledby="play-plan-title">
+      <div class="section-heading"><div><p class="eyebrow">Start with your next decision</p><h2 id="play-plan-title">Play and plan</h2></div><a class="text-link" href="/guide/">How to use this guide <span aria-hidden="true">↗</span></a></div>
+      <div class="table-wrap home-task-table">
+        <table class="directory-table"><thead><tr><th scope="col">I want to…</th><th scope="col">Open this reference</th></tr></thead><tbody>
+          {tasks.map(task => <tr><th scope="row"><span>{task.intent}</span><small>{task.detail}</small></th><td><div class="directory-links">{task.links.map(name => <a href={taskHref(name)}>{name}<span aria-hidden="true">↗</span></a>)}</div></td></tr>)}
+        </tbody></table>
       </div>
-      <a class="button button--primary" href="/compendium/"
-        >Open Full Compendium</a
-      >
-    </div>
-  </section>
+    </section>
+
+    <section class="home-section" aria-labelledby="library-title">
+      <div class="section-heading"><div><p class="eyebrow">Explore the compendium</p><h2 id="library-title">The library</h2></div><a class="text-link" href="/library/">Browse every note <span aria-hidden="true">→</span></a></div>
+      <div class="table-wrap"><table class="directory-table library-directory"><thead><tr><th scope="col">Section</th><th scope="col">What you’ll find</th><th scope="col"><span class="sr-only">Open section</span></th></tr></thead><tbody>
+        {sections.map((section, index) => <tr><th scope="row"><a href={sectionHref(section)}><span class="section-number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>{section.label}</a></th><td>{section.description}</td><td><a class="directory-open" href={sectionHref(section)} aria-label={`Open ${section.label}`}><span aria-hidden="true">↗</span></a></td></tr>)}
+      </tbody></table></div>
+    </section>
+
+    <aside class="home-reference-note"><span class="note-mark" aria-hidden="true">✧</span><p>Use the compendium to compare tactics, spell roles, build tradeoffs, and legal forms. Start with a question, follow the linked references, and return to the table.</p><a href="/search/">Search the guide <span aria-hidden="true">→</span></a></aside>
+  </div>
 </BaseLayout>

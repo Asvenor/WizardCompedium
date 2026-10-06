@@ -12,7 +12,7 @@ import '@/styles/pdf-sheet.css';
       <h2 id="upload-title">Open your character sheet</h2>
       <div class="sheet-drop" id="sheet-drop"><label for="pdf-file"><strong>Drop a PDF here, or choose a file</strong><span>Up to 15 MB · 20 pages · no D&D Beyond login needed</span></label><input id="pdf-file" type="file" accept="application/pdf,.pdf" /></div>
       <p>Edit fillable fields directly on the page. For printed text, add an editable text box with an optional white cover.</p>
-      <p class="sheet-note">No OCR, automatic character reader, or upload to a server. PDFs do not update your old character snapshots or personalized suggestions.</p>
+      <p class="sheet-note">Your PDF is edited privately on this device. It stays separate from your reading list.</p>
     </section>
     <section id="pdf-editor" hidden aria-labelledby="editor-title">
       <div class="sheet-editor-heading"><div><h2 id="editor-title" tabindex="-1">Your editable sheet</h2><p id="sheet-info"></p></div><button class="button" type="button" id="sheet-close">Close sheet</button></div>
@@ -31,7 +31,7 @@ import '@/styles/pdf-sheet.css';
       </div>
       <details class="sheet-help"><summary>How to update your sheet</summary><ol><li>Click a highlighted field, select its old value, and type the new value. Delete the value to clear it.</li><li>If the page has no editable field, select <strong>Cover &amp; replace text</strong> and click over the printed value. Adjust the text box in the side panel. Use <strong>Add text</strong> for notes.</li><li>Choose <strong>Export PDF</strong>. Reopen the exported file here next session; its fields and added text remain editable.</li></ol><p>This edits your copy of the PDF, not your D&D Beyond account. Printed text covered with a box is still present underneath. Signed, locked, or unsupported forms may need an unlocked, unsigned export.</p></details>
     </section>
-    <section class="sheet-library tool-panel" aria-labelledby="saved-title"><h2 id="saved-title">Saved in this browser</h2><p class="sheet-note">Local copies, not cloud storage. Your existing character snapshots remain separate and unchanged.</p><div id="saved-sheets"><p>Loading saved sheets…</p></div></section>
+    <section class="sheet-library tool-panel" aria-labelledby="saved-title"><h2 id="saved-title">Saved in this browser</h2><p class="sheet-note">Your saved sheets are available on this browser and device.</p><div id="saved-sheets"><p>Loading saved sheets…</p></div></section>
     <noscript><p>The private PDF editor needs JavaScript to display and save your sheet on this device.</p></noscript>
   </div></section>
   <script>import '@/features/pdf-sheet/editor.mjs';</script>

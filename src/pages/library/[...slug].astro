@@ -1,0 +1,41 @@
+---
+import {getCollection,render} from 'astro:content';
+import BaseLayout from '@/components/layout/BaseLayout.astro';
+import {getNotes,getSections,noteHref,getNote} from '@/lib/vault';
+export async function getStaticPaths(){const entries=await getCollection('vault');return entries.map(entry=>({params:{slug:entry.id},props:{entry,note:getNote(entry.id)}}));}
+const {entry,note}=Astro.props;
+if(!note)throw new Error(`No index record for ${entry.id}`);
+const {Content,headings}=await render(entry);
+const toc=headings.filter(h=>h.depth>=2&&h.depth<=3);
+const siblings=getNotes().filter(n=>n.section===note.section&&n.type!=='spell'&&n.type!=='magic-item'&&n.type!=='creature'&&n.slug!==note.slug).slice(0,18);
+const section=getSections().find(s=>s.id===note.section);
+const backlinks=note.backlinks.map(getNote).filter(Boolean).slice(0,12);
+---
+<BaseLayout title={note.title} description={note.summary} active="library" wide>
+  <div class="reader-grid page-shell">
+    <aside class="reader-sidebar" aria-label="Reference navigation"><a class="back-link" href={`/library/?section=${note.section}`}>← {section?.label}</a><nav aria-label="Related section"><p class="eyebrow">IN THIS SECTION</p>{siblings.map(n=><a href={noteHref(n)}>{n.title}</a>)}</nav></aside>
+    <article class="reader-article">
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/library/">Library</a><span aria-hidden="true">/</span><a href={`/library/?section=${note.section}`}>{note.sectionLabel}</a></nav>
+      <header class="reading-header"><p class="eyebrow">{note.sectionLabel}</p><h1>{note.title}</h1><div class="toolbar"><button class="button" data-save-note={note.slug}>Save reference</button><button class="button" data-print-note>Print</button><a href="/library/?saved=1">Reading list</a></div><p class="control-note" data-save-status role="status"></p></header>
+      {toc.length>0&&<details class="mobile-toc"><summary>On this page</summary><nav>{toc.map(h=><a href={`#${h.slug}`} data-depth={h.depth}>{h.text}</a>)}</nav></details>}
+      <div class="prose" data-reference-content><Content/></div>
+      {backlinks.length>0&&<section class="related-references"><h2>Continue reading</h2><div class="related-links">{backlinks.map(n=><a href={noteHref(n!)}>{n!.title}<span aria-hidden="true">↗</span></a>)}</div></section>}
+      <details class="source-details"><summary>Sources &amp; edition</summary><dl><dt>Rules version</dt><dd>{note.metadata.rules_version??'Use the edition specified in this reference'}</dd><dt>Evidence</dt><dd>{note.metadata.rules_status??note.metadata.evidence??'Consult the sources in this reference'}</dd>{note.metadata.last_checked&&<><dt>Checked in the vault</dt><dd>{note.metadata.last_checked}</dd></>}{note.metadata.verification_scope&&<><dt>Review scope</dt><dd>{note.metadata.verification_scope}</dd></>}</dl></details>
+    </article>
+    {toc.length>0&&<aside class="toc" aria-label="On this page"><p class="eyebrow">ON THIS PAGE</p>{toc.map(h=><a href={`#${h.slug}`} data-depth={h.depth}>{h.text}</a>)}</aside>}
+  </div>
+  <script>
+    import {savedReferences,toggleReference} from '@/lib/reading-list';
+    const save=document.querySelector<HTMLButtonElement>('[data-save-note]')!;
+    const refresh=()=>{const saved=savedReferences().includes(save.dataset.saveNote!);save.textContent=saved?'Saved · remove':'Save reference';save.setAttribute('aria-pressed',String(saved));};
+    save.addEventListener('click',()=>{const ok=toggleReference(save.dataset.saveNote!);document.querySelector('[data-save-status]')!.textContent=ok===null?'This browser could not save the reference.':ok?'Saved to your reading list on this device.':'Removed from your reading list.';refresh()});refresh();
+    document.querySelector('[data-print-note]')?.addEventListener('click',()=>window.print());
+    const root=document.querySelector('[data-reference-content]')!;
+    for(const table of root.querySelectorAll<HTMLTableElement>('table')) {
+      const headers=[...table.querySelectorAll('thead th')].map(th=>th.textContent?.trim()??'');
+      const wrapper=document.createElement('div');wrapper.className='table-wrap data-table';wrapper.tabIndex=0;wrapper.setAttribute('role','region');wrapper.setAttribute('aria-label',`Scrollable reference table: ${headers.slice(0,2).join(', ')}`);table.before(wrapper);wrapper.append(table);
+      for(const row of table.querySelectorAll('tbody tr'))[...row.querySelectorAll('td')].forEach((td,i)=>{td.dataset.label=headers[i]??'';if(/tier|rating|rank/i.test(headers[i]??'')){const text=td.textContent?.trim()??'';const match=text.match(/^([SABCD])([+-])?(?:\s|\/|,|$)/);td.dataset.tier=match&&!/[\/]/.test(text)?match[1].toLowerCase():'conditional';td.classList.add('tier-cell');}});
+      if(table.querySelectorAll('tbody tr').length>1){const controls=document.createElement('div');controls.className='table-controls';const hint=document.createElement('span');hint.textContent='Compare columns, or read one entry at a time.';const toggle=document.createElement('button');toggle.className='button';toggle.type='button';toggle.textContent='Read rows';toggle.setAttribute('aria-pressed','false');toggle.addEventListener('click',()=>{const active=wrapper.classList.toggle('table-row-view');toggle.textContent=active?'Compare columns':'Read rows';toggle.setAttribute('aria-pressed',String(active));});controls.append(hint,toggle);wrapper.before(controls);}
+    }
+  </script>
+</BaseLayout>

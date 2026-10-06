@@ -11,7 +11,8 @@ async function walk(directory) {
   return files;
 }
 await access(join(root, 'index.html'));
-await access(join(root, 'pagefind', 'pagefind-ui.js'));
+await access(join(root, 'search-index.json'));
+await access(join(root, 'catalog-index.json'));
 const files = (await walk(root)).filter((file) => file.endsWith('.html'));
 const documents = new Map(
   await Promise.all(
@@ -36,15 +37,9 @@ for (const [file, html] of documents) {
     const search = JSON.parse(
       await readFile(join(root, 'search-index.json'), 'utf8'),
     );
-    for (const kind of [
-      'Spell',
-      'Chapter',
-      'Build',
-      'Tool',
-      'German Conversion',
-    ])
-      if (!search.some((entry) => entry.kind === kind))
-        missing.push('Search index missing category: ' + kind);
+    for (const section of ['spells','character','items','creatures','reference','tactics','tiers'])
+      if (!search.some((entry) => entry.section === section))
+        missing.push('Search index missing section: ' + section);
     references.push(...search.map((entry) => entry.url));
   }
   for (const reference of references) {

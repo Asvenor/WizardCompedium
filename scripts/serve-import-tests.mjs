@@ -12,6 +12,7 @@ const mime = {
   ".wasm": "application/wasm",
   ".svg": "image/svg+xml",
   ".png": "image/png",
+  ".pdf": "application/pdf",
 };
 createServer(async (req, res) => {
   try {

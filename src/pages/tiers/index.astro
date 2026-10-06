@@ -1,0 +1,6 @@
+---
+import BaseLayout from '@/components/layout/BaseLayout.astro';
+import {getNotes,noteHref} from '@/lib/vault';
+const notes=getNotes().filter(n=>n.section==='tiers');
+---
+<BaseLayout title="Tier lists" active="tiers"><div class="page-shell"><header class="page-header"><p class="eyebrow">PRIORITIES &amp; TRADEOFFS</p><h1>Know what earns its place.</h1><p>Ranks are the vault’s optimization judgments. Read the assumptions and campaign conditions alongside the colour.</p><div class="tier-legend" aria-label="Tier colours">{[['s','S','Exceptional'],['a','A','Strong'],['b','B','Useful'],['c','C','Narrower use'],['d','D','Low priority'],['conditional','↔','Conditional']].map(([tier,letter,label])=><span><b class="tier-badge" data-tier={tier}>{letter}</b>{label}</span>)}</div></header><div class="library-grid">{notes.map(n=><article class="note-card"><p class="eyebrow">TIER LIST</p><h2><a href={noteHref(n)}>{n.title.replace(/ Tier List$/,'')}</a></h2><p>{n.summary}</p><a class="text-link" href={noteHref(n)}>Compare priorities →</a></article>)}</div></div></BaseLayout>

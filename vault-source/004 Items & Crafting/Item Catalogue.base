@@ -1,0 +1,211 @@
+filters:
+  and:
+    - file.inFolder("004 Items & Crafting/Item Cards")
+    - type == "magic-item"
+formulas:
+  item_link: file.asLink(note.item)
+properties:
+  formula.item_link:
+    displayName: Item
+  note.rarity:
+    displayName: Rarity
+  note.attunement:
+    displayName: Attunement
+  note.access:
+    displayName: Access requirement
+  note.roles:
+    displayName: Tactical roles
+  note.source_group:
+    displayName: Source group
+  note.source:
+    displayName: Edition / book
+  note.evidence:
+    displayName: Rules evidence
+views:
+  - type: table
+    name: All items
+    order:
+      - formula.item_link
+      - rarity
+      - attunement
+      - access
+      - roles
+      - source_group
+      - source
+      - evidence
+    sort:
+      - property: rarity_rank
+        direction: ASC
+      - property: item
+        direction: ASC
+  - type: table
+    name: No attunement
+    filters:
+      and:
+        - attunement == false
+    order:
+      - formula.item_link
+      - rarity
+      - attunement
+      - access
+      - roles
+      - source_group
+      - source
+      - evidence
+    sort:
+      - property: rarity_rank
+        direction: ASC
+      - property: item
+        direction: ASC
+  - type: table
+    name: Concentration
+    filters:
+      and:
+        - roles.contains("Concentration")
+    order:
+      - formula.item_link
+      - rarity
+      - attunement
+      - access
+      - roles
+      - source_group
+      - source
+      - evidence
+    sort:
+      - property: rarity_rank
+        direction: ASC
+      - property: item
+        direction: ASC
+  - type: table
+    name: Casting accuracy
+    filters:
+      and:
+        - roles.contains("Accuracy")
+    order:
+      - formula.item_link
+      - rarity
+      - attunement
+      - access
+      - roles
+      - source_group
+      - source
+      - evidence
+    sort:
+      - property: rarity_rank
+        direction: ASC
+      - property: item
+        direction: ASC
+  - type: table
+    name: Resources and versatility
+    filters:
+      and:
+        - roles.contains("Resources") || roles.contains("Versatility")
+    order:
+      - formula.item_link
+      - rarity
+      - attunement
+      - access
+      - roles
+      - source_group
+      - source
+      - evidence
+    sort:
+      - property: rarity_rank
+        direction: ASC
+      - property: item
+        direction: ASC
+  - type: table
+    name: Mobility
+    filters:
+      and:
+        - roles.contains("Mobility")
+    order:
+      - formula.item_link
+      - rarity
+      - attunement
+      - access
+      - roles
+      - source_group
+      - source
+      - evidence
+    sort:
+      - property: rarity_rank
+        direction: ASC
+      - property: item
+        direction: ASC
+  - type: table
+    name: Components and teamwork
+    filters:
+      and:
+        - roles.contains("Components") || roles.contains("Team support")
+    order:
+      - formula.item_link
+      - rarity
+      - attunement
+      - access
+      - roles
+      - source_group
+      - source
+      - evidence
+    sort:
+      - property: rarity_rank
+        direction: ASC
+      - property: item
+        direction: ASC
+  - type: table
+    name: Arcana Unleashed
+    filters:
+      and:
+        - source == "Arcana Unleashed"
+    order:
+      - formula.item_link
+      - rarity
+      - attunement
+      - access
+      - roles
+      - source_group
+      - source
+      - evidence
+    sort:
+      - property: rarity_rank
+        direction: ASC
+      - property: item
+        direction: ASC
+  - type: table
+    name: Legacy and setting
+    filters:
+      and:
+        - source_group == "Legacy / setting"
+    order:
+      - formula.item_link
+      - rarity
+      - attunement
+      - access
+      - roles
+      - source_group
+      - source
+      - evidence
+    sort:
+      - property: rarity_rank
+        direction: ASC
+      - property: item
+        direction: ASC
+  - type: table
+    name: Defense
+    filters:
+      and:
+        - roles.contains("Defense") || roles.contains("Anti-caster")
+    order:
+      - formula.item_link
+      - rarity
+      - attunement
+      - access
+      - roles
+      - source_group
+      - source
+      - evidence
+    sort:
+      - property: rarity_rank
+        direction: ASC
+      - property: item
+        direction: ASC

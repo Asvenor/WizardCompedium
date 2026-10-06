@@ -1,0 +1,63 @@
+# Fighter 2 dip with Necromancer — Spell Progression
+
+[[Spell Progression Hub]] · [[Build Decision Engine]] · [[Multiclass Spell Timing]] · [[Necromancer - Spell Progression|Pure Necromancer route]]
+
+**Fighter 2 / Wizard 18, Necromancer from Arcana Unleashed.** Fighter at character 1, Wizard at 2–6, second Fighter level at 7, then Wizard at every remaining level. This is one concrete, static no-copy progression, not a preferred build over the other supported routes. Choose a route for its tradeoffs; do not combine acquisition tables. No found books, scrolls, copying, magic items, or extra feats are assumed.
+
+**Book budget at character 20:** 40 ordinary Wizard acquisitions + 9 distinct Savant additions = **49 distinct book spells**. Learn Grease instead of Mage Armor at Wizard 1. This route assumes trained armor is actually obtained, not free equipment. Use armor for the base AC; Grease adds control without Concentration.
+
+## Dip features and separate spells
+
+The Fighter start supplies **CON and STR saving-throw proficiency**, armor training, Weapon Mastery, Second Wind, and a Fighting Style. One concrete style choice is **Defense for an actually worn-armor mode**. Fighter 1 or 2 adds no spellcasting, spells, or caster levels. The multiclass prerequisite is **INT 13 and either DEX 13 or STR 13**. Use the starting-dip feat framework in [[Build Decision Engine]] rather than duplicating CON proficiency with Resilient (CON).
+
+**Action Surge at character 7 cannot grant a Magic action under the 2024 rules.** It can supply an eligible non-Magic action; it is not two leveled Wizard casts through extra Magic actions. A Bladesinger’s eligible Attack-action spell substitution still uses that feature’s own limits and the one-slot-per-turn rule. The second Fighter level delays every later Wizard milestone another character level.
+
+## Wizard cantrips
+
+At character 2 / Wizard 1 choose **Ray of Frost, Mind Sliver, Minor Illusion**. Add **Mage Hand** at character 5 / Wizard 4 and **Prestidigitation** at character 12 / Wizard 10. Other-class cantrips are separate pools. Scaling uses total character level where the cantrip says so. All Wizard milestones, including subclass selection at 3, use Wizard level.
+
+## Every character level
+
+Follow the character-level column. **Highest Wizard / slot** distinguishes the highest spell level the Wizard may acquire from the highest shared slot available. A higher shared slot can upcast an eligible known spell, not unlock higher-level Wizard book choices or early Savant.
+
+| Character level | Class advanced | Wizard level | Learn normally | Extra book spells | Separate feature access | Highest Wizard / slot |
+|---:|---|---:|---|---|---|---|
+| 1 | Fighter 1 | — | — | — | Fighter features; no Wizard spells yet | — / — |
+| 2 | Wizard 1 | 1 | [[Shield - Spell\|Shield]]; [[Grease - Spell\|Grease]]; [[Find Familiar - Spell\|Find Familiar]]; [[Detect Magic - Spell\|Detect Magic]]; [[Sleep - Spell\|Sleep]]; [[Magic Missile - Spell\|Magic Missile]] | — | — | 1 / 1 |
+| 3 | Wizard 2 | 2 | [[Feather Fall - Spell\|Feather Fall]]; [[Unseen Servant - Spell\|Unseen Servant]] | — | — | 1 / 1 |
+| 4 | Wizard 3 | 3 | [[Web - Spell\|Web]]; [[Misty Step - Spell\|Misty Step]] | [[False Life - Spell\|False Life]]; [[Gentle Repose - Spell\|Gentle Repose]] | — | 2 / 2 |
+| 5 | Wizard 4 | 4 | [[Invisibility - Spell\|Invisibility]]; [[Battle Familiar - Spell\|Battle Familiar]] | — | — | 2 / 2 |
+| 6 | Wizard 5 | 5 | [[Hypnotic Pattern - Spell\|Hypnotic Pattern]]; [[Fireball - Spell\|Fireball]] | [[Summon Undead - Spell\|Summon Undead]] | — | 3 / 3 |
+| 7 | Fighter 2 | 5 | — | — | Action Surge and Tactical Mind; no new Wizard choices | 3 / 3 |
+| 8 | Wizard 6 | 6 | [[Counterspell - Spell\|Counterspell]]; [[Dispel Magic - Spell\|Dispel Magic]] | — | [[Animate Dead - Spell\|Animate Dead]] | 3 / 3 |
+| 9 | Wizard 7 | 7 | [[Dimension Door - Spell\|Dimension Door]]; [[Polymorph - Spell\|Polymorph]] | [[Blight - Spell\|Blight]] | — | 4 / 4 |
+| 10 | Wizard 8 | 8 | [[Arcane Eye - Spell\|Arcane Eye]]; [[Phantom Steed - Spell\|Phantom Steed]] | — | — | 4 / 4 |
+| 11 | Wizard 9 | 9 | [[Wall of Force - Spell\|Wall of Force]]; [[Synaptic Static - Spell\|Synaptic Static]] | [[Bestow Curse - Spell\|Bestow Curse]] | — | 5 / 5 |
+| 12 | Wizard 10 | 10 | [[Telepathic Bond - Spell\|Rary's Telepathic Bond]]; [[Telekinesis - Spell\|Telekinesis]] | — | — | 5 / 5 |
+| 13 | Wizard 11 | 11 | [[Contingency - Spell\|Contingency]]; [[Globe of Invulnerability - Spell\|Globe of Invulnerability]] | [[Magic Jar - Spell\|Magic Jar]] | — | 6 / 6 |
+| 14 | Wizard 12 | 12 | [[Mass Suggestion - Spell\|Mass Suggestion]]; [[Tiny Hut - Spell\|Leomund's Tiny Hut]] | — | — | 6 / 6 |
+| 15 | Wizard 13 | 13 | [[Teleport - Spell\|Teleport]]; [[Forcecage - Spell\|Forcecage]] | [[Finger of Death - Spell\|Finger of Death]] | — | 7 / 7 |
+| 16 | Wizard 14 | 14 | [[Reverse Gravity - Spell\|Reverse Gravity]]; [[Simulacrum - Spell\|Simulacrum]] | — | — | 7 / 7 |
+| 17 | Wizard 15 | 15 | [[Maze - Spell\|Maze]]; [[Mind Blank - Spell\|Mind Blank]] | [[Clone - Spell\|Clone]] | — | 8 / 8 |
+| 18 | Wizard 16 | 16 | [[Banishment - Spell\|Banishment]]; [[Demiplane - Spell\|Demiplane]] | — | — | 8 / 8 |
+| 19 | Wizard 17 | 17 | [[Wish - Spell\|Wish]]; [[True Polymorph - Spell\|True Polymorph]] | [[Astral Projection - Spell\|Astral Projection]] | — | 9 / 9 |
+| 20 | Wizard 18 | 18 | [[Disintegrate - Spell\|Disintegrate]]; [[Suggestion - Spell\|Suggestion]] | — | [[Magic Missile - Spell\|Magic Missile]]; [[Invisibility - Spell\|Invisibility]] (Spell Mastery; already in book) | 9 / 9 |
+
+At **character 20 / Wizard 18**, choose **Magic Missile + Invisibility** for Spell Mastery. Both are already in the book and have Action casting times; they become separately always prepared. **No Signature Spells:** the route never reaches Wizard 20. It also does not reach the Wizard-19 Epic Boon feature; character level 19 alone grants no feat.
+
+## Preparation examples
+
+- **Character 6 / Wizard 5 — 9 ordinary preparations:** [[Shield - Spell|Shield]]; [[Grease - Spell|Grease]]; [[Feather Fall - Spell|Feather Fall]]; [[Web - Spell|Web]]; [[Misty Step - Spell|Misty Step]]; [[Battle Familiar - Spell|Battle Familiar]]; [[Summon Undead - Spell|Summon Undead]]; [[Hypnotic Pattern - Spell|Hypnotic Pattern]]; [[Fireball - Spell|Fireball]]. No additional always-prepared leveled spell is needed for this example.
+- **Character 11 / Wizard 9 — 14 ordinary preparations:** [[Shield - Spell|Shield]]; [[Grease - Spell|Grease]]; [[Feather Fall - Spell|Feather Fall]]; [[Web - Spell|Web]]; [[Misty Step - Spell|Misty Step]]; [[Counterspell - Spell|Counterspell]]; [[Dispel Magic - Spell|Dispel Magic]]; [[Dimension Door - Spell|Dimension Door]]; [[Hypnotic Pattern - Spell|Hypnotic Pattern]]; [[Battle Familiar - Spell|Battle Familiar]]; [[Summon Undead - Spell|Summon Undead]]; [[Polymorph - Spell|Polymorph]]; [[Wall of Force - Spell|Wall of Force]]; [[Synaptic Static - Spell|Synaptic Static]]. **Additional always prepared:** Animate Dead.
+
+These are fixed examples from the acquired book, not a tracker. Feature and other-class preparations remain separate. Book rituals use Ritual Adept without ordinary preparation, but still need time, access to the book, and components. Only one Concentration plan and the normal one-slot-per-turn limit apply across both classes. Fighter levels delay both Wizard spell access and spell slots.
+
+## Subclass tactics and components
+
+Use [[Necromancer - Spell Progression]] for the subclass’s operating limits and counted component alternatives. The normal and Savant acquisition order here is the same at each Wizard milestone, apart from the stated initial armor substitution. Apply replacements **when acquiring** the spell, not as free later retraining. Retain ordinary defense and control when the specialty does not fit the encounter.
+
+Animate Dead is an always-prepared subclass grant at Wizard 6. Find Familiar at Wizard 1 is deliberately paid for before the overlapping level-3 grant; no refund is assumed. Battle Familiar remains Conjuration and spends a normal choice.
+
+## Sources and interpretation
+
+[2024 multiclass spell access](https://www.dndbeyond.com/sources/dnd/phb-2024/creating-a-character#Multiclassing) · [2024 Wizard](https://www.dndbeyond.com/sources/dnd/phb-2024/character-classes-continued#Wizard) · [[Necromancer - Spell Progression|Subclass and spell sources]]. Class budgets are rules; spell order, dip timing, armor substitutions, and preparation examples are optimization advice. These routes apply the linked class rules and the vault’s source-specific spell references, not an official build ranking.

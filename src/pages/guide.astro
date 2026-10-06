@@ -1,0 +1,53 @@
+---
+import BaseLayout from '@/components/layout/BaseLayout.astro';
+import {hrefFor} from '@/lib/vault';
+---
+<BaseLayout title="How to use the compendium">
+  <div class="page-shell">
+    <header class="page-header">
+      <p class="eyebrow">KEEP THE ANSWER CLOSE</p>
+      <h1>How to use the compendium</h1>
+      <p>A reference you can browse between sessions and reach for when it’s your turn.</p>
+    </header>
+    <div class="library-grid">
+      <article class="note-card">
+        <h2><a href="/search/">Find an answer</a></h2>
+        <p>Search names or phrases across the full reference text. Narrow results by section. Open search with Ctrl+K on Windows or ⌘K on Mac.</p>
+      </article>
+      <article class="note-card">
+        <h2><a href="/spells/">Choose a spell, item, or form</a></h2>
+        <p>Use the spell, item, and form filters to build a shortlist. Select up to four entries and compare their recorded details side by side.</p>
+        <p>These are the vault’s selected entries. A source label is not an access grant; check each entry’s restrictions. A candidate form still needs the spell’s other requirements.</p>
+        <div class="related-links"><a href="/items/">Magic items →</a><a href="/forms/">Creature forms →</a></div>
+      </article>
+      <article class="note-card">
+        <h2><a href="/builds/">Follow a build</a></h2>
+        <p>Choose a subclass and class structure in the build matrix, then open its level-by-level spell progression. All seven supported subclasses have equal space.</p>
+      </article>
+      <article class="note-card">
+        <h2><a href="/tiers/">Read tables comfortably</a></h2>
+        <p>Tables scroll horizontally when needed. Choose <em>Read rows</em> to see one entry at a time, with every field labelled. <em>Compare columns</em> restores the table.</p>
+        <p>Tier colours help you scan; conditional ratings such as B/A retain their full labels. Open the reference for the conditions behind a rating.</p>
+      </article>
+      <article class="note-card">
+        <h2><a href="/library/?saved=1">Keep a reading list</a></h2>
+        <p>Choose <em>Save reference</em> on a page to keep it close. Open your reading list to revisit it, or choose the same control to remove it.</p>
+        <p>The list stays in this browser on this device. It does not synchronize with Obsidian or another browser.</p>
+      </article>
+      <article class="note-card">
+        <h2><a href="/play/">Use it at the table</a></h2>
+        <p>Open the combat dashboard, reaction and concentration references, or the rules desk. Page contents preserve the vault’s edition notes and limits; ratings are advice, not additional rules.</p>
+        <div class="related-links"><a href={hrefFor('Problem Navigator')}>Start with a problem →</a></div>
+      </article>
+      <article class="note-card">
+        <h2><a href="/play/import/">Update your PDF sheet</a></h2>
+        <p>Open your PDF, edit supported form fields, or cover a printed value and add replacement text. Save it in this browser and export an updated copy after your session.</p>
+        <p>Your sheet stays on your device. Export backups: clearing browser data can remove saved sheets. A cover hides text visually; it does not securely erase the underlying text.</p>
+      </article>
+      <article class="note-card">
+        <h2><a href="/library/">Browse the whole library</a></h2>
+        <p>Explore the vault by topic. References retain their linked notes, images, callouts, and sources. Use <em>On this page</em> to jump to a heading and <em>Print</em> for a paper reference.</p>
+      </article>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,6 @@
+---
+import BaseLayout from '@/components/layout/BaseLayout.astro';
+import Catalog from '@/components/Catalog.astro';
+import {hrefFor} from '@/lib/vault';
+---
+<BaseLayout title="Item finder" active="library" wide><div class="page-shell"><header class="page-header"><p class="eyebrow">ITEMS &amp; CRAFTING</p><h1>Spend your attunement wisely.</h1><p>Compare useful items by role, rarity, and attunement. Read the card’s limits before choosing the item.</p><div class="toolbar"><a class="button" href={hrefFor('Magic Item Attunement')}>Attunement &amp; held items</a><a class="button" href={hrefFor('Crafting')}>Crafting reference</a><a href={hrefFor('Magic Item Tier List')}>Item priorities →</a></div></header><Catalog kind="items"/></div></BaseLayout>

@@ -1,0 +1,65 @@
+---
+cssclasses: [wizard-tools]
+type: "spell"
+name: "Maze"
+level: 8
+school: "Conjuration"
+casting_time: "Action"
+range: "60 feet"
+duration: "Concentration, up to 10 minutes"
+components: "V, S"
+concentration: true
+ritual: false
+save: []
+test: "INT Check"
+roles: ["control"]
+source_group: "2024 core"
+source_book: "Player's Handbook (2024)"
+rules_version: "2024"
+rules_status: "Source checked"
+verification: "Full spell entry checked through signed-in D&D Beyond"
+verification_scope: "Casting fields, components, effect, restrictions, and scaling checked. Preparation priorities and tactics are optimization analysis, not official rankings."
+last_checked: "2026-09-20"
+sources: ["https://www.dndbeyond.com/sources/dnd/phb-2024/spell-descriptions#Maze"]
+preparation_priority: "High baseline value"
+tags: ["wizard","spell","role/control"]
+range_feet: 60
+range_kind: "distance"
+---
+
+# Maze
+
+[[Spell Finder]] · [[Prepared Loadouts]] · [[Rules Desk]]
+
+## At a glance
+
+| Field | Value |
+|---|---|
+| Level / school | 8 / Conjuration |
+| Casting time | Action |
+| Range | 60 feet |
+| Duration | Concentration, up to 10 minutes |
+| Components | V, S |
+| Concentration / ritual | Yes / No |
+| Test shorthand | INT Check |
+| Access | 2024 core; actual spellbook and campaign permission still apply |
+
+## Decision
+
+No initial save; Action/check required to return.
+
+**Preparation priority:** High baseline value (optimization judgment, not an official rating).
+
+Protect concentration and compare its payoff with your current effect. [[Concentration Strategy]] Confirm targets, sight, clear path, components, and available actions in [[Spellcasting Rules]].
+
+## Rules that decide the play
+
+No initial save. Escape requires a Study action and DC 20 Intelligence (Investigation) check. It is a check, not a saving throw; Legendary Resistance does not turn a failed check into success.
+
+## Upcasting
+
+No higher-slot scaling is listed for this spell.
+
+## Source and deeper use
+
+[Official D&D Beyond rules](https://www.dndbeyond.com/sources/dnd/phb-2024/spell-descriptions#Maze) · [[Spells#8th-Level Spells|Original compact reference]] · [[Spell Tactics]]

@@ -1,0 +1,5348 @@
+{
+  "sourceDirectory": "/Users/raccoon/Library/CloudStorage/OneDrive-Persönlich/Dokumente/Wizard Compendium Vault",
+  "sourceHash": "44766ca67d0516615fb0dc28a3823004a071dc337e4e93fd429db196d6012679",
+  "noteCount": 422,
+  "assetCount": 111,
+  "sourceUnchanged": true,
+  "unresolvedLinks": [],
+  "ambiguousLinks": [],
+  "unresolvedAnchors": [],
+  "transformations": [
+    {
+      "from": "001 Home/Form Finder.md",
+      "kind": "page-title",
+      "text": "Form Finder"
+    },
+    {
+      "from": "001 Home/Home.md",
+      "kind": "page-title",
+      "text": "Wizard Compendium"
+    },
+    {
+      "from": "001 Home/Item Finder.md",
+      "kind": "base-catalogue",
+      "source": "004 Items & Crafting/Item Catalogue.base",
+      "count": 51,
+      "views": [
+        "All items",
+        "No attunement",
+        "Concentration",
+        "Casting accuracy",
+        "Resources and versatility",
+        "Mobility",
+        "Components and teamwork",
+        "Arcana Unleashed",
+        "Legacy and setting",
+        "Defense"
+      ],
+      "fields": [
+        "rarity",
+        "attunement",
+        "access",
+        "roles",
+        "source_group",
+        "source",
+        "evidence"
+      ]
+    },
+    {
+      "from": "001 Home/Item Finder.md",
+      "kind": "page-title",
+      "text": "Item Finder"
+    },
+    {
+      "from": "001 Home/Problem Navigator.md",
+      "kind": "page-title",
+      "text": "Problem Navigator"
+    },
+    {
+      "from": "001 Home/Quick Finder.md",
+      "kind": "page-title",
+      "text": "General"
+    },
+    {
+      "from": "001 Home/Spell Finder.md",
+      "kind": "base-catalogue",
+      "source": "003 Spells/Spell Catalogue.base",
+      "count": 208,
+      "views": [
+        "All spells",
+        "Rituals",
+        "Reactions",
+        "Bonus actions",
+        "No-concentration control",
+        "Enemy Intelligence saves",
+        "Anti-caster",
+        "Infrastructure",
+        "Long range",
+        "Expanded access"
+      ],
+      "fields": [
+        "level",
+        "school",
+        "casting_time",
+        "concentration",
+        "ritual",
+        "save",
+        "roles",
+        "source_group"
+      ]
+    },
+    {
+      "from": "001 Home/Spell Finder.md",
+      "kind": "page-title",
+      "text": "Spell Finder"
+    },
+    {
+      "from": "001 Home/Vault Guide.md",
+      "kind": "page-title",
+      "text": "Vault Guide"
+    },
+    {
+      "from": "001 Home/Vault Index.md",
+      "kind": "page-title",
+      "text": "Vault Index"
+    },
+    {
+      "from": "002 Character/Arcana Unleashed Builds.md",
+      "kind": "page-title",
+      "text": "Arcana Unleashed Builds"
+    },
+    {
+      "from": "002 Character/Build Decision Engine.md",
+      "kind": "page-title",
+      "text": "Build Decision Engine"
+    },
+    {
+      "from": "002 Character/Character.md",
+      "kind": "callout",
+      "label": "Build assumptions",
+      "calloutType": "important"
+    },
+    {
+      "from": "002 Character/Character.md",
+      "kind": "callout",
+      "label": "Rules clarification",
+      "calloutType": "warning"
+    },
+    {
+      "from": "002 Character/Character.md",
+      "kind": "page-title",
+      "text": "Character"
+    },
+    {
+      "from": "002 Character/Equipment.md",
+      "kind": "callout",
+      "label": "Loadout Variables",
+      "calloutType": "info"
+    },
+    {
+      "from": "002 Character/Equipment.md",
+      "kind": "callout",
+      "label": "Backup Focus",
+      "calloutType": "tip"
+    },
+    {
+      "from": "002 Character/Equipment.md",
+      "kind": "callout",
+      "label": "Full Component Reference",
+      "calloutType": "info"
+    },
+    {
+      "from": "002 Character/Equipment.md",
+      "kind": "callout",
+      "label": "Availability",
+      "calloutType": "warning"
+    },
+    {
+      "from": "002 Character/Equipment.md",
+      "kind": "callout",
+      "label": "Extradimensional Storage",
+      "calloutType": "warning"
+    },
+    {
+      "from": "002 Character/Equipment.md",
+      "kind": "callout",
+      "label": "Redundancy",
+      "calloutType": "tip"
+    },
+    {
+      "from": "002 Character/Equipment.md",
+      "kind": "page-title",
+      "text": "Adventuring Equipment"
+    },
+    {
+      "from": "002 Character/Level Progression Planner.md",
+      "kind": "page-title",
+      "text": "Level Progression Planner"
+    },
+    {
+      "from": "002 Character/Multiclass Spell Timing.md",
+      "kind": "page-title",
+      "text": "Multiclass Spell Timing"
+    },
+    {
+      "from": "002 Character/Spell Progression Hub.md",
+      "kind": "page-title",
+      "text": "Spell Progression Hub"
+    },
+    {
+      "from": "002 Character/Spell Progressions/Abjurer - Spell Progression.md",
+      "kind": "page-title",
+      "text": "Abjurer — no-copy spell progression"
+    },
+    {
+      "from": "002 Character/Spell Progressions/Artificer Abjurer - Spell Progression.md",
+      "kind": "page-title",
+      "text": "Artificer dip with Abjurer — Spell Progression"
+    },
+    {
+      "from": "002 Character/Spell Progressions/Artificer Bladesinger - Spell Progression.md",
+      "kind": "page-title",
+      "text": "Artificer dip with Bladesinger — Spell Progression"
+    },
+    {
+      "from": "002 Character/Spell Progressions/Artificer Chronurgy - Spell Progression.md",
+      "kind": "page-title",
+      "text": "Artificer dip with Chronurgy — Spell Progression"
+    },
+    {
+      "from": "002 Character/Spell Progressions/Artificer Conjurer - Spell Progression.md",
+      "kind": "page-title",
+      "text": "Artificer dip with Conjurer — Spell Progression"
+    },
+    {
+      "from": "002 Character/Spell Progressions/Artificer Diviner - Spell Progression.md",
+      "kind": "page-title",
+      "text": "Artificer dip with Diviner — Spell Progression"
+    },
+    {
+      "from": "002 Character/Spell Progressions/Artificer Illusionist - Spell Progression.md",
+      "kind": "page-title",
+      "text": "Artificer dip with Illusionist — Spell Progression"
+    },
+    {
+      "from": "002 Character/Spell Progressions/Artificer Necromancer - Spell Progression.md",
+      "kind": "page-title",
+      "text": "Artificer dip with Necromancer — Spell Progression"
+    },
+    {
+      "from": "002 Character/Spell Progressions/Bladesinger - Spell Progression.md",
+      "kind": "page-title",
+      "text": "Bladesinger — no-copy spell progression"
+    },
+    {
+      "from": "002 Character/Spell Progressions/Chronurgy - Spell Progression.md",
+      "kind": "page-title",
+      "text": "Chronurgy — Spell Progression"
+    },
+    {
+      "from": "002 Character/Spell Progressions/Cleric Abjurer - Spell Progression.md",
+      "kind": "page-title",
+      "text": "Cleric dip with Abjurer — Spell Progression"
+    },
+    {
+      "from": "002 Character/Spell Progressions/Cleric Bladesinger - Spell Progression.md",
+      "kind": "page-title",
+      "text": "Cleric dip with Bladesinger — Spell Progression"
+    },
+    {
+      "from": "002 Character/Spell Progressions/Cleric Chronurgy - Spell Progression.md",
+      "kind": "page-title",
+      "text": "Cleric dip with Chronurgy — Spell Progression"
+    },
+    {
+      "from": "002 Character/Spell Progressions/Cleric Conjurer - Spell Progression.md",
+      "kind": "page-title",
+      "text": "Cleric dip with Conjurer — Spell Progression"
+    },
+    {
+      "from": "002 Character/Spell Progressions/Cleric Diviner - Spell Progression.md",
+      "kind": "page-title",
+      "text": "Cleric dip with Diviner — Spell Progression"
+    },
+    {
+      "from": "002 Character/Spell Progressions/Cleric Illusionist - Spell Progression.md",
+      "kind": "page-title",
+      "text": "Cleric dip with Illusionist — Spell Progression"
+    },
+    {
+      "from": "002 Character/Spell Progressions/Cleric Necromancer - Spell Progression.md",
+      "kind": "page-title",
+      "text": "Cleric dip with Necromancer — Spell Progression"
+    },
+    {
+      "from": "002 Character/Spell Progressions/Conjurer - Spell Progression.md",
+      "kind": "page-title",
+      "text": "Conjurer — Spell Progression"
+    },
+    {
+      "from": "002 Character/Spell Progressions/Diviner - Spell Progression.md",
+      "kind": "page-title",
+      "text": "Diviner — no-copy spell progression"
+    },
+    {
+      "from": "002 Character/Spell Progressions/Fighter 1 Abjurer - Spell Progression.md",
+      "kind": "page-title",
+      "text": "Fighter 1 dip with Abjurer — Spell Progression"
+    },
+    {
+      "from": "002 Character/Spell Progressions/Fighter 1 Bladesinger - Spell Progression.md",
+      "kind": "page-title",
+      "text": "Fighter 1 dip with Bladesinger — Spell Progression"
+    },
+    {
+      "from": "002 Character/Spell Progressions/Fighter 1 Chronurgy - Spell Progression.md",
+      "kind": "page-title",
+      "text": "Fighter 1 dip with Chronurgy — Spell Progression"
+    },
+    {
+      "from": "002 Character/Spell Progressions/Fighter 1 Conjurer - Spell Progression.md",
+      "kind": "page-title",
+      "text": "Fighter 1 dip with Conjurer — Spell Progression"
+    },
+    {
+      "from": "002 Character/Spell Progressions/Fighter 1 Diviner - Spell Progression.md",
+      "kind": "page-title",
+      "text": "Fighter 1 dip with Diviner — Spell Progression"
+    },
+    {
+      "from": "002 Character/Spell Progressions/Fighter 1 Illusionist - Spell Progression.md",
+      "kind": "page-title",
+      "text": "Fighter 1 dip with Illusionist — Spell Progression"
+    },
+    {
+      "from": "002 Character/Spell Progressions/Fighter 1 Necromancer - Spell Progression.md",
+      "kind": "page-title",
+      "text": "Fighter 1 dip with Necromancer — Spell Progression"
+    },
+    {
+      "from": "002 Character/Spell Progressions/Fighter 2 Abjurer - Spell Progression.md",
+      "kind": "page-title",
+      "text": "Fighter 2 dip with Abjurer — Spell Progression"
+    },
+    {
+      "from": "002 Character/Spell Progressions/Fighter 2 Bladesinger - Spell Progression.md",
+      "kind": "page-title",
+      "text": "Fighter 2 dip with Bladesinger — Spell Progression"
+    },
+    {
+      "from": "002 Character/Spell Progressions/Fighter 2 Chronurgy - Spell Progression.md",
+      "kind": "page-title",
+      "text": "Fighter 2 dip with Chronurgy — Spell Progression"
+    },
+    {
+      "from": "002 Character/Spell Progressions/Fighter 2 Conjurer - Spell Progression.md",
+      "kind": "page-title",
+      "text": "Fighter 2 dip with Conjurer — Spell Progression"
+    },
+    {
+      "from": "002 Character/Spell Progressions/Fighter 2 Diviner - Spell Progression.md",
+      "kind": "page-title",
+      "text": "Fighter 2 dip with Diviner — Spell Progression"
+    },
+    {
+      "from": "002 Character/Spell Progressions/Fighter 2 Illusionist - Spell Progression.md",
+      "kind": "page-title",
+      "text": "Fighter 2 dip with Illusionist — Spell Progression"
+    },
+    {
+      "from": "002 Character/Spell Progressions/Fighter 2 Necromancer - Spell Progression.md",
+      "kind": "page-title",
+      "text": "Fighter 2 dip with Necromancer — Spell Progression"
+    },
+    {
+      "from": "002 Character/Spell Progressions/Illusion Adept - Spell Progression.md",
+      "kind": "page-title",
+      "text": "Illusion Adept — Spell Progression"
+    },
+    {
+      "from": "002 Character/Spell Progressions/Illusionist - Spell Progression.md",
+      "kind": "page-title",
+      "text": "Illusionist — Spell Progression"
+    },
+    {
+      "from": "002 Character/Spell Progressions/Necromancer - Spell Progression.md",
+      "kind": "page-title",
+      "text": "Necromancer — Spell Progression"
+    },
+    {
+      "from": "002 Character/Subclasses.md",
+      "kind": "page-title",
+      "text": "Wizard Subclasses"
+    },
+    {
+      "from": "002 Character/Worked Wizard Builds.md",
+      "kind": "page-title",
+      "text": "Worked Wizard Builds"
+    },
+    {
+      "from": "003 Spells/Battle Familiar.md",
+      "kind": "page-title",
+      "text": "Battle Familiar"
+    },
+    {
+      "from": "003 Spells/Dunamancy Spells.md",
+      "kind": "callout",
+      "label": "Access",
+      "calloutType": "info"
+    },
+    {
+      "from": "003 Spells/Dunamancy Spells.md",
+      "kind": "page-title",
+      "text": "Dunamancy Spells"
+    },
+    {
+      "from": "003 Spells/Spell Bank.md",
+      "kind": "callout",
+      "label": "Rules clarification",
+      "calloutType": "warning"
+    },
+    {
+      "from": "003 Spells/Spell Bank.md",
+      "kind": "callout",
+      "label": "Spell Tags",
+      "calloutType": "info"
+    },
+    {
+      "from": "003 Spells/Spell Bank.md",
+      "kind": "page-title",
+      "text": "Master Spellbook Acquisition Table"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Absorb Elements - Spell.md",
+      "kind": "page-title",
+      "text": "Absorb Elements"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Acid Splash - Spell.md",
+      "kind": "page-title",
+      "text": "Acid Splash"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Alarm - Spell.md",
+      "kind": "page-title",
+      "text": "Alarm"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Alter Self - Spell.md",
+      "kind": "page-title",
+      "text": "Alter Self"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Animate Dead - Spell.md",
+      "kind": "page-title",
+      "text": "Animate Dead"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Animate Objects - Spell.md",
+      "kind": "page-title",
+      "text": "Animate Objects"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Antimagic Field - Spell.md",
+      "kind": "page-title",
+      "text": "Antimagic Field"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Antipathy Sympathy - Spell.md",
+      "kind": "page-title",
+      "text": "Antipathy/Sympathy"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Arcane Eye - Spell.md",
+      "kind": "page-title",
+      "text": "Arcane Eye"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Arcane Gate - Spell.md",
+      "kind": "page-title",
+      "text": "Arcane Gate"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Arcane Lock - Spell.md",
+      "kind": "page-title",
+      "text": "Arcane Lock"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Arcane Vigor - Spell.md",
+      "kind": "page-title",
+      "text": "Arcane Vigor"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Astral Projection - Spell.md",
+      "kind": "page-title",
+      "text": "Astral Projection"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Augury - Spell.md",
+      "kind": "page-title",
+      "text": "Augury"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Banishment - Spell.md",
+      "kind": "page-title",
+      "text": "Banishment"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Battle Familiar - Spell.md",
+      "kind": "page-title",
+      "text": "Battle Familiar"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Bestow Curse - Spell.md",
+      "kind": "page-title",
+      "text": "Bestow Curse"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Bigby's Hand - Spell.md",
+      "kind": "page-title",
+      "text": "Bigby's Hand"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Blade Ward - Spell.md",
+      "kind": "page-title",
+      "text": "Blade Ward"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Bless - Spell.md",
+      "kind": "page-title",
+      "text": "Bless"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Blight - Spell.md",
+      "kind": "page-title",
+      "text": "Blight"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Blindness-Deafness - Spell.md",
+      "kind": "page-title",
+      "text": "Blindness/Deafness"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Blink - Spell.md",
+      "kind": "page-title",
+      "text": "Blink"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Chain Lightning - Spell.md",
+      "kind": "page-title",
+      "text": "Chain Lightning"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Chill Touch - Spell.md",
+      "kind": "page-title",
+      "text": "Chill Touch"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Chromatic Orb - Spell.md",
+      "kind": "page-title",
+      "text": "Chromatic Orb"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Circle of Power - Spell.md",
+      "kind": "page-title",
+      "text": "Circle of Power"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Clairvoyance - Spell.md",
+      "kind": "page-title",
+      "text": "Clairvoyance"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Clone - Spell.md",
+      "kind": "page-title",
+      "text": "Clone"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Cloudkill - Spell.md",
+      "kind": "page-title",
+      "text": "Cloudkill"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Comprehend Languages - Spell.md",
+      "kind": "page-title",
+      "text": "Comprehend Languages"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Cone of Cold - Spell.md",
+      "kind": "page-title",
+      "text": "Cone of Cold"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Confusion - Spell.md",
+      "kind": "page-title",
+      "text": "Confusion"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Conjure Elemental - Spell.md",
+      "kind": "page-title",
+      "text": "Conjure Elemental"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Conjure Minor Elementals - Spell.md",
+      "kind": "page-title",
+      "text": "Conjure Minor Elementals"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Contact Other Plane - Spell.md",
+      "kind": "page-title",
+      "text": "Contact Other Plane"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Contingency - Spell.md",
+      "kind": "page-title",
+      "text": "Contingency"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Control Water - Spell.md",
+      "kind": "page-title",
+      "text": "Control Water"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Control Weather - Spell.md",
+      "kind": "page-title",
+      "text": "Control Weather"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Counterspell - Spell.md",
+      "kind": "page-title",
+      "text": "Counterspell"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Creation - Spell.md",
+      "kind": "page-title",
+      "text": "Creation"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Dark Star - Spell.md",
+      "kind": "page-title",
+      "text": "Dark Star"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Demiplane - Spell.md",
+      "kind": "page-title",
+      "text": "Demiplane"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Detect Magic - Spell.md",
+      "kind": "page-title",
+      "text": "Detect Magic"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Detect Thoughts - Spell.md",
+      "kind": "page-title",
+      "text": "Detect Thoughts"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Dimension Door - Spell.md",
+      "kind": "page-title",
+      "text": "Dimension Door"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Disguise Self - Spell.md",
+      "kind": "page-title",
+      "text": "Disguise Self"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Disintegrate - Spell.md",
+      "kind": "page-title",
+      "text": "Disintegrate"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Dispel Magic - Spell.md",
+      "kind": "page-title",
+      "text": "Dispel Magic"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Dissonant Whispers - Spell.md",
+      "kind": "page-title",
+      "text": "Dissonant Whispers"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Distorted Distance - Spell.md",
+      "kind": "page-title",
+      "text": "Distorted Distance"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Divination - Spell.md",
+      "kind": "page-title",
+      "text": "Divination"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Dominate Beast - Spell.md",
+      "kind": "page-title",
+      "text": "Dominate Beast"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Dominate Monster - Spell.md",
+      "kind": "page-title",
+      "text": "Dominate Monster"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Dominate Person - Spell.md",
+      "kind": "page-title",
+      "text": "Dominate Person"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Dragon's Breath - Spell.md",
+      "kind": "page-title",
+      "text": "Dragon's Breath"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Drawmij's Instant Summons - Spell.md",
+      "kind": "page-title",
+      "text": "Drawmij's Instant Summons"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Dream - Spell.md",
+      "kind": "page-title",
+      "text": "Dream"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Enhance Ability - Spell.md",
+      "kind": "page-title",
+      "text": "Enhance Ability"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Enlarge-Reduce - Spell.md",
+      "kind": "page-title",
+      "text": "Enlarge/Reduce"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Enthrall - Spell.md",
+      "kind": "page-title",
+      "text": "Enthrall"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Etherealness - Spell.md",
+      "kind": "page-title",
+      "text": "Etherealness"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Eyebite - Spell.md",
+      "kind": "page-title",
+      "text": "Eyebite"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Fabricate - Spell.md",
+      "kind": "page-title",
+      "text": "Fabricate"
+    },
+    {
+      "from": "003 Spells/Spell Cards/False Life - Spell.md",
+      "kind": "page-title",
+      "text": "False Life"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Fear - Spell.md",
+      "kind": "page-title",
+      "text": "Fear"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Feather Fall - Spell.md",
+      "kind": "page-title",
+      "text": "Feather Fall"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Find Familiar - Spell.md",
+      "kind": "page-title",
+      "text": "Find Familiar"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Finger of Death - Spell.md",
+      "kind": "page-title",
+      "text": "Finger of Death"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Fire Bolt - Spell.md",
+      "kind": "page-title",
+      "text": "Fire Bolt"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Fire Shield - Spell.md",
+      "kind": "page-title",
+      "text": "Fire Shield"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Fireball - Spell.md",
+      "kind": "page-title",
+      "text": "Fireball"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Fly - Spell.md",
+      "kind": "page-title",
+      "text": "Fly"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Fog Cloud - Spell.md",
+      "kind": "page-title",
+      "text": "Fog Cloud"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Forcecage - Spell.md",
+      "kind": "page-title",
+      "text": "Forcecage"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Foresight - Spell.md",
+      "kind": "page-title",
+      "text": "Foresight"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Fortune's Favor - Spell.md",
+      "kind": "page-title",
+      "text": "Fortune's Favor"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Gate - Spell.md",
+      "kind": "page-title",
+      "text": "Gate"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Gentle Repose - Spell.md",
+      "kind": "page-title",
+      "text": "Gentle Repose"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Gift of Alacrity - Spell.md",
+      "kind": "page-title",
+      "text": "Gift of Alacrity"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Globe of Invulnerability - Spell.md",
+      "kind": "page-title",
+      "text": "Globe of Invulnerability"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Glyph of Warding - Spell.md",
+      "kind": "page-title",
+      "text": "Glyph of Warding"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Gravity Fissure - Spell.md",
+      "kind": "page-title",
+      "text": "Gravity Fissure"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Gravity Sinkhole - Spell.md",
+      "kind": "page-title",
+      "text": "Gravity Sinkhole"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Grease - Spell.md",
+      "kind": "page-title",
+      "text": "Grease"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Greater Invisibility - Spell.md",
+      "kind": "page-title",
+      "text": "Greater Invisibility"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Guards and Wards - Spell.md",
+      "kind": "page-title",
+      "text": "Guards and Wards"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Hallucinatory Terrain - Spell.md",
+      "kind": "page-title",
+      "text": "Hallucinatory Terrain"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Haste - Spell.md",
+      "kind": "page-title",
+      "text": "Haste"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Healing Word - Spell.md",
+      "kind": "page-title",
+      "text": "Healing Word"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Hold Monster - Spell.md",
+      "kind": "page-title",
+      "text": "Hold Monster"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Hold Person - Spell.md",
+      "kind": "page-title",
+      "text": "Hold Person"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Hypnotic Pattern - Spell.md",
+      "kind": "page-title",
+      "text": "Hypnotic Pattern"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Identify - Spell.md",
+      "kind": "page-title",
+      "text": "Identify"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Illusory Dragon - Spell.md",
+      "kind": "page-title",
+      "text": "Illusory Dragon"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Immovable Object - Spell.md",
+      "kind": "page-title",
+      "text": "Immovable Object"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Imprisonment - Spell.md",
+      "kind": "page-title",
+      "text": "Imprisonment"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Invisibility - Spell.md",
+      "kind": "page-title",
+      "text": "Invisibility"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Knock - Spell.md",
+      "kind": "page-title",
+      "text": "Knock"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Legend Lore - Spell.md",
+      "kind": "page-title",
+      "text": "Legend Lore"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Levitate - Spell.md",
+      "kind": "page-title",
+      "text": "Levitate"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Light - Spell.md",
+      "kind": "page-title",
+      "text": "Light"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Lightning Ring - Spell.md",
+      "kind": "page-title",
+      "text": "Lightning Ring"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Locate Creature - Spell.md",
+      "kind": "page-title",
+      "text": "Locate Creature"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Locate Object - Spell.md",
+      "kind": "page-title",
+      "text": "Locate Object"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Longstrider - Spell.md",
+      "kind": "page-title",
+      "text": "Longstrider"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Mage Armor - Spell.md",
+      "kind": "page-title",
+      "text": "Mage Armor"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Mage Hand - Spell.md",
+      "kind": "page-title",
+      "text": "Mage Hand"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Magic Circle - Spell.md",
+      "kind": "page-title",
+      "text": "Magic Circle"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Magic Jar - Spell.md",
+      "kind": "page-title",
+      "text": "Magic Jar"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Magic Missile - Spell.md",
+      "kind": "page-title",
+      "text": "Magic Missile"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Magic Weapon - Spell.md",
+      "kind": "page-title",
+      "text": "Magic Weapon"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Magnify Gravity - Spell.md",
+      "kind": "page-title",
+      "text": "Magnify Gravity"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Major Image - Spell.md",
+      "kind": "page-title",
+      "text": "Major Image"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Mass Suggestion - Spell.md",
+      "kind": "page-title",
+      "text": "Mass Suggestion"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Maze - Spell.md",
+      "kind": "page-title",
+      "text": "Maze"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Meteor Swarm - Spell.md",
+      "kind": "page-title",
+      "text": "Meteor Swarm"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Mind Blank - Spell.md",
+      "kind": "page-title",
+      "text": "Mind Blank"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Mind Sliver - Spell.md",
+      "kind": "page-title",
+      "text": "Mind Sliver"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Minor Illusion - Spell.md",
+      "kind": "page-title",
+      "text": "Minor Illusion"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Mirage Arcane - Spell.md",
+      "kind": "page-title",
+      "text": "Mirage Arcane"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Mirror Image - Spell.md",
+      "kind": "page-title",
+      "text": "Mirror Image"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Misty Step - Spell.md",
+      "kind": "page-title",
+      "text": "Misty Step"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Modify Memory - Spell.md",
+      "kind": "page-title",
+      "text": "Modify Memory"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Mordenkainen's Private Sanctum - Spell.md",
+      "kind": "page-title",
+      "text": "Mordenkainen's Private Sanctum"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Nondetection - Spell.md",
+      "kind": "page-title",
+      "text": "Nondetection"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Nystul's Magic Aura - Spell.md",
+      "kind": "page-title",
+      "text": "Nystul's Magic Aura"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Passwall - Spell.md",
+      "kind": "page-title",
+      "text": "Passwall"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Phantasmal Force - Spell.md",
+      "kind": "page-title",
+      "text": "Phantasmal Force"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Phantom Steed - Spell.md",
+      "kind": "page-title",
+      "text": "Phantom Steed"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Planar Binding - Spell.md",
+      "kind": "page-title",
+      "text": "Planar Binding"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Plane Shift - Spell.md",
+      "kind": "page-title",
+      "text": "Plane Shift"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Polymorph - Spell.md",
+      "kind": "page-title",
+      "text": "Polymorph"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Power Word Stun - Spell.md",
+      "kind": "page-title",
+      "text": "Power Word Stun"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Prestidigitation - Spell.md",
+      "kind": "page-title",
+      "text": "Prestidigitation"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Prismatic Spray - Spell.md",
+      "kind": "page-title",
+      "text": "Prismatic Spray"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Prismatic Wall - Spell.md",
+      "kind": "page-title",
+      "text": "Prismatic Wall"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Programmed Illusion - Spell.md",
+      "kind": "page-title",
+      "text": "Programmed Illusion"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Project Image - Spell.md",
+      "kind": "page-title",
+      "text": "Project Image"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Protection from Evil and Good - Spell.md",
+      "kind": "page-title",
+      "text": "Protection from Evil and Good"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Pulse Wave - Spell.md",
+      "kind": "page-title",
+      "text": "Pulse Wave"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Ravenous Void - Spell.md",
+      "kind": "page-title",
+      "text": "Ravenous Void"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Ray of Frost - Spell.md",
+      "kind": "page-title",
+      "text": "Ray of Frost"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Reality Break - Spell.md",
+      "kind": "page-title",
+      "text": "Reality Break"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Remove Curse - Spell.md",
+      "kind": "page-title",
+      "text": "Remove Curse"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Resilient Sphere - Spell.md",
+      "kind": "page-title",
+      "text": "Resilient Sphere"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Reverse Gravity - Spell.md",
+      "kind": "page-title",
+      "text": "Reverse Gravity"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Rope Trick - Spell.md",
+      "kind": "page-title",
+      "text": "Rope Trick"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Sapping Sting - Spell.md",
+      "kind": "page-title",
+      "text": "Sapping Sting"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Scatter - Spell.md",
+      "kind": "page-title",
+      "text": "Scatter"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Scorching Ray - Spell.md",
+      "kind": "page-title",
+      "text": "Scorching Ray"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Scrying - Spell.md",
+      "kind": "page-title",
+      "text": "Scrying"
+    },
+    {
+      "from": "003 Spells/Spell Cards/See Invisibility - Spell.md",
+      "kind": "page-title",
+      "text": "See Invisibility"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Seeming - Spell.md",
+      "kind": "page-title",
+      "text": "Seeming"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Sending - Spell.md",
+      "kind": "page-title",
+      "text": "Sending"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Sequester - Spell.md",
+      "kind": "page-title",
+      "text": "Sequester"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Shadow Blade - Spell.md",
+      "kind": "page-title",
+      "text": "Shadow Blade"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Shapechange - Spell.md",
+      "kind": "page-title",
+      "text": "Shapechange"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Shatter - Spell.md",
+      "kind": "page-title",
+      "text": "Shatter"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Shield - Spell.md",
+      "kind": "page-title",
+      "text": "Shield"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Sickening Radiance - Spell.md",
+      "kind": "page-title",
+      "text": "Sickening Radiance"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Silent Image - Spell.md",
+      "kind": "page-title",
+      "text": "Silent Image"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Silvery Barbs - Spell.md",
+      "kind": "page-title",
+      "text": "Silvery Barbs"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Simulacrum - Spell.md",
+      "kind": "page-title",
+      "text": "Simulacrum"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Sleep - Spell.md",
+      "kind": "page-title",
+      "text": "Sleep"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Sleet Storm - Spell.md",
+      "kind": "page-title",
+      "text": "Sleet Storm"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Slow - Spell.md",
+      "kind": "page-title",
+      "text": "Slow"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Stone Shape - Spell.md",
+      "kind": "page-title",
+      "text": "Stone Shape"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Suggestion - Spell.md",
+      "kind": "page-title",
+      "text": "Suggestion"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Summon Aberration - Spell.md",
+      "kind": "page-title",
+      "text": "Summon Aberration"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Summon Beast - Spell.md",
+      "kind": "page-title",
+      "text": "Summon Beast"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Summon Construct - Spell.md",
+      "kind": "page-title",
+      "text": "Summon Construct"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Summon Dragon - Spell.md",
+      "kind": "page-title",
+      "text": "Summon Dragon"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Summon Elemental - Spell.md",
+      "kind": "page-title",
+      "text": "Summon Elemental"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Summon Fey - Spell.md",
+      "kind": "page-title",
+      "text": "Summon Fey"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Summon Fiend - Spell.md",
+      "kind": "page-title",
+      "text": "Summon Fiend"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Summon Undead - Spell.md",
+      "kind": "page-title",
+      "text": "Summon Undead"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Sunburst - Spell.md",
+      "kind": "page-title",
+      "text": "Sunburst"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Symbol - Spell.md",
+      "kind": "page-title",
+      "text": "Symbol"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Synaptic Static - Spell.md",
+      "kind": "page-title",
+      "text": "Synaptic Static"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Tasha's Hideous Laughter - Spell.md",
+      "kind": "page-title",
+      "text": "Tasha's Hideous Laughter"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Tasha's Mind Whip - Spell.md",
+      "kind": "page-title",
+      "text": "Tasha's Mind Whip"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Telekinesis - Spell.md",
+      "kind": "page-title",
+      "text": "Telekinesis"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Telepathic Bond - Spell.md",
+      "kind": "page-title",
+      "text": "Telepathic Bond"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Telepathy - Spell.md",
+      "kind": "page-title",
+      "text": "Telepathy"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Teleport - Spell.md",
+      "kind": "page-title",
+      "text": "Teleport"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Teleportation Circle - Spell.md",
+      "kind": "page-title",
+      "text": "Teleportation Circle"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Temporal Shunt - Spell.md",
+      "kind": "page-title",
+      "text": "Temporal Shunt"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Tether Essence - Spell.md",
+      "kind": "page-title",
+      "text": "Tether Essence"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Thunderwave - Spell.md",
+      "kind": "page-title",
+      "text": "Thunderwave"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Time Ravage - Spell.md",
+      "kind": "page-title",
+      "text": "Time Ravage"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Time Stop - Spell.md",
+      "kind": "page-title",
+      "text": "Time Stop"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Tiny Hut - Spell.md",
+      "kind": "page-title",
+      "text": "Tiny Hut"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Transfix - Spell.md",
+      "kind": "page-title",
+      "text": "Transfix"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Transmute Rock - Spell.md",
+      "kind": "page-title",
+      "text": "Transmute Rock"
+    },
+    {
+      "from": "003 Spells/Spell Cards/True Polymorph - Spell.md",
+      "kind": "page-title",
+      "text": "True Polymorph"
+    },
+    {
+      "from": "003 Spells/Spell Cards/True Seeing - Spell.md",
+      "kind": "page-title",
+      "text": "True Seeing"
+    },
+    {
+      "from": "003 Spells/Spell Cards/True Strike - Spell.md",
+      "kind": "page-title",
+      "text": "True Strike"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Unseen Servant - Spell.md",
+      "kind": "page-title",
+      "text": "Unseen Servant"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Vortex Warp - Spell.md",
+      "kind": "page-title",
+      "text": "Vortex Warp"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Wall of Fire - Spell.md",
+      "kind": "page-title",
+      "text": "Wall of Fire"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Wall of Force - Spell.md",
+      "kind": "page-title",
+      "text": "Wall of Force"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Wall of Stone - Spell.md",
+      "kind": "page-title",
+      "text": "Wall of Stone"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Water Breathing - Spell.md",
+      "kind": "page-title",
+      "text": "Water Breathing"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Web - Spell.md",
+      "kind": "page-title",
+      "text": "Web"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Wish - Spell.md",
+      "kind": "page-title",
+      "text": "Wish"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Witch Bolt - Spell.md",
+      "kind": "page-title",
+      "text": "Witch Bolt"
+    },
+    {
+      "from": "003 Spells/Spell Cards/Wristpocket - Spell.md",
+      "kind": "page-title",
+      "text": "Wristpocket"
+    },
+    {
+      "from": "003 Spells/Spells.md",
+      "kind": "callout",
+      "label": "Rules clarification",
+      "calloutType": "warning"
+    },
+    {
+      "from": "003 Spells/Spells.md",
+      "kind": "callout",
+      "label": "Quick Legend",
+      "calloutType": "info"
+    },
+    {
+      "from": "003 Spells/Spells.md",
+      "kind": "page-title",
+      "text": "Spell Reference"
+    },
+    {
+      "from": "004 Items & Crafting/Crafting.md",
+      "kind": "callout",
+      "label": "Scope",
+      "calloutType": "info"
+    },
+    {
+      "from": "004 Items & Crafting/Crafting.md",
+      "kind": "callout",
+      "label": "Wizard",
+      "calloutType": "tip"
+    },
+    {
+      "from": "004 Items & Crafting/Crafting.md",
+      "kind": "callout",
+      "label": "Access",
+      "calloutType": "warning"
+    },
+    {
+      "from": "004 Items & Crafting/Crafting.md",
+      "kind": "callout",
+      "label": "Spell Access",
+      "calloutType": "info"
+    },
+    {
+      "from": "004 Items & Crafting/Crafting.md",
+      "kind": "callout",
+      "label": "Normal Assistant Limit",
+      "calloutType": "warning"
+    },
+    {
+      "from": "004 Items & Crafting/Crafting.md",
+      "kind": "callout",
+      "label": "Scaling",
+      "calloutType": "tip"
+    },
+    {
+      "from": "004 Items & Crafting/Crafting.md",
+      "kind": "callout",
+      "label": "Wizard Crafting Principle",
+      "calloutType": "tip"
+    },
+    {
+      "from": "004 Items & Crafting/Crafting.md",
+      "kind": "page-title",
+      "text": "Crafting Items & Magic Items"
+    },
+    {
+      "from": "004 Items & Crafting/Evolving Magic Items.md",
+      "kind": "page-title",
+      "text": "Evolving Magic Items"
+    },
+    {
+      "from": "004 Items & Crafting/Item Cards/Amulet of Health - Item.md",
+      "kind": "page-title",
+      "text": "Amulet of Health"
+    },
+    {
+      "from": "004 Items & Crafting/Item Cards/Arcane Grimoire +1 - Item.md",
+      "kind": "page-title",
+      "text": "Arcane Grimoire +1"
+    },
+    {
+      "from": "004 Items & Crafting/Item Cards/Arcane Grimoire +2 - Item.md",
+      "kind": "page-title",
+      "text": "Arcane Grimoire +2"
+    },
+    {
+      "from": "004 Items & Crafting/Item Cards/Arcane Grimoire +3 - Item.md",
+      "kind": "page-title",
+      "text": "Arcane Grimoire +3"
+    },
+    {
+      "from": "004 Items & Crafting/Item Cards/Arcanist's Bestiary - Item.md",
+      "kind": "page-title",
+      "text": "Arcanist's Bestiary"
+    },
+    {
+      "from": "004 Items & Crafting/Item Cards/Bag of Holding - Item.md",
+      "kind": "page-title",
+      "text": "Bag of Holding"
+    },
+    {
+      "from": "004 Items & Crafting/Item Cards/Blackstaff - Item.md",
+      "kind": "page-title",
+      "text": "Blackstaff"
+    },
+    {
+      "from": "004 Items & Crafting/Item Cards/Blood Amulet - Item.md",
+      "kind": "page-title",
+      "text": "Blood Amulet"
+    },
+    {
+      "from": "004 Items & Crafting/Item Cards/Boon Companions' Bands - Item.md",
+      "kind": "page-title",
+      "text": "Boon Companions' Bands"
+    },
+    {
+      "from": "004 Items & Crafting/Item Cards/Bracers of Defense - Item.md",
+      "kind": "page-title",
+      "text": "Bracers of Defense"
+    },
+    {
+      "from": "004 Items & Crafting/Item Cards/Broom of Flying - Item.md",
+      "kind": "page-title",
+      "text": "Broom of Flying"
+    },
+    {
+      "from": "004 Items & Crafting/Item Cards/Carpet of Flying - Item.md",
+      "kind": "page-title",
+      "text": "Carpet of Flying"
+    },
+    {
+      "from": "004 Items & Crafting/Item Cards/Cloak of Protection - Item.md",
+      "kind": "page-title",
+      "text": "Cloak of Protection"
+    },
+    {
+      "from": "004 Items & Crafting/Item Cards/Diamond Staff - Item.md",
+      "kind": "page-title",
+      "text": "Diamond Staff"
+    },
+    {
+      "from": "004 Items & Crafting/Item Cards/Illusionist's Bracers - Item.md",
+      "kind": "page-title",
+      "text": "Illusionist's Bracers"
+    },
+    {
+      "from": "004 Items & Crafting/Item Cards/Ioun Stone of Vitality - Item.md",
+      "kind": "page-title",
+      "text": "Ioun Stone of Vitality"
+    },
+    {
+      "from": "004 Items & Crafting/Item Cards/Lucky Foot - Item.md",
+      "kind": "page-title",
+      "text": "Lucky Foot"
+    },
+    {
+      "from": "004 Items & Crafting/Item Cards/Magewright's Gloves - Item.md",
+      "kind": "page-title",
+      "text": "Magewright's Gloves"
+    },
+    {
+      "from": "004 Items & Crafting/Item Cards/Mantle of Spell Resistance - Item.md",
+      "kind": "page-title",
+      "text": "Mantle of Spell Resistance"
+    },
+    {
+      "from": "004 Items & Crafting/Item Cards/Mind Sharpener - Item.md",
+      "kind": "page-title",
+      "text": "Mind Sharpener"
+    },
+    {
+      "from": "004 Items & Crafting/Item Cards/Mizzium Apparatus - Item.md",
+      "kind": "page-title",
+      "text": "Mizzium Apparatus"
+    },
+    {
+      "from": "004 Items & Crafting/Item Cards/Necklace of the Beastly Familiar - Azurite - Item.md",
+      "kind": "page-title",
+      "text": "Necklace of the Beastly Familiar - Azurite"
+    },
+    {
+      "from": "004 Items & Crafting/Item Cards/Necklace of the Beastly Familiar - Chrysoprase - Item.md",
+      "kind": "page-title",
+      "text": "Necklace of the Beastly Familiar - Chrysoprase"
+    },
+    {
+      "from": "004 Items & Crafting/Item Cards/Necklace of the Beastly Familiar - Fire opal - Item.md",
+      "kind": "page-title",
+      "text": "Necklace of the Beastly Familiar - Fire opal"
+    },
+    {
+      "from": "004 Items & Crafting/Item Cards/Necklace of the Beastly Familiar - Topaz - Item.md",
+      "kind": "page-title",
+      "text": "Necklace of the Beastly Familiar - Topaz"
+    },
+    {
+      "from": "004 Items & Crafting/Item Cards/Necklace of the Beastly Familiar - Zircon - Item.md",
+      "kind": "page-title",
+      "text": "Necklace of the Beastly Familiar - Zircon"
+    },
+    {
+      "from": "004 Items & Crafting/Item Cards/Orb of Divination Detection - Item.md",
+      "kind": "page-title",
+      "text": "Orb of Divination Detection"
+    },
+    {
+      "from": "004 Items & Crafting/Item Cards/Pearl of Power - Item.md",
+      "kind": "page-title",
+      "text": "Pearl of Power"
+    },
+    {
+      "from": "004 Items & Crafting/Item Cards/Portable Hole - Item.md",
+      "kind": "page-title",
+      "text": "Portable Hole"
+    },
+    {
+      "from": "004 Items & Crafting/Item Cards/Potion of Dragon's Breath - Item.md",
+      "kind": "page-title",
+      "text": "Potion of Dragon's Breath"
+    },
+    {
+      "from": "004 Items & Crafting/Item Cards/Potion of Tirelessness - Item.md",
+      "kind": "page-title",
+      "text": "Potion of Tirelessness"
+    },
+    {
+      "from": "004 Items & Crafting/Item Cards/Prismatic Rune - Item.md",
+      "kind": "page-title",
+      "text": "Prismatic Rune"
+    },
+    {
+      "from": "004 Items & Crafting/Item Cards/Ring of Dedicated Focus - Item.md",
+      "kind": "page-title",
+      "text": "Ring of Dedicated Focus"
+    },
+    {
+      "from": "004 Items & Crafting/Item Cards/Ring of Protection - Item.md",
+      "kind": "page-title",
+      "text": "Ring of Protection"
+    },
+    {
+      "from": "004 Items & Crafting/Item Cards/Ring of Spell Storing - Item.md",
+      "kind": "page-title",
+      "text": "Ring of Spell Storing"
+    },
+    {
+      "from": "004 Items & Crafting/Item Cards/Robe of the Archmagi - Item.md",
+      "kind": "page-title",
+      "text": "Robe of the Archmagi"
+    },
+    {
+      "from": "004 Items & Crafting/Item Cards/Rod of Absorption - Item.md",
+      "kind": "page-title",
+      "text": "Rod of Absorption"
+    },
+    {
+      "from": "004 Items & Crafting/Item Cards/Scholar's Anchoring Bangle - Item.md",
+      "kind": "page-title",
+      "text": "Scholar's Anchoring Bangle"
+    },
+    {
+      "from": "004 Items & Crafting/Item Cards/Shiftweave - Item.md",
+      "kind": "page-title",
+      "text": "Shiftweave"
+    },
+    {
+      "from": "004 Items & Crafting/Item Cards/Spell Component Ring - Item.md",
+      "kind": "page-title",
+      "text": "Spell Component Ring"
+    },
+    {
+      "from": "004 Items & Crafting/Item Cards/Spell Duelist's Trophy - Item.md",
+      "kind": "page-title",
+      "text": "Spell Duelist's Trophy"
+    },
+    {
+      "from": "004 Items & Crafting/Item Cards/Staff of Defense - 2014 - Item.md",
+      "kind": "page-title",
+      "text": "Staff of Defense - 2014"
+    },
+    {
+      "from": "004 Items & Crafting/Item Cards/Staff of Defense - 2023 - Item.md",
+      "kind": "page-title",
+      "text": "Staff of Defense - 2023"
+    },
+    {
+      "from": "004 Items & Crafting/Item Cards/Staff of Power - Item.md",
+      "kind": "page-title",
+      "text": "Staff of Power"
+    },
+    {
+      "from": "004 Items & Crafting/Item Cards/Staff of the Magi - Item.md",
+      "kind": "page-title",
+      "text": "Staff of the Magi"
+    },
+    {
+      "from": "004 Items & Crafting/Item Cards/Tome of Clear Thought - Item.md",
+      "kind": "page-title",
+      "text": "Tome of Clear Thought"
+    },
+    {
+      "from": "004 Items & Crafting/Item Cards/Traveler's Pearl - Item.md",
+      "kind": "page-title",
+      "text": "Traveler's Pearl"
+    },
+    {
+      "from": "004 Items & Crafting/Item Cards/Universal Pantograph - Item.md",
+      "kind": "page-title",
+      "text": "Universal Pantograph"
+    },
+    {
+      "from": "004 Items & Crafting/Item Cards/Wand of Web - Item.md",
+      "kind": "page-title",
+      "text": "Wand of Web"
+    },
+    {
+      "from": "004 Items & Crafting/Item Cards/Winged Boots - Item.md",
+      "kind": "page-title",
+      "text": "Winged Boots"
+    },
+    {
+      "from": "004 Items & Crafting/Item Cards/Wyrmreaver Gauntlets - Item.md",
+      "kind": "page-title",
+      "text": "Wyrmreaver Gauntlets"
+    },
+    {
+      "from": "004 Items & Crafting/Items for Wizard.md",
+      "kind": "callout",
+      "label": "Rules clarification",
+      "calloutType": "warning"
+    },
+    {
+      "from": "004 Items & Crafting/Items for Wizard.md",
+      "kind": "page-title",
+      "text": "Wizard Item Consideration List"
+    },
+    {
+      "from": "004 Items & Crafting/Magic Item Attunement.md",
+      "kind": "callout",
+      "label": "Core Question",
+      "calloutType": "tip"
+    },
+    {
+      "from": "004 Items & Crafting/Magic Item Attunement.md",
+      "kind": "callout",
+      "label": "Check Compatibility",
+      "calloutType": "warning"
+    },
+    {
+      "from": "004 Items & Crafting/Magic Item Attunement.md",
+      "kind": "callout",
+      "label": "Opportunity Cost",
+      "calloutType": "tip"
+    },
+    {
+      "from": "004 Items & Crafting/Magic Item Attunement.md",
+      "kind": "page-title",
+      "text": "Magic Item Attunement"
+    },
+    {
+      "from": "005 Creature, Minions & Forms/000 Minion Management.md",
+      "kind": "page-title",
+      "text": "Minion Management"
+    },
+    {
+      "from": "005 Creature, Minions & Forms/Animate Dead - Necromancer.md",
+      "kind": "page-title",
+      "text": "Animate Dead — Necromancer"
+    },
+    {
+      "from": "005 Creature, Minions & Forms/Creature Cards/Bat - Creature.md",
+      "kind": "page-title",
+      "text": "Bat"
+    },
+    {
+      "from": "005 Creature, Minions & Forms/Creature Cards/Couatl - Creature.md",
+      "kind": "page-title",
+      "text": "Couatl"
+    },
+    {
+      "from": "005 Creature, Minions & Forms/Creature Cards/Earth Elemental - Creature.md",
+      "kind": "page-title",
+      "text": "Earth Elemental"
+    },
+    {
+      "from": "005 Creature, Minions & Forms/Creature Cards/Giant Ape - Creature.md",
+      "kind": "page-title",
+      "text": "Giant Ape"
+    },
+    {
+      "from": "005 Creature, Minions & Forms/Creature Cards/Giant Bat - Creature.md",
+      "kind": "page-title",
+      "text": "Giant Bat"
+    },
+    {
+      "from": "005 Creature, Minions & Forms/Creature Cards/Giant Constrictor Snake - Creature.md",
+      "kind": "page-title",
+      "text": "Giant Constrictor Snake"
+    },
+    {
+      "from": "005 Creature, Minions & Forms/Creature Cards/Giant Scorpion - Creature.md",
+      "kind": "page-title",
+      "text": "Giant Scorpion"
+    },
+    {
+      "from": "005 Creature, Minions & Forms/Creature Cards/Giant Shark - Creature.md",
+      "kind": "page-title",
+      "text": "Giant Shark"
+    },
+    {
+      "from": "005 Creature, Minions & Forms/Creature Cards/Giant Spider - Creature.md",
+      "kind": "page-title",
+      "text": "Giant Spider"
+    },
+    {
+      "from": "005 Creature, Minions & Forms/Creature Cards/Guardian Naga - Creature.md",
+      "kind": "page-title",
+      "text": "Guardian Naga"
+    },
+    {
+      "from": "005 Creature, Minions & Forms/Creature Cards/Invisible Stalker - Creature.md",
+      "kind": "page-title",
+      "text": "Invisible Stalker"
+    },
+    {
+      "from": "005 Creature, Minions & Forms/Creature Cards/Nightmare - Creature.md",
+      "kind": "page-title",
+      "text": "Nightmare"
+    },
+    {
+      "from": "005 Creature, Minions & Forms/Creature Cards/Octopus - Creature.md",
+      "kind": "page-title",
+      "text": "Octopus"
+    },
+    {
+      "from": "005 Creature, Minions & Forms/Creature Cards/Owl - Creature.md",
+      "kind": "page-title",
+      "text": "Owl"
+    },
+    {
+      "from": "005 Creature, Minions & Forms/Creature Cards/Pegasus - Creature.md",
+      "kind": "page-title",
+      "text": "Pegasus"
+    },
+    {
+      "from": "005 Creature, Minions & Forms/Creature Cards/Planetar - Creature.md",
+      "kind": "page-title",
+      "text": "Planetar"
+    },
+    {
+      "from": "005 Creature, Minions & Forms/Creature Cards/Purple Worm - Creature.md",
+      "kind": "page-title",
+      "text": "Purple Worm"
+    },
+    {
+      "from": "005 Creature, Minions & Forms/Creature Cards/Shield Guardian - Creature.md",
+      "kind": "page-title",
+      "text": "Shield Guardian"
+    },
+    {
+      "from": "005 Creature, Minions & Forms/Creature Cards/Spider - Creature.md",
+      "kind": "page-title",
+      "text": "Spider"
+    },
+    {
+      "from": "005 Creature, Minions & Forms/Creature Cards/Tyrannosaurus Rex - Creature.md",
+      "kind": "page-title",
+      "text": "Tyrannosaurus Rex"
+    },
+    {
+      "from": "005 Creature, Minions & Forms/Find Familiar.md",
+      "kind": "callout",
+      "label": "Familiar utility still has operating costs",
+      "calloutType": "important"
+    },
+    {
+      "from": "005 Creature, Minions & Forms/Find Familiar.md",
+      "kind": "callout",
+      "label": "Tip",
+      "calloutType": "tip"
+    },
+    {
+      "from": "005 Creature, Minions & Forms/Find Familiar.md",
+      "kind": "page-title",
+      "text": "Find Familiar"
+    },
+    {
+      "from": "005 Creature, Minions & Forms/Form Catalogue.md",
+      "kind": "dataview-table",
+      "count": 11,
+      "fields": [
+        "cr",
+        "size",
+        "hp",
+        "roles",
+        "senses"
+      ]
+    },
+    {
+      "from": "005 Creature, Minions & Forms/Form Catalogue.md",
+      "kind": "dataview-table",
+      "count": 17,
+      "fields": [
+        "cr",
+        "fly_ft",
+        "swim_ft",
+        "climb_ft",
+        "burrow_ft",
+        "roles"
+      ]
+    },
+    {
+      "from": "005 Creature, Minions & Forms/Form Catalogue.md",
+      "kind": "dataview-table",
+      "count": 19,
+      "fields": [
+        "cr",
+        "hp",
+        "roles",
+        "senses"
+      ]
+    },
+    {
+      "from": "005 Creature, Minions & Forms/Form Catalogue.md",
+      "kind": "dataview-table",
+      "count": 17,
+      "fields": [
+        "cr",
+        "size",
+        "creature_type",
+        "roles",
+        "planar_binding"
+      ]
+    },
+    {
+      "from": "005 Creature, Minions & Forms/Form Catalogue.md",
+      "kind": "dataview-table",
+      "count": 7,
+      "fields": [
+        "cr",
+        "creature_type",
+        "roles",
+        "senses"
+      ]
+    },
+    {
+      "from": "005 Creature, Minions & Forms/Form Catalogue.md",
+      "kind": "dataview-table",
+      "count": 4,
+      "fields": [
+        "size",
+        "hp",
+        "fly_ft",
+        "swim_ft",
+        "climb_ft",
+        "senses"
+      ]
+    },
+    {
+      "from": "005 Creature, Minions & Forms/Form Catalogue.md",
+      "kind": "dataview-table",
+      "count": 20,
+      "fields": [
+        "source_version",
+        "source"
+      ]
+    },
+    {
+      "from": "005 Creature, Minions & Forms/Form Catalogue.md",
+      "kind": "page-title",
+      "text": "Form Catalogue"
+    },
+    {
+      "from": "005 Creature, Minions & Forms/Form Legality Guide.md",
+      "kind": "page-title",
+      "text": "Form Legality Guide"
+    },
+    {
+      "from": "005 Creature, Minions & Forms/Planar Binding Candidate.md",
+      "kind": "page-title",
+      "text": "Planar Binding Candidates"
+    },
+    {
+      "from": "005 Creature, Minions & Forms/Planar Binding Mount.md",
+      "kind": "page-title",
+      "text": "Planar Binding Mounts"
+    },
+    {
+      "from": "005 Creature, Minions & Forms/Polymorph.md",
+      "kind": "page-title",
+      "text": "Polymorph"
+    },
+    {
+      "from": "005 Creature, Minions & Forms/Shapechange.md",
+      "kind": "callout",
+      "label": "Form eligibility and concentration",
+      "calloutType": "important"
+    },
+    {
+      "from": "005 Creature, Minions & Forms/Shapechange.md",
+      "kind": "page-title",
+      "text": "Shapechange"
+    },
+    {
+      "from": "005 Creature, Minions & Forms/Summoning.md",
+      "kind": "page-title",
+      "text": "Summoning"
+    },
+    {
+      "from": "005 Creature, Minions & Forms/True Polymorph.md",
+      "kind": "callout",
+      "label": "Choose the transformation mode first",
+      "calloutType": "important"
+    },
+    {
+      "from": "005 Creature, Minions & Forms/True Polymorph.md",
+      "kind": "page-title",
+      "text": "True Polymorph"
+    },
+    {
+      "from": "006 Housing & Bastion/Bastion Crafting.md",
+      "kind": "callout",
+      "label": "Important",
+      "calloutType": "important"
+    },
+    {
+      "from": "006 Housing & Bastion/Bastion Crafting.md",
+      "kind": "page-title",
+      "text": "Crafting for Profit"
+    },
+    {
+      "from": "006 Housing & Bastion/Bastion Progression.md",
+      "kind": "page-title",
+      "text": "Bastion Progression"
+    },
+    {
+      "from": "006 Housing & Bastion/Bastion.md",
+      "kind": "page-title",
+      "text": "Bastions"
+    },
+    {
+      "from": "006 Housing & Bastion/Construction & Defense.md",
+      "kind": "page-title",
+      "text": "Construction & Defense"
+    },
+    {
+      "from": "006 Housing & Bastion/Facilities.md",
+      "kind": "page-title",
+      "text": "Facilities"
+    },
+    {
+      "from": "006 Housing & Bastion/Hirelings.md",
+      "kind": "page-title",
+      "text": "Hirelings"
+    },
+    {
+      "from": "007 Tactics/Arcana Unleashed Combinations.md",
+      "kind": "page-title",
+      "text": "Arcana Unleashed Combinations"
+    },
+    {
+      "from": "007 Tactics/Arcane Exploits.md",
+      "kind": "callout",
+      "label": "High-Optimization Rules Interactions",
+      "calloutType": "warning"
+    },
+    {
+      "from": "007 Tactics/Arcane Exploits.md",
+      "kind": "callout",
+      "label": "Ruling",
+      "calloutType": "warning"
+    },
+    {
+      "from": "007 Tactics/Arcane Exploits.md",
+      "kind": "callout",
+      "label": "Ruling",
+      "calloutType": "warning"
+    },
+    {
+      "from": "007 Tactics/Arcane Exploits.md",
+      "kind": "callout",
+      "label": "Check before using",
+      "calloutType": "warning"
+    },
+    {
+      "from": "007 Tactics/Arcane Exploits.md",
+      "kind": "page-title",
+      "text": "Arcane Exploits"
+    },
+    {
+      "from": "007 Tactics/Circle Casting.md",
+      "kind": "page-title",
+      "text": "Circle Magic"
+    },
+    {
+      "from": "007 Tactics/Combat Dashboard.md",
+      "kind": "page-title",
+      "text": "Combat Dashboard"
+    },
+    {
+      "from": "007 Tactics/Concentration Strategy.md",
+      "kind": "callout",
+      "label": "Preserving Concentration is not always preserving the effect",
+      "calloutType": "important"
+    },
+    {
+      "from": "007 Tactics/Concentration Strategy.md",
+      "kind": "page-title",
+      "text": "Concentration Strategy"
+    },
+    {
+      "from": "007 Tactics/Countering Spellcasters.md",
+      "kind": "callout",
+      "label": "Cover and isolation tradeoffs",
+      "calloutType": "important"
+    },
+    {
+      "from": "007 Tactics/Countering Spellcasters.md",
+      "kind": "callout",
+      "label": "Rules clarification",
+      "calloutType": "warning"
+    },
+    {
+      "from": "007 Tactics/Countering Spellcasters.md",
+      "kind": "page-title",
+      "text": "Countering Spellcasters"
+    },
+    {
+      "from": "007 Tactics/Information Warfare.md",
+      "kind": "callout",
+      "label": "Scope",
+      "calloutType": "note"
+    },
+    {
+      "from": "007 Tactics/Information Warfare.md",
+      "kind": "page-title",
+      "text": "High-Level Information Warfare"
+    },
+    {
+      "from": "007 Tactics/Initiative & First-Turn Strategy.md",
+      "kind": "page-title",
+      "text": "Initiative & First-Turn Strategy"
+    },
+    {
+      "from": "007 Tactics/Prepared Loadouts.md",
+      "kind": "page-title",
+      "text": "Prepared Loadouts"
+    },
+    {
+      "from": "007 Tactics/Rest Casting.md",
+      "kind": "callout",
+      "label": "Rules clarification",
+      "calloutType": "warning"
+    },
+    {
+      "from": "007 Tactics/Rest Casting.md",
+      "kind": "callout",
+      "label": "2024 Long Rest Rule",
+      "calloutType": "warning"
+    },
+    {
+      "from": "007 Tactics/Rest Casting.md",
+      "kind": "page-title",
+      "text": "Rest Casting"
+    },
+    {
+      "from": "007 Tactics/Spell Tactics.md",
+      "kind": "callout",
+      "label": "Combo prerequisites",
+      "calloutType": "important"
+    },
+    {
+      "from": "007 Tactics/Spell Tactics.md",
+      "kind": "callout",
+      "label": "Trigger Wording",
+      "calloutType": "warning"
+    },
+    {
+      "from": "007 Tactics/Spell Tactics.md",
+      "kind": "page-title",
+      "text": "Mobility & Kiting"
+    },
+    {
+      "from": "007 Tactics/Summon Damage Benchmarks.md",
+      "kind": "page-title",
+      "text": "Summon Damage Benchmarks"
+    },
+    {
+      "from": "008 Advanced Wizardry/Complex Spells/Contingency Optimization.md",
+      "kind": "callout",
+      "label": "Does the spell still work in the triggering condition?",
+      "calloutType": "important"
+    },
+    {
+      "from": "008 Advanced Wizardry/Complex Spells/Contingency Optimization.md",
+      "kind": "page-title",
+      "text": "Contingency Optimization"
+    },
+    {
+      "from": "008 Advanced Wizardry/Complex Spells/Glyph of Warding.md",
+      "kind": "callout",
+      "label": "Check before using",
+      "calloutType": "warning"
+    },
+    {
+      "from": "008 Advanced Wizardry/Complex Spells/Glyph of Warding.md",
+      "kind": "page-title",
+      "text": "Glyph of Warding"
+    },
+    {
+      "from": "008 Advanced Wizardry/Complex Spells/Magic Jar Optimization.md",
+      "kind": "callout",
+      "label": "Revised host benefits and survival limits",
+      "calloutType": "warning"
+    },
+    {
+      "from": "008 Advanced Wizardry/Complex Spells/Magic Jar Optimization.md",
+      "kind": "callout",
+      "label": "Rules-Dense Spell",
+      "calloutType": "warning"
+    },
+    {
+      "from": "008 Advanced Wizardry/Complex Spells/Magic Jar Optimization.md",
+      "kind": "callout",
+      "label": "Exploit Verification",
+      "calloutType": "warning"
+    },
+    {
+      "from": "008 Advanced Wizardry/Complex Spells/Magic Jar Optimization.md",
+      "kind": "page-title",
+      "text": "Magic Jar Optimization"
+    },
+    {
+      "from": "008 Advanced Wizardry/Complex Spells/Planar Binding.md",
+      "kind": "callout",
+      "label": "Rules clarification",
+      "calloutType": "warning"
+    },
+    {
+      "from": "008 Advanced Wizardry/Complex Spells/Planar Binding.md",
+      "kind": "callout",
+      "label": "Exact Interaction",
+      "calloutType": "warning"
+    },
+    {
+      "from": "008 Advanced Wizardry/Complex Spells/Planar Binding.md",
+      "kind": "callout",
+      "label": "Verify Timing",
+      "calloutType": "warning"
+    },
+    {
+      "from": "008 Advanced Wizardry/Complex Spells/Planar Binding.md",
+      "kind": "callout",
+      "label": "High-Optimization / Table-Sensitive",
+      "calloutType": "warning"
+    },
+    {
+      "from": "008 Advanced Wizardry/Complex Spells/Planar Binding.md",
+      "kind": "page-title",
+      "text": "Planar Binding Optimization"
+    },
+    {
+      "from": "008 Advanced Wizardry/Complex Spells/Simulacrum.md",
+      "kind": "callout",
+      "label": "Equipment Ruling",
+      "calloutType": "warning"
+    },
+    {
+      "from": "008 Advanced Wizardry/Complex Spells/Simulacrum.md",
+      "kind": "callout",
+      "label": "Do Not Plan a Secondary Attunement Package",
+      "calloutType": "warning"
+    },
+    {
+      "from": "008 Advanced Wizardry/Complex Spells/Simulacrum.md",
+      "kind": "callout",
+      "label": "Legacy Information",
+      "calloutType": "warning"
+    },
+    {
+      "from": "008 Advanced Wizardry/Complex Spells/Simulacrum.md",
+      "kind": "callout",
+      "label": "Complex Interaction",
+      "calloutType": "warning"
+    },
+    {
+      "from": "008 Advanced Wizardry/Complex Spells/Simulacrum.md",
+      "kind": "page-title",
+      "text": "Simulacrum Optimization"
+    },
+    {
+      "from": "008 Advanced Wizardry/Complex Spells/Wish.md",
+      "kind": "callout",
+      "label": "Check before using",
+      "calloutType": "warning"
+    },
+    {
+      "from": "008 Advanced Wizardry/Complex Spells/Wish.md",
+      "kind": "callout",
+      "label": "Check before using",
+      "calloutType": "warning"
+    },
+    {
+      "from": "008 Advanced Wizardry/Complex Spells/Wish.md",
+      "kind": "page-title",
+      "text": "Wish"
+    },
+    {
+      "from": "008 Advanced Wizardry/Death & Contingency Planning.md",
+      "kind": "page-title",
+      "text": "Death & Contingency Planning"
+    },
+    {
+      "from": "008 Advanced Wizardry/Downtime.md",
+      "kind": "page-title",
+      "text": "Downtime"
+    },
+    {
+      "from": "008 Advanced Wizardry/Expensive Components.md",
+      "kind": "page-title",
+      "text": "Expensive Components"
+    },
+    {
+      "from": "008 Advanced Wizardry/Fabricate Optimization.md",
+      "kind": "callout",
+      "label": "DM-Dependent Economics",
+      "calloutType": "warning"
+    },
+    {
+      "from": "008 Advanced Wizardry/Fabricate Optimization.md",
+      "kind": "callout",
+      "label": "Check before using",
+      "calloutType": "warning"
+    },
+    {
+      "from": "008 Advanced Wizardry/Fabricate Optimization.md",
+      "kind": "callout",
+      "label": "Rules Version",
+      "calloutType": "warning"
+    },
+    {
+      "from": "008 Advanced Wizardry/Fabricate Optimization.md",
+      "kind": "page-title",
+      "text": "Fabricate Optimization"
+    },
+    {
+      "from": "008 Advanced Wizardry/High-Level Infrastructure/Clone.md",
+      "kind": "page-title",
+      "text": "Clone"
+    },
+    {
+      "from": "008 Advanced Wizardry/High-Level Infrastructure/Demiplane.md",
+      "kind": "callout",
+      "label": "Rules clarification",
+      "calloutType": "warning"
+    },
+    {
+      "from": "008 Advanced Wizardry/High-Level Infrastructure/Demiplane.md",
+      "kind": "page-title",
+      "text": "Demiplane"
+    },
+    {
+      "from": "008 Advanced Wizardry/High-Level Infrastructure/Teleportation Circle Network.md",
+      "kind": "page-title",
+      "text": "Teleportation Circle Network"
+    },
+    {
+      "from": "008 Advanced Wizardry/Intelligence above 20.md",
+      "kind": "callout",
+      "label": "DM-Dependent",
+      "calloutType": "warning"
+    },
+    {
+      "from": "008 Advanced Wizardry/Intelligence above 20.md",
+      "kind": "page-title",
+      "text": "Intelligence Above 20"
+    },
+    {
+      "from": "008 Advanced Wizardry/Long-Term Magical Defenses.md",
+      "kind": "page-title",
+      "text": "Long-Term Magical Defenses"
+    },
+    {
+      "from": "008 Advanced Wizardry/Making Money.md",
+      "kind": "page-title",
+      "text": "Making Money"
+    },
+    {
+      "from": "008 Advanced Wizardry/Spellbook Redundancy & Acquisition.md",
+      "kind": "page-title",
+      "text": "Spellbook Redundancy & Acquisition"
+    },
+    {
+      "from": "008 Advanced Wizardry/Spellbook Stuff.md",
+      "kind": "page-title",
+      "text": "Spellbook & Spell Scrolls"
+    },
+    {
+      "from": "008 Advanced Wizardry/Teleportation & Planar Travel.md",
+      "kind": "page-title",
+      "text": "Teleportation & Planar Travel"
+    },
+    {
+      "from": "008 Advanced Wizardry/Wizard Operations Roadmap.md",
+      "kind": "page-title",
+      "text": "Wizard Operations Roadmap"
+    },
+    {
+      "from": "008 Advanced Wizardry/Wizard Services.md",
+      "kind": "page-title",
+      "text": "Wizard Services"
+    },
+    {
+      "from": "009 Reference/Action Economy.md",
+      "kind": "page-title",
+      "text": "Action Economy"
+    },
+    {
+      "from": "009 Reference/Common DCs & Rules.md",
+      "kind": "page-title",
+      "text": "Common DCs & Rules"
+    },
+    {
+      "from": "009 Reference/Concentration.md",
+      "kind": "page-title",
+      "text": "Concentration"
+    },
+    {
+      "from": "009 Reference/Condition Quick Reference.md",
+      "kind": "page-title",
+      "text": "Condition Quick Reference"
+    },
+    {
+      "from": "009 Reference/Conditions.md",
+      "kind": "callout",
+      "label": "Rules clarification",
+      "calloutType": "warning"
+    },
+    {
+      "from": "009 Reference/Conditions.md",
+      "kind": "page-title",
+      "text": "Conditions"
+    },
+    {
+      "from": "009 Reference/Cover & Obscurement.md",
+      "kind": "page-title",
+      "text": "Cover & Obscurement"
+    },
+    {
+      "from": "009 Reference/Creature Sizes.md",
+      "kind": "page-title",
+      "text": "Creature Sizes"
+    },
+    {
+      "from": "009 Reference/Damage Types.md",
+      "kind": "page-title",
+      "text": "Damage Types"
+    },
+    {
+      "from": "009 Reference/German Conversion.md",
+      "kind": "page-title",
+      "text": "German Conversion"
+    },
+    {
+      "from": "009 Reference/Legendary Resistance & Bosses.md",
+      "kind": "page-title",
+      "text": "Legendary Resistance & Bosses"
+    },
+    {
+      "from": "009 Reference/Movement & Travel.md",
+      "kind": "page-title",
+      "text": "Movement & Travel"
+    },
+    {
+      "from": "009 Reference/Reaction Management.md",
+      "kind": "page-title",
+      "text": "Reaction Management"
+    },
+    {
+      "from": "009 Reference/Resting.md",
+      "kind": "page-title",
+      "text": "Resting"
+    },
+    {
+      "from": "009 Reference/Rules Desk.md",
+      "kind": "page-title",
+      "text": "Rules Desk"
+    },
+    {
+      "from": "009 Reference/Saving Throws & Checks.md",
+      "kind": "page-title",
+      "text": "Saving Throws & Checks"
+    },
+    {
+      "from": "009 Reference/Spell Area.md",
+      "kind": "page-title",
+      "text": "Spell Area"
+    },
+    {
+      "from": "009 Reference/Spellcasting Rules.md",
+      "kind": "page-title",
+      "text": "Spellcasting Rules"
+    },
+    {
+      "from": "009 Reference/Vision & Senses.md",
+      "kind": "page-title",
+      "text": "Vision & Senses"
+    },
+    {
+      "from": "010 Tier Lists/Background Tier List.md",
+      "kind": "callout",
+      "label": "Price the ability increases as well as the Origin feat",
+      "calloutType": "important"
+    },
+    {
+      "from": "010 Tier Lists/Background Tier List.md",
+      "kind": "page-title",
+      "text": "Background Tier List"
+    },
+    {
+      "from": "010 Tier Lists/Crafting Tier List.md",
+      "kind": "page-title",
+      "text": "Crafting Tier List"
+    },
+    {
+      "from": "010 Tier Lists/Familiar Tier List.md",
+      "kind": "page-title",
+      "text": "Familiar Tier List"
+    },
+    {
+      "from": "010 Tier Lists/Feats(Epic Boon) Tier List.md",
+      "kind": "callout",
+      "label": "Feat ranking checkpoints",
+      "calloutType": "important"
+    },
+    {
+      "from": "010 Tier Lists/Feats(Epic Boon) Tier List.md",
+      "kind": "page-title",
+      "text": "Feats Tier List"
+    },
+    {
+      "from": "010 Tier Lists/Housing&Bastion Tier List.md",
+      "kind": "page-title",
+      "text": "Housing & Bastion Tier List"
+    },
+    {
+      "from": "010 Tier Lists/Magic Item Tier List.md",
+      "kind": "page-title",
+      "text": "Best Magic Items Tier List"
+    },
+    {
+      "from": "010 Tier Lists/Polymorph Friendly&Hostile Tier List.md",
+      "kind": "page-title",
+      "text": "Friendly Polymorph Forms Tier List"
+    },
+    {
+      "from": "010 Tier Lists/Skills Tier List.md",
+      "kind": "page-title",
+      "text": "Skills Tier List"
+    },
+    {
+      "from": "010 Tier Lists/Species Tier List.md",
+      "kind": "callout",
+      "label": "Ranking assumptions",
+      "calloutType": "important"
+    },
+    {
+      "from": "010 Tier Lists/Species Tier List.md",
+      "kind": "callout",
+      "label": "Dwarf Stonecunning is activated, not action-free",
+      "calloutType": "warning"
+    },
+    {
+      "from": "010 Tier Lists/Species Tier List.md",
+      "kind": "page-title",
+      "text": "Species Tier List"
+    },
+    {
+      "from": "010 Tier Lists/Tools Tier List.md",
+      "kind": "page-title",
+      "text": "Tools Tier List"
+    },
+    {
+      "from": "011 Inbox/Templates/Creature Template.md",
+      "kind": "page-title",
+      "text": "{{title}}"
+    },
+    {
+      "from": "011 Inbox/Templates/Spell Template.md",
+      "kind": "page-title",
+      "text": "{{title}}"
+    },
+    {
+      "from": "011 Inbox/Templates/Tactic Template.md",
+      "kind": "page-title",
+      "text": "{{title}}"
+    },
+    {
+      "from": "100 Assets/Statblocks for Compendium/Animate Dead/Commands.md",
+      "kind": "page-title",
+      "text": "Befehlsbeispiele für Animate Dead"
+    }
+  ],
+  "files": [
+    {
+      "path": "001 Home/Form Finder.md",
+      "sha256": "34599cb6f87f2cac26a63a173e9ae31ecba46f85c28517f77d6e4c9d9c20e2d5",
+      "bytes": 6295
+    },
+    {
+      "path": "001 Home/Home.md",
+      "sha256": "2d4a09e745133abfe3791e0f593b3acc419749092bb0c8e970d0ab30feed6aa5",
+      "bytes": 3877
+    },
+    {
+      "path": "001 Home/Item Finder.md",
+      "sha256": "69e40421331b2982a3f4ed689eb8de57a8cb749f9702fd41bb9a0aaae8f6a576",
+      "bytes": 9251
+    },
+    {
+      "path": "001 Home/Problem Navigator.md",
+      "sha256": "5a25a412acdb95f0528ed12957a9a7f39e1aebe46f2df664f04541876a4aa848",
+      "bytes": 7791
+    },
+    {
+      "path": "001 Home/Quick Finder.md",
+      "sha256": "1f810cac647babf9d8bd2ba787137e7b1ef116344a455eceea3d57a5d1462889",
+      "bytes": 1917
+    },
+    {
+      "path": "001 Home/Spell Finder.md",
+      "sha256": "ff431fe0868c727141f8fb8fec2adc3a131c0acf42de1fd4df2dd2a0bc245e68",
+      "bytes": 31502
+    },
+    {
+      "path": "001 Home/Vault Guide.md",
+      "sha256": "730f91515ee28a6c24f7b6c8fc3d9709ca1404dcb4d39f315abbc83e1d61af37",
+      "bytes": 5351
+    },
+    {
+      "path": "001 Home/Vault Index.md",
+      "sha256": "bf0b48b80dae54b8814d3f959a644cba4c449bf69f6259dd4291124cd86d3486",
+      "bytes": 32460
+    },
+    {
+      "path": "002 Character/Arcana Unleashed Builds.md",
+      "sha256": "b31e7fd555c7b39a218bc07385d9b66275fce2549e9349912d36d7ffe85b3760",
+      "bytes": 26087
+    },
+    {
+      "path": "002 Character/Build Decision Engine.md",
+      "sha256": "fe976b88d1d3cd9b3c967997d569a9ee617eea6f774cbd11c57bf736aaad55f0",
+      "bytes": 23806
+    },
+    {
+      "path": "002 Character/Character.md",
+      "sha256": "3f6e34813b6812422b74bdf2c5c2f0eb68b79fc8fc776be8803f8c863d489899",
+      "bytes": 7913
+    },
+    {
+      "path": "002 Character/Equipment.md",
+      "sha256": "a017fc212b0acdd13b61ccb39d42356fad33a33824330e5fd179289bdbb9cef2",
+      "bytes": 7915
+    },
+    {
+      "path": "002 Character/Level Progression Planner.md",
+      "sha256": "60814a458b4b1bd8dee465bfdd3e047c2ec49702d1fd93ad61f5fcd3204bebaf",
+      "bytes": 14796
+    },
+    {
+      "path": "002 Character/Multiclass Spell Timing.md",
+      "sha256": "96429ec2ed3dba3b899e14379446e866cafc1f0fbd10a14f9c06fcc74c8dd5ff",
+      "bytes": 4290
+    },
+    {
+      "path": "002 Character/Spell Progression Hub.md",
+      "sha256": "38eb7b25d156cb4afc52f5f0f469d2514fbe1db9bb2f0c1bfc825b6c4e2e6e10",
+      "bytes": 11754
+    },
+    {
+      "path": "002 Character/Spell Progressions/Abjurer - Spell Progression.md",
+      "sha256": "c9aba4bcc5f60fc766757c4d844082e7e1f01c734cb4c5d2bee13625c50061d6",
+      "bytes": 7568
+    },
+    {
+      "path": "002 Character/Spell Progressions/Artificer Abjurer - Spell Progression.md",
+      "sha256": "d44949d0ea82f8d585b9598afc8b6126be5d6bab2e358441557fcfa7aa691c8b",
+      "bytes": 8577
+    },
+    {
+      "path": "002 Character/Spell Progressions/Artificer Bladesinger - Spell Progression.md",
+      "sha256": "6ca8c2cfbb5304bf621d3b8df759ede755623682b4cef802887cbe35434321c6",
+      "bytes": 8460
+    },
+    {
+      "path": "002 Character/Spell Progressions/Artificer Chronurgy - Spell Progression.md",
+      "sha256": "b552cd94fdde34fe981d919517c2002ed9903ce6eb3c564b26a432822f842b2a",
+      "bytes": 8366
+    },
+    {
+      "path": "002 Character/Spell Progressions/Artificer Conjurer - Spell Progression.md",
+      "sha256": "e3eaf4d262f54008600623725997364d8dad7ac8c320a5b30d0e97faff3e54f5",
+      "bytes": 8915
+    },
+    {
+      "path": "002 Character/Spell Progressions/Artificer Diviner - Spell Progression.md",
+      "sha256": "7b80744d2131bb47b521f7d35e5e91c4c71b12421484d57c09b1b7e845c97b33",
+      "bytes": 8472
+    },
+    {
+      "path": "002 Character/Spell Progressions/Artificer Illusionist - Spell Progression.md",
+      "sha256": "fd69064f989434e13922bc7902770d152830280ba5aa52e1ecae2b53285d3626",
+      "bytes": 9133
+    },
+    {
+      "path": "002 Character/Spell Progressions/Artificer Necromancer - Spell Progression.md",
+      "sha256": "6272114ef35a45e6634b07218a0de65f64e4d76be3568c027500f0b8c549b56f",
+      "bytes": 8888
+    },
+    {
+      "path": "002 Character/Spell Progressions/Bladesinger - Spell Progression.md",
+      "sha256": "47b8419ccb36ab933043827b0b52767f3bd6c0dcffbe8816718e9e82541a47fe",
+      "bytes": 7412
+    },
+    {
+      "path": "002 Character/Spell Progressions/Chronurgy - Spell Progression.md",
+      "sha256": "5de127c218f3ff95b0c7359f26daa6a689c6dc690e9cfd42a977c25118717409",
+      "bytes": 11922
+    },
+    {
+      "path": "002 Character/Spell Progressions/Cleric Abjurer - Spell Progression.md",
+      "sha256": "b888f6dfb2f95e8f4c68df9052c24e63a5e9d54c5677de9c940e787c57b0d525",
+      "bytes": 8511
+    },
+    {
+      "path": "002 Character/Spell Progressions/Cleric Bladesinger - Spell Progression.md",
+      "sha256": "0e742d37e77ae73e354ef06044b3a89d0556d1634567ec46dafc9f827da5c499",
+      "bytes": 8371
+    },
+    {
+      "path": "002 Character/Spell Progressions/Cleric Chronurgy - Spell Progression.md",
+      "sha256": "6f22def4d66f43879b0cd657afe710864aa3d1041b319f96f25a8ff854c2784e",
+      "bytes": 8316
+    },
+    {
+      "path": "002 Character/Spell Progressions/Cleric Conjurer - Spell Progression.md",
+      "sha256": "8df923ce612df3e7fedf8564a9448f18a5e5eabde64d7055a045724e96d3c337",
+      "bytes": 8806
+    },
+    {
+      "path": "002 Character/Spell Progressions/Cleric Diviner - Spell Progression.md",
+      "sha256": "97d1fdee137a51fc5614a2160c6a1f283a3ebed3eb27e996a2f08839f408a6d1",
+      "bytes": 8424
+    },
+    {
+      "path": "002 Character/Spell Progressions/Cleric Illusionist - Spell Progression.md",
+      "sha256": "58f6ab862e93099816dc07df1dead9d0ff8252446cbc42bf828394afd0ff4bd8",
+      "bytes": 9081
+    },
+    {
+      "path": "002 Character/Spell Progressions/Cleric Necromancer - Spell Progression.md",
+      "sha256": "834bfe1ba8366a64c0c5320682a39be6116a96f3b0ed181b48c190686575465a",
+      "bytes": 8840
+    },
+    {
+      "path": "002 Character/Spell Progressions/Conjurer - Spell Progression.md",
+      "sha256": "6c3092dc51fbb78afba13b7ac7e673824b76178861544ace3e3b2a7b99e8e4d0",
+      "bytes": 8871
+    },
+    {
+      "path": "002 Character/Spell Progressions/Diviner - Spell Progression.md",
+      "sha256": "30cacad0910ff5be7d25b5d785c2b98b57aa3abb96c5c584469d65efcc535f1e",
+      "bytes": 7555
+    },
+    {
+      "path": "002 Character/Spell Progressions/Fighter 1 Abjurer - Spell Progression.md",
+      "sha256": "8a7c593f682a2e7e6bdbdc58d5174197d213155c23c06cd1cc26a144241986b5",
+      "bytes": 8170
+    },
+    {
+      "path": "002 Character/Spell Progressions/Fighter 1 Bladesinger - Spell Progression.md",
+      "sha256": "8c3c305ac0347f374dd90ba0a8c6a0164f19f6b2e189a8b286155088e7db9024",
+      "bytes": 8146
+    },
+    {
+      "path": "002 Character/Spell Progressions/Fighter 1 Chronurgy - Spell Progression.md",
+      "sha256": "130cff9b4db227ba08f0417739b54cd3fd8983b65e2a47b830d6dae5fc192bf6",
+      "bytes": 7959
+    },
+    {
+      "path": "002 Character/Spell Progressions/Fighter 1 Conjurer - Spell Progression.md",
+      "sha256": "44ecc469cce6a797d87000e5e7f88e9555760956ab554400b738c54f2c41bba9",
+      "bytes": 8508
+    },
+    {
+      "path": "002 Character/Spell Progressions/Fighter 1 Diviner - Spell Progression.md",
+      "sha256": "e086a9ded0b1a8c7c57f1f16ffc8dbc7a4c40c24a08af7c3d53f8a09d1e0f1cb",
+      "bytes": 8065
+    },
+    {
+      "path": "002 Character/Spell Progressions/Fighter 1 Illusionist - Spell Progression.md",
+      "sha256": "e6618c75e28b1f939e62c78990309fd9c414978a3c0e1d8f41cf72a3c39f2a0e",
+      "bytes": 8726
+    },
+    {
+      "path": "002 Character/Spell Progressions/Fighter 1 Necromancer - Spell Progression.md",
+      "sha256": "5563d970b778ff7d400aebf2e8389714fbf5b024e140be97617d8dc1d277e8d5",
+      "bytes": 8481
+    },
+    {
+      "path": "002 Character/Spell Progressions/Fighter 2 Abjurer - Spell Progression.md",
+      "sha256": "09854a72e926617bf116a54755b15757c711658817850176e7668fa85854732e",
+      "bytes": 8459
+    },
+    {
+      "path": "002 Character/Spell Progressions/Fighter 2 Bladesinger - Spell Progression.md",
+      "sha256": "f247c98f578a1a22240a4881ba7b23a2e1dc1d177bcc266a1c3df1f132ebea6e",
+      "bytes": 9014
+    },
+    {
+      "path": "002 Character/Spell Progressions/Fighter 2 Chronurgy - Spell Progression.md",
+      "sha256": "96dd72f923a6bdecc16831dec072427a7112d200656d784403c44450c9b5faa7",
+      "bytes": 8238
+    },
+    {
+      "path": "002 Character/Spell Progressions/Fighter 2 Conjurer - Spell Progression.md",
+      "sha256": "b33241506d85968f1efa59e375a84f3ba7da990c17fead16bb6202ab0a8e8de0",
+      "bytes": 8789
+    },
+    {
+      "path": "002 Character/Spell Progressions/Fighter 2 Diviner - Spell Progression.md",
+      "sha256": "c6c18355233d0f009f0dfcea991d2cc7854266ac9ba6ac8b6e005f0e4c70a16e",
+      "bytes": 8342
+    },
+    {
+      "path": "002 Character/Spell Progressions/Fighter 2 Illusionist - Spell Progression.md",
+      "sha256": "0f278bd91d98746a94f1aab249ec3e397c90c658ec2ec8710df33c930f2c2f0e",
+      "bytes": 9007
+    },
+    {
+      "path": "002 Character/Spell Progressions/Fighter 2 Necromancer - Spell Progression.md",
+      "sha256": "4c07218099feb3cae6764d1245e049bbe35cf5a90198629543de73c6195fd77b",
+      "bytes": 8762
+    },
+    {
+      "path": "002 Character/Spell Progressions/Illusion Adept - Spell Progression.md",
+      "sha256": "d130b77caea35849e32bedbd9f0afaf39f95f1d715064facb5c3ab36c0612431",
+      "bytes": 9831
+    },
+    {
+      "path": "002 Character/Spell Progressions/Illusionist - Spell Progression.md",
+      "sha256": "2f411b1094849a9c25256b57c3e1d2f9f9dede616b2189cc1b2d1eba244776c5",
+      "bytes": 9522
+    },
+    {
+      "path": "002 Character/Spell Progressions/Necromancer - Spell Progression.md",
+      "sha256": "7579cff60675fd2bc70185b5c78a1d9cdd16a7acd5034e5a51598dc394ba6cf4",
+      "bytes": 9201
+    },
+    {
+      "path": "002 Character/Subclasses.md",
+      "sha256": "7fd7991e28633ba3684b1b31be380ce1e185c4f8fb546fcc02488d6d36aff5ba",
+      "bytes": 10779
+    },
+    {
+      "path": "002 Character/Worked Wizard Builds.md",
+      "sha256": "40a458feaa252ffb0ca0ccce6e9bbe3da4df26173f4d6148fd4ed154c43ebe6c",
+      "bytes": 29368
+    },
+    {
+      "path": "003 Spells/Battle Familiar.md",
+      "sha256": "27b3fb3383a5a89dd8fd644275edc387bf63d8d3cbc814ce23af02363c8c5d43",
+      "bytes": 465
+    },
+    {
+      "path": "003 Spells/Dunamancy Spells.md",
+      "sha256": "b223b63aaf00299fccd9327ceb3a96bd3034e186379c12bfefffe56804ed40b6",
+      "bytes": 4687
+    },
+    {
+      "path": "003 Spells/Spell Bank.md",
+      "sha256": "df85825a65c3ef533e56632c60378d9cd2df36f084b4b4fc6fa10aca3366c66c",
+      "bytes": 10018
+    },
+    {
+      "path": "003 Spells/Spell Cards/Absorb Elements - Spell.md",
+      "sha256": "7007d7d11f4e9cde5c0476dff51e74b640c7856595b6f637330e12d574b91d7a",
+      "bytes": 2547
+    },
+    {
+      "path": "003 Spells/Spell Cards/Acid Splash - Spell.md",
+      "sha256": "636c854ffc15964e4680642d8a1179e842eda1569e58c3512d53a13c2693d73a",
+      "bytes": 1965
+    },
+    {
+      "path": "003 Spells/Spell Cards/Alarm - Spell.md",
+      "sha256": "39180881f1cad720d4e77054069a790a9317d1cd61409cd1af2651b9d12db0da",
+      "bytes": 2364
+    },
+    {
+      "path": "003 Spells/Spell Cards/Alter Self - Spell.md",
+      "sha256": "286a2ac3d824999777969960edec1c1e9066adfcfac298656460cf36343bba5b",
+      "bytes": 2461
+    },
+    {
+      "path": "003 Spells/Spell Cards/Animate Dead - Spell.md",
+      "sha256": "8dd9f6994c4bf53ac32977b7b26ce80b68fd2083a99b4e40b63d61bb42b29d84",
+      "bytes": 3396
+    },
+    {
+      "path": "003 Spells/Spell Cards/Animate Objects - Spell.md",
+      "sha256": "9c4aaf65894844777530ecc8d627bc572cfc5d7982503c8e32175b85141ae896",
+      "bytes": 3054
+    },
+    {
+      "path": "003 Spells/Spell Cards/Antimagic Field - Spell.md",
+      "sha256": "c88a186371ab66d65b21f2f822de223ba6ef243b5f8790a2c3fe2768caf987d4",
+      "bytes": 2408
+    },
+    {
+      "path": "003 Spells/Spell Cards/Antipathy Sympathy - Spell.md",
+      "sha256": "509af2b804262d6d03d8e3caaaf31a7a89473c72b71e0fc7b36fc8334a0b3ea6",
+      "bytes": 2400
+    },
+    {
+      "path": "003 Spells/Spell Cards/Arcane Eye - Spell.md",
+      "sha256": "3bdd61c77858e3ef2ddaf6899ffb2a818c0118eb0b41f98a225d6b9f62f70a12",
+      "bytes": 2264
+    },
+    {
+      "path": "003 Spells/Spell Cards/Arcane Gate - Spell.md",
+      "sha256": "aa5774a4230ddc876484b3109b01f4c9b5fa5c0f05475b178812821bd506d27f",
+      "bytes": 2175
+    },
+    {
+      "path": "003 Spells/Spell Cards/Arcane Lock - Spell.md",
+      "sha256": "86e934f730e763365a31ceba9e410556b3f461b8cc2d154c31043aa7a2230814",
+      "bytes": 2207
+    },
+    {
+      "path": "003 Spells/Spell Cards/Arcane Vigor - Spell.md",
+      "sha256": "d3cdfe2eb7fabab56d9c9e2aeb40b67bd86bcffc399aaf688151e7ed1cf2650d",
+      "bytes": 2082
+    },
+    {
+      "path": "003 Spells/Spell Cards/Astral Projection - Spell.md",
+      "sha256": "7aeb66c8888f51ef41ee46db033dda4debd9165ff90d38eca82b16244c562731",
+      "bytes": 3118
+    },
+    {
+      "path": "003 Spells/Spell Cards/Augury - Spell.md",
+      "sha256": "4f3acb247d055239d5d94a62d804f2e1194082b9aa691b9f5721327313a29641",
+      "bytes": 2496
+    },
+    {
+      "path": "003 Spells/Spell Cards/Banishment - Spell.md",
+      "sha256": "9025b55dfa22247b0101b6308ee775f31de030a004053c818cf3e99366406e79",
+      "bytes": 2307
+    },
+    {
+      "path": "003 Spells/Spell Cards/Battle Familiar - Spell.md",
+      "sha256": "53d98139db9ce09c02c95071d2c67079e5f4673ff7d243fa83e38df1114fb5dd",
+      "bytes": 2870
+    },
+    {
+      "path": "003 Spells/Spell Cards/Bestow Curse - Spell.md",
+      "sha256": "ae6e652420514175dee7349aeb2d2f513e32bb3225cb90c3d9070f2bb7cd79da",
+      "bytes": 2899
+    },
+    {
+      "path": "003 Spells/Spell Cards/Bigby's Hand - Spell.md",
+      "sha256": "43dc9399d5a08628a9fffc121e53537cd34ace688211789fcbc7ca000931e1ec",
+      "bytes": 2554
+    },
+    {
+      "path": "003 Spells/Spell Cards/Blade Ward - Spell.md",
+      "sha256": "93ada3f29670b10e0d86f7d89d6b6eca0eac3503b206bfd6dfe40aab684b67d8",
+      "bytes": 2215
+    },
+    {
+      "path": "003 Spells/Spell Cards/Bless - Spell.md",
+      "sha256": "aded0600ac9acb90f82ebe8095eb0010b5a2a889c8f50974e3a8ec5958c187dd",
+      "bytes": 2707
+    },
+    {
+      "path": "003 Spells/Spell Cards/Blight - Spell.md",
+      "sha256": "620a30f2a33542f215375b872085a9cef641ebb04b99380864320566ae045e1e",
+      "bytes": 2442
+    },
+    {
+      "path": "003 Spells/Spell Cards/Blindness-Deafness - Spell.md",
+      "sha256": "73f5c7ab2c32e329530158426950eaccefbf54fde6945a0b580c8f7826f2cb28",
+      "bytes": 2128
+    },
+    {
+      "path": "003 Spells/Spell Cards/Blink - Spell.md",
+      "sha256": "60a91783a136db5ddf2940936b35593c992f6935bd16125a167e1b7e8120b13f",
+      "bytes": 2201
+    },
+    {
+      "path": "003 Spells/Spell Cards/Chain Lightning - Spell.md",
+      "sha256": "b18b1a9b5bccc88190b817795d7363b5c28ea387fe9a5ff502e33a805c8850c1",
+      "bytes": 2282
+    },
+    {
+      "path": "003 Spells/Spell Cards/Chill Touch - Spell.md",
+      "sha256": "d3babb7be3d1d9f10d95f0d39c80a0c8e643cdfb163f22354533bb058a8e8fa1",
+      "bytes": 2054
+    },
+    {
+      "path": "003 Spells/Spell Cards/Chromatic Orb - Spell.md",
+      "sha256": "981723135512cc7f44aec4c9a18d4ef46182ca93891d46cf8fcc6ecc9217dde3",
+      "bytes": 2324
+    },
+    {
+      "path": "003 Spells/Spell Cards/Circle of Power - Spell.md",
+      "sha256": "7b630cce5380b5e9aeab3018bf909997b487ee13fe04a952f66e2f1d8b71baf5",
+      "bytes": 2296
+    },
+    {
+      "path": "003 Spells/Spell Cards/Clairvoyance - Spell.md",
+      "sha256": "867a9e3753e49d25487a08e0eea5ac20b5a374771deae1f2f98e4401425f8d12",
+      "bytes": 2384
+    },
+    {
+      "path": "003 Spells/Spell Cards/Clone - Spell.md",
+      "sha256": "16fa7d16b23fbc79e7a96dd04b04271f74fb210c3baa12aa51267b93dfb6f658",
+      "bytes": 2623
+    },
+    {
+      "path": "003 Spells/Spell Cards/Cloudkill - Spell.md",
+      "sha256": "00d21405e6191270170f7714d30545310cf1c929625b1ee69059dd600320f0fa",
+      "bytes": 2335
+    },
+    {
+      "path": "003 Spells/Spell Cards/Comprehend Languages - Spell.md",
+      "sha256": "63ce05a5591ffd253917f8c4e29ea6b487483ca397ff46eaee6c49aa805c453a",
+      "bytes": 2379
+    },
+    {
+      "path": "003 Spells/Spell Cards/Cone of Cold - Spell.md",
+      "sha256": "0818912fc04fcf33cc65cd1549754f45f4dc2a8367b83a2a87bc9bceca4c19bf",
+      "bytes": 2190
+    },
+    {
+      "path": "003 Spells/Spell Cards/Confusion - Spell.md",
+      "sha256": "67ab3ccf16ddecb8185cedfcc9a7a63d672122084d3246e7ce8a6d75655eef99",
+      "bytes": 2673
+    },
+    {
+      "path": "003 Spells/Spell Cards/Conjure Elemental - Spell.md",
+      "sha256": "e57ea0abd345ef78a959273cccda58f34dcc9acd12806f1f83a0c333da33fd42",
+      "bytes": 2617
+    },
+    {
+      "path": "003 Spells/Spell Cards/Conjure Minor Elementals - Spell.md",
+      "sha256": "5e3baeee73209283a645f924af683859ceb1cf83dfde7bb851549d1752c2498a",
+      "bytes": 2288
+    },
+    {
+      "path": "003 Spells/Spell Cards/Contact Other Plane - Spell.md",
+      "sha256": "f62ed7afa4468a95bd43c0bcbee44d7c20e439a786868e0992fbd2deedc6da94",
+      "bytes": 2434
+    },
+    {
+      "path": "003 Spells/Spell Cards/Contingency - Spell.md",
+      "sha256": "3d69635e1d10881ccc4172e22107825171daa8f59a2b05916df4e029e5db7554",
+      "bytes": 2420
+    },
+    {
+      "path": "003 Spells/Spell Cards/Control Water - Spell.md",
+      "sha256": "27185f71cc475215da9c4568249afac5100c0c95543600c94e509841ff6aa367",
+      "bytes": 2921
+    },
+    {
+      "path": "003 Spells/Spell Cards/Control Weather - Spell.md",
+      "sha256": "4f3e433a1c52a4611526c4b796fbf8d86be2dd5a819588e98d3a9c5c6907e8ad",
+      "bytes": 3014
+    },
+    {
+      "path": "003 Spells/Spell Cards/Counterspell - Spell.md",
+      "sha256": "e0b95a1d984073c72dc26f18674b8737657d4e5df6999009fb40c90213dd8e23",
+      "bytes": 2375
+    },
+    {
+      "path": "003 Spells/Spell Cards/Creation - Spell.md",
+      "sha256": "ae1ebf6719dfb943badfccb0b88acfc9a77ad0149ec5d171b320896f5abbf16c",
+      "bytes": 2374
+    },
+    {
+      "path": "003 Spells/Spell Cards/Dark Star - Spell.md",
+      "sha256": "91dd7e2d472ff57a5876fc06e12a0900ca42d79721dabfcc79a9c6c7546aed83",
+      "bytes": 2951
+    },
+    {
+      "path": "003 Spells/Spell Cards/Demiplane - Spell.md",
+      "sha256": "5a8d01491e050e11b9b522cc28b64b241f4ce808cb8f41e1f2d596fe17515299",
+      "bytes": 2227
+    },
+    {
+      "path": "003 Spells/Spell Cards/Detect Magic - Spell.md",
+      "sha256": "e7f466f6437178d67639549b7fe70a73c7affb1f08699cfb6024ad33dfb8f670",
+      "bytes": 2331
+    },
+    {
+      "path": "003 Spells/Spell Cards/Detect Thoughts - Spell.md",
+      "sha256": "5ebbc09a4ac9b120d84b41bfd0415fb301f9e8fea0d31784663ab9c4bbb3c62b",
+      "bytes": 1964
+    },
+    {
+      "path": "003 Spells/Spell Cards/Dimension Door - Spell.md",
+      "sha256": "8a69c800fa5c5f4c6467ca74627c578c7f465c1c8069dd4b2244e89bb4c54261",
+      "bytes": 2256
+    },
+    {
+      "path": "003 Spells/Spell Cards/Disguise Self - Spell.md",
+      "sha256": "0a23082a7783ef3fe8b56a5f41979305a759764b2b680c16979f0bcf9f5ef52b",
+      "bytes": 2179
+    },
+    {
+      "path": "003 Spells/Spell Cards/Disintegrate - Spell.md",
+      "sha256": "45c212d6382963a0c14c2dde6e9219747e78228e103e0a9d374eea9e78acb4a7",
+      "bytes": 2272
+    },
+    {
+      "path": "003 Spells/Spell Cards/Dispel Magic - Spell.md",
+      "sha256": "5713c37c25ed490ab529c4593a8e488c818d04267b18a7f0dbcae9fa7b9de8de",
+      "bytes": 2366
+    },
+    {
+      "path": "003 Spells/Spell Cards/Dissonant Whispers - Spell.md",
+      "sha256": "d86c91f2704eb17c0047cb85c9d7afaf6cf153d1a536754897de7d4292eb532e",
+      "bytes": 2716
+    },
+    {
+      "path": "003 Spells/Spell Cards/Distorted Distance - Spell.md",
+      "sha256": "ee5e7bf79e23e2fd301bc4025bf3a75c0c17aab3846dab3db4c85caaac725a53",
+      "bytes": 2672
+    },
+    {
+      "path": "003 Spells/Spell Cards/Divination - Spell.md",
+      "sha256": "294a4479f51102ac20c357e287e25878dfd0de896df0384b5a7011158077bc49",
+      "bytes": 2407
+    },
+    {
+      "path": "003 Spells/Spell Cards/Dominate Beast - Spell.md",
+      "sha256": "47c772156cd3a49f515636b55df930e527cfd288fac2b78a549612a084f82739",
+      "bytes": 2895
+    },
+    {
+      "path": "003 Spells/Spell Cards/Dominate Monster - Spell.md",
+      "sha256": "75a881d1515ec60c52d442ef156f75aeff8aefda14af56bc8eac1ccfdf7dd3e9",
+      "bytes": 2411
+    },
+    {
+      "path": "003 Spells/Spell Cards/Dominate Person - Spell.md",
+      "sha256": "35fac6c4dc9ed540667b0b97a4db53546afdff1599958562da9947a5ec3fc997",
+      "bytes": 2741
+    },
+    {
+      "path": "003 Spells/Spell Cards/Dragon's Breath - Spell.md",
+      "sha256": "338d2d7596da3b4b130b3c0f73469fc4265a5651b131cc7b73275fc1bffcb7c7",
+      "bytes": 2411
+    },
+    {
+      "path": "003 Spells/Spell Cards/Drawmij's Instant Summons - Spell.md",
+      "sha256": "0fa2723618ba0434d49f46ef7feed2b0f97fa3b9f3387365b7d6a72695b9e4f7",
+      "bytes": 2559
+    },
+    {
+      "path": "003 Spells/Spell Cards/Dream - Spell.md",
+      "sha256": "7beb3b7d008990a1a5b5d00016f64f975bcea2d1563190756185c7730760d306",
+      "bytes": 2430
+    },
+    {
+      "path": "003 Spells/Spell Cards/Enhance Ability - Spell.md",
+      "sha256": "38e07b8f137c1f8e51fed6771492f957249bed4a7fbb2f1b5c73e69a682f50c1",
+      "bytes": 2293
+    },
+    {
+      "path": "003 Spells/Spell Cards/Enlarge-Reduce - Spell.md",
+      "sha256": "e6ab05849ab819ba6a947938f77b3fee44fc5a6d8b0b8e751eb3e2196a5da6c0",
+      "bytes": 2502
+    },
+    {
+      "path": "003 Spells/Spell Cards/Enthrall - Spell.md",
+      "sha256": "71f5d0bdd7e2720a4b4fb15a68a8f8c46127668c74aef7ac6ef79f39b8bb2e47",
+      "bytes": 2896
+    },
+    {
+      "path": "003 Spells/Spell Cards/Etherealness - Spell.md",
+      "sha256": "0d93375f31f15cb0d4591c0559021f37010455f74ea77acec62891d2fe1b32af",
+      "bytes": 2382
+    },
+    {
+      "path": "003 Spells/Spell Cards/Eyebite - Spell.md",
+      "sha256": "5afc5c1b33a09ad5edae922db184ca6788410ff0353d264b2d3b901f2cdceb25",
+      "bytes": 2391
+    },
+    {
+      "path": "003 Spells/Spell Cards/Fabricate - Spell.md",
+      "sha256": "e8d97d5b91666713c549389f2d66a902f4a1639978210a07544a2f690b1d8a17",
+      "bytes": 2449
+    },
+    {
+      "path": "003 Spells/Spell Cards/False Life - Spell.md",
+      "sha256": "51d86dc0f824c005b86f2163b38e2863c4dccf77e5580743d91bfe14d22e2889",
+      "bytes": 2380
+    },
+    {
+      "path": "003 Spells/Spell Cards/Fear - Spell.md",
+      "sha256": "be1752d380a1815fa0d1aef60cd745b42f02938364d7de6d194214d21ff9677a",
+      "bytes": 2328
+    },
+    {
+      "path": "003 Spells/Spell Cards/Feather Fall - Spell.md",
+      "sha256": "703bd90046f7444af325029a0d2d11ab3ac75d8818c36ed51b57ec6781d309f9",
+      "bytes": 2378
+    },
+    {
+      "path": "003 Spells/Spell Cards/Find Familiar - Spell.md",
+      "sha256": "43c16b42af62c636bf56f8ef828fd107bba2aafdcce487dfc1670222dc3eede9",
+      "bytes": 2386
+    },
+    {
+      "path": "003 Spells/Spell Cards/Finger of Death - Spell.md",
+      "sha256": "1291875144f6c4838348dab4abfe59c02da79b5059370f7c06e4c408bc6b3338",
+      "bytes": 2740
+    },
+    {
+      "path": "003 Spells/Spell Cards/Fire Bolt - Spell.md",
+      "sha256": "59072a32ce6cab0124a990b2d46521dae6d7fa68cf3982e66db195b8b341cc15",
+      "bytes": 2140
+    },
+    {
+      "path": "003 Spells/Spell Cards/Fire Shield - Spell.md",
+      "sha256": "01bbd44971cfb7c2acb465571f522eda6da191adc0220b092099dbb6e4733c76",
+      "bytes": 2247
+    },
+    {
+      "path": "003 Spells/Spell Cards/Fireball - Spell.md",
+      "sha256": "47539433f2d45f29cedac0c90c62be98d8c7d27f48becf03edfa7f15042de82b",
+      "bytes": 2155
+    },
+    {
+      "path": "003 Spells/Spell Cards/Fly - Spell.md",
+      "sha256": "3adea9c32b71bfc1fd243dc70d13674ba3ae2129facdb8e7c99e16db2b675446",
+      "bytes": 2238
+    },
+    {
+      "path": "003 Spells/Spell Cards/Fog Cloud - Spell.md",
+      "sha256": "e3ca140638f122d90f2f160f4cd7f48a4d5c5c7dc90a7c69b590cfd26ea99511",
+      "bytes": 2245
+    },
+    {
+      "path": "003 Spells/Spell Cards/Forcecage - Spell.md",
+      "sha256": "0da3ebbb48ccf19e20a12aa3bd9b6c946bce76937ef262347296ac2977e01d5b",
+      "bytes": 2390
+    },
+    {
+      "path": "003 Spells/Spell Cards/Foresight - Spell.md",
+      "sha256": "2b4df1d7fab6e124614bb9c6b9200b5c261b5577b280f50288c04c0b76e66416",
+      "bytes": 2305
+    },
+    {
+      "path": "003 Spells/Spell Cards/Fortune's Favor - Spell.md",
+      "sha256": "37211a8a95ac864ac0356b7706487af3590eeb29daac30f3e572430714fe9b7b",
+      "bytes": 2785
+    },
+    {
+      "path": "003 Spells/Spell Cards/Gate - Spell.md",
+      "sha256": "69725e10cde3f0ad5bb0a65db6022498cc76acaf2fe4f9f8fe7640a620e7eced",
+      "bytes": 2351
+    },
+    {
+      "path": "003 Spells/Spell Cards/Gentle Repose - Spell.md",
+      "sha256": "dc19dbd722641e23b652c590639e377bb672a31eba65982d616f8ecf1fe76740",
+      "bytes": 2646
+    },
+    {
+      "path": "003 Spells/Spell Cards/Gift of Alacrity - Spell.md",
+      "sha256": "8fd52441a9998628d417bee32659eac57b37589420cf3d82398ea2e5c86627d0",
+      "bytes": 2611
+    },
+    {
+      "path": "003 Spells/Spell Cards/Globe of Invulnerability - Spell.md",
+      "sha256": "8c86b4efe7f143a9c176ef47ae2a52a9f08660fb67bd4de93ddaf370e13bc3ba",
+      "bytes": 2471
+    },
+    {
+      "path": "003 Spells/Spell Cards/Glyph of Warding - Spell.md",
+      "sha256": "0f41776904967510099256b105933ff69381de09b70ef476d84734ec65c589bd",
+      "bytes": 2745
+    },
+    {
+      "path": "003 Spells/Spell Cards/Gravity Fissure - Spell.md",
+      "sha256": "615a6d185e39f03bdea73afce6603ae88402a8d2813868cf7d84b9d6d5dbaf61",
+      "bytes": 2633
+    },
+    {
+      "path": "003 Spells/Spell Cards/Gravity Sinkhole - Spell.md",
+      "sha256": "0d738a49367a425af9b0873cde28c61679d904efdfcc5da76eecfa8125befd47",
+      "bytes": 2684
+    },
+    {
+      "path": "003 Spells/Spell Cards/Grease - Spell.md",
+      "sha256": "8dd2a5ef451d994594c3dec01975d97ce6bd6c4fcb711565a98b4d4d75ba0e68",
+      "bytes": 2162
+    },
+    {
+      "path": "003 Spells/Spell Cards/Greater Invisibility - Spell.md",
+      "sha256": "f1ca50985afe3e3b61339b38a8d4de2ca645798a037e91dbc5a10d17bdd8d6b7",
+      "bytes": 2220
+    },
+    {
+      "path": "003 Spells/Spell Cards/Guards and Wards - Spell.md",
+      "sha256": "bb8765c84a9e2ab31dda23b99583f55cf9c55a1a209af5e8ad545a39d72a9c10",
+      "bytes": 2330
+    },
+    {
+      "path": "003 Spells/Spell Cards/Hallucinatory Terrain - Spell.md",
+      "sha256": "304d4d480be67f97392e2bd6fd1f8d26627df221bcfd8984b77a981fd7d249a6",
+      "bytes": 2451
+    },
+    {
+      "path": "003 Spells/Spell Cards/Haste - Spell.md",
+      "sha256": "f6b8941f1a525afa8434bbfd38bd0243190b35522e5caee70fa1efad168e307d",
+      "bytes": 2349
+    },
+    {
+      "path": "003 Spells/Spell Cards/Healing Word - Spell.md",
+      "sha256": "12711d0400023c783644f5b53586242379a46c4c04db4d437fc4a2ab94434579",
+      "bytes": 2640
+    },
+    {
+      "path": "003 Spells/Spell Cards/Hold Monster - Spell.md",
+      "sha256": "a12d186e9048ecaf87638b62d9a5d0df4d7951934f67795af82baba3f603de89",
+      "bytes": 2385
+    },
+    {
+      "path": "003 Spells/Spell Cards/Hold Person - Spell.md",
+      "sha256": "fb8a1c178e749180c1c2e8256df7684290451fe8433947dedbfb3a04ffb99fc8",
+      "bytes": 2568
+    },
+    {
+      "path": "003 Spells/Spell Cards/Hypnotic Pattern - Spell.md",
+      "sha256": "11e84d0460b85c2d7c0dde65103579737c8458d4fcdb0ee7c535e81bfcee4dd4",
+      "bytes": 2325
+    },
+    {
+      "path": "003 Spells/Spell Cards/Identify - Spell.md",
+      "sha256": "40ab7c84997dc9d029dce46a21ed292d1fa2aed8d85212336ba97d0ec7520eab",
+      "bytes": 2350
+    },
+    {
+      "path": "003 Spells/Spell Cards/Illusory Dragon - Spell.md",
+      "sha256": "746556844a40bc89f5398ff81fb005ae9c99c9c2406a1070d27fa630a864f5b8",
+      "bytes": 2619
+    },
+    {
+      "path": "003 Spells/Spell Cards/Immovable Object - Spell.md",
+      "sha256": "b917fb1c84defb0755edf2ad1237c028e9d1750261bfcc1323b3ace685a6cdaa",
+      "bytes": 2926
+    },
+    {
+      "path": "003 Spells/Spell Cards/Imprisonment - Spell.md",
+      "sha256": "37f0bc62637919d5c9354319b09618478229913104ead88f30e43f039efff39a",
+      "bytes": 3306
+    },
+    {
+      "path": "003 Spells/Spell Cards/Invisibility - Spell.md",
+      "sha256": "58a7bd55ddc2b93612ffe4510ae68dc2f1fb761017bb46272ab48caab7f4fb67",
+      "bytes": 2303
+    },
+    {
+      "path": "003 Spells/Spell Cards/Knock - Spell.md",
+      "sha256": "dfaea35edb0e1d381318eea05119a989b8317628b04e132b60ef360bbf267f83",
+      "bytes": 2101
+    },
+    {
+      "path": "003 Spells/Spell Cards/Legend Lore - Spell.md",
+      "sha256": "7fd86611a061f14e0812aeb76ba50a166979115a99855014bb7bdb878df4fa55",
+      "bytes": 2504
+    },
+    {
+      "path": "003 Spells/Spell Cards/Levitate - Spell.md",
+      "sha256": "fdca1a59f05504164a2af1a2ac7d5f7b6fdab8e10adb3c74d64e24781ca77546",
+      "bytes": 2371
+    },
+    {
+      "path": "003 Spells/Spell Cards/Light - Spell.md",
+      "sha256": "2fd9328819cbf32a2f78c99465ea7280812eb8325e070ef9eac26456c96ec98f",
+      "bytes": 2049
+    },
+    {
+      "path": "003 Spells/Spell Cards/Lightning Ring - Spell.md",
+      "sha256": "10fe42430d3514466693eb98168b742b09878acfa3540e3d5b17455b509a3e6a",
+      "bytes": 3011
+    },
+    {
+      "path": "003 Spells/Spell Cards/Locate Creature - Spell.md",
+      "sha256": "3b658204cf635262b621cf4b2454381eca1f6758e686bb60e6e187eb52d1a034",
+      "bytes": 2342
+    },
+    {
+      "path": "003 Spells/Spell Cards/Locate Object - Spell.md",
+      "sha256": "39bfd4544b5606ab12fc17205dc97a480f503cc8248a259fe368fd4f024b8ad9",
+      "bytes": 2262
+    },
+    {
+      "path": "003 Spells/Spell Cards/Longstrider - Spell.md",
+      "sha256": "e5ac61c84d333dc658443bd1f9ca9bfa5e15622aa6f391819f6ae787adb88ed5",
+      "bytes": 2161
+    },
+    {
+      "path": "003 Spells/Spell Cards/Mage Armor - Spell.md",
+      "sha256": "e545ae9579a23cf806a9c59508351c787922a2f3b9b984653109aa69f5830595",
+      "bytes": 2141
+    },
+    {
+      "path": "003 Spells/Spell Cards/Mage Hand - Spell.md",
+      "sha256": "afa2397e395646980a88ca6bfc95e586bc895235b63f7e71c694af3810196030",
+      "bytes": 2122
+    },
+    {
+      "path": "003 Spells/Spell Cards/Magic Circle - Spell.md",
+      "sha256": "9096a274a5c2d3d83f27387a51e5a0ea7c33e593dbb9bb1b06447f514b44789f",
+      "bytes": 2474
+    },
+    {
+      "path": "003 Spells/Spell Cards/Magic Jar - Spell.md",
+      "sha256": "4e1c7b53adca15141778c2df6b92ca16daccad86a7700a1a12cb02a4cfecbd95",
+      "bytes": 2417
+    },
+    {
+      "path": "003 Spells/Spell Cards/Magic Missile - Spell.md",
+      "sha256": "6ead04f3293d7bcf76b72d25d68dc36802f9755a61538c6fe1d17c588485dc37",
+      "bytes": 2232
+    },
+    {
+      "path": "003 Spells/Spell Cards/Magic Weapon - Spell.md",
+      "sha256": "b9b5655bf24ed014867913aa77e5aafcd09f254321ccd8ca71a10c0c99dcf808",
+      "bytes": 1983
+    },
+    {
+      "path": "003 Spells/Spell Cards/Magnify Gravity - Spell.md",
+      "sha256": "09c97da5e47f405867cb748f00093fee40791230ea9d4bb69666f86192e96b7e",
+      "bytes": 2559
+    },
+    {
+      "path": "003 Spells/Spell Cards/Major Image - Spell.md",
+      "sha256": "319eaa6b9eef791935273badfbf938a4ea446756d0443aaa26234ba5efe106fe",
+      "bytes": 3104
+    },
+    {
+      "path": "003 Spells/Spell Cards/Mass Suggestion - Spell.md",
+      "sha256": "e6c0bdd1ef39c0102140247c924edfbfd582ba7e6220db28e0a0de000e1a57a3",
+      "bytes": 2206
+    },
+    {
+      "path": "003 Spells/Spell Cards/Maze - Spell.md",
+      "sha256": "c7db57793e537edb1ea5b4c7d5fbc758d0aecaad621616f5956ba54c01fc4abe",
+      "bytes": 2139
+    },
+    {
+      "path": "003 Spells/Spell Cards/Meteor Swarm - Spell.md",
+      "sha256": "9706ce6ea5700c79983ddd6151c3fc627c94567b6c8ab68b0abbe88cf56cf7d7",
+      "bytes": 2205
+    },
+    {
+      "path": "003 Spells/Spell Cards/Mind Blank - Spell.md",
+      "sha256": "ea75d486ad3381a97908062df4edaacffed800314fccf8920b0f40e80ba757ff",
+      "bytes": 2162
+    },
+    {
+      "path": "003 Spells/Spell Cards/Mind Sliver - Spell.md",
+      "sha256": "1cd5a0971d13afcb60b9f5b14f73a577a6b2da4b011f40ecea242828b2b46805",
+      "bytes": 2253
+    },
+    {
+      "path": "003 Spells/Spell Cards/Minor Illusion - Spell.md",
+      "sha256": "024b41d48f54ef26eb5fa0c086f84a3746f146cfd9de01e99c13a129da9eceec",
+      "bytes": 2099
+    },
+    {
+      "path": "003 Spells/Spell Cards/Mirage Arcane - Spell.md",
+      "sha256": "a77db787b9f917f8bf6c9d44465ad5045a91b011130d445ca969823ea8ccedf0",
+      "bytes": 2404
+    },
+    {
+      "path": "003 Spells/Spell Cards/Mirror Image - Spell.md",
+      "sha256": "2aaa253b6d269b58a243dabc1ff70553d3ffb8751aa3ad34681dd7c7288e607d",
+      "bytes": 2179
+    },
+    {
+      "path": "003 Spells/Spell Cards/Misty Step - Spell.md",
+      "sha256": "4f23cf2962a460977fa00b72fc364c5dbd2ef364d55865d0e2b371100b56ea74",
+      "bytes": 2071
+    },
+    {
+      "path": "003 Spells/Spell Cards/Modify Memory - Spell.md",
+      "sha256": "d8d708ff4ef294e5c8d424301c87927c8fa690e9d50bb9f68f9346700cbf11aa",
+      "bytes": 2577
+    },
+    {
+      "path": "003 Spells/Spell Cards/Mordenkainen's Private Sanctum - Spell.md",
+      "sha256": "56b1a5ebb0d1d31945832a271094f5f239ede3ae3340c79ebe9be52ad14bcfcc",
+      "bytes": 2479
+    },
+    {
+      "path": "003 Spells/Spell Cards/Nondetection - Spell.md",
+      "sha256": "93f15dab8633614554f13f62f60fe1f52569af1280c29ded043e9eff72b762f9",
+      "bytes": 2242
+    },
+    {
+      "path": "003 Spells/Spell Cards/Nystul's Magic Aura - Spell.md",
+      "sha256": "da236da547b252a029b40cb78a148579e755fad1dc7582f5d14517082068e2a1",
+      "bytes": 2356
+    },
+    {
+      "path": "003 Spells/Spell Cards/Passwall - Spell.md",
+      "sha256": "c30a751d48223eef26896132e5cf633b0b2254abae519f707f8b9306a9bf9a4c",
+      "bytes": 2144
+    },
+    {
+      "path": "003 Spells/Spell Cards/Phantasmal Force - Spell.md",
+      "sha256": "0ba9e04c7a8a5d8e948e21153c4cf474d644e34cc12d340ccba78a1bf8d6b6f0",
+      "bytes": 2329
+    },
+    {
+      "path": "003 Spells/Spell Cards/Phantom Steed - Spell.md",
+      "sha256": "fc4f97ccc812064a266e25db6618c165d69ca0efd7bb6e86dffa25b584e1c462",
+      "bytes": 2261
+    },
+    {
+      "path": "003 Spells/Spell Cards/Planar Binding - Spell.md",
+      "sha256": "b3c50a13d3a41da266dd0df59dc112224c41ba575b99878d0f469980e18359ad",
+      "bytes": 2587
+    },
+    {
+      "path": "003 Spells/Spell Cards/Plane Shift - Spell.md",
+      "sha256": "cbf06abff64f32e426bfb3f38e1b2939554f5e35a16c06c3260ba65dc54c3a39",
+      "bytes": 2408
+    },
+    {
+      "path": "003 Spells/Spell Cards/Polymorph - Spell.md",
+      "sha256": "5566bdf1ae6aa8a33dbb5c7a8a6d1dfebfd3af39d5bf1219c6e1502fbc14d9d3",
+      "bytes": 2269
+    },
+    {
+      "path": "003 Spells/Spell Cards/Power Word Stun - Spell.md",
+      "sha256": "86a2a2da6d79c325d39007eee9d5b1682db715c75732003a0f25bf410c1a5565",
+      "bytes": 2607
+    },
+    {
+      "path": "003 Spells/Spell Cards/Prestidigitation - Spell.md",
+      "sha256": "0e774d950bd16e193e66e9674954068a5eca58eea91bae60421866fbef16e9c1",
+      "bytes": 2226
+    },
+    {
+      "path": "003 Spells/Spell Cards/Prismatic Spray - Spell.md",
+      "sha256": "5e06cb95b6efdc506aaa92bd12fb8598382a24f2a3758a265ff916109d7200f2",
+      "bytes": 2470
+    },
+    {
+      "path": "003 Spells/Spell Cards/Prismatic Wall - Spell.md",
+      "sha256": "51dbf6c4d60822c901a65a011789d52a091f73237bce4e3dabe6020c2111e5ca",
+      "bytes": 2524
+    },
+    {
+      "path": "003 Spells/Spell Cards/Programmed Illusion - Spell.md",
+      "sha256": "76c76b3c2b2aeb99c92043a8487d3c4e1905515240214c46bd1278e1af654747",
+      "bytes": 2348
+    },
+    {
+      "path": "003 Spells/Spell Cards/Project Image - Spell.md",
+      "sha256": "b809792fe7f43bebe917fad2d38bbc6c3e954b201a49ffb4e6d2296e3a6ae78a",
+      "bytes": 2451
+    },
+    {
+      "path": "003 Spells/Spell Cards/Protection from Evil and Good - Spell.md",
+      "sha256": "e8cefd33c8c402463137ddf7dc006d110b9bf032f5e6392a81ee144f0e27d056",
+      "bytes": 2490
+    },
+    {
+      "path": "003 Spells/Spell Cards/Pulse Wave - Spell.md",
+      "sha256": "31d70e1a4daba1c571aca2f9379afb3b08515bf71f1bedfda4a236a9a92a1841",
+      "bytes": 2535
+    },
+    {
+      "path": "003 Spells/Spell Cards/Ravenous Void - Spell.md",
+      "sha256": "b68053c41c23380d5fbff2216a1e5700513f602b552669a0bac4e71726a1f276",
+      "bytes": 3103
+    },
+    {
+      "path": "003 Spells/Spell Cards/Ray of Frost - Spell.md",
+      "sha256": "42c3c57549f232c3d4b80659e3d07ad09045351233d19f29d34750859a590166",
+      "bytes": 2178
+    },
+    {
+      "path": "003 Spells/Spell Cards/Reality Break - Spell.md",
+      "sha256": "ec7c721222730278c7eeacedb3e473fe8d1495f8bf9610b05e726ca5c10e5efd",
+      "bytes": 3005
+    },
+    {
+      "path": "003 Spells/Spell Cards/Remove Curse - Spell.md",
+      "sha256": "d5f5591bee0e24b5c463f8a4e5d10d0368de5ec8aa733cae57bc3d4da60f84ad",
+      "bytes": 2180
+    },
+    {
+      "path": "003 Spells/Spell Cards/Resilient Sphere - Spell.md",
+      "sha256": "1432946b8fa579bb2a9c9ea18d66cd959e1882eae3d7a0219fa7a4c766b566fa",
+      "bytes": 2431
+    },
+    {
+      "path": "003 Spells/Spell Cards/Reverse Gravity - Spell.md",
+      "sha256": "30a23ce76a301de451569c5b27a1184eb393cb26428f5206a2feb0db456b4dd6",
+      "bytes": 2410
+    },
+    {
+      "path": "003 Spells/Spell Cards/Rope Trick - Spell.md",
+      "sha256": "c047a9bd5bf82ddb3bb2e552f935a6a4f5e41ad80ca0efe160a8952a10ee07b8",
+      "bytes": 2275
+    },
+    {
+      "path": "003 Spells/Spell Cards/Sapping Sting - Spell.md",
+      "sha256": "c6b25d433a1c681c89c0ca00019113d2dc5fee20265ba9d6bbd94b5683405df9",
+      "bytes": 2508
+    },
+    {
+      "path": "003 Spells/Spell Cards/Scatter - Spell.md",
+      "sha256": "151e8c014adefd16ddb9da1f12d837f44882d9ae2582a2858b97f5c7e65ba586",
+      "bytes": 2311
+    },
+    {
+      "path": "003 Spells/Spell Cards/Scorching Ray - Spell.md",
+      "sha256": "e18455fd8612495b59db6c60d73d2675020c6d048642d642240511373b5d960b",
+      "bytes": 2164
+    },
+    {
+      "path": "003 Spells/Spell Cards/Scrying - Spell.md",
+      "sha256": "c8ffd8700c43772fc10b3dd30b0f969576f842dd1aeba984d0b62a649d943c93",
+      "bytes": 2496
+    },
+    {
+      "path": "003 Spells/Spell Cards/See Invisibility - Spell.md",
+      "sha256": "48e2e8907470acdd4f50c7ada74f9ca0147b69805e4226e2e43e9baa2f260794",
+      "bytes": 2218
+    },
+    {
+      "path": "003 Spells/Spell Cards/Seeming - Spell.md",
+      "sha256": "6fd65e899d15521b466d43edf8bf03d4b64831e439bca4a99f6077afd31e0386",
+      "bytes": 2674
+    },
+    {
+      "path": "003 Spells/Spell Cards/Sending - Spell.md",
+      "sha256": "c286661831a5d942334979c921966a1f2b5028e8df0c0acd3ffa81808279c0fb",
+      "bytes": 2231
+    },
+    {
+      "path": "003 Spells/Spell Cards/Sequester - Spell.md",
+      "sha256": "2a949d4e19876acf6d10a0dcac20bb488e3a81f1e2608c5812743cd7c04c8242",
+      "bytes": 2355
+    },
+    {
+      "path": "003 Spells/Spell Cards/Shadow Blade - Spell.md",
+      "sha256": "df19a001374523312366a36c599266e0acd1b4255e414a45a2982040a361aa55",
+      "bytes": 2602
+    },
+    {
+      "path": "003 Spells/Spell Cards/Shapechange - Spell.md",
+      "sha256": "2019df256f00542911ba13a54401e5ede13f3d1bbcf0fc6d0e10a23cc45ea03a",
+      "bytes": 2391
+    },
+    {
+      "path": "003 Spells/Spell Cards/Shatter - Spell.md",
+      "sha256": "f2ecf6460ba82e13188d6b7470b4f5f936d9e6307fa7d19932357ed0d2119bc1",
+      "bytes": 2236
+    },
+    {
+      "path": "003 Spells/Spell Cards/Shield - Spell.md",
+      "sha256": "e8976a3687c5ef6a647fb9ee43caa1d3ce3bd359f3ec4edef38ba7b94d824fc9",
+      "bytes": 2371
+    },
+    {
+      "path": "003 Spells/Spell Cards/Sickening Radiance - Spell.md",
+      "sha256": "893c78c58f8bad4ad82ef396d92da33839744ad494d18f29842a40bd51c93873",
+      "bytes": 2637
+    },
+    {
+      "path": "003 Spells/Spell Cards/Silent Image - Spell.md",
+      "sha256": "6c18d83923c405b5931d2d757a87d30b667e0bbc2d244fdc4a3c37368fefd036",
+      "bytes": 2931
+    },
+    {
+      "path": "003 Spells/Spell Cards/Silvery Barbs - Spell.md",
+      "sha256": "89243cb6005de22af73a4464303dae51b9d6b66889820ec6a04f0c316feb44fa",
+      "bytes": 2612
+    },
+    {
+      "path": "003 Spells/Spell Cards/Simulacrum - Spell.md",
+      "sha256": "43a38effabc6140e0aefef908b71913d0d0e4de281fdf23010043e0393b2324c",
+      "bytes": 2396
+    },
+    {
+      "path": "003 Spells/Spell Cards/Sleep - Spell.md",
+      "sha256": "3dcf5c78852c46e7c8ca0e6483a6e111f09b3964a7ea2ebce1f63c7ad002d742",
+      "bytes": 2412
+    },
+    {
+      "path": "003 Spells/Spell Cards/Sleet Storm - Spell.md",
+      "sha256": "d24eb4ab81387fa7941314fb2a62e86bd7e12e243e7e50f09d490f58943c94b9",
+      "bytes": 2323
+    },
+    {
+      "path": "003 Spells/Spell Cards/Slow - Spell.md",
+      "sha256": "873732d783decf3884b139bdd9f28048e3996cbbec909b031131693bfc3c7e46",
+      "bytes": 2253
+    },
+    {
+      "path": "003 Spells/Spell Cards/Stone Shape - Spell.md",
+      "sha256": "1a96f64943d5d5957e120363e074ceb40bbce6ef0aa8e1539366b574f09b97f2",
+      "bytes": 2192
+    },
+    {
+      "path": "003 Spells/Spell Cards/Suggestion - Spell.md",
+      "sha256": "1903dd2f654d062053deaeac596e4130bc966f682bea197dbbd0dfe5fac836a9",
+      "bytes": 2312
+    },
+    {
+      "path": "003 Spells/Spell Cards/Summon Aberration - Spell.md",
+      "sha256": "d893bcfd8fd595489adcf2a4161dff57c36e384814bde5a3fb779d754cef79ac",
+      "bytes": 3947
+    },
+    {
+      "path": "003 Spells/Spell Cards/Summon Beast - Spell.md",
+      "sha256": "4b8eeeafb142ee4c2acc24a1df145d8efe3cef5b9f463e70467721e69a4e577c",
+      "bytes": 3686
+    },
+    {
+      "path": "003 Spells/Spell Cards/Summon Construct - Spell.md",
+      "sha256": "2165e48e9e97e3baebb3bffc411340bc997f28ca102130829985f2996f0cb1ce",
+      "bytes": 3922
+    },
+    {
+      "path": "003 Spells/Spell Cards/Summon Dragon - Spell.md",
+      "sha256": "303b2f66198db09beb3f8dd6d3c2bb1c64996388209e058e6f2d5832dd0acd06",
+      "bytes": 3875
+    },
+    {
+      "path": "003 Spells/Spell Cards/Summon Elemental - Spell.md",
+      "sha256": "7bb7e431b4697edf7e99382c2ad13536cc8831578ef344abad5f7400f608def0",
+      "bytes": 3778
+    },
+    {
+      "path": "003 Spells/Spell Cards/Summon Fey - Spell.md",
+      "sha256": "26d9b3366a83d289f4d6ef3409af80b3905d46edcaa7d97a8ef828d3c038c503",
+      "bytes": 3860
+    },
+    {
+      "path": "003 Spells/Spell Cards/Summon Fiend - Spell.md",
+      "sha256": "2c2fa8d89ad21ff318194945ec4f86f9d136977efa7c1f6649ee67cc9959145b",
+      "bytes": 3977
+    },
+    {
+      "path": "003 Spells/Spell Cards/Summon Undead - Spell.md",
+      "sha256": "e30863bf8da6e4bf61a2de6b452ed52a3872e65dea28de78a695a014832f8ff5",
+      "bytes": 4292
+    },
+    {
+      "path": "003 Spells/Spell Cards/Sunburst - Spell.md",
+      "sha256": "affd60966206ba1d80ef842266e414ec5a551a105586dada43a679a21e603865",
+      "bytes": 2404
+    },
+    {
+      "path": "003 Spells/Spell Cards/Symbol - Spell.md",
+      "sha256": "24e7b76df624da1eb9ef970598872feada10cfac259f840e696e9ccf084aee08",
+      "bytes": 3399
+    },
+    {
+      "path": "003 Spells/Spell Cards/Synaptic Static - Spell.md",
+      "sha256": "aea9597bb00c5ba5acb9126082078fa24ee6408e3055f84950ec84ea375c076e",
+      "bytes": 2220
+    },
+    {
+      "path": "003 Spells/Spell Cards/Tasha's Hideous Laughter - Spell.md",
+      "sha256": "7b1c44998ea7451d07e5702aa43a6df9fa20cae0fea0e79d7d01baf28eb108ee",
+      "bytes": 2805
+    },
+    {
+      "path": "003 Spells/Spell Cards/Tasha's Mind Whip - Spell.md",
+      "sha256": "3d1be369e298de631fcd5fc57968d69c9093f476ab9ad93dcb6275120a87eeb3",
+      "bytes": 2431
+    },
+    {
+      "path": "003 Spells/Spell Cards/Telekinesis - Spell.md",
+      "sha256": "481b7a84606ecd43e492711df8a842b9bee0e96aefd1b00e3af9b9181a3da9a2",
+      "bytes": 2339
+    },
+    {
+      "path": "003 Spells/Spell Cards/Telepathic Bond - Spell.md",
+      "sha256": "ea9aade0bf3b2091b3a2f86fe0e30667a508221ce95f37d11bdb7af7bd855f95",
+      "bytes": 2349
+    },
+    {
+      "path": "003 Spells/Spell Cards/Telepathy - Spell.md",
+      "sha256": "ff5b081ba7d1ddd18b295db7ea51ff61f8a53d1bbba85d450013fc00f25d36fc",
+      "bytes": 2307
+    },
+    {
+      "path": "003 Spells/Spell Cards/Teleport - Spell.md",
+      "sha256": "5c4f4ffce2857066667a59a063968a062d25ad4155683cf188649ed42d031a54",
+      "bytes": 3367
+    },
+    {
+      "path": "003 Spells/Spell Cards/Teleportation Circle - Spell.md",
+      "sha256": "314de241d4a4872962eac725409ec24b47b56a1d5838c72e4fdb63f40e4b459f",
+      "bytes": 2588
+    },
+    {
+      "path": "003 Spells/Spell Cards/Temporal Shunt - Spell.md",
+      "sha256": "1b58f854fa38bf11e51c724ec309d896a31573d44f389c824ac41de5e884a275",
+      "bytes": 2915
+    },
+    {
+      "path": "003 Spells/Spell Cards/Tether Essence - Spell.md",
+      "sha256": "152bce00a474d57b216eb481e5a9911220e8da427576f50c84a58857afc7877b",
+      "bytes": 2823
+    },
+    {
+      "path": "003 Spells/Spell Cards/Thunderwave - Spell.md",
+      "sha256": "e397d7906abbd500af09e9fe4e90b82cfee1a10b03647da78c8b631fadd1d26b",
+      "bytes": 2160
+    },
+    {
+      "path": "003 Spells/Spell Cards/Time Ravage - Spell.md",
+      "sha256": "8249a70fdb9b9f8a8e78f3277afefcbc4bf401523ff0eabf6c423b6c3664e789",
+      "bytes": 2739
+    },
+    {
+      "path": "003 Spells/Spell Cards/Time Stop - Spell.md",
+      "sha256": "15d916ccea76ba2641dc6235936b046cb76f82416f4bc2223e8ac531d47a7ccb",
+      "bytes": 2152
+    },
+    {
+      "path": "003 Spells/Spell Cards/Tiny Hut - Spell.md",
+      "sha256": "5b6433ec86d0f679e32bf1117bb68f65b66d2cbeaed8a2b51fb369b30a8a7cf8",
+      "bytes": 2579
+    },
+    {
+      "path": "003 Spells/Spell Cards/Transfix - Spell.md",
+      "sha256": "d63056a742ee7de73a58de80f3e31651077c4d8e370bbbc50ac1f052658162b0",
+      "bytes": 2758
+    },
+    {
+      "path": "003 Spells/Spell Cards/Transmute Rock - Spell.md",
+      "sha256": "c144171fc3c448984111473cecd177944ee3d043edef0670e38017f7f55766d6",
+      "bytes": 2605
+    },
+    {
+      "path": "003 Spells/Spell Cards/True Polymorph - Spell.md",
+      "sha256": "07d78d47f646ea16bc5a927649d0017abaab87ede854e6e273f91fe703fa0c72",
+      "bytes": 2478
+    },
+    {
+      "path": "003 Spells/Spell Cards/True Seeing - Spell.md",
+      "sha256": "94416905883271fc243b2b0c128899be69817c48334ead0afb4f8c448c28c7fd",
+      "bytes": 2213
+    },
+    {
+      "path": "003 Spells/Spell Cards/True Strike - Spell.md",
+      "sha256": "490081bf187fb43c1d5cbd5bf5b5c1d67dfb39ee49415b23db8d5c9e54a08353",
+      "bytes": 2310
+    },
+    {
+      "path": "003 Spells/Spell Cards/Unseen Servant - Spell.md",
+      "sha256": "e00161e46c7c8611a2f584b81551d7eb138d3c16e65a13f9303399c5e5b09a36",
+      "bytes": 2422
+    },
+    {
+      "path": "003 Spells/Spell Cards/Vortex Warp - Spell.md",
+      "sha256": "3744e40738ccf119b691c4e1b8459bd616d40af55657187bd0d8fa9bb93cf3f1",
+      "bytes": 2436
+    },
+    {
+      "path": "003 Spells/Spell Cards/Wall of Fire - Spell.md",
+      "sha256": "36ed14b8547dfc3fbbac5c6c94dac674fe7765e2a03ed160270905c4f0a81ed5",
+      "bytes": 2455
+    },
+    {
+      "path": "003 Spells/Spell Cards/Wall of Force - Spell.md",
+      "sha256": "944db108a674d2f785e509a3b028d29799a8c84a746653244292d3a718c449c1",
+      "bytes": 2445
+    },
+    {
+      "path": "003 Spells/Spell Cards/Wall of Stone - Spell.md",
+      "sha256": "c0da924e2005c73ef2d8ae9510d4e1c4ae76d3106b23216d796410cc71c4d92c",
+      "bytes": 2467
+    },
+    {
+      "path": "003 Spells/Spell Cards/Water Breathing - Spell.md",
+      "sha256": "958ca6b2cf46f43499b91b3ac247a0f9e87c8f8da45a837ad859101eb21a8c50",
+      "bytes": 2341
+    },
+    {
+      "path": "003 Spells/Spell Cards/Web - Spell.md",
+      "sha256": "d85112443f4c3c5da681007eb37080f7a267f88a1e1a701d663687de7877b419",
+      "bytes": 2171
+    },
+    {
+      "path": "003 Spells/Spell Cards/Wish - Spell.md",
+      "sha256": "62a65a465435a9fa48f693f916b8f5db9e80e8b50dff4505524928fca622f4f3",
+      "bytes": 2376
+    },
+    {
+      "path": "003 Spells/Spell Cards/Witch Bolt - Spell.md",
+      "sha256": "0545bfaf6e2a84888a1ac5c084cad045421e719ddefdc3c0e83ab3a938d1a71a",
+      "bytes": 2390
+    },
+    {
+      "path": "003 Spells/Spell Cards/Wristpocket - Spell.md",
+      "sha256": "10cef54c3197b60f6ec26dd687af310695000d262dfb497518f1728fa1c4c339",
+      "bytes": 2463
+    },
+    {
+      "path": "003 Spells/Spell Catalogue.base",
+      "sha256": "5983f8fdd8b9100eb3f636cb3496aad978534ee6cf8fd55d4def0de8e5a7cfe5",
+      "bytes": 3026
+    },
+    {
+      "path": "003 Spells/Spells.md",
+      "sha256": "15326cce17ac8ae9148f08968bee22c1d368d241ab9a3ce3b862065f2afd27d8",
+      "bytes": 26040
+    },
+    {
+      "path": "004 Items & Crafting/Crafting.md",
+      "sha256": "bb63a2c99856ea2e8ff8f48c3af32f77b3505e8e664a4f555d00e168dc862362",
+      "bytes": 10656
+    },
+    {
+      "path": "004 Items & Crafting/Evolving Magic Items.md",
+      "sha256": "b1333050154b460449f7de0d9d3062d0f80a4f2c5daff0e263fd304340691019",
+      "bytes": 5759
+    },
+    {
+      "path": "004 Items & Crafting/Item Cards/Amulet of Health - Item.md",
+      "sha256": "b835071c71959aaa0c21a374b46d54d07dabaf514593bfc515f01ee2ad9c9c20",
+      "bytes": 1120
+    },
+    {
+      "path": "004 Items & Crafting/Item Cards/Arcane Grimoire +1 - Item.md",
+      "sha256": "acbaecce99a9ac4e2c4810be97590a91f1fe04ddf95f950dcd667efd95ae72de",
+      "bytes": 1180
+    },
+    {
+      "path": "004 Items & Crafting/Item Cards/Arcane Grimoire +2 - Item.md",
+      "sha256": "cfc284ca318f12f2d22feedb55df5c05cc68cf57b2c5dbb9a4b7e2c24a0aacb3",
+      "bytes": 1172
+    },
+    {
+      "path": "004 Items & Crafting/Item Cards/Arcane Grimoire +3 - Item.md",
+      "sha256": "2009b1d479ad0d09b03e40e1ea99ad526e9fc0aca1852ec227aaa86184442bbf",
+      "bytes": 1182
+    },
+    {
+      "path": "004 Items & Crafting/Item Cards/Arcanist's Bestiary - Item.md",
+      "sha256": "573291dda16c8aecfdd0dbc824b8de3ce3a32ea4488692f11bd283230198136b",
+      "bytes": 1153
+    },
+    {
+      "path": "004 Items & Crafting/Item Cards/Bag of Holding - Item.md",
+      "sha256": "d09d7feb07255af19ce0fb72ebe262c0d8618ef601cf2057caffdcd0a3d786d6",
+      "bytes": 1137
+    },
+    {
+      "path": "004 Items & Crafting/Item Cards/Blackstaff - Item.md",
+      "sha256": "128caec2e85af3b8c516b8a6b9da287ead313cfba06208862e3038b976122474",
+      "bytes": 1322
+    },
+    {
+      "path": "004 Items & Crafting/Item Cards/Blood Amulet - Item.md",
+      "sha256": "0e7b5809a3853f2d2078de763da62f4bd3abdd5af24f80249c70ba9a64a80036",
+      "bytes": 1222
+    },
+    {
+      "path": "004 Items & Crafting/Item Cards/Boon Companions' Bands - Item.md",
+      "sha256": "aa2843d6d77e16ab15bb75f2d4bf841d184a90f22bcde4827d5818b1badbd67c",
+      "bytes": 1127
+    },
+    {
+      "path": "004 Items & Crafting/Item Cards/Bracers of Defense - Item.md",
+      "sha256": "da2394f50170d41c0c1243505635bd0b7ff9ca75c8121a384694a0d967cfba9a",
+      "bytes": 1090
+    },
+    {
+      "path": "004 Items & Crafting/Item Cards/Broom of Flying - Item.md",
+      "sha256": "d6504f7630055760926401095194c7f71c2670356e3274be4e8455b5b98807b4",
+      "bytes": 1154
+    },
+    {
+      "path": "004 Items & Crafting/Item Cards/Carpet of Flying - Item.md",
+      "sha256": "08d796fc4b60c65f6bc75cdfdef0e180b7310f75c853f6cf5a98afbdad48c120",
+      "bytes": 1129
+    },
+    {
+      "path": "004 Items & Crafting/Item Cards/Cloak of Protection - Item.md",
+      "sha256": "0d1d4675081fadb4268a3935e7b06229583634b0c93e4a68051c292f2f440c11",
+      "bytes": 1117
+    },
+    {
+      "path": "004 Items & Crafting/Item Cards/Diamond Staff - Item.md",
+      "sha256": "ca956deeb6297d3b5cbbf862462aa18d57405658120d590acb97f5fec43dd514",
+      "bytes": 1149
+    },
+    {
+      "path": "004 Items & Crafting/Item Cards/Illusionist's Bracers - Item.md",
+      "sha256": "022df724bbf70fe5a8103522a22792f78a289ff4d7dc181948bfe77d4d5ac407",
+      "bytes": 1308
+    },
+    {
+      "path": "004 Items & Crafting/Item Cards/Ioun Stone of Vitality - Item.md",
+      "sha256": "3299372c3a97236694096048dd7c0914a43108e83969f05e40c426dbe2e22d95",
+      "bytes": 1230
+    },
+    {
+      "path": "004 Items & Crafting/Item Cards/Lucky Foot - Item.md",
+      "sha256": "fe39b18fc11df317dcecce2a7ae190a953b42f2536a772e897c04f691a847c48",
+      "bytes": 1012
+    },
+    {
+      "path": "004 Items & Crafting/Item Cards/Magewright's Gloves - Item.md",
+      "sha256": "c585cbec4222ade16cb6241cc39cf01fbd2319d64222a58f8db22836b2348548",
+      "bytes": 1076
+    },
+    {
+      "path": "004 Items & Crafting/Item Cards/Mantle of Spell Resistance - Item.md",
+      "sha256": "1b2acdd6fde6c5f64067b9f7a74e35b9d2cca6eabc5107ca9bc832de940b567c",
+      "bytes": 1108
+    },
+    {
+      "path": "004 Items & Crafting/Item Cards/Mind Sharpener - Item.md",
+      "sha256": "031e4dc964ede92e4b54142bb2a4739198968633c3fd0fba628ae8181569909b",
+      "bytes": 1194
+    },
+    {
+      "path": "004 Items & Crafting/Item Cards/Mizzium Apparatus - Item.md",
+      "sha256": "cd9ad941ec67ac1a32c77cd61cf2970b0ce594c86386f39e27c92f26135a104b",
+      "bytes": 1359
+    },
+    {
+      "path": "004 Items & Crafting/Item Cards/Necklace of the Beastly Familiar - Azurite - Item.md",
+      "sha256": "2c72e377db6f0a68a88f470c5c5c6f5ec818d2c117ad8e8a2fbcc081d82919d0",
+      "bytes": 1229
+    },
+    {
+      "path": "004 Items & Crafting/Item Cards/Necklace of the Beastly Familiar - Chrysoprase - Item.md",
+      "sha256": "eef34387f28a42ff69f8de3f0c68593f73eb7a9a548c58c1ee8016305a753bd8",
+      "bytes": 1230
+    },
+    {
+      "path": "004 Items & Crafting/Item Cards/Necklace of the Beastly Familiar - Fire opal - Item.md",
+      "sha256": "68d407cdaeca955404e87b80417c00c526df9b9d8c1770522b06c17493b1f8f4",
+      "bytes": 1239
+    },
+    {
+      "path": "004 Items & Crafting/Item Cards/Necklace of the Beastly Familiar - Topaz - Item.md",
+      "sha256": "f8e3962fda75d18b8524ab3d9eedb494a825401dd534ead77effeee47a761610",
+      "bytes": 1221
+    },
+    {
+      "path": "004 Items & Crafting/Item Cards/Necklace of the Beastly Familiar - Zircon - Item.md",
+      "sha256": "08215649b014d2d24861612ea772afa56e8b89470b9100baf6aec597bf89e71d",
+      "bytes": 1218
+    },
+    {
+      "path": "004 Items & Crafting/Item Cards/Orb of Divination Detection - Item.md",
+      "sha256": "8b18237cd9f6b1440f73add99500ded13b97fbc654f9106d6bf13aa69705fe2b",
+      "bytes": 1072
+    },
+    {
+      "path": "004 Items & Crafting/Item Cards/Pearl of Power - Item.md",
+      "sha256": "d791b91e836daa6d9b2195ec79bef0ecac75b7a56b29277590b5a4d19976f5e0",
+      "bytes": 1107
+    },
+    {
+      "path": "004 Items & Crafting/Item Cards/Portable Hole - Item.md",
+      "sha256": "6b188798c6695bfafb737fe0e24738433bf0ca16c3a2e148c9c4f1cea3889f5d",
+      "bytes": 1102
+    },
+    {
+      "path": "004 Items & Crafting/Item Cards/Potion of Dragon's Breath - Item.md",
+      "sha256": "3f35e9e624684e4dc25dffe5e9197a92f3310643c13854ba4993bcbdb197935b",
+      "bytes": 1068
+    },
+    {
+      "path": "004 Items & Crafting/Item Cards/Potion of Tirelessness - Item.md",
+      "sha256": "39a877f7a3be0f282e0f2a48ecd6bd8c6d42e4e3901ac119da917ffaba0d3254",
+      "bytes": 1047
+    },
+    {
+      "path": "004 Items & Crafting/Item Cards/Prismatic Rune - Item.md",
+      "sha256": "bb07d652c19e1a1eaef497bacef24497b08a53b59f4e183edab499a27f295250",
+      "bytes": 1108
+    },
+    {
+      "path": "004 Items & Crafting/Item Cards/Ring of Dedicated Focus - Item.md",
+      "sha256": "a7376b1e990eac1a813b4c59e422bab40fc97b6072d7ae771bf3142bab9e9a6d",
+      "bytes": 1156
+    },
+    {
+      "path": "004 Items & Crafting/Item Cards/Ring of Protection - Item.md",
+      "sha256": "0e87c62ce1e683da3897a8d55216ebb5f13cd3abf0c72ecc5d5f1e739149d352",
+      "bytes": 1128
+    },
+    {
+      "path": "004 Items & Crafting/Item Cards/Ring of Spell Storing - Item.md",
+      "sha256": "91413d5350db0915f961de5f63d19ed3f3e0a50e254d39940010df8e6e624e27",
+      "bytes": 1202
+    },
+    {
+      "path": "004 Items & Crafting/Item Cards/Robe of the Archmagi - Item.md",
+      "sha256": "a03f5a0ba507bcf70fd900d45b52d6feac34ba65de231cf793c524ce30373e8f",
+      "bytes": 1212
+    },
+    {
+      "path": "004 Items & Crafting/Item Cards/Rod of Absorption - Item.md",
+      "sha256": "5b6ccf6e9964660604a754675fb8c5a8a137e659eb867f1eb7d8f7000b145280",
+      "bytes": 1256
+    },
+    {
+      "path": "004 Items & Crafting/Item Cards/Scholar's Anchoring Bangle - Item.md",
+      "sha256": "3a425e752b847a8fa57f1d0521737ed8c57d4c56924ab8d22392434bae6b1e10",
+      "bytes": 1162
+    },
+    {
+      "path": "004 Items & Crafting/Item Cards/Shiftweave - Item.md",
+      "sha256": "1493839c1cfff631aceeb81ead1ed6dbe148028501c550342245e8f3b4cf212f",
+      "bytes": 1230
+    },
+    {
+      "path": "004 Items & Crafting/Item Cards/Spell Component Ring - Item.md",
+      "sha256": "0faf9928f6f1a6f58dbacca211ae993aea752b862a37ead2ee7fa663e7c6d554",
+      "bytes": 1075
+    },
+    {
+      "path": "004 Items & Crafting/Item Cards/Spell Duelist's Trophy - Item.md",
+      "sha256": "0ef7cf04d0f2fc8fca94a82f70055aa2590e9ca8989db8832aeef1e2c69239c0",
+      "bytes": 1158
+    },
+    {
+      "path": "004 Items & Crafting/Item Cards/Staff of Defense - 2014 - Item.md",
+      "sha256": "60494dfa2c8590c46d771db265e2c52bcd8ad48b3b14839d8dbeed8afbefc73c",
+      "bytes": 1281
+    },
+    {
+      "path": "004 Items & Crafting/Item Cards/Staff of Defense - 2023 - Item.md",
+      "sha256": "e675a86c1c49d089ad41d282cc439ca9a800452c51a9ca6dc6e578298957d03f",
+      "bytes": 1382
+    },
+    {
+      "path": "004 Items & Crafting/Item Cards/Staff of Power - Item.md",
+      "sha256": "370e22f25af38f0282031c7c22666560aab3fe83480eef48aa7ddac991a8333f",
+      "bytes": 1160
+    },
+    {
+      "path": "004 Items & Crafting/Item Cards/Staff of the Magi - Item.md",
+      "sha256": "e6412f55ebd0426439f71471958e9560fb2eeff02fd0bf3d9203c93db2ab9d15",
+      "bytes": 1157
+    },
+    {
+      "path": "004 Items & Crafting/Item Cards/Tome of Clear Thought - Item.md",
+      "sha256": "355bc68061c8815f1008dbb489dae126352d314528867ba08c5136ec79d974a3",
+      "bytes": 1144
+    },
+    {
+      "path": "004 Items & Crafting/Item Cards/Traveler's Pearl - Item.md",
+      "sha256": "f2cb116177dbc0bffbbf314721c1506350c8273a5882893d9ba1244ea36bff29",
+      "bytes": 1044
+    },
+    {
+      "path": "004 Items & Crafting/Item Cards/Universal Pantograph - Item.md",
+      "sha256": "9005486eec83ba49584929f242d939705364345e8a2742578f51fbc61014f48d",
+      "bytes": 1155
+    },
+    {
+      "path": "004 Items & Crafting/Item Cards/Wand of Web - Item.md",
+      "sha256": "6f4079ffbe28b86f0d934c46441c09a73364c42ae6c4e1b943cb246b26a60cb3",
+      "bytes": 1092
+    },
+    {
+      "path": "004 Items & Crafting/Item Cards/Winged Boots - Item.md",
+      "sha256": "798595eb256bc7fabf8e281f998a5a8ed8c917691067576a8d7563e323e7da20",
+      "bytes": 1138
+    },
+    {
+      "path": "004 Items & Crafting/Item Cards/Wyrmreaver Gauntlets - Item.md",
+      "sha256": "9fece7cd4ea9446b981d08710e76753dc83d4ad65f174ae14df1c9499019a20c",
+      "bytes": 1395
+    },
+    {
+      "path": "004 Items & Crafting/Item Catalogue.base",
+      "sha256": "bc5d93a913152817a92ab46a4305546efcb5bb42d0ee3eca6da9aaf957528978",
+      "bytes": 4233
+    },
+    {
+      "path": "004 Items & Crafting/Items for Wizard.md",
+      "sha256": "4b727924fa79fc845a18c34776b904993d0786833c32f69cd3ca1d3c3b4ed858",
+      "bytes": 31543
+    },
+    {
+      "path": "004 Items & Crafting/Magic Item Attunement.md",
+      "sha256": "d6b12f8fe9907a86968a7cd9441e7d51393ab0cf2512a9ff27d4723960df92cf",
+      "bytes": 18027
+    },
+    {
+      "path": "005 Creature, Minions & Forms/000 Minion Management.md",
+      "sha256": "7c452a705f7edd767b86694e0f2b5f1618057542b63f336c1ef38f0d26e7307a",
+      "bytes": 3753
+    },
+    {
+      "path": "005 Creature, Minions & Forms/Animate Dead - Necromancer.md",
+      "sha256": "596fe98f2d22d8d50c7123654bd9d9e677479bc22188c3e9041e0c088acd869f",
+      "bytes": 4510
+    },
+    {
+      "path": "005 Creature, Minions & Forms/Creature Cards/Bat - Creature.md",
+      "sha256": "16a10c7fb19bffc40a9b021cd05d27806bf1e0ced70e19d24d63ea360fddb93e",
+      "bytes": 2530
+    },
+    {
+      "path": "005 Creature, Minions & Forms/Creature Cards/Couatl - Creature.md",
+      "sha256": "1b9c5d48d16e2d512ec7e19fe9bc369042ef9a4153e3462830602f3afa6cc3a6",
+      "bytes": 2701
+    },
+    {
+      "path": "005 Creature, Minions & Forms/Creature Cards/Earth Elemental - Creature.md",
+      "sha256": "a212f3fce7c8613cb9f4cbeb39ee8b6dda7e1441729fe310b57013ea56513a4f",
+      "bytes": 2711
+    },
+    {
+      "path": "005 Creature, Minions & Forms/Creature Cards/Giant Ape - Creature.md",
+      "sha256": "dd2b597ea4c362f3d76ea96ad20ed3fcd75ee87a9cf2e0effb4482a6663abd8c",
+      "bytes": 2585
+    },
+    {
+      "path": "005 Creature, Minions & Forms/Creature Cards/Giant Bat - Creature.md",
+      "sha256": "d4a89197ab787aa7004b542e24e23d0f5e4052fc7af0d516158fead091934831",
+      "bytes": 2616
+    },
+    {
+      "path": "005 Creature, Minions & Forms/Creature Cards/Giant Constrictor Snake - Creature.md",
+      "sha256": "3cb2b8d2a31d891185ebb4448ef2bfb3fbf6402d48fe8ba32b5ade874a00f7f2",
+      "bytes": 2651
+    },
+    {
+      "path": "005 Creature, Minions & Forms/Creature Cards/Giant Scorpion - Creature.md",
+      "sha256": "4dccd25a3d27b3e6a49ef0cc9b30fc7cb758347a46f5e6416f1da463e0d308f7",
+      "bytes": 2607
+    },
+    {
+      "path": "005 Creature, Minions & Forms/Creature Cards/Giant Shark - Creature.md",
+      "sha256": "8dba564e33225be50012d42e42034a6fd4a3bf067fd8e169a3ad342ceea9f2fe",
+      "bytes": 2570
+    },
+    {
+      "path": "005 Creature, Minions & Forms/Creature Cards/Giant Spider - Creature.md",
+      "sha256": "d8812328d4d865b535df42aa47538740b84c97894624ec1c8083f868f1d48580",
+      "bytes": 2572
+    },
+    {
+      "path": "005 Creature, Minions & Forms/Creature Cards/Guardian Naga - Creature.md",
+      "sha256": "347c5d6b3914eb021d23bc42a8238c7c62914b6307806998183d01502628589c",
+      "bytes": 2731
+    },
+    {
+      "path": "005 Creature, Minions & Forms/Creature Cards/Invisible Stalker - Creature.md",
+      "sha256": "560a55389e12f2a0260dae63063cb208a0195f54abb39b4d86bcf04cf20ff203",
+      "bytes": 2724
+    },
+    {
+      "path": "005 Creature, Minions & Forms/Creature Cards/Nightmare - Creature.md",
+      "sha256": "594ab1bc4fc17b67ad82e715942b8f3942d57c06dde9dff05bd4f79c822515d2",
+      "bytes": 2646
+    },
+    {
+      "path": "005 Creature, Minions & Forms/Creature Cards/Octopus - Creature.md",
+      "sha256": "974723eadbc4b2fbd67d4fd30b4d904522ae57278f95f578248b946314f6b6e2",
+      "bytes": 2573
+    },
+    {
+      "path": "005 Creature, Minions & Forms/Creature Cards/Owl - Creature.md",
+      "sha256": "7aaf1f189d7b8a7196eca10b2150a42ef8321f74765b8a753561892f1a48305f",
+      "bytes": 2568
+    },
+    {
+      "path": "005 Creature, Minions & Forms/Creature Cards/Pegasus - Creature.md",
+      "sha256": "1411809248ff390c31f70497bb5c31e55c49118278ac8580305692c53bf31e86",
+      "bytes": 2569
+    },
+    {
+      "path": "005 Creature, Minions & Forms/Creature Cards/Planetar - Creature.md",
+      "sha256": "6597b4af4a5cbe4b82ff7037e9400477350103b8ba80f98dde6488e8e14a0822",
+      "bytes": 2703
+    },
+    {
+      "path": "005 Creature, Minions & Forms/Creature Cards/Purple Worm - Creature.md",
+      "sha256": "a2d5ae9b230da5e6124b4236aac1340d803160376f9b8f5b966d727711a93c84",
+      "bytes": 2708
+    },
+    {
+      "path": "005 Creature, Minions & Forms/Creature Cards/Shield Guardian - Creature.md",
+      "sha256": "51418e5d0755f94ca2ac73fea840a8801160a5e4c5226488985a5d1906dc859d",
+      "bytes": 2761
+    },
+    {
+      "path": "005 Creature, Minions & Forms/Creature Cards/Spider - Creature.md",
+      "sha256": "3ac3edb62bb074d26dbdf9165df60cb95166461a1bdb29003e3a1e17cd1260de",
+      "bytes": 2570
+    },
+    {
+      "path": "005 Creature, Minions & Forms/Creature Cards/Tyrannosaurus Rex - Creature.md",
+      "sha256": "af1f32c88c231b3fc9f8f3111d5afbf5b4d976c3013b773b85a6a1aeb61947ff",
+      "bytes": 2595
+    },
+    {
+      "path": "005 Creature, Minions & Forms/Find Familiar.md",
+      "sha256": "ac70404a7195315699aaa80690fb5e5da253d957da367838e808594372019e05",
+      "bytes": 10732
+    },
+    {
+      "path": "005 Creature, Minions & Forms/Form Catalogue.md",
+      "sha256": "25ed884434767c6720caa24718ff4fa2dda41fe84199cf24519bce267bf624bb",
+      "bytes": 8159
+    },
+    {
+      "path": "005 Creature, Minions & Forms/Form Legality Guide.md",
+      "sha256": "49d09404013eb67c63d6d471e617669f4c07693eed5e99bcc8b2e6890d24907e",
+      "bytes": 8984
+    },
+    {
+      "path": "005 Creature, Minions & Forms/Planar Binding Candidate.md",
+      "sha256": "346dbdb11239ee665f6328cd0ff77866c55115e115e6090e8cc238c6ec2eefa0",
+      "bytes": 3744
+    },
+    {
+      "path": "005 Creature, Minions & Forms/Planar Binding Mount.md",
+      "sha256": "f9343c5b4a615ba6c7decadba14dd0805af1e904e0eb255372836e6f8db2a491",
+      "bytes": 2504
+    },
+    {
+      "path": "005 Creature, Minions & Forms/Polymorph.md",
+      "sha256": "1a7f19430506ebde52282a524ea8774ab5f6e87635317f8d1dd076d19caf4c0a",
+      "bytes": 3974
+    },
+    {
+      "path": "005 Creature, Minions & Forms/Shapechange.md",
+      "sha256": "3d44fc09a9462ce7868c8a99cabcee76ed9e817bd4f9731ceea7ddbea4f805f1",
+      "bytes": 6087
+    },
+    {
+      "path": "005 Creature, Minions & Forms/Summoning.md",
+      "sha256": "2e00b14263edea72412a7e3ba6417a5ff6718f636184696d5811b990d36e96c8",
+      "bytes": 5340
+    },
+    {
+      "path": "005 Creature, Minions & Forms/True Polymorph.md",
+      "sha256": "c0da782642b7e51f57b76c5b67fd1c934abbc72807324f082ef7d30e77315f19",
+      "bytes": 7333
+    },
+    {
+      "path": "006 Housing & Bastion/Bastion Crafting.md",
+      "sha256": "433f58c5a7f430378aaa5539799639f50cb624f1f6a151a03813e2e4c6d054f9",
+      "bytes": 10857
+    },
+    {
+      "path": "006 Housing & Bastion/Bastion Progression.md",
+      "sha256": "136d0a8d60701f983999f789a0785dcc94d77d0d82686a70b75646f77f86ab07",
+      "bytes": 6308
+    },
+    {
+      "path": "006 Housing & Bastion/Bastion.md",
+      "sha256": "48c55700b24efa5efccee3cb629f1f5f547a9505b60b99223ac311fd04f2d2e2",
+      "bytes": 1366
+    },
+    {
+      "path": "006 Housing & Bastion/Construction & Defense.md",
+      "sha256": "a2d0439cd2be6ca7441d4199302861449a09db1d9e7dfbb235c5376366dd6b79",
+      "bytes": 11765
+    },
+    {
+      "path": "006 Housing & Bastion/Facilities.md",
+      "sha256": "2a5fc22162d010634b6dd2a3b13ec948570521293216e7b6cc9da827963dd39f",
+      "bytes": 12206
+    },
+    {
+      "path": "006 Housing & Bastion/Hirelings.md",
+      "sha256": "9629a290b8a0f55710f12d8fcc71cd2f9eb37c53aa492f45c6d0eb78f7c9c02b",
+      "bytes": 6017
+    },
+    {
+      "path": "007 Tactics/Arcana Unleashed Combinations.md",
+      "sha256": "abbaf483d907c4efab2287c43f164687b1e72daae4099b6c7aebd8499c1fd5ab",
+      "bytes": 12763
+    },
+    {
+      "path": "007 Tactics/Arcane Exploits.md",
+      "sha256": "156bcd85396320cc403ad8dfe7a551420a52bdf07b5de7864005396f0fc0ef60",
+      "bytes": 15871
+    },
+    {
+      "path": "007 Tactics/Circle Casting.md",
+      "sha256": "17522074aa49c53d860b3dd530ffa4dfd023a0f598f5fad6e74d9b97b4225ad3",
+      "bytes": 14535
+    },
+    {
+      "path": "007 Tactics/Combat Dashboard.md",
+      "sha256": "e8f81d2142098d84d6cc5160138944f52e5e6235b04f05ab9880ebea42c14355",
+      "bytes": 9755
+    },
+    {
+      "path": "007 Tactics/Concentration Strategy.md",
+      "sha256": "74fb504774ad3e98089470074a4a9cdefd60c4c1d46b957f263d099b4a6690b6",
+      "bytes": 3918
+    },
+    {
+      "path": "007 Tactics/Countering Spellcasters.md",
+      "sha256": "58a53d9ab8e29afcfd4a9da37a2569732fdc80cbab12d5f923bad42d14702c31",
+      "bytes": 4977
+    },
+    {
+      "path": "007 Tactics/Information Warfare.md",
+      "sha256": "1b2da93fa8f76e64ca019d616e5358376695aadca50e65e6835b70a3fd8504e6",
+      "bytes": 21804
+    },
+    {
+      "path": "007 Tactics/Initiative & First-Turn Strategy.md",
+      "sha256": "0bdc33d8684fcc53b062e7e554c8e5b94646a071f08ba5bc5e418947ca325df0",
+      "bytes": 3336
+    },
+    {
+      "path": "007 Tactics/Prepared Loadouts.md",
+      "sha256": "9f4565e387d131160286cac59443ec617f530c4f04b0e0b2ba4d7da49778ab37",
+      "bytes": 11939
+    },
+    {
+      "path": "007 Tactics/Rest Casting.md",
+      "sha256": "d911acfdd090efc76efc48a29e7a63b38f3bbfd74d028fd9ad99326a6191616c",
+      "bytes": 9753
+    },
+    {
+      "path": "007 Tactics/Spell Tactics.md",
+      "sha256": "6090b7379ed8dc9ca45635aefd5c9d80975c2798c370f3e4b8421a10880f4621",
+      "bytes": 18530
+    },
+    {
+      "path": "007 Tactics/Summon Damage Benchmarks.md",
+      "sha256": "646cf721cbaa0fd60ca040aa571392107e3489d17cc0349726ed1aadae43bad6",
+      "bytes": 9867
+    },
+    {
+      "path": "008 Advanced Wizardry/Complex Spells/Contingency Optimization.md",
+      "sha256": "6cef17ff88736480d33b6d06e178a7f90a21f34c63d8c61e6875ad2063b8a563",
+      "bytes": 16635
+    },
+    {
+      "path": "008 Advanced Wizardry/Complex Spells/Glyph of Warding.md",
+      "sha256": "955c32e61c8de0276fa792a90f3a30865774958d8671d2b431f2d9471132d559",
+      "bytes": 15580
+    },
+    {
+      "path": "008 Advanced Wizardry/Complex Spells/Magic Jar Optimization.md",
+      "sha256": "d2708b8ccf99bc1f83801bfc6aaafcadaf787dbd1a5149c93e6a883a083939fa",
+      "bytes": 15845
+    },
+    {
+      "path": "008 Advanced Wizardry/Complex Spells/Planar Binding.md",
+      "sha256": "e78b6421bfd0b9b65bf6a6580385a99141314e5b99eb0d3a02db7552024299d2",
+      "bytes": 21010
+    },
+    {
+      "path": "008 Advanced Wizardry/Complex Spells/Simulacrum.md",
+      "sha256": "d72662faaa651aa5109e7115afecf08e1cccce63546e0d302c32b0c4f9c12527",
+      "bytes": 18436
+    },
+    {
+      "path": "008 Advanced Wizardry/Complex Spells/Wish.md",
+      "sha256": "bbbc7070545ebeb0097b2da1e5b51abefe1df6b625132a2775f3967d2c5894aa",
+      "bytes": 16257
+    },
+    {
+      "path": "008 Advanced Wizardry/Death & Contingency Planning.md",
+      "sha256": "917ca1f6824c4a48f715157ddac85328b02a98b59f60b8153b96c5c39d3db7ee",
+      "bytes": 2492
+    },
+    {
+      "path": "008 Advanced Wizardry/Downtime.md",
+      "sha256": "2e07b663048f2d558513cb908db90e770e1325b9388bad59738507e248be33df",
+      "bytes": 10592
+    },
+    {
+      "path": "008 Advanced Wizardry/Expensive Components.md",
+      "sha256": "9eef5865d580c30f782c97736f66fba219e789f789eb29c55beaa0de88e196ea",
+      "bytes": 7464
+    },
+    {
+      "path": "008 Advanced Wizardry/Fabricate Optimization.md",
+      "sha256": "289d8576adfc6dd93fb40e8612e4e64ad60f7b733641c378a1b58e622353f766",
+      "bytes": 17248
+    },
+    {
+      "path": "008 Advanced Wizardry/High-Level Infrastructure/Clone.md",
+      "sha256": "2f4534a1af8da5cd0604ec548df18a1dae9204fd6f0db116f360da70f3636d1d",
+      "bytes": 17001
+    },
+    {
+      "path": "008 Advanced Wizardry/High-Level Infrastructure/Demiplane.md",
+      "sha256": "0a91ee2da588adc8b6a6536ae97fc5046afe14cf0c0d82536536916c68f8afae",
+      "bytes": 17989
+    },
+    {
+      "path": "008 Advanced Wizardry/High-Level Infrastructure/Teleportation Circle Network.md",
+      "sha256": "e2d0d4c8cd21b78e7a8f72378407f95e6a7e2f0367bce1c61631a4ee248af55f",
+      "bytes": 19933
+    },
+    {
+      "path": "008 Advanced Wizardry/Intelligence above 20.md",
+      "sha256": "a213d11b49f7d9d069030d09802d81abcd25e14a458f3e352a5b473a26353510",
+      "bytes": 14229
+    },
+    {
+      "path": "008 Advanced Wizardry/Long-Term Magical Defenses.md",
+      "sha256": "e6c2308be46e1bb36892d5bc983134c28ac80e7b5ea8e246fc5704c929a62fe1",
+      "bytes": 22146
+    },
+    {
+      "path": "008 Advanced Wizardry/Making Money.md",
+      "sha256": "a1ac95c9ad282aac775c75fa5b75a1d9e72066d54af50a38a79236035ffd36e1",
+      "bytes": 3143
+    },
+    {
+      "path": "008 Advanced Wizardry/Spellbook Redundancy & Acquisition.md",
+      "sha256": "09df702bd255a3e1eca850dbfd319e1e287f9294f7b564c2769057f778c5ae15",
+      "bytes": 17483
+    },
+    {
+      "path": "008 Advanced Wizardry/Spellbook Stuff.md",
+      "sha256": "3c99c3d2df6426a7d19ada3e4482089cf61b3f8d04264d0033b86953315bd4fc",
+      "bytes": 8054
+    },
+    {
+      "path": "008 Advanced Wizardry/Teleportation & Planar Travel.md",
+      "sha256": "087b9399200a1a5f9885e3144780997d8a37f26ec23dbccc9b2c234b0a762ad5",
+      "bytes": 4662
+    },
+    {
+      "path": "008 Advanced Wizardry/Wizard Operations Roadmap.md",
+      "sha256": "5dad792da81534859966bce4c9a0fe0e0508e96d546a7522245a3b4a4a05b740",
+      "bytes": 11286
+    },
+    {
+      "path": "008 Advanced Wizardry/Wizard Services.md",
+      "sha256": "ea408637c8ae6a3320183b4fa71db9ec0fac5070cbdb30e64e2a945b8b2adb11",
+      "bytes": 4636
+    },
+    {
+      "path": "009 Reference/Action Economy.md",
+      "sha256": "173a6a31dfbeb7d96f0d649007950574871975378dc03b4b71cc9a258de02917",
+      "bytes": 5433
+    },
+    {
+      "path": "009 Reference/Common DCs & Rules.md",
+      "sha256": "2473c272f65e9ee1e03639bf1159c3aee91e8817c283eea332c68c5582820ff4",
+      "bytes": 4053
+    },
+    {
+      "path": "009 Reference/Concentration.md",
+      "sha256": "32c95bd759e764dab8f38f511d2c920bc2d3f19d2968e9f9e194ba6b6c8330d1",
+      "bytes": 3082
+    },
+    {
+      "path": "009 Reference/Condition Quick Reference.md",
+      "sha256": "38413e22cb988a7d5462ec8e7780599cca2036216c08b27f5a45aa82d0fd7a5f",
+      "bytes": 5689
+    },
+    {
+      "path": "009 Reference/Conditions.md",
+      "sha256": "eada59045ef88a440f31d73a5ee4ce0bbfb55d006400b65e66bfdd57dc635d6c",
+      "bytes": 3797
+    },
+    {
+      "path": "009 Reference/Cover & Obscurement.md",
+      "sha256": "4a6e7603ad3147d8eb6f8ec37208b5e86ebb584b3b236f6776de4d0ec6b49470",
+      "bytes": 2555
+    },
+    {
+      "path": "009 Reference/Creature Sizes.md",
+      "sha256": "94735334013721bea0642719f9c2b3adff3d44be00b77d8ed4b4d1074abc4f89",
+      "bytes": 1976
+    },
+    {
+      "path": "009 Reference/Damage Types.md",
+      "sha256": "5516d43e99963b1099f853b53234cd7864d850184bfe82cfaef411ca018ba538",
+      "bytes": 1840
+    },
+    {
+      "path": "009 Reference/German Conversion.md",
+      "sha256": "96ecbd441790eeb1d3ae9649d16b7d6a741e5d2f2d14b3f7d3237d1b44dc65bf",
+      "bytes": 3534
+    },
+    {
+      "path": "009 Reference/Legendary Resistance & Bosses.md",
+      "sha256": "a8a25260604ffefa2a333b4b72a8e53cc96004a2ea08e891b73938c40781c24b",
+      "bytes": 3271
+    },
+    {
+      "path": "009 Reference/Movement & Travel.md",
+      "sha256": "e0160e82d21d533805efa834c0cc8229a932f3449bb31951284011511f03fe6d",
+      "bytes": 11916
+    },
+    {
+      "path": "009 Reference/Reaction Management.md",
+      "sha256": "ba424c3d5cfa11d43ee687a4c7f8d570da904cd2754debfc6503acb5c9ddfbc3",
+      "bytes": 2648
+    },
+    {
+      "path": "009 Reference/Resting.md",
+      "sha256": "2e224e76a862a42872507bda0b0a8fc60d20bdd7e231b75a875e935a66d29f62",
+      "bytes": 2624
+    },
+    {
+      "path": "009 Reference/Rules Desk.md",
+      "sha256": "af2e66696f36b6e817aeef8b30b1a977f869f379e8b7017e9507ea4e94b91115",
+      "bytes": 4503
+    },
+    {
+      "path": "009 Reference/Saving Throws & Checks.md",
+      "sha256": "3899bf384dee4cf9df71644d42a515ac9d0991ae66e6c57ac1912022d8b40bbe",
+      "bytes": 2330
+    },
+    {
+      "path": "009 Reference/Spell Area.md",
+      "sha256": "a43ed72ac47f448b7e903b8ee1124059f005ec05393d6ba1f7169437825be60b",
+      "bytes": 2428
+    },
+    {
+      "path": "009 Reference/Spellcasting Rules.md",
+      "sha256": "f277a1daf0a9f3f9f49f85dc694c8cf7e4091952a2e0e81f09a81016612274e3",
+      "bytes": 4903
+    },
+    {
+      "path": "009 Reference/Vision & Senses.md",
+      "sha256": "a16b2ba01b505184b6dccc2c31f4aebae23b7d6d0e3df7155048e3de21a8a7e0",
+      "bytes": 2382
+    },
+    {
+      "path": "010 Tier Lists/Background Tier List.md",
+      "sha256": "2fce7f6f930c78bb85929b147359dd29d729afb1adf6970f5c30c5276be4e408",
+      "bytes": 8156
+    },
+    {
+      "path": "010 Tier Lists/Crafting Tier List.md",
+      "sha256": "6804c383018a89dcfe86c07c8986c1ed8eb13d33eea9e10d9fc801b64aa4b3dc",
+      "bytes": 2083
+    },
+    {
+      "path": "010 Tier Lists/Familiar Tier List.md",
+      "sha256": "a6debdf22114c6ed7c060ca0d8ee4ecabf67036dc3aabe56850e2bebe0ccc952",
+      "bytes": 6065
+    },
+    {
+      "path": "010 Tier Lists/Feats(Epic Boon) Tier List.md",
+      "sha256": "240c6830e366489cf5ec81d60e25f64930c9a9129a3fadb94d96d7425f9168be",
+      "bytes": 26361
+    },
+    {
+      "path": "010 Tier Lists/Housing&Bastion Tier List.md",
+      "sha256": "709e3e85c1b0339dba7b5c7da6202d18b997db399c5ea4ab3028cc38dd823e76",
+      "bytes": 3379
+    },
+    {
+      "path": "010 Tier Lists/Magic Item Tier List.md",
+      "sha256": "6ffc0d939d94c8b9cab55d0f8beb6a04daa889a93a913f0a5a5cf13e3f57879f",
+      "bytes": 6939
+    },
+    {
+      "path": "010 Tier Lists/Polymorph Friendly&Hostile Tier List.md",
+      "sha256": "9d5b421c62dff092becfa3a414af0276854c275b9f5ebe093dbcd8435d0afb7d",
+      "bytes": 11247
+    },
+    {
+      "path": "010 Tier Lists/Skills Tier List.md",
+      "sha256": "f9efb460cbae68f67020729792468c19d0376ffc02b81b3836d0390e1d4fe1e3",
+      "bytes": 6597
+    },
+    {
+      "path": "010 Tier Lists/Species Tier List.md",
+      "sha256": "6e35a47796aeb513bc72025204c44c385608c8971f2b22f81c7fc2cc50f79070",
+      "bytes": 5462
+    },
+    {
+      "path": "010 Tier Lists/Tools Tier List.md",
+      "sha256": "c20f8c4981bb409c5cf97db7f809852a2a3197c46ac2e0128d016d6feda1d2d0",
+      "bytes": 2873
+    },
+    {
+      "path": "011 Inbox/Templates/Creature Template.md",
+      "sha256": "1421be45aca8d3735aa5804c0880c46b21c50c45a622a3d4383b6c44575a55f9",
+      "bytes": 1028
+    },
+    {
+      "path": "011 Inbox/Templates/Spell Template.md",
+      "sha256": "94b6e05aad862c208a62866df263861d9d7d478bdd9d37afddd528a67fcf0ed8",
+      "bytes": 1034
+    },
+    {
+      "path": "011 Inbox/Templates/Tactic Template.md",
+      "sha256": "acfd5816ceb19ea8c6affafa7bf4e3e4511770c71bf8af95d0b83e5fd17f3b4c",
+      "bytes": 929
+    },
+    {
+      "path": "100 Assets/Compendium Images/Spell Area - 2024 Rules v2.png",
+      "sha256": "efaae13e7468c66cfbf2e1c1fd002b5eb863bff3738f069d03e35689f889019d",
+      "bytes": 1816535
+    },
+    {
+      "path": "100 Assets/Compendium Images/Spell Area - 2024 Rules.png",
+      "sha256": "138c4625fed31e0df4cd303381be2f84e6571e386d7ee4473a81e55dcb3573cb",
+      "bytes": 1969177
+    },
+    {
+      "path": "100 Assets/Compendium Images/Spell Area.png",
+      "sha256": "460c738869c009344ce311851674f10492ba7e63a76aec3faebd5f405d0c3d10",
+      "bytes": 1638376
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Animate Dead/Commands.md",
+      "sha256": "ded756a73ac6e7cc2e8d28b196d8ed6f00b19b246e62dcf3484bdd5637c5ca6c",
+      "bytes": 2729
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Animate Dead/Skeleton.png",
+      "sha256": "cf233e9334311f7eddba9799085603dd05a4c8267fd2457554b9c83c136487bc",
+      "bytes": 188594
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Animate Dead/Zombie.png",
+      "sha256": "dd923e5b1551fc7445e99237cd91cee4c0da2bf594f90643b6c7c1a3ea885fde",
+      "bytes": 205600
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Find Familiar/Bat.png",
+      "sha256": "3750261d125d38c4d78e541366ac98d640e4eb558571650afaa8b3e79dfaaa42",
+      "bytes": 115576
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Find Familiar/Battle Familiar.png",
+      "sha256": "69acacaf9fbbf3130deaecea4ce549324b843f39872d1edff0a9265363108215",
+      "bytes": 295631
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Find Familiar/Octopus.png",
+      "sha256": "32f91d451f673494fbf129de776b7c345465de6a370f328d1abf03cfa027b8b3",
+      "bytes": 243952
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Find Familiar/Owl.png",
+      "sha256": "0c7e5330a496b899f5285553a921d5b6abc03be516ddee196dd50e7958aa17d3",
+      "bytes": 150320
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Find Familiar/Spider.png",
+      "sha256": "c81681f2239e47f3c3a4b0bc8291b6cef927f0d180d1db2556b877224fe66212",
+      "bytes": 197167
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Planar Binding Candidate/Glabrezu.png",
+      "sha256": "fb0fc7cb02a57db2e7f2c483073a95b0eabf891b26153d767a092ec80da4bf02",
+      "bytes": 309729
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Planar Binding Candidate/Hezrou.png",
+      "sha256": "b3e2f2f705127d3b5b31c449239f30e8a6933a49bb41d7def77af0c2bda10332",
+      "bytes": 250870
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Planar Binding Candidate/Succubus.png",
+      "sha256": "6f15377bc5d6c6f4754b65d76032d56ca6dff4341a5a120a2825baa6b208e012",
+      "bytes": 419258
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Planar Binding Candidate/Vrock.png",
+      "sha256": "22d9e88a3a34557965ec478dd3e07d4fc279452fa95f02fecb4d68b50d08ec8b",
+      "bytes": 1586343
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Planar Binding Mount/Nightmare.png",
+      "sha256": "df9bfccdb0531508502f4de7a75754a634423b0bcbc9a2074a46bab53feec577",
+      "bytes": 193640
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Planar Binding Mount/Pegasus.png",
+      "sha256": "4c31a55cfe13d2a49a8f9fee8d9faa9d43e5958cc9d30b91cbaacd04806f2cc4",
+      "bytes": 123801
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Polymorph/Elephant.png",
+      "sha256": "039ed0c84476000c277fff29b4d2ad97739225b7f0118531f4b82fa0d38f3553",
+      "bytes": 197850
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Polymorph/Giant Ape.png",
+      "sha256": "ce3b250e7be04d783c15d90ab1a75899d8561c213842a9564aa6f187d9efd21d",
+      "bytes": 258260
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Polymorph/Giant Badger.png",
+      "sha256": "65957c7f6533d9bbc6d7b5863fdc14ea2f8a88af1f8568af7aa082c3ef3b5ff4",
+      "bytes": 135853
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Polymorph/Giant Bat.png",
+      "sha256": "f0f46d4931ffd2239b4ae5bf6f0ed564e2a36d9c8964cf0448a57e9c801e44b4",
+      "bytes": 118262
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Polymorph/Giant Constrictor Snake.png",
+      "sha256": "a113abff89d222f4cf1d9ff4734f7638753e19b40fc43a6928c358c1f4fb2e8b",
+      "bytes": 217555
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Polymorph/Giant Crocodile.png",
+      "sha256": "42a53399f48fd1447b9fc7229298118e400054b43b253107cf2cd97bbfe1bc3c",
+      "bytes": 232264
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Polymorph/Giant Eagle.png",
+      "sha256": "abca41324a864db6b7eb78b16f513b3554860c82a650aa7a61a6bc9039792679",
+      "bytes": 169780
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Polymorph/Giant Scorpion.png",
+      "sha256": "5c4bcdf47f44d9f39af0f666df193fa46b90727f62cff7a36fd3fafb0aa4317a",
+      "bytes": 207991
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Polymorph/Giant Shark.png",
+      "sha256": "57d762427e73eb8076babeedd0ec01af00aa5101983b0332135df51f502dddb7",
+      "bytes": 170806
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Polymorph/Giant Spider.png",
+      "sha256": "80caf5853f153ce200beb12838e66db92e994f1ed3b8ee2a533c53703388582d",
+      "bytes": 256112
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Polymorph/Killer Whale.png",
+      "sha256": "90d1784439fc58f61c03cb9b062fd9349aa236bc8190987ce809e1e67b85e7c9",
+      "bytes": 145383
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Polymorph/Mammoth.png",
+      "sha256": "e14ceef623f1462347a12a929bf00a8d7b634e94cffc1ea75e082d81f7ba3ab5",
+      "bytes": 197613
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Polymorph/Tyrannosaurus Rex.png",
+      "sha256": "404597d08fb9eece150a12507c9840b989667525afc2912f6a10614608f38b66",
+      "bytes": 251051
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Shapechange/Aarakocra Aeromancer.png",
+      "sha256": "b807650dd5f1fdf1738c425a2cb37880ed3a0de64bf56a8057fd495ed33dcd96",
+      "bytes": 125824
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Shapechange/Abjurer Archmage.png",
+      "sha256": "64ea4e9cef054fc1705b5f03beb011654ffa4e1e1b33babcfdd4f7a2e7acbc6d",
+      "bytes": 193255
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Shapechange/Aboleth.png",
+      "sha256": "a54d84e195203b911692fec2d8490e736533fec043382c04720585107e7eff6b",
+      "bytes": 324024
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Shapechange/Adult Bronze Dragon.png",
+      "sha256": "9a5ba929ab535401bd4f9636303dd57c998e24237c0ab44c0e1c432d3b640e72",
+      "bytes": 249196
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Shapechange/Adult Gold Dragon.png",
+      "sha256": "f9b30db91d52399468468572b92f6c69cc4cdac5f76ac5c81dfa17ced5714dd4",
+      "bytes": 642012
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Shapechange/Adult Red Dragon.png",
+      "sha256": "693d797e1adcc376a8119e2d2bf873fa283fffbdef11a47eb02957de00411637",
+      "bytes": 190306
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Shapechange/Adult Silver Dragon.png",
+      "sha256": "bac028c1428261a46e7a231057808071a6ed42237432d9939b0118014e6ab9d3",
+      "bytes": 610120
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Shapechange/Adult White Dragon.png",
+      "sha256": "addac807b8fb9ab2969fc99a21c8587cc86a9384ac6febaa06b54994189aa6ef",
+      "bytes": 468838
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Shapechange/Ankheg.png",
+      "sha256": "e0307b66684cc010610420b2baaf2ab1e2532628892b760eb5487d0a7e4fa2f6",
+      "bytes": 108290
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Shapechange/Arcanaloth.png",
+      "sha256": "3e60646f81b4f0c4ed722322c22934455dd7149863032f9014725b937b1c7f40",
+      "bytes": 298123
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Shapechange/Archelon.png",
+      "sha256": "66a25b4a313ce41d63a831930d8bdee61bb04db692babfe9677f04430444a4e9",
+      "bytes": 67628
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Shapechange/Archmage.png",
+      "sha256": "f401f70896e6440898f0353d1a650c8b45604ee761a7e9ba0b29d011a4f03491",
+      "bytes": 174999
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Shapechange/Balor.png",
+      "sha256": "8caaef1608bcaa6925e4314451b308ac7a5e4302c90dc50dfd45a4eb3443827d",
+      "bytes": 516954
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Shapechange/Behir.png",
+      "sha256": "1f30b4389da5ca5b287d258a3b24d65967618df90ade71736ecbcc085855704d",
+      "bytes": 493473
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Shapechange/Beholder.png",
+      "sha256": "d4ecced1870038968fcf08613ade69d1b74f973efd2c7bcdcd48ac7407909080",
+      "bytes": 437786
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Shapechange/Conjurer Archmage.png",
+      "sha256": "ec1685199d21cc99ea83d641083946de73fd8a26ad4d8b0f3b749a554f0ddb0e",
+      "bytes": 149652
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Shapechange/Couatl.png",
+      "sha256": "784513818d9c9bee1ad78e24de0bb407ec74d070bb9c311d16ed3fb959d82249",
+      "bytes": 192921
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Shapechange/Cyclops Oracle.png",
+      "sha256": "3c17e819dff81e5cc70f3a919620c2e3032859d6fae5ed6dd4e794cc099180f5",
+      "bytes": 143900
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Shapechange/Dao.png",
+      "sha256": "c2d459cdcebcbcdb41a2e1a15cde363fb2517a235cb8041299e9f82ea0dc3642",
+      "bytes": 227380
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Shapechange/Deva.png",
+      "sha256": "6f8c114e829ae0650e804351bdf265861d7529a2f25ccb58ef4488355b4a3d7b",
+      "bytes": 176174
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Shapechange/Diviner Archmage.png",
+      "sha256": "d80a95dca0b67668c164bc9db42ca4518a40f1959495481c8ec55d805b357daf",
+      "bytes": 140189
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Shapechange/Djinni.png",
+      "sha256": "58613858a23c52bc8d7c0b74026db43beacc415246fb6fa5c3e732f888dc0e8a",
+      "bytes": 275425
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Shapechange/Dragon Turtle.png",
+      "sha256": "36340620ccfac9035e6cb882e1dfc9fedc14759d5bc7f6d95bd67e28afd53465",
+      "bytes": 128589
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Shapechange/Efreeti.png",
+      "sha256": "e79154ef8ad042a933ea7085e05c923c302e1abec600f2644110ee22270f552e",
+      "bytes": 183296
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Shapechange/Enchanter Archmage.png",
+      "sha256": "88e57e94a2ffe76d66e1885e76c30f09c5c273b276fe290631e0b732d8fb139b",
+      "bytes": 149043
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Shapechange/Erinyes.png",
+      "sha256": "d580a398b2d19a0b3be262c864032abc4a3f939d173bf3c9cc7ac39df42733ed",
+      "bytes": 204267
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Shapechange/Evoker Archmage.png",
+      "sha256": "8b0a7e03c3f7ac96cf271ec4e3bf5b46be9c7f68a6242c1c88a974567bdb8268",
+      "bytes": 169767
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Shapechange/Fire Giant.png",
+      "sha256": "07dcacdc7e0537a9d01f95916d80da2d615c4a8485ea51b59c6d270b6c8e7231",
+      "bytes": 101652
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Shapechange/Frost Giant.png",
+      "sha256": "bdea831e2e3e98201fc55893822c773d444dc030543ea43d90f4479fb7bcb68e",
+      "bytes": 117420
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Shapechange/Illusionist Archmage.png",
+      "sha256": "4fd2fea7189250d8145c780b888e5b90327fbc2d4cb50020d99b2546c7ef3643",
+      "bytes": 145538
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Shapechange/Kuo-toa Archpriest.png",
+      "sha256": "7f0d78a2c364137e55d2b0e73311dd5231f515e08b3041b2242b6392e069ee62",
+      "bytes": 143826
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Shapechange/Lizardfolk Geomancer.png",
+      "sha256": "686355e7b48d7e5b6828ca7f46389c5e2445cae9f7a9feb17278237ce8101ee1",
+      "bytes": 132247
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Shapechange/Marid.png",
+      "sha256": "c4ea833ad8e11cadf9618d6a2c0f325633ee2461bb9f1fd6c79423f2ee7545e9",
+      "bytes": 180525
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Shapechange/Marilith.png",
+      "sha256": "d106406fd2b8ca0772845bc1d5c71cb11da0fe84e3768d52e8adbe099722af6f",
+      "bytes": 1819952
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Shapechange/Merfolk Wavebender.png",
+      "sha256": "f2c291342229379fca06c39abcafba8b7cd35a8f9bf29aa1289ea949c17792bd",
+      "bytes": 130806
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Shapechange/Mind Flayer Arcanist.png",
+      "sha256": "3cc1d4f776b80380683d0611e76c5293c5d76dff4bb32a2f1135479a8b83e3b5",
+      "bytes": 193265
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Shapechange/Necromancer Archmage.png",
+      "sha256": "825da46d5e3b4365703631a1785e3a95c6932c3025d3d3306174011d5d0c4f36",
+      "bytes": 153974
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Shapechange/Pit Fiend.png",
+      "sha256": "d4be6497002a993ebfa155801bca22061e99c36335f2629d3abd9fd4263ebde8",
+      "bytes": 606141
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Shapechange/Planetar.png",
+      "sha256": "520392d7a005635401f6ac1cc8b0be9f210a88f1ba3f76ce54174a80d823b2ab",
+      "bytes": 418177
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Shapechange/Purple Worm.png",
+      "sha256": "ec6f24d3da4f1f47c9f9d98648ffa87cb579623313fa18b228fcb2f8889be0aa",
+      "bytes": 288125
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Shapechange/Remorhaz.png",
+      "sha256": "5dbc864b109a0f0dfa718ebab6112b26b0db6d2fc878a11b8259251ec960715f",
+      "bytes": 463659
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Shapechange/Roc.png",
+      "sha256": "bf16f185c52f545c974ed8bcc0cf8a7a9bca3a3effc00fa12e894b0defda86bc",
+      "bytes": 482972
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Shapechange/Sphinx of Secrets.png",
+      "sha256": "6275316f3b3d7c37c7bd3e1d72b1226f0d0bdd1ee2944f25f98a5b48fd8e7636",
+      "bytes": 182611
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Shapechange/Sphinx of Valor.png",
+      "sha256": "e31714ea3872afda17791a6e0db7b24aac55643e65e9bfe1c776aee1b6cd8960",
+      "bytes": 660239
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Shapechange/Taisus.png",
+      "sha256": "c32d1d820df4634f514a391b0bce05a606933be9d0a5b420ef780970f4c0e55f",
+      "bytes": 222568
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Shapechange/Transmuter Archmage.png",
+      "sha256": "3d86fee6f329abf7fdefc90d7b1fb58b9bc58dac3917e0b04e53309a74c170d7",
+      "bytes": 137986
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Shapechange/Venger.png",
+      "sha256": "bc4ef3ce204cd0c646ae0bf4435af0801f8118b3bbfc3024fd7b0ec773c139bf",
+      "bytes": 268894
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/Summoning/Undead Spirit.png",
+      "sha256": "8e829c9cd0a4017c6017192beaf9566d4406bbdf7324a4061aa8be1153171e6f",
+      "bytes": 364953
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/True Polymorph/Adult Gold Dragon.png",
+      "sha256": "f9b30db91d52399468468572b92f6c69cc4cdac5f76ac5c81dfa17ced5714dd4",
+      "bytes": 642012
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/True Polymorph/Adult Red Dragon.png",
+      "sha256": "693d797e1adcc376a8119e2d2bf873fa283fffbdef11a47eb02957de00411637",
+      "bytes": 190306
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/True Polymorph/Adult Silver Dragon.png",
+      "sha256": "bac028c1428261a46e7a231057808071a6ed42237432d9939b0118014e6ab9d3",
+      "bytes": 610120
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/True Polymorph/Air Elemental.png",
+      "sha256": "2cc6a5cd5c96a428238fd83d8fceda858a25a9faaae3359fcc917a4644e29e65",
+      "bytes": 313622
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/True Polymorph/Balor.png",
+      "sha256": "8caaef1608bcaa6925e4314451b308ac7a5e4302c90dc50dfd45a4eb3443827d",
+      "bytes": 516954
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/True Polymorph/Chimera.png",
+      "sha256": "2a1061c0900ea45346c47af24e8438f6231a80fa627997d4c8896865ec4193c0",
+      "bytes": 265933
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/True Polymorph/Clay Golem.png",
+      "sha256": "140d2fb71c9ad2158e8ea89a4ed58f9cab7719447c911c314c2c36dc6bc5c2d5",
+      "bytes": 376126
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/True Polymorph/Couatl.png",
+      "sha256": "784513818d9c9bee1ad78e24de0bb407ec74d070bb9c311d16ed3fb959d82249",
+      "bytes": 192921
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/True Polymorph/Djinni.png",
+      "sha256": "58613858a23c52bc8d7c0b74026db43beacc415246fb6fa5c3e732f888dc0e8a",
+      "bytes": 275425
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/True Polymorph/Dragon Turtle.png",
+      "sha256": "36340620ccfac9035e6cb882e1dfc9fedc14759d5bc7f6d95bd67e28afd53465",
+      "bytes": 128589
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/True Polymorph/Earth Elemental.png",
+      "sha256": "84b17a0811c9387dfaee8e772d161982761a1b8eecc22ad4cb8dec9d273ea959",
+      "bytes": 306272
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/True Polymorph/Fire Elemental.png",
+      "sha256": "2a899a2aefa9dde6d65fc13934f019cc4d179c3ad3582e7a904551c86437f332",
+      "bytes": 381591
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/True Polymorph/Flesh Golem.png",
+      "sha256": "01bfd250941f7da774d2c9232d029bcdd4bf13daaf8ef08272417a2b5159188f",
+      "bytes": 413388
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/True Polymorph/Glabrezu.png",
+      "sha256": "fb0fc7cb02a57db2e7f2c483073a95b0eabf891b26153d767a092ec80da4bf02",
+      "bytes": 309729
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/True Polymorph/Guardian Naga.png",
+      "sha256": "dfcb38785bd1782bd235a61d2227aef4ea0c39dce0e9e260f51114048818a1d7",
+      "bytes": 355325
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/True Polymorph/Hezrou.png",
+      "sha256": "b3e2f2f705127d3b5b31c449239f30e8a6933a49bb41d7def77af0c2bda10332",
+      "bytes": 250870
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/True Polymorph/Invisible Stalker.png",
+      "sha256": "db98d43853ade7c2b6b7b3003da7549edd282c5958eb49e4912f8915b9c7ee52",
+      "bytes": 356629
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/True Polymorph/Pit Fiend.png",
+      "sha256": "d4be6497002a993ebfa155801bca22061e99c36335f2629d3abd9fd4263ebde8",
+      "bytes": 606141
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/True Polymorph/Planetar.png",
+      "sha256": "520392d7a005635401f6ac1cc8b0be9f210a88f1ba3f76ce54174a80d823b2ab",
+      "bytes": 418177
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/True Polymorph/Shield Guardian.png",
+      "sha256": "0e2b7326222119cb6fb13785cd829b57f5753552ca160e57d79cd76b2e1305cf",
+      "bytes": 504085
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/True Polymorph/Sphinx of Valor.png",
+      "sha256": "e31714ea3872afda17791a6e0db7b24aac55643e65e9bfe1c776aee1b6cd8960",
+      "bytes": 660239
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/True Polymorph/Stone Golem.png",
+      "sha256": "6923ebdebd5811f8e36510023ac703950ce4590804c2b8b7111e6adf02a4e084",
+      "bytes": 279187
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/True Polymorph/Succubus.png",
+      "sha256": "6f15377bc5d6c6f4754b65d76032d56ca6dff4341a5a120a2825baa6b208e012",
+      "bytes": 419258
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/True Polymorph/Taisus.png",
+      "sha256": "c32d1d820df4634f514a391b0bce05a606933be9d0a5b420ef780970f4c0e55f",
+      "bytes": 222568
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/True Polymorph/Treant.png",
+      "sha256": "9e476b0b46319bc412b78c3c42b587f47912d476411c7f14256ba4f9b221bd60",
+      "bytes": 281355
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/True Polymorph/Unicorn.png",
+      "sha256": "1e50f918cb285f36a3227ca400b0760a87e59e072b2dd458d11452d2ed8ad20e",
+      "bytes": 481818
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/True Polymorph/Venger.png",
+      "sha256": "bc4ef3ce204cd0c646ae0bf4435af0801f8118b3bbfc3024fd7b0ec773c139bf",
+      "bytes": 268894
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/True Polymorph/Vrock.png",
+      "sha256": "22d9e88a3a34557965ec478dd3e07d4fc279452fa95f02fecb4d68b50d08ec8b",
+      "bytes": 1586343
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/True Polymorph/Water Elemental.png",
+      "sha256": "24f8ddc7861e63884a896117a88995dffc46306d1b26df7ab4a64150fb461c7b",
+      "bytes": 1608294
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/True Polymorph/Wyvern.png",
+      "sha256": "a7a7998d898dfc01e4c56bd0c765c46c6bfe85fbd313da2259ead585cf21e7de",
+      "bytes": 188821
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/True Polymorph/Young Bronze Dragon.png",
+      "sha256": "5f8297e5ac4e18f71703feb5f748ce7b09ffca6ffb4947ea4371592dab04e5b1",
+      "bytes": 278844
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/True Polymorph/Young Silver Dragon.png",
+      "sha256": "852e38f589378a4884d42badebe93b57da7bc1038ccaa45101b5560fe4114d74",
+      "bytes": 300072
+    },
+    {
+      "path": "100 Assets/Statblocks for Compendium/True Polymorph/Young White Dragon.png",
+      "sha256": "81587a2f195f98ac57e3f975edb6b6712c2450a84a08809bb28c39f13a017981",
+      "bytes": 256067
+    },
+    {
+      "path": "PDF for the Compendium/wizard_optimization_math_2024.pdf",
+      "sha256": "d740b33d7e05a0b810dd94fa8af07b26e2785504de8622b816a0031b7312efa6",
+      "bytes": 43800
+    }
+  ],
+  "typeCounts": {
+    "navigation": 9,
+    "reference": 45,
+    "build-guide": 1,
+    "inherited": 78,
+    "build-reference": 1,
+    "redirect": 1,
+    "spell": 208,
+    "magic-item": 51,
+    "creature": 20,
+    "rules": 2,
+    "combat-dashboard": 1,
+    "loadout-guide": 1,
+    "operations": 1,
+    "template": 3
+  },
+  "importedAt": "2026-10-06T20:38:28.124Z"
+}

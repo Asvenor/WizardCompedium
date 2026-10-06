@@ -1,0 +1,34 @@
+---
+type: "inherited"
+rules_status: "Mixed / review required"
+rules_version: "Mixed; use the source version in the note"
+verification: "Mixed evidence; consult the specific rule source"
+provenance: "Preserved existing OneDrive vault note"
+tags: ["wizard","section/006"]
+---
+
+# Bastions
+<!-- wizard-upgrade:start -->
+[[Home]] · [[Wizard Operations Roadmap]] · [[Problem Navigator]]
+
+<!-- wizard-upgrade:end -->
+
+
+A Wizard's Bastion is more than a home. It is a permanent base for research, crafting, magical infrastructure, transportation, and long-term progression.
+
+## Navigation
+
+### [[Bastion Progression]]
+Level-by-level Bastion progression from **Level 5–17**, including facility slots and both research-focused and adventuring-first examples.
+
+### [[Facilities]]
+Everything about **Special Facilities and Basic Facilities**, including requirements, functions, available orders, and Wizard-relevant options.
+
+### [[Hirelings]]
+Rules for **Hirelings, Bastion Defenders, facility workers, crafting assistance, and managing your Bastion while adventuring**.
+
+### [[Construction & Defense]]
+Everything surrounding the physical Bastion: **location, layouts, space, construction costs, Defensive Walls, attacks, and protection**.
+
+### [[Bastion Crafting]]
+Compare **trade cycles, scroll production, item crafting, starting capital, and practical income limits**.

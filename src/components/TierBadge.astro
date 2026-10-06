@@ -1,7 +1,0 @@
----
-interface Props { tier: string; }
-const { tier } = Astro.props;
-const leading = tier.trim().charAt(0).toLowerCase();
-const key = ['e', 'f'].includes(leading) ? 'd' : ['s', 'a', 'b', 'c', 'd'].includes(leading) ? leading : 'conditional';
----
-<span class="badge" data-tier={key}>{tier}</span>

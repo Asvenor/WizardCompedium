@@ -1,5 +1,5 @@
 # Only fingerprinted files get a long browser lifetime. HTML, search indexes
-# and unversioned PDF/OCR resources keep Cloudflare's revalidation default.
+# and unversioned PDF resources keep Cloudflare's revalidation default.
 /_astro/*
   Cache-Control: public, max-age=31536000, immutable
 
