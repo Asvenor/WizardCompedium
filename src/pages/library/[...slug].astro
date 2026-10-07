@@ -24,7 +24,7 @@ const isVaultGuide = note.slug === 'home/vault-guide';
     <aside class="reader-sidebar" aria-label="Reference navigation"><a class="back-link" href={`/library/?section=${note.section}`}>← {section?.label}</a><nav aria-label="Related section"><p class="eyebrow">IN THIS SECTION</p>{siblings.map(n=><a href={noteHref(n)}>{n.title}</a>)}</nav></aside>
     <article class="reader-article">
       <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/library/">Library</a><span aria-hidden="true">/</span><a href={`/library/?section=${note.section}`}>{note.sectionLabel}</a></nav>
-      <header class="reading-header"><p class="eyebrow">{note.sectionLabel}</p><h1>{note.title}</h1>{finder&&<a class="text-link finder-return" href={finder.href}>← {finder.label}</a>}<div class="toolbar"><button class="button" data-save-note={note.slug}>Save reference</button><button class="button" data-print-note>Print</button><a href="/library/?saved=1">Reading list</a></div><p class="control-note" data-save-status role="status"></p></header>
+      <header class="reading-header"><p class="eyebrow">{note.sectionLabel}</p><h1>{note.title}</h1>{finder&&<a class="text-link finder-return" href={finder.href} data-finder-return={finder.href}>← {finder.label}</a>}<div class="toolbar"><button class="button" data-save-note={note.slug}>Save reference</button><button class="button" data-print-note>Print</button><a href="/library/?saved=1">Reading list</a></div><p class="control-note" data-save-status role="status"></p></header>
       {isVaultGuide&&<aside class="context-notice" aria-labelledby="vault-guide-context"><h2 id="vault-guide-context">This guide is for Obsidian</h2><p>The shortcuts, editing controls, templates, and settings below apply to the original Obsidian vault. For controls available here, open the <a href="/guide/">website guide</a>.</p></aside>}
       {toc.length>0&&<details class="mobile-toc"><summary>On this page</summary><nav>{toc.map(h=><a href={`#${h.slug}`} data-depth={h.depth}>{h.text}</a>)}</nav></details>}
       <div class="prose" data-reference-content><Content/></div>
@@ -35,6 +35,8 @@ const isVaultGuide = note.slug === 'home/vault-guide';
   </div>
   <script>
     import {savedReferences,toggleReference} from '@/lib/reading-list';
+    import {enhanceFinderReturnLinks} from '@/lib/finder-context';
+    enhanceFinderReturnLinks();
     const save=document.querySelector<HTMLButtonElement>('[data-save-note]')!;
     const refresh=()=>{const saved=savedReferences().includes(save.dataset.saveNote!);save.textContent=saved?'Saved · remove':'Save reference';save.setAttribute('aria-pressed',String(saved));};
     save.addEventListener('click',()=>{const ok=toggleReference(save.dataset.saveNote!);document.querySelector('[data-save-status]')!.textContent=ok===null?'This browser could not save the reference.':ok?'Saved to your reading list on this device.':'Removed from your reading list.';refresh()});refresh();

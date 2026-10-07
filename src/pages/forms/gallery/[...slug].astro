@@ -19,7 +19,7 @@ const displayDate=(value:string)=>new Intl.DateTimeFormat('en-GB',{dateStyle:'lo
     <header class="page-header">
       <p class="eyebrow">CREATURES &amp; FORMS</p><h1>{entry.title}</h1>
       <p class="gallery-summary">The original stat block from your compendium, with its gallery context preserved.</p>
-      <div class="toolbar"><a class="button" href="/forms/">← Back to form finder</a><button class="button" type="button" data-print-gallery>Print reference</button></div>
+      <div class="toolbar"><a class="button" href="/forms/" data-finder-return="/forms/">← Back to form finder</a><button class="button" type="button" data-print-gallery>Print reference</button></div>
     </header>
     <aside class="context-notice" aria-labelledby="gallery-review-heading">
       <h2 id="gallery-review-heading">{stats?'Image-transcribed stats; eligibility not reviewed':'Gallery reference; metadata not reviewed'}</h2>
@@ -44,7 +44,7 @@ const displayDate=(value:string)=>new Intl.DateTimeFormat('en-GB',{dateStyle:'lo
       <p>Snapshot dates show when the website copy changed, not when every rule was checked. <a href="/guide/#keeping-current">How updates reach the website</a>.</p>
     </details>
   </article>
-  <script>document.querySelector('[data-print-gallery]')?.addEventListener('click',()=>window.print());</script>
+  <script>import {enhanceFinderReturnLinks} from '@/lib/finder-context';enhanceFinderReturnLinks();document.querySelector('[data-print-gallery]')?.addEventListener('click',()=>window.print());</script>
 </BaseLayout>
 <style>
   .gallery-reference{max-width:1100px}.gallery-summary{max-width:70ch;color:var(--ink-soft)}

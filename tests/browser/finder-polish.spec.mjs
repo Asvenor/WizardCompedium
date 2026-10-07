@@ -2,13 +2,13 @@ import {test,expect} from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 
 test('all navigation destinations fit at the desktop breakpoint and remain reachable on mobile',async({page})=>{
-  for(const width of [390,1059,1060,1440]){
+  for(const width of [390,1059,1060,1199,1200,1440]){
     await page.setViewportSize({width,height:900});await page.goto('/');
-    if(width<1060)await page.getByRole('button',{name:'Open navigation',exact:true}).click();
+    if(width<1200)await page.getByRole('button',{name:'Open navigation',exact:true}).click();
     const navigation=page.getByRole('navigation',{name:'Main navigation',exact:true});
     for(const name of ['Items','Forms','Tools'])await expect(navigation.getByRole('link',{name,exact:true})).toBeVisible();
     expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
-    if(width>=1060){
+    if(width>=1200){
       const boxes=await page.locator('.site-brand,.primary-navigation,.header-actions').evaluateAll(nodes=>nodes.map(n=>{const r=n.getBoundingClientRect();return{left:r.left,right:r.right}}));
       expect(boxes[0].right).toBeLessThanOrEqual(boxes[1].left);
       expect(boxes[1].right).toBeLessThanOrEqual(boxes[2].left);

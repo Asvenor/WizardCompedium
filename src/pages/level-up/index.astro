@@ -1,0 +1,211 @@
+---
+import BaseLayout from '@/components/layout/BaseLayout.astro';
+import {compilePlanner, SUBCLASSES, ROUTES} from '@/lib/level-up';
+import plannerSource from '../../content/vault/character/level-progression-planner.md?raw';
+const sourceFiles = import.meta.glob('../../content/vault/character/spell-progressions/*.md', {eager: true, query: '?raw', import: 'default'});
+const sources = Object.fromEntries(Object.entries(sourceFiles).map(([path, source]) => [path.split('/').pop()!, String(source)]));
+const data = compilePlanner(plannerSource, sources);
+const serialized = JSON.stringify(data).replace(/</g, '\\u003c');
+---
+
+<BaseLayout title="Level-up planner" active="builds">
+  <div class="page-shell level-up-page">
+    <header class="page-header">
+      <p class="eyebrow">YOUR NEXT WIZARD LEVEL</p>
+      <h1>Level up with a plan.</h1>
+      <p>See the spell choices, preparation budget, and decisions for one level of your chosen route. Seven subclasses, presented equally.</p>
+    </header>
+
+    <form class="lp-controls" id="level-up-controls" aria-label="Choose your progression">
+      <label class="field-label">Subclass<select class="field" id="lp-subclass" name="subclass"><option value="">Choose a subclass…</option>{SUBCLASSES.map(name => <option value={name.toLowerCase()}>{name}</option>)}</select></label>
+      <label class="field-label">Class route<select class="field" id="lp-route" name="route">{ROUTES.map(r => <option value={r.id}>{r.label}</option>)}</select></label>
+      <label class="field-label">Level type<select class="field" id="lp-basis" name="basis"><option value="character">Character level</option><option value="wizard">Wizard level</option></select></label>
+      <label class="field-label">Level<select class="field" id="lp-level" name="level">{Array.from({length: 20}, (_, i) => <option value={i + 1}>{i + 1}</option>)}</select></label>
+    </form>
+    <p class="control-note" id="lp-basis-help">Character level follows the complete printed calendar, including the levels spent in another class.</p>
+    <p class="lp-status" id="lp-status" role="status" aria-live="polite" aria-atomic="true"></p>
+    <noscript><p class="tool-panel">The interactive planner needs JavaScript. All its choices remain available in the <a href="/library/character/spell-progression-hub/">complete route guides</a> and <a href="/library/character/level-progression-planner/">Wizard progression table</a>.</p></noscript>
+    <div class="lp-boundary" id="lp-empty"><p>Baseline counts are below. Choose a subclass for its exact spell choices and total book. No subclass or dip is ranked as the default.</p><a href="/builds/">Compare all 35 complete routes →</a></div>
+
+    <div id="lp-results" hidden>
+      <section class="lp-summary" aria-labelledby="lp-title">
+        <div><p class="eyebrow" id="lp-route-label"></p><h2 id="lp-title"></h2><p id="lp-advanced"></p></div>
+        <div class="lp-actions"><button class="button" type="button" id="lp-previous">← Previous level</button><button class="button" type="button" id="lp-next">Next level →</button><button class="button" type="button" id="lp-share">Copy plan link</button></div>
+      </section>
+      <p class="lp-boundary" id="lp-no-wizard" hidden>No Wizard level yet. This route has no Wizard spellbook, preparations, or cantrip choices at this level.</p>
+
+      <dl class="lp-metrics" aria-label="Wizard progression counts">
+        <div><dt>Ordinary Wizard preparations</dt><dd id="lp-prepared"></dd><dd class="lp-metric-note">Level 1+ spells; feature grants are separate.</dd></div>
+        <div><dt>Base Wizard cantrips</dt><dd id="lp-cantrips"></dd><dd class="lp-metric-note">Subclass and other-class grants are separate.</dd></div>
+        <div><dt>Highest Wizard spell level</dt><dd id="lp-highest"></dd><dd class="lp-metric-note">Shared slots do not unlock higher book choices.</dd></div>
+        <div><dt>Proficiency bonus</dt><dd id="lp-proficiency"></dd><dd class="lp-metric-note">Uses total character level.</dd></div>
+      </dl>
+
+      <div class="lp-pair">
+        <section class="lp-panel" aria-labelledby="lp-book-title">
+          <p class="eyebrow">SPELLBOOK · NOT A PREPARATION LIST</p><h2 id="lp-book-title">What is in the book?</h2>
+          <dl class="lp-ledger"><div><dt>Wizard book baseline</dt><dd id="lp-baseline"></dd></div><div><dt>Extra route book additions</dt><dd id="lp-extra-total"></dd></div><div class="lp-total"><dt>Selected route book total</dt><dd id="lp-book-total"></dd></div></dl>
+          <p class="control-note">Baseline: six starting spells, then two per later Wizard level. Route total: distinct normal + explicit extra book choices through this level. No copying, feat package, or always-prepared grant is silently added.</p>
+          <details id="lp-book-details"><summary>See this route’s acquired book</summary><ul class="lp-spell-list" id="lp-book-list"></ul></details>
+        </section>
+        <section class="lp-panel" aria-labelledby="lp-slots-title">
+          <p class="eyebrow">SHARED SLOTS · NOT SPELL ACCESS</p><h2 id="lp-slots-title">Your spell slots</h2>
+          <p id="lp-slot-basis"></p><dl class="lp-slots" id="lp-slot-list" aria-label="Slots by spell level"></dl>
+          <p class="control-note">Wizard and other-class spells keep their own acquisition, preparation, ability, and component rules. A higher slot can upcast an eligible spell; it does not grant new Wizard spells.</p>
+          <a href="/library/character/multiclass-spell-timing/#what-remains-separate">Why the counts differ →</a>
+        </section>
+      </div>
+
+      <section class="lp-section" id="lp-acquisitions" aria-labelledby="lp-choices-title">
+        <div class="section-heading"><div><p class="eyebrow">ACQUIRE AT THIS LEVEL</p><h2 id="lp-choices-title">Your next spell choices</h2></div><a id="lp-route-link" href="/library/character/spell-progression-hub/">Read the exact source row →</a></div>
+        <p id="lp-why"></p>
+        <div class="lp-pair"><section class="lp-panel"><h3>Learn normally</h3><p class="control-note" id="lp-normal-label"></p><ul class="lp-checklist" id="lp-normal"></ul></section><section class="lp-panel"><h3>Extra book choices</h3><p class="control-note">Only the additions explicitly granted by this route’s subclass. Not replacements for the normal choices.</p><ul class="lp-checklist" id="lp-extra"></ul></section></div>
+        <p class="control-note">These are the compendium’s no-copy recommendations, not mandatory picks or a free respec. If your existing book differs, choose legal unowned spells and read the route’s alternatives. Checks are temporary and reset when the plan changes; they are not included in the shared link.</p>
+      </section>
+
+      <div class="lp-pair lp-section">
+        <section class="lp-panel" aria-labelledby="lp-decisions-title"><p class="eyebrow">FINISH THE LEVEL</p><h2 id="lp-decisions-title">Level-up checklist</h2><ul class="lp-checklist" id="lp-decisions"></ul><p class="control-note">Apply these Wizard milestones only when advancing Wizard. Equipment, Hit Points, class prerequisites, and your actual ability/feat plan still need review.</p><a href="/library/character/build-decision-engine/#static-ability-and-feat-frameworks">Ability and feat frameworks →</a></section>
+        <section class="lp-panel" aria-labelledby="lp-grants-title"><p class="eyebrow">SEPARATE FROM ORDINARY PREPARATIONS</p><h2 id="lp-grants-title">Feature preparations</h2><h3>Gained at this level</h3><p id="lp-new-features"></p><h3>Available through this level</h3><ul class="lp-spell-list" id="lp-always"></ul><p class="control-note">Only the route’s explicit always-prepared entries and Mastery/Signature selections are listed here. They are not new unrestricted book choices. Free castings still have their own limits.</p></section>
+      </div>
+
+      <section class="lp-panel lp-section" aria-labelledby="lp-separate-title">
+        <h2 id="lp-separate-title">Keep the other grants separate.</h2>
+        <p id="lp-other-status"></p>
+        <details id="lp-dip-details"><summary>Other-class choices and timing</summary><div id="lp-dip"></div><a id="lp-dip-link" href="/library/character/spell-progression-hub/">Dip features in the route →</a></details>
+        <details id="lp-cantrip-details"><summary>Wizard cantrip plan, including subclass grants</summary><p id="lp-cantrip-plan"></p><p class="control-note">Follow the levels printed in this plan; future additions are not available early. The base cantrip count above does not include an Illusionist’s separate Minor Illusion grant.</p></details>
+        <details><summary>Route assumptions and source permissions</summary><p id="lp-intro"></p><p>One printed calendar, not a custom multiclass builder. No optional Illusion Adept configuration, origin-feat spell package, magic item, or copied spell is assumed. Subclass versions and source permissions follow the linked guide. This planner reorganizes imported notes; it is not a new independent rules verification.</p><a href="/library/character/spell-progression-hub/#assumptions">All route assumptions →</a></details>
+      </section>
+    </div>
+
+    <nav class="lp-reference-links" aria-label="Level-up references"><a href="/library/character/level-progression-planner/#wizard-level-table">Wizard progression table</a><a href="/library/character/spell-progression-hub/">All spell routes</a><a href="/library/tactics/prepared-loadouts/">Prepare for your next session</a><a href="/tools/#component-cost">Check component costs</a></nav>
+    <script is:inline type="application/json" id="level-up-data" set:html={serialized} />
+  </div>
+</BaseLayout>
+
+<script>
+  import {SUBCLASSES, ROUTES, readPlannerState, plannerQuery, levelBounds, selectLevel, inlineParts, type PlannerData, type PlannerState, type SpellChoice, type Choices} from '@/lib/level-up';
+  const data: PlannerData = JSON.parse(document.querySelector('#level-up-data')!.textContent!);
+  const get = <T extends HTMLElement = HTMLElement>(id: string) => document.getElementById(id) as T;
+  const subclass = get<HTMLSelectElement>('lp-subclass'), route = get<HTMLSelectElement>('lp-route'), basis = get<HTMLSelectElement>('lp-basis'), level = get<HTMLSelectElement>('lp-level');
+  let state: PlannerState;
+  const node = <K extends keyof HTMLElementTagNameMap>(tag: K, text?: string) => {const el = document.createElement(tag); if (text !== undefined) el.textContent = text; return el;};
+  const inline = (target: HTMLElement, text: string) => {
+    target.replaceChildren(...inlineParts(text).map(part => {if (!part.href) return document.createTextNode(part.text); const a = node('a', part.text); a.href = part.href; return a;}));
+  };
+  const spellList = (target: HTMLElement, spells: SpellChoice[], empty: string, check = false) => {
+    target.replaceChildren();
+    if (!spells.length) {target.append(node('li', empty)); return;}
+    for (const spell of spells) {
+      const li = node('li'), a = node('a', spell.name); a.href = spell.href;
+      if (check) {const input = node('input'); input.type = 'checkbox'; input.setAttribute('aria-label', `Chosen: ${spell.name}`); li.append(input);}
+      li.append(a); target.append(li);
+    }
+  };
+  const acquisitionList = (id: string, choices: Choices, empty: string) => {
+    const target = get(id);
+    if (!choices.complete) {target.replaceChildren(node('li', 'Read this source cell before counting choices:')); const li = node('li'); inline(li, choices.raw); target.append(li); return;}
+    spellList(target, choices.spells, empty, true);
+  };
+  const checklistItem = (target: HTMLElement, text: string) => {
+    const li = node('li'), label = node('label'), input = node('input'), span = node('span'); input.type = 'checkbox'; inline(span, text); label.append(input, span); li.append(label); target.append(li);
+  };
+  const controls = () => {
+    subclass.value = state.subclass; route.value = state.route; basis.value = state.basis;
+    const bounds = levelBounds(data, state);
+    level.replaceChildren(...Array.from({length: bounds.max - bounds.min + 1}, (_, i) => {const option = node('option', String(bounds.min + i)); option.value = String(bounds.min + i); return option;}));
+    level.value = String(state.level);
+    get('lp-basis-help').textContent = state.basis === 'wizard' ? 'Wizard level shows the first character level that gains it. Switch to Character level to inspect a dip taken while your Wizard level stays the same.' : 'Character level follows the complete printed calendar, including the levels spent in another class.';
+    get<HTMLButtonElement>('lp-previous').disabled = state.level <= bounds.min;
+    get<HTMLButtonElement>('lp-next').disabled = state.level >= bounds.max;
+  };
+  const render = (warnings: string[] = []) => {
+    controls();
+    const selected = selectLevel(data, state);
+    get('lp-results').hidden = false; get('lp-empty').hidden = Boolean(selected.plan);
+    get('lp-status').textContent = warnings.join(' ');
+    const {plan, row, baseline} = selected;
+    const label = SUBCLASSES.find(s => s.toLowerCase() === state.subclass);
+    get('lp-route-label').textContent = `${label ? `${label} · ` : ''}${ROUTES.find(r => r.id === state.route)!.label}`;
+    get('lp-title').textContent = `Character ${row.characterLevel} · Wizard ${row.wizardLevel}`;
+    get('lp-advanced').textContent = `Advance ${row.advanced}. ${selected.advancesWizard ? baseline?.milestone ?? '' : 'No new Wizard acquisitions or Wizard milestone at this level.'}`;
+    get('lp-no-wizard').hidden = row.wizardLevel !== 0;
+    get('lp-prepared').textContent = String(baseline?.prepared ?? 0);
+    get('lp-cantrips').textContent = String(baseline?.cantrips ?? 0);
+    get('lp-highest').textContent = baseline ? `Level ${baseline.highest}` : 'None';
+    get('lp-proficiency').textContent = selected.proficiency;
+    get('lp-baseline').textContent = String(baseline?.book ?? 0);
+    get('lp-extra-total').textContent = !plan ? 'Choose a subclass' : selected.bookComplete ? String(selected.extraCount) : 'Check source';
+    get('lp-book-total').textContent = !plan ? 'Choose a subclass' : selected.bookComplete ? String(selected.book.length) : 'Unresolved — check source';
+    get('lp-book-details').hidden = !plan;
+    get('lp-acquisitions').hidden = !plan;
+    get('lp-cantrip-details').hidden = !plan;
+    spellList(get('lp-book-list'), selected.book, 'No Wizard book yet.');
+    get('lp-slot-basis').textContent = selected.casterLevel ? `Effective spellcaster level ${selected.casterLevel} · ${Object.entries(selected.classLevels).map(([name, amount]) => `${name} ${amount}`).join(' / ')}` : 'No spellcasting slots from this route yet.';
+    get('lp-slot-list').replaceChildren(...selected.slots.map((amount, i) => {const div = node('div'); div.append(node('dt', `Level ${i + 1}`), node('dd', String(amount))); return div;}));
+    get('lp-why').textContent = row.why || (selected.advancesWizard ? 'Use the choices below for this Wizard level. Their source and component restrictions still apply.' : 'Advance the other class only. Keep the Wizard spells already acquired; do not repeat the previous Wizard row.');
+    get('lp-normal-label').textContent = selected.advancesWizard ? `${row.wizardLevel === 1 ? 'Six starting' : 'Two new'} Wizard book choices.` : 'No normal Wizard book choices on a dip level.';
+    acquisitionList('lp-normal', row.normal, 'No new normal Wizard choices at this level.');
+    acquisitionList('lp-extra', row.extra, 'No extra book choices granted at this level.');
+    get<HTMLAnchorElement>('lp-route-link').href = plan ? `${plan.href}#${plan.heading}` : '/library/character/spell-progression-hub/';
+    const decisions = get('lp-decisions'); decisions.replaceChildren();
+    for (const text of selected.checklist) checklistItem(decisions, text);
+    if (!selected.advancesWizard) checklistItem(decisions, `Apply ${row.advanced} benefits from the route’s dip section; keep Wizard acquisitions unchanged.`);
+    checklistItem(decisions, 'Confirm source permission and component access before choosing spells.');
+    if (row.wizardLevel) checklistItem(decisions, `Prepare up to ${baseline!.prepared} ordinary level 1+ Wizard spells from your actual book. Count feature and other-class preparations separately.`);
+    inline(get('lp-new-features'), !plan ? 'Choose a subclass to see its route-specific grants.' : /^[—–\s]*$/.test(row.features) ? 'No new separate spell preparation is listed in this row.' : row.features);
+    spellList(get('lp-always'), selected.always, !plan ? 'Route not selected.' : 'No separate always-prepared spell is listed through this level.');
+    const other = Object.entries(selected.classLevels).filter(([name]) => name !== 'Wizard');
+    get('lp-other-status').textContent = state.route === 'pure' ? 'No other class in this route. Origin-feat and species grants, if any, are not added to these totals.' : other.length ? `${other.map(([name, amount]) => `${name} ${amount}`).join(' / ')} is active. Other-class spells and cantrips never consume the Wizard book or preparation budget.` : 'The dip has not happened yet. Do not add its spells, cantrips, or proficiencies early.';
+    get('lp-dip-details').hidden = !plan?.dip.length;
+    get('lp-dip').replaceChildren(...(plan?.dip ?? []).map(text => {const p = node('p'); inline(p, text); return p;}));
+    get<HTMLAnchorElement>('lp-dip-link').href = plan ? `${plan.href}#dip-features-and-separate-spells` : '/library/character/multiclass-spell-timing/';
+    inline(get('lp-cantrip-plan'), plan?.cantrips ?? '');
+    inline(get('lp-intro'), plan?.intro ?? 'Select a subclass for its complete route assumptions.');
+    if (!warnings.length) get('lp-status').textContent = `${label ? `${label}: ` : ''}Character level ${row.characterLevel}, Wizard level ${row.wizardLevel}. ${plan ? 'Plan updated.' : 'Baseline updated; choose a subclass for exact acquisitions.'}`;
+  };
+  const writeUrl = (replace = false) => {
+    const next = `${location.pathname}?${plannerQuery(state)}${location.hash}`;
+    if (`${location.pathname}${location.search}${location.hash}` !== next) history[replace ? 'replaceState' : 'pushState'](null, '', next);
+  };
+  const load = () => {const result = readPlannerState(new URLSearchParams(location.search), data); state = result.state; render(result.warnings); if (location.search) writeUrl(true);};
+  get('level-up-controls').addEventListener('submit', event => event.preventDefault());
+  get('level-up-controls').addEventListener('change', event => {
+    const previous = selectLevel(data, state), target = event.target as HTMLElement;
+    state = {...state, subclass: subclass.value, route: route.value as PlannerState['route'], basis: basis.value as PlannerState['basis'], level: Number(level.value)};
+    if (target === basis && previous) state.level = state.basis === 'wizard' ? previous.row.wizardLevel : previous.row.characterLevel;
+    const bounds = levelBounds(data, state); state.level = Math.min(bounds.max, Math.max(bounds.min, state.level));
+    render(); writeUrl();
+  });
+  for (const [id, delta] of [['lp-previous', -1], ['lp-next', 1]] as const) get(id).addEventListener('click', () => {const bounds = levelBounds(data, state); state.level = Math.max(bounds.min, Math.min(bounds.max, state.level + delta)); render(); writeUrl();});
+  get('lp-share').addEventListener('click', async () => {
+    writeUrl(true);
+    try {await navigator.clipboard.writeText(location.href); get('lp-status').textContent = 'Plan link copied. Checkmarks are not included.';}
+    catch {get('lp-status').textContent = 'Copy this page’s address from your browser to share the plan. Checkmarks are not included.';}
+  });
+  window.addEventListener('popstate', load);
+  load();
+</script>
+
+<style>
+  .level-up-page {max-width: 1160px;}
+  .lp-controls {display:grid;grid-template-columns:1.2fr 1.4fr 1fr .5fr;gap:1rem;background:var(--surface-alt);border:1px solid var(--line);border-radius:var(--radius-lg);padding:1.2rem;}
+  .lp-status {font-size:.85rem;min-height:1.5rem;color:var(--ink-soft);}
+  .lp-summary {display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1rem 0 1.5rem;}
+  .lp-summary h2 {margin-bottom:.5rem;}.lp-summary p:last-child {margin-bottom:0;max-width:62ch;}
+  .lp-actions {display:flex;flex-wrap:wrap;gap:.5rem;max-width:290px;}
+  .lp-boundary {padding:1rem;border-left:3px solid var(--gold);background:var(--gold-wash);}
+  .lp-metrics {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;margin:0 0 1.3rem;}
+  .lp-metrics>div {padding:1.2rem;background:var(--surface);border-right:1px solid var(--line);}.lp-metrics>div:last-child{border:0;}
+  .lp-metrics dt {font-size:.8rem;font-weight:650;min-height:2.6em;}.lp-metrics dd {font-family:var(--display);font-size:2rem;margin:.4rem 0;line-height:1.1;}.lp-metrics dd.lp-metric-note {font-family:inherit;font-size:.76rem;line-height:1.6;color:var(--ink-faint);margin:0;}
+  .lp-pair {display:grid;grid-template-columns:1fr 1fr;gap:1.3rem;align-items:start;}
+  .lp-panel {min-width:0;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);padding:1.4rem;}.lp-panel h2 {font-size:1.5rem;}.lp-panel h3 {font-size:1.07rem;}
+  .lp-ledger {margin:1rem 0;}.lp-ledger>div {display:flex;justify-content:space-between;gap:1rem;padding:.6rem 0;}.lp-ledger dt {font-size:.85rem;}.lp-ledger dd {margin:0;font-weight:700;}.lp-total {border-top:1px solid var(--line);color:var(--plum);}
+  .lp-slots {display:flex;gap:.55rem;flex-wrap:wrap;}.lp-slots :global(div) {padding:.5rem .65rem;text-align:center;background:var(--surface-alt);border-radius:var(--radius);}.lp-slots :global(dt){font-size:.72rem;}.lp-slots :global(dd){margin:0;font-size:1.3rem;font-weight:650;}
+  .lp-section {margin-top:1.8rem;}.lp-section>.section-heading {align-items:center;}.lp-section>.section-heading h2{margin-bottom:0;}
+  .lp-panel details {border-top:1px solid var(--line);padding:.8rem 0;}.lp-panel summary {font-weight:650;cursor:pointer;font-size:.9rem;}.lp-panel details[open]>summary{margin-bottom:.8rem;}
+  .lp-checklist,.lp-spell-list {list-style:none;padding:0;margin:.7rem 0;}.lp-checklist :global(li),.lp-spell-list :global(li){margin:.55rem 0;line-height:1.6;overflow-wrap:anywhere;}
+  .lp-checklist :global(li),.lp-checklist :global(label){display:flex;align-items:baseline;gap:.75rem;}.lp-checklist :global(input){flex:0 0 auto;accent-color:var(--plum);width:1.1rem;height:1.1rem;transform:translateY(.15rem);}.lp-checklist :global(a){min-height:26px;}
+  .lp-reference-links {display:flex;flex-wrap:wrap;gap:.8rem 1.5rem;border-top:1px solid var(--line);padding-top:1.4rem;margin-top:2rem;font-size:.85rem;}
+  @media(max-width:760px){.lp-controls{grid-template-columns:1fr 1fr;}.lp-summary{display:block;}.lp-actions{max-width:none;margin-top:1rem;}.lp-metrics{grid-template-columns:1fr 1fr;}.lp-metrics>div{border-bottom:1px solid var(--line);}.lp-metrics>div:nth-child(2){border-right:0;}.lp-metrics>div:nth-child(3){border-bottom:0;}.lp-pair{grid-template-columns:1fr;}.lp-panel{padding:1.1rem;}.lp-section>.section-heading{display:block;}.lp-section>.section-heading>a{display:inline-block;margin-top:.6rem;}}
+  @media(max-width:410px){.lp-controls{gap:.8rem;padding:.9rem;}.lp-metrics>div{padding:.9rem;}.lp-metrics dd{font-size:1.75rem;}}
+</style>

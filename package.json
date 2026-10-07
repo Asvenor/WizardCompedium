@@ -7,7 +7,7 @@
     "dev": "ASTRO_TELEMETRY_DISABLED=1 astro dev",
     "build:astro": "ASTRO_TELEMETRY_DISABLED=1 astro build",
     "build": "ASTRO_TELEMETRY_DISABLED=1 astro build",
-    "test": "node --test scripts/test-vault.mjs scripts/test-pdf-sheet-document.mjs scripts/test-cloudflare-config.mjs scripts/test-legacy-redirects.mjs scripts/test-search-upgrades.mjs scripts/test-calculators.mjs scripts/test-finder-polish.mjs scripts/test-form-gallery.mjs",
+    "test": "node --test scripts/test-vault.mjs scripts/test-pdf-sheet-document.mjs scripts/test-cloudflare-config.mjs scripts/test-legacy-redirects.mjs scripts/test-search-upgrades.mjs scripts/test-question-search.mjs scripts/test-level-up.mjs scripts/test-library-workflows.mjs scripts/test-calculators.mjs scripts/test-finder-polish.mjs scripts/test-form-gallery.mjs",
     "check": "ASTRO_TELEMETRY_DISABLED=1 astro check",
     "validate:content": "node scripts/validate-vault.mjs && node scripts/build-form-gallery.mjs --check",
     "validate:build": "node scripts/validate-build.mjs",
@@ -19,7 +19,7 @@
     "prebuild": "npm run prepare:import",
     "prebuild:astro": "npm run prepare:import",
     "precheck": "npm run prepare:import",
-    "test:audit": "playwright test vault-overhaul.spec.mjs search-upgrades.spec.mjs calculators.spec.mjs finder-polish.spec.mjs",
+    "test:audit": "playwright test vault-overhaul.spec.mjs search-upgrades.spec.mjs question-answers.spec.mjs level-up.spec.mjs library-workflows.spec.mjs calculators.spec.mjs finder-polish.spec.mjs",
     "test:pdf": "node --test scripts/test-pdf-sheet-document.mjs",
     "test:pdf:storage": "node --test scripts/test-pdf-sheet-storage.mjs",
     "test:pdf:browser": "playwright test pdf-sheet.spec.mjs"

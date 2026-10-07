@@ -2,7 +2,15 @@
 
 An Astro website built from the expanded Obsidian compendium. The current import contains **422 complete notes**, including **208 spell cards, 51 magic-item cards, 20 creature cards, 35 core spell progressions**, and the optional Illusion Adept configuration. All 110 source images and the reference PDF are preserved.
 
-The website provides searchable spell, item, and form catalogues, comparisons, builds, tier lists, linked reference pages, saved references, calculators, and an editable PDF character sheet. The form finder covers all **82 creatures embedded in the vault's galleries**: 20 metadata-checked cards and 62 image-transcribed references. It displays senses, original images, stat-block conditions, and explicit review status. Gallery placement does not grant spell eligibility. Rules, analysis, edition labels, access conditions, and verification limits come from the source notes. Importing a note does not independently verify its rules.
+The website provides question-friendly search and source-backed quick answers, a level-up planner, searchable spell/item/form catalogues, comparisons, builds, tier lists, linked reference pages, saved references, calculators, and an editable PDF character sheet. The form finder covers all **82 creatures embedded in the vault's galleries**: 20 metadata-checked cards and 62 image-transcribed references. It displays senses, original images, stat-block conditions, and explicit review status. Gallery placement does not grant spell eligibility. Rules, analysis, edition labels, access conditions, and verification limits come from the source notes. Importing a note does not independently verify its rules.
+
+## Find an answer or plan a level
+
+Start at `/questions/` or ask a question in `/search/`. Quick answers are hand-curated summaries of existing references, not generated rules. Search handles conversational filler, common terminology variants and source aliases, ranks meaningful sections, and links to rendered heading anchors. One result per reference avoids flooding the list with every section of a long document. All full references remain available; results load in batches of 20.
+
+The `/level-up/` planner reads the existing Wizard table and 35 core acquisition routes at build time. It separates Wizard level from character level, baseline preparation from always-prepared features, ordinary spellbook minimum from a selected route's distinct acquisitions, and spell access from combined multiclass slots. Choose a subclass to see its printed acquisition preset. Copied spells, origin-feat choices, and personal replacements are not silently counted. A route is optimization advice, not a universally best build.
+
+Search and level-up views have shareable URLs. Each rendered reference heading has a section permalink and an explicit copy control. Clipboard denial displays the link instead of failing silently. Full reference pages retain their edition and verification details.
 
 ## Run locally
 
@@ -66,7 +74,10 @@ Source snapshots retain original Markdown and catalogue definitions; asset copie
 | Build progression matrix | `src/pages/builds/index.astro` |
 | Comparison | `src/pages/compare.astro` |
 | Search | `src/pages/search.astro`, `src/pages/search-index.json.ts` |
+| Common questions and source-backed answer summaries | `src/pages/questions.astro`, `src/lib/questions.ts` |
+| Source-derived level-up tool and printed route counts | `src/pages/level-up/index.astro`, `src/lib/level-up.ts` |
 | Saved references | `src/lib/reading-list.ts` |
+| Shortlist return links and explicit component-plan backups | `src/lib/finder-context.ts`, `src/lib/component-plan.ts` |
 | Navigation and appearance | `src/components/layout/BaseLayout.astro`, `src/styles/global.css` |
 | PDF editor | `src/pages/play/import.astro`, `src/features/pdf-sheet/` |
 | Copied images and reference PDF | `public/vault-assets/` |
@@ -84,6 +95,10 @@ The PDF editor at `/play/import/` displays the sheet itself. Edit supported fill
 Sheets and reading lists stay in this browser profile on this website origin. Localhost and the live site have separate storage, and data does not synchronize between devices. Clearing site data can remove saved copies, so export a backup after a session. A white cover hides printed text visually; it is not secure redaction.
 
 The PDF workflow does not extract character statistics, perform OCR, or update D&D Beyond. Earlier character data remains separate. See [PDF sheet editing and privacy](docs/PDF_SHEET_EDITOR.md).
+
+Component shopping lists have explicit **Save plan to browser**, **Restore saved plan**, and JSON export/import controls. They use `wizard-compendium-component-plan-v1`; saving a list does not modify PDF sheets or character storage. Imported plans are checked against the current component wording and minimum prices before replacing any open list. Existing work requires confirmation before replacement, and unknown prices remain unknown. These plans stay local unless you export the JSON yourself.
+
+Finder return links retain allowlisted filters and comparison selections through a same-origin `returnTo` URL, with session storage as a convenience. They never redirect to arbitrary external URLs. Catalogue row-reading mode also survives the return trip. No account, background upload, or cross-device synchronization is added.
 
 ## Validate changes
 

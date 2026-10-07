@@ -1,12 +1,13 @@
 ---
 import BaseLayout from '@/components/layout/BaseLayout.astro';
 import {getNotes,getSections,noteHref} from '@/lib/vault';
+import {normalizeSearch,searchAliases} from '@/lib/search';
 const notes=getNotes();
 const sections=getSections();
 ---
 <BaseLayout title="The library" active="library">
   <div class="page-shell">
-    <header class="page-header"><p class="eyebrow">THE COMPENDIUM</p><h1>The library</h1><p>Build a wizard. Choose a spell. Find the rule you need.</p></header>
+    <header class="page-header"><p class="eyebrow">THE COMPENDIUM</p><h1>The library</h1><p>Build a wizard. Choose a spell. Find the rule you need.</p><a class="button" href="/search/">Ask a question</a></header>
     <form class="filter-bar" data-library-filters role="search">
       <label class="field-label"><span>Find a reference</span><input class="field" type="search" name="q" placeholder="Spells, tactics, crafting…" /></label>
       <label class="field-label"><span>Section</span><select class="field" name="section"><option value="">All sections</option>{sections.map(s=><option value={s.id}>{s.label}</option>)}</select></label>
@@ -15,12 +16,13 @@ const sections=getSections();
     </form>
     <p class="control-note" role="status" data-library-count>{notes.length} references</p>
     <div class="library-grid" data-library-list>
-      {notes.map(n=><article class="note-card" data-note={n.slug} data-section={n.section} data-search={`${n.title} ${n.summary}`.toLowerCase()}><span class="eyebrow">{n.sectionLabel}</span><h2><a href={noteHref(n)}>{n.title}</a></h2><p>{n.summary}</p></article>)}
-    </div><div class="empty-state" data-library-empty hidden><h2>No references match</h2><p>Try a shorter search or choose another section.</p></div>
-    <p class="control-note">For a phrase inside a reference, use <a href="/search/">full-text search</a>.</p>
+      {notes.map(n=><article class="note-card" data-note={n.slug} data-section={n.section} data-search={normalizeSearch(`${n.title} ${searchAliases(n).join(' ')} ${n.summary}`)}><span class="eyebrow">{n.sectionLabel}</span><h2><a href={noteHref(n)}>{n.title}</a></h2><p>{n.summary}</p></article>)}
+    </div><div class="empty-state" data-library-empty hidden><h2>No references match</h2><p>This filter checks reference names and summaries. <a href="/search/" data-library-question>Search the full text or ask this as a question →</a></p></div>
+    <p class="control-note">Looking for an answer inside a reference? <a href="/search/" data-library-question>Use full-text question search</a>. Your current query carries over.</p>
   </div>
   <script>
     import {savedReferences} from '@/lib/reading-list';
+    import {normalizeSearch} from '@/lib/search';
     const form=document.querySelector<HTMLFormElement>('[data-library-filters]')!;
     const input=form.elements.namedItem('q') as HTMLInputElement;
     const select=form.elements.namedItem('section') as HTMLSelectElement;
@@ -28,10 +30,11 @@ const sections=getSections();
     const rows=[...document.querySelectorAll<HTMLElement>('[data-note]')];
     const params=new URLSearchParams(location.search);
     input.value=params.get('q')??'';select.value=params.get('section')??'';saved.checked=params.get('saved')==='1';
-    function update(){const q=input.value.trim().toLowerCase();const stored=savedReferences();let count=0;
+    function update(){const q=normalizeSearch(input.value);const stored=savedReferences();let count=0;
       for(const row of rows){row.hidden=!(q.split(/\s+/).filter(Boolean).every(s=>row.dataset.search?.includes(s))&&(!select.value||row.dataset.section===select.value)&&(!saved.checked||stored.includes(row.dataset.note!)));if(!row.hidden)count++;}
       document.querySelector('[data-library-count]')!.textContent=`${count} reference${count===1?'':'s'}`;
       (document.querySelector('[data-library-empty]') as HTMLElement).hidden=count>0;
+      const question=new URL('/search/',location.origin);if(input.value.trim())question.searchParams.set('q',input.value.trim());if(select.value)question.searchParams.set('section',select.value);for(const link of document.querySelectorAll<HTMLAnchorElement>('[data-library-question]'))link.href=question.pathname+question.search;
       const url=new URL(location.href);for(const [k,v] of [['q',input.value],['section',select.value],['saved',saved.checked?'1':'']]){if(v)url.searchParams.set(k,v);else url.searchParams.delete(k);}history.replaceState(null,'',url);
     }
     form.addEventListener('submit',e=>{e.preventDefault();update()});form.addEventListener('input',update);form.addEventListener('reset',()=>setTimeout(update));update();

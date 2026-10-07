@@ -95,6 +95,17 @@ const abilities = ['STR', 'DEX', 'CON', 'INT', 'WIS', 'CHA'];
         <button class="button" type="button" data-clear-components disabled>Clear list</button>
       </div>
       <p class="control-note" role="status" aria-live="polite" data-component-add-status></p>
+      <details class="component-plan-tools">
+        <summary>Save, restore, or transfer this plan</summary>
+        <p class="calculator-note">Saving is explicit and stays in this browser. Save replaces its previous component plan; Restore or Import replaces the open list only after you confirm. Export a JSON copy to move your plan or keep a backup. Unknown prices remain unknown.</p>
+        <div class="toolbar component-plan-actions">
+          <button class="button" type="button" data-component-plan-save disabled>Save plan to browser</button>
+          <button class="button" type="button" data-component-plan-restore>Restore saved plan</button>
+          <button class="button" type="button" data-component-plan-export disabled>Export plan (JSON)</button>
+        </div>
+        <label class="field-label component-plan-import">Import plan (JSON)<input class="field" type="file" accept="application/json,.json" data-component-plan-import /></label>
+        <p class="calculator-note" role="status" aria-live="polite" aria-atomic="true" data-component-plan-status>Nothing is saved automatically. Imported plans use the current recorded spell components.</p>
+      </details>
       <div class="component-rows" data-component-rows></div>
       <div class="component-summary" role="status" aria-live="polite" aria-atomic="true">
         <p><span>Consumed for planned casts</span><strong data-consumed-total>0 GP</strong></p>
@@ -113,6 +124,7 @@ const abilities = ['STR', 'DEX', 'CON', 'INT', 'WIS', 'CHA'];
 
 <script>
   import {readNumber, saveProbability, concentrationDc, expectedSaveDamage, componentTotals, type RollMode, type Consumption, type ComponentItem} from '@/lib/calculators';
+  import {validateComponentPlan,parseComponentPlan,saveComponentPlan,loadComponentPlan,MAX_COMPONENT_PLAN_BYTES,type ComponentPlan} from '@/lib/component-plan';
 
   const percentage = (p:number) => `${(p * 100).toLocaleString(undefined, {maximumFractionDigits: 2})}%`;
   const gp = (value:number) => `${value.toLocaleString(undefined, {maximumFractionDigits: 2})} GP`;
@@ -185,6 +197,11 @@ const abilities = ['STR', 'DEX', 'CON', 'INT', 'WIS', 'CHA'];
   const rowsRoot = document.querySelector<HTMLElement>('[data-component-rows]')!;
   const addStatus = document.querySelector<HTMLElement>('[data-component-add-status]')!;
   const clear = document.querySelector<HTMLButtonElement>('[data-clear-components]')!;
+  const planStatus=document.querySelector<HTMLElement>('[data-component-plan-status]')!;
+  const planSave=document.querySelector<HTMLButtonElement>('[data-component-plan-save]')!;
+  const planExport=document.querySelector<HTMLButtonElement>('[data-component-plan-export]')!;
+  const planRestore=document.querySelector<HTMLButtonElement>('[data-component-plan-restore]')!;
+  const planImport=document.querySelector<HTMLInputElement>('[data-component-plan-import]')!;
   const el = <K extends keyof HTMLElementTagNameMap>(tag:K, text?:string, className?:string) => {
     const node = document.createElement(tag); if (text) node.textContent = text; if (className) node.className = className; return node;
   };
@@ -207,10 +224,11 @@ const abilities = ['STR', 'DEX', 'CON', 'INT', 'WIS', 'CHA'];
     })));
     for (const key of ['consumed','reusable','special','shopping'] as const) document.querySelector<HTMLElement>(`[data-${key}-total]`)!.textContent = gp(totals[key]);
     clear.disabled = !entries.size;
+    planSave.disabled=planExport.disabled=!entries.size;
     document.querySelector<HTMLElement>('[data-component-status]')!.textContent = !entries.size ? 'Choose a spell to start a shopping list.' : totals.incomplete ? `Partial total: ${totals.incomplete} material row${totals.incomplete===1?' is':'s are'} excluded until price, quantities, and cost handling are confirmed. Unknown is not zero.` : 'Every priced/consumed material row in your list is included. Unpriced ordinary materials and other setup resources are outside this total.';
   };
-  const addSpell = () => {
-    const spell = spells.find(s => s.slug === selector.value);
+  const addSpell = (slug=selector.value) => {
+    const spell = spells.find(s => s.slug === slug);
     if (!spell) { addStatus.textContent='Choose a spell before adding it.'; selector.focus(); return; }
     if (entries.has(spell.slug)) { addStatus.textContent=`${spell.title} is already in your list. Adjust its quantities below.`; return; }
     const card = el('article', undefined, 'component-spell'); card.dataset.componentEntry=spell.slug;
@@ -250,9 +268,51 @@ const abilities = ['STR', 'DEX', 'CON', 'INT', 'WIS', 'CHA'];
     remove.addEventListener('click', () => { entries.delete(spell.slug); card.remove(); calculateComponents(); addStatus.textContent=`Removed ${spell.title}.`; selector.focus(); });
     addStatus.textContent=`Added ${spell.title}.`; selector.value=''; calculateComponents();
   };
-  document.querySelector('[data-add-component]')?.addEventListener('click',addSpell);
+  document.querySelector('[data-add-component]')?.addEventListener('click',()=>addSpell());
   clear.addEventListener('click', () => { entries.clear(); rowsRoot.replaceChildren(); selector.value=''; addStatus.textContent='Shopping list cleared.'; calculateComponents(); selector.focus(); });
   calculateComponents();
+
+  const captureNumber=(input:HTMLInputElement,unknownAllowed=false):number|null=>{
+    if(!input.value.trim()&&unknownAllowed)return null;
+    const value=fieldNumber(input,input.step==='1');
+    if(value===null)throw new Error('Fix invalid component prices or quantities before saving or exporting. Blank prices can stay unknown.');
+    return value;
+  };
+  const capturePlan=():ComponentPlan=>validateComponentPlan({format:'wizard-compendium-component-plan',version:1,entries:[...entries.values()].map(entry=>({
+    slug:entry.spell.slug,source:entry.spell.raw,casts:captureNumber(entry.casts),targets:entry.targets?captureNumber(entry.targets):null,
+    rows:entry.rows.map(row=>({price:captureNumber(row.cost,true),sets:row.sets?captureNumber(row.sets):null,consumption:row.consumption?.value??row.item.consumption})),
+  }))},spells);
+  const restorePlan=(plan:ComponentPlan):boolean=>{
+    // Validation completes before any existing work is touched.
+    const clean=validateComponentPlan(plan,spells);
+    if(entries.size&&!window.confirm('Replace the current component list with this plan? Your saved browser plan is unchanged until you choose Save.'))return false;
+    entries.clear();rowsRoot.replaceChildren();
+    for(const item of clean.entries){
+      addSpell(item.slug);
+      const entry=entries.get(item.slug)!;entry.casts.value=String(item.casts);
+      if(entry.targets)entry.targets.value=String(item.targets);
+      item.rows.forEach((row,index)=>{const target=entry.rows[index];target.cost.value=row.price===null?'':String(row.price);if(target.sets)target.sets.value=String(row.sets);if(target.consumption)target.consumption.value=row.consumption;});
+    }
+    selector.value='';calculateComponents();addStatus.textContent=`Restored ${clean.entries.length} spell${clean.entries.length===1?'':'s'} in the component list.`;return true;
+  };
+  planSave.addEventListener('click',()=>{
+    try{saveComponentPlan(capturePlan(),spells);planStatus.textContent='Component plan saved in this browser. Export a JSON copy for a portable backup.';}
+    catch(error){planStatus.textContent=(error as Error).message;}
+  });
+  planRestore.addEventListener('click',()=>{
+    try{const plan=loadComponentPlan(spells);if(!plan){planStatus.textContent='No component plan is saved in this browser yet.';return;}if(restorePlan(plan))planStatus.textContent='Saved component plan restored. Changes are not saved until you choose Save.';}
+    catch(error){planStatus.textContent=(error as Error).message;}
+  });
+  planExport.addEventListener('click',()=>{
+    try{const json=JSON.stringify(capturePlan(),null,2)+'\n',url=URL.createObjectURL(new Blob([json],{type:'application/json'}));const link=document.createElement('a');link.href=url;link.download='wizard-component-plan.json';document.body.append(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),30000);planStatus.textContent='Plan download requested. Keep the JSON file to restore these quantities and unknown prices later.';}
+    catch(error){planStatus.textContent=(error as Error).message;}
+  });
+  planImport.addEventListener('change',async()=>{
+    const file=planImport.files?.[0];if(!file)return;
+    try{if(file.size>MAX_COMPONENT_PLAN_BYTES)throw new Error('Component plans must be JSON files up to 1 MB.');const plan=parseComponentPlan(await file.text(),spells);if(restorePlan(plan))planStatus.textContent='Plan imported into the open list. Nothing was saved automatically; use Save or Export to keep it.';}
+    catch(error){planStatus.textContent=(error as Error).message;}
+    finally{planImport.value='';}
+  });
 </script>
 
 <style>
@@ -263,6 +323,12 @@ const abilities = ['STR', 'DEX', 'CON', 'INT', 'WIS', 'CHA'];
   .known-save-grid .field { margin-top: .35rem; }
   .known-save-grid .calculator-note { margin-block: .35rem 0; font-size: .78rem; }
   .component-calculator { margin-top: 1.5rem; }
+  .component-plan-tools { margin-block: .5rem 1.2rem; padding: .85rem 1rem; border: 1px solid var(--line); border-radius: var(--radius); }
+  .component-plan-tools > summary { cursor: pointer; font-weight: 650; color: var(--plum); font-size: .88rem; }
+  .component-plan-tools .calculator-note { margin-block: .8rem 0; }
+  .component-plan-actions { justify-content: flex-start; gap: .5rem; margin-block: .8rem; }
+  .component-plan-import { max-width: 460px; }
+  .component-plan-import .field { margin-top: .35rem; max-width: 100%; }
   .component-calculator > h2 { margin-top: .3rem; }
   .component-add { display: flex; align-items: end; gap: .7rem; flex-wrap: wrap; }
   .component-add > label { flex: 1 1 300px; }

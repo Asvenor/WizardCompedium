@@ -1,11 +1,32 @@
 ---
 import BaseLayout from '@/components/layout/BaseLayout.astro';
 import {getSections,hrefFor} from '@/lib/vault';
+const examples=['How many spells should I have at each level?','Can I cast rituals without preparing them?','How do I protect concentration?','How do I copy spells into my spellbook?'];
 ---
-<BaseLayout title="Search the compendium" active="search"><div class="page-shell search-page"><header class="page-header"><p class="eyebrow">FIND THE RIGHT ANSWER</p><h1>Search the compendium</h1><p>Search every spell, build, table, and reference.</p></header><form class="filter-bar" role="search" data-full-search><label class="field-label"><span>Search</span><input class="field" type="search" name="q" data-search-input placeholder="A spell, a problem, a rule…" autocomplete="off" autofocus/></label><label class="field-label"><span>Section</span><select class="field" name="section"><option value="">Everything</option>{getSections().filter(s=>s.id!=='inbox').map(s=><option value={s.id}>{s.label}</option>)}</select></label><button class="button button--primary" type="submit">Search</button></form><p class="control-note" role="status" aria-live="polite" data-search-status>Enter a name or phrase to begin.</p><div data-search-results class="search-results"></div><div class="toolbar" data-search-pagination hidden><button class="button" type="button" data-search-more>Show more results</button><span class="control-note" data-search-remaining></span></div><div data-search-intro><p class="eyebrow">QUICK REFERENCES</p><div class="related-links">{['Spell Progression Hub','Combat Dashboard','Concentration','Countering Spellcasters','Rules Desk'].map(name=><a href={hrefFor(name)}>{name}<span aria-hidden="true">↗</span></a>)}</div></div><button class="button" type="button" data-search-retry hidden>Retry search</button><noscript><p>Full-text search needs JavaScript. You can <a href="/library/">browse every reference in the library</a>.</p></noscript></div>
+<BaseLayout title="Search the compendium" active="search">
+  <div class="page-shell search-page">
+    <header class="page-header"><p class="eyebrow">FIND THE RIGHT ANSWER</p><h1>Find an answer</h1><p>Ask a question or name a spell. Jump straight to the relevant reference section.</p></header>
+    <form class="filter-bar" role="search" data-full-search>
+      <label class="field-label"><span>Search</span><input class="field" type="search" name="q" data-search-input placeholder="How many spells can I prepare at level 5?" autocomplete="off" autofocus/></label>
+      <label class="field-label"><span>Section</span><select class="field" name="section"><option value="">Everything</option>{getSections().filter(s=>s.id!=='inbox').map(s=><option value={s.id}>{s.label}</option>)}</select></label>
+      <button class="button button--primary" type="submit">Search</button>
+    </form>
+    <section data-search-answers hidden aria-labelledby="quick-answer-title"><div class="section-heading"><h2 id="quick-answer-title">Start here</h2><a class="text-link" href="/questions/">Browse common questions →</a></div><p class="control-note">Source-backed summaries, not generated answers. The linked references retain their edition notes and conditions.</p><div data-answer-results></div></section>
+    <div class="toolbar search-status-bar"><p class="control-note" role="status" aria-live="polite" data-search-status>Enter a name or phrase to begin.</p><button class="button" type="button" data-copy-url data-copy-label="Search link" hidden data-share-search>Copy search link</button><span class="control-note" role="status" data-copy-status></span></div>
+    <div data-search-results class="search-results"></div>
+    <div class="toolbar" data-search-pagination hidden><button class="button" type="button" data-search-more>Show more results</button><span class="control-note" data-search-remaining></span></div>
+    <div data-search-intro>
+      <p class="eyebrow">TRY A QUESTION</p><div class="question-examples">{examples.map(question=><a href={`/search/?q=${encodeURIComponent(question)}`}>{question}<span aria-hidden="true">→</span></a>)}</div>
+      <div class="toolbar"><a class="button" href="/level-up/">I levelled up</a><a class="button" href="/questions/">Browse questions</a></div>
+      <p class="eyebrow">QUICK REFERENCES</p><div class="related-links">{['Spell Progression Hub','Combat Dashboard','Concentration','Countering Spellcasters','Rules Desk'].map(name=><a href={hrefFor(name)}>{name}<span aria-hidden="true">↗</span></a>)}</div>
+    </div>
+    <button class="button" type="button" data-search-retry hidden>Retry search</button>
+    <noscript><p>Full-text search needs JavaScript. You can <a href="/questions/">read common answers</a> or <a href="/library/">browse every reference in the library</a>.</p></noscript>
+  </div>
   <script>
-    import {indexSearch,normalizeSearch,searchRecords,type IndexedRecord,type SearchRecord} from '@/lib/search';
-    const pageSize=50;
+    import {indexSearch,normalizeSearch,searchRecords,searchSnippet,searchSuggestions,type IndexedRecord,type SearchRecord} from '@/lib/search';
+    import {findQuestionAnswers,type QuestionAnswer} from '@/lib/questions';
+    const pageSize=20;
     const form=document.querySelector<HTMLFormElement>('[data-full-search]')!;
     const input=form.elements.namedItem('q') as HTMLInputElement;
     const section=form.elements.namedItem('section') as HTMLSelectElement;
@@ -16,6 +37,9 @@ import {getSections,hrefFor} from '@/lib/vault';
     const pagination=document.querySelector<HTMLElement>('[data-search-pagination]')!;
     const more=document.querySelector<HTMLButtonElement>('[data-search-more]')!;
     const remaining=document.querySelector('[data-search-remaining]')!;
+    const answers=document.querySelector<HTMLElement>('[data-search-answers]')!;
+    const answerOutput=document.querySelector('[data-answer-results]')!;
+    const share=document.querySelector<HTMLButtonElement>('[data-share-search]')!;
     type HistoryMode='replace'|'push'|'none';
     let records:IndexedRecord[]|undefined,pending:Promise<void>|undefined,revision=0,timer:number;
     let currentPage=1;
@@ -39,16 +63,45 @@ import {getSections,hrefFor} from '@/lib/vault';
       }
     }
 
+    function renderAnswer(answer:QuestionAnswer,query:string){
+      const article=document.createElement('article');article.className='answer-card';article.dataset.answerId=answer.id;
+      const label=document.createElement('p');label.className='eyebrow';label.textContent='Quick answer · From the compendium';
+      const heading=document.createElement('h3');
+      const link=document.createElement('a');link.href=answer.url;link.textContent=answer.title;heading.append(link);
+      const text=document.createElement('p');text.textContent=answer.answer;
+      const links=document.createElement('div');links.className='answer-links';
+      const source=document.createElement('a');source.className='text-link';source.href=answer.url;source.textContent='Read the exact reference →';links.append(source);
+      for(const related of answer.links??[]){const a=document.createElement('a');a.href=related.url;a.textContent=related.label;links.append(a);}
+      if(['spell-counts','level-up-spells','multiclass-spells'].includes(answer.id)){
+        const match=query.match(/\b(?:level|lvl)\s*(\d{1,2})\b/i)??query.match(/\b(\d{1,2})(?:st|nd|rd|th)?\s*level\b/i);
+        const level=match?Number(match[1]):undefined;
+        if(level&&level>=1&&level<=20){const a=document.createElement('a');a.className='button';a.href=`/level-up/?basis=character&level=${level}`;a.textContent=`Check level ${level} · choose your class route`;links.append(a);}
+      }
+      article.append(label,heading,text,links);return article;
+    }
+
     async function run(page=1,mode:HistoryMode='replace',focusNewResults=false){
       const current=++revision;
       const previousCount=output.querySelectorAll('article').length;
       const raw=input.value.trim(),q=normalizeSearch(raw),filter=section.value;
+      document.querySelector<HTMLElement>('.search-page')!.dataset.active=String(!!q);
       currentPage=page;
       writeLocation(mode,page);
       retry.hidden=true;
       pagination.hidden=true;
       intro.hidden=!!q;
+      share.hidden=!q;
       output.replaceChildren();
+      answerOutput.replaceChildren();
+      const quickAnswers=q?findQuestionAnswers(raw,filter):[];
+      answers.hidden=!quickAnswers.length;
+      if(quickAnswers[0])answerOutput.append(renderAnswer(quickAnswers[0],raw));
+      if(quickAnswers.length>1){
+        const related=document.createElement('details');related.className='related-answers';
+        const summary=document.createElement('summary');summary.textContent=`${quickAnswers.length-1} related question${quickAnswers.length>2?'s':''}`;
+        const grid=document.createElement('div');grid.className='answer-grid';grid.append(...quickAnswers.slice(1).map(answer=>renderAnswer(answer,raw)));
+        related.append(summary,grid);answerOutput.append(related);
+      }
       if(!q){currentPage=1;writeLocation('replace',1);status.textContent='Enter a name or phrase to begin.';return;}
       status.textContent='Searching…';
       try{
@@ -68,18 +121,29 @@ import {getSections,hrefFor} from '@/lib/vault';
         const fragment=document.createDocumentFragment();
         for(const record of found.slice(0,visibleCount)){
           const article=document.createElement('article');article.className='search-result';
-          const label=document.createElement('span');label.className='eyebrow';label.textContent=record.sectionLabel;
+          const label=document.createElement('span');label.className='eyebrow';label.textContent=`${record.sectionLabel}${record.kind==='heading'?' · Matching section':''}`;
           const heading=document.createElement('h2');
           const link=document.createElement('a');link.href=record.url;link.textContent=record.title;heading.append(link);
           const snippet=document.createElement('p');
-          const at=record.text.toLowerCase().indexOf(raw.toLowerCase());
-          snippet.textContent=at>=0?`${at>60?'…':''}${record.text.slice(Math.max(0,at-60),at+190)}…`:record.summary;
-          article.append(label,heading,snippet);fragment.append(article);
+          snippet.textContent=searchSnippet(record,raw,240);
+          article.append(label,heading);
+          if(record.parentTitle){const parent=document.createElement('p');parent.className='search-parent';parent.textContent=`In ${record.parentTitle}`;article.append(parent);}
+          article.append(snippet);fragment.append(article);
         }
         output.append(fragment);
         pagination.hidden=visibleCount>=found.length;
         remaining.textContent=`${found.length-visibleCount} more results`;
-        if(!found.length){const message=document.createElement('p');message.textContent='No matches. Try fewer words or a different section.';output.append(message);}
+        if(!found.length){
+          const message=document.createElement('p');message.textContent='No reference matches that wording. Try the main topic or remove the section filter.';output.append(message);
+          const suggestions=searchSuggestions(records!,raw,filter);
+          if(suggestions.length){
+            const box=document.createElement('div');box.className='search-suggestions';box.dataset.searchSuggestions='';
+            const heading=document.createElement('h2');heading.textContent='Did you mean…?';box.append(heading);
+            for(const suggestion of suggestions){const a=document.createElement('a');a.href=suggestion.url;a.textContent=suggestion.title;box.append(a);}
+            output.append(box);
+          }
+          const browse=document.createElement('a');browse.href='/questions/';browse.textContent='Browse common questions instead →';output.append(browse);
+        }
         if(focusNewResults){output.querySelectorAll<HTMLAnchorElement>('h2 a')[previousCount]?.focus();}
       }catch{
         if(current!==revision)return;

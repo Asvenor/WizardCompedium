@@ -18,6 +18,7 @@ const {
 } = Astro.props;
 const navigation = [
   { id: 'home', label: 'Home', href: '/' },
+  { id: 'questions', label: 'Answers', href: '/questions/' },
   { id: 'library', label: 'Library', href: '/library/' },
   { id: 'spells', label: 'Spells', href: '/spells/' },
   { id: 'builds', label: 'Builds', href: '/builds/' },
@@ -70,10 +71,11 @@ const documentTitle = title === 'Wizard Compendium' ? title : `${title} · Wizar
     <footer class="site-footer">
       <div class="site-shell footer-inner">
         <div><span class="footer-brand">Wizard Compendium</span><p>A working reference for your next decision.</p></div>
-        <nav aria-label="Footer navigation"><a href="/library/">Browse the library</a><a href="/tools/">Tools</a><a href="/guide/">Website guide</a><a href="/search/">Search</a><a href="/play/import/">Your PDF sheet</a></nav>
+        <nav aria-label="Footer navigation"><a href="/questions/">Quick answers</a><a href="/level-up/">Level up</a><a href="/library/">Browse the library</a><a href="/tools/">Tools</a><a href="/guide/">Website guide</a><a href="/search/">Search</a><a href="/play/import/">Your PDF sheet</a></nav>
       </div>
     </footer>
     <script>
+      import {copyText} from '@/lib/share';
       document.documentElement.classList.add('has-js');
       const menu = document.querySelector<HTMLButtonElement>('.menu-toggle');
       const navigation = document.querySelector<HTMLElement>('#primary-navigation');
@@ -103,8 +105,28 @@ const documentTitle = title === 'Wizard Compendium' ? title : `${title} · Wizar
           }
         }
       });
-      const desktop = window.matchMedia('(min-width: 1060px)');
+      const desktop = window.matchMedia('(min-width: 1200px)');
       desktop.addEventListener('change', () => setMenu(false));
+      // Every reference section can be shared without guessing or copying an anchor.
+      const reference=document.querySelector('[data-reference-content]');
+      if(reference){
+        const status=document.createElement('p');status.className='control-note section-share-status';status.setAttribute('role','status');
+        reference.before(status);
+        for(const heading of reference.querySelectorAll<HTMLElement>('h2[id],h3[id]')){
+          const label=heading.textContent??'section';
+          const link=document.createElement('a');link.className='section-permalink';link.href=`#${heading.id}`;link.textContent='#';link.setAttribute('aria-label',`Link to ${label}`);
+          const copy=document.createElement('button');copy.type='button';copy.className='section-copy';copy.textContent='Copy link';copy.setAttribute('aria-label',`Copy link to ${label}`);
+          copy.addEventListener('click',async()=>{const url=new URL(location.href);url.hash=heading.id;const ok=await copyText(url.href);status.textContent=ok?`Link to ${label} copied.`:`Copy is unavailable. Section link: ${url.href}`;});
+          heading.append(link,copy);
+        }
+      }
+      document.addEventListener('click',async(event)=>{
+        const button=(event.target as Element).closest<HTMLButtonElement>('button[data-copy-url]');if(!button)return;
+        const url=new URL(button.dataset.copyUrl||location.href,location.href);
+        const ok=await copyText(url.href);
+        const status=button.parentElement?.querySelector('[data-copy-status]');
+        if(status)status.textContent=ok?`${button.dataset.copyLabel??'Link'} copied.`:`Copy is unavailable. Link: ${url.href}`;
+      });
     </script>
   </body>
 </html>

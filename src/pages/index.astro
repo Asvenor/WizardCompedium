@@ -3,13 +3,14 @@ import BaseLayout from '@/components/layout/BaseLayout.astro';
 import { findNote, hrefFor, noteHref, sectionsForNavigation } from '@/lib/vault';
 
 const tasks = [
+  { intent: 'How many spells should I have at my level?', detail: 'Spellbook, preparation, cantrips, slots, and class timing.', links: ['Level-up tool', 'Level Progression Planner'] },
   { intent: 'Choose my exact spells at every level', detail: 'Without scrolls or found spellbooks.', links: ['Spell Progression Hub'] },
   { intent: 'Compare subclasses and class plans', detail: 'Pure Wizard and multiclass progressions.', links: ['Subclasses', 'Build Decision Engine', 'Worked Wizard Builds', 'Level Progression Planner'] },
   { intent: 'Explore Arcana Unleashed', detail: 'Builds and combinations.', links: ['Arcana Unleashed Builds', 'Arcana Unleashed Combinations'] },
   { intent: 'Compare spell choices', detail: 'Prepare a focused spell list.', links: ['Prepared Loadouts', 'Spell Finder'] },
   { intent: 'Choose magic items', detail: 'Value, attunement, and Wizard synergy.', links: ['Item Finder', 'Magic Item Attunement', 'Magic Item Tier List'] },
   { intent: 'Win this combat', detail: 'Initiative, first turns, and tactical decisions.', links: ['Combat Dashboard', 'Initiative & First-Turn Strategy'] },
-  { intent: 'Solve a problem', detail: 'Find the spell, tactic, or form for the job.', links: ['Problem Navigator', 'Form Finder'] },
+  { intent: 'Get an answer to my question', detail: 'Plain-language answers linked to the exact reference.', links: ['Questions & quick answers', 'Problem Navigator', 'Form Finder'] },
   { intent: 'Develop long-term power', detail: 'Downtime, research, and progression.', links: ['Wizard Operations Roadmap', 'Intelligence above 20', 'Downtime'] },
   { intent: 'Check a rule', detail: 'Resolve a rules question before committing.', links: ['Rules Desk'] },
 ];
@@ -24,6 +25,7 @@ const sectionNotes: Record<string, string> = {
 const sections = sectionsForNavigation();
 const interactiveRoutes: Record<string, string> = {
   'Spell Finder': '/spells/', 'Item Finder': '/items/', 'Form Finder': '/forms/',
+  'Level-up tool': '/level-up/', 'Questions & quick answers': '/questions/',
 };
 const taskHref = (name: string) => interactiveRoutes[name] || hrefFor(name);
 const sectionHref = (section: {id: string}) => {
@@ -39,12 +41,13 @@ const sectionHref = (section: {id: string}) => {
         <p class="eyebrow"><span aria-hidden="true">✦</span> A wizard’s working reference</p>
         <h1>Wizard<br /><em>Compendium</em></h1>
         <p class="home-lead">Build with intention. Prepare the right spells. Keep the answer close when it’s your turn.</p>
-        <div class="home-quick-links"><a class="button button--primary" href="/spells/">Find a spell <span aria-hidden="true">↗</span></a><a class="button" href="/builds/">Compare builds <span aria-hidden="true">→</span></a></div>
+        <form action="/search/" role="search" class="home-question-search"><label for="home-question">What do you need to know?</label><div><input class="field" id="home-question" name="q" type="search" placeholder="How many spells should I have at level 5?" required/><button class="button button--primary" type="submit">Find an answer</button></div></form>
+        <div class="home-quick-links"><a class="button button--primary" href="/level-up/">I levelled up <span aria-hidden="true">↗</span></a><a class="button" href="/spells/">Find a spell <span aria-hidden="true">↗</span></a><a class="button" href="/builds/">Compare builds <span aria-hidden="true">→</span></a></div>
       </div>
       <div class="home-desk" aria-labelledby="desk-title">
         <p class="eyebrow" id="desk-title">Ready at the table</p>
         <a href={hrefFor('Combat Dashboard')}><span class="desk-symbol" aria-hidden="true">01</span><span><strong>Combat Dashboard</strong><small>Make your next turn count.</small></span><span aria-hidden="true">↗</span></a>
-        <a href={hrefFor('Problem Navigator')}><span class="desk-symbol" aria-hidden="true">02</span><span><strong>Problem Navigator</strong><small>Start with the problem you need to solve.</small></span><span aria-hidden="true">↗</span></a>
+        <a href="/questions/"><span class="desk-symbol" aria-hidden="true">02</span><span><strong>Questions &amp; answers</strong><small>Start with the problem you need to solve.</small></span><span aria-hidden="true">↗</span></a>
         <a href={hrefFor('Rules Desk')}><span class="desk-symbol" aria-hidden="true">03</span><span><strong>Rules Desk</strong><small>Check the rule, then make the call.</small></span><span aria-hidden="true">↗</span></a>
         <div class="desk-footer"><span class="desk-star" aria-hidden="true">✧</span><a href="/play/">Open your session reference <span aria-hidden="true">→</span></a></div>
       </div>

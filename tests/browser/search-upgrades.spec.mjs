@@ -2,18 +2,18 @@ import {test,expect} from '@playwright/test';
 
 test('all matches can be reached and the displayed range survives reload and browser Back',async({page})=>{
   await page.goto('/search/?q=concentration&section=spells');
-  await expect(page.locator('[data-search-status]')).toContainText('showing 50 of');
+  await expect(page.locator('[data-search-status]')).toContainText('showing 20 of');
   const total=Number((await page.locator('[data-search-status]').textContent()).match(/^\d+/)[0]);
   expect(total).toBeGreaterThan(100);
   const results=page.locator('[data-search-results] article');
-  await expect(results).toHaveCount(50);
+  await expect(results).toHaveCount(20);
   await page.getByRole('button',{name:'Show more results',exact:true}).click();
-  await expect(results).toHaveCount(100);
+  await expect(results).toHaveCount(40);
   await expect(page).toHaveURL(/page=2/);
   await page.getByRole('button',{name:'Show more results',exact:true}).click();
-  await expect(results).toHaveCount(150);
+  await expect(results).toHaveCount(60);
   await page.goBack();
-  await expect(results).toHaveCount(100);
+  await expect(results).toHaveCount(40);
   await expect(page).toHaveURL(/page=2/);
   while(await page.getByRole('button',{name:'Show more results',exact:true}).isVisible()){
     const count=await results.count();
@@ -29,7 +29,7 @@ test('all matches can be reached and the displayed range survives reload and bro
 
 test('query and section changes reset the loaded range and remove its URL state',async({page})=>{
   await page.goto('/search/?q=concentration&section=spells&page=3');
-  await expect(page.locator('[data-search-results] article')).toHaveCount(150);
+  await expect(page.locator('[data-search-results] article')).toHaveCount(60);
   await page.getByRole('searchbox',{name:'Search',exact:true}).fill('battle familiar');
   await expect(page.locator('[data-search-status]')).toContainText('results');
   await expect(page).not.toHaveURL(/page=/);
@@ -58,7 +58,7 @@ test('retry preserves a deep search range and clearing the query resets it',asyn
   await expect(page.getByRole('searchbox',{name:'Search',exact:true})).toHaveValue('concentration');
   fail=false;
   await page.getByRole('button',{name:'Retry search',exact:true}).click();
-  await expect(page.locator('[data-search-results] article')).toHaveCount(150);
+  await expect(page.locator('[data-search-results] article')).toHaveCount(60);
   await expect(page).toHaveURL(/page=3/);
   await page.getByRole('searchbox',{name:'Search',exact:true}).fill('!!!');
   await expect(page.locator('[data-search-status]')).toHaveText('Enter a name or phrase to begin.');

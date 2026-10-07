@@ -1,0 +1,11 @@
+---
+import type {QuestionAnswer} from '@/lib/questions';
+interface Props {answer: QuestionAnswer; compact?: boolean;}
+const {answer,compact=false}=Astro.props;
+---
+<article class:list={['answer-card',{'answer-card--compact':compact}]} id={`answer-${answer.id}`} data-answer-id={answer.id}>
+  <p class="eyebrow">QUICK ANSWER · FROM THE COMPENDIUM</p>
+  <h2><a href={answer.url}>{answer.title}</a></h2>
+  <p>{answer.answer}</p>
+  <div class="answer-links"><a class="text-link" href={answer.url}>Read the exact reference <span aria-hidden="true">→</span></a>{answer.links?.map(link=><a href={link.url}>{link.label}</a>)}</div>
+</article>

@@ -1,0 +1,51 @@
+---
+import BaseLayout from '@/components/layout/BaseLayout.astro';
+import AnswerCard from '@/components/AnswerCard.astro';
+import {questionAnswers} from '@/lib/questions';
+import {getSections,hrefFor} from '@/lib/vault';
+const sections=getSections().filter(section=>questionAnswers.some(answer=>answer.section===section.id));
+---
+<BaseLayout title="Questions & quick answers" active="questions">
+  <div class="page-shell question-page">
+    <header class="page-header"><p class="eyebrow">START WITH THE PROBLEM</p><h1>Questions &amp; quick answers</h1><p>You don’t need to know a chapter’s name. Start with your question, read the short answer, then open the exact reference for its rules, sources, and exceptions.</p><div class="toolbar"><a class="button button--primary" href="/level-up/">I levelled up</a><a class="button" href={hrefFor('Problem Navigator')}>Combat &amp; problem navigator</a><a class="button" href="/search/">Search everything</a></div></header>
+    <form class="filter-bar" data-question-filters role="search">
+      <label class="field-label"><span>Find a common question</span><input class="field" type="search" name="q" placeholder="Spell counts, concentration, rituals…" /></label>
+      <label class="field-label"><span>Topic</span><select class="field" name="section"><option value="">All topics</option>{sections.map(section=><option value={section.id}>{section.label}</option>)}</select></label>
+      <button class="button" type="reset">Clear filters</button>
+    </form>
+    <p class="control-note" role="status" aria-live="polite" data-question-count>{questionAnswers.length} quick answers</p>
+    <div class="answer-grid" data-questions>{questionAnswers.map(answer=><AnswerCard answer={answer}/>)}</div>
+    <div class="empty-state" data-question-empty hidden><h2>No quick answer matches yet</h2><p>The complete reference may still cover it. Search all the notes instead.</p><a class="button" href="/search/" data-question-search>Search the full compendium</a></div>
+    <aside class="context-notice question-scope"><h2>The short answer is a starting point</h2><p>These summaries use the existing compendium. They do not replace the linked reference or turn a tactical recommendation into a rule. Check the reference’s edition, source permissions, and recorded review limits.</p></aside>
+  </div>
+  <script>
+    import {questionAnswers,findQuestionAnswers} from '@/lib/questions';
+    import {normalizeSearch,searchTerms} from '@/lib/search';
+    const form=document.querySelector<HTMLFormElement>('[data-question-filters]')!;
+    const input=form.elements.namedItem('q') as HTMLInputElement;
+    const section=form.elements.namedItem('section') as HTMLSelectElement;
+    const cards=[...document.querySelectorAll<HTMLElement>('[data-answer-id]')];
+    const empty=document.querySelector<HTMLElement>('[data-question-empty]')!;
+    const fullSearch=document.querySelector<HTMLAnchorElement>('[data-question-search]')!;
+    function readLocation(){const params=new URLSearchParams(location.search);input.value=params.get('q')??'';section.value=params.get('section')??'';}
+    function update(write=true){
+      const q=normalizeSearch(input.value);
+      const eligible=questionAnswers.filter(answer=>!section.value||answer.section===section.value);
+      const terms=searchTerms(input.value);
+      const topical=terms.length===1?eligible.filter(answer=>searchTerms(`${answer.title} ${answer.questions.join(' ')} ${answer.answer}`).includes(terms[0])):[];
+      const found=q?(topical.length?topical:findQuestionAnswers(input.value,section.value)):eligible;
+      const ids=new Set(found.map(answer=>answer.id));
+      for(const card of cards)card.hidden=!ids.has(card.dataset.answerId!);
+      document.querySelector('[data-question-count]')!.textContent=`${found.length} quick answer${found.length===1?'':'s'}${q?' · search everything for more detail':''}`;
+      empty.hidden=found.length>0;
+      const params=new URLSearchParams();if(input.value.trim())params.set('q',input.value.trim());if(section.value)params.set('section',section.value);
+      fullSearch.href=`/search/${params.size?'?'+params:''}`;
+      if(write){const url=new URL(location.href);url.search=params.toString();history.replaceState(null,'',url);}
+    }
+    form.addEventListener('submit',event=>{event.preventDefault();update();});
+    form.addEventListener('input',()=>update());
+    form.addEventListener('reset',()=>setTimeout(()=>update()));
+    window.addEventListener('popstate',()=>{readLocation();update(false);});
+    readLocation();update();
+  </script>
+</BaseLayout>

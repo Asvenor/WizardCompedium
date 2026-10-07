@@ -1,7 +1,9 @@
 ---
 import BaseLayout from '@/components/layout/BaseLayout.astro';
 ---
-<BaseLayout title="Compare entries" active="library" wide><div class="page-shell"><header class="page-header"><p class="eyebrow">SIDE BY SIDE</p><h1>Make the tradeoff clear.</h1><p>Compare up to four spell, item, or creature cards. Open a reference for its full mechanics and tactical limits.</p><div class="toolbar"><a href="/spells/">Choose spells</a><a href="/items/">Choose items</a><a href="/forms/">Choose forms</a></div></header><p role="status" data-comparison-status>Loading your selection…</p><div data-comparison-result class="data-table table-wrap" tabindex="0" role="region" aria-label="Selected entries comparison" hidden></div><button class="button" data-comparison-retry hidden>Retry</button></div><script>
+<BaseLayout title="Compare entries" active="library" wide><div class="page-shell"><header class="page-header"><p class="eyebrow">SIDE BY SIDE</p><h1>Make the tradeoff clear.</h1><p>Compare up to four spell, item, or creature cards. Open a reference for its full mechanics and tactical limits.</p><div class="toolbar"><a class="button" href="/spells/" data-edit-shortlist hidden>← Edit this shortlist</a><a href="/spells/" data-finder-return="/spells/">Choose spells</a><a href="/items/" data-finder-return="/items/">Choose items</a><a href="/forms/" data-finder-return="/forms/">Choose forms</a></div></header><p role="status" data-comparison-status>Loading your selection…</p><div data-comparison-result class="data-table table-wrap" tabindex="0" role="region" aria-label="Selected entries comparison" hidden></div><button class="button" data-comparison-retry hidden>Retry</button></div><script>
+  import {enhanceFinderReturnLinks,finderReturnHref,sanitizeFinderContext} from '@/lib/finder-context';
+  enhanceFinderReturnLinks();
   type Record={slug:string;title:string;type:string;url:string;summary:string;fields:{[key:string]:string};images?:Array<{url:string;width?:number;height?:number}>};
   const status=document.querySelector('[data-comparison-status]')!,output=document.querySelector<HTMLElement>('[data-comparison-result]')!,retry=document.querySelector<HTMLButtonElement>('[data-comparison-retry]')!;
   async function load(){
@@ -12,10 +14,16 @@ import BaseLayout from '@/components/layout/BaseLayout.astro';
       const response=await fetch('/catalog-index.json');if(!response.ok)throw Error();
       const all:Record[]=await response.json(),records=selected.map(s=>all.find(r=>r.slug===s)).filter((r):r is Record=>!!r);
       if(!records.length){status.textContent='These entries are no longer in the catalogue. Choose a new selection.';return;}
+      const incoming=new URLSearchParams(location.search).get('returnTo')??'';
+      const pathFor=(record:Record)=>record.type==='spell'?'/spells/':record.type==='magic-item'?'/items/':'/forms/';
+      const requested=sanitizeFinderContext(incoming,location.origin),path=requested?new URL(requested,location.origin).pathname:pathFor(records[0]);
+      const editUrl=new URL(finderReturnHref(path,location.origin,{returnTo:incoming,referrer:document.referrer}),location.origin);
+      editUrl.searchParams.set('compare',records.filter(record=>pathFor(record)===path).map(record=>record.slug).join(','));
+      const edit=document.querySelector<HTMLAnchorElement>('[data-edit-shortlist]')!;edit.href=editUrl.pathname+editUrl.search;edit.hidden=false;
       output.replaceChildren();
       const table=document.createElement('table');table.className='catalog-table';
       const head=document.createElement('thead'),row=document.createElement('tr'),field=document.createElement('th');field.scope='col';field.textContent='Field';row.append(field);
-      for(const r of records){const th=document.createElement('th');th.scope='col';const a=document.createElement('a');a.href=r.url;a.textContent=r.title;th.append(a);row.append(th);}
+      for(const r of records){const th=document.createElement('th');th.scope='col';const a=document.createElement('a');const target=new URL(r.url,location.origin);target.searchParams.set('returnTo',finderReturnHref(pathFor(r),location.origin,{returnTo:incoming,referrer:document.referrer}));a.href=target.pathname+target.search;a.textContent=r.title;th.append(a);row.append(th);}
       head.append(row);table.append(head);
       const body=document.createElement('tbody');
       const keys=[...new Set(records.flatMap(r=>Object.keys(r.fields)))].filter(k=>records.some(r=>!['Not recorded','—'].includes(r.fields[k]??'Not recorded')));
