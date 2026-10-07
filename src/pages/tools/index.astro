@@ -1,0 +1,292 @@
+---
+import BaseLayout from '@/components/layout/BaseLayout.astro';
+import {getNotes, hrefFor, noteHref} from '@/lib/vault';
+import {parseSpellComponents} from '@/lib/calculators';
+
+const spells = getNotes().filter(n => n.type === 'spell' && n.section === 'spells').sort((a,b) => a.title.localeCompare(b.title)).map(n => ({
+  slug: n.slug, title: n.title, url: noteHref(n), access: n.metadata.access ?? 'Check the spell’s access restrictions.',
+  ...parseSpellComponents(n.title, n.metadata.components),
+}));
+const componentData = JSON.stringify(spells).replace(/</g, '\\u003c');
+const priced = spells.filter(s => s.items.length);
+const ordinary = spells.filter(s => !s.items.length);
+const abilities = ['STR', 'DEX', 'CON', 'INT', 'WIS', 'CHA'];
+---
+
+<BaseLayout title="Wizard tools" active="tools">
+  <div class="page-shell">
+    <header class="page-header">
+      <p class="eyebrow">PRACTICAL TABLE MATH</p>
+      <h1>Wizard tools</h1>
+      <p>Check the odds, protect Concentration, and budget the components you actually need.</p>
+    </header>
+    <nav class="toolbar tool-jumps" aria-label="Calculator sections">
+      <a href="#saving-throws">Saving throws</a><a href="#concentration">Concentration</a><a href="#expected-damage">Expected damage</a><a href="#component-cost">Component cost</a>
+    </nav>
+    <noscript><p class="tool-panel">These calculators need JavaScript. Their complete source references remain available through the links below.</p></noscript>
+
+    <div class="calculator-grid">
+      <section class="tool-card" id="saving-throws" aria-labelledby="save-heading" data-save-calculator>
+        <p class="eyebrow">01 · ORDINARY D20 TESTS</p><h2 id="save-heading">Saving throws</h2>
+        <div class="two-column">
+          <label class="field-label">Save DC<input class="field" type="number" min="1" max="100" step="1" value="15" data-save-dc /></label>
+          <label class="field-label">Target’s save bonus<input class="field" type="number" min="-100" max="100" step="1" value="3" data-save-bonus /></label>
+        </div>
+        <label class="field-label">Target’s roll<select class="field" data-save-mode><option value="normal">Normal</option><option value="advantage">Advantage</option><option value="disadvantage">Disadvantage</option></select></label>
+        <p class="calculator-result" role="status" aria-live="polite" data-save-result>Calculating…</p>
+        <p class="calculator-note">Normal success = qualifying d20 faces ÷ 20. Advantage: 1 − (1 − p)². Disadvantage: p². Success meets or exceeds the DC; natural 1 and 20 are not automatic results on ordinary saves.</p>
+        <p class="calculator-note">Use only a known bonus. No Legendary Resistance, rerolls, dice replacement, extra dice, or automatic-result features are modeled. Advantage and Disadvantage cancel; choose Normal if both apply.</p>
+        <details class="known-defenses">
+          <summary>Compare known saves</summary>
+          <p class="calculator-note">Uses the same DC and roll mode above. Enter bonuses you actually know; blank defenses stay Unknown. No monster statistics are inferred.</p>
+          <div class="known-save-grid">
+            {abilities.map(ability => <div>
+              <label class="field-label" for={`known-save-${ability}`}>{ability} save bonus</label>
+              <input class="field" id={`known-save-${ability}`} type="number" min="-100" max="100" step="1" placeholder="Unknown" data-known-save={ability} />
+              <p class="calculator-note" role="status" aria-live="polite" data-known-save-result={ability}>Unknown — no bonus entered</p>
+            </div>)}
+          </div>
+        </details>
+        <a class="text-link" href={hrefFor('Saving Throws & Checks')}>Saving throw rules →</a>
+      </section>
+
+      <section class="tool-card" id="concentration" aria-labelledby="concentration-heading" data-concentration-calculator>
+        <p class="eyebrow">02 · 2024 DAMAGE CHECK</p><h2 id="concentration-heading">Concentration</h2>
+        <div class="two-column">
+          <label class="field-label">Damage taken from one source<input class="field" type="number" min="1" max="10000000" step="1" value="20" data-con-damage /></label>
+          <label class="field-label">Constitution save bonus<input class="field" type="number" min="-100" max="100" step="1" value="5" data-con-bonus /></label>
+        </div>
+        <label class="field-label">Your roll<select class="field" data-con-mode><option value="normal">Normal</option><option value="advantage">Advantage</option><option value="disadvantage">Disadvantage</option></select></label>
+        <p class="calculator-result" role="status" aria-live="polite" data-con-result>Calculating…</p>
+        <p class="calculator-note">DC = min(30, max(10, floor(damage ÷ 2))). Enter damage actually taken after reductions. Each separate damage source can require its own check; this result is for one check.</p>
+        <p class="calculator-note">The bonus must already include proficiency and verified features. This uses the 2024 baseline, not an edition-neutral rule. Boon of the Iron Mind and revised Focused Conjuration can remove the damage check in their stated scope. Conditions, death, and replacing Concentration have their own ending rules; read the specific exception.</p>
+        <a class="text-link" href={hrefFor('Concentration')}>Concentration rules and exceptions →</a>
+      </section>
+
+      <section class="tool-card" id="expected-damage" aria-labelledby="damage-heading" data-damage-calculator>
+        <p class="eyebrow">03 · WEIGHTED DAMAGE OUTCOMES</p><h2 id="damage-heading">Expected damage</h2>
+        <div class="two-column">
+          <label class="field-label">Mean damage on a failed save<input class="field" type="number" min="0" max="10000000" step="any" value="20" data-damage-fail /></label>
+          <label class="field-label">Mean damage on a successful save<input class="field" type="number" min="0" max="10000000" step="any" value="10" data-damage-success /></label>
+        </div>
+        <div class="two-column damage-chance">
+          <label class="field-label">Chance to fail (%)<input class="field" type="number" min="0" max="100" step="any" value="55" data-damage-chance /></label>
+          <button class="button" type="button" data-copy-save>Use saving-throw result</button>
+        </div>
+        <p class="calculator-result" role="status" aria-live="polite" data-damage-result>Calculating…</p>
+        <p class="calculator-note">Expected damage per target = P(fail) × mean failed-save damage + P(success) × mean successful-save damage. This is a weighted mean, not guaranteed damage.</p>
+        <p class="calculator-note">Enter final outcome means after the spell’s rounding, Resistance, Immunity, Vulnerability, and other adjustments. Halving a dice average is not always the average of damage halved and rounded down. No critical hits, attack rolls, overkill, target count, or ongoing rounds are added.</p>
+        <div class="related-links"><a href={hrefFor('Saving Throws & Checks')}>Save probability rules →</a><a href={hrefFor('Damage Types')}>Damage adjustments →</a></div>
+      </section>
+
+      <aside class="tool-card" aria-labelledby="tool-sources-heading">
+        <p class="eyebrow">USE THE RESULT IN CONTEXT</p><h2 id="tool-sources-heading">Numbers need a plan.</h2>
+        <p>These tools calculate entered assumptions. They do not reveal a monster’s defenses, grant spell access, supply shop stock, or override an individual spell.</p>
+        <div class="related-links"><a href={hrefFor('Problem Navigator')}>Start with a problem →</a><a href={hrefFor('Combat Dashboard')}>Combat dashboard →</a><a href={hrefFor('Summon Damage Benchmarks')}>Worked damage benchmarks →</a></div>
+      </aside>
+    </div>
+
+    <section class="tool-panel component-calculator" id="component-cost" aria-labelledby="component-heading" data-component-calculator>
+      <p class="eyebrow">04 · COMPONENT SHOPPING LIST</p><h2 id="component-heading">Component cost</h2>
+      <p>Choose from the {spells.length} recorded spell cards. Consumed materials scale with castings; reusable sets do not. Special replacement or activation costs stay separate.</p>
+      <div class="component-add">
+        <label class="field-label">Spell<select class="field" data-component-spell><option value="">Choose a spell…</option><optgroup label="Priced, consumed, or unresolved materials">{priced.map(s => <option value={s.slug}>{s.title}</option>)}</optgroup><optgroup label="Other recorded spells">{ordinary.map(s => <option value={s.slug}>{s.title}</option>)}</optgroup></select></label>
+        <button class="button button--primary" type="button" data-add-component>Add spell</button>
+        <button class="button" type="button" data-clear-components disabled>Clear list</button>
+      </div>
+      <p class="control-note" role="status" aria-live="polite" data-component-add-status></p>
+      <div class="component-rows" data-component-rows></div>
+      <div class="component-summary" role="status" aria-live="polite" aria-atomic="true">
+        <p><span>Consumed for planned casts</span><strong data-consumed-total>0 GP</strong></p>
+        <p><span>Reusable sets to acquire</span><strong data-reusable-total>0 GP</strong></p>
+        <p><span>Special components to acquire</span><strong data-special-total>0 GP</strong></p>
+        <p class="shopping-total"><span>Known shopping total</span><strong data-shopping-total>0 GP</strong></p>
+        <p class="calculator-note" data-component-status>Choose a spell to start a shopping list.</p>
+      </div>
+      <p class="calculator-note">Prices are minimum listed component values in GP, not guaranteed purchase prices or shop availability. Adjust upward to your confirmed price. Unknown prices stay excluded and make totals partial. Ordinary unpriced materials, a valid focus/pouch, existing stock, spellbook costs, and other setup resources are not automatically added or deducted. Access restrictions still apply.</p>
+      <p class="calculator-note">Separate spells keep separate component sets—even when prices match. No cross-spell sharing is assumed. Set reusable quantities to what you need to acquire; a required or occupied item may not be available for another simultaneous use.</p>
+      <div class="related-links"><a href={hrefFor('Expensive Components')}>Component costs and special cases →</a><a href={hrefFor('Spellcasting Rules')}>Focus and component rules →</a><a href={hrefFor('German Conversion')}>Coin values →</a></div>
+    </section>
+    <script is:inline type="application/json" id="component-spells-data" set:html={componentData} />
+  </div>
+</BaseLayout>
+
+<script>
+  import {readNumber, saveProbability, concentrationDc, expectedSaveDamage, componentTotals, type RollMode, type Consumption, type ComponentItem} from '@/lib/calculators';
+
+  const percentage = (p:number) => `${(p * 100).toLocaleString(undefined, {maximumFractionDigits: 2})}%`;
+  const gp = (value:number) => `${value.toLocaleString(undefined, {maximumFractionDigits: 2})} GP`;
+  const fieldNumber = (input:HTMLInputElement, integer=true) => {
+    const value = readNumber(input.value, Number(input.min), Number(input.max), integer);
+    input.setAttribute('aria-invalid', String(value == null));
+    return value;
+  };
+  const saveDc = document.querySelector<HTMLInputElement>('[data-save-dc]')!;
+  const saveBonus = document.querySelector<HTMLInputElement>('[data-save-bonus]')!;
+  const saveMode = document.querySelector<HTMLSelectElement>('[data-save-mode]')!;
+  const saveResult = document.querySelector<HTMLElement>('[data-save-result]')!;
+  const knownSaves = [...document.querySelectorAll<HTMLInputElement>('[data-known-save]')];
+  const currentSaveProbability = () => {
+    const dc = fieldNumber(saveDc), bonus = fieldNumber(saveBonus);
+    return dc == null || bonus == null ? null : saveProbability(dc, bonus, saveMode.value as RollMode);
+  };
+  const updateSave = () => {
+    const p = currentSaveProbability();
+    saveResult.textContent = p == null ? 'Enter a whole-number DC from 1–100 and bonus from −100 to 100.' : `Target fails ${percentage(1-p)} · succeeds ${percentage(p)}`;
+    const dc = fieldNumber(saveDc);
+    for (const input of knownSaves) {
+      const result = document.querySelector<HTMLElement>(`[data-known-save-result="${input.dataset.knownSave}"]`)!;
+      if (!input.value.trim()) { input.setAttribute('aria-invalid','false'); result.textContent='Unknown — no bonus entered'; continue; }
+      const bonus = fieldNumber(input);
+      if (dc == null) { result.textContent='Enter a valid DC above.'; continue; }
+      if (bonus == null) { result.textContent='Enter a whole-number bonus from −100 to 100.'; continue; }
+      const success = saveProbability(dc,bonus,saveMode.value as RollMode);
+      result.textContent=`Fail ${percentage(1-success)} · succeed ${percentage(success)}`;
+    }
+  };
+  [saveDc, saveBonus, saveMode, ...knownSaves].forEach(input => input.addEventListener('input', updateSave));
+  updateSave();
+
+  const conDamage = document.querySelector<HTMLInputElement>('[data-con-damage]')!;
+  const conBonus = document.querySelector<HTMLInputElement>('[data-con-bonus]')!;
+  const conMode = document.querySelector<HTMLSelectElement>('[data-con-mode]')!;
+  const updateConcentration = () => {
+    const damage = fieldNumber(conDamage), bonus = fieldNumber(conBonus);
+    const output = document.querySelector<HTMLElement>('[data-con-result]')!;
+    if (damage == null || bonus == null) { output.textContent = 'Enter whole-number damage from 1–10,000,000 and bonus from −100 to 100.'; return; }
+    const dc = concentrationDc(damage), p = saveProbability(dc, bonus, conMode.value as RollMode);
+    output.textContent = `DC ${dc} · maintain ${percentage(p)} · lose ${percentage(1-p)}`;
+  };
+  [conDamage, conBonus, conMode].forEach(input => input.addEventListener('input', updateConcentration));
+  updateConcentration();
+
+  const damageFail = document.querySelector<HTMLInputElement>('[data-damage-fail]')!;
+  const damageSuccess = document.querySelector<HTMLInputElement>('[data-damage-success]')!;
+  const damageChance = document.querySelector<HTMLInputElement>('[data-damage-chance]')!;
+  const updateDamage = () => {
+    const fail = fieldNumber(damageFail, false), success = fieldNumber(damageSuccess, false), chance = fieldNumber(damageChance, false);
+    const result = document.querySelector<HTMLElement>('[data-damage-result]')!;
+    result.textContent = fail == null || success == null || chance == null ? 'Enter non-negative damage up to 10,000,000 and a chance from 0–100%.' : `${expectedSaveDamage(chance/100, fail, success).toLocaleString(undefined, {maximumFractionDigits: 2})} expected damage per target`;
+  };
+  [damageFail, damageSuccess, damageChance].forEach(input => input.addEventListener('input', updateDamage));
+  document.querySelector('[data-copy-save]')?.addEventListener('click', () => {
+    const p = currentSaveProbability();
+    if (p == null) { document.querySelector<HTMLElement>('[data-damage-result]')!.textContent = 'Fix the saving-throw inputs before copying their result.'; return; }
+    damageChance.value = String(Math.round((1-p)*1000000)/10000);
+    updateDamage();
+  });
+  updateDamage();
+
+  type Spell = {slug:string; title:string; url:string; access:string; kind:string; raw:string; items:ComponentItem[]};
+  type Entry = {spell:Spell; casts:HTMLInputElement; targets:HTMLInputElement | null; rows:Array<{item:ComponentItem; cost:HTMLInputElement; sets:HTMLInputElement | null; consumption:HTMLSelectElement | null; units:HTMLElement}>};
+  const spells:Spell[] = JSON.parse(document.querySelector('#component-spells-data')?.textContent ?? '[]');
+  const entries = new Map<string, Entry>();
+  const selector = document.querySelector<HTMLSelectElement>('[data-component-spell]')!;
+  const rowsRoot = document.querySelector<HTMLElement>('[data-component-rows]')!;
+  const addStatus = document.querySelector<HTMLElement>('[data-component-add-status]')!;
+  const clear = document.querySelector<HTMLButtonElement>('[data-clear-components]')!;
+  const el = <K extends keyof HTMLElementTagNameMap>(tag:K, text?:string, className?:string) => {
+    const node = document.createElement(tag); if (text) node.textContent = text; if (className) node.className = className; return node;
+  };
+  const inputField = (title:string, value:string, min:number, max:number, step='1') => {
+    const label = el('label', undefined, 'field-label'); label.append(el('span', title));
+    const input = el('input', undefined, 'field'); input.type='number'; input.value=value; input.min=String(min); input.max=String(max); input.step=step;
+    label.append(input); return {label, input};
+  };
+  const calculateComponents = () => {
+    const totals = componentTotals([...entries.values()].flatMap(entry => entry.rows.map(row => {
+      const price = fieldNumber(row.cost, false);
+      const casts = fieldNumber(entry.casts);
+      const targets = entry.targets ? fieldNumber(entry.targets) : 1;
+      const sets = row.sets ? fieldNumber(row.sets) : 1;
+      const consumption = (row.consumption?.value ?? row.item.consumption) as Consumption;
+      const usesCasts = consumption === 'consumed' || consumption === 'special' && row.item.quantityKind === 'casts';
+      const quantity = casts == null || targets == null || sets == null ? null : usesCasts ? casts * (row.item.perTarget ? targets : 1) : sets;
+      row.units.textContent = quantity == null ? 'Enter valid quantities.' : `${quantity.toLocaleString()} ${usesCasts ? row.item.perTarget ? 'target-cast material sets' : 'casting material sets' : 'sets to acquire'}`;
+      return {gpCost:price, consumption, quantity};
+    })));
+    for (const key of ['consumed','reusable','special','shopping'] as const) document.querySelector<HTMLElement>(`[data-${key}-total]`)!.textContent = gp(totals[key]);
+    clear.disabled = !entries.size;
+    document.querySelector<HTMLElement>('[data-component-status]')!.textContent = !entries.size ? 'Choose a spell to start a shopping list.' : totals.incomplete ? `Partial total: ${totals.incomplete} material row${totals.incomplete===1?' is':'s are'} excluded until price, quantities, and cost handling are confirmed. Unknown is not zero.` : 'Every priced/consumed material row in your list is included. Unpriced ordinary materials and other setup resources are outside this total.';
+  };
+  const addSpell = () => {
+    const spell = spells.find(s => s.slug === selector.value);
+    if (!spell) { addStatus.textContent='Choose a spell before adding it.'; selector.focus(); return; }
+    if (entries.has(spell.slug)) { addStatus.textContent=`${spell.title} is already in your list. Adjust its quantities below.`; return; }
+    const card = el('article', undefined, 'component-spell'); card.dataset.componentEntry=spell.slug;
+    const header = el('div', undefined, 'component-spell-header');
+    const heading = el('h3'); const link = el('a', spell.title); link.href=spell.url; heading.append(link);
+    const remove = el('button', 'Remove', 'button'); remove.type='button'; remove.setAttribute('aria-label', `Remove ${spell.title}`);
+    header.append(heading, remove); card.append(header);
+    card.append(el('p', spell.raw || 'Component details not recorded.', 'component-source'));
+    card.append(el('p', `Access: ${spell.access}`, 'calculator-note'));
+    const castField = inputField(`${spell.title}: planned castings`, '1', 1, 999);
+    const entry:Entry = {spell, casts:castField.input, targets:null, rows:[]};
+    if (spell.items.length) {
+      const planning = el('div', undefined, 'two-column'); planning.append(castField.label);
+      if (spell.items.some(item => item.perTarget)) { const targetField=inputField(`${spell.title}: targets per casting (include caster)`, '1', 1, 9); entry.targets=targetField.input; planning.append(targetField.label); targetField.input.addEventListener('input', calculateComponents); }
+      card.append(planning); castField.input.addEventListener('input', calculateComponents);
+    } else card.append(el('p', spell.kind === 'none' ? 'No Material component is recorded for this spell. No component shopping row is added.' : 'No listed material price or consumption is recorded here. Ordinary material/focus rules still apply; this is not a quoted price of zero.', 'calculator-note'));
+    spell.items.forEach((item,index) => {
+      const row = el('div', undefined, 'component-row'); row.append(el('h4', item.description));
+      const inputs = el('div', undefined, 'two-column');
+      const price=inputField(`${spell.title}, material ${index+1}: price per set (GP)`, item.gpCost == null ? '' : String(item.gpCost), item.gpCost ?? 0, 10000000, '.01'); price.input.placeholder=item.gpCost == null ? 'Unknown — enter confirmed price' : '';
+      inputs.append(price.label); price.input.addEventListener('input', calculateComponents);
+      let sets:HTMLInputElement|null=null;
+      if (item.quantityKind === 'sets' || item.consumption === 'unknown') { const field=inputField(`${spell.title}, material ${index+1}: sets to acquire`, '1', 0, 999); sets=field.input; inputs.append(field.label); field.input.addEventListener('input', calculateComponents); }
+      row.append(inputs);
+      let consumption:HTMLSelectElement|null=null;
+      if (item.consumption === 'unknown') {
+        const label=el('label', undefined, 'field-label'); label.append(el('span', `${spell.title}, material ${index+1}: cost handling`)); consumption=el('select', undefined, 'field');
+        for (const [value,title] of [['unknown','Unknown — confirm from source'],['consumed','Consumed per casting'],['reusable','Reusable sets to acquire']]) { const option=el('option',title); option.value=value; consumption.append(option); }
+        label.append(consumption); row.append(label); consumption.addEventListener('input',calculateComponents);
+      } else row.append(el('p', item.consumption === 'consumed' ? 'Consumed per casting' : item.consumption === 'special' ? 'Special activation / replacement component' : 'Required, retained component', 'component-handling'));
+      const units=el('p', undefined, 'calculator-note'); row.append(units);
+      if (item.caveat) row.append(el('p', item.caveat, 'calculator-note'));
+      if (item.gpCost!=null) row.append(el('p', `Source minimum: ${gp(item.gpCost)} per complete set.`, 'calculator-note'));
+      card.append(row); entry.rows.push({item,cost:price.input,sets,consumption,units});
+    });
+    entries.set(spell.slug,entry); rowsRoot.append(card);
+    remove.addEventListener('click', () => { entries.delete(spell.slug); card.remove(); calculateComponents(); addStatus.textContent=`Removed ${spell.title}.`; selector.focus(); });
+    addStatus.textContent=`Added ${spell.title}.`; selector.value=''; calculateComponents();
+  };
+  document.querySelector('[data-add-component]')?.addEventListener('click',addSpell);
+  clear.addEventListener('click', () => { entries.clear(); rowsRoot.replaceChildren(); selector.value=''; addStatus.textContent='Shopping list cleared.'; calculateComponents(); selector.focus(); });
+  calculateComponents();
+</script>
+
+<style>
+  .tool-jumps { justify-content: flex-start; gap: 1.2rem; }
+  .known-defenses { margin-block: 1rem; }
+  .known-defenses > summary { color: var(--plum); font-weight: 650; font-size: .86rem; cursor: pointer; }
+  .known-save-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: .75rem; }
+  .known-save-grid .field { margin-top: .35rem; }
+  .known-save-grid .calculator-note { margin-block: .35rem 0; font-size: .78rem; }
+  .component-calculator { margin-top: 1.5rem; }
+  .component-calculator > h2 { margin-top: .3rem; }
+  .component-add { display: flex; align-items: end; gap: .7rem; flex-wrap: wrap; }
+  .component-add > label { flex: 1 1 300px; }
+  .damage-chance { align-items: end; }
+  .component-summary { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; padding: 1.2rem; margin-top: 1.2rem; background: var(--surface-alt); border: 1px solid var(--line); border-radius: var(--radius); }
+  .component-summary > p { margin: 0; display: grid; gap: .25rem; }
+  .component-summary span { color: var(--ink-soft); font-size: .78rem; }
+  .component-summary strong { font-size: 1.25rem; }
+  .component-summary .shopping-total { color: var(--plum); }
+  .component-summary > .calculator-note { grid-column: 1 / -1; }
+  .component-rows :global(.component-spell) { padding-block: 1.2rem; border-top: 1px solid var(--line); }
+  .component-rows :global(.component-spell-header) { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+  .component-rows :global(.component-spell-header h3) { margin: 0 0 .8rem; }
+  .component-rows :global(.component-source) { font-size: .9rem; color: var(--ink-soft); }
+  .component-rows :global(.component-row) { padding: 1rem; border: 1px solid var(--line); border-radius: var(--radius); margin-top: .8rem; }
+  .component-rows :global(.component-row h4) { margin: 0 0 1rem; font-size: .95rem; line-height: 1.5; }
+  .component-rows :global(.component-row .two-column) { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1rem; }
+  .component-rows :global(.component-handling) { margin: .7rem 0 0; font-size: .85rem; font-weight: 650; color: var(--plum); }
+  .component-rows :global(.calculator-note) { margin-block: .5rem; }
+  .component-rows :global([aria-invalid='true']) { border-color: var(--plum); outline: 1px solid var(--plum); }
+  @media (max-width: 650px) {
+    .component-summary { grid-template-columns: repeat(2,minmax(0,1fr)); }
+    .component-rows :global(.component-row .two-column) { grid-template-columns: 1fr; }
+    .component-rows :global(.component-spell > .two-column) { grid-template-columns: 1fr; }
+    .component-add > .button { flex: 1 1 auto; }
+  }
+</style>

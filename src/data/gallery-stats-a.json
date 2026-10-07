@@ -1,0 +1,90 @@
+{
+  "abjurer-archmage": {
+    "metadata": { "cr": 15, "creature_type": "Humanoid", "size": "Medium or Small", "ac": 16, "hp": 198, "walk_ft": 30, "senses": "Passive Perception 17" },
+    "imageSha256": "64ea4e9cef054fc1705b5f03beb011654ffa4e1e1b33babcfdd4f7a2e7acbc6d",
+    "notes": ["The listed AC includes Mage Armor."]
+  },
+  "aboleth": {
+    "metadata": { "cr": 10, "creature_type": "Aberration", "size": "Large", "ac": 17, "hp": 150, "walk_ft": 10, "swim_ft": 40, "senses": "Darkvision 120 ft.; Passive Perception 20" },
+    "imageSha256": "a54d84e195203b911692fec2d8490e736533fec043382c04720585107e7eff6b"
+  },
+  "adult-bronze-dragon": {
+    "metadata": { "cr": 15, "creature_type": "Dragon", "size": "Huge", "ac": 18, "hp": 212, "walk_ft": 40, "fly_ft": 80, "swim_ft": 40, "senses": "Blindsight 60 ft.; Darkvision 120 ft.; Passive Perception 22" },
+    "imageSha256": "9a5ba929ab535401bd4f9636303dd57c998e24237c0ab44c0e1c432d3b640e72"
+  },
+  "adult-gold-dragon": {
+    "metadata": { "cr": 17, "creature_type": "Dragon", "size": "Huge", "ac": 19, "hp": 243, "walk_ft": 40, "fly_ft": 80, "swim_ft": 40, "senses": "Blindsight 60 ft.; Darkvision 120 ft.; Passive Perception 24" },
+    "imageSha256": "f9b30db91d52399468468572b92f6c69cc4cdac5f76ac5c81dfa17ced5714dd4"
+  },
+  "adult-red-dragon": {
+    "metadata": { "cr": 17, "creature_type": "Dragon", "size": "Huge", "ac": 19, "hp": 256, "walk_ft": 40, "fly_ft": 80, "climb_ft": 40, "senses": "Blindsight 60 ft.; Darkvision 120 ft.; Passive Perception 23" },
+    "imageSha256": "693d797e1adcc376a8119e2d2bf873fa283fffbdef11a47eb02957de00411637"
+  },
+  "adult-silver-dragon": {
+    "metadata": { "cr": 16, "creature_type": "Dragon", "size": "Huge", "ac": 19, "hp": 216, "walk_ft": 40, "fly_ft": 80, "senses": "Blindsight 60 ft.; Darkvision 120 ft.; Passive Perception 21" },
+    "imageSha256": "bac028c1428261a46e7a231057808071a6ed42237432d9939b0118014e6ab9d3"
+  },
+  "adult-white-dragon": {
+    "metadata": { "cr": 13, "creature_type": "Dragon", "size": "Huge", "ac": 18, "hp": 200, "walk_ft": 40, "burrow_ft": 30, "fly_ft": 80, "swim_ft": 40, "senses": "Blindsight 60 ft.; Darkvision 120 ft.; Passive Perception 21" },
+    "imageSha256": "addac807b8fb9ab2969fc99a21c8587cc86a9384ac6febaa06b54994189aa6ef"
+  },
+  "air-elemental": {
+    "metadata": { "cr": 5, "creature_type": "Elemental", "size": "Large", "ac": 15, "hp": 90, "walk_ft": 10, "fly_ft": 90, "hover": true, "senses": "Darkvision 60 ft.; Passive Perception 10" },
+    "imageSha256": "2cc6a5cd5c96a428238fd83d8fceda858a25a9faaae3359fcc917a4644e29e65"
+  },
+  "ankheg": {
+    "metadata": { "cr": 2, "creature_type": "Monstrosity", "size": "Large", "ac": 14, "hp": 45, "walk_ft": 30, "burrow_ft": 10, "senses": "Darkvision 60 ft.; Tremorsense 60 ft.; Passive Perception 11" },
+    "imageSha256": "e0307b66684cc010610420b2baaf2ab1e2532628892b760eb5487d0a7e4fa2f6"
+  },
+  "archelon": {
+    "metadata": { "cr": 4, "creature_type": "Beast", "size": "Huge", "ac": 17, "hp": 90, "walk_ft": 20, "swim_ft": 80, "senses": "Passive Perception 12" },
+    "imageSha256": "66a25b4a313ce41d63a831930d8bdee61bb04db692babfe9677f04430444a4e9"
+  },
+  "archmage": {
+    "metadata": { "cr": 12, "creature_type": "Humanoid", "size": "Medium or Small", "ac": 17, "hp": 170, "walk_ft": 30, "senses": "Passive Perception 16" },
+    "imageSha256": "f401f70896e6440898f0353d1a650c8b45604ee761a7e9ba0b29d011a4f03491",
+    "notes": ["The listed AC includes Mage Armor."]
+  },
+  "balor": {
+    "metadata": { "cr": 19, "creature_type": "Fiend", "size": "Huge", "ac": 19, "hp": 287, "walk_ft": 40, "fly_ft": 80, "senses": "Truesight 120 ft.; Passive Perception 19" },
+    "imageSha256": "8caaef1608bcaa6925e4314451b308ac7a5e4302c90dc50dfd45a4eb3443827d"
+  },
+  "battle-familiar": {
+    "metadata": { "cr": null, "creature_type": "Celestial, Fey, or Fiend (your choice)", "size": "Medium", "ac": null, "hp": null, "walk_ft": 40, "fly_ft": null, "swim_ft": 30, "hover": null, "senses": "Darkvision 60 ft.; Passive Perception 11" },
+    "imageSha256": "69acacaf9fbbf3130deaecea4ce549324b843f39872d1edff0a9265363108215",
+    "notes": [
+      "The stat block gives CR None; this is not CR 0.",
+      "AC is 11 + the spell's level, with +2 for Brute only. HP is 30 for Brute or 20 for Flyer/Stalker, plus 5 for each spell level above 2. No fixed AC or HP is transcribed.",
+      "Fly 30 ft. and hover apply to Flyer only. These conditional fields are left unset in the general filters; see the original stat block."
+    ]
+  },
+  "behir": {
+    "metadata": { "cr": 11, "creature_type": "Monstrosity", "size": "Huge", "ac": 17, "hp": 168, "walk_ft": 50, "climb_ft": 50, "senses": "Darkvision 90 ft.; Passive Perception 16" },
+    "imageSha256": "1f30b4389da5ca5b287d258a3b24d65967618df90ade71736ecbcc085855704d"
+  },
+  "beholder": {
+    "metadata": { "cr": 13, "creature_type": "Aberration", "size": "Large", "ac": 18, "hp": 190, "walk_ft": 5, "fly_ft": 40, "hover": true, "senses": "Darkvision 120 ft.; Passive Perception 22" },
+    "imageSha256": "d4ecced1870038968fcf08613ade69d1b74f973efd2c7bcdcd48ac7407909080"
+  },
+  "chimera": {
+    "metadata": { "cr": 6, "creature_type": "Monstrosity", "size": "Large", "ac": 14, "hp": 114, "walk_ft": 30, "fly_ft": 60, "senses": "Darkvision 60 ft.; Passive Perception 18" },
+    "imageSha256": "2a1061c0900ea45346c47af24e8438f6231a80fa627997d4c8896865ec4193c0"
+  },
+  "clay-golem": {
+    "metadata": { "cr": 9, "creature_type": "Construct", "size": "Large", "ac": 14, "hp": 123, "walk_ft": 30, "senses": "Darkvision 60 ft.; Passive Perception 9" },
+    "imageSha256": "140d2fb71c9ad2158e8ea89a4ed58f9cab7719447c911c314c2c36dc6bc5c2d5"
+  },
+  "conjurer-archmage": {
+    "metadata": { "cr": 15, "creature_type": "Humanoid", "size": "Medium or Small", "ac": 16, "hp": 225, "walk_ft": 30, "senses": "Passive Perception 17" },
+    "imageSha256": "ec1685199d21cc99ea83d641083946de73fd8a26ad4d8b0f3b749a554f0ddb0e",
+    "notes": ["The listed AC includes Mage Armor."]
+  },
+  "cyclops-oracle": {
+    "metadata": { "cr": 10, "creature_type": "Giant", "size": "Huge", "ac": 16, "hp": 207, "walk_ft": 40, "senses": "Truesight 30 ft.; Passive Perception 22" },
+    "imageSha256": "3c17e819dff81e5cc70f3a919620c2e3032859d6fae5ed6dd4e794cc099180f5"
+  },
+  "deva": {
+    "metadata": { "cr": 10, "creature_type": "Celestial", "size": "Medium", "ac": 17, "hp": 229, "walk_ft": 30, "fly_ft": 90, "hover": true, "senses": "Darkvision 120 ft.; Passive Perception 19" },
+    "imageSha256": "6f8c114e829ae0650e804351bdf265861d7529a2f25ccb58ef4488355b4a3d7b"
+  }
+}

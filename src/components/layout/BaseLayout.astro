@@ -21,9 +21,14 @@ const navigation = [
   { id: 'library', label: 'Library', href: '/library/' },
   { id: 'spells', label: 'Spells', href: '/spells/' },
   { id: 'builds', label: 'Builds', href: '/builds/' },
+  { id: 'items', label: 'Items', href: '/items/' },
+  { id: 'forms', label: 'Forms', href: '/forms/' },
   { id: 'tiers', label: 'Tier lists', href: '/tiers/' },
+  { id: 'tools', label: 'Tools', href: '/tools/' },
   { id: 'play', label: 'At the table', href: '/play/' },
 ];
+const currentSection = active === 'library' && Astro.url.pathname.startsWith('/items/') ? 'items'
+  : active === 'library' && Astro.url.pathname.startsWith('/forms/') ? 'forms' : active;
 const documentTitle = title === 'Wizard Compendium' ? title : `${title} · Wizard Compendium`;
 ---
 <!doctype html>
@@ -47,7 +52,7 @@ const documentTitle = title === 'Wizard Compendium' ? title : `${title} · Wizar
           <span class="brand-name">Wizard <span>Compendium</span></span>
         </a>
         <nav class="primary-navigation" id="primary-navigation" aria-label="Main navigation" data-open="false">
-          {navigation.map(item => <a href={item.href} aria-current={active === item.id ? 'page' : undefined}>{item.label}</a>)}
+          {navigation.map(item => <a href={item.href} aria-current={currentSection === item.id ? 'page' : undefined}>{item.label}</a>)}
         </nav>
         <div class="header-actions">
           <a href="/search/" class="search-trigger" aria-label="Search the compendium, Ctrl+K on Windows or Command+K on Mac">
@@ -65,7 +70,7 @@ const documentTitle = title === 'Wizard Compendium' ? title : `${title} · Wizar
     <footer class="site-footer">
       <div class="site-shell footer-inner">
         <div><span class="footer-brand">Wizard Compendium</span><p>A working reference for your next decision.</p></div>
-        <nav aria-label="Footer navigation"><a href="/library/">Browse the library</a><a href="/search/">Search</a><a href="/play/import/">Your PDF sheet</a></nav>
+        <nav aria-label="Footer navigation"><a href="/library/">Browse the library</a><a href="/tools/">Tools</a><a href="/guide/">Website guide</a><a href="/search/">Search</a><a href="/play/import/">Your PDF sheet</a></nav>
       </div>
     </footer>
     <script>

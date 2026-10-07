@@ -1,0 +1,391 @@
+{
+  "mind-flayer-arcanist": {
+    "metadata": {
+      "cr": 11,
+      "creature_type": "Aberration",
+      "size": "Medium",
+      "ac": 16,
+      "hp": 143,
+      "walk_ft": 30,
+      "fly_ft": 30,
+      "swim_ft": 0,
+      "climb_ft": 0,
+      "burrow_ft": 0,
+      "hover": true,
+      "senses": "Darkvision 120 ft.; Passive Perception 17"
+    },
+    "imageSha256": "3cc1d4f776b80380683d0611e76c5293c5d76dff4bb32a2f1135479a8b83e3b5"
+  },
+  "necromancer-archmage": {
+    "metadata": {
+      "cr": 15,
+      "creature_type": "Humanoid",
+      "size": "Medium or Small",
+      "ac": 16,
+      "hp": 225,
+      "walk_ft": 30,
+      "fly_ft": 0,
+      "swim_ft": 0,
+      "climb_ft": 0,
+      "burrow_ft": 0,
+      "hover": false,
+      "senses": "Passive Perception 17"
+    },
+    "imageSha256": "825da46d5e3b4365703631a1785e3a95c6932c3025d3d3306174011d5d0c4f36",
+    "notes": [
+      "The listed AC includes Mage Armor."
+    ]
+  },
+  "pit-fiend": {
+    "metadata": {
+      "cr": 20,
+      "creature_type": "Fiend",
+      "size": "Large",
+      "ac": 21,
+      "hp": 337,
+      "walk_ft": 30,
+      "fly_ft": 60,
+      "swim_ft": 0,
+      "climb_ft": 0,
+      "burrow_ft": 0,
+      "hover": false,
+      "senses": "Truesight 120 ft.; Passive Perception 20"
+    },
+    "imageSha256": "d4be6497002a993ebfa155801bca22061e99c36335f2629d3abd9fd4263ebde8"
+  },
+  "remorhaz": {
+    "metadata": {
+      "cr": 11,
+      "creature_type": "Monstrosity",
+      "size": "Huge",
+      "ac": 17,
+      "hp": 195,
+      "walk_ft": 40,
+      "fly_ft": 0,
+      "swim_ft": 0,
+      "climb_ft": 0,
+      "burrow_ft": 30,
+      "hover": false,
+      "senses": "Darkvision 60 ft., Tremorsense 60 ft.; Passive Perception 10"
+    },
+    "imageSha256": "5dbc864b109a0f0dfa718ebab6112b26b0db6d2fc878a11b8259251ec960715f"
+  },
+  "roc": {
+    "metadata": {
+      "cr": 11,
+      "creature_type": "Monstrosity",
+      "size": "Gargantuan",
+      "ac": 15,
+      "hp": 248,
+      "walk_ft": 20,
+      "fly_ft": 120,
+      "swim_ft": 0,
+      "climb_ft": 0,
+      "burrow_ft": 0,
+      "hover": false,
+      "senses": "Passive Perception 18"
+    },
+    "imageSha256": "bf16f185c52f545c974ed8bcc0cf8a7a9bca3a3effc00fa12e894b0defda86bc"
+  },
+  "skeleton": {
+    "metadata": {
+      "cr": 0.25,
+      "creature_type": "Undead",
+      "size": "Medium",
+      "ac": 14,
+      "hp": 13,
+      "walk_ft": 30,
+      "fly_ft": 0,
+      "swim_ft": 0,
+      "climb_ft": 0,
+      "burrow_ft": 0,
+      "hover": false,
+      "senses": "Darkvision 60 ft.; Passive Perception 9"
+    },
+    "imageSha256": "cf233e9334311f7eddba9799085603dd05a4c8267fd2457554b9c83c136487bc"
+  },
+  "sphinx-of-valor": {
+    "metadata": {
+      "cr": 17,
+      "creature_type": "Celestial",
+      "size": "Large",
+      "ac": 17,
+      "hp": 199,
+      "walk_ft": 40,
+      "fly_ft": 60,
+      "swim_ft": 0,
+      "climb_ft": 0,
+      "burrow_ft": 0,
+      "hover": false,
+      "senses": "Truesight 120 ft.; Passive Perception 22"
+    },
+    "imageSha256": "e31714ea3872afda17791a6e0db7b24aac55643e65e9bfe1c776aee1b6cd8960"
+  },
+  "stone-golem": {
+    "metadata": {
+      "cr": 10,
+      "creature_type": "Construct",
+      "size": "Large",
+      "ac": 18,
+      "hp": 220,
+      "walk_ft": 30,
+      "fly_ft": 0,
+      "swim_ft": 0,
+      "climb_ft": 0,
+      "burrow_ft": 0,
+      "hover": false,
+      "senses": "Darkvision 120 ft.; Passive Perception 10"
+    },
+    "imageSha256": "6923ebdebd5811f8e36510023ac703950ce4590804c2b8b7111e6adf02a4e084"
+  },
+  "succubus": {
+    "metadata": {
+      "cr": 4,
+      "creature_type": "Fiend",
+      "size": "Medium",
+      "ac": 15,
+      "hp": 71,
+      "walk_ft": 30,
+      "fly_ft": 60,
+      "swim_ft": 0,
+      "climb_ft": 0,
+      "burrow_ft": 0,
+      "hover": false,
+      "senses": "Darkvision 60 ft.; Passive Perception 15"
+    },
+    "imageSha256": "6f15377bc5d6c6f4754b65d76032d56ca6dff4341a5a120a2825baa6b208e012",
+    "notes": [
+      "The listed Fly Speed is available only in the succubus's true form."
+    ]
+  },
+  "taisus": {
+    "metadata": {
+      "cr": 19,
+      "creature_type": "Aberration",
+      "size": "Huge",
+      "ac": 18,
+      "hp": 310,
+      "walk_ft": 40,
+      "fly_ft": 60,
+      "swim_ft": 0,
+      "climb_ft": 0,
+      "burrow_ft": 0,
+      "hover": true,
+      "senses": "Truesight 120 ft.; Passive Perception 22"
+    },
+    "imageSha256": "c32d1d820df4634f514a391b0bce05a606933be9d0a5b420ef780970f4c0e55f"
+  },
+  "transmuter-archmage": {
+    "metadata": {
+      "cr": 15,
+      "creature_type": "Humanoid",
+      "size": "Medium or Small",
+      "ac": 16,
+      "hp": 220,
+      "walk_ft": 40,
+      "fly_ft": 30,
+      "swim_ft": 0,
+      "climb_ft": 0,
+      "burrow_ft": 0,
+      "hover": false,
+      "senses": "Darkvision 60 ft.; Passive Perception 17"
+    },
+    "imageSha256": "3d86fee6f329abf7fdefc90d7b1fb58b9bc58dac3917e0b04e53309a74c170d7",
+    "notes": [
+      "The listed AC includes Mage Armor."
+    ]
+  },
+  "treant": {
+    "metadata": {
+      "cr": 9,
+      "creature_type": "Plant",
+      "size": "Huge",
+      "ac": 16,
+      "hp": 138,
+      "walk_ft": 30,
+      "fly_ft": 0,
+      "swim_ft": 0,
+      "climb_ft": 0,
+      "burrow_ft": 0,
+      "hover": false,
+      "senses": "Passive Perception 13"
+    },
+    "imageSha256": "9e476b0b46319bc412b78c3c42b587f47912d476411c7f14256ba4f9b221bd60"
+  },
+  "undead-spirit": {
+    "metadata": {
+      "cr": null,
+      "creature_type": "Undead",
+      "size": "Medium",
+      "ac": null,
+      "hp": null,
+      "walk_ft": 30,
+      "fly_ft": null,
+      "swim_ft": 0,
+      "climb_ft": 0,
+      "burrow_ft": 0,
+      "hover": null,
+      "senses": "Darkvision 60 ft.; Passive Perception 10"
+    },
+    "imageSha256": "8e829c9cd0a4017c6017192beaf9566d4406bbdf7324a4061aa8be1153171e6f",
+    "notes": [
+      "The image lists CR None, not CR 0.",
+      "AC is 11 + the spell's level.",
+      "HP is 30 (Ghostly and Putrid only) or 20 (Skeletal only), plus 10 for each spell level above 3.",
+      "Fly 40 ft. (hover) applies to the Ghostly variant only; the generic Fly Speed and hover fields are left null."
+    ]
+  },
+  "unicorn": {
+    "metadata": {
+      "cr": 5,
+      "creature_type": "Celestial",
+      "size": "Large",
+      "ac": 12,
+      "hp": 97,
+      "walk_ft": 50,
+      "fly_ft": 0,
+      "swim_ft": 0,
+      "climb_ft": 0,
+      "burrow_ft": 0,
+      "hover": false,
+      "senses": "Darkvision 60 ft.; Passive Perception 13"
+    },
+    "imageSha256": "1e50f918cb285f36a3227ca400b0760a87e59e072b2dd458d11452d2ed8ad20e"
+  },
+  "venger": {
+    "metadata": {
+      "cr": 17,
+      "creature_type": "Fiend",
+      "size": "Medium",
+      "ac": 19,
+      "hp": 202,
+      "walk_ft": 30,
+      "fly_ft": 30,
+      "swim_ft": 0,
+      "climb_ft": 0,
+      "burrow_ft": 0,
+      "hover": false,
+      "senses": "Darkvision 120 ft. (unimpeded by magical Darkness); Passive Perception 18"
+    },
+    "imageSha256": "bc4ef3ce204cd0c646ae0bf4435af0801f8118b3bbfc3024fd7b0ec773c139bf"
+  },
+  "vrock": {
+    "metadata": {
+      "cr": 6,
+      "creature_type": "Fiend",
+      "size": "Large",
+      "ac": 15,
+      "hp": 152,
+      "walk_ft": 40,
+      "fly_ft": 60,
+      "swim_ft": 0,
+      "climb_ft": 0,
+      "burrow_ft": 0,
+      "hover": false,
+      "senses": "Darkvision 120 ft.; Passive Perception 11"
+    },
+    "imageSha256": "22d9e88a3a34557965ec478dd3e07d4fc279452fa95f02fecb4d68b50d08ec8b"
+  },
+  "water-elemental": {
+    "metadata": {
+      "cr": 5,
+      "creature_type": "Elemental",
+      "size": "Large",
+      "ac": 14,
+      "hp": 114,
+      "walk_ft": 30,
+      "fly_ft": 0,
+      "swim_ft": 90,
+      "climb_ft": 0,
+      "burrow_ft": 0,
+      "hover": false,
+      "senses": "Darkvision 60 ft.; Passive Perception 10"
+    },
+    "imageSha256": "24f8ddc7861e63884a896117a88995dffc46306d1b26df7ab4a64150fb461c7b"
+  },
+  "wyvern": {
+    "metadata": {
+      "cr": 6,
+      "creature_type": "Dragon",
+      "size": "Large",
+      "ac": 14,
+      "hp": 127,
+      "walk_ft": 30,
+      "fly_ft": 80,
+      "swim_ft": 0,
+      "climb_ft": 0,
+      "burrow_ft": 0,
+      "hover": false,
+      "senses": "Darkvision 120 ft.; Passive Perception 14"
+    },
+    "imageSha256": "a7a7998d898dfc01e4c56bd0c765c46c6bfe85fbd313da2259ead585cf21e7de"
+  },
+  "young-bronze-dragon": {
+    "metadata": {
+      "cr": 8,
+      "creature_type": "Dragon",
+      "size": "Large",
+      "ac": 17,
+      "hp": 142,
+      "walk_ft": 40,
+      "fly_ft": 80,
+      "swim_ft": 40,
+      "climb_ft": 0,
+      "burrow_ft": 0,
+      "hover": false,
+      "senses": "Blindsight 30 ft., Darkvision 120 ft.; Passive Perception 17"
+    },
+    "imageSha256": "5f8297e5ac4e18f71703feb5f748ce7b09ffca6ffb4947ea4371592dab04e5b1"
+  },
+  "young-silver-dragon": {
+    "metadata": {
+      "cr": 9,
+      "creature_type": "Dragon",
+      "size": "Large",
+      "ac": 18,
+      "hp": 168,
+      "walk_ft": 40,
+      "fly_ft": 80,
+      "swim_ft": 0,
+      "climb_ft": 0,
+      "burrow_ft": 0,
+      "hover": false,
+      "senses": "Blindsight 30 ft., Darkvision 120 ft.; Passive Perception 18"
+    },
+    "imageSha256": "852e38f589378a4884d42badebe93b57da7bc1038ccaa45101b5560fe4114d74"
+  },
+  "young-white-dragon": {
+    "metadata": {
+      "cr": 6,
+      "creature_type": "Dragon",
+      "size": "Large",
+      "ac": 17,
+      "hp": 123,
+      "walk_ft": 40,
+      "fly_ft": 80,
+      "swim_ft": 40,
+      "climb_ft": 0,
+      "burrow_ft": 20,
+      "hover": false,
+      "senses": "Blindsight 30 ft., Darkvision 120 ft.; Passive Perception 16"
+    },
+    "imageSha256": "81587a2f195f98ac57e3f975edb6b6712c2450a84a08809bb28c39f13a017981"
+  },
+  "zombie": {
+    "metadata": {
+      "cr": 0.25,
+      "creature_type": "Undead",
+      "size": "Medium",
+      "ac": 8,
+      "hp": 15,
+      "walk_ft": 20,
+      "fly_ft": 0,
+      "swim_ft": 0,
+      "climb_ft": 0,
+      "burrow_ft": 0,
+      "hover": false,
+      "senses": "Darkvision 60 ft.; Passive Perception 8"
+    },
+    "imageSha256": "dd923e5b1551fc7445e99237cd91cee4c0da2bf594f90643b6c7c1a3ea885fde"
+  }
+}

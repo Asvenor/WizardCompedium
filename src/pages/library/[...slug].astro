@@ -1,7 +1,7 @@
 ---
 import {getCollection,render} from 'astro:content';
 import BaseLayout from '@/components/layout/BaseLayout.astro';
-import {getNotes,getSections,noteHref,getNote} from '@/lib/vault';
+import {getNotes,getSections,noteHref,getNote,vaultInfo} from '@/lib/vault';
 export async function getStaticPaths(){const entries=await getCollection('vault');return entries.map(entry=>({params:{slug:entry.id},props:{entry,note:getNote(entry.id)}}));}
 const {entry,note}=Astro.props;
 if(!note)throw new Error(`No index record for ${entry.id}`);
@@ -10,17 +10,26 @@ const toc=headings.filter(h=>h.depth>=2&&h.depth<=3);
 const siblings=getNotes().filter(n=>n.section===note.section&&n.type!=='spell'&&n.type!=='magic-item'&&n.type!=='creature'&&n.slug!==note.slug).slice(0,18);
 const section=getSections().find(s=>s.id===note.section);
 const backlinks=note.backlinks.map(getNote).filter(Boolean).slice(0,12);
+const finder = note.type === 'spell' ? {href:'/spells/',label:'Back to spell finder',active:'spells'}
+  : note.type === 'magic-item' ? {href:'/items/',label:'Back to item finder',active:'items'}
+  : note.type === 'creature' ? {href:'/forms/',label:'Back to form finder',active:'forms'} : undefined;
+const displayDate = (value:string) => {
+  const date = new Date(value);
+  return Number.isNaN(date.getTime()) ? value : new Intl.DateTimeFormat('en-GB',{dateStyle:'long',timeZone:'Europe/Zurich'}).format(date);
+};
+const isVaultGuide = note.slug === 'home/vault-guide';
 ---
-<BaseLayout title={note.title} description={note.summary} active="library" wide>
+<BaseLayout title={note.title} description={note.summary} active={finder?.active ?? 'library'} wide>
   <div class="reader-grid page-shell">
     <aside class="reader-sidebar" aria-label="Reference navigation"><a class="back-link" href={`/library/?section=${note.section}`}>← {section?.label}</a><nav aria-label="Related section"><p class="eyebrow">IN THIS SECTION</p>{siblings.map(n=><a href={noteHref(n)}>{n.title}</a>)}</nav></aside>
     <article class="reader-article">
       <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/library/">Library</a><span aria-hidden="true">/</span><a href={`/library/?section=${note.section}`}>{note.sectionLabel}</a></nav>
-      <header class="reading-header"><p class="eyebrow">{note.sectionLabel}</p><h1>{note.title}</h1><div class="toolbar"><button class="button" data-save-note={note.slug}>Save reference</button><button class="button" data-print-note>Print</button><a href="/library/?saved=1">Reading list</a></div><p class="control-note" data-save-status role="status"></p></header>
+      <header class="reading-header"><p class="eyebrow">{note.sectionLabel}</p><h1>{note.title}</h1>{finder&&<a class="text-link finder-return" href={finder.href}>← {finder.label}</a>}<div class="toolbar"><button class="button" data-save-note={note.slug}>Save reference</button><button class="button" data-print-note>Print</button><a href="/library/?saved=1">Reading list</a></div><p class="control-note" data-save-status role="status"></p></header>
+      {isVaultGuide&&<aside class="context-notice" aria-labelledby="vault-guide-context"><h2 id="vault-guide-context">This guide is for Obsidian</h2><p>The shortcuts, editing controls, templates, and settings below apply to the original Obsidian vault. For controls available here, open the <a href="/guide/">website guide</a>.</p></aside>}
       {toc.length>0&&<details class="mobile-toc"><summary>On this page</summary><nav>{toc.map(h=><a href={`#${h.slug}`} data-depth={h.depth}>{h.text}</a>)}</nav></details>}
       <div class="prose" data-reference-content><Content/></div>
       {backlinks.length>0&&<section class="related-references"><h2>Continue reading</h2><div class="related-links">{backlinks.map(n=><a href={noteHref(n!)}>{n!.title}<span aria-hidden="true">↗</span></a>)}</div></section>}
-      <details class="source-details"><summary>Sources &amp; edition</summary><dl><dt>Rules version</dt><dd>{note.metadata.rules_version??'Use the edition specified in this reference'}</dd><dt>Evidence</dt><dd>{note.metadata.rules_status??note.metadata.evidence??'Consult the sources in this reference'}</dd>{note.metadata.last_checked&&<><dt>Checked in the vault</dt><dd>{note.metadata.last_checked}</dd></>}{note.metadata.verification_scope&&<><dt>Review scope</dt><dd>{note.metadata.verification_scope}</dd></>}</dl></details>
+      <details class="source-details"><summary>Sources, edition &amp; updates</summary><dl><dt>Rules version</dt><dd>{note.metadata.rules_version??'Use the edition specified in this reference'}</dd><dt>Evidence</dt><dd>{note.metadata.rules_status??note.metadata.evidence??'Consult the sources in this reference'}</dd>{note.metadata.last_checked&&<><dt>Checked in the vault</dt><dd>{note.metadata.last_checked}</dd></>}{note.metadata.verification_scope&&<><dt>Review scope</dt><dd>{note.metadata.verification_scope}</dd></>}{note.updatedAt&&<><dt>Note updated</dt><dd><time datetime={note.updatedAt}>{displayDate(note.updatedAt)}</time></dd></>}<dt>Website snapshot</dt><dd><time datetime={vaultInfo.importedAt}>{displayDate(vaultInfo.importedAt)}</time></dd></dl><p>Update dates show when the note or website copy changed. Use the evidence and review scope above to judge which rules were checked. <a href="/guide/#keeping-current">How updates reach the website</a>.</p></details>
     </article>
     {toc.length>0&&<aside class="toc" aria-label="On this page"><p class="eyebrow">ON THIS PAGE</p>{toc.map(h=><a href={`#${h.slug}`} data-depth={h.depth}>{h.text}</a>)}</aside>}
   </div>

@@ -1,0 +1,3510 @@
+{
+  "schemaVersion": 1,
+  "sourceHash": "44766ca67d0516615fb0dc28a3823004a071dc337e4e93fd429db196d6012679",
+  "importedAt": "2026-10-06T20:38:28.124Z",
+  "entryCount": 82,
+  "checkedCardCount": 20,
+  "galleryOnlyCount": 62,
+  "imageCount": 82,
+  "placementCount": 119,
+  "entries": [
+    {
+      "slug": "abjurer-archmage",
+      "title": "Abjurer Archmage",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/Shapechange/Abjurer%20Archmage.png",
+          "alt": "Abjurer Archmage",
+          "sourcePath": "100 Assets/Statblocks for Compendium/Shapechange/Abjurer Archmage.png",
+          "sha256": "64ea4e9cef054fc1705b5f03beb011654ffa4e1e1b33babcfdd4f7a2e7acbc6d",
+          "width": 755,
+          "height": 644
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/shapechange",
+          "title": "Shapechange",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Shapechange.md",
+          "heading": "Tanks & Defense",
+          "headingAnchor": "tanks--defense",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-19T11:58:29.523Z"
+        }
+      ],
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "aboleth",
+      "title": "Aboleth",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/Shapechange/Aboleth.png",
+          "alt": "Aboleth",
+          "sourcePath": "100 Assets/Statblocks for Compendium/Shapechange/Aboleth.png",
+          "sha256": "a54d84e195203b911692fec2d8490e736533fec043382c04720585107e7eff6b",
+          "width": 842,
+          "height": 949
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/shapechange",
+          "title": "Shapechange",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Shapechange.md",
+          "heading": "Battlefield Control",
+          "headingAnchor": "battlefield-control",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-19T11:58:29.523Z"
+        }
+      ],
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "adult-bronze-dragon",
+      "title": "Adult Bronze Dragon",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/Shapechange/Adult%20Bronze%20Dragon.png",
+          "alt": "Adult Bronze Dragon",
+          "sourcePath": "100 Assets/Statblocks for Compendium/Shapechange/Adult Bronze Dragon.png",
+          "sha256": "9a5ba929ab535401bd4f9636303dd57c998e24237c0ab44c0e1c432d3b640e72",
+          "width": 759,
+          "height": 739
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/shapechange",
+          "title": "Shapechange",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Shapechange.md",
+          "heading": "Battlefield Control",
+          "headingAnchor": "battlefield-control",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-19T11:58:29.523Z"
+        }
+      ],
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "adult-gold-dragon",
+      "title": "Adult Gold Dragon",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/True%20Polymorph/Adult%20Gold%20Dragon.png",
+          "alt": "Adult Gold Dragon",
+          "sourcePath": "100 Assets/Statblocks for Compendium/True Polymorph/Adult Gold Dragon.png",
+          "sha256": "f9b30db91d52399468468572b92f6c69cc4cdac5f76ac5c81dfa17ced5714dd4",
+          "width": 1516,
+          "height": 1546
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/shapechange",
+          "title": "Shapechange",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Shapechange.md",
+          "heading": "Bruisers & Damage",
+          "headingAnchor": "bruisers--damage",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-19T11:58:29.523Z"
+        },
+        {
+          "slug": "creatures/true-polymorph",
+          "title": "True Polymorph",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/True Polymorph.md",
+          "heading": "Combat Forms",
+          "headingAnchor": "combat-forms",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-20T12:32:21.075Z"
+        }
+      ],
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "adult-red-dragon",
+      "title": "Adult Red Dragon",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/True%20Polymorph/Adult%20Red%20Dragon.png",
+          "alt": "Adult Red Dragon",
+          "sourcePath": "100 Assets/Statblocks for Compendium/True Polymorph/Adult Red Dragon.png",
+          "sha256": "693d797e1adcc376a8119e2d2bf873fa283fffbdef11a47eb02957de00411637",
+          "width": 757,
+          "height": 632
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/shapechange",
+          "title": "Shapechange",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Shapechange.md",
+          "heading": "Ranged Combat",
+          "headingAnchor": "ranged-combat",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-19T11:58:29.523Z"
+        },
+        {
+          "slug": "creatures/true-polymorph",
+          "title": "True Polymorph",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/True Polymorph.md",
+          "heading": "Combat Forms",
+          "headingAnchor": "combat-forms",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-20T12:32:21.075Z"
+        }
+      ],
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "adult-silver-dragon",
+      "title": "Adult Silver Dragon",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/True%20Polymorph/Adult%20Silver%20Dragon.png",
+          "alt": "Adult Silver Dragon",
+          "sourcePath": "100 Assets/Statblocks for Compendium/True Polymorph/Adult Silver Dragon.png",
+          "sha256": "bac028c1428261a46e7a231057808071a6ed42237432d9939b0118014e6ab9d3",
+          "width": 1516,
+          "height": 1496
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/shapechange",
+          "title": "Shapechange",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Shapechange.md",
+          "heading": "Tanks & Defense",
+          "headingAnchor": "tanks--defense",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-19T11:58:29.523Z"
+        },
+        {
+          "slug": "creatures/true-polymorph",
+          "title": "True Polymorph",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/True Polymorph.md",
+          "heading": "Tanks & Guardians",
+          "headingAnchor": "tanks--guardians",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-20T12:32:21.075Z"
+        }
+      ],
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "adult-white-dragon",
+      "title": "Adult White Dragon",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/Shapechange/Adult%20White%20Dragon.png",
+          "alt": "Adult White Dragon",
+          "sourcePath": "100 Assets/Statblocks for Compendium/Shapechange/Adult White Dragon.png",
+          "sha256": "addac807b8fb9ab2969fc99a21c8587cc86a9384ac6febaa06b54994189aa6ef",
+          "width": 1518,
+          "height": 1232
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/shapechange",
+          "title": "Shapechange",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Shapechange.md",
+          "heading": "Flying Forms",
+          "headingAnchor": "flying-forms",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-19T11:58:29.523Z"
+        }
+      ],
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "air-elemental",
+      "title": "Air Elemental",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/True%20Polymorph/Air%20Elemental.png",
+          "alt": "Air Elemental",
+          "sourcePath": "100 Assets/Statblocks for Compendium/True Polymorph/Air Elemental.png",
+          "sha256": "2cc6a5cd5c96a428238fd83d8fceda858a25a9faaae3359fcc917a4644e29e65",
+          "width": 1680,
+          "height": 964
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/true-polymorph",
+          "title": "True Polymorph",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/True Polymorph.md",
+          "heading": "Planar Binding Assets",
+          "headingAnchor": "planar-binding-assets",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-20T12:32:21.075Z"
+        }
+      ],
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "ankheg",
+      "title": "Ankheg",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/Shapechange/Ankheg.png",
+          "alt": "Ankheg",
+          "sourcePath": "100 Assets/Statblocks for Compendium/Shapechange/Ankheg.png",
+          "sha256": "e0307b66684cc010610420b2baaf2ab1e2532628892b760eb5487d0a7e4fa2f6",
+          "width": 841,
+          "height": 421
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/shapechange",
+          "title": "Shapechange",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Shapechange.md",
+          "heading": "Burrowing Forms",
+          "headingAnchor": "burrowing-forms",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-19T11:58:29.523Z"
+        }
+      ],
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "archelon",
+      "title": "Archelon",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/Shapechange/Archelon.png",
+          "alt": "Archelon",
+          "sourcePath": "100 Assets/Statblocks for Compendium/Shapechange/Archelon.png",
+          "sha256": "66a25b4a313ce41d63a831930d8bdee61bb04db692babfe9677f04430444a4e9",
+          "width": 843,
+          "height": 349
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/polymorph",
+          "title": "Polymorph",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Polymorph.md",
+          "heading": "Aquatic Forms",
+          "headingAnchor": "aquatic-forms",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-20T12:32:21.074Z"
+        },
+        {
+          "slug": "creatures/shapechange",
+          "title": "Shapechange",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Shapechange.md",
+          "heading": "Aquatic Forms",
+          "headingAnchor": "aquatic-forms",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-19T11:58:29.523Z"
+        }
+      ],
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "archmage",
+      "title": "Archmage",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/Shapechange/Archmage.png",
+          "alt": "Archmage",
+          "sourcePath": "100 Assets/Statblocks for Compendium/Shapechange/Archmage.png",
+          "sha256": "f401f70896e6440898f0353d1a650c8b45604ee761a7e9ba0b29d011a4f03491",
+          "width": 840,
+          "height": 609
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/shapechange",
+          "title": "Shapechange",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Shapechange.md",
+          "heading": "Spellcasters",
+          "headingAnchor": "spellcasters",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-19T11:58:29.523Z"
+        }
+      ],
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "balor",
+      "title": "Balor",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/True%20Polymorph/Balor.png",
+          "alt": "Balor",
+          "sourcePath": "100 Assets/Statblocks for Compendium/True Polymorph/Balor.png",
+          "sha256": "8caaef1608bcaa6925e4314451b308ac7a5e4302c90dc50dfd45a4eb3443827d",
+          "width": 1684,
+          "height": 1408
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/shapechange",
+          "title": "Shapechange",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Shapechange.md",
+          "heading": "Bruisers & Damage",
+          "headingAnchor": "bruisers--damage",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-19T11:58:29.523Z"
+        },
+        {
+          "slug": "creatures/true-polymorph",
+          "title": "True Polymorph",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/True Polymorph.md",
+          "heading": "Combat Forms",
+          "headingAnchor": "combat-forms",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-20T12:32:21.075Z"
+        }
+      ],
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "bat",
+      "title": "Bat",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/Find%20Familiar/Bat.png",
+          "alt": "Bat",
+          "sourcePath": "100 Assets/Statblocks for Compendium/Find Familiar/Bat.png",
+          "sha256": "3750261d125d38c4d78e541366ac98d640e4eb558571650afaa8b3e79dfaaa42",
+          "width": 1506,
+          "height": 556
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/find-familiar",
+          "title": "Find Familiar",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Find Familiar.md",
+          "heading": "Bat",
+          "headingAnchor": "bat",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-20T12:32:21.069Z"
+        },
+        {
+          "slug": "creatures/creature-cards/bat-creature",
+          "title": "Bat",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Creature Cards/Bat - Creature.md",
+          "heading": "Original stat block",
+          "headingAnchor": "original-stat-block",
+          "kind": "checked-card",
+          "rulesStatus": "RAW + analysis",
+          "rulesVersion": "2024 with SRD 5.2.1 updates",
+          "updatedAt": "2026-09-20T12:32:21.049Z"
+        }
+      ],
+      "checkedCardSlug": "creatures/creature-cards/bat-creature",
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "battle-familiar",
+      "title": "Battle Familiar",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/Find%20Familiar/Battle%20Familiar.png",
+          "alt": "Battle Familiar",
+          "sourcePath": "100 Assets/Statblocks for Compendium/Find Familiar/Battle Familiar.png",
+          "sha256": "69acacaf9fbbf3130deaecea4ce549324b843f39872d1edff0a9265363108215",
+          "width": 1352,
+          "height": 868
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/find-familiar",
+          "title": "Find Familiar",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Find Familiar.md",
+          "heading": "Battle Familiar",
+          "headingAnchor": "battle-familiar",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-20T12:32:21.069Z"
+        }
+      ],
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "behir",
+      "title": "Behir",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/Shapechange/Behir.png",
+          "alt": "Behir",
+          "sourcePath": "100 Assets/Statblocks for Compendium/Shapechange/Behir.png",
+          "sha256": "1f30b4389da5ca5b287d258a3b24d65967618df90ade71736ecbcc085855704d",
+          "width": 1684,
+          "height": 1260
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/shapechange",
+          "title": "Shapechange",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Shapechange.md",
+          "heading": "Battlefield Control",
+          "headingAnchor": "battlefield-control",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-19T11:58:29.523Z"
+        }
+      ],
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "beholder",
+      "title": "Beholder",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/Shapechange/Beholder.png",
+          "alt": "Beholder",
+          "sourcePath": "100 Assets/Statblocks for Compendium/Shapechange/Beholder.png",
+          "sha256": "d4ecced1870038968fcf08613ade69d1b74f973efd2c7bcdcd48ac7407909080",
+          "width": 840,
+          "height": 1238
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/shapechange",
+          "title": "Shapechange",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Shapechange.md",
+          "heading": "Anti-Caster Forms",
+          "headingAnchor": "anti-caster-forms",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-19T11:58:29.523Z"
+        }
+      ],
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "chimera",
+      "title": "Chimera",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/True%20Polymorph/Chimera.png",
+          "alt": "Chimera",
+          "sourcePath": "100 Assets/Statblocks for Compendium/True Polymorph/Chimera.png",
+          "sha256": "2a1061c0900ea45346c47af24e8438f6231a80fa627997d4c8896865ec4193c0",
+          "width": 1512,
+          "height": 796
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/true-polymorph",
+          "title": "True Polymorph",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/True Polymorph.md",
+          "heading": "Created Combat Assets",
+          "headingAnchor": "created-combat-assets",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-20T12:32:21.075Z"
+        }
+      ],
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "clay-golem",
+      "title": "Clay Golem",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/True%20Polymorph/Clay%20Golem.png",
+          "alt": "Clay Golem",
+          "sourcePath": "100 Assets/Statblocks for Compendium/True Polymorph/Clay Golem.png",
+          "sha256": "140d2fb71c9ad2158e8ea89a4ed58f9cab7719447c911c314c2c36dc6bc5c2d5",
+          "width": 1516,
+          "height": 1104
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/true-polymorph",
+          "title": "True Polymorph",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/True Polymorph.md",
+          "heading": "Created Combat Assets",
+          "headingAnchor": "created-combat-assets",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-20T12:32:21.075Z"
+        }
+      ],
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "conjurer-archmage",
+      "title": "Conjurer Archmage",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/Shapechange/Conjurer%20Archmage.png",
+          "alt": "Conjurer Archmage",
+          "sourcePath": "100 Assets/Statblocks for Compendium/Shapechange/Conjurer Archmage.png",
+          "sha256": "ec1685199d21cc99ea83d641083946de73fd8a26ad4d8b0f3b749a554f0ddb0e",
+          "width": 757,
+          "height": 537
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/shapechange",
+          "title": "Shapechange",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Shapechange.md",
+          "heading": "Speed & Mobility",
+          "headingAnchor": "speed--mobility",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-19T11:58:29.523Z"
+        }
+      ],
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "couatl",
+      "title": "Couatl",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/True%20Polymorph/Couatl.png",
+          "alt": "Couatl",
+          "sourcePath": "100 Assets/Statblocks for Compendium/True Polymorph/Couatl.png",
+          "sha256": "784513818d9c9bee1ad78e24de0bb407ec74d070bb9c311d16ed3fb959d82249",
+          "width": 842,
+          "height": 630
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/shapechange",
+          "title": "Shapechange",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Shapechange.md",
+          "heading": "Unique Utility",
+          "headingAnchor": "unique-utility",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-19T11:58:29.523Z"
+        },
+        {
+          "slug": "creatures/true-polymorph",
+          "title": "True Polymorph",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/True Polymorph.md",
+          "heading": "Long-Term Assets",
+          "headingAnchor": "long-term-assets",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-20T12:32:21.075Z"
+        },
+        {
+          "slug": "creatures/creature-cards/couatl-creature",
+          "title": "Couatl",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Creature Cards/Couatl - Creature.md",
+          "heading": "Original stat block",
+          "headingAnchor": "original-stat-block",
+          "kind": "checked-card",
+          "rulesStatus": "RAW + analysis",
+          "rulesVersion": "2024 with SRD 5.2.1 updates",
+          "updatedAt": "2026-09-20T12:32:21.050Z"
+        }
+      ],
+      "checkedCardSlug": "creatures/creature-cards/couatl-creature",
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "cyclops-oracle",
+      "title": "Cyclops Oracle",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/Shapechange/Cyclops%20Oracle.png",
+          "alt": "Cyclops Oracle",
+          "sourcePath": "100 Assets/Statblocks for Compendium/Shapechange/Cyclops Oracle.png",
+          "sha256": "3c17e819dff81e5cc70f3a919620c2e3032859d6fae5ed6dd4e794cc099180f5",
+          "width": 841,
+          "height": 533
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/shapechange",
+          "title": "Shapechange",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Shapechange.md",
+          "heading": "Spellcasters",
+          "headingAnchor": "spellcasters",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-19T11:58:29.523Z"
+        }
+      ],
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "deva",
+      "title": "Deva",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/Shapechange/Deva.png",
+          "alt": "Deva",
+          "sourcePath": "100 Assets/Statblocks for Compendium/Shapechange/Deva.png",
+          "sha256": "6f8c114e829ae0650e804351bdf265861d7529a2f25ccb58ef4488355b4a3d7b",
+          "width": 840,
+          "height": 621
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/shapechange",
+          "title": "Shapechange",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Shapechange.md",
+          "heading": "Flying Forms",
+          "headingAnchor": "flying-forms",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-19T11:58:29.523Z"
+        }
+      ],
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "diviner-archmage",
+      "title": "Diviner Archmage",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/Shapechange/Diviner%20Archmage.png",
+          "alt": "Diviner Archmage",
+          "sourcePath": "100 Assets/Statblocks for Compendium/Shapechange/Diviner Archmage.png",
+          "sha256": "d80a95dca0b67668c164bc9db42ca4518a40f1959495481c8ec55d805b357daf",
+          "width": 757,
+          "height": 524
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/shapechange",
+          "title": "Shapechange",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Shapechange.md",
+          "heading": "Special Senses",
+          "headingAnchor": "special-senses",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-19T11:58:29.523Z"
+        }
+      ],
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "djinni",
+      "title": "Djinni",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/True%20Polymorph/Djinni.png",
+          "alt": "Djinni",
+          "sourcePath": "100 Assets/Statblocks for Compendium/True Polymorph/Djinni.png",
+          "sha256": "58613858a23c52bc8d7c0b74026db43beacc415246fb6fa5c3e732f888dc0e8a",
+          "width": 840,
+          "height": 803
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/shapechange",
+          "title": "Shapechange",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Shapechange.md",
+          "heading": "Speed & Mobility",
+          "headingAnchor": "speed--mobility",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-19T11:58:29.523Z"
+        },
+        {
+          "slug": "creatures/true-polymorph",
+          "title": "True Polymorph",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/True Polymorph.md",
+          "heading": "Unique Utility",
+          "headingAnchor": "unique-utility",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-20T12:32:21.075Z"
+        }
+      ],
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "dragon-turtle",
+      "title": "Dragon Turtle",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/True%20Polymorph/Dragon%20Turtle.png",
+          "alt": "Dragon Turtle",
+          "sourcePath": "100 Assets/Statblocks for Compendium/True Polymorph/Dragon Turtle.png",
+          "sha256": "36340620ccfac9035e6cb882e1dfc9fedc14759d5bc7f6d95bd67e28afd53465",
+          "width": 839,
+          "height": 467
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/shapechange",
+          "title": "Shapechange",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Shapechange.md",
+          "heading": "Aquatic Forms",
+          "headingAnchor": "aquatic-forms",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-19T11:58:29.523Z"
+        },
+        {
+          "slug": "creatures/true-polymorph",
+          "title": "True Polymorph",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/True Polymorph.md",
+          "heading": "Aquatic Forms",
+          "headingAnchor": "aquatic-forms",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-20T12:32:21.075Z"
+        }
+      ],
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "earth-elemental",
+      "title": "Earth Elemental",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/True%20Polymorph/Earth%20Elemental.png",
+          "alt": "Earth Elemental",
+          "sourcePath": "100 Assets/Statblocks for Compendium/True Polymorph/Earth Elemental.png",
+          "sha256": "84b17a0811c9387dfaee8e772d161982761a1b8eecc22ad4cb8dec9d273ea959",
+          "width": 1678,
+          "height": 970
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/true-polymorph",
+          "title": "True Polymorph",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/True Polymorph.md",
+          "heading": "Planar Binding Assets",
+          "headingAnchor": "planar-binding-assets",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-20T12:32:21.075Z"
+        },
+        {
+          "slug": "creatures/creature-cards/earth-elemental-creature",
+          "title": "Earth Elemental",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Creature Cards/Earth Elemental - Creature.md",
+          "heading": "Original stat block",
+          "headingAnchor": "original-stat-block",
+          "kind": "checked-card",
+          "rulesStatus": "RAW + analysis",
+          "rulesVersion": "2024 with SRD 5.2.1 updates",
+          "updatedAt": "2026-09-20T12:32:21.051Z"
+        }
+      ],
+      "checkedCardSlug": "creatures/creature-cards/earth-elemental-creature",
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "elephant",
+      "title": "Elephant",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/Polymorph/Elephant.png",
+          "alt": "Elephant",
+          "sourcePath": "100 Assets/Statblocks for Compendium/Polymorph/Elephant.png",
+          "sha256": "039ed0c84476000c277fff29b4d2ad97739225b7f0118531f4b82fa0d38f3553",
+          "width": 1518,
+          "height": 690
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/polymorph",
+          "title": "Polymorph",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Polymorph.md",
+          "heading": "Bruisers & Damage",
+          "headingAnchor": "bruisers--damage",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-20T12:32:21.074Z"
+        }
+      ],
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "enchanter-archmage",
+      "title": "Enchanter Archmage",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/Shapechange/Enchanter%20Archmage.png",
+          "alt": "Enchanter Archmage",
+          "sourcePath": "100 Assets/Statblocks for Compendium/Shapechange/Enchanter Archmage.png",
+          "sha256": "88e57e94a2ffe76d66e1885e76c30f09c5c273b276fe290631e0b732d8fb139b",
+          "width": 757,
+          "height": 545
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/shapechange",
+          "title": "Shapechange",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Shapechange.md",
+          "heading": "Battlefield Control",
+          "headingAnchor": "battlefield-control",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-19T11:58:29.523Z"
+        }
+      ],
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "erinyes",
+      "title": "Erinyes",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/Shapechange/Erinyes.png",
+          "alt": "Erinyes",
+          "sourcePath": "100 Assets/Statblocks for Compendium/Shapechange/Erinyes.png",
+          "sha256": "d580a398b2d19a0b3be262c864032abc4a3f939d173bf3c9cc7ac39df42733ed",
+          "width": 843,
+          "height": 652
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/shapechange",
+          "title": "Shapechange",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Shapechange.md",
+          "heading": "Ranged Combat",
+          "headingAnchor": "ranged-combat",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-19T11:58:29.523Z"
+        }
+      ],
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "evoker-archmage",
+      "title": "Evoker Archmage",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/Shapechange/Evoker%20Archmage.png",
+          "alt": "Evoker Archmage",
+          "sourcePath": "100 Assets/Statblocks for Compendium/Shapechange/Evoker Archmage.png",
+          "sha256": "8b0a7e03c3f7ac96cf271ec4e3bf5b46be9c7f68a6242c1c88a974567bdb8268",
+          "width": 760,
+          "height": 600
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/shapechange",
+          "title": "Shapechange",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Shapechange.md",
+          "heading": "Ranged Combat",
+          "headingAnchor": "ranged-combat",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-19T11:58:29.523Z"
+        }
+      ],
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "fire-elemental",
+      "title": "Fire Elemental",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/True%20Polymorph/Fire%20Elemental.png",
+          "alt": "Fire Elemental",
+          "sourcePath": "100 Assets/Statblocks for Compendium/True Polymorph/Fire Elemental.png",
+          "sha256": "2a899a2aefa9dde6d65fc13934f019cc4d179c3ad3582e7a904551c86437f332",
+          "width": 1686,
+          "height": 1124
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/true-polymorph",
+          "title": "True Polymorph",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/True Polymorph.md",
+          "heading": "Planar Binding Assets",
+          "headingAnchor": "planar-binding-assets",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-20T12:32:21.075Z"
+        }
+      ],
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "flesh-golem",
+      "title": "Flesh Golem",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/True%20Polymorph/Flesh%20Golem.png",
+          "alt": "Flesh Golem",
+          "sourcePath": "100 Assets/Statblocks for Compendium/True Polymorph/Flesh Golem.png",
+          "sha256": "01bfd250941f7da774d2c9232d029bcdd4bf13daaf8ef08272417a2b5159188f",
+          "width": 1516,
+          "height": 1104
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/true-polymorph",
+          "title": "True Polymorph",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/True Polymorph.md",
+          "heading": "Created Combat Assets",
+          "headingAnchor": "created-combat-assets",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-20T12:32:21.075Z"
+        }
+      ],
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "frost-giant",
+      "title": "Frost Giant",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/Shapechange/Frost%20Giant.png",
+          "alt": "Frost Giant",
+          "sourcePath": "100 Assets/Statblocks for Compendium/Shapechange/Frost Giant.png",
+          "sha256": "bdea831e2e3e98201fc55893822c773d444dc030543ea43d90f4479fb7bcb68e",
+          "width": 845,
+          "height": 455
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/shapechange",
+          "title": "Shapechange",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Shapechange.md",
+          "heading": "Bruisers & Damage",
+          "headingAnchor": "bruisers--damage",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-19T11:58:29.523Z"
+        }
+      ],
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "giant-ape",
+      "title": "Giant Ape",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/Polymorph/Giant%20Ape.png",
+          "alt": "Giant Ape",
+          "sourcePath": "100 Assets/Statblocks for Compendium/Polymorph/Giant Ape.png",
+          "sha256": "ce3b250e7be04d783c15d90ab1a75899d8561c213842a9564aa6f187d9efd21d",
+          "width": 1054,
+          "height": 1516
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/polymorph",
+          "title": "Polymorph",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Polymorph.md",
+          "heading": "Tanks & Survival",
+          "headingAnchor": "tanks--survival",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-20T12:32:21.074Z"
+        },
+        {
+          "slug": "creatures/creature-cards/giant-ape-creature",
+          "title": "Giant Ape",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Creature Cards/Giant Ape - Creature.md",
+          "heading": "Original stat block",
+          "headingAnchor": "original-stat-block",
+          "kind": "checked-card",
+          "rulesStatus": "RAW + analysis",
+          "rulesVersion": "2024 with SRD 5.2.1 updates",
+          "updatedAt": "2026-09-20T12:32:21.051Z"
+        }
+      ],
+      "checkedCardSlug": "creatures/creature-cards/giant-ape-creature",
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "giant-badger",
+      "title": "Giant Badger",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/Polymorph/Giant%20Badger.png",
+          "alt": "Giant Badger",
+          "sourcePath": "100 Assets/Statblocks for Compendium/Polymorph/Giant Badger.png",
+          "sha256": "65957c7f6533d9bbc6d7b5863fdc14ea2f8a88af1f8568af7aa082c3ef3b5ff4",
+          "width": 1510,
+          "height": 580
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/polymorph",
+          "title": "Polymorph",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Polymorph.md",
+          "heading": "Speed & Mobility",
+          "headingAnchor": "speed--mobility",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-20T12:32:21.074Z"
+        }
+      ],
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "giant-bat",
+      "title": "Giant Bat",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/Polymorph/Giant%20Bat.png",
+          "alt": "Giant Bat",
+          "sourcePath": "100 Assets/Statblocks for Compendium/Polymorph/Giant Bat.png",
+          "sha256": "f0f46d4931ffd2239b4ae5bf6f0ed564e2a36d9c8964cf0448a57e9c801e44b4",
+          "width": 1518,
+          "height": 574
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/polymorph",
+          "title": "Polymorph",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Polymorph.md",
+          "heading": "Flying Forms",
+          "headingAnchor": "flying-forms",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-20T12:32:21.074Z"
+        },
+        {
+          "slug": "creatures/creature-cards/giant-bat-creature",
+          "title": "Giant Bat",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Creature Cards/Giant Bat - Creature.md",
+          "heading": "Original stat block",
+          "headingAnchor": "original-stat-block",
+          "kind": "checked-card",
+          "rulesStatus": "RAW + analysis",
+          "rulesVersion": "2024 with SRD 5.2.1 updates",
+          "updatedAt": "2026-09-20T12:32:21.052Z"
+        }
+      ],
+      "checkedCardSlug": "creatures/creature-cards/giant-bat-creature",
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "giant-constrictor-snake",
+      "title": "Giant Constrictor Snake",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/Polymorph/Giant%20Constrictor%20Snake.png",
+          "alt": "Giant Constrictor Snake",
+          "sourcePath": "100 Assets/Statblocks for Compendium/Polymorph/Giant Constrictor Snake.png",
+          "sha256": "a113abff89d222f4cf1d9ff4734f7638753e19b40fc43a6928c358c1f4fb2e8b",
+          "width": 1684,
+          "height": 752
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/polymorph",
+          "title": "Polymorph",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Polymorph.md",
+          "heading": "Control & Grappling",
+          "headingAnchor": "control--grappling",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-20T12:32:21.074Z"
+        },
+        {
+          "slug": "creatures/creature-cards/giant-constrictor-snake-creature",
+          "title": "Giant Constrictor Snake",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Creature Cards/Giant Constrictor Snake - Creature.md",
+          "heading": "Original stat block",
+          "headingAnchor": "original-stat-block",
+          "kind": "checked-card",
+          "rulesStatus": "RAW + analysis",
+          "rulesVersion": "2024 with SRD 5.2.1 updates",
+          "updatedAt": "2026-09-20T12:32:21.053Z"
+        }
+      ],
+      "checkedCardSlug": "creatures/creature-cards/giant-constrictor-snake-creature",
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "giant-crocodile",
+      "title": "Giant Crocodile",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/Polymorph/Giant%20Crocodile.png",
+          "alt": "Giant Crocodile",
+          "sourcePath": "100 Assets/Statblocks for Compendium/Polymorph/Giant Crocodile.png",
+          "sha256": "42a53399f48fd1447b9fc7229298118e400054b43b253107cf2cd97bbfe1bc3c",
+          "width": 1518,
+          "height": 770
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/polymorph",
+          "title": "Polymorph",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Polymorph.md",
+          "heading": "Control & Grappling",
+          "headingAnchor": "control--grappling",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-20T12:32:21.074Z"
+        }
+      ],
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "giant-scorpion",
+      "title": "Giant Scorpion",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/Polymorph/Giant%20Scorpion.png",
+          "alt": "Giant Scorpion",
+          "sourcePath": "100 Assets/Statblocks for Compendium/Polymorph/Giant Scorpion.png",
+          "sha256": "5c4bcdf47f44d9f39af0f666df193fa46b90727f62cff7a36fd3fafb0aa4317a",
+          "width": 1684,
+          "height": 704
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/polymorph",
+          "title": "Polymorph",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Polymorph.md",
+          "heading": "Bruisers & Damage",
+          "headingAnchor": "bruisers--damage",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-20T12:32:21.074Z"
+        },
+        {
+          "slug": "creatures/creature-cards/giant-scorpion-creature",
+          "title": "Giant Scorpion",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Creature Cards/Giant Scorpion - Creature.md",
+          "heading": "Original stat block",
+          "headingAnchor": "original-stat-block",
+          "kind": "checked-card",
+          "rulesStatus": "RAW + analysis",
+          "rulesVersion": "2024 with SRD 5.2.1 updates",
+          "updatedAt": "2026-09-20T12:32:21.054Z"
+        }
+      ],
+      "checkedCardSlug": "creatures/creature-cards/giant-scorpion-creature",
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "giant-shark",
+      "title": "Giant Shark",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/Polymorph/Giant%20Shark.png",
+          "alt": "Giant Shark",
+          "sourcePath": "100 Assets/Statblocks for Compendium/Polymorph/Giant Shark.png",
+          "sha256": "57d762427e73eb8076babeedd0ec01af00aa5101983b0332135df51f502dddb7",
+          "width": 1518,
+          "height": 644
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/polymorph",
+          "title": "Polymorph",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Polymorph.md",
+          "heading": "Aquatic Forms",
+          "headingAnchor": "aquatic-forms",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-20T12:32:21.074Z"
+        },
+        {
+          "slug": "creatures/creature-cards/giant-shark-creature",
+          "title": "Giant Shark",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Creature Cards/Giant Shark - Creature.md",
+          "heading": "Original stat block",
+          "headingAnchor": "original-stat-block",
+          "kind": "checked-card",
+          "rulesStatus": "RAW + analysis",
+          "rulesVersion": "2024 with SRD 5.2.1 updates",
+          "updatedAt": "2026-09-20T12:32:21.056Z"
+        }
+      ],
+      "checkedCardSlug": "creatures/creature-cards/giant-shark-creature",
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "giant-spider",
+      "title": "Giant Spider",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/Polymorph/Giant%20Spider.png",
+          "alt": "Giant Spider",
+          "sourcePath": "100 Assets/Statblocks for Compendium/Polymorph/Giant Spider.png",
+          "sha256": "80caf5853f153ce200beb12838e66db92e994f1ed3b8ee2a533c53703388582d",
+          "width": 1524,
+          "height": 808
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/polymorph",
+          "title": "Polymorph",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Polymorph.md",
+          "heading": "Speed & Mobility",
+          "headingAnchor": "speed--mobility",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-20T12:32:21.074Z"
+        },
+        {
+          "slug": "creatures/creature-cards/giant-spider-creature",
+          "title": "Giant Spider",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Creature Cards/Giant Spider - Creature.md",
+          "heading": "Original stat block",
+          "headingAnchor": "original-stat-block",
+          "kind": "checked-card",
+          "rulesStatus": "RAW + analysis",
+          "rulesVersion": "2024 with SRD 5.2.1 updates",
+          "updatedAt": "2026-09-20T12:32:21.057Z"
+        }
+      ],
+      "checkedCardSlug": "creatures/creature-cards/giant-spider-creature",
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "glabrezu",
+      "title": "Glabrezu",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/True%20Polymorph/Glabrezu.png",
+          "alt": "Glabrezu",
+          "sourcePath": "100 Assets/Statblocks for Compendium/True Polymorph/Glabrezu.png",
+          "sha256": "fb0fc7cb02a57db2e7f2c483073a95b0eabf891b26153d767a092ec80da4bf02",
+          "width": 1350,
+          "height": 1008
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/planar-binding-candidate",
+          "title": "Planar Binding Candidates",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Planar Binding Candidate.md",
+          "heading": "Candidate stat blocks",
+          "headingAnchor": "candidate-stat-blocks",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-20T12:32:21.071Z"
+        },
+        {
+          "slug": "creatures/true-polymorph",
+          "title": "True Polymorph",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/True Polymorph.md",
+          "heading": "Planar Binding Assets",
+          "headingAnchor": "planar-binding-assets",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-20T12:32:21.075Z"
+        }
+      ],
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "guardian-naga",
+      "title": "Guardian Naga",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/True%20Polymorph/Guardian%20Naga.png",
+          "alt": "Guardian Naga",
+          "sourcePath": "100 Assets/Statblocks for Compendium/True Polymorph/Guardian Naga.png",
+          "sha256": "dfcb38785bd1782bd235a61d2227aef4ea0c39dce0e9e260f51114048818a1d7",
+          "width": 1516,
+          "height": 1034
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/true-polymorph",
+          "title": "True Polymorph",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/True Polymorph.md",
+          "heading": "Creature-to-Creature Specialists",
+          "headingAnchor": "creature-to-creature-specialists",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-20T12:32:21.075Z"
+        },
+        {
+          "slug": "creatures/creature-cards/guardian-naga-creature",
+          "title": "Guardian Naga",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Creature Cards/Guardian Naga - Creature.md",
+          "heading": "Original stat block",
+          "headingAnchor": "original-stat-block",
+          "kind": "checked-card",
+          "rulesStatus": "RAW + analysis",
+          "rulesVersion": "2024 with SRD 5.2.1 updates",
+          "updatedAt": "2026-09-20T12:32:21.057Z"
+        }
+      ],
+      "checkedCardSlug": "creatures/creature-cards/guardian-naga-creature",
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "hezrou",
+      "title": "Hezrou",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/True%20Polymorph/Hezrou.png",
+          "alt": "Hezrou",
+          "sourcePath": "100 Assets/Statblocks for Compendium/True Polymorph/Hezrou.png",
+          "sha256": "b3e2f2f705127d3b5b31c449239f30e8a6933a49bb41d7def77af0c2bda10332",
+          "width": 1344,
+          "height": 870
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/planar-binding-candidate",
+          "title": "Planar Binding Candidates",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Planar Binding Candidate.md",
+          "heading": "Candidate stat blocks",
+          "headingAnchor": "candidate-stat-blocks",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-20T12:32:21.071Z"
+        },
+        {
+          "slug": "creatures/true-polymorph",
+          "title": "True Polymorph",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/True Polymorph.md",
+          "heading": "Planar Binding Assets",
+          "headingAnchor": "planar-binding-assets",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-20T12:32:21.075Z"
+        }
+      ],
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "illusionist-archmage",
+      "title": "Illusionist Archmage",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/Shapechange/Illusionist%20Archmage.png",
+          "alt": "Illusionist Archmage",
+          "sourcePath": "100 Assets/Statblocks for Compendium/Shapechange/Illusionist Archmage.png",
+          "sha256": "4fd2fea7189250d8145c780b888e5b90327fbc2d4cb50020d99b2546c7ef3643",
+          "width": 757,
+          "height": 517
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/shapechange",
+          "title": "Shapechange",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Shapechange.md",
+          "heading": "Unique Utility",
+          "headingAnchor": "unique-utility",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-19T11:58:29.523Z"
+        }
+      ],
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "invisible-stalker",
+      "title": "Invisible Stalker",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/True%20Polymorph/Invisible%20Stalker.png",
+          "alt": "Invisible Stalker",
+          "sourcePath": "100 Assets/Statblocks for Compendium/True Polymorph/Invisible Stalker.png",
+          "sha256": "db98d43853ade7c2b6b7b3003da7549edd282c5958eb49e4912f8915b9c7ee52",
+          "width": 1686,
+          "height": 1004
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/true-polymorph",
+          "title": "True Polymorph",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/True Polymorph.md",
+          "heading": "Created Utility Assets",
+          "headingAnchor": "created-utility-assets",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-20T12:32:21.075Z"
+        },
+        {
+          "slug": "creatures/creature-cards/invisible-stalker-creature",
+          "title": "Invisible Stalker",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Creature Cards/Invisible Stalker - Creature.md",
+          "heading": "Original stat block",
+          "headingAnchor": "original-stat-block",
+          "kind": "checked-card",
+          "rulesStatus": "RAW + analysis",
+          "rulesVersion": "2024 with SRD 5.2.1 updates",
+          "updatedAt": "2026-09-20T12:32:21.058Z"
+        }
+      ],
+      "checkedCardSlug": "creatures/creature-cards/invisible-stalker-creature",
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "killer-whale",
+      "title": "Killer Whale",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/Polymorph/Killer%20Whale.png",
+          "alt": "Killer Whale",
+          "sourcePath": "100 Assets/Statblocks for Compendium/Polymorph/Killer Whale.png",
+          "sha256": "90d1784439fc58f61c03cb9b062fd9349aa236bc8190987ce809e1e67b85e7c9",
+          "width": 1520,
+          "height": 600
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/polymorph",
+          "title": "Polymorph",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Polymorph.md",
+          "heading": "Aquatic Forms",
+          "headingAnchor": "aquatic-forms",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-20T12:32:21.074Z"
+        }
+      ],
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "kuo-toa-archpriest",
+      "title": "Kuo-toa Archpriest",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/Shapechange/Kuo-toa%20Archpriest.png",
+          "alt": "Kuo-toa Archpriest",
+          "sourcePath": "100 Assets/Statblocks for Compendium/Shapechange/Kuo-toa Archpriest.png",
+          "sha256": "7f0d78a2c364137e55d2b0e73311dd5231f515e08b3041b2242b6392e069ee62",
+          "width": 841,
+          "height": 537
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/shapechange",
+          "title": "Shapechange",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Shapechange.md",
+          "heading": "Spellcasters",
+          "headingAnchor": "spellcasters",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-19T11:58:29.523Z"
+        }
+      ],
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "lizardfolk-geomancer",
+      "title": "Lizardfolk Geomancer",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/Shapechange/Lizardfolk%20Geomancer.png",
+          "alt": "Lizardfolk Geomancer",
+          "sourcePath": "100 Assets/Statblocks for Compendium/Shapechange/Lizardfolk Geomancer.png",
+          "sha256": "686355e7b48d7e5b6828ca7f46389c5e2445cae9f7a9feb17278237ce8101ee1",
+          "width": 839,
+          "height": 447
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/shapechange",
+          "title": "Shapechange",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Shapechange.md",
+          "heading": "Spellcasters",
+          "headingAnchor": "spellcasters",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-19T11:58:29.523Z"
+        }
+      ],
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "mammoth",
+      "title": "Mammoth",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/Polymorph/Mammoth.png",
+          "alt": "Mammoth",
+          "sourcePath": "100 Assets/Statblocks for Compendium/Polymorph/Mammoth.png",
+          "sha256": "e14ceef623f1462347a12a929bf00a8d7b634e94cffc1ea75e082d81f7ba3ab5",
+          "width": 1522,
+          "height": 696
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/polymorph",
+          "title": "Polymorph",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Polymorph.md",
+          "heading": "Bruisers & Damage",
+          "headingAnchor": "bruisers--damage",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-20T12:32:21.074Z"
+        }
+      ],
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "marilith",
+      "title": "Marilith",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/Shapechange/Marilith.png",
+          "alt": "Marilith",
+          "sourcePath": "100 Assets/Statblocks for Compendium/Shapechange/Marilith.png",
+          "sha256": "d106406fd2b8ca0772845bc1d5c71cb11da0fe84e3768d52e8adbe099722af6f",
+          "width": 1346,
+          "height": 1616
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/shapechange",
+          "title": "Shapechange",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Shapechange.md",
+          "heading": "Bruisers & Damage",
+          "headingAnchor": "bruisers--damage",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-19T11:58:29.523Z"
+        }
+      ],
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "mind-flayer-arcanist",
+      "title": "Mind Flayer Arcanist",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/Shapechange/Mind%20Flayer%20Arcanist.png",
+          "alt": "Mind Flayer Arcanist",
+          "sourcePath": "100 Assets/Statblocks for Compendium/Shapechange/Mind Flayer Arcanist.png",
+          "sha256": "3cc1d4f776b80380683d0611e76c5293c5d76dff4bb32a2f1135479a8b83e3b5",
+          "width": 756,
+          "height": 626
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/shapechange",
+          "title": "Shapechange",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Shapechange.md",
+          "heading": "Battlefield Control",
+          "headingAnchor": "battlefield-control",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-19T11:58:29.523Z"
+        }
+      ],
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "necromancer-archmage",
+      "title": "Necromancer Archmage",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/Shapechange/Necromancer%20Archmage.png",
+          "alt": "Necromancer Archmage",
+          "sourcePath": "100 Assets/Statblocks for Compendium/Shapechange/Necromancer Archmage.png",
+          "sha256": "825da46d5e3b4365703631a1785e3a95c6932c3025d3d3306174011d5d0c4f36",
+          "width": 753,
+          "height": 551
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/shapechange",
+          "title": "Shapechange",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Shapechange.md",
+          "heading": "Unique Utility",
+          "headingAnchor": "unique-utility",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-19T11:58:29.523Z"
+        }
+      ],
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "nightmare",
+      "title": "Nightmare",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/Planar%20Binding%20Mount/Nightmare.png",
+          "alt": "Nightmare",
+          "sourcePath": "100 Assets/Statblocks for Compendium/Planar Binding Mount/Nightmare.png",
+          "sha256": "df9bfccdb0531508502f4de7a75754a634423b0bcbc9a2074a46bab53feec577",
+          "width": 1350,
+          "height": 700
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/planar-binding-mount",
+          "title": "Planar Binding Mounts",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Planar Binding Mount.md",
+          "heading": "Mount stat blocks",
+          "headingAnchor": "mount-stat-blocks",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-20T12:32:21.073Z"
+        },
+        {
+          "slug": "creatures/creature-cards/nightmare-creature",
+          "title": "Nightmare",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Creature Cards/Nightmare - Creature.md",
+          "heading": "Original stat block",
+          "headingAnchor": "original-stat-block",
+          "kind": "checked-card",
+          "rulesStatus": "RAW + analysis",
+          "rulesVersion": "2024 with SRD 5.2.1 updates",
+          "updatedAt": "2026-09-20T12:32:21.060Z"
+        }
+      ],
+      "checkedCardSlug": "creatures/creature-cards/nightmare-creature",
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "octopus",
+      "title": "Octopus",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/Find%20Familiar/Octopus.png",
+          "alt": "Octopus",
+          "sourcePath": "100 Assets/Statblocks for Compendium/Find Familiar/Octopus.png",
+          "sha256": "32f91d451f673494fbf129de776b7c345465de6a370f328d1abf03cfa027b8b3",
+          "width": 1516,
+          "height": 816
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/find-familiar",
+          "title": "Find Familiar",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Find Familiar.md",
+          "heading": "Octopus",
+          "headingAnchor": "octopus",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-20T12:32:21.069Z"
+        },
+        {
+          "slug": "creatures/creature-cards/octopus-creature",
+          "title": "Octopus",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Creature Cards/Octopus - Creature.md",
+          "heading": "Original stat block",
+          "headingAnchor": "original-stat-block",
+          "kind": "checked-card",
+          "rulesStatus": "RAW + analysis",
+          "rulesVersion": "2024 with SRD 5.2.1 updates",
+          "updatedAt": "2026-09-20T12:32:21.061Z"
+        }
+      ],
+      "checkedCardSlug": "creatures/creature-cards/octopus-creature",
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "owl",
+      "title": "Owl",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/Find%20Familiar/Owl.png",
+          "alt": "Owl",
+          "sourcePath": "100 Assets/Statblocks for Compendium/Find Familiar/Owl.png",
+          "sha256": "0c7e5330a496b899f5285553a921d5b6abc03be516ddee196dd50e7958aa17d3",
+          "width": 1514,
+          "height": 672
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/find-familiar",
+          "title": "Find Familiar",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Find Familiar.md",
+          "heading": "Owl",
+          "headingAnchor": "owl",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-20T12:32:21.069Z"
+        },
+        {
+          "slug": "creatures/creature-cards/owl-creature",
+          "title": "Owl",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Creature Cards/Owl - Creature.md",
+          "heading": "Original stat block",
+          "headingAnchor": "original-stat-block",
+          "kind": "checked-card",
+          "rulesStatus": "RAW + analysis",
+          "rulesVersion": "2024 with SRD 5.2.1 updates",
+          "updatedAt": "2026-09-20T12:32:21.062Z"
+        }
+      ],
+      "checkedCardSlug": "creatures/creature-cards/owl-creature",
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "pegasus",
+      "title": "Pegasus",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/Planar%20Binding%20Mount/Pegasus.png",
+          "alt": "Pegasus",
+          "sourcePath": "100 Assets/Statblocks for Compendium/Planar Binding Mount/Pegasus.png",
+          "sha256": "4c31a55cfe13d2a49a8f9fee8d9faa9d43e5958cc9d30b91cbaacd04806f2cc4",
+          "width": 1344,
+          "height": 506
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/planar-binding-mount",
+          "title": "Planar Binding Mounts",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Planar Binding Mount.md",
+          "heading": "Mount stat blocks",
+          "headingAnchor": "mount-stat-blocks",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-20T12:32:21.073Z"
+        },
+        {
+          "slug": "creatures/creature-cards/pegasus-creature",
+          "title": "Pegasus",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Creature Cards/Pegasus - Creature.md",
+          "heading": "Original stat block",
+          "headingAnchor": "original-stat-block",
+          "kind": "checked-card",
+          "rulesStatus": "RAW + analysis",
+          "rulesVersion": "2024 with SRD 5.2.1 updates",
+          "updatedAt": "2026-09-20T12:32:21.064Z"
+        }
+      ],
+      "checkedCardSlug": "creatures/creature-cards/pegasus-creature",
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "pit-fiend",
+      "title": "Pit Fiend",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/True%20Polymorph/Pit%20Fiend.png",
+          "alt": "Pit Fiend",
+          "sourcePath": "100 Assets/Statblocks for Compendium/True Polymorph/Pit Fiend.png",
+          "sha256": "d4be6497002a993ebfa155801bca22061e99c36335f2629d3abd9fd4263ebde8",
+          "width": 1682,
+          "height": 1554
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/shapechange",
+          "title": "Shapechange",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Shapechange.md",
+          "heading": "Anti-Caster Forms",
+          "headingAnchor": "anti-caster-forms",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-19T11:58:29.523Z"
+        },
+        {
+          "slug": "creatures/true-polymorph",
+          "title": "True Polymorph",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/True Polymorph.md",
+          "heading": "Tanks & Guardians",
+          "headingAnchor": "tanks--guardians",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-20T12:32:21.075Z"
+        }
+      ],
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "planetar",
+      "title": "Planetar",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/True%20Polymorph/Planetar.png",
+          "alt": "Planetar",
+          "sourcePath": "100 Assets/Statblocks for Compendium/True Polymorph/Planetar.png",
+          "sha256": "520392d7a005635401f6ac1cc8b0be9f210a88f1ba3f76ce54174a80d823b2ab",
+          "width": 1516,
+          "height": 1210
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/shapechange",
+          "title": "Shapechange",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Shapechange.md",
+          "heading": "Flying Forms",
+          "headingAnchor": "flying-forms",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-19T11:58:29.523Z"
+        },
+        {
+          "slug": "creatures/true-polymorph",
+          "title": "True Polymorph",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/True Polymorph.md",
+          "heading": "Flying & Transport",
+          "headingAnchor": "flying--transport",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-20T12:32:21.075Z"
+        },
+        {
+          "slug": "creatures/creature-cards/planetar-creature",
+          "title": "Planetar",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Creature Cards/Planetar - Creature.md",
+          "heading": "Original stat block",
+          "headingAnchor": "original-stat-block",
+          "kind": "checked-card",
+          "rulesStatus": "RAW + analysis",
+          "rulesVersion": "2024 with SRD 5.2.1 updates",
+          "updatedAt": "2026-09-20T12:32:21.065Z"
+        }
+      ],
+      "checkedCardSlug": "creatures/creature-cards/planetar-creature",
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "purple-worm",
+      "title": "Purple Worm",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/Shapechange/Purple%20Worm.png",
+          "alt": "Purple Worm",
+          "sourcePath": "100 Assets/Statblocks for Compendium/Shapechange/Purple Worm.png",
+          "sha256": "ec6f24d3da4f1f47c9f9d98648ffa87cb579623313fa18b228fcb2f8889be0aa",
+          "width": 576,
+          "height": 1552
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/shapechange",
+          "title": "Shapechange",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Shapechange.md",
+          "heading": "Burrowing Forms",
+          "headingAnchor": "burrowing-forms",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-19T11:58:29.523Z"
+        },
+        {
+          "slug": "creatures/creature-cards/purple-worm-creature",
+          "title": "Purple Worm",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Creature Cards/Purple Worm - Creature.md",
+          "heading": "Original stat block",
+          "headingAnchor": "original-stat-block",
+          "kind": "checked-card",
+          "rulesStatus": "RAW + analysis",
+          "rulesVersion": "2024 with SRD 5.2.1 updates",
+          "updatedAt": "2026-09-20T12:32:21.066Z"
+        }
+      ],
+      "checkedCardSlug": "creatures/creature-cards/purple-worm-creature",
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "remorhaz",
+      "title": "Remorhaz",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/Shapechange/Remorhaz.png",
+          "alt": "Remorhaz",
+          "sourcePath": "100 Assets/Statblocks for Compendium/Shapechange/Remorhaz.png",
+          "sha256": "5dbc864b109a0f0dfa718ebab6112b26b0db6d2fc878a11b8259251ec960715f",
+          "width": 1684,
+          "height": 1238
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/shapechange",
+          "title": "Shapechange",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Shapechange.md",
+          "heading": "Tanks & Defense",
+          "headingAnchor": "tanks--defense",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-19T11:58:29.523Z"
+        }
+      ],
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "roc",
+      "title": "Roc",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/Shapechange/Roc.png",
+          "alt": "Roc",
+          "sourcePath": "100 Assets/Statblocks for Compendium/Shapechange/Roc.png",
+          "sha256": "bf16f185c52f545c974ed8bcc0cf8a7a9bca3a3effc00fa12e894b0defda86bc",
+          "width": 1682,
+          "height": 894
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/shapechange",
+          "title": "Shapechange",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Shapechange.md",
+          "heading": "Flying Forms",
+          "headingAnchor": "flying-forms",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-19T11:58:29.523Z"
+        }
+      ],
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "shield-guardian",
+      "title": "Shield Guardian",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/True%20Polymorph/Shield%20Guardian.png",
+          "alt": "Shield Guardian",
+          "sourcePath": "100 Assets/Statblocks for Compendium/True Polymorph/Shield Guardian.png",
+          "sha256": "0e2b7326222119cb6fb13785cd829b57f5753552ca160e57d79cd76b2e1305cf",
+          "width": 1686,
+          "height": 1414
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/true-polymorph",
+          "title": "True Polymorph",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/True Polymorph.md",
+          "heading": "Created Utility Assets",
+          "headingAnchor": "created-utility-assets",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-20T12:32:21.075Z"
+        },
+        {
+          "slug": "creatures/creature-cards/shield-guardian-creature",
+          "title": "Shield Guardian",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Creature Cards/Shield Guardian - Creature.md",
+          "heading": "Original stat block",
+          "headingAnchor": "original-stat-block",
+          "kind": "checked-card",
+          "rulesStatus": "RAW + analysis",
+          "rulesVersion": "2024 with SRD 5.2.1 updates",
+          "updatedAt": "2026-09-20T12:32:21.066Z"
+        }
+      ],
+      "checkedCardSlug": "creatures/creature-cards/shield-guardian-creature",
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "skeleton",
+      "title": "Skeleton",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/Animate%20Dead/Skeleton.png",
+          "alt": "Skeleton",
+          "sourcePath": "100 Assets/Statblocks for Compendium/Animate Dead/Skeleton.png",
+          "sha256": "cf233e9334311f7eddba9799085603dd05a4c8267fd2457554b9c83c136487bc",
+          "width": 1502,
+          "height": 684
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/animate-dead-necromancer",
+          "title": "Animate Dead — Necromancer",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Animate Dead - Necromancer.md",
+          "heading": "Animate Dead operating limits",
+          "headingAnchor": "animate-dead-operating-limits",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-19T11:58:29.520Z"
+        }
+      ],
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "sphinx-of-valor",
+      "title": "Sphinx of Valor",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/True%20Polymorph/Sphinx%20of%20Valor.png",
+          "alt": "Sphinx of Valor",
+          "sourcePath": "100 Assets/Statblocks for Compendium/True Polymorph/Sphinx of Valor.png",
+          "sha256": "e31714ea3872afda17791a6e0db7b24aac55643e65e9bfe1c776aee1b6cd8960",
+          "width": 754,
+          "height": 998
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/shapechange",
+          "title": "Shapechange",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Shapechange.md",
+          "heading": "Tanks & Defense",
+          "headingAnchor": "tanks--defense",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-19T11:58:29.523Z"
+        },
+        {
+          "slug": "creatures/true-polymorph",
+          "title": "True Polymorph",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/True Polymorph.md",
+          "heading": "Tanks & Guardians",
+          "headingAnchor": "tanks--guardians",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-20T12:32:21.075Z"
+        }
+      ],
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "spider",
+      "title": "Spider",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/Find%20Familiar/Spider.png",
+          "alt": "Spider",
+          "sourcePath": "100 Assets/Statblocks for Compendium/Find Familiar/Spider.png",
+          "sha256": "c81681f2239e47f3c3a4b0bc8291b6cef927f0d180d1db2556b877224fe66212",
+          "width": 1514,
+          "height": 748
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/find-familiar",
+          "title": "Find Familiar",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Find Familiar.md",
+          "heading": "Spider",
+          "headingAnchor": "spider",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-20T12:32:21.069Z"
+        },
+        {
+          "slug": "creatures/creature-cards/spider-creature",
+          "title": "Spider",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Creature Cards/Spider - Creature.md",
+          "heading": "Original stat block",
+          "headingAnchor": "original-stat-block",
+          "kind": "checked-card",
+          "rulesStatus": "RAW + analysis",
+          "rulesVersion": "2024 with SRD 5.2.1 updates",
+          "updatedAt": "2026-09-20T12:32:21.067Z"
+        }
+      ],
+      "checkedCardSlug": "creatures/creature-cards/spider-creature",
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "stone-golem",
+      "title": "Stone Golem",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/True%20Polymorph/Stone%20Golem.png",
+          "alt": "Stone Golem",
+          "sourcePath": "100 Assets/Statblocks for Compendium/True Polymorph/Stone Golem.png",
+          "sha256": "6923ebdebd5811f8e36510023ac703950ce4590804c2b8b7111e6adf02a4e084",
+          "width": 1510,
+          "height": 878
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/true-polymorph",
+          "title": "True Polymorph",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/True Polymorph.md",
+          "heading": "Tanks & Guardians",
+          "headingAnchor": "tanks--guardians",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-20T12:32:21.075Z"
+        }
+      ],
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "succubus",
+      "title": "Succubus",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/True%20Polymorph/Succubus.png",
+          "alt": "Succubus",
+          "sourcePath": "100 Assets/Statblocks for Compendium/True Polymorph/Succubus.png",
+          "sha256": "6f15377bc5d6c6f4754b65d76032d56ca6dff4341a5a120a2825baa6b208e012",
+          "width": 1672,
+          "height": 1224
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/planar-binding-candidate",
+          "title": "Planar Binding Candidates",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Planar Binding Candidate.md",
+          "heading": "Candidate stat blocks",
+          "headingAnchor": "candidate-stat-blocks",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-20T12:32:21.071Z"
+        },
+        {
+          "slug": "creatures/true-polymorph",
+          "title": "True Polymorph",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/True Polymorph.md",
+          "heading": "Planar Binding Assets",
+          "headingAnchor": "planar-binding-assets",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-20T12:32:21.075Z"
+        }
+      ],
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "taisus",
+      "title": "Taisus",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/True%20Polymorph/Taisus.png",
+          "alt": "Taisus",
+          "sourcePath": "100 Assets/Statblocks for Compendium/True Polymorph/Taisus.png",
+          "sha256": "c32d1d820df4634f514a391b0bce05a606933be9d0a5b420ef780970f4c0e55f",
+          "width": 759,
+          "height": 724
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/shapechange",
+          "title": "Shapechange",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Shapechange.md",
+          "heading": "Special Senses",
+          "headingAnchor": "special-senses",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-19T11:58:29.523Z"
+        },
+        {
+          "slug": "creatures/true-polymorph",
+          "title": "True Polymorph",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/True Polymorph.md",
+          "heading": "Creature-to-Creature Specialists",
+          "headingAnchor": "creature-to-creature-specialists",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-20T12:32:21.075Z"
+        }
+      ],
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "transmuter-archmage",
+      "title": "Transmuter Archmage",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/Shapechange/Transmuter%20Archmage.png",
+          "alt": "Transmuter Archmage",
+          "sourcePath": "100 Assets/Statblocks for Compendium/Shapechange/Transmuter Archmage.png",
+          "sha256": "3d86fee6f329abf7fdefc90d7b1fb58b9bc58dac3917e0b04e53309a74c170d7",
+          "width": 758,
+          "height": 506
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/shapechange",
+          "title": "Shapechange",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Shapechange.md",
+          "heading": "Spellcasters",
+          "headingAnchor": "spellcasters",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-19T11:58:29.523Z"
+        }
+      ],
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "treant",
+      "title": "Treant",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/True%20Polymorph/Treant.png",
+          "alt": "Treant",
+          "sourcePath": "100 Assets/Statblocks for Compendium/True Polymorph/Treant.png",
+          "sha256": "9e476b0b46319bc412b78c3c42b587f47912d476411c7f14256ba4f9b221bd60",
+          "width": 1518,
+          "height": 920
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/true-polymorph",
+          "title": "True Polymorph",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/True Polymorph.md",
+          "heading": "Created Utility Assets",
+          "headingAnchor": "created-utility-assets",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-20T12:32:21.075Z"
+        }
+      ],
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "tyrannosaurus-rex",
+      "title": "Tyrannosaurus Rex",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/Polymorph/Tyrannosaurus%20Rex.png",
+          "alt": "Tyrannosaurus Rex",
+          "sourcePath": "100 Assets/Statblocks for Compendium/Polymorph/Tyrannosaurus Rex.png",
+          "sha256": "404597d08fb9eece150a12507c9840b989667525afc2912f6a10614608f38b66",
+          "width": 1686,
+          "height": 780
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/polymorph",
+          "title": "Polymorph",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Polymorph.md",
+          "heading": "Bruisers & Damage",
+          "headingAnchor": "bruisers--damage",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-20T12:32:21.074Z"
+        },
+        {
+          "slug": "creatures/creature-cards/tyrannosaurus-rex-creature",
+          "title": "Tyrannosaurus Rex",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Creature Cards/Tyrannosaurus Rex - Creature.md",
+          "heading": "Original stat block",
+          "headingAnchor": "original-stat-block",
+          "kind": "checked-card",
+          "rulesStatus": "RAW + analysis",
+          "rulesVersion": "2024 with SRD 5.2.1 updates",
+          "updatedAt": "2026-09-20T12:32:21.068Z"
+        }
+      ],
+      "checkedCardSlug": "creatures/creature-cards/tyrannosaurus-rex-creature",
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "undead-spirit",
+      "title": "Undead Spirit",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/Summoning/Undead%20Spirit.png",
+          "alt": "Undead Spirit",
+          "sourcePath": "100 Assets/Statblocks for Compendium/Summoning/Undead Spirit.png",
+          "sha256": "8e829c9cd0a4017c6017192beaf9566d4406bbdf7324a4061aa8be1153171e6f",
+          "width": 1198,
+          "height": 1062
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/summoning",
+          "title": "Summoning",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Summoning.md",
+          "heading": "Undead Spirit stat block",
+          "headingAnchor": "undead-spirit-stat-block",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-20T13:00:31.497Z"
+        }
+      ],
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "unicorn",
+      "title": "Unicorn",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/True%20Polymorph/Unicorn.png",
+          "alt": "Unicorn",
+          "sourcePath": "100 Assets/Statblocks for Compendium/True Polymorph/Unicorn.png",
+          "sha256": "1e50f918cb285f36a3227ca400b0760a87e59e072b2dd458d11452d2ed8ad20e",
+          "width": 1520,
+          "height": 1322
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/true-polymorph",
+          "title": "True Polymorph",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/True Polymorph.md",
+          "heading": "Planar Binding Assets",
+          "headingAnchor": "planar-binding-assets",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-20T12:32:21.075Z"
+        }
+      ],
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "venger",
+      "title": "Venger",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/True%20Polymorph/Venger.png",
+          "alt": "Venger",
+          "sourcePath": "100 Assets/Statblocks for Compendium/True Polymorph/Venger.png",
+          "sha256": "bc4ef3ce204cd0c646ae0bf4435af0801f8118b3bbfc3024fd7b0ec773c139bf",
+          "width": 759,
+          "height": 869
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/shapechange",
+          "title": "Shapechange",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Shapechange.md",
+          "heading": "Bruisers & Damage",
+          "headingAnchor": "bruisers--damage",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-19T11:58:29.523Z"
+        },
+        {
+          "slug": "creatures/true-polymorph",
+          "title": "True Polymorph",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/True Polymorph.md",
+          "heading": "Combat Forms",
+          "headingAnchor": "combat-forms",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-20T12:32:21.075Z"
+        }
+      ],
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "vrock",
+      "title": "Vrock",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/True%20Polymorph/Vrock.png",
+          "alt": "Vrock",
+          "sourcePath": "100 Assets/Statblocks for Compendium/True Polymorph/Vrock.png",
+          "sha256": "22d9e88a3a34557965ec478dd3e07d4fc279452fa95f02fecb4d68b50d08ec8b",
+          "width": 1344,
+          "height": 1506
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/planar-binding-candidate",
+          "title": "Planar Binding Candidates",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Planar Binding Candidate.md",
+          "heading": "Candidate stat blocks",
+          "headingAnchor": "candidate-stat-blocks",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-20T12:32:21.071Z"
+        },
+        {
+          "slug": "creatures/true-polymorph",
+          "title": "True Polymorph",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/True Polymorph.md",
+          "heading": "Planar Binding Assets",
+          "headingAnchor": "planar-binding-assets",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-20T12:32:21.075Z"
+        }
+      ],
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "water-elemental",
+      "title": "Water Elemental",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/True%20Polymorph/Water%20Elemental.png",
+          "alt": "Water Elemental",
+          "sourcePath": "100 Assets/Statblocks for Compendium/True Polymorph/Water Elemental.png",
+          "sha256": "24f8ddc7861e63884a896117a88995dffc46306d1b26df7ab4a64150fb461c7b",
+          "width": 1512,
+          "height": 1466
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/true-polymorph",
+          "title": "True Polymorph",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/True Polymorph.md",
+          "heading": "Aquatic Forms",
+          "headingAnchor": "aquatic-forms",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-20T12:32:21.075Z"
+        }
+      ],
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "wyvern",
+      "title": "Wyvern",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/True%20Polymorph/Wyvern.png",
+          "alt": "Wyvern",
+          "sourcePath": "100 Assets/Statblocks for Compendium/True Polymorph/Wyvern.png",
+          "sha256": "a7a7998d898dfc01e4c56bd0c765c46c6bfe85fbd313da2259ead585cf21e7de",
+          "width": 1512,
+          "height": 680
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/true-polymorph",
+          "title": "True Polymorph",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/True Polymorph.md",
+          "heading": "Flying & Transport",
+          "headingAnchor": "flying--transport",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-20T12:32:21.075Z"
+        }
+      ],
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "young-bronze-dragon",
+      "title": "Young Bronze Dragon",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/True%20Polymorph/Young%20Bronze%20Dragon.png",
+          "alt": "Young Bronze Dragon",
+          "sourcePath": "100 Assets/Statblocks for Compendium/True Polymorph/Young Bronze Dragon.png",
+          "sha256": "5f8297e5ac4e18f71703feb5f748ce7b09ffca6ffb4947ea4371592dab04e5b1",
+          "width": 1514,
+          "height": 838
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/true-polymorph",
+          "title": "True Polymorph",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/True Polymorph.md",
+          "heading": "Created Combat Assets",
+          "headingAnchor": "created-combat-assets",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-20T12:32:21.075Z"
+        }
+      ],
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "young-silver-dragon",
+      "title": "Young Silver Dragon",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/True%20Polymorph/Young%20Silver%20Dragon.png",
+          "alt": "Young Silver Dragon",
+          "sourcePath": "100 Assets/Statblocks for Compendium/True Polymorph/Young Silver Dragon.png",
+          "sha256": "852e38f589378a4884d42badebe93b57da7bc1038ccaa45101b5560fe4114d74",
+          "width": 1520,
+          "height": 846
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/true-polymorph",
+          "title": "True Polymorph",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/True Polymorph.md",
+          "heading": "Created Combat Assets",
+          "headingAnchor": "created-combat-assets",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-20T12:32:21.075Z"
+        }
+      ],
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "young-white-dragon",
+      "title": "Young White Dragon",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/True%20Polymorph/Young%20White%20Dragon.png",
+          "alt": "Young White Dragon",
+          "sourcePath": "100 Assets/Statblocks for Compendium/True Polymorph/Young White Dragon.png",
+          "sha256": "81587a2f195f98ac57e3f975edb6b6712c2450a84a08809bb28c39f13a017981",
+          "width": 1520,
+          "height": 794
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/true-polymorph",
+          "title": "True Polymorph",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/True Polymorph.md",
+          "heading": "Created Combat Assets",
+          "headingAnchor": "created-combat-assets",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-20T12:32:21.075Z"
+        }
+      ],
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    },
+    {
+      "slug": "zombie",
+      "title": "Zombie",
+      "images": [
+        {
+          "url": "/vault-assets/100%20Assets/Statblocks%20for%20Compendium/Animate%20Dead/Zombie.png",
+          "alt": "Zombie",
+          "sourcePath": "100 Assets/Statblocks for Compendium/Animate Dead/Zombie.png",
+          "sha256": "dd923e5b1551fc7445e99237cd91cee4c0da2bf594f90643b6c7c1a3ea885fde",
+          "width": 1502,
+          "height": 748
+        }
+      ],
+      "sources": [
+        {
+          "slug": "creatures/animate-dead-necromancer",
+          "title": "Animate Dead — Necromancer",
+          "sectionLabel": "Creatures & forms",
+          "sourcePath": "005 Creature, Minions & Forms/Animate Dead - Necromancer.md",
+          "heading": "Animate Dead operating limits",
+          "headingAnchor": "animate-dead-operating-limits",
+          "kind": "gallery",
+          "rulesStatus": "Mixed / review required",
+          "rulesVersion": "Mixed; use the source version in the note",
+          "updatedAt": "2026-09-19T11:58:29.520Z"
+        }
+      ],
+      "metadata": {
+        "kind": "gallery-reference",
+        "rules_status": "Inherited gallery / review required",
+        "rules_version": "Mixed; use the edition in the original stat block and source note",
+        "verification_status": "metadata-not-reviewed",
+        "verification": "Gallery reference; metadata not reviewed",
+        "verification_scope": "Images and source locations preserved; no stat extraction or eligibility review",
+        "provenance": "Original stat-block image embedded in the imported Obsidian vault"
+      }
+    }
+  ]
+}

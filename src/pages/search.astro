@@ -2,17 +2,99 @@
 import BaseLayout from '@/components/layout/BaseLayout.astro';
 import {getSections,hrefFor} from '@/lib/vault';
 ---
-<BaseLayout title="Search the compendium" active="search"><div class="page-shell search-page"><header class="page-header"><p class="eyebrow">FIND THE RIGHT ANSWER</p><h1>Search the compendium</h1><p>Search every spell, build, table, and reference.</p></header><form class="filter-bar" role="search" data-full-search><label class="field-label"><span>Search</span><input class="field" type="search" name="q" data-search-input placeholder="A spell, a problem, a rule…" autocomplete="off" autofocus/></label><label class="field-label"><span>Section</span><select class="field" name="section"><option value="">Everything</option>{getSections().filter(s=>s.id!=='inbox').map(s=><option value={s.id}>{s.label}</option>)}</select></label><button class="button button--primary" type="submit">Search</button></form><p class="control-note" role="status" aria-live="polite" data-search-status>Enter a name or phrase to begin.</p><div data-search-results class="search-results"></div><div data-search-intro><p class="eyebrow">QUICK REFERENCES</p><div class="related-links">{['Spell Progression Hub','Combat Dashboard','Concentration','Countering Spellcasters','Rules Desk'].map(name=><a href={hrefFor(name)}>{name}<span aria-hidden="true">↗</span></a>)}</div></div><button class="button" type="button" data-search-retry hidden>Retry search</button><noscript><p>Full-text search needs JavaScript. You can <a href="/library/">browse every reference in the library</a>.</p></noscript></div>
+<BaseLayout title="Search the compendium" active="search"><div class="page-shell search-page"><header class="page-header"><p class="eyebrow">FIND THE RIGHT ANSWER</p><h1>Search the compendium</h1><p>Search every spell, build, table, and reference.</p></header><form class="filter-bar" role="search" data-full-search><label class="field-label"><span>Search</span><input class="field" type="search" name="q" data-search-input placeholder="A spell, a problem, a rule…" autocomplete="off" autofocus/></label><label class="field-label"><span>Section</span><select class="field" name="section"><option value="">Everything</option>{getSections().filter(s=>s.id!=='inbox').map(s=><option value={s.id}>{s.label}</option>)}</select></label><button class="button button--primary" type="submit">Search</button></form><p class="control-note" role="status" aria-live="polite" data-search-status>Enter a name or phrase to begin.</p><div data-search-results class="search-results"></div><div class="toolbar" data-search-pagination hidden><button class="button" type="button" data-search-more>Show more results</button><span class="control-note" data-search-remaining></span></div><div data-search-intro><p class="eyebrow">QUICK REFERENCES</p><div class="related-links">{['Spell Progression Hub','Combat Dashboard','Concentration','Countering Spellcasters','Rules Desk'].map(name=><a href={hrefFor(name)}>{name}<span aria-hidden="true">↗</span></a>)}</div></div><button class="button" type="button" data-search-retry hidden>Retry search</button><noscript><p>Full-text search needs JavaScript. You can <a href="/library/">browse every reference in the library</a>.</p></noscript></div>
   <script>
     import {indexSearch,normalizeSearch,searchRecords,type IndexedRecord,type SearchRecord} from '@/lib/search';
-    const form=document.querySelector<HTMLFormElement>('[data-full-search]')!,input=form.elements.namedItem('q') as HTMLInputElement,section=form.elements.namedItem('section') as HTMLSelectElement;
-    const output=document.querySelector('[data-search-results]')!,status=document.querySelector('[data-search-status]')!,intro=document.querySelector<HTMLElement>('[data-search-intro]')!,retry=document.querySelector<HTMLButtonElement>('[data-search-retry]')!;
-    const params=new URLSearchParams(location.search);input.value=params.get('q')??'';section.value=params.get('section')??'';
+    const pageSize=50;
+    const form=document.querySelector<HTMLFormElement>('[data-full-search]')!;
+    const input=form.elements.namedItem('q') as HTMLInputElement;
+    const section=form.elements.namedItem('section') as HTMLSelectElement;
+    const output=document.querySelector('[data-search-results]')!;
+    const status=document.querySelector('[data-search-status]')!;
+    const intro=document.querySelector<HTMLElement>('[data-search-intro]')!;
+    const retry=document.querySelector<HTMLButtonElement>('[data-search-retry]')!;
+    const pagination=document.querySelector<HTMLElement>('[data-search-pagination]')!;
+    const more=document.querySelector<HTMLButtonElement>('[data-search-more]')!;
+    const remaining=document.querySelector('[data-search-remaining]')!;
+    type HistoryMode='replace'|'push'|'none';
     let records:IndexedRecord[]|undefined,pending:Promise<void>|undefined,revision=0,timer:number;
-    async function run(){const current=++revision;const raw=input.value.trim();const q=normalizeSearch(raw);const url=new URL(location.href);for(const[k,v]of[['q',raw],['section',section.value]]){if(v)url.searchParams.set(k,v);else url.searchParams.delete(k);}history.replaceState(null,'',url);retry.hidden=true;intro.hidden=!!q;output.replaceChildren();if(!q){status.textContent='Enter a name or phrase to begin.';return;}status.textContent='Searching…';
-      try{if(!records){pending??=fetch('/search-index.json').then(async r=>{if(!r.ok)throw Error();records=indexSearch(await r.json() as SearchRecord[]);}).finally(()=>{pending=undefined});await pending;}if(current!==revision)return;const found=searchRecords(records!,raw,section.value);status.textContent=`${found.length} result${found.length===1?'':'s'}${found.length>100?' · showing the first 100':''}`;
-        for(const r of found.slice(0,100)){const article=document.createElement('article');article.className='search-result';const label=document.createElement('span');label.className='eyebrow';label.textContent=r.sectionLabel;const h=document.createElement('h2');const a=document.createElement('a');a.href=r.url;a.textContent=r.title;h.append(a);const p=document.createElement('p');const lower=r.text.toLowerCase(),at=lower.indexOf(raw.toLowerCase());p.textContent=at>=0?`${at>60?'…':''}${r.text.slice(Math.max(0,at-60),at+190)}…`:r.summary;article.append(label,h,p);output.append(article);}if(!found.length){const p=document.createElement('p');p.textContent='No matches. Try fewer words or a different section.';output.append(p);}
-      }catch{if(current!==revision)return;status.textContent='Search could not load. Your query is still here; try again.';retry.hidden=false;}}
-    form.addEventListener('submit',e=>{e.preventDefault();void run()});form.addEventListener('input',()=>{clearTimeout(timer);timer=window.setTimeout(()=>void run(),120)});retry.addEventListener('click',()=>void run());if(input.value)void run();
+    let currentPage=1;
+
+    function readLocation(){
+      const params=new URLSearchParams(location.search);
+      input.value=params.get('q')??'';
+      section.value=params.get('section')??'';
+      const page=Number(params.get('page')??1);
+      return Number.isSafeInteger(page)&&page>0?page:1;
+    }
+
+    function writeLocation(mode:HistoryMode,page:number){
+      if(mode==='none')return;
+      const url=new URL(location.href);
+      for(const[key,value]of[['q',input.value.trim()],['section',section.value],['page',page>1?String(page):'']]){
+        if(value)url.searchParams.set(key,value);else url.searchParams.delete(key);
+      }
+      if(url.href!==location.href){
+        if(mode==='push')history.pushState(null,'',url);else history.replaceState(null,'',url);
+      }
+    }
+
+    async function run(page=1,mode:HistoryMode='replace',focusNewResults=false){
+      const current=++revision;
+      const previousCount=output.querySelectorAll('article').length;
+      const raw=input.value.trim(),q=normalizeSearch(raw),filter=section.value;
+      currentPage=page;
+      writeLocation(mode,page);
+      retry.hidden=true;
+      pagination.hidden=true;
+      intro.hidden=!!q;
+      output.replaceChildren();
+      if(!q){currentPage=1;writeLocation('replace',1);status.textContent='Enter a name or phrase to begin.';return;}
+      status.textContent='Searching…';
+      try{
+        if(!records){
+          pending??=fetch('/search-index.json').then(async response=>{
+            if(!response.ok)throw Error();
+            records=indexSearch(await response.json() as SearchRecord[]);
+          }).finally(()=>{pending=undefined});
+          await pending;
+        }
+        if(current!==revision)return;
+        const found=searchRecords(records!,raw,filter);
+        currentPage=Math.min(page,Math.max(1,Math.ceil(found.length/pageSize)));
+        if(currentPage!==page)writeLocation('replace',currentPage);
+        const visibleCount=Math.min(found.length,currentPage*pageSize);
+        status.textContent=`${found.length} result${found.length===1?'':'s'}${found.length>pageSize?` · showing ${visibleCount} of ${found.length}`:''}`;
+        const fragment=document.createDocumentFragment();
+        for(const record of found.slice(0,visibleCount)){
+          const article=document.createElement('article');article.className='search-result';
+          const label=document.createElement('span');label.className='eyebrow';label.textContent=record.sectionLabel;
+          const heading=document.createElement('h2');
+          const link=document.createElement('a');link.href=record.url;link.textContent=record.title;heading.append(link);
+          const snippet=document.createElement('p');
+          const at=record.text.toLowerCase().indexOf(raw.toLowerCase());
+          snippet.textContent=at>=0?`${at>60?'…':''}${record.text.slice(Math.max(0,at-60),at+190)}…`:record.summary;
+          article.append(label,heading,snippet);fragment.append(article);
+        }
+        output.append(fragment);
+        pagination.hidden=visibleCount>=found.length;
+        remaining.textContent=`${found.length-visibleCount} more results`;
+        if(!found.length){const message=document.createElement('p');message.textContent='No matches. Try fewer words or a different section.';output.append(message);}
+        if(focusNewResults){output.querySelectorAll<HTMLAnchorElement>('h2 a')[previousCount]?.focus();}
+      }catch{
+        if(current!==revision)return;
+        status.textContent='Search could not load. Your query is still here; try again.';
+        retry.hidden=false;
+      }
+    }
+
+    form.addEventListener('submit',event=>{event.preventDefault();clearTimeout(timer);void run(1,'push');});
+    form.addEventListener('input',()=>{clearTimeout(timer);timer=window.setTimeout(()=>void run(),120);});
+    section.addEventListener('change',()=>{clearTimeout(timer);void run();});
+    more.addEventListener('click',()=>{clearTimeout(timer);void run(currentPage+1,'push',true);});
+    retry.addEventListener('click',()=>void run(currentPage));
+    window.addEventListener('popstate',()=>{clearTimeout(timer);void run(readLocation(),'none');});
+    const initialPage=readLocation();
+    void run(initialPage);
   </script>
 </BaseLayout>

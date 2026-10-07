@@ -2,7 +2,7 @@
 
 An Astro website built from the expanded Obsidian compendium. The current import contains **422 complete notes**, including **208 spell cards, 51 magic-item cards, 20 creature cards, 35 core spell progressions**, and the optional Illusion Adept configuration. All 110 source images and the reference PDF are preserved.
 
-The website provides searchable spell, item, and form catalogues, comparisons, builds, tier lists, linked reference pages, saved references, and an editable PDF character sheet. Rules, analysis, edition labels, access conditions, and verification limits come from the source notes. Importing a note does not independently verify its rules.
+The website provides searchable spell, item, and form catalogues, comparisons, builds, tier lists, linked reference pages, saved references, calculators, and an editable PDF character sheet. The form finder covers all **82 creatures embedded in the vault's galleries**: 20 metadata-checked cards and 62 image-transcribed references. It displays senses, original images, stat-block conditions, and explicit review status. Gallery placement does not grant spell eligibility. Rules, analysis, edition labels, access conditions, and verification limits come from the source notes. Importing a note does not independently verify its rules.
 
 ## Run locally
 
@@ -39,7 +39,9 @@ To check that generated files match the vault without writing anything:
 node scripts/import-vault.mjs --source="/absolute/path/to/Wizard Compendium Vault" --check
 ```
 
-Make content changes in the Obsidian vault, then import again. `src/content/vault/`, `src/data/vault-index.json`, `src/data/vault-audit.json`, `vault-source/`, and `public/vault-assets/` are generated outputs. Local changes to these generated files will be replaced by the next import.
+Make content changes in the Obsidian vault, then import again. `src/content/vault/`, `src/data/vault-index.json`, `src/data/vault-audit.json`, `src/data/form-gallery.json`, `vault-source/`, and `public/vault-assets/` are generated outputs. Local changes to these generated files will be replaced by the next import. The sync command also rebuilds the gallery inventory and forwards a custom source path to the importer.
+
+The separately reviewed `src/data/gallery-stats-*.json` files contain core-stat transcriptions pinned to the original image hashes. Changed images require a fresh visual review; they cannot silently reuse stale statistics. These records are not independently D&D Beyond-verified and never generate spell-eligibility flags. Conditional values (including summoned-creature CR, AC, HP, or variant movement) remain unset and explained in notes.
 
 Every note is imported in full, including templates and additional references. The importer converts wiki links, heading and block references, callouts, and asset embeds into web equivalents. Obsidian catalogue definitions become complete reference tables and finder links; Dataview queries become static tables. It does not execute Obsidian plugins or code.
 
@@ -59,6 +61,8 @@ Source snapshots retain original Markdown and catalogue definitions; asset copie
 | Homepage and task shortcuts | `src/pages/index.astro` |
 | Reference reader | `src/pages/library/[...slug].astro` |
 | Spell, item, and form finders | `src/components/Catalog.astro`, `src/lib/catalog.ts` |
+| Embedded creature gallery and reviewed image transcriptions | `scripts/build-form-gallery.mjs`, `src/lib/form-gallery.ts`, `src/lib/form-stats.ts`, `src/data/gallery-stats-*.json` |
+| Saving throws, known saves, Concentration, expected damage, component costs | `src/pages/tools/index.astro`, `src/lib/calculators.ts` |
 | Build progression matrix | `src/pages/builds/index.astro` |
 | Comparison | `src/pages/compare.astro` |
 | Search | `src/pages/search.astro`, `src/pages/search-index.json.ts` |

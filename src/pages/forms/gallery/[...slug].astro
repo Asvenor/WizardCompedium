@@ -1,0 +1,65 @@
+---
+import BaseLayout from '@/components/layout/BaseLayout.astro';
+import {getFormGallery,gallerySourceHref,formGalleryInfo} from '@/lib/form-gallery';
+import {getGalleryStats} from '@/lib/form-stats';
+import {catalogValue,catalogColumns} from '@/lib/catalog';
+
+export function getStaticPaths(){
+  return getFormGallery().filter(entry=>!entry.checkedCardSlug).map(entry=>({params:{slug:entry.slug},props:{entry}}));
+}
+const {entry}=Astro.props;
+const gallerySources=entry.sources.filter(source=>source.kind==='gallery');
+const stats=getGalleryStats(entry);
+const reference={...entry,metadata:{...entry.metadata,...stats},section:'creatures',sectionLabel:'Creatures & forms',type:'creature',summary:'',id:entry.slug,sourcePath:'',updatedAt:'',links:[],backlinks:[]};
+const displayDate=(value:string)=>new Intl.DateTimeFormat('en-GB',{dateStyle:'long',timeZone:'Europe/Zurich'}).format(new Date(value));
+---
+<BaseLayout title={`${entry.title} · Gallery reference`} description={`Original ${entry.title} stat-block image, recorded core statistics, and preserved vault gallery context. Spell eligibility still needs review.`} active="forms">
+  <article class="page-shell gallery-reference">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/forms/">Form Finder</a><span aria-hidden="true">/</span><span>Gallery reference</span></nav>
+    <header class="page-header">
+      <p class="eyebrow">CREATURES &amp; FORMS</p><h1>{entry.title}</h1>
+      <p class="gallery-summary">The original stat block from your compendium, with its gallery context preserved.</p>
+      <div class="toolbar"><a class="button" href="/forms/">← Back to form finder</a><button class="button" type="button" data-print-gallery>Print reference</button></div>
+    </header>
+    <aside class="context-notice" aria-labelledby="gallery-review-heading">
+      <h2 id="gallery-review-heading">{stats?'Image-transcribed stats; eligibility not reviewed':'Gallery reference; metadata not reviewed'}</h2>
+      <p>{stats?'The core statistics below were transcribed and visually checked against this preserved image. Conditional values remain unfixed; read the stat-block conditions. This is not a complete-ability audit or confirmation of the current rules edition.':'The original image is preserved; its statistics have not been transcribed or reviewed.'}</p><p>A gallery placement is a navigation category—not confirmation that a spell can use this creature. Check the image’s edition and the <a href="/library/creatures/form-legality-guide/">Form Legality Guide</a> before use.</p>
+    </aside>
+    {stats&&<section class="tool-panel" aria-labelledby="recorded-stats-heading"><h2 id="recorded-stats-heading">Recorded core statistics</h2><dl class="gallery-core-stats">{catalogColumns.forms.filter(column=>!['routes','review'].includes(column.key)).map(column=><div><dt>{column.label}</dt><dd>{catalogValue(reference,column.key)}</dd></div>)}</dl>{stats.transcription_notes.length>0&&<><h3>Stat-block conditions</h3><ul>{stats.transcription_notes.map(note=><li>{note}</li>)}</ul></>}</section>}
+    <section class="gallery-images" aria-labelledby="stat-block-heading">
+      <h2 id="stat-block-heading">Original stat block{entry.images.length>1?'s':''}</h2>
+      {entry.images.map((image,index)=><figure class="stat-block-reference">
+        <img src={image.url} alt={`${entry.title} stat block${entry.images.length>1?` — image ${index+1}`:''}`} width={image.width} height={image.height} loading={index===0?'eager':'lazy'} decoding="async" />
+        <figcaption><span>{entry.images.length>1?`Original image ${index+1}`:'Original gallery image'} · preserved without rewriting</span><a href={image.url} target="_blank" rel="noopener noreferrer">Open full-size image <span class="sr-only">in a new tab</span><span aria-hidden="true">↗</span></a></figcaption>
+      </figure>)}
+    </section>
+    <section class="reference-card gallery-context" aria-labelledby="gallery-sources-heading">
+      <h2 id="gallery-sources-heading">In the compendium</h2>
+      <p>Return to the original gallery for its surrounding advice, restrictions, and source links. These categories are preserved from the vault.</p>
+      <ul class="gallery-source-list">{gallerySources.map(source=><li><a href={gallerySourceHref(source)}>{source.title}<span>{source.heading||'Stat-block gallery'}</span></a><small>{source.rulesStatus}</small></li>)}</ul>
+    </section>
+    <details class="source-details">
+      <summary>Sources, edition &amp; updates</summary>
+      <dl><dt>Evidence</dt><dd>{stats?'Core statistics checked against the original image; inherited source rules require review':'Inherited stat-block gallery; review required'}</dd><dt>Rules version</dt><dd>Mixed. Use the edition shown in the image and each source note.</dd><dt>Review scope</dt><dd>{stats?.verification_scope??'Image and source locations preserved. No extracted statistics or eligibility review.'}</dd><dt>Website snapshot</dt><dd><time datetime={formGalleryInfo.importedAt}>{displayDate(formGalleryInfo.importedAt)}</time></dd></dl>
+      <p>Snapshot dates show when the website copy changed, not when every rule was checked. <a href="/guide/#keeping-current">How updates reach the website</a>.</p>
+    </details>
+  </article>
+  <script>document.querySelector('[data-print-gallery]')?.addEventListener('click',()=>window.print());</script>
+</BaseLayout>
+<style>
+  .gallery-reference{max-width:1100px}.gallery-summary{max-width:70ch;color:var(--ink-soft)}
+  .gallery-core-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem}.gallery-core-stats dt{color:var(--ink-faint);font-size:.8rem}.gallery-core-stats dd{margin:.2rem 0 0}.tool-panel{margin-bottom:2rem}
+  .page-header .toolbar{justify-content:flex-start;gap:.65rem;margin-top:1.3rem}
+  .gallery-images h2{font-size:1.65rem;margin:0 0 1.2rem}
+  .stat-block-reference{margin:0 0 1.8rem;padding:1rem;border:1px solid var(--line);border-radius:var(--radius-lg);background:var(--surface)}
+  .stat-block-reference img{display:block;width:auto;max-width:100%;height:auto;margin-inline:auto}
+  .stat-block-reference figcaption{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem 1rem;padding-top:1rem;margin-top:1rem;border-top:1px solid var(--line);font-size:.78rem;color:var(--ink-faint)}
+  .stat-block-reference figcaption a{font-weight:600;white-space:nowrap}.stat-block-reference figcaption a>span[aria-hidden]{margin-left:.4rem}
+  .gallery-context>p{font-size:.9rem;color:var(--ink-soft);max-width:75ch}
+  .gallery-source-list{list-style:none;padding:0;margin:1.2rem 0 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.6rem 1.5rem}
+  .gallery-source-list li{min-width:0;padding:.65rem 0;border-top:1px solid var(--line)}
+  .gallery-source-list a{font-weight:650;display:block}.gallery-source-list a span{display:block;font-size:.83rem;font-weight:400;color:var(--ink-soft);margin-top:.15rem}
+  .gallery-source-list small{display:block;font-size:.74rem;color:var(--ink-faint);margin-top:.2rem}
+  @media(max-width:640px){.stat-block-reference{padding:.65rem}.gallery-source-list{grid-template-columns:1fr}.gallery-core-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.page-header .toolbar{gap:.5rem}.page-header .toolbar .button{font-size:.8rem}}
+  @media print{.page-header .toolbar,.stat-block-reference figcaption a{display:none}.stat-block-reference{border:0;padding:0;break-inside:avoid}.gallery-source-list{display:block}.context-notice{background:transparent}}
+</style>

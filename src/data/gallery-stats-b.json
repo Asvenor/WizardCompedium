@@ -1,0 +1,102 @@
+{
+  "diviner-archmage": {
+    "metadata": {"cr":15,"creature_type":"Humanoid","size":"Medium or Small","ac":16,"hp":176,"walk_ft":30,"fly_ft":null,"swim_ft":null,"climb_ft":null,"burrow_ft":null,"hover":null,"senses":"Truesight 60 ft.; Passive Perception 17"},
+    "imageSha256":"d80a95dca0b67668c164bc9db42ca4518a40f1959495481c8ec55d805b357daf",
+    "notes":["Basic statistics manually checked against the embedded image, not independently DDB-verified. Size is printed as Medium Or Small; Humanoid has the Wizard tag. Printed AC includes Mage Armor. Unlisted movement modes and hover remain null; no eligibility inference."]
+  },
+  "djinni": {
+    "metadata": {"cr":11,"creature_type":"Elemental","size":"Large","ac":17,"hp":218,"walk_ft":30,"fly_ft":90,"swim_ft":null,"climb_ft":null,"burrow_ft":null,"hover":true,"senses":"Darkvision 120 ft.; Passive Perception 13"},
+    "imageSha256":"58613858a23c52bc8d7c0b74026db43beacc415246fb6fa5c3e732f888dc0e8a",
+    "notes":["Basic statistics manually checked against the embedded image, not independently DDB-verified. Elemental has the Genie tag. Fly speed explicitly includes hover. Unlisted movement modes remain null; no eligibility inference."]
+  },
+  "dragon-turtle": {
+    "metadata": {"cr":17,"creature_type":"Dragon","size":"Gargantuan","ac":20,"hp":356,"walk_ft":20,"fly_ft":null,"swim_ft":50,"climb_ft":null,"burrow_ft":null,"hover":null,"senses":"Darkvision 120 ft.; Passive Perception 11"},
+    "imageSha256":"36340620ccfac9035e6cb882e1dfc9fedc14759d5bc7f6d95bd67e28afd53465",
+    "notes":["Basic statistics manually checked against the embedded image, not independently DDB-verified. Unlisted movement modes and hover remain null; no eligibility inference."]
+  },
+  "elephant": {
+    "metadata": {"cr":4,"creature_type":"Beast","size":"Huge","ac":12,"hp":76,"walk_ft":40,"fly_ft":null,"swim_ft":null,"climb_ft":null,"burrow_ft":null,"hover":null,"senses":"Passive Perception 10"},
+    "imageSha256":"039ed0c84476000c277fff29b4d2ad97739225b7f0118531f4b82fa0d38f3553",
+    "notes":["Basic statistics manually checked against the embedded image, not independently DDB-verified. Unlisted movement modes and hover remain null; no eligibility inference."]
+  },
+  "enchanter-archmage": {
+    "metadata": {"cr":15,"creature_type":"Humanoid","size":"Medium or Small","ac":16,"hp":214,"walk_ft":30,"fly_ft":null,"swim_ft":null,"climb_ft":null,"burrow_ft":null,"hover":null,"senses":"Passive Perception 17"},
+    "imageSha256":"88e57e94a2ffe76d66e1885e76c30f09c5c273b276fe290631e0b732d8fb139b",
+    "notes":["Basic statistics manually checked against the embedded image, not independently DDB-verified. Size is printed as Medium Or Small; Humanoid has the Wizard tag. Printed AC includes Mage Armor. Unlisted movement modes and hover remain null; no eligibility inference."]
+  },
+  "erinyes": {
+    "metadata": {"cr":12,"creature_type":"Fiend","size":"Medium","ac":18,"hp":178,"walk_ft":30,"fly_ft":60,"swim_ft":null,"climb_ft":null,"burrow_ft":null,"hover":null,"senses":"Truesight 120 ft.; Passive Perception 16"},
+    "imageSha256":"d580a398b2d19a0b3be262c864032abc4a3f939d173bf3c9cc7ac39df42733ed",
+    "notes":["Basic statistics manually checked against the embedded image, not independently DDB-verified. Fiend has the Devil tag. Unlisted movement modes and hover remain null; no eligibility inference."]
+  },
+  "evoker-archmage": {
+    "metadata": {"cr":15,"creature_type":"Humanoid","size":"Medium or Small","ac":16,"hp":214,"walk_ft":30,"fly_ft":30,"swim_ft":null,"climb_ft":null,"burrow_ft":null,"hover":null,"senses":"Passive Perception 17"},
+    "imageSha256":"8b0a7e03c3f7ac96cf271ec4e3bf5b46be9c7f68a6242c1c88a974567bdb8268",
+    "notes":["Basic statistics manually checked against the embedded image, not independently DDB-verified. Size is printed as Medium Or Small; Humanoid has the Wizard tag. Printed AC includes Mage Armor. Unlisted movement modes and hover remain null; no eligibility inference."]
+  },
+  "fire-elemental": {
+    "metadata": {"cr":5,"creature_type":"Elemental","size":"Large","ac":13,"hp":93,"walk_ft":50,"fly_ft":null,"swim_ft":null,"climb_ft":null,"burrow_ft":null,"hover":null,"senses":"Darkvision 60 ft.; Passive Perception 10"},
+    "imageSha256":"2a899a2aefa9dde6d65fc13934f019cc4d179c3ad3582e7a904551c86437f332",
+    "notes":["Basic statistics manually checked against the embedded image, not independently DDB-verified. Unlisted movement modes and hover remain null; no eligibility inference."]
+  },
+  "flesh-golem": {
+    "metadata": {"cr":5,"creature_type":"Construct","size":"Medium","ac":9,"hp":127,"walk_ft":30,"fly_ft":null,"swim_ft":null,"climb_ft":null,"burrow_ft":null,"hover":null,"senses":"Darkvision 60 ft.; Passive Perception 10"},
+    "imageSha256":"01bfd250941f7da774d2c9232d029bcdd4bf13daaf8ef08272417a2b5159188f",
+    "notes":["Basic statistics manually checked against the embedded image, not independently DDB-verified. Unlisted movement modes and hover remain null; no eligibility inference."]
+  },
+  "frost-giant": {
+    "metadata": {"cr":8,"creature_type":"Giant","size":"Huge","ac":15,"hp":149,"walk_ft":40,"fly_ft":null,"swim_ft":null,"climb_ft":null,"burrow_ft":null,"hover":null,"senses":"Passive Perception 13"},
+    "imageSha256":"bdea831e2e3e98201fc55893822c773d444dc030543ea43d90f4479fb7bcb68e",
+    "notes":["Basic statistics manually checked against the embedded image, not independently DDB-verified. Unlisted movement modes and hover remain null; no eligibility inference."]
+  },
+  "giant-badger": {
+    "metadata": {"cr":0.25,"creature_type":"Beast","size":"Medium","ac":13,"hp":15,"walk_ft":30,"fly_ft":null,"swim_ft":null,"climb_ft":null,"burrow_ft":10,"hover":null,"senses":"Darkvision 60 ft.; Passive Perception 13"},
+    "imageSha256":"65957c7f6533d9bbc6d7b5863fdc14ea2f8a88af1f8568af7aa082c3ef3b5ff4",
+    "notes":["Basic statistics manually checked against the embedded image, not independently DDB-verified. Printed CR 1/4 is stored numerically as 0.25. Unlisted movement modes and hover remain null; no eligibility inference."]
+  },
+  "giant-crocodile": {
+    "metadata": {"cr":5,"creature_type":"Beast","size":"Huge","ac":14,"hp":85,"walk_ft":30,"fly_ft":null,"swim_ft":50,"climb_ft":null,"burrow_ft":null,"hover":null,"senses":"Passive Perception 10"},
+    "imageSha256":"42a53399f48fd1447b9fc7229298118e400054b43b253107cf2cd97bbfe1bc3c",
+    "notes":["Basic statistics manually checked against the embedded image, not independently DDB-verified. Unlisted movement modes and hover remain null; no eligibility inference."]
+  },
+  "glabrezu": {
+    "metadata": {"cr":9,"creature_type":"Fiend","size":"Large","ac":17,"hp":189,"walk_ft":40,"fly_ft":null,"swim_ft":null,"climb_ft":null,"burrow_ft":null,"hover":null,"senses":"Truesight 120 ft.; Passive Perception 17"},
+    "imageSha256":"fb0fc7cb02a57db2e7f2c483073a95b0eabf891b26153d767a092ec80da4bf02",
+    "notes":["Basic statistics manually checked against the embedded image, not independently DDB-verified. Fiend has the Demon tag. Unlisted movement modes and hover remain null; no eligibility inference."]
+  },
+  "hezrou": {
+    "metadata": {"cr":8,"creature_type":"Fiend","size":"Large","ac":18,"hp":157,"walk_ft":30,"fly_ft":null,"swim_ft":null,"climb_ft":null,"burrow_ft":null,"hover":null,"senses":"Darkvision 120 ft.; Passive Perception 11"},
+    "imageSha256":"b3e2f2f705127d3b5b31c449239f30e8a6933a49bb41d7def77af0c2bda10332",
+    "notes":["Basic statistics manually checked against the embedded image, not independently DDB-verified. Fiend has the Demon tag. Unlisted movement modes and hover remain null; no eligibility inference."]
+  },
+  "illusionist-archmage": {
+    "metadata": {"cr":15,"creature_type":"Humanoid","size":"Medium or Small","ac":16,"hp":220,"walk_ft":30,"fly_ft":null,"swim_ft":null,"climb_ft":null,"burrow_ft":null,"hover":null,"senses":"Passive Perception 17"},
+    "imageSha256":"4fd2fea7189250d8145c780b888e5b90327fbc2d4cb50020d99b2546c7ef3643",
+    "notes":["Basic statistics manually checked against the embedded image, not independently DDB-verified. Size is printed as Medium Or Small; Humanoid has the Wizard tag. Printed AC includes Mage Armor. Unlisted movement modes and hover remain null; no eligibility inference."]
+  },
+  "killer-whale": {
+    "metadata": {"cr":3,"creature_type":"Beast","size":"Huge","ac":12,"hp":90,"walk_ft":5,"fly_ft":null,"swim_ft":60,"climb_ft":null,"burrow_ft":null,"hover":null,"senses":"Blindsight 120 ft.; Passive Perception 13"},
+    "imageSha256":"90d1784439fc58f61c03cb9b062fd9349aa236bc8190987ce809e1e67b85e7c9",
+    "notes":["Basic statistics manually checked against the embedded image, not independently DDB-verified. Unlisted movement modes and hover remain null; no eligibility inference."]
+  },
+  "kuo-toa-archpriest": {
+    "metadata": {"cr":6,"creature_type":"Aberration","size":"Medium","ac":13,"hp":105,"walk_ft":30,"fly_ft":null,"swim_ft":30,"climb_ft":null,"burrow_ft":null,"hover":null,"senses":"Darkvision 120 ft., Truesight 30 ft.; Passive Perception 19"},
+    "imageSha256":"7f0d78a2c364137e55d2b0e73311dd5231f515e08b3041b2242b6392e069ee62",
+    "notes":["Basic statistics manually checked against the embedded image, not independently DDB-verified. Unlisted movement modes and hover remain null; no eligibility inference."]
+  },
+  "lizardfolk-geomancer": {
+    "metadata": {"cr":2,"creature_type":"Elemental","size":"Medium","ac":13,"hp":33,"walk_ft":30,"fly_ft":null,"swim_ft":30,"climb_ft":null,"burrow_ft":20,"hover":null,"senses":"Passive Perception 14"},
+    "imageSha256":"686355e7b48d7e5b6828ca7f46389c5e2445cae9f7a9feb17278237ce8101ee1",
+    "notes":["Basic statistics manually checked against the embedded image, not independently DDB-verified. Unlisted movement modes and hover remain null; no eligibility inference."]
+  },
+  "mammoth": {
+    "metadata": {"cr":6,"creature_type":"Beast","size":"Huge","ac":13,"hp":126,"walk_ft":50,"fly_ft":null,"swim_ft":null,"climb_ft":null,"burrow_ft":null,"hover":null,"senses":"Passive Perception 10"},
+    "imageSha256":"e14ceef623f1462347a12a929bf00a8d7b634e94cffc1ea75e082d81f7ba3ab5",
+    "notes":["Basic statistics manually checked against the embedded image, not independently DDB-verified. Unlisted movement modes and hover remain null; no eligibility inference."]
+  },
+  "marilith": {
+    "metadata": {"cr":16,"creature_type":"Fiend","size":"Large","ac":16,"hp":220,"walk_ft":40,"fly_ft":null,"swim_ft":null,"climb_ft":40,"burrow_ft":null,"hover":null,"senses":"Truesight 120 ft.; Passive Perception 18"},
+    "imageSha256":"d106406fd2b8ca0772845bc1d5c71cb11da0fe84e3768d52e8adbe099722af6f",
+    "notes":["Basic statistics manually checked against the embedded image, not independently DDB-verified. Fiend has the Demon tag. Unlisted movement modes and hover remain null; no eligibility inference."]
+  }
+}

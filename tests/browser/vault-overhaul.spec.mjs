@@ -96,7 +96,7 @@ test('item attunement filters distinguish a reusable item from an attuned one', 
 test('form route, movement and CR filters keep natural familiar gates separate', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 900 });
   await page.goto('/forms/');
-  await expect(page.locator('[data-catalog-count]')).toHaveText('20 forms');
+  await expect(page.locator('[data-catalog-count]')).toHaveText('82 forms');
   await page.getByRole('combobox', { name: 'Candidate route', exact: true }).selectOption('find_familiar');
   await page.getByRole('combobox', { name: 'Movement', exact: true }).selectOption('fly');
   await page.getByRole('spinbutton', { name: 'Maximum CR', exact: true }).fill('0.25');
@@ -110,7 +110,7 @@ test('form route, movement and CR filters keep natural familiar gates separate',
   await expect(page.locator('.catalog-wrap')).toHaveClass(/table-row-view/);
   await page.screenshot({ path: 'test-results/vault-forms-rows-390.png', fullPage: false });
   await page.getByRole('button', { name: 'Clear filters', exact: true }).click();
-  await expect(page.locator('[data-catalog-count]')).toHaveText('20 forms');
+  await expect(page.locator('[data-catalog-count]')).toHaveText('82 forms');
 });
 
 test('build matrix gives seven equal subclass routes and the separate optional configuration', async ({ page }) => {

@@ -2,7 +2,46 @@
 import BaseLayout from '@/components/layout/BaseLayout.astro';
 ---
 <BaseLayout title="Compare entries" active="library" wide><div class="page-shell"><header class="page-header"><p class="eyebrow">SIDE BY SIDE</p><h1>Make the tradeoff clear.</h1><p>Compare up to four spell, item, or creature cards. Open a reference for its full mechanics and tactical limits.</p><div class="toolbar"><a href="/spells/">Choose spells</a><a href="/items/">Choose items</a><a href="/forms/">Choose forms</a></div></header><p role="status" data-comparison-status>Loading your selection…</p><div data-comparison-result class="data-table table-wrap" tabindex="0" role="region" aria-label="Selected entries comparison" hidden></div><button class="button" data-comparison-retry hidden>Retry</button></div><script>
-  type Record={slug:string;title:string;type:string;url:string;summary:string;fields:{[key:string]:string}};
+  type Record={slug:string;title:string;type:string;url:string;summary:string;fields:{[key:string]:string};images?:Array<{url:string;width?:number;height?:number}>};
   const status=document.querySelector('[data-comparison-status]')!,output=document.querySelector<HTMLElement>('[data-comparison-result]')!,retry=document.querySelector<HTMLButtonElement>('[data-comparison-retry]')!;
-  async function load(){retry.hidden=true;const selected=[...new Set((new URLSearchParams(location.search).get('notes')??'').split(',').filter(Boolean))].slice(0,4);if(!selected.length){status.textContent='Select entries from a finder to compare them here.';return;}try{const response=await fetch('/catalog-index.json');if(!response.ok)throw Error();const all:Record[]=await response.json(),records=selected.map(s=>all.find(r=>r.slug===s)).filter((r):r is Record=>!!r);if(!records.length){status.textContent='These entries are no longer in the catalogue. Choose a new selection.';return;}output.replaceChildren();const table=document.createElement('table');table.className='catalog-table';const head=document.createElement('thead'),row=document.createElement('tr'),field=document.createElement('th');field.scope='col';field.textContent='Field';row.append(field);for(const r of records){const th=document.createElement('th');th.scope='col';const a=document.createElement('a');a.href=r.url;a.textContent=r.title;th.append(a);row.append(th);}head.append(row);table.append(head);const body=document.createElement('tbody');const keys=[...new Set(records.flatMap(r=>Object.keys(r.fields)))].filter(k=>records.some(r=>!['Not recorded','—'].includes(r.fields[k]??'Not recorded')));for(const key of ['Practical use',...keys]){const tr=document.createElement('tr'),th=document.createElement('th');th.scope='row';th.textContent=key;tr.append(th);for(const r of records){const td=document.createElement('td');td.textContent=key==='Practical use'?r.summary:r.fields[key]??'Not recorded';tr.append(td);}body.append(tr);}table.append(body);output.append(table);output.hidden=false;status.textContent=`${records.length} entries compared`;}catch{status.textContent='The comparison could not load. Try again.';retry.hidden=false;}}retry.addEventListener('click',()=>void load());void load();
+  async function load(){
+    retry.hidden=true;
+    const selected=[...new Set((new URLSearchParams(location.search).get('notes')??'').split(',').filter(Boolean))].slice(0,4);
+    if(!selected.length){status.textContent='Select entries from a finder to compare them here.';return;}
+    try{
+      const response=await fetch('/catalog-index.json');if(!response.ok)throw Error();
+      const all:Record[]=await response.json(),records=selected.map(s=>all.find(r=>r.slug===s)).filter((r):r is Record=>!!r);
+      if(!records.length){status.textContent='These entries are no longer in the catalogue. Choose a new selection.';return;}
+      output.replaceChildren();
+      const table=document.createElement('table');table.className='catalog-table';
+      const head=document.createElement('thead'),row=document.createElement('tr'),field=document.createElement('th');field.scope='col';field.textContent='Field';row.append(field);
+      for(const r of records){const th=document.createElement('th');th.scope='col';const a=document.createElement('a');a.href=r.url;a.textContent=r.title;th.append(a);row.append(th);}
+      head.append(row);table.append(head);
+      const body=document.createElement('tbody');
+      const keys=[...new Set(records.flatMap(r=>Object.keys(r.fields)))].filter(k=>records.some(r=>!['Not recorded','—'].includes(r.fields[k]??'Not recorded')));
+      for(const key of ['Practical use',...keys]){
+        const tr=document.createElement('tr'),th=document.createElement('th');th.scope='row';th.textContent=key;tr.append(th);
+        for(const r of records){const td=document.createElement('td');td.textContent=key==='Practical use'?r.summary:r.fields[key]??'Not recorded';tr.append(td);}body.append(tr);
+      }
+      if(records.some(r=>r.images?.length)){
+        const tr=document.createElement('tr'),th=document.createElement('th');th.scope='row';th.textContent='Original stat block';tr.append(th);
+        for(const r of records){
+          const td=document.createElement('td');
+          for(const source of r.images??[]){
+            if(!source.url.startsWith('/vault-assets/'))continue;
+            const link=document.createElement('a');link.href=source.url;link.target='_blank';link.rel='noopener noreferrer';link.setAttribute('aria-label',`Open ${r.title} stat block full size in a new tab`);
+            const image=document.createElement('img');image.src=source.url;image.alt=`${r.title} stat block`;image.loading='lazy';image.decoding='async';image.className='comparison-stat-block';
+            if(source.width)image.width=source.width;if(source.height)image.height=source.height;
+            link.append(image);td.append(link);
+          }
+          if(!td.childElementCount)td.textContent='No image recorded';tr.append(td);
+        }
+        body.append(tr);
+      }
+      table.append(body);output.append(table);output.hidden=false;
+      status.textContent=`${records.length} ${records.length===1?'entry':'entries'} compared${records.length<selected.length?' · some selections were not found':''}`;
+    }catch{status.textContent='The comparison could not load. Try again.';retry.hidden=false;}
+  }
+  retry.addEventListener('click',()=>void load());void load();
 </script></BaseLayout>
+<style is:global>.comparison-stat-block{display:block;width:440px;max-width:none;height:auto}[data-comparison-result] td{vertical-align:top}</style>

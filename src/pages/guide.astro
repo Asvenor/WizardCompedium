@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '@/components/layout/BaseLayout.astro';
-import {hrefFor} from '@/lib/vault';
+import {hrefFor,vaultInfo} from '@/lib/vault';
+const snapshotDate = new Intl.DateTimeFormat('en-GB',{dateStyle:'long',timeZone:'Europe/Zurich'}).format(new Date(vaultInfo.importedAt));
 ---
 <BaseLayout title="How to use the compendium">
   <div class="page-shell">
@@ -17,12 +18,16 @@ import {hrefFor} from '@/lib/vault';
       <article class="note-card">
         <h2><a href="/spells/">Choose a spell, item, or form</a></h2>
         <p>Use the spell, item, and form filters to build a shortlist. Select up to four entries and compare their recorded details side by side.</p>
-        <p>These are the vault’s selected entries. A source label is not an access grant; check each entry’s restrictions. A candidate form still needs the spell’s other requirements.</p>
+        <p>These are the vault’s selected entries and embedded creature galleries. Creature review status separates metadata-checked cards from image-transcribed references. Read conditional stats and the original image; gallery placement does not grant spell eligibility. A source label is not an access grant, and a checked candidate still needs the spell’s other requirements.</p>
         <div class="related-links"><a href="/items/">Magic items →</a><a href="/forms/">Creature forms →</a></div>
       </article>
       <article class="note-card">
         <h2><a href="/builds/">Follow a build</a></h2>
         <p>Choose a subclass and class structure in the build matrix, then open its level-by-level spell progression. All seven supported subclasses have equal space.</p>
+      </article>
+      <article class="note-card">
+        <h2><a href="/tools/">Work out a number</a></h2>
+        <p>Use the saving-throw, concentration, expected-damage, and component-cost calculators. Each tool explains its inputs, assumptions, and linked rules reference.</p>
       </article>
       <article class="note-card">
         <h2><a href="/tiers/">Read tables comfortably</a></h2>
@@ -49,5 +54,14 @@ import {hrefFor} from '@/lib/vault';
         <p>Explore the vault by topic. References retain their linked notes, images, callouts, and sources. Use <em>On this page</em> to jump to a heading and <em>Print</em> for a paper reference.</p>
       </article>
     </div>
+    <section class="guide-updates tool-panel" id="keeping-current" aria-labelledby="updates-title">
+      <p class="eyebrow">THE PUBLISHED REFERENCE</p>
+      <h2 id="updates-title">Keeping the compendium current</h2>
+      <p>The website is a published copy of the Obsidian vault. The owner makes changes in Obsidian, imports the updated vault, checks the website, and publishes a new build. Changes in Obsidian appear here after that update is published.</p>
+      <p class="snapshot-date">Latest vault snapshot: <time datetime={vaultInfo.importedAt}>{snapshotDate}</time>.</p>
+      <p>On a reference page, open <em>Sources, edition &amp; updates</em> to see its note update date, website snapshot, and recorded review scope. An update date describes the content copy; it does not mean every rule was freshly checked.</p>
+      <p>Your saved references and PDF sheets stay in this browser on this device. Export your PDF after a session to keep a portable copy.</p>
+      <p class="calculator-note">The <a href={hrefFor('Vault Guide')}>original Obsidian vault guide</a> is preserved separately. Its editing commands, templates, and Obsidian settings apply to the vault.</p>
+    </section>
   </div>
 </BaseLayout>
